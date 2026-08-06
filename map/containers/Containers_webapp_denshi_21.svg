@@ -67,10 +67,6 @@
              xlink:href="/map/layers/external/svgmap-app-layers/adapters/jshis-active-fault.svg#server=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2Fmapcache%2FP-Y2020%2Fwmts%3Flayer%3DP-Y2020-MAP-AVR-TTL_MTTL-T30_I55_PD2%26style%3Ddefault%26tilematrixset%3DWGS84%26Service%3DWMTS%26Request%3DGetTile%26Version%3D1.0.0%26Format%3Dimage%252Fpng%26TileMatrix%3D%5B%5Blevel%5D%5D%26TileCol%3D%5B%5Bx%5D%5D%26TileRow%3D%5B%5By%5D%5D&amp;comment=出典%3A防災科研J-SHIS&amp;link=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2F&amp;legend=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2FJSHIS2%2FIMAGE%2Fetc%2FP-Y2020-PD.png"
              title="防災科研_J_SHIS_確率論的地震動予測地図2020_主要活断層帯" class="ハザードマップ" visibility="hidden" opacity="0.7" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
 
-  <animation id="layer-external-svgmap-app-layers-72-72" x="-30000" y="-30000" width="60000" height="60000"
-             xlink:href="/map/layers/external/svgmap-app-layers/adapters/mlit-flood-l2.svg#globe&amp;baseURL=https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin&amp;zmax=17"
-             title="浸水想定区域(想定最大規模)" class="国交省ハザードマップ batch" visibility="hidden" opacity="0.75" data-controller="/map/svgMapAppLayers/appLayers/mlitHazard/mlitHazardNotice.html#legend=hanrei/shinsuishin.png" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
-
   <animation id="layer-external-svgmap-app-layers-usgs-89" x="-30000" y="-30000" width="60000" height="60000"
              xlink:href="/map/layers/external/svgmap-app-layers/adapters/usgs-earthquakes.svg"
              title="全球地震情報(USGS)" class="地震・火山 clickable" visibility="hidden" opacity="0.7" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>

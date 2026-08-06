@@ -20,6 +20,37 @@ const localizeLayerLib = (source) => source.replaceAll(
   localLayerLib,
 )
 
+// Production builds only receive files committed to this repository. Keep the
+// inputs used by the generated adapters in Git and report all omissions at once.
+const requiredUpstreamAssets = [
+  ['Container.svg'],
+  ['basemaps', 'dynamicDenshiKokudo2016.svg'],
+  ['geoCoders', 'geohashCoder', 'geohash.svg'],
+  ['geoCoders', 'geohashCoder', 'geohashApp.html'],
+  ['geoCoders', 'geohashCoder', 'geohash.js'],
+  ['appLayers', 'jma', 'jma_bm_tiny.svg'],
+  ['appLayers', 'jma', 'jma_bm_tiny.html'],
+  ['appLayers', 'jma', 'jma_bm_tiny_sub0.svg'],
+  ['appLayers', 'usgsEq', 'usgsEarthquake.svg'],
+  ['appLayers', 'usgsEq', 'usgsEarthquake.html'],
+  ['appLayers', 'usgsEq', 'usgsEarthquake.js'],
+  ['appLayers', 'usgsEq', 'covjsonParser.js'],
+  ['appLayers', 'usgsEq', 'quake_center.png'],
+  ['appLayers', 'usgsEq', 'mappin1.png'],
+  ['appLayers', 'bosaiKakenJSHIS', 'dynamicPCtile.svg'],
+  ['appLayers', 'bosaiKakenJSHIS', 'dynamicPCtile.html'],
+]
+const missingUpstreamAssets = requiredUpstreamAssets
+  .map((parts) => ({ parts, file: upstreamPath(...parts) }))
+  .filter(({ file }) => !fs.existsSync(file))
+if (missingUpstreamAssets.length > 0) {
+  throw new Error([
+    '[svgmap-community] required SVGMap App Layers assets are missing:',
+    ...missingUpstreamAssets.map(({ parts }) => `- svgMapAppLayers/${parts.join('/')}`),
+    'Commit the allow-listed upstream assets before running a production build.',
+  ].join('\n'))
+}
+
 const decodeXml = (value) => String(value || '')
   .replaceAll('&amp;', '&')
   .replaceAll('&quot;', '"')
@@ -102,17 +133,6 @@ const overrides = new Map([
     externalDependencies: ['tile.openstreetmap.org'],
     reason: '旧controller依存を除いた固有の動的SVGへ配置し、HTTPSのOSM公式タイル取得まで動作確認済み',
   }],
-  ['浸水想定区域(想定最大規模)', {
-    status: 'limited',
-    category: 'C',
-    delivery: 'online-only',
-    runtime: 'tight',
-    offline: false,
-    adapterHref: '/map/layers/external/svgmap-app-layers/adapters/mlit-flood-l2.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin&zmax=17',
-    controllerHref: '/map/svgMapAppLayers/appLayers/mlitHazard/mlitHazardNotice.html#legend=hanrei/shinsuishin.png',
-    externalDependencies: ['disaportaldata.gsi.go.jp'],
-    reason: '壊れたシンボリックリンクの代わりに同梱commonLibの実体を固有SVGへ配置し、浸水タイル取得まで動作確認済み',
-  }],
   ['雨雲の動き（軽量版）(JMA)', {
     status: 'limited',
     category: 'C',
@@ -170,15 +190,6 @@ const overrides = new Map([
         placeholder: 'https://graphhopper.example/api/1/route',
       }],
     },
-  }],
-  ['starlinkUnofficialGS', {
-    status: 'requires-proxy',
-    category: 'C',
-    delivery: 'proxy-required',
-    offline: false,
-    controllerHref: '/map/layers/external/svgmap-app-layers/adapters/starlink.html#exec=appearOnLayerLoad',
-    externalDependencies: ['starlinkinsider.com', 'www.google.com'],
-    reason: '本体内のcontrollerへ補正できるが、取得元HTML用の制限付きCORSプロキシが必要',
   }],
 ])
 
@@ -292,8 +303,6 @@ const osmSvg = gsiDynamicSvg
   )
 fs.writeFileSync(adapterPath('osm-global.svg'), osmSvg)
 
-fs.writeFileSync(adapterPath('mlit-flood-l2.svg'), readUpstream('commonLib', 'dynamicWebTile.svg'))
-
 const jmaSvg = readUpstream('appLayers', 'jma', 'jma_bm_tiny.svg')
   .replace(
     'jma_bm_tiny.html#exec=appearOnLayerLoad',
@@ -327,11 +336,6 @@ fs.writeFileSync(adapterPath('jshis-500.svg'), jshisSvg)
 fs.writeFileSync(
   adapterPath('jshis-controller.html'),
   localizeLayerLib(readUpstream('appLayers', 'bosaiKakenJSHIS', 'dynamicPCtile.html')),
-)
-fs.writeFileSync(
-  adapterPath('starlink.html'),
-  localizeLayerLib(readUpstream('appLayers', 'starlinkUnofficialGS', 'test.html'))
-    .replace('src="./unescapeJs_browserify.js"', 'src="/map/svgMapAppLayers/appLayers/starlinkUnofficialGS/unescapeJs_browserify.js"'),
 )
 fs.writeFileSync(outputPath, `${JSON.stringify(output, null, 2)}\n`)
 console.log(`[svgmap-community] ${entries.length} layers: ${JSON.stringify(counts)}`)

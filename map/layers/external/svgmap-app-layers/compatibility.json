@@ -11,11 +11,11 @@
   },
   "generatedAt": "2026-08-04",
   "counts": {
-    "unverified": 134,
-    "limited": 7,
+    "unverified": 137,
+    "limited": 6,
     "supported": 2,
     "requires-config": 1,
-    "requires-proxy": 1
+    "incompatible": 1
   },
   "entries": [
     {
@@ -1400,18 +1400,15 @@
       "sourceIndex": 48,
       "title": "starlinkUnofficialGS",
       "href": "./appLayers/starlinkUnofficialGS/test.svg",
-      "status": "requires-proxy",
-      "category": "C",
-      "delivery": "proxy-required",
+      "status": "incompatible",
+      "category": "D",
+      "delivery": "not-enabled",
       "runtime": "isolated",
       "offline": false,
       "controller": true,
-      "externalDependencies": [
-        "starlinkinsider.com",
-        "www.google.com"
-      ],
+      "externalDependencies": [],
       "verifiedAt": null,
-      "reason": "本体内のcontrollerへ補正できるが、取得元HTML用の制限付きCORSプロキシが必要",
+      "reason": "参照するcontrollerが配布物に存在しない",
       "animation": {
         "x": "-30000",
         "y": "-30000",
@@ -1424,8 +1421,7 @@
         "data-controller": "../info.html",
         "data-cross-origin-proxy-required": "true",
         "xlink:href": "./appLayers/starlinkUnofficialGS/test.svg"
-      },
-      "controllerHref": "/map/layers/external/svgmap-app-layers/adapters/starlink.html#exec=appearOnLayerLoad"
+      }
     },
     {
       "sourceIndex": 49,
@@ -2116,17 +2112,18 @@
       "sourceIndex": 72,
       "title": "浸水想定区域(想定最大規模)",
       "href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin&zmax=17",
-      "status": "limited",
+      "status": "unverified",
       "category": "C",
-      "delivery": "online-only",
-      "runtime": "tight",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
       "offline": false,
       "controller": true,
       "externalDependencies": [
-        "disaportaldata.gsi.go.jp"
+        "disaportaldata.gsi.go.jp",
+        "disaportal.gsi.go.jp"
       ],
-      "verifiedAt": "2026-08-04",
-      "reason": "壊れたシンボリックリンクの代わりに同梱commonLibの実体を固有SVGへ配置し、浸水タイル取得まで動作確認済み",
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
       "animation": {
         "x": "-30000",
         "y": "-30000",
@@ -2138,9 +2135,7 @@
         "opacity": "0.75",
         "data-controller": "mlitHazardNotice.html#legend=hanrei/shinsuishin%2epng",
         "xlink:href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin&zmax=17"
-      },
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/mlit-flood-l2.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin&zmax=17",
-      "controllerHref": "/map/svgMapAppLayers/appLayers/mlitHazard/mlitHazardNotice.html#legend=hanrei/shinsuishin.png"
+      }
     },
     {
       "sourceIndex": 73,
@@ -4277,6 +4272,56 @@
         "opacity": "0.6",
         "data-cross-origin-proxy-required": "true",
         "xlink:href": "./appLayers/gsiEvacuation/evacuationPlace.svg"
+      }
+    },
+    {
+      "sourceIndex": 146,
+      "title": "岡山大学 チーム活動（CSV追加対応）",
+      "href": "./appLayers/okayamaUniversity/teamActivity/teamActivityLayer.svg#summary=data/summary.json&data=data/detail.json&sourceCsv=current.csv&layer=teamActivity",
+      "status": "unverified",
+      "category": "B",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [],
+      "verifiedAt": null,
+      "reason": "相対controller・画像・スクリプトのrebase確認が必要",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "岡山大学 チーム活動（CSV追加対応）",
+        "class": "防災 poi clickable",
+        "visibility": "hidden",
+        "opacity": "1",
+        "xlink:href": "./appLayers/okayamaUniversity/teamActivity/teamActivityLayer.svg#summary=data/summary.json&data=data/detail.json&sourceCsv=current.csv&layer=teamActivity"
+      }
+    },
+    {
+      "sourceIndex": 147,
+      "title": "岡山大学 チーム活動エリア",
+      "href": "./appLayers/okayamaUniversity/teamActivity/teamActivityAreaLayer.svg#data=data/detail.json&districtSvgUrlTemplate=districts/{recordRegionId}/{code}.svg&layer=teamActivity",
+      "status": "unverified",
+      "category": "B",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [],
+      "verifiedAt": null,
+      "reason": "相対controller・画像・スクリプトのrebase確認が必要",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "岡山大学 チーム活動エリア",
+        "class": "防災 vectorEtcData",
+        "visibility": "hidden",
+        "opacity": "0.9",
+        "xlink:href": "./appLayers/okayamaUniversity/teamActivity/teamActivityAreaLayer.svg#data=data/detail.json&districtSvgUrlTemplate=districts/{recordRegionId}/{code}.svg&layer=teamActivity"
       }
     }
   ]

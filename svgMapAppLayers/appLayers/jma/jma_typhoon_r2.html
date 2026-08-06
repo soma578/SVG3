@@ -1,0 +1,284 @@
+<!doctype html>
+<html>
+<script src="https://cdn.jsdelivr.net/gh/svgmap/svgmapjs@latest/svgMapLayerLib.js"></script>
+<script type="text/javascript" src="./svgMapGeoJson_r2.js"></script>
+<script>
+// 
+// Description:
+// WebApp layer for SVGMap.js to draw JMI's typhoon data
+// 
+// Programmed by Satoru Takagi
+// 
+// License: (MPL v2)
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at https://mozilla.org/MPL/2.0/.
+
+// Log:
+//  2021/07/19 the first rev
+//  2021/07/28 track drawing
+//  2025/05/02 過去の情報に対応
+const currentBaseURL = "https://www.jma.go.jp/";
+let baseURL = currentBaseURL;
+var tBase="bosai/typhoon/data/";
+
+var tt="prob50kt/targetTimes.json";
+
+onload=async function(){
+	drawTyphoonMap();
+}
+
+async function drawTyphoonMap(){
+	removeChildren("pastTracks");
+	removeChildren("areas");
+	removeChildren("icons");
+	var tindex = await getJson(baseURL+tBase+"targetTc.json");
+	drawPastTrack();
+	for (var tp of tindex){ // categoryがTDは熱帯低気圧？ STSが台風？ typhoonNumberがnnnnというのが台風 "a,b,"などが熱帯低気圧
+		var tpId = tp.tropicalCyclone; // 
+		var tcource = await getJson(baseURL+tBase+tpId+"/forecast.json"); // 予報円・経路
+		var tinfo = await getJson(baseURL+tBase+tpId+"/specifications.json"); // 予報勢力
+		console.log("tp:",tp," ID:",tpId);
+		console.log(" == cource:",tcource);
+		console.log(" == tinfo:",tinfo);
+		drawTyphoon(tcource,tinfo);
+	}
+	svgMap.refreshScreen();
+}
+
+function changeBaseURL(url){
+	if ( url ){
+		baseURL = url;
+	} else {
+		baseURL = currentBaseURL;
+	}
+	drawTyphoonMap();
+}
+
+function drawTrack(track,lineWidth){
+	function getCrds(icrds){
+		var crds = [];
+		for ( var j = 0 ; j < icrds.length ; j++ ){
+			crds.push([icrds[j][1],icrds[j][0]]);
+		}
+		return crds;
+	}
+	function getFeature(track,color){
+		var tt={type:"Feature"};
+		tt.properties={stroke:color,"stroke-width":lineWidth}
+		tt.geometry={
+			type:"LineString",
+			coordinates:getCrds(track),
+		};
+		return ( tt );
+	}
+	var pts =[];
+	if ( track.preTyphoon){
+		pts.push(getFeature(track.preTyphoon,"yellow"));
+	}
+	if ( track.typhoon){
+		pts.push(getFeature(track.typhoon,"orange"));
+	}
+	drawGeoJson(pts,"pastTracks");
+}
+
+async function drawPastTrack(){
+	var pastTrack = await getJson(baseURL+tBase+"pastTracks.json");
+	for ( var i = 0 ; i < pastTrack.length ; i++ ){
+		drawTrack(pastTrack[i].track1,0.5);
+	}
+	svgMap.refreshScreen();
+}
+
+var metaDict=["title","typhoonNumber","category","intensity","maximumWind","stormWarning","name","pressure","issue","part","location","course","speed"];
+
+function drawTyphoon(tcource,tinfo){
+	var meta = tinfo[0];
+	console.log(meta,meta.category);
+	var ttc=[];
+	var tps =[];
+	if ( tcource.length >1 && tcource[1].track ){
+		drawTrack(tcource[1].track,2);
+	}
+	for ( var i = 1 ; i < tcource.length ; i++ ){
+		var tc = tcource[i];
+		var ti = tinfo[i];
+		var tp ={type:"Feature"};
+		tp.geometry={
+			type:"Point",
+			coordinates:[tc.center[1],tc.center[0]]
+		}
+		ttc.push([tc.center[1],tc.center[0]]);
+		tp.properties={
+			title: meta.category.jp + meta.typhoonNumber+" "+ti.pressure+"hPa" +" "+ti.part.jp,
+			category:meta.category.jp,
+			name:meta.name?.jp,
+			issue:meta.issue.JST,
+			intensity:ti.intensity,
+//			maximumWind:"gust:"+ti.maximumWind.gust["m/s"]+"m/s  sustained:"+ti.maximumWind.sustained["m/s"]+"m/s",
+			typhoonNumber:meta.typhoonNumber,
+			location:ti.location,
+			course:ti.course,
+			part:ti.part.jp,
+			pressure:ti.pressure+" hPa",
+		}
+		var mw="-";
+		if ( ti.maximumWind ){
+			if ( ti.maximumWind.gust){
+				mw="gust:"+ti.maximumWind.gust["m/s"]+"m/s ";
+			}
+			if (ti.maximumWind.sustained){
+				mw+="sustained:"+ti.maximumWind.sustained["m/s"]+"m/s";
+			}
+		}
+		tp.properties.maximumWind=mw;
+		if ( ti.speed){
+			if ( ti.speed["km/h"]){
+				tp.properties.speed=ti.speed["km/h"]+"km/h";
+			}else if ( ti.speed.note){
+				tp.properties.speed=ti.speed.note.jp;
+			}
+		}
+		if ( ti.stormWarning){
+			console.log(ti.stormWarning);
+			tp.properties.stormWarning=ti.stormWarning[0].range.km + "km "+ ti.stormWarning[0].area.jp;
+			var cr = getCircle(tc.center[1],tc.center[0],ti.stormWarning[0].range.km);
+			var twrc = {type:"Feature"};
+			twrc.geometry={
+				type:"LineString",
+				coordinates:cr
+			}
+			twrc.properties={
+				stroke:"red"
+			}
+			tps.push(twrc);
+		}
+		if ( ti.probabilityCircleRadius){
+			tp.properties.probabilityCircleRadius=ti.probabilityCircleRadius.km
+			var tcr = {type:"Feature"};
+			var cr = getCircle(tc.center[1],tc.center[0],tp.properties.probabilityCircleRadius);
+			tcr.geometry={
+				type:"LineString",
+				coordinates:cr
+			}
+			tcr.properties={
+				stroke:"white",
+				"stroke-width":3,
+			}
+			tps.push(tcr);
+		}
+		tps.push(tp);
+	}
+	
+	var tt={type:"Feature"};
+	tt.geometry={
+		type:"LineString",
+		coordinates:ttc,
+	};
+	tt.properties={
+		stroke:"white",
+		"stroke-width":3,
+	}
+	tps.push(tt);
+	
+	console.log(tps);
+	drawGeoJson(tps,"areas");
+}
+
+var cpart = 40;
+function getCircleN(lng0,lat0,d){
+	// lat,lng[rad],d[球の半径1で正規化]
+	//https://math.stackexchange.com/questions/2541378/lat-lon-coordinates-of-a-circle-on-a-sphere
+//	var latMin = lat0 -d;
+//	var latMax = lat0 +d;
+	var ans =[];
+	
+	for ( var p = 0 ; p <= Math.PI ; p+= Math.PI / cpart ){
+		var lat = lat0 + d * Math.cos(p)
+		if ( lat == lat0-d || lat == lat0+d){
+			lng = lng0;
+		} else {
+			lng = lng0 + 2 * Math.asin(Math.sqrt( (Math.pow(Math.sin(d/2),2) - Math.pow(Math.sin((lat-lat0)/2),2))/(Math.cos(lat)*Math.cos(lat0))) );
+		}
+		
+		ans.push([lng,lat]);
+		
+	}
+	for ( var i = ans.length - 2 ; i >= 0 ; i-- ){
+		ans.push([lng0 - (ans[i][0]-lng0),ans[i][1]]);
+	}
+	return ( ans );
+}
+
+function getCircle(lng0,lat0,d){
+	// 緯度、経度[度]、d[Km]で
+	var lat0 = lat0 * Math.PI / 180;
+	var lng0 = lng0 * Math.PI / 180;
+	var d = d / 6378;
+	var ans = getCircleN(lng0,lat0,d);
+	for ( var p of ans){
+		p[0]=p[0]*180/Math.PI;
+		p[1]=p[1]*180/Math.PI;
+	}
+	return ( ans );
+}
+
+
+function drawGeoJson(json,parentId){
+	//console.log("drawGeoJson:",json);
+	svgMapGeoJsonRenderer.setSvgMap(svgMap);
+	svgImage.documentElement.setAttribute("property",metaDict);
+	var areaParentElm = svgImage.getElementById(parentId);
+//	removeChildren(areaParentElm);
+	var color="red";
+//	svgMapGIStool.drawGeoJson(json,layerID,color,1,color, "p0", "poi", "", areaParentElm);
+	svgMapGeoJsonRenderer.drawGeoJson(json,layerID,color,1,color, "p0", "poi", "", areaParentElm,metaDict);
+}
+
+async function getJson(url){
+	var dt = getDateStr(new Date(),10);
+	var response = await fetch(url+"?time="+dt);
+	var json = await response.json();
+	return ( json );
+}
+
+function getDateStr(dateData , tStep){
+	var mind = tStep * Math.floor( dateData.getUTCMinutes() / tStep ) ;
+	var ans = dateData.getUTCFullYear()+ pad(dateData.getUTCMonth() + 1) + pad(dateData.getUTCDate()) + pad(dateData.getUTCHours()) + pad(mind);
+	return ( ans );
+}
+
+function getJSTStr(dateData , tStep){
+//	console.log("getJSTStr:",dateData);
+	var mind = tStep * Math.floor( dateData.getMinutes() / tStep ) ;
+	var ans = dateData.getFullYear()+ "/"+ pad(dateData.getMonth() + 1) +"/"+ pad(dateData.getDate()) +" " + pad(dateData.getHours()) +":"+ pad(mind);
+	return ( ans );
+}
+function pad( inp ){
+	return ( ("0"+inp).slice(-2));
+}
+
+function removeChildren(elementOrElementId){
+	let ele;
+	if (typeof elementOrElementId == "string"){
+		ele = svgImage.getElementById(elementOrElementId);
+		if (!ele){return}
+	} else {
+		ele = elementOrElementId;
+	}
+	while( ele.firstChild ){
+		ele.removeChild( ele.firstChild );
+	}
+}
+</script>
+<body>
+<h4>気象庁　台風情報レイヤー</h4>
+<p style="font-size:12px">出典：<a href="https://www.jma.go.jp/bosai/map.html#4/34.561/147.524/&elem=root&typhoon=all&contents=typhoon" target="_blank">気象庁ホームページ　台風情報</a>を加工して作成</p>
+
+<p style="font-size:12px">
+ここに表示される台風の経路は全て速報値です。過去の台風の経路(<span style="color:orange">オレンジ線</span>)は気象庁ホームページでは非表示のものです。<br>
+事後解析によって確定した過去の台風の経路は、気象庁ホームページ<a href="https://www.data.jma.go.jp/typhoon/route_map/index.html" target="_blank">過去の台風資料 台風経路図</a>を参照ください。
+</p>
+
+</body>
+</html>
