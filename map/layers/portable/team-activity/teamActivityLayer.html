@@ -30,6 +30,7 @@
     <input id="team-csv-file" type="file" accept=".csv,text/csv">
     <button id="team-csv-template" type="button">ひな形</button>
     <button id="team-csv-clear" type="button">追加分を消去</button>
+    <a id="app-layers-admin" class="file-button" target="_blank" rel="noopener">SVGMap App Layers管理</a>
   </div>
   <output id="csv-status">追加CSVなし</output>
   <details id="current-csv-panel" open>
@@ -63,6 +64,10 @@ const start = () => {
   const status = document.getElementById('csv-status');
   const hash = String(window.svgImageProps?.hash || window.svgImageProps?.Path?.split('#')?.[1] || '');
   const sourceCsvUrl = new URLSearchParams(hash.replace(/^#/, '')).get('sourceCsv') || '';
+  const appLayersAdmin = document.getElementById('app-layers-admin');
+  const adminUrl = new URL('./appLayersAdmin.html', window.location.href);
+  if (sourceCsvUrl) adminUrl.searchParams.set('sourceCsv', sourceCsvUrl);
+  appLayersAdmin.href = adminUrl.href;
   let currentCsvText = '';
   const channel = typeof BroadcastChannel === 'function' ? new BroadcastChannel(TEAM_ACTIVITY_CSV_CHANNEL) : null;
   const readSavedCsv = () => {

@@ -124,6 +124,15 @@ test('CSV管理画面は現在配信中のCSVとひな形を表示する', async
   await expect(page.locator('#templateButton')).toHaveText('ひな形を保存')
 })
 
+test('SVGMap App Layers版にも自己完結したCSV管理画面がある', async ({ page }) => {
+  await page.goto('/svgMapAppLayers/appLayers/okayamaUniversity/teamActivity/appLayersAdmin.html')
+  await expect(page.locator('h1')).toHaveText('SVGMap App Layers チーム活動管理')
+  await expect(page.locator('#status')).toContainText('現在のCSV: 3件')
+  await expect(page.locator('#recordCount')).toHaveText('3')
+  await expect(page.locator('#preview tbody tr')).toHaveCount(3)
+  await expect(page.locator('#downloadButton')).toBeEnabled()
+})
+
 test('レイヤーのコントローラーからCSVを追加し、既存データと重ねて消去できる', async ({ page }) => {
   await page.goto(MAP_URL)
   await expect(page.locator('#loading')).toBeHidden()

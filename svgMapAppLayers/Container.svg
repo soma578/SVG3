@@ -200,6 +200,6 @@
 <animation xlink:href="./appLayers/gsiEvacuation/evacuationPlace.svg" title="地理院 指定緊急避難場所" data-cross-origin-proxy-required="true" x="-30000" y="-30000" width="60000" height="60000" class="poi" opacity="0.6" visibility="hidden"/>
 
 <!-- okayama-university-team-activity -->
-<animation x="-30000" y="-30000" width="60000" height="60000" xlink:href="./appLayers/okayamaUniversity/teamActivity/teamActivityLayer.svg#summary=data/summary.json&amp;data=data/detail-index.json&amp;sourceCsv=current.csv&amp;layer=teamActivity" title="岡山大学 チーム活動（CSV追加対応）" class="防災 poi clickable" visibility="hidden" opacity="1"/>
-<animation x="-30000" y="-30000" width="60000" height="60000" xlink:href="./appLayers/okayamaUniversity/teamActivity/teamActivityAreaLayer.svg#data=data/detail-index.json&amp;districtSvgUrlTemplate=districts/{recordRegionId}/{code}.svg&amp;layer=teamActivity" title="岡山大学 チーム活動エリア" class="防災 vectorEtcData" visibility="hidden" opacity="0.9"/>
+<animation x="-30000" y="-30000" width="60000" height="60000" xlink:href="./appLayers/okayamaUniversity/teamActivity/teamActivityLayer.svg#summary=data/summary.json&amp;data=data/detail.json&amp;sourceCsv=current.csv&amp;layer=teamActivity" title="岡山大学 チーム活動（CSV追加対応）" class="防災 poi clickable" visibility="hidden" opacity="1"/>
+<animation x="-30000" y="-30000" width="60000" height="60000" xlink:href="./appLayers/okayamaUniversity/teamActivity/teamActivityAreaLayer.svg#data=data/detail.json&amp;districtSvgUrlTemplate=districts/{recordRegionId}/{code}.svg&amp;layer=teamActivity" title="岡山大学 チーム活動エリア" class="防災 vectorEtcData" visibility="hidden" opacity="0.9"/>
 </svg>

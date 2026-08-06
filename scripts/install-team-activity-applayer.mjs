@@ -2,6 +2,10 @@
 import { cp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import {
+  buildTeamActivityCsvDocuments,
+  parseTeamActivityCsv,
+} from '../map/layers/portable/team-activity/teamActivityCsv.js';
 
 const workspace = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const targetRoot = process.argv[2] ? path.resolve(process.argv[2]) : '';
@@ -29,6 +33,12 @@ await cp(
 );
 await cp(path.join(workspace, 'map/data/qtct/teamActivity'), path.join(output, 'data'), { recursive: true });
 await cp(path.join(workspace, 'map/layers/managed/team-activity-pins/data.csv'), path.join(output, 'current.csv'));
+const installedCsv = await readFile(path.join(output, 'current.csv'), 'utf8');
+const installedRecords = parseTeamActivityCsv(installedCsv);
+if (installedRecords.errors.length) throw new Error(installedRecords.errors.join(' / '));
+const installedDocuments = buildTeamActivityCsvDocuments(installedRecords.records);
+await writeFile(path.join(output, 'data/summary.json'), `${JSON.stringify(installedDocuments.summary)}\n`);
+await writeFile(path.join(output, 'data/detail.json'), `${JSON.stringify(installedDocuments.detail)}\n`);
 await mkdir(path.join(output, 'icons'), { recursive: true });
 for (const icon of [
   'team-active.png', 'team-standby.png', 'team-planned.png',
@@ -74,10 +84,10 @@ for (const record of collectRecords(detail.tree)) {
 const marker = '<!-- okayama-university-team-activity -->';
 const entry = `${marker}\n`
   + '<animation x="-30000" y="-30000" width="60000" height="60000" '
-  + 'xlink:href="./appLayers/okayamaUniversity/teamActivity/teamActivityLayer.svg#summary=data/summary.json&amp;data=data/detail-index.json&amp;sourceCsv=current.csv&amp;layer=teamActivity" '
+  + 'xlink:href="./appLayers/okayamaUniversity/teamActivity/teamActivityLayer.svg#summary=data/summary.json&amp;data=data/detail.json&amp;sourceCsv=current.csv&amp;layer=teamActivity" '
   + 'title="岡山大学 チーム活動（CSV追加対応）" class="防災 poi clickable" visibility="hidden" opacity="1"/>\n'
   + '<animation x="-30000" y="-30000" width="60000" height="60000" '
-  + 'xlink:href="./appLayers/okayamaUniversity/teamActivity/teamActivityAreaLayer.svg#data=data/detail-index.json&amp;districtSvgUrlTemplate=districts/{recordRegionId}/{code}.svg&amp;layer=teamActivity" '
+  + 'xlink:href="./appLayers/okayamaUniversity/teamActivity/teamActivityAreaLayer.svg#data=data/detail.json&amp;districtSvgUrlTemplate=districts/{recordRegionId}/{code}.svg&amp;layer=teamActivity" '
   + 'title="岡山大学 チーム活動エリア" class="防災 vectorEtcData" visibility="hidden" opacity="0.9"/>\n';
 const nextContainer = container.includes(marker)
   ? container.replace(new RegExp(`${marker}[\\s\\S]*?(?=\\n<!--|\\n</svg>)`), entry.trimEnd())
@@ -87,6 +97,7 @@ await writeFile(containerPath, nextContainer);
 await writeFile(path.join(output, 'INSTALLATION.md'), `# 岡山大学 チーム活動レイヤー\n\n`
   + `このディレクトリと Container.svg の登録は専用インストーラーが生成しました。\n\n`
   + `- コントローラーの「CSVを追加」でブラウザ内に活動を追加できます。\n`
+  + `- 「SVGMap App Layers管理」で current.csv とQTCTを確認・再生成できます。\n`
   + `- 追加データは既存QTCTへ重ねて描画され、低ズームは密度、高ズームは個別ピンになります。\n`
   + `- 初期CSVが参照する地区境界だけを同梱しています。別地域の面表示には、`
   + '`districts/{regionId}/{municipalityCode}.svg` を追加してください。ピン表示には不要です。\n');

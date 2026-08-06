@@ -1,7 +1,7 @@
 {
   "id": "teamActivity",
   "title": "Team Activity Portable Layer",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "entrypoint": "teamActivityLayer.svg",
   "type": "svgmap-portable-layer",
   "distribution": {
@@ -27,6 +27,7 @@
   "shared": [
     "teamActivityDetail.js",
     "teamActivityCsv.js",
+    "appLayersAdmin.html",
     "teamActivityAreaLayer.svg",
     "teamActivityAreaLayer.html"
   ],

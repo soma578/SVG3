@@ -34,6 +34,9 @@ node scripts/install-team-activity-applayer.mjs /path/to/svgmapAppLayers
 ```
 
 これはローカルディレクトリだけを書き換え、上流リポジトリへの通信は行わない。
+配置後はコントローラーの「SVGMap App Layers管理」、または同梱された
+`appLayersAdmin.html` から、現在CSVの確認・QTCT生成・ローカルフォルダーへの
+書き戻しができる。
 
 SVGMap からの利用例:
 
