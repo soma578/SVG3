@@ -70,9 +70,11 @@ const targets = {
   },
   'public-districts': {
     path: path.join(frontendRoot, 'public/data'),
-    role: 'legacy-tracked-deployment-mirror',
-    cleanable: false,
-    required: true,
+    role: 'deployment-mirror',
+    cleanable: true,
+    // .gitignore excludes this deployment mirror. A clean Vercel clone does
+    // not have it yet when map:verify runs; map:sync creates it afterwards.
+    required: false,
     maxBytes: 512 * MiB,
     rebuild: 'npm run assets:prepare -- --all-districts',
   },
