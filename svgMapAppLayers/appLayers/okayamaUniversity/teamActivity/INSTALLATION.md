@@ -3,6 +3,6 @@
 このディレクトリと Container.svg の登録は専用インストーラーが生成しました。
 
 - コントローラーの「CSVを追加」でブラウザ内に活動を追加できます。
-- 「SVGMap App Layers管理」で current.csv とQTCTを確認・再生成できます。
+- 「SVGMap App Layers管理」で都道府県・市区町村・地区名を検索し、current.csv とQTCTを再生成できます。
 - 追加データは既存QTCTへ重ねて描画され、低ズームは密度、高ズームは個別ピンになります。
-- 初期CSVが参照する地区境界だけを同梱しています。別地域の面表示には、`districts/{regionId}/{municipalityCode}.svg` を追加してください。ピン表示には不要です。
+- 岡山県内の地区境界を同梱しています。県外の面表示には、`districts/{regionId}/{municipalityCode}.svg` を追加してください。ピン表示には不要です。

@@ -978,10 +978,13 @@
         const layerId = String(msg.layerId || msg.payload?.layerId || '');
         if (!layerId) return;
         try {
-          const opened = svgMap.getSvgMapLayerUI?.()?.showLayerSpecificUI?.(layerId);
+          // 外部追加レイヤーのDOM idはSVGMap内部のiidとは異なる。
+          // 表示切替と同じ解決を通さないと、controllerは生成済みでもUIが開かない。
+          const identifier = svgMapLayerIdentifier(layerId);
+          const opened = svgMap.getSvgMapLayerUI?.()?.showLayerSpecificUI?.(identifier);
           if (opened === false) {
             window.setTimeout(() => {
-              svgMap.getSvgMapLayerUI?.()?.showLayerSpecificUI?.(layerId);
+              svgMap.getSvgMapLayerUI?.()?.showLayerSpecificUI?.(svgMapLayerIdentifier(layerId));
             }, 250);
           }
         } catch (error) {

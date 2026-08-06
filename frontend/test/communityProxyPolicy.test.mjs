@@ -9,10 +9,21 @@ import {
 } from '../lib/communityProxyPolicy.mjs'
 
 test('community proxy exposes only the declared layer dependencies', () => {
-  assert.deepEqual(communityProxyTargets(), [
-    { hostname: 'starlinkinsider.com', pathnamePrefixes: ['/starlink-gateway-locations/'] },
-    { hostname: 'www.google.com', pathnamePrefixes: ['/maps/'] },
-  ])
+  const targets = communityProxyTargets()
+  assert.ok(targets.length > 100)
+  assert.ok(targets.some((target) => (
+    target.hostname === 'www.e-stat.go.jp'
+    && target.pathnamePrefixes.includes('/gis/statmap-search/data')
+  )))
+  assert.ok(targets.some((target) => (
+    target.hostname === 'amx-project.github.io'
+    && target.pathnamePrefixes.includes('/kuwanauchi')
+  )))
+  assert.ok(targets.some((target) => (
+    target.hostname === 'earthquake.usgs.gov'
+    && target.pathnamePrefixes.includes('/earthquakes/feed/v1.0/summary/2.5_day.geojson')
+  )))
+  assert.ok(!targets.some((target) => target.hostname === 'service.svgmap.org'))
   assert.equal(COMMUNITY_PROXY_MAX_BYTES, 4 * 1024 * 1024)
 })
 
@@ -33,6 +44,14 @@ test('community proxy accepts its exact HTTPS allowlist', () => {
   assert.equal(
     validateCommunityProxyUrl('https://www.google.com/maps/d/viewer?mid=example').pathname,
     '/maps/d/viewer',
+  )
+  assert.equal(
+    validateCommunityProxyUrl('https://www.e-stat.go.jp/gis/statmap-search/data?code=33101').pathname,
+    '/gis/statmap-search/data',
+  )
+  assert.equal(
+    validateCommunityProxyUrl('https://amx-project.github.io/kuwanauchi/kuwanauchi_datalist.csv').hostname,
+    'amx-project.github.io',
   )
 })
 

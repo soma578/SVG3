@@ -1,0 +1,1604 @@
+{
+  "schemaVersion": 1,
+  "source": "SVGMap App Layers upstream snapshot",
+  "targets": [
+    {
+      "hostname": "a.tile.openstreetmap.org",
+      "pathnamePrefixes": [
+        "/"
+      ]
+    },
+    {
+      "hostname": "agora.ex.nii.ac.jp",
+      "pathnamePrefixes": [
+        "/cgi-bin/tile/msmr.pl",
+        "/cps/weather/warning-map/",
+        "/digital-typhoon/gpv/wind/",
+        "/cgi-bin/cps/warning_bbx_json.pl",
+        "/digital-typhoon/gpv/wind/gsm/info/surf.json",
+        "/digital-typhoon/gpv/wind/msm/info/surf.json",
+        "/digital-typhoon/gpv/wind/rsm/info/surf.json",
+        "/earthquake/201103-eastjapan/weather/gpv/rain/",
+        "/digital-typhoon/gpv/wind/gsm/2019100918/surf.json",
+        "/digital-typhoon/gpv/wind/msm/2019100921/surf.json",
+        "/digital-typhoon/gpv/wind/rsm/2019100921/surf.json"
+      ]
+    },
+    {
+      "hostname": "aistudio.google.com",
+      "pathnamePrefixes": [
+        "/app/apikey"
+      ]
+    },
+    {
+      "hostname": "amx-project.github.io",
+      "pathnamePrefixes": [
+        "/kuwanauchi",
+        "/kuwanauchi/kuwanauchi_datalist.csv",
+        "/kuwanauchi01hokkaido/xml/01101-4300-1.zip"
+      ]
+    },
+    {
+      "hostname": "api-public.odpt.org",
+      "pathnamePrefixes": [
+        "/api/v4/gtfs/realtime/",
+        "/api/v4/gbfs/docomo-cycle/gbfs.json",
+        "/api/v4/gbfs/hellocycling/gbfs.json",
+        "/api/v4/gbfs/docomo-cycle-tokyo/gbfs.json"
+      ]
+    },
+    {
+      "hostname": "api.cyclocity.fr",
+      "pathnamePrefixes": [
+        "/contracts/toyama/gbfs/v3/gbfs.json"
+      ]
+    },
+    {
+      "hostname": "api.github.com",
+      "pathnamePrefixes": [
+        "/orgs/dronebird/repos"
+      ]
+    },
+    {
+      "hostname": "api.odpt.org",
+      "pathnamePrefixes": [
+        "/api/v4/gtfs/realtime/"
+      ]
+    },
+    {
+      "hostname": "api.openstreetcam.org",
+      "pathnamePrefixes": [
+        "/2.0/photo/",
+        "/2.0/sequence/tiles/"
+      ]
+    },
+    {
+      "hostname": "apps.kontur.io",
+      "pathnamePrefixes": [
+        "/raster-tiler/oam/mosaic/"
+      ]
+    },
+    {
+      "hostname": "bagelee.com",
+      "pathnamePrefixes": [
+        "/design/css/create_tabs_using_only_css/"
+      ]
+    },
+    {
+      "hostname": "beta.yr-maps.met.no",
+      "pathnamePrefixes": [
+        "/usage",
+        "/concepts",
+        "/api/air-temperature/available.json",
+        "/api/cloud-area-fraction/available.json",
+        "/api/precipitation-amount/available.json"
+      ]
+    },
+    {
+      "hostname": "business.mapfan.com",
+      "pathnamePrefixes": [
+        "/blog/detail/2254"
+      ]
+    },
+    {
+      "hostname": "catalog.nankai-bosai.jp",
+      "pathnamePrefixes": [
+        "/CatalogueService/servlet/NIEDProxyService"
+      ]
+    },
+    {
+      "hostname": "cdn.geolonia.com",
+      "pathnamePrefixes": [
+        "/community-geocoder.js"
+      ]
+    },
+    {
+      "hostname": "cdn.jsdelivr.net",
+      "pathnamePrefixes": [
+        "/npm/@turf/turf@6/turf.min.js",
+        "/npm/xlsx/dist/xlsx.full.min.js",
+        "/npm/@huggingface/transformers@3.0.0",
+        "/gh/satakagi/potrace@master/potrace.js",
+        "/npm/micromodal/dist/micromodal.min.js",
+        "/gh/svgmap/svgmapjs@latest/svgMapLayerLib.js",
+        "/openlocationcode/latest/openlocationcode.js",
+        "/gh/svgmap/svgmapjs@latest/SVGMapLv0.1_r18module.js",
+        "/gh/svgmap/svgmapjs@latest/SVGMapLv0.1_GIS_r4_module.js"
+      ]
+    },
+    {
+      "hostname": "cdn.sheetjs.com",
+      "pathnamePrefixes": [
+        "/xlsx-latest/package/dist/xlsx.full.min.js"
+      ]
+    },
+    {
+      "hostname": "cdnjs.cloudflare.com",
+      "pathnamePrefixes": [
+        "/ajax/libs/encoding-japanese/2.0.0/encoding.min.js"
+      ]
+    },
+    {
+      "hostname": "ckan.odpt.org",
+      "pathnamePrefixes": [
+        "/"
+      ]
+    },
+    {
+      "hostname": "creativecommons.org",
+      "pathnamePrefixes": [
+        "/licenses/by/4.0/deed.ja"
+      ]
+    },
+    {
+      "hostname": "cyberjapandata.gsi.go.jp",
+      "pathnamePrefixes": [
+        "/xyz/",
+        "/xyz/dem/",
+        "/xyz/dem5a/",
+        "/xyz/dem5b/",
+        "/xyz/demgm/",
+        "/xyz/seamlessphoto/",
+        "/xyz/experimental_bvmap/"
+      ]
+    },
+    {
+      "hostname": "d.hatena.ne.jp",
+      "pathnamePrefixes": [
+        "/ja9/20100903/1283504341"
+      ]
+    },
+    {
+      "hostname": "d1yl7kw204zjxn.cloudfront.net",
+      "pathnamePrefixes": [
+        "/gbfs/v2/public/hellocycling_gbfs_licence.txt"
+      ]
+    },
+    {
+      "hostname": "data.bodik.jp",
+      "pathnamePrefixes": [
+        "/dataset/",
+        "/organization/470007",
+        "/api/3/action/package_search",
+        "/dataset/d1a1fca0-d974-49cc-bbba-d2783524c284/resource/ed520796-3781-4aca-b7bb-59419bcc297c/download/470007__202501.csv",
+        "/dataset/872c00c8-efc5-4dd3-83dc-41662f8d7f5c/resource/5f21adb5-9eba-4e2f-b7aa-d6aa8ad05e02/download/470007_hospital.csv",
+        "/dataset/9f1b0d23-53d9-4bbc-8175-3b7890c7b940/resource/012c934a-4c2d-4480-bec7-a189973b13ae/download/470007_preschool.csv",
+        "/dataset/18c561bd-c2b3-4a19-a23a-e1ea3fc8f7c9/resource/63aab031-7698-46ff-a57a-61ade74153bf/download/47007_ireihi_2025.csv",
+        "/dataset/55c0bcf2-b656-4e75-ac9f-dbf06796acac/resource/bda2e391-3b62-4978-a3bd-3c4e9ede06f0/download/470007_event_2026.csv",
+        "/dataset/d8301a57-c280-4fb1-9bf0-26f55abd0c9d/resource/dcca1ff9-fccd-4e6a-95ea-4bf7403ab9c9/download/470007_care_service.csv",
+        "/dataset/1491f4e0-4631-45c2-b5d9-ecbce3206a01/resource/32878cd6-3817-41a1-8063-12db90392561/download/1_suisyou_syokuhin-2.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/1acac0be-8127-4259-93ca-c7276292fbfa/download/1_suisyou_syokuhin-5.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/302747b1-a97a-447f-8d38-bafe91f528b3/download/1_suisyou_syokuhin-8.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/46f41132-8eab-455a-aba5-6b9826b96321/download/1_suisyou_syokuhin-4.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/6b6a7b16-9c53-4470-8e9f-6bd2a0972451/download/1_suisyou_syokuhin-7.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/7fb51275-bed2-485d-ac48-116d104184a2/download/1_suisyou_syokuhin-3.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/bcfd557c-f791-42ed-bfdb-074fdfc8704a/download/1_suisyou_syokuhin-9.csv",
+        "/dataset/1491f4e0-4631-45c2-b5d9-ecbce3206a01/resource/44bb9c40-b890-415e-945d-cc60ec426a84/download/1_suisyou_syokuhin-1.xlsx",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/03eaf240-b169-4c4e-b146-9e4a36d6555d/download/1_suisyou_syokuhin-39.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/07708866-e7e5-411a-b85a-6f5afcd93476/download/1_suisyou_syokuhin-12.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/0a51dbc6-1fbc-4764-9e80-1d8c91f7851f/download/1_suisyou_syokuhin-22.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/0fe3789a-ee93-4aa0-8b30-07aa7e940993/download/1_suisyou_syokuhin-38.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/1156a4a1-8c61-4d2c-954e-4220ebcfb3f8/download/1_suisyou_syokuhin-15.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/2bb4ee28-980c-4563-a755-c87f51b34814/download/1_suisyou_syokuhin-14.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/3e0dab03-708d-4eed-80f7-0e2e2d5d19b1/download/1_suisyou_syokuhin-35.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/4959aea6-4e44-4e72-95ea-114beba779e7/download/1_suisyou_syokuhin-20.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/4a8ffedf-7100-419c-b4aa-d16b7bf419f3/download/1_suisyou_syokuhin-24.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/4b4d5668-98ba-4171-9529-f24f0c9f21b4/download/1_suisyou_syokuhin-43.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/5012248d-e576-409e-8601-207d3596a4d4/download/1_suisyou_syokuhin-17.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/5fb065f6-542e-4dcd-88a2-ac2520389690/download/1_suisyou_syokuhin-21.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/7b8d708a-efb2-471c-bf1e-14d808388226/download/1_suisyou_syokuhin-40.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/80dfb30b-151c-4408-9f1b-c8d469e0b21f/download/1_suisyou_syokuhin-25.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/82ee9827-243f-418f-a2a9-c0bda16d10c0/download/1_suisyou_syokuhin-19.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/84c234e2-852a-4e77-ac1c-c7f61b320107/download/1_suisyou_syokuhin-33.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/8a948513-3f19-42c1-ae35-6abaa885fdfc/download/1_suisyou_syokuhin-16.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/8d29e770-4a51-4283-9cec-f7a2e9a22922/download/1_suisyou_syokuhin-28.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/8f222718-fa59-4f1f-8004-eba94ef5938c/download/1_suisyou_syokuhin-26.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/ac70445b-7316-49fa-8a56-00bf5bebcd48/download/1_suisyou_syokuhin-30.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/ae1484c2-b3bd-4260-a937-9c95985c444d/download/1_suisyou_syokuhin-41.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/aee32ccf-01f7-439a-9789-20c329167ba0/download/1_suisyou_syokuhin-31.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/b6e1fc61-e881-44e3-afb0-b321cd6e5f41/download/1_suisyou_syokuhin-42.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/bfc0173d-c44d-4361-bfa4-8db343f6aaa7/download/1_suisyou_syokuhin-40.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/c1b1ffe4-e639-42df-82b5-08b5725ec343/download/1_suisyou_syokuhin-45.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/c4367ead-34be-42f5-90b4-7921fab9a1b7/download/1_suisyou_syokuhin-27.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/cabf79b8-9414-4edb-82a3-5f488bb9ab43/download/1_suisyou_syokuhin-34.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/cff3c357-3a12-465d-a66e-5119da0ae5d9/download/1_suisyou_syokuhin-32.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/d51cc00c-b04d-4c7c-93b2-c8b1910939b4/download/1_suisyou_syokuhin-18.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/df532f18-02f4-4b8f-b27c-aaf617f61bfc/download/1_suisyou_syokuhin-36.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/e5f338ba-325e-4798-a3f6-a3ef0bc1ac66/download/1_suisyou_syokuhin-13.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/f2fe0e60-280f-4b07-9388-2b0d62c6e5af/download/1_suisyou_syokuhin-37.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/f37c24bb-1293-43f1-8fe6-c5e580b466fd/download/1_suisyou_syokuhin-10.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/f9aad485-7ae8-43a3-bec0-11125bd7d1f7/download/1_suisyou_syokuhin-11.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/f9b346ad-85ee-4fab-b8da-d1b7e124e2ec/download/1_suisyou_syokuhin-23.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/fa6f03b2-43f1-40ca-a1c4-7bc425955fa7/download/1_suisyou_syokuhin-29.csv",
+        "/dataset/5cb9163d-0a59-4a20-a583-91b113be7895/resource/faf9561d-3f10-40f1-be53-6c7fb63f4db4/download/1_suisyou_syokuhin-46.csv",
+        "/dataset/70c87745-835e-4941-ba60-77c9f5834e75/resource/8e4db463-40c3-4341-a396-c574f6756583/download/470007_pref-office_2025.csv",
+        "/dataset/5f9f1214-be55-4af5-acc6-c6577f07d1af/resource/70caa174-340b-480c-afad-6867f733de9d/download/470007_cultural_property.csv",
+        "/dataset/872c00c8-efc5-4dd3-83dc-41662f8d7f5c/resource/f13fa712-caff-4a4d-a8a7-df0549a39285/download/470007_hospital_20250328.csv",
+        "/dataset/9f1b0d23-53d9-4bbc-8175-3b7890c7b940/resource/25c16f3b-3670-483f-9464-535ae78f949a/download/470007_preschool_20250131.csv",
+        "/dataset/d6df3581-015c-457a-ab5b-b1683e777042/resource/57e74516-40c5-4e07-8f06-dac4ea0193e9/download/470007_tourist_attraction.csv",
+        "/dataset/d99032ee-bd2c-41af-9fd5-391819dcf7b0/resource/854b560a-2cbb-44db-98b8-4c311d371c73/download/470007_public_wireless_lan.csv",
+        "/dataset/d8301a57-c280-4fb1-9bf0-26f55abd0c9d/resource/16cf9530-5532-4698-9625-1b7970449300/download/470007_care_service_20250909.csv",
+        "/dataset/5a2f661e-5f4f-4a2e-8229-5730cb3fa094/resource/6d89d0fe-401f-4753-8548-4cc71c8ee5bf/download/470007_okinawasyokuzai_202403.csv",
+        "/dataset/5a2f661e-5f4f-4a2e-8229-5730cb3fa094/resource/a1bb716e-fa0f-4079-a948-eea19b35e9f9/download/470007_okinawasyokuzai_202303.csv",
+        "/dataset/841ac2e1-39da-43a7-b71e-71be68360b74/resource/fcb495c5-e676-417e-a70b-d6a831fbe5ff/download/470007_educational_institution.csv",
+        "/dataset/b8f43b75-efaf-49a9-99d0-c88d2b54931c/resource/7447c970-aa2d-43b0-89f4-2e8660fe49ca/download/470007_meishohyakusen_20251224.csv",
+        "/dataset/5f9f1214-be55-4af5-acc6-c6577f07d1af/resource/107dbe75-bd58-4b97-b2ff-96823b023f6f/download/470007_cultural_property_202405.csv",
+        "/dataset/5f9f1214-be55-4af5-acc6-c6577f07d1af/resource/edcc7bd0-6c56-4dcd-81ca-cc8fcc51acdb/download/470007_cultural_property_202505.csv",
+        "/dataset/cee1c1e9-e32d-44ec-bc2e-cb6229073b1a/resource/82851811-637b-43c1-b23f-743a654c25cc/download/470007_meibokuhyakusen_20251224.csv",
+        "/dataset/d1a1fca0-d974-49cc-bbba-d2783524c284/resource/01bdb20c-85ae-4e93-860f-9db22390f58f/download/470007_absentee_voting_facilities.csv",
+        "/dataset/70c87745-835e-4941-ba60-77c9f5834e75/resource/70310d14-17d7-42a9-964a-e4e9c9e1409a/download/470007_prefectural-urban-park_2025.csv",
+        "/dataset/841ac2e1-39da-43a7-b71e-71be68360b74/resource/999fd0ba-4588-4660-8855-559703434624/download/470007_educational_institution_2024.csv",
+        "/dataset/841ac2e1-39da-43a7-b71e-71be68360b74/resource/c75232d8-6516-48a7-9639-15644f75ba43/download/470007_educational_institution_2025.csv",
+        "/dataset/d99032ee-bd2c-41af-9fd5-391819dcf7b0/resource/b3e62094-e907-41b9-bff4-803d55e28ce6/download/470007_public-wireless-lan_20251119.csv",
+        "/dataset/f7a48359-cc9b-4575-92d4-c5337afe435d/resource/92e1b0de-2fff-4cf9-96a8-054d36cca95a/download/470007_public-parking-lots-list_2026.csv",
+        "/dataset/70c87745-835e-4941-ba60-77c9f5834e75/resource/ec418f62-c163-4a36-8ce1-b8d6ac76bd12/download/470007_prefectural-public-housing_2025.csv",
+        "/dataset/5f9f1214-be55-4af5-acc6-c6577f07d1af/resource/950d55ce-4cc7-45cc-87ca-e5100baa2eca/download/stg-svm002redirectxenapptamashhadownloads4_suisyou_bunkazai-1.xlsx"
+      ]
+    },
+    {
+      "hostname": "deepwiki.com",
+      "pathnamePrefixes": [
+        "/badge.svg",
+        "/svgmap/svgmapAppLayers"
+      ]
+    },
+    {
+      "hostname": "deno.land",
+      "pathnamePrefixes": [
+        "/x/zipjs@v2.6.62/index.js"
+      ]
+    },
+    {
+      "hostname": "developer.jcdecaux.com",
+      "pathnamePrefixes": [
+        "/files/Open-Licence-fr.pdf"
+      ]
+    },
+    {
+      "hostname": "developer.mozilla.org",
+      "pathnamePrefixes": [
+        "/en-US/docs/Web/API/Node.normalize"
+      ]
+    },
+    {
+      "hostname": "developer.odpt.org",
+      "pathnamePrefixes": [
+        "/",
+        "/terms",
+        "/terms/center_use_rules.html",
+        "/terms/data_basic_use_guideline.html"
+      ]
+    },
+    {
+      "hostname": "developer.yahoo.co.jp",
+      "pathnamePrefixes": [
+        "/sitemap/",
+        "/webapi/map/openlocalplatform/v1/geocoder.html"
+      ]
+    },
+    {
+      "hostname": "developers.google.com",
+      "pathnamePrefixes": [
+        "/kml/documentation/kmlreference"
+      ]
+    },
+    {
+      "hostname": "disaportal.gsi.go.jp",
+      "pathnamePrefixes": [
+        "/maps/",
+        "/index.html",
+        "/maps/js/mobile_legend.js",
+        "/maps/js/print_legends.js",
+        "/maps/config/hazardconfig.txt",
+        "/maps/config/kakosaigaiconfig.txt",
+        "/hazardmap/maps/js/mobile_legend.js",
+        "/data/raster/03_hightide_l2_shinsuishin&zmax=17"
+      ]
+    },
+    {
+      "hostname": "disaportaldata.gsi.go.jp",
+      "pathnamePrefixes": [
+        "/raster/10_kansui&zmax=14",
+        "/raster/10_kinkyuuyusou&zmax=14",
+        "/raster/05_nadarekikenkasyo&zmax=16",
+        "/raster/04_tsunami_newlegend&zmax=14",
+        "/raster/04_tsunami_oldlegend&zmax=14",
+        "/raster/05_jisuberikikenkasyo&zmax=16",
+        "/raster/05_kyukeisyachihoukai&zmax=16",
+        "/raster/08_03_ekijoka_zenkoku&zmax=14",
+        "/raster/05_jisuberikeikaikuiki&zmax=16",
+        "/raster/01_flood_l2_shinsuishin&zmax=17",
+        "/raster/05_dosekiryukeikaikuiki&zmax=16",
+        "/raster/05_dosekiryukikenkeiryu&zmax=16",
+        "/raster/05_kyukeishakeikaikuiki&zmax=16",
+        "/raster/10_jizentuukoukiseikukan&zmax=12",
+        "/raster/01_flood_l1_shinsuishin_newlegend&zmax=17"
+      ]
+    },
+    {
+      "hostname": "dmdata.jp",
+      "pathnamePrefixes": [
+        "/docs/jma/manual/0205-0205.pdf"
+      ]
+    },
+    {
+      "hostname": "docomo-cycle.jp",
+      "pathnamePrefixes": [
+        "/"
+      ]
+    },
+    {
+      "hostname": "e.developer.yahoo.co.jp",
+      "pathnamePrefixes": [
+        "/dashboard"
+      ]
+    },
+    {
+      "hostname": "earthquake.usgs.gov",
+      "pathnamePrefixes": [
+        "/fdsnws/event/1/query.geojson",
+        "/earthquakes/feed/v1.0/summary/all_week.csv",
+        "/earthquakes/feed/v1.0/summary/4.5_month.csv",
+        "/earthquakes/feed/v1.0/summary/2.5_day.geojson",
+        "/earthquakes/feed/v1.0/summary/4.5_day.geojson",
+        "/earthquakes/feed/v1.0/summary/all_day.geojson",
+        "/earthquakes/feed/v1.0/summary/2.5_week.geojson",
+        "/earthquakes/feed/v1.0/summary/4.5_week.geojson",
+        "/earthquakes/feed/v1.0/summary/all_week.geojson",
+        "/earthquakes/feed/v1.0/summary/2.5_month.geojson",
+        "/earthquakes/feed/v1.0/summary/4.5_month.geojson",
+        "/earthquakes/feed/v1.0/summary/all_month.geojson",
+        "/earthquakes/feed/v1.0/summary/all_week.csv&latCol=1&lngCol=2&titleCol=0&variableIcon=4,3,4,5,6",
+        "/earthquakes/feed/v1.0/summary/4.5_month.csv&latCol=1&lngCol=2&titleCol=0&variableIcon=4,3,4,5,6"
+      ]
+    },
+    {
+      "hostname": "ecitizen.jp",
+      "pathnamePrefixes": [
+        "/Sac/27"
+      ]
+    },
+    {
+      "hostname": "en.wikipedia.org",
+      "pathnamePrefixes": [
+        "/wiki/HSL_and_HSV",
+        "/wiki/Modulo_operation.",
+        "/wiki/Military_Grid_Reference_System"
+      ]
+    },
+    {
+      "hostname": "fgd.gsi.go.jp",
+      "pathnamePrefixes": [
+        "/download/geoid.php"
+      ]
+    },
+    {
+      "hostname": "firms.modaps.eosdis.nasa.gov",
+      "pathnamePrefixes": [
+        "/mapserver/wmts/"
+      ]
+    },
+    {
+      "hostname": "fonts.google.com",
+      "pathnamePrefixes": [
+        "/icons"
+      ]
+    },
+    {
+      "hostname": "fonts.googleapis.com",
+      "pathnamePrefixes": [
+        "/css2"
+      ]
+    },
+    {
+      "hostname": "gbank.gsj.jp",
+      "pathnamePrefixes": [
+        "/ows/GSJ_Combined_Bedrock_and_Superficial_Geology_and_Age/wms"
+      ]
+    },
+    {
+      "hostname": "generativelanguage.googleapis.com",
+      "pathnamePrefixes": [
+        "/v1beta/models/gemini-2.5-flash-lite:generateContent"
+      ]
+    },
+    {
+      "hostname": "geocode.csis.u-tokyo.ac.jp",
+      "pathnamePrefixes": [
+        "/home/simple-geocoding/",
+        "/cgi-bin/simple_geocode.cgi"
+      ]
+    },
+    {
+      "hostname": "gildas-lormeau.github.io",
+      "pathnamePrefixes": [
+        "/zip.js/"
+      ]
+    },
+    {
+      "hostname": "ginpen.com",
+      "pathnamePrefixes": [
+        "/2012/12/24/fix-window-height/"
+      ]
+    },
+    {
+      "hostname": "gist.github.com",
+      "pathnamePrefixes": [
+        "/satakagi/436838ae91522eecd333441bced06ff1"
+      ]
+    },
+    {
+      "hostname": "github.com",
+      "pathnamePrefixes": [
+        "/cambecc",
+        "/dronebird",
+        "/amx-project",
+        "/Esri/wind-js",
+        "/cambecc/earth",
+        "/imaya/zlib.js",
+        "/cambecc/earth.",
+        "/svgmap/svgmapjs",
+        "/greggman/unzipit",
+        "/mapbox/togeojson",
+        "/satakagi/potrace",
+        "/nrkno/yr-map-docs",
+        "/bjornharrtell/jsts",
+        "/mbostock/shapefile",
+        "/svgmap/svgMapTools",
+        "/svgmap/svgmapjs.git",
+        "/iamakulov/unescape-js",
+        "/amx-project/kuwanauchi",
+        "/graphhopper/graphhopper",
+        "/mapbox/simplestyle-spec",
+        "/svgmap/svgmapjs/issues/5",
+        "/svgmap/svgmapjs/issues/12",
+        "/geolonia/community-geocoder",
+        "/thejoshwolfe/yauzl/issues/33",
+        "/mapbox/mapnik-vector-tile/issues/90",
+        "/MobilityData/gbfs/blob/master/LICENSE",
+        "/gsi-cyberjapan/gsimaps-vector-experiment",
+        "/svgmap/svgMapDemo/tree/main/contents/OSMPOIs",
+        "/bjornharrtell/jsts/blob/master/LICENSE_EDLv1.txt",
+        "/bjornharrtell/jsts/blob/master/LICENSE_EPLv1.txt",
+        "/shahid28/utm-latlng/blob/master/UTMLatLngFront.js",
+        "/google/material-design-icons/tree/master/symbols/web",
+        "/graphhopper/graphhopper/blob/master/docs/web/api-doc.md",
+        "/graphhopper/graphhopper/blob/master/docs/core/custom-models.md",
+        "/bjornharrtell/jsts/blob/master/LICENSE_LICENSE_ES6_COLLECTIONS.txt"
+      ]
+    },
+    {
+      "hostname": "gtfs.org",
+      "pathnamePrefixes": [
+        "/ja/documentation/realtime/reference/"
+      ]
+    },
+    {
+      "hostname": "hinanmap.gsi.go.jp",
+      "pathnamePrefixes": [
+        "/hinanjocp/defaultFtpData/csv/mergeFromCity_1.csv",
+        "/hinanjocp/defaultFtpData/csv/mergeFromCity_2.csv"
+      ]
+    },
+    {
+      "hostname": "iot100.uchida.co.jp",
+      "pathnamePrefixes": [
+        "/",
+        "/iot100api/public/",
+        "/iot100api/public/getnodelist/",
+        "/iot100api/public/getweather/[NodeID]",
+        "/iot100api/public/info/weatherdatatype/",
+        "/iot100api/public/getscene/[NodeID]/1/original/[YYYYMMDDHHmm]/"
+      ]
+    },
+    {
+      "hostname": "iptc.org",
+      "pathnamePrefixes": [
+        "/std/Iptc4xmpExt/2008-02-29/"
+      ]
+    },
+    {
+      "hostname": "ja.javascript.info",
+      "pathnamePrefixes": [
+        "/fetch-progress"
+      ]
+    },
+    {
+      "hostname": "ja.wikipedia.org",
+      "pathnamePrefixes": [
+        "/wiki/%E3%82%B8%E3%82%AA%E3%83%8F%E3%83%83%E3%82%B7%E3%83%A5",
+        "/wiki/%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%87%E3%82%A3_(%E6%B0%97%E8%B1%A1%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9"
+      ]
+    },
+    {
+      "hostname": "javascript.info",
+      "pathnamePrefixes": [
+        "/fetch-progress"
+      ]
+    },
+    {
+      "hostname": "kotobike.jp",
+      "pathnamePrefixes": [
+        "/news/260323"
+      ]
+    },
+    {
+      "hostname": "manablog.org",
+      "pathnamePrefixes": [
+        "/php_form_log/"
+      ]
+    },
+    {
+      "hostname": "map.yahooapis.jp",
+      "pathnamePrefixes": [
+        "/geocode/V1/geoCoder"
+      ]
+    },
+    {
+      "hostname": "maps.gsi.go.jp",
+      "pathnamePrefixes": [
+        "/js/muni.js",
+        "/help/pdf/grid.pdf",
+        "/development/ichiran.html",
+        "/help/pdf/vector/dataspec.pdf",
+        "/pn/meeting_partners/data/20151128/CCPN4_johoteikyo.pdf"
+      ]
+    },
+    {
+      "hostname": "math.stackexchange.com",
+      "pathnamePrefixes": [
+        "/questions/2541378/lat-lon-coordinates-of-a-circle-on-a-sphere"
+      ]
+    },
+    {
+      "hostname": "mathiasbynens.be",
+      "pathnamePrefixes": [
+        "/notes/javascript-encoding"
+      ]
+    },
+    {
+      "hostname": "mreversegeocoder.gsi.go.jp",
+      "pathnamePrefixes": [
+        "/reverse-geocoder/LonLatToAddress"
+      ]
+    },
+    {
+      "hostname": "msearch.gsi.go.jp",
+      "pathnamePrefixes": [
+        "/address-search/AddressSearch"
+      ]
+    },
+    {
+      "hostname": "mths.be",
+      "pathnamePrefixes": [
+        "/fromcodepoint"
+      ]
+    },
+    {
+      "hostname": "nlftp.mlit.go.jp",
+      "pathnamePrefixes": [
+        "/ksj/index.html",
+        "/ksj/gml/codelist/PrefCd.html",
+        "/ksj/gml/codelist/AdminiBoundary_CD.xlsx",
+        "/ksj/gml/datalist/KsjTmplt-N10-v1_1.html"
+      ]
+    },
+    {
+      "hostname": "norm-nois.com",
+      "pathnamePrefixes": [
+        "/blog/archives/5502"
+      ]
+    },
+    {
+      "hostname": "nowcoast.noaa.gov",
+      "pathnamePrefixes": [
+        "/geoserver/",
+        "/geoserver/satellite/wms",
+        "/geoserver/analysis/sea_surface_temperature/ows",
+        "/geoserver/observations/lightning_detection/ows"
+      ]
+    },
+    {
+      "hostname": "ns.adobe.com",
+      "pathnamePrefixes": [
+        "/xap/1.0/",
+        "/exif/1.0/",
+        "/tiff/1.0/",
+        "/xap/1.0/mm/",
+        "/photoshop/1.0/",
+        "/xap/1.0/sType/ResourceRef",
+        "/xap/1.0/sType/ResourceEvent"
+      ]
+    },
+    {
+      "hostname": "ns.useplus.org",
+      "pathnamePrefixes": [
+        "/ldf/xmp/1.0/"
+      ]
+    },
+    {
+      "hostname": "ocq.dk",
+      "pathnamePrefixes": [
+        "/euref89"
+      ]
+    },
+    {
+      "hostname": "odpt-bus-proxy.svgmap.workers.dev",
+      "pathnamePrefixes": [
+        "/"
+      ]
+    },
+    {
+      "hostname": "openinframap.org",
+      "pathnamePrefixes": [
+        "/tiles/",
+        "/map.json"
+      ]
+    },
+    {
+      "hostname": "openstreetcam.org",
+      "pathnamePrefixes": [
+        "/map/@[latitude],[longitude],[mapzoom]z"
+      ]
+    },
+    {
+      "hostname": "operations.osmfoundation.org",
+      "pathnamePrefixes": [
+        "/policies/tiles/"
+      ]
+    },
+    {
+      "hostname": "proengineer.internous.co.jp",
+      "pathnamePrefixes": [
+        "/content/columnfeature/6492"
+      ]
+    },
+    {
+      "hostname": "public-wms.met.no",
+      "pathnamePrefixes": [
+        "/verportal/verportal.map"
+      ]
+    },
+    {
+      "hostname": "qiita.com",
+      "pathnamePrefixes": [
+        "/ykob/items/ab7f30c43a0ed52d16f2",
+        "/frogcat/items/b3235c06d64cee01fa47",
+        "/koushisa/items/4a3e98358a7ce110aeec",
+        "/41semicolon/items/c0bbace5eafc422f988a",
+        "/kei-nakoshi/items/7d02eae7a0609faab85e",
+        "/hachisukansw/items/633d1bf6baf008e82847"
+      ]
+    },
+    {
+      "hostname": "raw.githubusercontent.com",
+      "pathnamePrefixes": [
+        "/dronebird",
+        "/mapbox/togeojson/master/togeojson.js",
+        "/MobilityData/gbfs/master/systems.csv",
+        "/amx-project/kuwanauchi/main/kuwanauchi_datalist.csv"
+      ]
+    },
+    {
+      "hostname": "s2maps.eu",
+      "pathnamePrefixes": [
+        "/"
+      ]
+    },
+    {
+      "hostname": "server.name.jp",
+      "pathnamePrefixes": [
+        "/"
+      ]
+    },
+    {
+      "hostname": "sharaku.eorc.jaxa.jp",
+      "pathnamePrefixes": [
+        "/GSMaP/index_j.htm",
+        "/GSMaP/js/gsmap_set_latest.js",
+        "/GSMaP_NOW/js/gsmap_set_latest.js",
+        "/GSMaP/img/console_notes_rain_j.png",
+        "/GSMaP_NOW/img/console_notes_rain_j.png",
+        "/cgi-bin/trmm/GSMaP/tilemap/tile_rain.py",
+        "/cgi-bin/trmm/GSMaP_NOW/tilemap/tile_rain.py",
+        "/GSMaPxNEXRA/images/console_notes_rain_j.png",
+        "/cgi-bin/trmm/GSMaPxNEXRA/tilemap/tile_rain.py"
+      ]
+    },
+    {
+      "hostname": "sodipodi.sourceforge.net",
+      "pathnamePrefixes": [
+        "/DTD/sodipodi-0.dtd"
+      ]
+    },
+    {
+      "hostname": "stackoverflow.com",
+      "pathnamePrefixes": [
+        "/questions/9692665/cache-busting-via-params",
+        "/questions/68725158/converting-blob-to-data-url",
+        "/questions/2303690/resizing-an-image-in-an-html5-canvas",
+        "/questions/7616461/generate-a-hash-from-string-in-javascript",
+        "/questions/68278858/is-it-any-way-to-highlight-text-in-textarea",
+        "/questions/18680261/extract-images-from-pdf-file-with-javascript",
+        "/questions/7745867/how-do-you-get-the-cursor-position-in-a-textarea",
+        "/questions/1573053/javascript-function-to-convert-color-names-to-hex-codes",
+        "/questions/16736198/typing-in-textarea-super-slow-when-lots-of-text-inside",
+        "/questions/37204296/cache-invalidation-using-the-query-string-bad-practice",
+        "/questions/13006556/check-if-two-strings-share-a-common-substring-in-javascript",
+        "/questions/3426404/create-a-hexadecimal-colour-based-on-a-string-with-javascript",
+        "/questions/71686548/how-to-change-the-highlight-color-of-selected-text-in-a-textarea-using-selectio"
+      ]
+    },
+    {
+      "hostname": "starlinkinsider.com",
+      "pathnamePrefixes": [
+        "/starlink-gateway-locations/"
+      ]
+    },
+    {
+      "hostname": "step-learn.com",
+      "pathnamePrefixes": [
+        "/article/html-css/074-form-sum.html"
+      ]
+    },
+    {
+      "hostname": "support.google.com",
+      "pathnamePrefixes": [
+        "/maps/answer/7047426"
+      ]
+    },
+    {
+      "hostname": "svgmap.github.io",
+      "pathnamePrefixes": [
+        "/svgMapDemo/"
+      ]
+    },
+    {
+      "hostname": "t-sagara.github.io",
+      "pathnamePrefixes": [
+        "/jageocoder/"
+      ]
+    },
+    {
+      "hostname": "t1.openseamap.org",
+      "pathnamePrefixes": [
+        "/seamark/"
+      ]
+    },
+    {
+      "hostname": "tile.openstreetmap.jp",
+      "pathnamePrefixes": [
+        "/",
+        "/styles/osm-bright/",
+        "/styles/openmaptiles/",
+        "/styles/osm-bright-en/",
+        "/styles/osm-bright-ja/",
+        "/styles/maptiler-basic-en/",
+        "/styles/maptiler-basic-ja/",
+        "/styles/maptiler-toner-en/",
+        "/styles/maptiler-toner-ja/"
+      ]
+    },
+    {
+      "hostname": "tile.openstreetmap.org",
+      "pathnamePrefixes": [
+        "/"
+      ]
+    },
+    {
+      "hostname": "tiles.maps.eox.at",
+      "pathnamePrefixes": [
+        "/wmts/1.0.0/osm/default/WGS84/",
+        "/wmts/1.0.0/osm_3857/default/g/",
+        "/wmts/1.0.0/overlay/default/WGS84/",
+        "/wmts/1.0.0/streets/default/WGS84/",
+        "/wmts/1.0.0/terrain/default/WGS84/",
+        "/wmts/1.0.0/overlay_3857/default/g/",
+        "/wmts/1.0.0/streets_3857/default/g/",
+        "/wmts/1.0.0/terrain_3857/default/g/",
+        "/wmts/1.0.0/coastline/default/WGS84/",
+        "/wmts/1.0.0/bluemarble/default/WGS84/",
+        "/wmts/1.0.0/coastline_3857/default/g/",
+        "/wmts/1.0.0/graticules/default/WGS84/",
+        "/wmts/1.0.0/blackmarble/default/WGS84/",
+        "/wmts/1.0.0/bluemarble_3857/default/g/",
+        "/wmts/1.0.0/hydrography/default/WGS84/",
+        "/wmts/1.0.0/s2cloudless/default/WGS84/",
+        "/wmts/1.0.0/blackmarble_3857/default/g/",
+        "/wmts/1.0.0/hydrography_3857/default/g/",
+        "/wmts/1.0.0/overlay_base/default/WGS84/",
+        "/wmts/1.0.0/s2cloudless_3857/default/g/",
+        "/wmts/1.0.0/overlay_base_3857/default/g/",
+        "/wmts/1.0.0/terrain-light/default/WGS84/",
+        "/wmts/1.0.0/overlay_bright/default/WGS84/",
+        "/wmts/1.0.0/terrain-light_3857/default/g/",
+        "/wmts/1.0.0/coastline_black/default/WGS84/",
+        "/wmts/1.0.0/overlay_bright_3857/default/g/",
+        "/wmts/1.0.0/s2cloudless-2017/default/WGS84/",
+        "/wmts/1.0.0/s2cloudless-2018/default/WGS84/",
+        "/wmts/1.0.0/s2cloudless-2017_3857/default/g/",
+        "/wmts/1.0.0/s2cloudless-2018_3857/default/g/",
+        "/wmts/1.0.0/magnetic_graticules/default/WGS84/",
+        "/wmts/1.0.0/overlay_base_bright/default/WGS84/",
+        "/wmts/1.0.0/overlay_base_bright_3857/default/g/"
+      ]
+    },
+    {
+      "hostname": "tiles.yr.no",
+      "pathnamePrefixes": [
+        "/api/air-temperature/",
+        "/api/wind/available.json"
+      ]
+    },
+    {
+      "hostname": "tmg0525.hatenadiary.jp",
+      "pathnamePrefixes": [
+        "/entry/2018/04/11/004714"
+      ]
+    },
+    {
+      "hostname": "unpkg.com",
+      "pathnamePrefixes": [
+        "/shapefile@0.6",
+        "/pbf@3.0.5/dist/pbf.js",
+        "/jsts@1.6.1/dist/jsts.min.js"
+      ]
+    },
+    {
+      "hostname": "var.blog.jp",
+      "pathnamePrefixes": [
+        "/archives/79094563.html",
+        "/archives/84996787.html"
+      ]
+    },
+    {
+      "hostname": "vldb.gsi.go.jp",
+      "pathnamePrefixes": [
+        "/sokuchi/surveycalc/algorithm/xy2bl/xy2bl.htm"
+      ]
+    },
+    {
+      "hostname": "webliker.info",
+      "pathnamePrefixes": [
+        "/39533/"
+      ]
+    },
+    {
+      "hostname": "webllica.com",
+      "pathnamePrefixes": [
+        "/copy-text-to-clipboard/"
+      ]
+    },
+    {
+      "hostname": "wiki.openstreetmap.org",
+      "pathnamePrefixes": [
+        "/wiki/Landsat",
+        "/wiki/Raster_tile_providers",
+        "/wiki/Japan/OSMFJ_Tileserver",
+        "/wiki/Commercial_OSM_Software_and_Services",
+        "/wiki/JA:%E3%82%BF%E3%82%A4%E3%83%AB%E5%88%A9%E7%94%A8%E8%A6%8F%E7%B4%84"
+      ]
+    },
+    {
+      "hostname": "write-remember.com",
+      "pathnamePrefixes": [
+        "/program/html/formparts/"
+      ]
+    },
+    {
+      "hostname": "www.cbr.mlit.go.jp",
+      "pathnamePrefixes": [
+        "/road_map/doro_bosaijoho_webmap/kml/24_mie_kinkyuuyusou_line.kml",
+        "/road_map/doro_bosaijoho_webmap/kml/21_gifu_kinkyuuyusou_line.kml",
+        "/road_map/doro_bosaijoho_webmap/kml/23_aichi_kinkyuuyusou_line.kml",
+        "/road_map/doro_bosaijoho_webmap/kml/22_shizuoka_kinkyuuyusou_line.kml"
+      ]
+    },
+    {
+      "hostname": "www.cgr.mlit.go.jp",
+      "pathnamePrefixes": [
+        "/doro_bosaijoho_webmap/kml/31_tottori_kinkyuuyusou_line.kml",
+        "/doro_bosaijoho_webmap/kml/32_shimane_kinkyuuyusou_line.kml",
+        "/doro_bosaijoho_webmap/kml/33_okayama_kinkyuuyusou_line.kml",
+        "/doro_bosaijoho_webmap/kml/34_hiroshima_kinkyuuyusou_line.kml",
+        "/doro_bosaijoho_webmap/kml/35_yamaguchi_kinkyuuyusou_line.kml"
+      ]
+    },
+    {
+      "hostname": "www.cyclocity.jp",
+      "pathnamePrefixes": [
+        "/",
+        "/ja/documents/cgau/vls"
+      ]
+    },
+    {
+      "hostname": "www.data.jma.go.jp",
+      "pathnamePrefixes": [
+        "/",
+        "/tile/",
+        "/review/",
+        "/review/case.txt",
+        "/airinfo/index.html",
+        "/eqdb/data/shindo/api/",
+        "/multi/quake/index.html",
+        "/yoho/meshjirei/jirei01/",
+        "/yoho/meshjirei/jirei02/",
+        "/yoho/meshjirei/jirei03/",
+        "/yoho/meshjirei/jirei04/",
+        "/yoho/meshjirei/jirei05/",
+        "/mscweb/data/himawari/img/",
+        "/typhoon/route_map/index.html",
+        "/mscweb/data/himawari/index.html",
+        "/svd/eqdb/data/shindo/index.html",
+        "/svd/eqdb/data/shindo/api/api.php",
+        "/yoho/meshjirei/jirei06/jmatile/data/",
+        "/omaad/aviation/jp/cci/images/legend_jp_normal_cci.svg",
+        "/omaad/aviation/jp/fog/images/legend_jp_normal_fog.svg",
+        "/omaad/rsmc_nowcast/en/hrp/images/legend_en_normal_hrp.svg",
+        "/omaad/rsmc_nowcast/en/hcai/images/legend_en_normal_clc.svg",
+        "/omaad/rsmc_nowcast/en/hcai/images/legend_en_normal_clm.svg",
+        "/omaad/rsmc_nowcast/en/hcai/images/legend_en_normal_htc.svg",
+        "/omaad/rsmc_nowcast/en/hcai/images/legend_en_normal_sim.svg",
+        "/omaad/rsmc_nowcast/en/hcai/images/legend_en_normal_dust.svg",
+        "/fcd/yoho/meshjirei/jirei03/highresorad/highresorad_tile/HRKSNC/",
+        "/gijutsu/meshjirei/jirei01/doshamesh/images/contents/DOSHA_legend_jp.png",
+        "/suishin/catalogue/format/SvdEpi_Sonota-Joho_Tokai-Chosa_Code_format.pdf",
+        "/gijutsu/meshjirei/jirei01/suigaimesh/images/contents/FLOOD_legend_jp.png",
+        "/gijutsu/meshjirei/jirei01/suigaimesh/images/contents/INUND_legend_jp.png",
+        "/gijutsu/meshjirei/jirei01/highresorad/images/contents/HRKSNC_legendp_jp.png",
+        "/gijutsu/meshjirei/jirei01/suigaimesh/images/contents/FLOOD_FCST_legend_jp.png"
+      ]
+    },
+    {
+      "hostname": "www.dc.ogb.go.jp",
+      "pathnamePrefixes": [
+        "/road/doro_bosaijoho_webmap/kml/47_okinawa_kinkyuuyusou_line.kml"
+      ]
+    },
+    {
+      "hostname": "www.digital.go.jp",
+      "pathnamePrefixes": [
+        "/resources/open_data/public_data_license_v1.0"
+      ]
+    },
+    {
+      "hostname": "www.e-stat.go.jp",
+      "pathnamePrefixes": [
+        "/gis/statmap-search",
+        "/gis/statmap-search/data",
+        "/municipalities/cities/areacode",
+        "/help/data-definition-information/downloaddata/B002005212020.pdf"
+      ]
+    },
+    {
+      "hostname": "www.emc.ncep.noaa.gov",
+      "pathnamePrefixes": [
+        "/index.php"
+      ]
+    },
+    {
+      "hostname": "www.eorc.jaxa.jp",
+      "pathnamePrefixes": [
+        "/cgi-bin/theme/nexra3/tile_hreso.py",
+        "/theme/NEXRA/images/cbar_ss_slp.png",
+        "/theme/NEXRA/images/cbar_ss_t2m.png",
+        "/theme/NEXRA/images/cbar_sa_tppn.png",
+        "/theme/NEXRA/images/cbar_ss_uv10m.png",
+        "/theme/NEXRA/images/cbar_ss_vap_atm.png"
+      ]
+    },
+    {
+      "hostname": "www.erms.nsr.go.jp",
+      "pathnamePrefixes": [
+        "/nra-ramis-webg/",
+        "/nra-ramis-webg/general/tab/initialize",
+        "/nra-ramis-webg/general/mapdisplaydoserate/search",
+        "/nra-ramis-webg/general/graphcommon/allocatescreen"
+      ]
+    },
+    {
+      "hostname": "www.example.com",
+      "pathnamePrefixes": [
+        "/path"
+      ]
+    },
+    {
+      "hostname": "www.gimp.org",
+      "pathnamePrefixes": [
+        "/xmp/"
+      ]
+    },
+    {
+      "hostname": "www.google.com",
+      "pathnamePrefixes": [
+        "/maps",
+        "/maps/@",
+        "/maps/d/viewer",
+        "/maps/d/u/0/viewer"
+      ]
+    },
+    {
+      "hostname": "www.graphhopper.com",
+      "pathnamePrefixes": [
+        "/blog/2020/05/31/examples-for-customizable-routing/"
+      ]
+    },
+    {
+      "hostname": "www.gsi.go.jp",
+      "pathnamePrefixes": [
+        "/",
+        "/bousai.html",
+        "/chubu/minichishiki10.html",
+        "/bousaichiri/hinanbasho.html",
+        "/buturisokuchi/grageo_geoid.html",
+        "/KOKUJYOHO/MOUNTAIN/1003zan20250401.csv",
+        "/kihonjohochousa/kihonjohochousa41139.html",
+        "/kihonjohochousa/kihonjohochousa41140.html"
+      ]
+    },
+    {
+      "hostname": "www.hellocycling.jp",
+      "pathnamePrefixes": [
+        "/"
+      ]
+    },
+    {
+      "hostname": "www.hokoukukan.go.jp",
+      "pathnamePrefixes": [
+        "/top.html",
+        "/metadata/resource/10",
+        "/uploads/22/10/mlit_jr_sta.pdf",
+        "/uploads/22/10/mlit_jr_sta1.csv"
+      ]
+    },
+    {
+      "hostname": "www.hrr.mlit.go.jp",
+      "pathnamePrefixes": [
+        "/road/doro_bousaijoho_webmap/kml/16_toyama_kinkyuuyusou_line.kml",
+        "/road/doro_bousaijoho_webmap/kml/15_niigata_kinkyuuyusou_line.kml",
+        "/road/doro_bousaijoho_webmap/kml/17_ishikawa_kinkyuuyusou_line.kml"
+      ]
+    },
+    {
+      "hostname": "www.html5rocks.com",
+      "pathnamePrefixes": [
+        "/ja/tutorials/file/dndfiles//"
+      ]
+    },
+    {
+      "hostname": "www.inkscape.org",
+      "pathnamePrefixes": [
+        "/namespaces/inkscape"
+      ]
+    },
+    {
+      "hostname": "www.instantstreetview.com",
+      "pathnamePrefixes": [
+        "/@[latitude],[longitude],[heading]h,[pitch]p,[zoom]z"
+      ]
+    },
+    {
+      "hostname": "www.ipentec.com",
+      "pathnamePrefixes": [
+        "/document/csharp-read-csv-file-by-regex"
+      ]
+    },
+    {
+      "hostname": "www.itsonlyamodel.us",
+      "pathnamePrefixes": [
+        "/IMS-map-projections.html"
+      ]
+    },
+    {
+      "hostname": "www.j-shis.bosai.go.jp",
+      "pathnamePrefixes": [
+        "/map/",
+        "/map/wms/landslide",
+        "/mapcache/P-Y2020/wmts",
+        "/JSHIS2/GeoJSON/F-Y2020-SHP-98F_TTL_TTL.geojson",
+        "/JSHIS2/GeoJSON/F-Y2020-SHP-ELS_GR1_TTL.geojson",
+        "/JSHIS2/GeoJSON/F-Y2020-SHP-PME_TTL_TTL.geojson",
+        "/JSHIS2/GeoJSON/F-Y2020-AREA-PME_TTL_TTL.geojson",
+        "/&legend=https://www.j-shis.bosai.go.jp/JSHIS2/IMAGE/etc/P-Y2020-SI.png"
+      ]
+    },
+    {
+      "hostname": "www.j-this.bosai.go.jp",
+      "pathnamePrefixes": [
+        "/terrain/wmts/",
+        "/NKD_hzmap_part1app_2020/wmts/",
+        "/map/images/probability_legend3.png"
+      ]
+    },
+    {
+      "hostname": "www.jice.or.jp",
+      "pathnamePrefixes": [
+        "/knowledge/maps/",
+        "/cms/gis/roads.geojson",
+        "/cms/gis/rivers.geojson"
+      ]
+    },
+    {
+      "hostname": "www.jma.go.jp",
+      "pathnamePrefixes": [
+        "/",
+        "/jp/",
+        "/bosai/",
+        "/bosai/nowc/",
+        "/bosai/rain/",
+        "/bosai/risk/",
+        "/bosai/snow/",
+        "/bosai/wdist/",
+        "/bosai/map.html",
+        "/bosai/umimesh/",
+        "/bosai/kaikotan/",
+        "/bosai/quake/data/",
+        "/bosai/weather_map/",
+        "/bosai/jmatile/data/",
+        "/bosai/himawari/data/",
+        "/bosai/rain/rasrf.html",
+        "/bosai/amedas/data/map/",
+        "/bosai/jmatile/data/nowc/",
+        "/bosai/jmatile/data/risk/",
+        "/bosai/quake/data/list.json",
+        "/jma/jma_top/image/logo.gif",
+        "/bosai/common/const/area.json",
+        "/bosai/tsunami/data/list.json",
+        "/bosai/typhoon/image/legend.png",
+        "/bosai/ashfall/data/ashfall/pdf/",
+        "/bosai/volcano/data/ashfall/pdf/",
+        "/bosai/tsunami/data/clearweb.json",
+        "/bosai/amedas/data/latest_time.txt",
+        "/bosai/common/const/geojson/wards_",
+        "/jma/kishou/know/shindo/index.html",
+        "/jma/jma-eng/jma-center/nowcasting/",
+        "/jma/kishou/know/bosai/riskmap.html",
+        "/bosai/amedas/const/amedastable.json",
+        "/bosai/estimated_intensity_map/data/",
+        "/bosai/rain/const/map/border_a00.png",
+        "/bosai/rain/const/map/border_a01.png",
+        "/bosai/rain/const/map/border_a02.png",
+        "/bosai/rain/const/map/border_a03.png",
+        "/bosai/rain/const/map/border_a04.png",
+        "/bosai/rain/const/map/border_a05.png",
+        "/bosai/rain/const/map/border_a06.png",
+        "/bosai/rain/const/map/border_a07.png",
+        "/bosai/rain/const/map/border_a08.png",
+        "/bosai/rain/const/map/border_a09.png",
+        "/bosai/rain/const/map/border_a10.png",
+        "/bosai/rain/const/map/border_a11.png",
+        "/bosai/rain/const/map/border_a12.png",
+        "/bosai/rain/const/map/border_a13.png",
+        "/bosai/rain/const/map/border_a14.png",
+        "/bosai/rain/const/map/border_a15.png",
+        "/bosai/rain/const/map/border_a16.png",
+        "/bosai/rain/const/map/border_a17.png",
+        "/bosai/rain/const/map/border_a18.png",
+        "/bosai/rain/const/map/border_a19.png",
+        "/bosai/forecast/const/week_area05.json",
+        "/bosai/nowc/images/legend_jp_liden.svg",
+        "/bosai/wdist/images/legend_deep_r3.svg",
+        "/bosai/wdist/images/legend_deep_s3.svg",
+        "/bosai/common/const/geojson/landslides_",
+        "/bosai/common/const/landslide_area.json",
+        "/bosai/const/selectorinfos/tsunami.json",
+        "/bosai/common/const/geojson/tsunami.json",
+        "/bosai/snow/images/legend_deep_snowd.svg",
+        "/bosai/umimesh/images/legend_deep_ws.svg",
+        "/bosai/wdist/images/legend_deep_temp.svg",
+        "/bosai/common/const/geojson/class10s.json",
+        "/bosai/wdist/images/legend_jp_deep_wm.svg",
+        "/bosai/nowc/images/legend_jp_deep_thns.svg",
+        "/bosai/nowc/images/legend_jp_deep_trns.svg",
+        "/bosai/umimesh/images/legend_deep_wavh.svg",
+        "/bosai/const/selectorinfos/probability.json",
+        "/bosai/nowc/images/legend_jp_deep_hrpns.svg",
+        "/bosai/risk/images/legend_jp_flood_risk.svg",
+        "/bosai/snow/images/legend_deep_snowf03h.svg",
+        "/bosai/snow/images/legend_deep_snowf06h.svg",
+        "/bosai/snow/images/legend_deep_snowf12h.svg",
+        "/bosai/snow/images/legend_deep_snowf24h.svg",
+        "/bosai/snow/images/legend_deep_snowf48h.svg",
+        "/bosai/snow/images/legend_deep_snowf72h.svg",
+        "/bosai/umimesh/images/legend_jp_deep_wm.svg",
+        "/bosai/kaikotan/images/legend_jp_slmcs_a.svg",
+        "/bosai/kaikotan/images/legend_jp_slmcs_f.svg",
+        "/bosai/probability/data/probability/map.json",
+        "/bosai/risk/images/legend_jp_normal_land.svg",
+        "/bosai/umimesh/images/legend_jp_deep_vis.svg",
+        "/bosai/nowc/images/legend_jp_amds_rain10m.svg",
+        "/bosai/risk/images/legend_jp_normal_inund.svg",
+        "/bosai/umimesh/images/legend_jp_deep_icing.svg",
+        "/bosai/kaikotan/images/legend_jp_deep_rasrf.svg",
+        "/bosai/kaikotan/images/legend_jp_deep_rasrf03h.svg",
+        "/bosai/kaikotan/images/legend_jp_deep_rasrf24h.svg",
+        "/bosai/jmatile/data/map/none/none/none/surf/flood_name/",
+        "/jp/commonmesh/map_tile/MAP_COLOR/none/anal/zoom1/0_0.png",
+        "/jp/commonmesh/map_tile/MAP_COLOR/none/anal/zoom1/1_0.png）",
+        "/jma/kishou/know/bosai/keiho-update2026/tech-info/index.html",
+        "/jp/commonmesh/map_tile/FLOOD_RIVER/none/none/zoom6/33_29.png",
+        "/jp/commonmesh/map_tile/FLOOD_FCST_RIVER/none/none/zoom9/data.svgz",
+        "/bosai/jmatile/data/risk/20210630222000/none/20210630222000/surf/flood/",
+        "/bosai/jmatile/data/risk/20210701002000/none/20210701002000/surf/flood/",
+        "/jp/doshamesh/dosha_tile/DOSHA/201811220030/201811220030/zoom6/34_26.png",
+        "/bosai/jmatile/data/map/none/none/none/surf/designated_river/data.geojson",
+        "/jp/suigaimesh/suigai_tile/FLOOD/201811220030/201811220030/zoom6/data.svgz",
+        "/jp/suigaimesh/suigai_tile/FLOOD/201811220030/201811220030/zoom9/data.svgz",
+        "/jp/suigaimesh/suigai_tile/INUND/201811220030/201811220030/zoom6/33_29.png",
+        "/jp/highresorad/highresorad_tile/HRKSNC/201708170155/201708170155/zoom2/0_3.png",
+        "/jp/highresorad/highresorad_tile/HRKSNC/201708170155/201708170155/zoom4/9_4.png",
+        "/jp/highresorad/highresorad_tile/HRKSNC/201811220040/201811220040/zoom4/8_8.png",
+        "/jp/suigaimesh/suigai_tile/FLOOD_FCST/201811220030/201811220030/zoom6/data.svgz",
+        "/jp/suigaimesh/suigai_tile/FLOOD_FCST/201811220030/201811220030/zoom9/data.svgz",
+        "/jp/kaikotan/kaikotan_tile/KAIKOTAN10M/201811220030/201811220030/zoom6/36_25.png",
+        "/jp/highresorad/highresorad_tile/HRKSNC/201708170155/201708170155/zoom6/36_24.png",
+        "/bosai/jmatile/data/risk/20210701002000/none/20210701002000/surf/flood/12/3639/1622.pbf"
+      ]
+    },
+    {
+      "hostname": "www.kkr.mlit.go.jp",
+      "pathnamePrefixes": [
+        "/road/doro_bosaijoho_webmap/kml/29_nara_kinkyuuyusou_line.kml",
+        "/road/doro_bosaijoho_webmap/kml/18_fukui_kinkyuuyusou_line.kml",
+        "/road/doro_bosaijoho_webmap/kml/25_shiga_kinkyuuyusou_line.kml",
+        "/road/doro_bosaijoho_webmap/kml/26_kyoto_kinkyuuyusou_line.kml",
+        "/road/doro_bosaijoho_webmap/kml/27_osaka_kinkyuuyusou_line.kml",
+        "/road/doro_bosaijoho_webmap/kml/28_hyogo_kinkyuuyusou_line.kml",
+        "/road/doro_bosaijoho_webmap/kml/30_wakayama_kinkyuuyusou_line.kml"
+      ]
+    },
+    {
+      "hostname": "www.ktr.mlit.go.jp",
+      "pathnamePrefixes": [
+        "/honkyoku/road/doro_bosaijoho_webmap/kml/10_gunma_kinkyuuyusou_line.kml",
+        "/honkyoku/road/doro_bosaijoho_webmap/kml/12_chiba_kinkyuuyusou_line.kml",
+        "/honkyoku/road/doro_bosaijoho_webmap/kml/13_tokyo_kinkyuuyusou_line.kml",
+        "/honkyoku/road/doro_bosaijoho_webmap/kml/20_nagano_kinkyuuyusou_line.kml",
+        "/honkyoku/road/doro_bosaijoho_webmap/kml/08_ibaraki_kinkyuuyusou_line.kml",
+        "/honkyoku/road/doro_bosaijoho_webmap/kml/09_tochigi_kinkyuuyusou_line.kml",
+        "/honkyoku/road/doro_bosaijoho_webmap/kml/11_saitama_kinkyuuyusou_line.kml",
+        "/honkyoku/road/doro_bosaijoho_webmap/kml/14_kanagawa_kinkyuuyusou_line.kml",
+        "/honkyoku/road/doro_bosaijoho_webmap/kml/19_yamanashi_kinkyuuyusou_line.kml"
+      ]
+    },
+    {
+      "hostname": "www.kyoshin.bosai.go.jp",
+      "pathnamePrefixes": [
+        "/ja/",
+        "/kyoshin/",
+        "/ja/eqdownload/",
+        "/kyoshin/quake/",
+        "/ja/autopublish/",
+        "/cgi-bin/kyoshin/",
+        "/kyoshin/instant/"
+      ]
+    },
+    {
+      "hostname": "www.mapillary.com",
+      "pathnamePrefixes": [
+        "/app/"
+      ]
+    },
+    {
+      "hostname": "www.met.no",
+      "pathnamePrefixes": [
+        "/en"
+      ]
+    },
+    {
+      "hostname": "www.metoc.navy.mil",
+      "pathnamePrefixes": [
+        "/jtwc/jtwc.html",
+        "/jtwc/rss/jtwc.rss",
+        "/jtwc/products/abpwsair.jpg"
+      ]
+    },
+    {
+      "hostname": "www.mhlw.go.jp",
+      "pathnamePrefixes": [
+        "/",
+        "/chosakuken/index.html",
+        "/content/12300000/202606.csv",
+        "/stf/kayoinoba_opendata_00002.html",
+        "/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/newpage_43373.html"
+      ]
+    },
+    {
+      "hostname": "www.mlit.go.jp",
+      "pathnamePrefixes": [
+        "/road/roadinfo/",
+        "/road/r6noto/index2.html",
+        "/road/r6noto/map/index.html",
+        "/road/r6noto/map/img/usage_guide.png",
+        "/road/bosai/doro_bosaijoho_webmap/index.html"
+      ]
+    },
+    {
+      "hostname": "www.moj.go.jp",
+      "pathnamePrefixes": [
+        "/MINJI/minji05_00494.html"
+      ]
+    },
+    {
+      "hostname": "www.movable-type.co.uk",
+      "pathnamePrefixes": [
+        "/scripts/latlong.html"
+      ]
+    },
+    {
+      "hostname": "www.msil.go.jp",
+      "pathnamePrefixes": [
+        "/",
+        "/legend/10074j.png",
+        "/msil/htm/topwindow.html",
+        "/arcgis/rest/services/Msil/",
+        "/msilwebtoken/api/token/new",
+        "/arcgis/rest/services/Msil/Infrastructure/MapServer/export"
+      ]
+    },
+    {
+      "hostname": "www.nco.ncep.noaa.gov",
+      "pathnamePrefixes": [
+        "/pmb/docs/grib2/grib2_table3-4.shtml"
+      ]
+    },
+    {
+      "hostname": "www.npa.go.jp",
+      "pathnamePrefixes": [
+        "/publications/statistics/koutsuu/opendata/index_opendata.html",
+        "/publications/statistics/koutsuu/opendata/2019/honhyo_2019.csv",
+        "/publications/statistics/koutsuu/opendata/2020/honhyo_2020.csv",
+        "/publications/statistics/koutsuu/opendata/2021/honhyo_2021.csv",
+        "/publications/statistics/koutsuu/opendata/2022/honhyo_2022.csv",
+        "/publications/statistics/koutsuu/opendata/2023/honhyo_2023.csv",
+        "/publications/statistics/koutsuu/opendata/2024/honhyo_2024.csv",
+        "/publications/statistics/koutsuu/opendata/2022/codebook_2022.xlsx",
+        "/publications/statistics/koutsuu/opendata/2023/codebook_2023.xlsx",
+        "/publications/statistics/koutsuu/opendata/2024/codebook_2024.xlsx"
+      ]
+    },
+    {
+      "hostname": "www.nxworld.net",
+      "pathnamePrefixes": [
+        "/tips/css-variable-width-and-fixed-width-layout.html"
+      ]
+    },
+    {
+      "hostname": "www.ogc.org",
+      "pathnamePrefixes": [
+        "/crs"
+      ]
+    },
+    {
+      "hostname": "www.opengis.net",
+      "pathnamePrefixes": [
+        "/gml:japan_ver81"
+      ]
+    },
+    {
+      "hostname": "www.openstreetmap.org",
+      "pathnamePrefixes": [
+        "/copyright"
+      ]
+    },
+    {
+      "hostname": "www.petitmonte.com",
+      "pathnamePrefixes": [
+        "/javascript/rgb_hsv_convert.html"
+      ]
+    },
+    {
+      "hostname": "www.php.net",
+      "pathnamePrefixes": [
+        "/manual/ja/function.file-put-contents.php"
+      ]
+    },
+    {
+      "hostname": "www.pref.okinawa.lg.jp",
+      "pathnamePrefixes": [
+        "/kyoiku/edu/1008451/1008452.html",
+        "/machizukuri/dorokotsu/1012759/1012761.html",
+        "/machizukuri/dorokotsu/1012759/1012763.html",
+        "/machizukuri/dorokotsu/1012759/1022309/index.html"
+      ]
+    },
+    {
+      "hostname": "www.pref.tottori.lg.jp",
+      "pathnamePrefixes": [
+        "/secure/109753/yougo.pdf"
+      ]
+    },
+    {
+      "hostname": "www.qsr.mlit.go.jp",
+      "pathnamePrefixes": [
+        "/",
+        "/n-michi/doro_bosaijoho_webmap/main/leaflet/KML.js",
+        "/n-michi/doro_bosaijoho_webmap/kml/41_saga_kinkyuuyusou_line.kml",
+        "/n-michi/doro_bosaijoho_webmap/kml/44_oita_kinkyuuyusou_line.kml",
+        "/n-michi/doro_bosaijoho_webmap/kml/40_fukuoka_kinkyuuyusou_line.kml",
+        "/n-michi/doro_bosaijoho_webmap/kml/42_nagasaki_kinkyuuyusou_line.kml",
+        "/n-michi/doro_bosaijoho_webmap/kml/43_kumamoto_kinkyuuyusou_line.kml",
+        "/n-michi/doro_bosaijoho_webmap/kml/45_miyazaki_kinkyuuyusou_line.kml",
+        "/n-michi/doro_bosaijoho_webmap/kml/46_kagoshima_kinkyuuyusou_line.kml"
+      ]
+    },
+    {
+      "hostname": "www.ramis.nra.go.jp",
+      "pathnamePrefixes": [
+        "/map/monitoring",
+        "/api/v1/map/map-means-data-public"
+      ]
+    },
+    {
+      "hostname": "www.river.go.jp",
+      "pathnamePrefixes": [
+        "/kawabou/pc/rd",
+        "/kawabou/pcfull/tm",
+        "/kawabou/ipCamera.do",
+        "/kawabou/ipTopGaikyo.do",
+        "/kawabou/file/gjson/obs/",
+        "/kawabou/file/gjson/obs//",
+        "/kawabou/file/gjson/scam/",
+        "/kawabou/file/radar/image/",
+        "/kawabou/file/tile/rvrline/",
+        "/kawabou/file/gjson/overobs/dam/",
+        "/kawabou/file/gjson/overobs/stg/",
+        "/kawabou/file/files/master/radar/",
+        "/kawabou/file/gjson/overobs/swstg/",
+        "/kawabou/file/files/master/obs/scam/",
+        "/kawabou/file/gjson/scam/901201.json",
+        "/kawabou/file/system/rwCrntTime.json",
+        "/kawabou/file/system/tmCrntTime.json",
+        "/kawabou/file/files/radar/rdtime.json",
+        "/kawabou/file/files/map/twn/twnarea.json",
+        "/kawabou/file/files/map/pref/prefarea.json",
+        "/kawabou/file/files/map/twn/pos/901201.json",
+        "/kawabou/file/gjson/obs/20220426/1730/stg/901201.json",
+        "/kawabou/file/gjson/obs/20220426/1755/stg/801232.json",
+        "/kawabou/file/files/overobs/twn/20220426/1730/901201.json"
+      ]
+    },
+    {
+      "hostname": "www.road-info-prvs.mlit.go.jp",
+      "pathnamePrefixes": [
+        "/roadinfo/pc/",
+        "/roadinfo/json/Kisho/",
+        "/roadinfo/json/TokiTuko/",
+        "/roadinfo/json/ImageList/",
+        "/roadinfo/json/TukoKisei/",
+        "/roadinfo/json/MichiNoEki/",
+        "/roadinfo/img/doro_gazo/pc/",
+        "/roadinfo/json/Kisho/83.json",
+        "/roadinfo/json/JizenTukokisei/",
+        "/roadinfo/json/Kisho/83_R.json",
+        "/roadinfo/pc/pcImage_83_1.html",
+        "/roadinfo/pc/pcKishoList_83_1.html",
+        "/roadinfo/pc/pcTukokisei_83_1.html",
+        "/roadinfo/json/telopKokuchi/83.json",
+        "/roadinfo/json/JizenTukokisei/83.json",
+        "/roadinfo/pc/pcTokiTukokisei_83_1.html",
+        "/roadinfo/img/doro_gazo/pc/20230405120500/83C02856.jpeg",
+        "/roadinfo/img/doro_gazo/pc/20230405120000/s_83C03100.jpeg"
+      ]
+    },
+    {
+      "hostname": "www.skr.mlit.go.jp",
+      "pathnamePrefixes": [
+        "/road/doro_bosaijoho_webmap/kml/38_ehime_kinkyuuyusou_line.kml",
+        "/road/doro_bosaijoho_webmap/kml/39_kochi_kinkyuuyusou_line.kml",
+        "/road/doro_bosaijoho_webmap/kml/37_kagawa_kinkyuuyusou_line.kml",
+        "/road/doro_bosaijoho_webmap/kml/36_tokushima_kinkyuuyusou_line.kml"
+      ]
+    },
+    {
+      "hostname": "www.soumu.go.jp",
+      "pathnamePrefixes": [
+        "/main_content/000562726.pdf",
+        "/toukei_toukatsu/index/seido/9-5.htm"
+      ]
+    },
+    {
+      "hostname": "www.stat.go.jp",
+      "pathnamePrefixes": [
+        "/data/mesh/",
+        "/data/mesh/m_itiran.html",
+        "/data/kokusei/2010/users-g/word7.htm"
+      ]
+    },
+    {
+      "hostname": "www.svgmap.org",
+      "pathnamePrefixes": [
+        "/wiki/index.php",
+        "/demos/exclusiveDemos/yamaguchiPref/"
+      ]
+    },
+    {
+      "hostname": "www.thr.mlit.go.jp",
+      "pathnamePrefixes": [
+        "/road/doro_bosaijoho_webmap/kml/03_iwate_kinkyuuyusou_line.kml",
+        "/road/doro_bosaijoho_webmap/kml/05_akita_kinkyuuyusou_line.kml",
+        "/road/doro_bosaijoho_webmap/kml/02_aomori_kinkyuuyusou_line.kml",
+        "/road/doro_bosaijoho_webmap/kml/04_miyagi_kinkyuuyusou_line.kml",
+        "/road/doro_bosaijoho_webmap/kml/06_yamagata_kinkyuuyusou_line.kml",
+        "/road/doro_bosaijoho_webmap/kml/07_fukushima_kinkyuuyusou_line.kml"
+      ]
+    },
+    {
+      "hostname": "www.toshiseibi.metro.tokyo.lg.jp",
+      "pathnamePrefixes": [
+        "/bosai/chousa_6/parts/kikendo_map.png"
+      ]
+    },
+    {
+      "hostname": "www.usgs.gov",
+      "pathnamePrefixes": [
+        "/programs/earthquake-hazards/modified-mercalli-intensity-scale"
+      ]
+    },
+    {
+      "hostname": "www.w3.og",
+      "pathnamePrefixes": [
+        "/1999/02/22-rdf-syntax-ns"
+      ]
+    },
+    {
+      "hostname": "www.wingfield.gr.jp",
+      "pathnamePrefixes": [
+        "/archives/6833"
+      ]
+    },
+    {
+      "hostname": "www.yoheim.net",
+      "pathnamePrefixes": [
+        "/labo/html5/fileapi/fileapiImage.html"
+      ]
+    },
+    {
+      "hostname": "www.yr.no",
+      "pathnamePrefixes": [
+        "/nb/kart/vind"
+      ]
+    },
+    {
+      "hostname": "xml.kishou.go.jp",
+      "pathnamePrefixes": [
+        "/tec_material.html",
+        "/jmaxml_20260430_code.xlsx",
+        "/20120615_jmaxml_info_old.pdf"
+      ]
+    },
+    {
+      "hostname": "yamaguchi-opendata.jp",
+      "pathnamePrefixes": [
+        "/ckan/api/3/action/package_search"
+      ]
+    },
+    {
+      "hostname": "zenn.dev",
+      "pathnamePrefixes": [
+        "/itte/articles/516228940932a5",
+        "/cybozu_frontend/articles/css-custom-highlight"
+      ]
+    }
+  ]
+}

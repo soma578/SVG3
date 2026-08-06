@@ -1,5 +1,6 @@
 import dns from 'node:dns/promises'
 import net from 'node:net'
+import { GENERATED_SVGMAP_APP_LAYER_TARGETS } from './generatedSvgMapAppLayerTargets.mjs'
 
 export const COMMUNITY_PROXY_PATH = '/api/svgmap-proxy'
 export const COMMUNITY_PROXY_MAX_BYTES = 4 * 1024 * 1024
@@ -7,12 +8,22 @@ export const COMMUNITY_PROXY_MAX_BYTES = 4 * 1024 * 1024
 const TARGETS = Object.freeze([
   { hostname: 'starlinkinsider.com', pathnamePrefixes: ['/starlink-gateway-locations/'] },
   { hostname: 'www.google.com', pathnamePrefixes: ['/maps/'] },
+  ...GENERATED_SVGMAP_APP_LAYER_TARGETS,
 ])
 
 const ALLOWED_CONTENT_TYPES = [
   'application/json',
+  'application/geo+json',
+  'application/octet-stream',
   'application/xml',
+  'application/zip',
+  'application/x-zip-compressed',
   'image/svg+xml',
+  'image/gif',
+  'image/jpeg',
+  'image/png',
+  'image/webp',
+  'text/csv',
   'text/html',
   'text/plain',
   'text/xml',

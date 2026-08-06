@@ -103,6 +103,7 @@ const bundled = importBundledCommunityLayer({
   title: 'Bundled layer',
   status: 'unverified',
   category: 'B',
+  controller: true,
   animation: {
     title: 'Bundled layer',
     class: 'vectorEtcData',
@@ -116,6 +117,7 @@ const bundled = importBundledCommunityLayer({
 assert.equal(bundled.attrs['xlink:href'], 'https://portal.example/map/svgMapAppLayers/example/layer.svg')
 assert.equal(bundled.attrs['data-lawa-mode'], 'tight')
 assert.equal(bundled.attrs['data-external-source'], 'bundled-community')
+assert.deepEqual(bundled.controllerUi, { label: '設定' })
 
 const parentWindow = {}
 const isolatedLayerWindow = {}

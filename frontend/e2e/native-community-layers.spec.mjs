@@ -105,10 +105,13 @@ test('SVGMap getCORSURLは固定許可リスト型プロキシへ接続される
   ))
   expect(proxyUrl).toContain('/api/svgmap-proxy?url=')
   expect(decodeURIComponent(proxyUrl)).toContain('https://starlinkinsider.com/starlink-gateway-locations/')
-  const directCorsUrl = await frame.evaluate(() => window.svgMap.getCORSURL(
+  const upstreamLayerProxyUrl = await frame.evaluate(() => window.svgMap.getCORSURL(
     'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson',
   ))
-  expect(directCorsUrl).toBe('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson')
+  expect(upstreamLayerProxyUrl).toContain('/api/svgmap-proxy?url=')
+  expect(decodeURIComponent(upstreamLayerProxyUrl)).toContain(
+    'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson',
+  )
 
   const rejection = await page.evaluate(async () => {
     const response = await fetch('/api/svgmap-proxy?url=https%3A%2F%2Fexample.com%2Fsecret')

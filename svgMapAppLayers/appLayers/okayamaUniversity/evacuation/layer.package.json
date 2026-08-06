@@ -1,0 +1,43 @@
+{
+  "id": "evacuation",
+  "title": "Evacuation Portable Layer",
+  "version": "1.0.0",
+  "entrypoint": "evacuationLayer.svg",
+  "type": "svgmap-portable-layer",
+  "distribution": {
+    "publisher": { "id": "svg3", "name": "SVG3" },
+    "license": { "spdx": "NOASSERTION", "name": "利用条件未設定", "status": "unresolved", "redistributable": false },
+    "publishedAt": "2026-07-21T00:00:00+09:00"
+  },
+  "portability": {
+    "level": "distribution-portable",
+    "dataInjection": "hash-params",
+    "limitations": []
+  },
+  "runtime": {
+    "lawaModes": ["tight", "isolated"],
+    "readyEvent": "layerWebAppReady",
+    "requiredApis": ["svgMap.getGeoViewBox", "svgMap.setShowPoiProperty", "svgMap.showModal", "svgImage"]
+  },
+  "runtimeDependencies": [
+    { "id": "representative-pins", "version": "1.2.2", "manifest": "../representative-pins/runtime.package.json" },
+    { "id": "svgmap-slawa-client", "version": "1.0.0", "manifest": "../svgmap-slawa-client/runtime.package.json" }
+  ],
+  "detailMode": "svgMap.showModal",
+  "shared": [
+    "evacuationDetail.js"
+  ],
+  "data": {
+    "kind": "qtct",
+    "injection": {
+      "transport": "svg-fragment-query",
+      "required": ["data", "layer"],
+      "optional": ["summary", "statusOverlay", "profile", "municipalityCodes", "districtSvgUrlTemplate"]
+    }
+  },
+  "containerAnimation": {
+    "class": "poi clickable",
+    "visibility": "hidden",
+    "opacity": "1"
+  }
+}

@@ -2,161 +2,532 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>SVGMap App Layers チーム活動管理</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>チーム活動レイヤー管理</title>
   <style>
+    :root {
+      color-scheme: light;
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+      color: #172033;
+      background: #f3f5f7;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
     * { box-sizing: border-box; }
-    body { margin: 0; background: #f3f5f7; color: #172033; font: 14px/1.5 system-ui, sans-serif; }
-    main { width: min(1000px, 100%); margin: auto; padding: 20px; }
-    h1 { margin: 0 0 6px; font-size: 20px; }
-    .note, .status, .panel { margin: 12px 0; padding: 12px; border: 1px solid #d7dde4; background: white; }
-    .status { border-left: 4px solid #64748b; }
+    body { margin: 0; min-height: 100vh; }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 56px;
+      padding: 0 20px;
+      border-bottom: 1px solid #d7dde4;
+      background: #fff;
+    }
+    h1 { margin: 0; font-size: 17px; letter-spacing: 0; }
+    .pageNav { display: flex; align-items: center; gap: 6px; }
+    .navLink {
+      min-height: 34px;
+      padding: 7px 10px;
+      border-radius: 6px;
+      color: #176a63;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .navLink:hover,
+    .navLink:focus-visible { outline: none; background: #e7f4f2; }
+    .navCurrent { color: #667085; cursor: default; }
+    main { width: min(1040px, 100%); margin: 0 auto; padding: 20px; }
+    .toolbar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #d7dde4;
+    }
+    button, .fileButton {
+      min-height: 36px;
+      padding: 7px 12px;
+      border: 1px solid #aeb8c4;
+      border-radius: 6px;
+      background: #fff;
+      color: #172033;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button.primary { border-color: #12603f; background: #12603f; color: #fff; }
+    button:disabled { cursor: not-allowed; opacity: 0.45; }
+    input[type="file"] { position: absolute; width: 1px; height: 1px; opacity: 0; }
+    .publishControl { display: inline-flex; align-items: center; gap: 7px; margin-left: auto; font-weight: 700; }
+    .status {
+      min-height: 42px;
+      margin: 16px 0;
+      padding: 10px 12px;
+      border-left: 4px solid #64748b;
+      background: #fff;
+      font-size: 14px;
+    }
     .status.error { border-left-color: #b42318; color: #8a1c13; }
     .status.success { border-left-color: #12603f; color: #0f5132; }
-    .actions { display: flex; flex-wrap: wrap; gap: 8px; }
-    button, .fileButton { min-height: 36px; padding: 7px 12px; border: 1px solid #aeb8c4; border-radius: 6px; background: white; font: inherit; font-weight: 700; cursor: pointer; }
-    button.primary { border-color: #12603f; background: #12603f; color: white; }
-    button:disabled { opacity: .45; cursor: not-allowed; }
-    input[type=file] { position: absolute; width: 1px; height: 1px; opacity: 0; }
-    .tableWrap { max-height: 420px; overflow: auto; border: 1px solid #d7dde4; background: white; }
+    .summary { display: flex; gap: 24px; margin: 12px 0; font-size: 14px; }
+    .summary strong { font-size: 20px; }
+    .activityEditor {
+      margin: 16px 0;
+      padding: 14px;
+      border: 1px solid #d7dde4;
+      border-radius: 10px;
+      background: #fff;
+    }
+    .activityEditor h2 { margin: 0 0 10px; font-size: 15px; }
+    .activityGrid {
+      display: grid;
+      grid-template-columns: minmax(150px, 1.3fr) minmax(120px, .8fr) minmax(150px, 1fr) minmax(210px, 1.5fr) minmax(100px, .7fr);
+      gap: 10px;
+      align-items: end;
+    }
+    .activityField { display: grid; gap: 5px; min-width: 0; color: #46515d; font-size: 12px; font-weight: 700; }
+    .activityField input,
+    .activityField select {
+      width: 100%;
+      min-width: 0;
+      height: 36px;
+      padding: 6px 9px;
+      border: 1px solid #aeb8c4;
+      border-radius: 6px;
+      background: #fff;
+      color: #172033;
+      font: inherit;
+      font-size: 14px;
+      line-height: 1.3;
+    }
+    .activityField input:focus,
+    .activityField select:focus { border-color: #176a63; outline: 2px solid #cce9e5; outline-offset: 1px; }
+    .activitySummaryField { grid-column: 1 / 5; }
+    #addActivityButton { grid-column: 5; width: 100%; }
+    .internalSelect { display: none; }
+    .tableWrap { overflow: auto; border: 1px solid #d7dde4; background: #fff; }
     table { width: 100%; border-collapse: collapse; font-size: 13px; }
-    th, td { padding: 7px 9px; border-bottom: 1px solid #e5e9ee; text-align: left; white-space: nowrap; }
+    th, td { padding: 8px 10px; border-bottom: 1px solid #e5e9ee; text-align: left; white-space: nowrap; }
     th { position: sticky; top: 0; background: #eef2f5; }
-    code { overflow-wrap: anywhere; }
+    .empty { padding: 48px 16px; text-align: center; color: #667085; }
+    @media (max-width: 680px) {
+      header { align-items: flex-start; gap: 10px; padding: 12px 14px; }
+      .pageNav { flex-wrap: wrap; justify-content: flex-end; }
+      main { padding: 14px; }
+      .toolbar { align-items: stretch; flex-direction: column; }
+      .publishControl { margin-left: 0; }
+      .activityGrid { grid-template-columns: 1fr 1fr; }
+      .activitySummaryField { grid-column: 1 / -1; }
+      #addActivityButton { grid-column: 1 / -1; }
+    }
+    @media (max-width: 430px) {
+      .activityGrid { grid-template-columns: 1fr; }
+      .activitySummaryField,
+      #addActivityButton { grid-column: 1; }
+    }
   </style>
 </head>
 <body>
-<main>
-  <h1>SVGMap App Layers チーム活動管理</h1>
-  <div class="note">
-    ローカルの <code>svgmapAppLayers</code> フォルダーを選ぶと、
-    <code>appLayers/okayamaUniversity/teamActivity/</code> 内だけを更新します。
-    Git操作や外部リポジトリへの送信は行いません。
-  </div>
-  <div class="panel actions">
-    <label class="fileButton">別のCSVを選択<input id="csvFile" type="file" accept=".csv,text/csv"></label>
-    <button id="templateButton" type="button">ひな形を保存</button>
-    <button id="downloadButton" type="button" disabled>生成3ファイルを保存</button>
-    <button id="writeButton" class="primary" type="button" disabled>SVGMap App Layersへ書き出す</button>
-  </div>
-  <div id="status" class="status">現在のCSVを読み込んでいます。</div>
-  <p>有効レコード: <strong id="recordCount">0</strong></p>
-  <div class="tableWrap">
-    <table id="preview" hidden>
-      <thead><tr><th>ID</th><th>名称</th><th>地域</th><th>自治体コード</th><th>状態</th><th>緯度</th><th>経度</th></tr></thead>
-      <tbody></tbody>
-    </table>
-  </div>
-</main>
-<script type="module">
-import {
-  TEAM_ACTIVITY_CSV_TEMPLATE,
-  buildTeamActivityCsvDocuments,
-  parseTeamActivityCsv,
-} from './teamActivityCsv.js';
+  <header>
+    <h1>チーム活動レイヤー管理</h1>
+    <nav class="pageNav" aria-label="機能メニュー">
+      <a id="backLink" class="navLink" href="../../../../svgMapDemo/index-team-csv.html">防災マップ</a>
+      <span class="navLink navCurrent" aria-current="page">CSV管理</span>
+    </nav>
+  </header>
+  <main>
+    <div class="toolbar">
+      <label class="fileButton">
+        CSVを選択
+        <input id="csvFile" type="file" accept=".csv,text/csv" disabled>
+      </label>
+      <button id="writeButton" class="primary" type="button" disabled>SVGMap App Layersへ書き出す</button>
+      <button id="zipButton" type="button" disabled>ZIPを保存</button>
+      <button id="templateButton" type="button">ひな形を保存</button>
+      <label class="publishControl">
+        <input id="published" type="checkbox" checked>
+        公開
+      </label>
+    </div>
+    <section class="activityEditor" aria-labelledby="entryTitle">
+      <h2 id="entryTitle">活動を追加</h2>
+      <div class="activityGrid">
+      <label class="activityField">名称 <input id="activityTitle" type="text" placeholder="給水支援チーム"></label>
+      <label class="activityField">都道府県
+        <input id="prefectureQuery" type="search" list="prefectureOptions" placeholder="入力して検索" autocomplete="off">
+        <datalist id="prefectureOptions"></datalist>
+        <select id="prefectureSelect" class="internalSelect" aria-hidden="true"><option value="">選択してください</option></select>
+      </label>
+      <label class="activityField">市区町村
+        <input id="municipalityQuery" type="search" list="municipalityOptions" placeholder="入力して検索" autocomplete="off" disabled>
+        <datalist id="municipalityOptions"></datalist>
+        <select id="municipalitySelect" class="internalSelect" aria-hidden="true" disabled><option value="">選択してください</option></select>
+      </label>
+      <label class="activityField">地区境界
+        <input id="districtQuery" type="search" list="districtOptions" placeholder="町名・丁目で検索" autocomplete="off" disabled>
+        <datalist id="districtOptions"></datalist>
+        <select id="districtSelect" class="internalSelect" aria-hidden="true" disabled><option value="">選択してください</option></select>
+      </label>
+      <label class="activityField">状態
+        <select id="activityStatus">
+          <option value="active">活動中</option>
+          <option value="standby">待機</option>
+          <option value="planned">予定</option>
+          <option value="completed">完了</option>
+          <option value="needs_attention">要対応</option>
+        </select>
+      </label>
+      <label class="activityField activitySummaryField">概要 <input id="activitySummary" type="text" placeholder="活動内容"></label>
+      <button id="addActivityButton" type="button" disabled>この地区へ追加</button>
+      </div>
+    </section>
+    <div id="status" class="status">現在配信中のCSVを読み込んでいます。</div>
+    <div class="summary">
+      <span>有効レコード <strong id="recordCount">0</strong></span>
+      <span>エラー <strong id="errorCount">0</strong></span>
+    </div>
+    <div class="tableWrap">
+      <div id="empty" class="empty">プレビューなし</div>
+      <table id="preview" hidden>
+        <thead>
+          <tr><th>ID</th><th>名称</th><th>市区町村</th><th>地区境界</th><th>状態</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </main>
+  <script type="module">
+    import { buildCsvQtctArtifacts, parseCsv } from './runtime/publisher/csvQtctPipeline.mjs';
+    import { createZipArchive } from './runtime/publisher/zipArchive.mjs';
+    import { buildTeamActivityCsvDocuments } from './teamActivityCsv.js';
 
-const csvFile = document.getElementById('csvFile');
-const templateButton = document.getElementById('templateButton');
-const downloadButton = document.getElementById('downloadButton');
-const writeButton = document.getElementById('writeButton');
-const status = document.getElementById('status');
-const preview = document.getElementById('preview');
-const previewBody = preview.querySelector('tbody');
-const recordCount = document.getElementById('recordCount');
-let csvText = '';
-let records = [];
-let documents = null;
+    const TEAM_ACTIVITY_CSV_COLUMNS = [
+      'id', 'title', 'prefecture', 'municipality', 'districtName',
+      'status', 'summary', 'description', 'area', 'operator',
+    ];
+    const TEAM_ACTIVITY_CSV_TEMPLATE = `${TEAM_ACTIVITY_CSV_COLUMNS.join(',')}\n`
+      + 'sample-001,給水支援チーム,岡山県,岡山市北区,岡山市 北区 駅元町,active,給水支援を実施中,活動内容の説明,岡山市北区 駅元町,支援本部\n';
 
-const setStatus = (message, tone = '') => {
-  status.textContent = message;
-  status.className = `status ${tone}`.trim();
-};
-const downloadText = (text, filename) => {
-  const url = URL.createObjectURL(new Blob([filename.endsWith('.csv') ? `\uFEFF${text}` : text], { type: 'application/octet-stream' }));
-  const anchor = document.createElement('a');
-  anchor.href = url;
-  anchor.download = filename;
-  anchor.click();
-  setTimeout(() => URL.revokeObjectURL(url), 1000);
-};
-const generatedFiles = () => new Map([
-  ['current.csv', csvText.endsWith('\n') ? csvText : `${csvText}\n`],
-  ['data/summary.json', `${JSON.stringify(documents.summary)}\n`],
-  ['data/detail.json', `${JSON.stringify(documents.detail)}\n`],
-]);
-const renderCsv = (text, label) => {
-  const parsed = parseTeamActivityCsv(text);
-  if (parsed.errors.length) {
-    csvText = '';
-    records = [];
-    documents = null;
-    setStatus(parsed.errors.slice(0, 8).join(' / '), 'error');
-  } else {
-    csvText = text;
-    records = parsed.records;
-    documents = buildTeamActivityCsvDocuments(records);
-    setStatus(`${label}: ${records.length}件。書き出し可能です。`, 'success');
-  }
-  previewBody.replaceChildren();
-  for (const record of records) {
-    const row = document.createElement('tr');
-    for (const value of [record.sourceId, record.title, record.regionId, record.municipalityCode, record.status, record.lat, record.lon]) {
-      const cell = document.createElement('td');
-      cell.textContent = String(value ?? '');
-      row.appendChild(cell);
+    const csvFile = document.getElementById('csvFile');
+    const writeButton = document.getElementById('writeButton');
+    const zipButton = document.getElementById('zipButton');
+    const templateButton = document.getElementById('templateButton');
+    const published = document.getElementById('published');
+    const status = document.getElementById('status');
+    const preview = document.getElementById('preview');
+    const previewBody = preview.querySelector('tbody');
+    const empty = document.getElementById('empty');
+    const recordCount = document.getElementById('recordCount');
+    const errorCount = document.getElementById('errorCount');
+    const backLink = document.getElementById('backLink');
+    const activityTitle = document.getElementById('activityTitle');
+    const prefectureQuery = document.getElementById('prefectureQuery');
+    const municipalityQuery = document.getElementById('municipalityQuery');
+    const districtQuery = document.getElementById('districtQuery');
+    const prefectureOptions = document.getElementById('prefectureOptions');
+    const municipalityOptions = document.getElementById('municipalityOptions');
+    const districtOptions = document.getElementById('districtOptions');
+    const prefectureSelect = document.getElementById('prefectureSelect');
+    const municipalitySelect = document.getElementById('municipalitySelect');
+    const districtSelect = document.getElementById('districtSelect');
+    const activityStatus = document.getElementById('activityStatus');
+    const activitySummary = document.getElementById('activitySummary');
+    const addActivityButton = document.getElementById('addActivityButton');
+    let csvText = '';
+    let artifacts = null;
+    let regions = [];
+    let layerConfig = null;
+    let publisherConfig = null;
+    const districtIndexes = new Map();
+    const packageBase = 'appLayers/okayamaUniversity/teamActivity/';
+    const runtimeColumns = ['id', 'title', 'regionId', 'municipalityCode', 'lat', 'lon', 'status', 'summary', 'description', 'area', 'operator'];
+    const packageFiles = () => {
+      const documents = buildTeamActivityCsvDocuments(artifacts.records);
+      const runtimeCsv = `${runtimeColumns.join(',')}\n${artifacts.records.map((record) => runtimeColumns.map((column) => csvCell(record[column])).join(',')).join('\n')}\n`;
+      return new Map([
+        [`${packageBase}source.csv`, csvText.endsWith('\n') ? csvText : `${csvText}\n`],
+        [`${packageBase}current.csv`, runtimeCsv],
+        [`${packageBase}data/summary.json`, `${JSON.stringify(documents.summary)}\n`],
+        [`${packageBase}data/detail.json`, `${JSON.stringify(documents.detail)}\n`],
+      ]);
+    };
+
+    const returnPath = new URLSearchParams(location.search).get('return');
+    if (returnPath?.startsWith('/map/') && !returnPath.startsWith('//')) backLink.href = returnPath;
+
+    const setStatus = (message, tone = '') => {
+      status.textContent = message;
+      status.className = `status ${tone}`.trim();
+    };
+
+    const downloadText = (text, filename, type = 'text/csv') => {
+      const url = URL.createObjectURL(new Blob([`\uFEFF${text}`], { type }));
+      const anchor = document.createElement('a');
+      anchor.href = url;
+      anchor.download = filename;
+      anchor.click();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    };
+
+    const render = () => {
+      const records = artifacts?.records || [];
+      const errors = artifacts?.errors || [];
+      recordCount.textContent = String(records.length);
+      errorCount.textContent = String(errors.length);
+      previewBody.replaceChildren();
+      for (const record of records.slice(0, 100)) {
+        const tr = document.createElement('tr');
+        for (const value of [record.id, record.title, record.municipalityName, record.districtName, record.status]) {
+          const td = document.createElement('td');
+          td.textContent = String(value ?? '');
+          tr.appendChild(td);
+        }
+        previewBody.appendChild(tr);
+      }
+      preview.hidden = records.length === 0;
+      empty.hidden = records.length > 0;
+      writeButton.disabled = !csvText || errors.length > 0 || !('showDirectoryPicker' in window);
+      zipButton.disabled = !csvText || errors.length > 0;
+      if (errors.length > 0) setStatus(errors.slice(0, 8).join(' / '), 'error');
+      else if (records.length > 0) setStatus(`${records.length}件をQTCTへ変換できます。`, 'success');
+    };
+
+    const normalizeName = (value) => String(value || '').normalize('NFKC').replace(/[\s　]+/g, '');
+    const regionForValue = (value) => regions.find((region) =>
+      region.id === value
+      || normalizeName(region.label) === normalizeName(value)
+      || normalizeName(region.prefecture) === normalizeName(value));
+
+    const ensureDistrictIndex = async (regionId) => {
+      if (!regionId || districtIndexes.has(regionId)) return districtIndexes.get(regionId);
+      const response = await fetch(`./district-index/${regionId}.json`);
+      if (!response.ok) throw new Error(`地区索引 ${regionId}: HTTP ${response.status}`);
+      const index = await response.json();
+      districtIndexes.set(regionId, index);
+      return index;
+    };
+
+    const prepareDistrictIndexes = async (text) => {
+      const rows = parseCsv(String(text || '').replace(/^\uFEFF/, ''));
+      if (rows.length < 2) return;
+      const headers = rows[0].map((value) => String(value).trim());
+      const requested = new Set();
+      for (const values of rows.slice(1)) {
+        const row = Object.fromEntries(headers.map((header, index) => [header, values[index] ?? '']));
+        const region = regionForValue(row.regionId || row.prefecture || row['都道府県']);
+        if (region) requested.add(region.id);
+      }
+      await Promise.all([...requested].map(ensureDistrictIndex));
+    };
+
+    const rebuildArtifacts = async () => {
+      await prepareDistrictIndexes(csvText);
+      artifacts = buildCsvQtctArtifacts({ csvText, regions, config: layerConfig, districtIndexes });
+      render();
+    };
+
+    const replaceOptions = (select, entries, placeholder, datalist = null) => {
+      select.replaceChildren(new Option(placeholder, ''));
+      for (const entry of entries) select.append(new Option(entry.label, entry.value));
+      select.disabled = entries.length === 0;
+      if (datalist) {
+        datalist.replaceChildren(...entries.map((entry) => {
+          const option = document.createElement('option');
+          option.value = entry.label;
+          return option;
+        }));
+      }
+    };
+
+    const matchQuery = (query, select) => {
+      const needle = normalizeName(query.value);
+      if (!needle) return '';
+      const options = [...select.options].filter((option) => option.value);
+      const exact = options.find((option) => normalizeName(option.textContent) === needle);
+      const partial = options.filter((option) => normalizeName(option.textContent).includes(needle));
+      return exact?.value || (partial.length === 1 ? partial[0].value : '');
+    };
+
+    const bindQuery = (query, select, onMatch) => {
+      const apply = () => {
+        const value = matchQuery(query, select);
+        if (!value || value === select.value) return;
+        select.value = value;
+        onMatch();
+      };
+      query.addEventListener('input', apply);
+      query.addEventListener('change', apply);
+    };
+
+    const refreshMunicipalities = async () => {
+      const index = await ensureDistrictIndex(prefectureSelect.value);
+      const byCode = new Map();
+      for (const district of index?.districts || []) {
+        if (!byCode.has(district.municipalityCode)) {
+          byCode.set(district.municipalityCode, district.municipalityName || district.municipalityCode);
+        }
+      }
+      replaceOptions(municipalitySelect, [...byCode].map(([value, label]) => ({ value, label }))
+        .sort((a, b) => a.label.localeCompare(b.label, 'ja')), '市区町村を選択', municipalityOptions);
+      municipalityQuery.disabled = municipalitySelect.disabled;
+      municipalityQuery.value = '';
+      districtQuery.value = '';
+      replaceOptions(districtSelect, [], '地区境界を選択', districtOptions);
+      districtQuery.disabled = true;
+      addActivityButton.disabled = true;
+    };
+
+    const refreshDistricts = () => {
+      const index = districtIndexes.get(prefectureSelect.value);
+      const entries = (index?.districts || [])
+        .filter((district) => district.municipalityCode === municipalitySelect.value)
+        .map((district) => ({ value: district.key, label: district.name }))
+        .sort((a, b) => a.label.localeCompare(b.label, 'ja'));
+      replaceOptions(districtSelect, entries, '地区境界を選択', districtOptions);
+      districtQuery.disabled = districtSelect.disabled;
+      districtQuery.value = '';
+      addActivityButton.disabled = true;
+    };
+
+    const csvCell = (value) => {
+      const text = String(value ?? '');
+      return /[",\r\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
+    };
+
+    const getDirectory = async (root, parts) => {
+      let current = root;
+      for (const part of parts) current = await current.getDirectoryHandle(part, { create: true });
+      return current;
+    };
+
+    const writeText = async (root, relativePath, text) => {
+      const parts = relativePath.split('/');
+      const fileName = parts.pop();
+      const dir = await getDirectory(root, parts);
+      const file = await dir.getFileHandle(fileName, { create: true });
+      const writable = await file.createWritable();
+      await writable.write(text);
+      await writable.close();
+    };
+
+    try {
+      const [response, publisherResponse] = await Promise.all([
+        fetch('./admin/regions.json'),
+        fetch('./admin/publisher.config.json'),
+      ]);
+      const [index, loadedPublisherConfig] = await Promise.all([response.json(), publisherResponse.json()]);
+      publisherConfig = loadedPublisherConfig;
+      regions = index.regions || [];
+      const regionEntries = regions.map((region) => ({ value: region.id, label: region.label }));
+      replaceOptions(prefectureSelect, regionEntries, '都道府県を選択', prefectureOptions);
+      layerConfig = await fetch(publisherConfig.layerConfig).then((result) => result.json());
+      const sourceResponse = await fetch(publisherConfig.source, { cache: 'no-store' });
+      if (!sourceResponse.ok) throw new Error(`現在のCSV: HTTP ${sourceResponse.status}`);
+      csvText = await sourceResponse.text();
+      await prepareDistrictIndexes(csvText);
+      artifacts = buildCsvQtctArtifacts({ csvText, regions, config: layerConfig, districtIndexes });
+      const publicationResponse = await fetch(publisherConfig.publication, { cache: 'no-store' });
+      if (publicationResponse.ok) {
+        const publication = await publicationResponse.json();
+        published.checked = publication.published !== false;
+      }
+      if (!('showDirectoryPicker' in window)) {
+        setStatus('このブラウザはローカルmap書き出しに対応していません。', 'error');
+      }
+      csvFile.disabled = false;
+      render();
+      if (artifacts.errors.length === 0) {
+        setStatus(`現在配信中のCSVを表示しています（${artifacts.records.length}件）。`, 'success');
+      }
+    } catch (error) {
+      setStatus(`初期化に失敗しました: ${error.message}`, 'error');
     }
-    previewBody.appendChild(row);
-  }
-  preview.hidden = records.length === 0;
-  recordCount.textContent = String(records.length);
-  downloadButton.disabled = !documents;
-  writeButton.disabled = !documents || !('showDirectoryPicker' in window);
-};
-const getDirectory = async (root, parts) => {
-  let directory = root;
-  for (const part of parts) directory = await directory.getDirectoryHandle(part, { create: true });
-  return directory;
-};
-const writeText = async (root, relativePath, text) => {
-  const parts = relativePath.split('/');
-  const filename = parts.pop();
-  const directory = await getDirectory(root, parts);
-  const handle = await directory.getFileHandle(filename, { create: true });
-  const writable = await handle.createWritable();
-  await writable.write(text);
-  await writable.close();
-};
 
-csvFile.addEventListener('change', async () => {
-  const file = csvFile.files?.[0];
-  if (file) renderCsv(await file.text(), file.name);
-  csvFile.value = '';
-});
-templateButton.addEventListener('click', () => downloadText(TEAM_ACTIVITY_CSV_TEMPLATE, 'team-activity-template.csv'));
-downloadButton.addEventListener('click', () => {
-  for (const [path, text] of generatedFiles()) downloadText(text, path.replace('/', '-'));
-});
-writeButton.addEventListener('click', async () => {
-  if (!documents) return;
-  try {
-    const root = await window.showDirectoryPicker({ mode: 'readwrite' });
-    await root.getFileHandle('Container.svg');
-    const base = 'appLayers/okayamaUniversity/teamActivity/';
-    for (const [path, text] of generatedFiles()) await writeText(root, `${base}${path}`, text);
-    setStatus(`${records.length}件を書き出しました。地図を再読み込みしてください。`, 'success');
-  } catch (error) {
-    if (error?.name !== 'AbortError') setStatus(`書き出しに失敗しました: ${error.message}`, 'error');
-  }
-});
+    csvFile.addEventListener('change', async () => {
+      const file = csvFile.files?.[0];
+      if (!file) return;
+      csvText = await file.text();
+      await rebuildArtifacts();
+    });
 
-const sourceCsv = new URLSearchParams(location.search).get('sourceCsv') || 'current.csv';
-try {
-  const response = await fetch(sourceCsv, { cache: 'no-store' });
-  if (!response.ok) throw new Error(`HTTP ${response.status}`);
-  renderCsv(await response.text(), '現在のCSV');
-} catch (error) {
-  setStatus(`現在のCSVを読み込めません: ${error.message}`, 'error');
-}
-</script>
+    prefectureSelect.addEventListener('change', () => {
+      void refreshMunicipalities().catch((error) => setStatus(`地区索引の読込みに失敗しました: ${error.message}`, 'error'));
+    });
+    municipalitySelect.addEventListener('change', refreshDistricts);
+    districtSelect.addEventListener('change', () => {
+      addActivityButton.disabled = !districtSelect.value || !activityTitle.value.trim();
+    });
+    bindQuery(prefectureQuery, prefectureSelect, () => {
+      void refreshMunicipalities().catch((error) => setStatus(`地区索引の読込みに失敗しました: ${error.message}`, 'error'));
+    });
+    bindQuery(municipalityQuery, municipalitySelect, refreshDistricts);
+    bindQuery(districtQuery, districtSelect, () => {
+      addActivityButton.disabled = !districtSelect.value || !activityTitle.value.trim();
+    });
+    activityTitle.addEventListener('input', () => {
+      addActivityButton.disabled = !districtSelect.value || !activityTitle.value.trim();
+    });
+
+    addActivityButton.addEventListener('click', async () => {
+      const region = regions.find((entry) => entry.id === prefectureSelect.value);
+      const index = districtIndexes.get(prefectureSelect.value);
+      const district = (index?.districts || []).find((entry) => entry.key === districtSelect.value);
+      if (!region || !district || !activityTitle.value.trim()) return;
+      const values = [
+        `team-${Date.now()}`, activityTitle.value.trim(), region.label,
+        district.municipalityName, district.name, activityStatus.value,
+        activitySummary.value.trim(), activitySummary.value.trim(), district.name, '',
+      ];
+      const header = TEAM_ACTIVITY_CSV_COLUMNS.join(',');
+      if (!csvText.trim()) csvText = `${header}\n`;
+      if (!csvText.endsWith('\n')) csvText += '\n';
+      csvText += `${values.map(csvCell).join(',')}\n`;
+      await rebuildArtifacts();
+      activityTitle.value = '';
+      activitySummary.value = '';
+      addActivityButton.disabled = true;
+      setStatus(`${district.name}へ活動を追加しました。書き出すと反映されます。`, 'success');
+    });
+
+    templateButton.addEventListener('click', () => {
+      downloadText(TEAM_ACTIVITY_CSV_TEMPLATE, 'team-activity-template.csv');
+    });
+
+    writeButton.addEventListener('click', async () => {
+      if (!artifacts || artifacts.errors.length > 0) return;
+      try {
+        const mapRoot = await window.showDirectoryPicker({ mode: 'readwrite' });
+        setStatus('書き出し中...');
+        for (const [relativePath, content] of packageFiles()) {
+          await writeText(mapRoot, relativePath, content);
+        }
+        setStatus(`書き出し完了: ${artifacts.records.length}件。Container再生成後に公開状態が確定します。`, 'success');
+      } catch (error) {
+        if (error?.name !== 'AbortError') setStatus(`書き出しに失敗しました: ${error.message}`, 'error');
+      }
+    });
+
+    zipButton.addEventListener('click', () => {
+      if (!artifacts || artifacts.errors.length > 0) return;
+      const files = packageFiles();
+      const generatedAt = new Date().toISOString();
+      files.set('publisher.archive.json', `${JSON.stringify({
+        schemaVersion: 1,
+        publisherId: publisherConfig.id,
+        generatedAt,
+        entries: [...files.keys()].sort(),
+      }, null, 2)}\n`);
+      const archive = createZipArchive(files);
+      const url = URL.createObjectURL(new Blob([archive], { type: 'application/zip' }));
+      const anchor = document.createElement('a');
+      anchor.href = url;
+      anchor.download = `team-activity-${new Date().toISOString().slice(0, 10)}.zip`;
+      anchor.click();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      setStatus(`${files.size}ファイルをZIPへまとめました。`, 'success');
+    });
+  </script>
 </body>
 </html>

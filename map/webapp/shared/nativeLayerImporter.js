@@ -226,6 +226,10 @@ export const importBundledCommunityLayer = (entry, {
     className: attrs.class,
     visible: true,
     imported: true,
+    // Container 側またはレイヤー SVG 自身で controller が宣言されている
+    // コミュニティレイヤーにも、ネイティブのレイヤーパネルから開ける入口を出す。
+    // controller URL は SVGMap がレイヤー読込み時に解決するため、ここでは存在情報だけを使う。
+    ...(entry.controller ? { controllerUi: { label: '設定' } } : {}),
     group: 'SVGMapコミュニティ',
     community: {
       publisher: 'SVGMap community',

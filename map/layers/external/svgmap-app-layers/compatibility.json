@@ -11,7 +11,7 @@
   },
   "generatedAt": "2026-08-04",
   "counts": {
-    "unverified": 137,
+    "unverified": 138,
     "limited": 6,
     "supported": 2,
     "requires-config": 1,
@@ -4322,6 +4322,31 @@
         "visibility": "hidden",
         "opacity": "0.9",
         "xlink:href": "./appLayers/okayamaUniversity/teamActivity/teamActivityAreaLayer.svg#data=data/detail.json&districtSvgUrlTemplate=districts/{recordRegionId}/{code}.svg&layer=teamActivity"
+      }
+    },
+    {
+      "sourceIndex": 148,
+      "title": "岡山大学 避難所（QTCT・岡山）",
+      "href": "./appLayers/okayamaUniversity/evacuation/evacuationLayer.svg#summary=data/summary.json&data=data/detail.json&layer=evacuation",
+      "status": "unverified",
+      "category": "B",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [],
+      "verifiedAt": null,
+      "reason": "相対controller・画像・スクリプトのrebase確認が必要",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "岡山大学 避難所（QTCT・岡山）",
+        "class": "防災 poi clickable",
+        "visibility": "hidden",
+        "opacity": "1",
+        "xlink:href": "./appLayers/okayamaUniversity/evacuation/evacuationLayer.svg#summary=data/summary.json&data=data/detail.json&layer=evacuation"
       }
     }
   ]

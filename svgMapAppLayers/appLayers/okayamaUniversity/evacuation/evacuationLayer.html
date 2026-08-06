@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Evacuation Portable Layer</title>
+  <script src="./runtime/svgmap-slawa-client/svgMapLayerLib.js"></script>
+</head>
+<body>
+<script type="module">
+import { initRepresentativePinsLayer } from './runtime/representative-pins/representativePinsCore.js';
+import { renderEvacuationDetail } from './evacuationDetail.js';
+
+let started = false;
+const start = () => {
+  if (started) return;
+  started = true;
+  initRepresentativePinsLayer({
+    mode: 'portable',
+    renderFeatureDetail: renderEvacuationDetail,
+  });
+};
+window.addEventListener('layerWebAppReady', start, { once: true });
+if (window.svgMap && window.svgImage) queueMicrotask(start);
+</script>
+</body>
+</html>

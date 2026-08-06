@@ -96,7 +96,10 @@ const groupMatchedDistricts = () => {
     const recordKey = districtKeyOf(record.regionId, record.municipalityCode);
     const matches = state.districtAreas.filter((area) =>
       area.districtKey === recordKey
-      && pointInPolygon(Number(record.lon), Number(record.lat), area.points)
+      && (
+        (record.districtKey && area.localKey === String(record.districtKey))
+        || (!record.districtKey && pointInPolygon(Number(record.lon), Number(record.lat), area.points))
+      )
     );
     for (const area of matches) {
       // 同じ地区に複数の活動があってもポリゴンは1つ。活動はそこへ束ねる。
@@ -150,8 +153,9 @@ const loadDistrictAreas = async (records) => {
     Array.from(document.querySelectorAll('path')).map((path, index) => {
       const d = path.getAttribute('d') || '';
       const localKey = path.getAttribute('data-key-code') || path.getAttribute('id') || `${target.code}:${index}`;
+      const pathKey = path.getAttribute('id') || `${localKey}:${index}`;
       return {
-        key: `${districtKey}:${localKey}`, districtKey, municipalityCode: target.code,
+        key: `${districtKey}:${pathKey}`, localKey, districtKey, municipalityCode: target.code,
         regionId: target.regionId,
         name: path.getAttribute('data-name') || path.querySelector('title')?.textContent || '',
         d, points: parsePoly(d),
