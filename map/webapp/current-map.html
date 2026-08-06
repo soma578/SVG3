@@ -545,7 +545,8 @@
       mapcanvas?.setAttribute('data-src', blobUrl);
     };
 
-    const setInitialView = () => {
+    let initialViewTimer = null;
+    const setInitialView = (attempt = 0) => {
       try {
         const vp = runtimeState.requestedViewport
           || runtimeState.config?.initialViewport
@@ -562,9 +563,33 @@
         // setGeoViewPort だけでは isolated controller の preRenderFunction が
         // 呼ばれない。全国表示で作ったQTCT密度セルが市区町村表示へ残るため、
         // 初期位置を確定した直後に全レイヤーを同じ表示範囲で再描画する。
-        window.setTimeout(() => svgMap.refreshScreen?.(), 50);
+        window.setTimeout(() => {
+          svgMap.refreshScreen?.();
+          const applied = svgMap.getGeoViewBox?.();
+          const closeEnough = applied
+            && Math.abs(Number(applied.cx) - centerLon) <= lonSpan * 0.05
+            && Math.abs(Number(applied.cy) - centerLat) <= latSpan * 0.05
+            && Math.abs(Number(applied.width) - lonSpan) <= lonSpan * 0.1
+            && Math.abs(Number(applied.height) - latSpan) <= latSpan * 0.1;
+          // runtime追加レイヤーがあるとContainerのblob読込み完了前の初回設定が
+          // 黙って無視される。実際のviewBoxを確認し、初期化中だけ再試行する。
+          if (!closeEnough && attempt < 6) {
+            if (initialViewTimer) window.clearTimeout(initialViewTimer);
+            initialViewTimer = window.setTimeout(() => {
+              initialViewTimer = null;
+              setInitialView(attempt + 1);
+            }, 180 * (attempt + 1));
+          }
+        }, 80);
       } catch (error) {
         console.warn('[current-map] initial view failed', error);
+        if (attempt < 6) {
+          if (initialViewTimer) window.clearTimeout(initialViewTimer);
+          initialViewTimer = window.setTimeout(() => {
+            initialViewTimer = null;
+            setInitialView(attempt + 1);
+          }, 180 * (attempt + 1));
+        }
       }
     };
 
@@ -613,6 +638,13 @@
       return trimmed === '' || trimmed.startsWith(':') || trimmed.startsWith('#');
     };
 
+    let lastLayerSpecificUiVisible = false;
+    let layerSpecificUiGuardTimer = null;
+    const reportLayerSpecificUiVisibility = (visible) => {
+      if (visible === lastLayerSpecificUiVisible) return;
+      lastLayerSpecificUiVisible = visible;
+      notifyParent(MAP_MESSAGES.runtimeLayerUiVisibilityChanged, { visible });
+    };
     const guardLayerSpecificUi = () => {
       const panel = document.getElementById('layerSpecificUI');
       if (!panel) return;
@@ -628,18 +660,39 @@
       const usable = [...panel.querySelectorAll('iframe')].some((frame) => {
         if (isBrokenControllerFrame(frame)) return false;
         const source = frame.getAttribute('src');
-        if (typeof source !== 'string' || source.trim() === '') return false;
+        if (typeof source === 'string' && source.trim() === '') return false;
         if (frame.style.display === 'none' || frame.hidden) return false;
-        // 実質空のフレーム(高さがほぼ無い)で開くと白い箱だけが出る。
-        return frame.getBoundingClientRect().height > 80;
+        if (source === null) {
+          // SLaWA controllerは通常のsrc付きiframeではなく、SVGMapが文書を
+          // 注入する仮想iframeとして作られる。この形式は表示後の内容または
+          // 寸法で確認し、単なる空iframeとは区別する。
+          const hasVirtualContent = Boolean(
+            frame.getAttribute('srcdoc')
+            || frame.contentDocument?.body?.childElementCount
+            || frame.getBoundingClientRect().height > 80
+          );
+          if (!hasVirtualContent) return false;
+        }
+        // 読込み直後はまだ高さが確定していない。ここで寸法を条件にすると、
+        // src付きの正常なcontrollerまでロード完了前に閉じてしまう。
+        return true;
       });
-      if (!usable && panel.style.display !== 'none') panel.style.display = 'none';
+      const panelVisible = panel.style.display !== 'none' && usable;
+      reportLayerSpecificUiVisibility(panelVisible);
       if (removed > 0) {
         console.warn('[current-map] removed controller frame(s) without a usable URL', { removed });
       }
     };
 
-    new MutationObserver(guardLayerSpecificUi).observe(document.documentElement, {
+    const scheduleLayerSpecificUiGuard = () => {
+      if (layerSpecificUiGuardTimer) window.clearTimeout(layerSpecificUiGuardTimer);
+      layerSpecificUiGuardTimer = window.setTimeout(() => {
+        layerSpecificUiGuardTimer = null;
+        guardLayerSpecificUi();
+      }, 30);
+    };
+
+    new MutationObserver(scheduleLayerSpecificUiGuard).observe(document.documentElement, {
       childList: true,
       subtree: true,
       attributes: true,
@@ -713,8 +766,8 @@
 
     const layerBus = createLayerControllerBus({
       getCatalog: () => runtimeState.layerCatalog,
-      getSvgImageProps: () => svgMap.getSvgImagesProps?.() || window.svgImagesProps || {},
-      getRootDocument: () => svgMap.getSvgImages?.()?.root || window.svgImages?.root,
+      getSvgImageProps: () => svgMap?.getSvgImagesProps?.() || window.svgImagesProps || {},
+      getRootDocument: () => svgMap?.getSvgImages?.()?.root || window.svgImages?.root,
       debug: BUS_DEBUG,
     });
     const sendToLayerControllers = layerBus.send;
@@ -981,12 +1034,16 @@
           // 外部追加レイヤーのDOM idはSVGMap内部のiidとは異なる。
           // 表示切替と同じ解決を通さないと、controllerは生成済みでもUIが開かない。
           const identifier = svgMapLayerIdentifier(layerId);
-          const opened = svgMap.getSvgMapLayerUI?.()?.showLayerSpecificUI?.(identifier);
-          if (opened === false) {
-            window.setTimeout(() => {
-              svgMap.getSvgMapLayerUI?.()?.showLayerSpecificUI?.(svgMapLayerIdentifier(layerId));
-            }, 250);
-          }
+          svgMap.getSvgMapLayerUI?.()?.showLayerSpecificUI?.(identifier);
+          // controller iframeの生成と読込みは非同期。戻り値がundefinedでも未表示の
+          // 場合があるため、実際に表示されるまで短時間だけ再試行する。
+          [150, 400, 900].forEach((delay) => window.setTimeout(() => {
+            const panel = document.getElementById('layerSpecificUI');
+            if (panel?.style.display !== 'none' && lastLayerSpecificUiVisible) return;
+            svgMap.getSvgMapLayerUI?.()?.showLayerSpecificUI?.(svgMapLayerIdentifier(layerId));
+            scheduleLayerSpecificUiGuard();
+          }, delay));
+          scheduleLayerSpecificUiGuard();
         } catch (error) {
           console.warn('[current-map] layer-specific UI could not be opened', { layerId, error });
         }

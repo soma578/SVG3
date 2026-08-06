@@ -86,6 +86,23 @@ const enabled = catalog.entries
   .map((entry) => entry.title)
 assert.deepEqual(new Set(config.include), new Set(enabled), 'include must exactly match supported/limited entries')
 
+const eStatController = fs.readFileSync(
+  path.join(projectRoot, 'svgMapAppLayers/appLayers/eStatPopulation/adminAreaMap2_withGIS.html'),
+  'utf8',
+)
+assert.ok(eStatController.includes('/map/svgMapAppLayers/commonLib/indexDBpromise.js'))
+assert.ok(eStatController.includes('/map/svgMapAppLayers/commonLib/unzipit.module.js'))
+assert.ok(
+  eStatController.indexOf('await initGaikuDB();') < eStatController.indexOf('await initJpMesh();'),
+  'e-Stat district DB must be ready before the first detailed viewport draw',
+)
+const mojController = fs.readFileSync(
+  path.join(projectRoot, 'svgMapAppLayers/appLayers/moj/kuwanauchi.html'),
+  'utf8',
+)
+assert.ok(mojController.includes('/map/svgMapAppLayers/commonLib/gsiGeoCoder.js'))
+assert.ok(mojController.includes('/map/svgMapAppLayers/commonLib/geoJsonMetaSchemaGenerator.js'))
+
 const totals = catalog.entries.reduce((counts, entry) => {
   counts[entry.status] = (counts[entry.status] || 0) + 1
   return counts

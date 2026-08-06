@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8"></meta>
 </head>
-<script src="https://cdn.jsdelivr.net/gh/svgmap/svgmapjs@latest/svgMapLayerLib.js"></script>
+<script src="/map/vendor/svgmapjs/svgMapLayerLib.js"></script>
 
-<script src="./japanMesh_r2.js"></script>
-<script src="./meshLib.js"></script>
-<script src="./indexDBpromise.js"></script>
+<script src="/map/svgMapAppLayers/commonLib/japanMesh_r2.js"></script>
+<script src="/map/svgMapAppLayers/commonLib/meshLib.js"></script>
+<script src="/map/svgMapAppLayers/commonLib/indexDBpromise.js"></script>
 
 <script src="https://unpkg.com/shapefile@0.6">
 // https://github.com/mbostock/shapefile
@@ -15,13 +15,13 @@
 </script>
 
 <script type="module">
-import {unzip, HTTPRangeReader} from './unzipit.module.js';
+import {unzip, HTTPRangeReader} from '/map/svgMapAppLayers/commonLib/unzipit.module.js';
 window.unzip = unzip;
 window.HTTPRangeReader = HTTPRangeReader;
 </script>
 
 <script src="popGIS.js"></script>
-<script type="text/javascript" src="./layerLister.js"></script>
+<script type="text/javascript" src="/map/svgMapAppLayers/commonLib/layerLister.js"></script>
 
 <script>
 // zipアーカイブされたshapefileにランダムアクセスし可視化する
@@ -61,8 +61,10 @@ onload=async function(){
 	}
 	svgMap.setShowPoiProperty(customShowPoiProperty4estat, layerID);
 	estatSchema = await buildEstatSchema();
-	await initJpMesh();
+	// 詳細表示位置を復元して起動するホストでは、initJpMesh内の初回zpmFuncが
+	// 直ちにshowESを呼ぶ。街区DBを先に開き、null transactionを防ぐ。
 	await initGaikuDB();
+	await initJpMesh();
 }
 
 function getSvgImageHash(){

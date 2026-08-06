@@ -150,6 +150,15 @@ const setLayerPanelOpen = (open) => {
   syncMapUiInsets();
 };
 
+let restoreLayerPanelAfterController = false;
+
+const openLayerController = (layer) => {
+  if (!layer?.controllerUi) return;
+  restoreLayerPanelAfterController = elements.layerPanel.classList.contains('open');
+  setLayerPanelOpen(false);
+  postToMap({ type: MAP_MESSAGES.mapOpenLayerUi, layerId: layer.id });
+};
+
 const setAppMenuOpen = (open) => {
   if (open) setLayerPanelOpen(false);
   elements.appMenu.hidden = !open;
@@ -357,8 +366,9 @@ const applyViewport = () => {
   postToMap({ type: MAP_MESSAGES.mapSetViewport, viewport });
 };
 
-const toggleLayer = (id, visible) => {
+const toggleLayer = (id, visible, { openController = false } = {}) => {
   const layer = state.layers.find((entry) => entry.id === id);
+  const wasVisible = Boolean(layer?.visible);
   let switchedPeer = false;
   // SVGMap の `class="basemap switch"` は排他的な背景グループ。ランタイムだけに
   // 任せると、別背景を選んだ後もホスト側のチェック状態が以前のまま残る。
@@ -397,6 +407,11 @@ const toggleLayer = (id, visible) => {
     layerKey: layer?.toggleKey || id,
     visible,
   });
+  // 利用者がサイドバーでcontroller付きレイヤーをOFF→ONにした時だけ開く。
+  // 起動時の状態復元や再読込では勝手に開かない。
+  if (openController && visible && !wasVisible && layer?.controllerUi) {
+    openLayerController(layer);
+  }
   if (switchedPeer) layerPanel.renderLayers();
   else layerPanel.updateCount();
   scheduleUrlUpdate();
@@ -682,14 +697,13 @@ const layerPanel = createLayerPanel({
   },
   getLayers: () => state.layers,
   getPresets: () => state.presets,
-  onToggle: toggleLayer,
+  onToggle: (id, visible) => toggleLayer(id, visible, { openController: visible }),
   onRemove: removeImportedLayer,
   onPreset: applyLayerPreset,
   onOpenController: (layer) => {
     if (!layer.visible) toggleLayer(layer.id, true);
     layerPanel.renderLayers();
-    setLayerPanelOpen(false);
-    postToMap({ type: MAP_MESSAGES.mapOpenLayerUi, layerId: layer.id });
+    openLayerController(layer);
   },
 });
 const renderLayers = layerPanel.renderLayers;
@@ -815,6 +829,24 @@ const renderCommunityCompatibility = async () => {
   try {
     const catalog = await fetchJson('/map/layers/external/svgmap-app-layers/compatibility.json');
     state.communityCatalog = catalog;
+    // 以前の版で追加済みのレイヤーにも、最新カタログのcontroller情報を補う。
+    // localStorageを消さなくても、埋め込みcontrollerを持つ本家レイヤーに操作ボタンが出る。
+    let importedMetadataChanged = false;
+    for (const layer of state.importedLayers) {
+      const entry = (catalog.entries || []).find((candidate) => (
+        candidate.title === layer.title
+        || communityEntryHref(candidate) === layer.attrs?.['xlink:href']
+      ));
+      if (!entry) continue;
+      if (entry.controller && !layer.controllerUi) {
+        layer.controllerUi = { label: '設定' };
+        importedMetadataChanged = true;
+      }
+    }
+    if (importedMetadataChanged) {
+      saveImportedLayers(state.importedLayers);
+      renderLayers();
+    }
     const counts = catalog.counts || {};
     elements.communityCompatibilitySummary.textContent =
       `${counts.supported || 0}件検証済み・${counts.limited || 0}件制限付き／全${catalog.entries?.length || 0}件`;
@@ -1120,6 +1152,17 @@ window.addEventListener('message', (event) => {
     if (layerState) state.layerStates[layerId] = layerState;
     else delete state.layerStates[layerId];
     scheduleUrlUpdate();
+    return;
+  }
+  if (message.type === MAP_MESSAGES.runtimeLayerUiVisibilityChanged) {
+    const visible = message.payload?.visible === true;
+    document.body.classList.toggle('controller-open', visible);
+    if (visible) {
+      setLayerPanelOpen(false);
+    } else if (restoreLayerPanelAfterController) {
+      restoreLayerPanelAfterController = false;
+      setLayerPanelOpen(true);
+    }
     return;
   }
   if (message.type === MAP_MESSAGES.runtimeStartupMetrics) {

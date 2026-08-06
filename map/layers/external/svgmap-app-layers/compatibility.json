@@ -228,7 +228,6 @@
       "offline": false,
       "controller": true,
       "externalDependencies": [
-        "cdn.jsdelivr.net",
         "github.com",
         "www.moj.go.jp"
       ],
@@ -257,7 +256,6 @@
       "offline": false,
       "controller": true,
       "externalDependencies": [
-        "cdn.jsdelivr.net",
         "unpkg.com",
         "github.com",
         "qiita.com",

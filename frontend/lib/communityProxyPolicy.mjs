@@ -124,7 +124,13 @@ const fetchCommunityProxyResponse = async (requestUrl, method = 'GET', fetchImpl
   }
 
   const abort = new AbortController()
-  const timeout = setTimeout(() => abort.abort(), 12_000)
+  // e-Statの境界ZIPはCDN応答開始まで30秒以上かかる場合がある。
+  // ほかの通信先を長時間占有させず、この固定パスだけ待機枠を広げる。
+  const timeoutMs = target.hostname === 'www.e-stat.go.jp'
+    && target.pathname === '/gis/statmap-search/data'
+    ? 55_000
+    : 12_000
+  const timeout = setTimeout(() => abort.abort(), timeoutMs)
   try {
     let upstream
     for (let redirects = 0; redirects <= 3; redirects += 1) {
@@ -134,7 +140,9 @@ const fetchCommunityProxyResponse = async (requestUrl, method = 'GET', fetchImpl
         signal: abort.signal,
         headers: {
           Accept: 'text/html,application/json,application/xml,text/plain;q=0.9,*/*;q=0.1',
-          'User-Agent': 'SVGMap-Community-Proxy/1.0',
+          // 一部の公的データ配信CDNは、ブラウザ互換でないUser-Agentへの応答を
+          // タイムアウトさせる。中継名を明示した互換形式で取得元を隠さない。
+          'User-Agent': 'Mozilla/5.0 (compatible; SVGMap-Community-Proxy/1.0)',
         },
       })
       if (![301, 302, 303, 307, 308].includes(upstream.status)) break

@@ -355,17 +355,31 @@ assert.ok(
   'the host must suppress controller frames that have no usable URL',
 )
 assert.ok(
-  /new MutationObserver\(guardLayerSpecificUi\)/.test(host),
-  'the controller-frame guard must actually be installed',
+  /new MutationObserver\(scheduleLayerSpecificUiGuard\)/.test(host)
+    && /guardLayerSpecificUi\(\)/.test(host),
+  'the controller-frame guard must actually be installed through its deferred scheduler',
 )
 assert.ok(
   /frame\.style\.display === 'none' \|\| frame\.hidden/.test(host),
   'the empty-panel check must only count the visible controller frame',
 )
-// 中身の無いフレームでパネルを開くと白い箱だけが出る。
 assert.ok(
-  /getBoundingClientRect\(\)\.height > \d+/.test(host),
-  'a controller frame with no rendered content must not open the panel',
+  /runtimeLayerUiVisibilityChanged/.test(host)
+    && /reportLayerSpecificUiVisibility/.test(host),
+  'controller visibility changes must be relayed to the native shell',
+)
+assert.ok(
+  /onToggle: \(id, visible\) => toggleLayer\(id, visible, \{ openController: visible \}\)/.test(nativeShell)
+    && /openController && visible && !wasVisible && layer\?\.controllerUi/.test(nativeShell),
+  'enabling a controller-backed layer from the sidebar must open its controller exactly on the off-to-on transition',
+)
+// src付きcontrollerは読込み直後に高さ0のことがあるので寸法で拒否しない。
+// 一方、SLaWAのsrcなし仮想iframeは、内容または表示寸法で空iframeと区別する。
+assert.ok(
+  /source === null/.test(host)
+    && /hasVirtualContent/.test(host)
+    && /typeof source === 'string' && source\.trim\(\) === ''/.test(host),
+  'SLaWA virtual controller frames must be accepted without weakening empty-frame checks',
 )
 // 表示のたびに appearOnLayerLoad を渡すと、固有UIを持たないレイヤーでも
 // レイヤー固有UIが開いてしまう。
