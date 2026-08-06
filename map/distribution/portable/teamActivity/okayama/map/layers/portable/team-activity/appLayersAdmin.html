@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SVGMap App Layers チーム活動管理</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f3f5f7; color: #172033; font: 14px/1.5 system-ui, sans-serif; }
+    main { width: min(1000px, 100%); margin: auto; padding: 20px; }
+    h1 { margin: 0 0 6px; font-size: 20px; }
+    .note, .status, .panel { margin: 12px 0; padding: 12px; border: 1px solid #d7dde4; background: white; }
+    .status { border-left: 4px solid #64748b; }
+    .status.error { border-left-color: #b42318; color: #8a1c13; }
+    .status.success { border-left-color: #12603f; color: #0f5132; }
+    .actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    button, .fileButton { min-height: 36px; padding: 7px 12px; border: 1px solid #aeb8c4; border-radius: 6px; background: white; font: inherit; font-weight: 700; cursor: pointer; }
+    button.primary { border-color: #12603f; background: #12603f; color: white; }
+    button:disabled { opacity: .45; cursor: not-allowed; }
+    input[type=file] { position: absolute; width: 1px; height: 1px; opacity: 0; }
+    .tableWrap { max-height: 420px; overflow: auto; border: 1px solid #d7dde4; background: white; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 7px 9px; border-bottom: 1px solid #e5e9ee; text-align: left; white-space: nowrap; }
+    th { position: sticky; top: 0; background: #eef2f5; }
+    code { overflow-wrap: anywhere; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>SVGMap App Layers チーム活動管理</h1>
+  <div class="note">
+    ローカルの <code>svgmapAppLayers</code> フォルダーを選ぶと、
+    <code>appLayers/okayamaUniversity/teamActivity/</code> 内だけを更新します。
+    Git操作や外部リポジトリへの送信は行いません。
+  </div>
+  <div class="panel actions">
+    <label class="fileButton">別のCSVを選択<input id="csvFile" type="file" accept=".csv,text/csv"></label>
+    <button id="templateButton" type="button">ひな形を保存</button>
+    <button id="downloadButton" type="button" disabled>生成3ファイルを保存</button>
+    <button id="writeButton" class="primary" type="button" disabled>SVGMap App Layersへ書き出す</button>
+  </div>
+  <div id="status" class="status">現在のCSVを読み込んでいます。</div>
+  <p>有効レコード: <strong id="recordCount">0</strong></p>
+  <div class="tableWrap">
+    <table id="preview" hidden>
+      <thead><tr><th>ID</th><th>名称</th><th>地域</th><th>自治体コード</th><th>状態</th><th>緯度</th><th>経度</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</main>
+<script type="module">
+import {
+  TEAM_ACTIVITY_CSV_TEMPLATE,
+  buildTeamActivityCsvDocuments,
+  parseTeamActivityCsv,
+} from './teamActivityCsv.js';
+
+const csvFile = document.getElementById('csvFile');
+const templateButton = document.getElementById('templateButton');
+const downloadButton = document.getElementById('downloadButton');
+const writeButton = document.getElementById('writeButton');
+const status = document.getElementById('status');
+const preview = document.getElementById('preview');
+const previewBody = preview.querySelector('tbody');
+const recordCount = document.getElementById('recordCount');
+let csvText = '';
+let records = [];
+let documents = null;
+
+const setStatus = (message, tone = '') => {
+  status.textContent = message;
+  status.className = `status ${tone}`.trim();
+};
+const downloadText = (text, filename) => {
+  const url = URL.createObjectURL(new Blob([filename.endsWith('.csv') ? `\uFEFF${text}` : text], { type: 'application/octet-stream' }));
+  const anchor = document.createElement('a');
+  anchor.href = url;
+  anchor.download = filename;
+  anchor.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+};
+const generatedFiles = () => new Map([
+  ['current.csv', csvText.endsWith('\n') ? csvText : `${csvText}\n`],
+  ['data/summary.json', `${JSON.stringify(documents.summary)}\n`],
+  ['data/detail.json', `${JSON.stringify(documents.detail)}\n`],
+]);
+const renderCsv = (text, label) => {
+  const parsed = parseTeamActivityCsv(text);
+  if (parsed.errors.length) {
+    csvText = '';
+    records = [];
+    documents = null;
+    setStatus(parsed.errors.slice(0, 8).join(' / '), 'error');
+  } else {
+    csvText = text;
+    records = parsed.records;
+    documents = buildTeamActivityCsvDocuments(records);
+    setStatus(`${label}: ${records.length}件。書き出し可能です。`, 'success');
+  }
+  previewBody.replaceChildren();
+  for (const record of records) {
+    const row = document.createElement('tr');
+    for (const value of [record.sourceId, record.title, record.regionId, record.municipalityCode, record.status, record.lat, record.lon]) {
+      const cell = document.createElement('td');
+      cell.textContent = String(value ?? '');
+      row.appendChild(cell);
+    }
+    previewBody.appendChild(row);
+  }
+  preview.hidden = records.length === 0;
+  recordCount.textContent = String(records.length);
+  downloadButton.disabled = !documents;
+  writeButton.disabled = !documents || !('showDirectoryPicker' in window);
+};
+const getDirectory = async (root, parts) => {
+  let directory = root;
+  for (const part of parts) directory = await directory.getDirectoryHandle(part, { create: true });
+  return directory;
+};
+const writeText = async (root, relativePath, text) => {
+  const parts = relativePath.split('/');
+  const filename = parts.pop();
+  const directory = await getDirectory(root, parts);
+  const handle = await directory.getFileHandle(filename, { create: true });
+  const writable = await handle.createWritable();
+  await writable.write(text);
+  await writable.close();
+};
+
+csvFile.addEventListener('change', async () => {
+  const file = csvFile.files?.[0];
+  if (file) renderCsv(await file.text(), file.name);
+  csvFile.value = '';
+});
+templateButton.addEventListener('click', () => downloadText(TEAM_ACTIVITY_CSV_TEMPLATE, 'team-activity-template.csv'));
+downloadButton.addEventListener('click', () => {
+  for (const [path, text] of generatedFiles()) downloadText(text, path.replace('/', '-'));
+});
+writeButton.addEventListener('click', async () => {
+  if (!documents) return;
+  try {
+    const root = await window.showDirectoryPicker({ mode: 'readwrite' });
+    await root.getFileHandle('Container.svg');
+    const base = 'appLayers/okayamaUniversity/teamActivity/';
+    for (const [path, text] of generatedFiles()) await writeText(root, `${base}${path}`, text);
+    setStatus(`${records.length}件を書き出しました。地図を再読み込みしてください。`, 'success');
+  } catch (error) {
+    if (error?.name !== 'AbortError') setStatus(`書き出しに失敗しました: ${error.message}`, 'error');
+  }
+});
+
+const sourceCsv = new URLSearchParams(location.search).get('sourceCsv') || 'current.csv';
+try {
+  const response = await fetch(sourceCsv, { cache: 'no-store' });
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  renderCsv(await response.text(), '現在のCSV');
+} catch (error) {
+  setStatus(`現在のCSVを読み込めません: ${error.message}`, 'error');
+}
+</script>
+</body>
+</html>

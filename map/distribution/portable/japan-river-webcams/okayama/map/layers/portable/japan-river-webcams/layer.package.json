@@ -38,7 +38,7 @@
   "runtimeDependencies": [
     {
       "id": "representative-pins",
-      "version": "1.1.0",
+      "version": "1.2.2",
       "manifest": "../representative-pins/runtime.package.json"
     },
     {
@@ -73,15 +73,15 @@
   "runtimeDependencyLock": [
     {
       "id": "representative-pins",
-      "version": "1.1.0",
+      "version": "1.2.2",
       "manifest": "representative-pins/runtime.package.json",
-      "integrity": "sha256-9c710a53a18d829739d0571ed93aed014ddc98a57366eb73bd6b154ab4a318f1"
+      "integrity": "sha256-dea37d0ce1257a369822c143ba89480a4a44b3a4e6fe65194db4503274c0b8b6"
     },
     {
       "id": "svgmap-slawa-client",
       "version": "1.0.0",
       "manifest": "svgmap-slawa-client/runtime.package.json",
-      "integrity": "sha256-8ad6f8c67a38d07362832f3e75c188947dee601546fe62b812df9221efdc7c22"
+      "integrity": "sha256-39cde050c45eaa37807b4d54cc2a8965f2eb2fba55ef97a3b1bc1fbe8911961c"
     }
   ]
 }

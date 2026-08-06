@@ -133,44 +133,16 @@ test('SVGMap App Layers版にも自己完結したCSV管理画面がある', asy
   await expect(page.locator('#downloadButton')).toBeEnabled()
 })
 
-test('レイヤーのコントローラーからCSVを追加し、既存データと重ねて消去できる', async ({ page }) => {
+test('チーム活動を有効化してもCSVコントローラーを開かない', async ({ page }) => {
   await page.goto(MAP_URL)
   await expect(page.locator('#loading')).toBeHidden()
   const frame = await mapFrame(page)
-  await enableTeamActivity(page)
-
+  await openPanel(page)
   const item = page.locator('#layer-list li').filter({ hasText: 'チーム活動' }).first()
-  await item.getByRole('button', { name: /CSV追加|種類を設定/ }).click()
+  await expect(item.getByRole('button', { name: /CSV追加|種類を設定/ })).toHaveCount(0)
+  await item.locator('label.switch').click()
+
   const controllerElement = frame.locator('#layerSpecificUI iframe[src*="teamActivityLayer.html"]')
-  await expect(controllerElement).toBeVisible({ timeout: 30_000 })
-  const controller = controllerElement.contentFrame()
-  await expect(controller.getByText('チーム活動CSV')).toBeVisible()
-  await expect(controller.locator('#current-csv-count')).toHaveText('（3件）')
-  await expect(controller.locator('#current-csv-table tbody tr')).toHaveCount(3)
-
-  const csv = [
-    'id,title,regionId,municipalityCode,lat,lon,status,summary,description,area,operator',
-    'acceptance-001,CSV受入試験,okayama,33101,34.668,133.928,active,追加確認,追加確認,岡山市北区,試験班',
-  ].join('\n')
-  await controller.locator('#team-csv-file').setInputFiles({
-    name: 'team-activity.csv', mimeType: 'text/csv', buffer: Buffer.from(csv),
-  })
-  await expect(controller.locator('#csv-status')).toContainText('1件を追加中')
-
-  await frame.evaluate(() => window.svgMap.setGeoViewPort(34.64, 133.89, 0.07, 0.08))
-  await expect.poll(() => frame.evaluate(() => {
-    const images = window.svgMap.getSvgImages()
-    const rootLayer = images.root.querySelector('[id="layer-team-activity-pins"]')
-    const document_ = images[rootLayer?.getAttribute('iid')]
-    return Boolean(document_?.querySelector('[data-feature-id="csv:acceptance-001"]'))
-  }), { timeout: 30_000 }).toBe(true)
-
-  await controller.locator('#team-csv-clear').click()
-  await expect(controller.locator('#csv-status')).toHaveText('追加CSVなし')
-  await expect.poll(() => frame.evaluate(() => {
-    const images = window.svgMap.getSvgImages()
-    const rootLayer = images.root.querySelector('[id="layer-team-activity-pins"]')
-    const document_ = images[rootLayer?.getAttribute('iid')]
-    return Boolean(document_?.querySelector('[data-feature-id="csv:acceptance-001"]'))
-  })).toBe(false)
+  await expect(controllerElement).toBeHidden()
+  await expect(frame.locator('#layerSpecificUI')).toBeHidden()
 })

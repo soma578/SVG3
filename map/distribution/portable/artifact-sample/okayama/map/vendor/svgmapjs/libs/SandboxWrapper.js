@@ -42,13 +42,34 @@ const MODAL_MAX_SIZE = {
 	default: { width: 300, height: 300 },
 };
 const CUSTOM_ID_ATTR = "data-slawa-id";
+const BLOCKED_SVG_ELEMENTS = new Set([
+	"a",
+	"animation",
+	"embed",
+	"foreignobject",
+	"iframe",
+	"object",
+	"script",
+]);
+const BLOCKED_MODAL_ELEMENTS = new Set([
+	"base",
+	"embed",
+	"form",
+	"iframe",
+	"link",
+	"meta",
+	"object",
+	"script",
+]);
+const isDangerousUrl = (value) => /^(?:javascript|vbscript|data:text\/html):/i.test(String(value || "").trim());
 
 export class SandboxWrapper {
-	constructor(svgMap, layerID, targetIframe, crossOriginUrl) {
+	constructor(svgMap, layerID, targetIframe, crossOriginUrl, sessionNonce) {
 		this.svgMap = svgMap;
 		this.layerID = layerID;
 		this.sandboxFrame = targetIframe;
 		this.crossOriginUrl = crossOriginUrl;
+		this.sessionNonce = sessionNonce;
 		this.messaging = null;
 		this.sandboxLaWASVGurl = null;
 		this.customShowPoiPropertyEnabled = false;
@@ -71,6 +92,10 @@ export class SandboxWrapper {
 
 		if (originalSvgUrlStr) {
 			sLaWASVGurl = new URL(originalSvgUrlStr, location.href);
+			// 外部SVGのfragmentはHTTP取得には送られず、ダミーSVGへ置換した時点で
+			// svgImagePropsから失われる。既存controllerはここをレイヤー設定として
+			// 使用するため、元URLから明示的に引き継ぐ。
+			if (sLaWASVGurl.hash) this.svgImageProps.hash = sLaWASVGurl.hash;
 			// console.log("[S-LaWA Lv2] ダミーSVGから本物SVGのURLを復元:", sLaWASVGurl.href);
 		}
 
@@ -124,8 +149,11 @@ export class SandboxWrapper {
 			return;
 		}
 
-		const targetOrigin = sLaWAurl.origin;
-		// console.log("sLaWAurl:", sLaWAurl, " targetOrigin:", targetOrigin);
+		// iframe は allow-same-origin なしの sandbox で動くため、受信時の
+		// event.origin は "null" になる。送信先を origin で固定することは
+		// できないが、InterWindowMessaging は event.source をこの iframe の
+		// contentWindow に固定して検証するため、opaque origin 用に "*" を使う。
+		const targetOrigin = "*";
 
 		// 通信チャネルの確立
 		this.#establishChannel(targetOrigin, sLaWASVGurl);
@@ -211,21 +239,27 @@ export class SandboxWrapper {
 						this.#enableCustomShowPoiProperty();
 					},
 					showModal: (msg) => {
-						if (!msg.src) return;
+						if (!msg.src || String(msg.src).length > 100000) return;
 						let w = msg.width
 							? Math.min(MODAL_MAX_SIZE.width, msg.width)
 							: MODAL_MAX_SIZE.default.width;
 						let h = msg.height
 							? Math.min(MODAL_MAX_SIZE.height, msg.height)
 							: MODAL_MAX_SIZE.default.height;
-						const modalContent = this.svgMap.showModal(msg.src, w, h);
+						const modalContent = this.svgMap.showModal(this.#sanitizeModalContent(msg.src), w, h);
 						this.#bindDeclarativeModalActions(modalContent);
 					},
 				},
 				this.sandboxFrame.contentWindow,
-				targetOrigin
+				targetOrigin,
+				{ sessionNonce: this.sessionNonce },
 			);
 		});
+	}
+
+	destroy() {
+		this.messaging?.destroy?.();
+		this.messaging = null;
 	}
 
 	// -----------------------------------------------------------------
@@ -303,6 +337,7 @@ export class SandboxWrapper {
 
 	#replaceSvgContent(svgImageDom, xmlString) {
 		try {
+			if (typeof xmlString !== "string" || xmlString.length > 5000000) return false;
 			const parser = new DOMParser();
 			const newSvgDoc = parser.parseFromString(xmlString, "image/svg+xml");
 			if (newSvgDoc.getElementsByTagName("parsererror").length > 0) {
@@ -340,6 +375,7 @@ export class SandboxWrapper {
 				);
 			}
 			const newSvgRoot = newSvgDoc.documentElement;
+			this.#sanitizeSvgSubtree(newSvgRoot);
 			const propertyAttr = newSvgRoot.getAttribute("property");
 			if (propertyAttr !== null) {
 				svgImageDom.documentElement.setAttribute("property", propertyAttr);
@@ -366,6 +402,7 @@ export class SandboxWrapper {
 
 	#applySvgDiff(diffPayload) {
 		try {
+			if (!Array.isArray(diffPayload) || diffPayload.length > 5000) return false;
 			diffPayload.forEach((change) => {
 				const type = change.type;
 				const payload = change.payload;
@@ -384,7 +421,7 @@ export class SandboxWrapper {
 					if (node) {
 						if (payload.attr === "textContent") {
 							node.textContent = payload.value;
-						} else {
+						} else if (this.#isSafeSvgAttribute(payload.attr, payload.value)) {
 							node.setAttribute(payload.attr, payload.value);
 						}
 					}
@@ -403,6 +440,7 @@ export class SandboxWrapper {
 					}
 
 					const parser = new DOMParser();
+					if (typeof payload.xml !== "string" || payload.xml.length > 1000000) return;
 					const wrappedXml = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">${payload.xml}</svg>`;
 					const newSvgDoc = parser.parseFromString(wrappedXml, "image/svg+xml");
 					if (newSvgDoc.getElementsByTagName("parsererror").length > 0) {
@@ -413,6 +451,8 @@ export class SandboxWrapper {
 						return;
 					}
 					const newNode = newSvgDoc.documentElement.firstChild;
+					if (!newNode) return;
+					if (!this.#sanitizeSvgSubtree(newNode)) return;
 					this.#changeAbsoluteImagePath(newNode);
 
 					if (payload.nextSiblingId) {
@@ -434,6 +474,57 @@ export class SandboxWrapper {
 			console.error("Error occurred:", e);
 			return false;
 		}
+	}
+
+	#isSafeSvgAttribute(name, value) {
+		const normalized = String(name || "").toLowerCase();
+		if (!normalized || normalized.startsWith("on") || normalized === "data-controller") return false;
+		if (["href", "xlink:href", "src"].includes(normalized) && isDangerousUrl(value)) return false;
+		return true;
+	}
+
+	#sanitizeSvgSubtree(root) {
+		if (!root || root.nodeType !== Node.ELEMENT_NODE) return root;
+		if (BLOCKED_SVG_ELEMENTS.has(root.localName.toLowerCase())) {
+			root.remove();
+			return null;
+		}
+		for (const element of [root, ...root.querySelectorAll("*")]) {
+			if (BLOCKED_SVG_ELEMENTS.has(element.localName.toLowerCase())) {
+				element.remove();
+				continue;
+			}
+			for (const attribute of [...element.attributes]) {
+				if (!this.#isSafeSvgAttribute(attribute.name, attribute.value)) {
+					element.removeAttribute(attribute.name);
+				}
+			}
+		}
+		return root;
+	}
+
+	#sanitizeModalContent(source) {
+		const template = document.createElement("template");
+		template.innerHTML = String(source);
+		for (const element of template.content.querySelectorAll("*")) {
+			if (BLOCKED_MODAL_ELEMENTS.has(element.localName.toLowerCase())) {
+				element.remove();
+				continue;
+			}
+			for (const attribute of [...element.attributes]) {
+				const name = attribute.name.toLowerCase();
+				if (name.startsWith("on") || (["href", "src", "action", "formaction"].includes(name) && isDangerousUrl(attribute.value))) {
+					element.removeAttribute(attribute.name);
+				}
+			}
+			if (element.localName.toLowerCase() === "a") {
+				element.setAttribute("target", "_blank");
+				element.setAttribute("rel", "noopener noreferrer");
+			}
+		}
+		const container = document.createElement("div");
+		container.append(template.content);
+		return container;
 	}
 
 	#bindDeclarativeModalActions(root) {

@@ -100,9 +100,7 @@
         "href": "/map/publishers/team-activity-csv/admin.html",
         "label": "CSV管理"
       },
-      "controllerUi": {
-        "label": "CSV追加"
-      },
+      "controllerUi": null,
       "userToggle": true,
       "messages": {
         "toHost": [
@@ -568,53 +566,6 @@
         ],
         "verifiedAt": "2026-08-04",
         "reason": "共通SVGを固有URL化し、同梱controllerと外部WMTSタイルの取得まで動作確認済み"
-      }
-    },
-    {
-      "id": "layer-external-svgmap-app-layers-72-72",
-      "label": "浸水想定区域(想定最大規模)",
-      "visible": false,
-      "source": "external/svgmap-app-layers",
-      "order": 1071,
-      "group": "SVGMapコミュニティ",
-      "note": "制限付き・オンライン専用（重ねるハザードマップ）",
-      "kind": "external",
-      "className": "国交省ハザードマップ batch",
-      "symbol": "コ",
-      "icon": "",
-      "accent": "#72519A",
-      "toggleKey": "layer-external-svgmap-app-layers-72-72",
-      "mounts": [
-        "layer-external-svgmap-app-layers-72-72"
-      ],
-      "visibilityStrategy": "native",
-      "search": null,
-      "manage": null,
-      "controllerUi": null,
-      "userToggle": true,
-      "messages": null,
-      "alertFeed": null,
-      "health": null,
-      "dataSource": null,
-      "disabled": false,
-      "requiresController": true,
-      "experimental": false,
-      "community": {
-        "publisher": "SVGMap community",
-        "license": {
-          "name": "Mozilla Public License 2.0",
-          "spdx": "MPL-2.0"
-        },
-        "status": "limited",
-        "category": "C",
-        "runtime": "tight",
-        "delivery": "online-only",
-        "offline": false,
-        "externalDependencies": [
-          "disaportaldata.gsi.go.jp"
-        ],
-        "verifiedAt": "2026-08-04",
-        "reason": "壊れたシンボリックリンクの代わりに同梱commonLibの実体を固有SVGへ配置し、浸水タイル取得まで動作確認済み"
       }
     },
     {

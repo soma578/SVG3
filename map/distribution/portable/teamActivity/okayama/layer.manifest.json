@@ -4,7 +4,7 @@
   "packageId": "teamActivity",
   "regionId": "okayama",
   "distribution": {
-    "packageVersion": "1.0.0",
+    "packageVersion": "1.2.0",
     "publisher": {
       "id": "svg3",
       "name": "SVG3"
@@ -17,17 +17,17 @@
     },
     "publishedAt": "2026-07-21T00:00:00+09:00"
   },
-  "contentDigest": "sha256-4eca0e06c4e4d1aef0b13644d43d34ea518b9c84aa9e831ec559019251dc8a27",
+  "contentDigest": "sha256-92607c5ce374124fb0622a2f1f414376387fe829a68c7a20f30dcea47043d1fe",
   "files": [
     {
       "path": "Container.isolated.svg",
-      "bytes": 1196,
-      "sha256": "852309339d0a69b78800bb5496468483dec6b4f86f0276427e798d439a4addf9"
+      "bytes": 1222,
+      "sha256": "9dc538632905e9b4059ac3822ab8de0c55da81f4ac0849256c23c4a80cca982a"
     },
     {
       "path": "Container.svg",
-      "bytes": 1126,
-      "sha256": "62f3d47b8eaf0b62960ebd1a23ec4c3687b52466d696d887a73c19fea1a9470f"
+      "bytes": 1152,
+      "sha256": "96e7c7d73d1cf391ba8558bfcf5c5613f88afcea9dfd27019d312878c6f68fbe"
     },
     {
       "path": "map/data/districts/33101.svg",
@@ -230,6 +230,16 @@
       "sha256": "655ab7514976a209cc44dce7d8613951990080c8b19fd639b445ac8c429f72f4"
     },
     {
+      "path": "map/layers/portable/representative-pins/DENSITY_POINTS_FORMAT.md",
+      "bytes": 1563,
+      "sha256": "a017fcaf29c7cfd4f17aab9942dad0ba7e00ec741b80bb49c057cebf3143315a"
+    },
+    {
+      "path": "map/layers/portable/representative-pins/densityPointFormat.js",
+      "bytes": 4053,
+      "sha256": "e3af85e3266b581568e7280d18ddb80ca2a214eaf78d90c70a236249be338082"
+    },
+    {
       "path": "map/layers/portable/representative-pins/mapMessages.js",
       "bytes": 2147,
       "sha256": "8e23fe77c82c61da342b1016f8eddd1e128d69ed6811eb9d2e70700e9899afe8"
@@ -241,28 +251,28 @@
     },
     {
       "path": "map/layers/portable/representative-pins/pinLayerProfiles.js",
-      "bytes": 7879,
-      "sha256": "2155e76fd7c11bb6ec10871197b9bbe493d79a05ef9c798ed7c21d2266fa5342"
+      "bytes": 9349,
+      "sha256": "d45aadc071a415a6efaba275ebb6590231dc57ce40389ff8078d320f73038f79"
     },
     {
       "path": "map/layers/portable/representative-pins/propertyModal.js",
-      "bytes": 9444,
-      "sha256": "635130caa9ec32b4dd6e052cbdab47a8dcbecca9008c65370f117b207756f8f9"
+      "bytes": 9629,
+      "sha256": "990d22bbe76035481c9d997dfa5eb3947252f273fbbc76828efc4637e2d35c3a"
     },
     {
       "path": "map/layers/portable/representative-pins/qtctBuilder.mjs",
-      "bytes": 5710,
-      "sha256": "fd0677f3e585f1568edc7cad8a4568c5dde861e82d6c33cba88b4e4aad3ced82"
+      "bytes": 8303,
+      "sha256": "cf8fb14ba4217a4151d6230006300773471c8d805081d478a7ed005bc5e8766c"
     },
     {
       "path": "map/layers/portable/representative-pins/qtctFeatureEngine.js",
-      "bytes": 4196,
-      "sha256": "dceeb59bb0f487757307056390707c766ad9029757ad83e6c24fc55920949b82"
+      "bytes": 6986,
+      "sha256": "10350f94cf28a64d6833dc6b16a8c60ac382855671a2f781e9060bbca835a727"
     },
     {
       "path": "map/layers/portable/representative-pins/representativePinsCore.js",
-      "bytes": 40934,
-      "sha256": "fc4e71e1d2998a9e6f8957cc1dfb156f7a8df7ad3b0e333b3093c2fe9598459a"
+      "bytes": 58593,
+      "sha256": "f91bd9163ec3f0b43707103d9901eb957914df1eacd83c2dcc19c63ff0fa859a"
     },
     {
       "path": "map/layers/portable/representative-pins/representativePinsPortable.html",
@@ -276,8 +286,8 @@
     },
     {
       "path": "map/layers/portable/representative-pins/runtime.package.json",
-      "bytes": 421,
-      "sha256": "b6632a2d35e2964b453dd443e4a25ee9188c9849202b3c5482412212aedeacce"
+      "bytes": 482,
+      "sha256": "e3d4b0af9acbbbaaf9453d6d7bffc67a2c73fb126463e10ebca8b2931e7114c9"
     },
     {
       "path": "map/layers/portable/representative-pins/runtimeCache.js",
@@ -286,8 +296,8 @@
     },
     {
       "path": "map/layers/portable/svgmap-slawa-client/InterWindowMessaging.js",
-      "bytes": 14372,
-      "sha256": "7d252a62716b0a3e8ef9f1377fc57d8c9a7f6a5bc326d507162497ab83016a0a"
+      "bytes": 15232,
+      "sha256": "2dbf644c3c87b24eb7db7b23c1707689339f158c61c81ca7a426d5b814e63e55"
     },
     {
       "path": "map/layers/portable/svgmap-slawa-client/libs/SvgMapElementType.js",
@@ -316,23 +326,38 @@
     },
     {
       "path": "map/layers/portable/svgmap-slawa-client/svgMapSandboxLayerLib.js",
-      "bytes": 15028,
-      "sha256": "5bdae55528983443a278a59dd6399e53e2616d71f35768329893d28af6c11fb9"
+      "bytes": 15108,
+      "sha256": "2ca31de7652445043c310bd6231748be17ea99312aa3db80233c2839d9fbbf54"
+    },
+    {
+      "path": "map/layers/portable/team-activity/appLayersAdmin.html",
+      "bytes": 7243,
+      "sha256": "e7fec33a1ef997e0d8ed0edcc6d4dcc875462a6b6f5b36311ae9bc65aba35085"
+    },
+    {
+      "path": "map/layers/portable/team-activity/current.csv",
+      "bytes": 607,
+      "sha256": "dc1e641f7b65c2d5fc4dedf4d6a79c9b613aa2a043c33a8bb40e6b8600248966"
     },
     {
       "path": "map/layers/portable/team-activity/layer.package.json",
-      "bytes": 2991,
-      "sha256": "c2878e07f00b6377f1faa3fcc722ec2b6e02b24f3a823ba683639ed17ab8557f"
+      "bytes": 3118,
+      "sha256": "32606162c3194e279c9535f22e0231449bfae0dc5359ef912783e154125a82b2"
     },
     {
       "path": "map/layers/portable/team-activity/teamActivityAreaLayer.html",
-      "bytes": 7011,
-      "sha256": "07b852a8d80ee739ae2cab3ecf1fb99c7548f72e03ca0e57b11150678aba4c2f"
+      "bytes": 11730,
+      "sha256": "92e07ee83286354899311863c854ec0464727c2a1883ecb331cf545686acff32"
     },
     {
       "path": "map/layers/portable/team-activity/teamActivityAreaLayer.svg",
       "bytes": 414,
       "sha256": "1b3abbdfc81ed4df9d98d94f0d31d4dbaf7f5c11019ff22116c41dedc0ab3a20"
+    },
+    {
+      "path": "map/layers/portable/team-activity/teamActivityCsv.js",
+      "bytes": 3766,
+      "sha256": "1b47157c1a111ff41a73f85b95ec171dc60032a62d6724c71450f06eb5218a6a"
     },
     {
       "path": "map/layers/portable/team-activity/teamActivityDetail.js",
@@ -341,8 +366,8 @@
     },
     {
       "path": "map/layers/portable/team-activity/teamActivityLayer.html",
-      "bytes": 724,
-      "sha256": "e753e748363e7cfeab17ed37c2e4e046384429d99446b9805ed4e30be4cf68d4"
+      "bytes": 7718,
+      "sha256": "b1c3798d64fcbe768741ef95fca5289ad4dcb2822b4f64fb982da5c1339b24b4"
     },
     {
       "path": "map/layers/portable/team-activity/teamActivityLayer.svg",

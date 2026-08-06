@@ -92,7 +92,8 @@ function initSandboxLayer() {
 			},
 		},
 		window.parent,
-		"negotiation" //2025/09/02 セキュリティ改善
+		"negotiation", //2025/09/02 セキュリティ改善
+		{ sessionNonce: new URL(location.href).searchParams.get("__slawa_session") }
 	);
 }
 

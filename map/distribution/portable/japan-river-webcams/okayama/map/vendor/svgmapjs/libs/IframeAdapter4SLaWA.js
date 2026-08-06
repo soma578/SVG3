@@ -25,6 +25,7 @@ export class IframeAdapter4SLaWA {
 	#virtualIframe;
 	#realIframe;
 	#sandboxWrapper;
+	#lifecycleObserver;
 
 	constructor(svgMap, layerID, defaultStyle) {
 		this.#svgMap = svgMap;
@@ -38,6 +39,9 @@ export class IframeAdapter4SLaWA {
 	 * @returns {HTMLDivElement} - iframeのフリをしたdiv要素
 	 */
 	create(crossOriginUrl) {
+		const sessionNonce = crypto.randomUUID();
+		const isolatedUrl = new URL(crossOriginUrl, location.href);
+		isolatedUrl.searchParams.set("__slawa_session", sessionNonce);
 		// コアの appendChild やスタイル操作に耐えるための仮想iframe
 		this.#virtualIframe = document.createElement("div");
 		this.#virtualIframe.id = "layerSpecificUIframe_" + this.#layerID;
@@ -47,7 +51,14 @@ export class IframeAdapter4SLaWA {
 
 		// 内部に本物の S-LaWA用 iframe を生成
 		this.#realIframe = document.createElement("iframe");
-		this.#realIframe.src = crossOriginUrl;
+		// 未検証 controller を同一オリジンで開いても、親画面・Cookie・
+		// 他レイヤーへ直接アクセスできないよう opaque origin で実行する。
+		// allow-same-origin は意図的に付与しない。
+		this.#realIframe.setAttribute("sandbox", "allow-scripts");
+		this.#realIframe.setAttribute("referrerpolicy", "no-referrer");
+		// 対応ブラウザでは Cookie を含まない独立したネットワーク文脈にする。
+		this.#realIframe.setAttribute("credentialless", "");
+		this.#realIframe.src = isolatedUrl.href;
 		this.#realIframe.style.width = "100%";
 		this.#realIframe.style.height = "100%";
 		//		this.#realIframe.style.height = "calc(100% - 50px)";
@@ -60,14 +71,27 @@ export class IframeAdapter4SLaWA {
 			this.#svgMap,
 			this.#layerID,
 			this.#realIframe,
-			crossOriginUrl,
+			isolatedUrl.href,
+			sessionNonce,
 		);
 
 		// コアフレームワークに対してiframeに見せるためのモックをセットアップ
-		this.#setupMocks(crossOriginUrl);
+		this.#setupMocks(isolatedUrl.href);
 
 		// ラッパーの通信チャネル確立を開始
 		this.#sandboxWrapper.initLaWA();
+		let wasConnected = false;
+		this.#lifecycleObserver = new MutationObserver(() => {
+			if (this.#realIframe.isConnected) {
+				wasConnected = true;
+				return;
+			}
+			if (wasConnected) {
+				this.#sandboxWrapper.destroy();
+				this.#lifecycleObserver.disconnect();
+			}
+		});
+		this.#lifecycleObserver.observe(document.documentElement, { childList: true, subtree: true });
 
 		return this.#virtualIframe;
 	}

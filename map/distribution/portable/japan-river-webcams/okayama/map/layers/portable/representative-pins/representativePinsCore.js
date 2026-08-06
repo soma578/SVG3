@@ -1,9 +1,15 @@
 import { fetchWithRuntimeCache } from './runtimeCache.js';
 import { MAP_MESSAGES } from './mapMessages.js';
 import { displayStatusForObservation } from './observationFreshness.js';
+import { decodeDensityPointDocument } from './densityPointFormat.js';
 import { PIN_LAYER_PROFILES, resolvePinProfile } from './pinLayerProfiles.js';
 import { showPropertyModal } from './propertyModal.js';
-import { densityLimitForZoom, selectQtctFeatures, targetDepthForZoom } from './qtctFeatureEngine.js';
+import {
+  densityLimitForZoom,
+  selectQtctDensityCells,
+  selectQtctFeatures,
+  targetDepthForZoom,
+} from './qtctFeatureEngine.js';
 
 export const initRepresentativePinsLayer = ({
   mode = 'portable',
@@ -13,7 +19,7 @@ export const initRepresentativePinsLayer = ({
 } = {}) => {
   window.hiddenOnLayerLoad = () => {};
 
-  const VERSION = 'representative-pins-qtct-2026-07-20.2';
+  const VERSION = 'representative-pins-qtct-2026-08-05.7';
   const XLINK_NS = 'http://www.w3.org/1999/xlink';
   const DRAW_GROUP_ID = 'representative-pins-draw';
 
@@ -21,10 +27,17 @@ export const initRepresentativePinsLayer = ({
     dataUrl: '',
     summaryDataUrl: '',
     districtSvgUrlTemplate: '',
+    // 記録が属する県の詳細を、その1件のためだけに引くためのテンプレート。
+    // 全国detailを常時読ませずに、選んだ地点の詳細だけ補える。
+    detailByRegionUrlTemplate: '',
+    detailByRegion: new Map(),
     layerId: 'evacuation',
     detailTree: null,
     detailRecordIndex: null,
     summaryTree: null,
+    overlaySummaryTree: null,
+    overlayDetailTree: null,
+    overlayVersion: 0,
     // シャード状態は summary / detail の両方が持つ。detail も全国シャードに
     // なったので、県境をまたいでも表示範囲のぶんだけ取れる。
     shards: {
@@ -63,7 +76,18 @@ export const initRepresentativePinsLayer = ({
   const loadPromiseByTarget = { summary: null, detail: null };
   let lastRenderedSignature = '';
   let nativeRefreshTimer = null;
+  let viewportWatchTimer = null;
+  let observedViewportKey = '';
+  // 表示範囲の世代。パン/ズームのたびに進める。古い取得結果の再描画を止める。
+  let viewGeneration = 0;
   const LIVE_REVALIDATE_MS = 15_000;
+
+  const viewportKey = () => {
+    const view = window.svgMap?.getGeoViewBox?.();
+    if (!view) return '';
+    return [view.x, view.y, view.width, view.height]
+      .map((value) => Number(value).toFixed(6)).join(',');
+  };
 
   const scheduleNativePoiRefresh = () => {
     if (mode !== 'portable' || nativeRefreshTimer) return;
@@ -86,12 +110,36 @@ export const initRepresentativePinsLayer = ({
     }, 50);
   };
 
+  /**
+   * 描画したPOI集合が変わったことを伝える。
+   *
+   * 「ピンが1件以上あるときだけ」再構築してはいけない。
+   * SVGMap 側の当たり判定は refreshScreen() の再解析でしか作り直されないので、
+   * 0件になった/レイヤーを消した/summary と detail を切り替えた、という遷移で
+   * 再構築を飛ばすと、表示は消えているのにクリックだけ効く状態が残る。
+   */
+  const notePoiSetChanged = (key, featureCount) => {
+    if (lastRenderedSignature === key) return;
+    lastRenderedSignature = key;
+    if (mode === 'portal') {
+      bridge?.emitPoiLayerRendered?.({
+        layerId: state.layerId,
+        featureCount,
+        signature: key,
+        renderedAt: Date.now(),
+      });
+      return;
+    }
+    scheduleNativePoiRefresh();
+  };
+
   const parseHashParams = () => {
     const raw = String(window.svgImageProps?.hash || window.svgImageProps?.Path?.split('#')?.[1] || '');
     const params = new URLSearchParams(raw.replace(/^#/, ''));
     state.dataUrl = params.get('data') || state.dataUrl;
     state.summaryDataUrl = params.get('summary') || state.summaryDataUrl || state.dataUrl;
     state.districtSvgUrlTemplate = params.get('districtSvgUrlTemplate') || state.districtSvgUrlTemplate;
+    state.detailByRegionUrlTemplate = params.get('detailByRegion') || state.detailByRegionUrlTemplate;
     state.layerId = params.get('layer') || state.layerId;
     state.statusOverlayUrl = params.get('statusOverlay') || state.statusOverlayUrl;
     const profileParam = params.get('profile') || '';
@@ -122,7 +170,7 @@ export const initRepresentativePinsLayer = ({
     try {
       window.parent.postMessage(
         { type: MAP_MESSAGES.runtimeDataStatus, payload: entry },
-        window.location.origin,
+        window.location.origin === 'null' ? '*' : window.location.origin,
       );
     } catch (error) {
       console.warn('[representativePinsCore] dataStatus post failed', error);
@@ -303,6 +351,7 @@ export const initRepresentativePinsLayer = ({
   };
 
   const intersects = (bounds, view) =>
+    Boolean(bounds && view) &&
     bounds.maxLon >= view.x &&
     bounds.minLon <= view.x + view.width &&
     bounds.maxLat >= view.y &&
@@ -321,6 +370,30 @@ export const initRepresentativePinsLayer = ({
       stub: true,
     };
 
+  const densityCellsFromIndex = (index) => {
+    if (Array.isArray(index?.densityCells)) return index.densityCells;
+    const grid = index?.densityGrid;
+    const depth = Number(grid?.depth);
+    if (!Number.isInteger(depth) || !Array.isArray(grid?.cells) || !index?.bounds) return [];
+    const side = 2 ** depth;
+    const width = (index.bounds.maxLon - index.bounds.minLon) / side;
+    const height = (index.bounds.maxLat - index.bounds.minLat) / side;
+    return grid.cells.map(([key, count]) => {
+      const x = Number(key) % side;
+      const y = Math.floor(Number(key) / side);
+      return {
+        depth,
+        count,
+        bounds: {
+          minLon: index.bounds.minLon + x * width,
+          minLat: index.bounds.minLat + y * height,
+          maxLon: index.bounds.minLon + (x + 1) * width,
+          maxLat: index.bounds.minLat + (y + 1) * height,
+        },
+      };
+    });
+  };
+
   const rebuildShardTree = (target) => {
     const store = shardState(target);
     if (!store.index) return;
@@ -330,12 +403,47 @@ export const initRepresentativePinsLayer = ({
       bounds: store.index.bounds,
       count: store.index.total,
       representative: store.index.representative,
+      densityPoints: store.index._densityPoints || null,
+      densityCells: target === 'summary' ? densityCellsFromIndex(store.index) : [],
       children: shards.length > 0
         ? shards.map((shard) => shardNode(target, shard)).filter((node) => node.representative || !node.stub)
         : [...store.trees.values()],
     };
     if (target === 'summary') state.summaryTree = tree;
     else state.detailTree = tree;
+  };
+
+  const decodeDensityPoints = (document, bounds) => {
+    try {
+      return decodeDensityPointDocument(document, {
+        fallbackBounds: bounds,
+        decodeBase64: (base64) => {
+          const binary = window.atob(base64);
+          const bytes = new Uint8Array(binary.length);
+          for (let index = 0; index < binary.length; index += 1) bytes[index] = binary.charCodeAt(index);
+          return bytes;
+        },
+      });
+    } catch (error) {
+      console.warn('[representativePinsCore] density point decode failed', error);
+      return null;
+    }
+  };
+
+  const fetchDensityPoints = async (metadata, summaryUrl) => {
+    if (!metadata?.densityPointsUrl) return null;
+    const densityUrl = new URL(metadata.densityPointsUrl, new URL(summaryUrl, window.location.href)).href;
+    const { data: densityDocument } = await fetchWithRuntimeCache(
+      densityUrl,
+      `representative:${state.layerId}:density-points`,
+      {
+        label: profile().label,
+        emitDataStatus,
+        logLabel: 'representativePinsLayer',
+        requestCache: Date.now() < state.forceNetworkUntil ? 'no-cache' : 'default',
+      },
+    );
+    return decodeDensityPoints(densityDocument, densityDocument?.bounds || metadata.bounds);
   };
 
   const loadShard = async (target, shard) => {
@@ -346,6 +454,9 @@ export const initRepresentativePinsLayer = ({
     if (Date.now() - failedAt < 30_000) return;
     const baseUrl = target === 'summary' ? state.summaryDataUrl : state.dataUrl;
     const url = new URL(shard.url, new URL(baseUrl, window.location.href)).href;
+    // このシャードを要求した時点の表示範囲。応答が返るころには
+    // 利用者が別の場所へ動いているかもしれない。
+    const requestedAtGeneration = viewGeneration;
     const promise = (async () => {
       try {
         const { data, source, metrics } = await fetchWithRuntimeCache(
@@ -359,6 +470,9 @@ export const initRepresentativePinsLayer = ({
           },
         );
         if (data?.tree) {
+          if (target === 'summary' && data.densityPoints) {
+            data.tree.densityPoints = decodeDensityPoints(data.densityPoints, data.bounds || shard.bounds);
+          }
           store.trees.set(shard.id, data.tree);
           store.failures.delete(shard.id);
           rebuildShardTree(target);
@@ -376,6 +490,12 @@ export const initRepresentativePinsLayer = ({
         console.error('[representativePinsCore] shard load failed', { target, shardId: shard.id, url, error });
       } finally {
         store.loading.delete(shard.id);
+        // 表示範囲が動いた後に届いた応答で、今の画面を描き直さない。
+        // 取り込み自体は済ませてある（後で同じ場所へ戻れば再取得しない）が、
+        // 画面外のシャードのために全体を再描画する意味はない。
+        const stillRelevant = requestedAtGeneration === viewGeneration
+          || intersects(shard.bounds, window.svgMap?.getGeoViewBox?.());
+        if (!stillRelevant) return;
         // 自分で描き直す。refreshScreen() だけに任せると、視野を一度に大きく
         // 変えた直後（検索で他県の市へ飛ぶ等）に再描画が走らず、シャードは
         // 届いているのにクラスタ表示のまま止まる。
@@ -413,6 +533,102 @@ export const initRepresentativePinsLayer = ({
     group.setAttribute('id', DRAW_GROUP_ID);
     root.appendChild(group);
     return { group };
+  };
+
+  const drawDensityCells = (group, cells, layerProfile) => {
+    if (!group || cells.length === 0) return;
+    const view = window.svgMap?.getGeoViewBox?.();
+    if (!view || !Number.isFinite(Number(view.width)) || !Number.isFinite(Number(view.height))) return;
+    // 本家 ClientSideQTCT と同じ、各QTCTタイル96pxの世界固定ラスタ。
+    // levelも本家同様に現在ズームのfloorを使うため、画面上では約3〜4px/画素になる。
+    const level = Math.max(0, Math.floor(currentZoom(view)));
+    const step = 360 / (2 ** level * 96);
+    const minGX = Math.floor((Number(view.x) + 180) / step);
+    const maxGX = Math.floor((Number(view.x) + Number(view.width) + 180) / step);
+    const minGY = Math.floor((Number(view.y) + 180) / step);
+    const maxGY = Math.floor((Number(view.y) + Number(view.height) + 180) / step);
+    const rasterWidth = maxGX - minGX + 1;
+    const rasterHeight = maxGY - minGY + 1;
+    if (rasterWidth <= 0 || rasterHeight <= 0 || rasterWidth * rasterHeight > 2_000_000) return;
+    const canvas = document.createElement('canvas');
+    canvas.width = rasterWidth;
+    canvas.height = rasterHeight;
+    const context = canvas.getContext('2d');
+    if (!context) return;
+    const imageData = context.createImageData(rasterWidth, rasterHeight);
+    const color = layerProfile.densityColor || layerProfile.color || '#2563eb';
+    const hex = color.replace(/^#/, '');
+    const rgb = hex.length === 6
+      ? [0, 2, 4].map((offset) => Number.parseInt(hex.slice(offset, offset + 2), 16))
+      : [37, 99, 235];
+    let occupied = 0;
+    const setPixel = (gx, gy) => {
+      if (gx < minGX || gx > maxGX || gy < minGY || gy > maxGY) return false;
+      const px = gx - minGX;
+      const py = maxGY - gy;
+      const base = (py * rasterWidth + px) * 4;
+      if (imageData.data[base + 3] === 0) occupied += 1;
+      imageData.data[base] = rgb[0];
+      imageData.data[base + 1] = rgb[1];
+      imageData.data[base + 2] = rgb[2];
+      imageData.data[base + 3] = 190;
+      return true;
+    };
+    for (const cell of cells) {
+      const fromGX = Math.max(minGX, Math.floor((Number(cell.bounds.minLon) + 180) / step));
+      const toGX = Math.min(maxGX, Math.floor((Number(cell.bounds.maxLon) + 180) / step));
+      const fromGY = Math.max(minGY, Math.floor((Number(cell.bounds.minLat) + 180) / step));
+      const toGY = Math.min(maxGY, Math.floor((Number(cell.bounds.maxLat) + 180) / step));
+      if (toGX < fromGX || toGY < fromGY) continue;
+      const centerGX = (fromGX + toGX) / 2;
+      const centerGY = (fromGY + toGY) / 2;
+      const candidates = [];
+      for (let gy = fromGY; gy <= toGY; gy += 1) {
+        for (let gx = fromGX; gx <= toGX; gx += 1) {
+          // 低ズームから個別ピン直前まで同じ規則で中心から連続的に埋める。
+          // ズームするとQTCT区画そのものが細分化されるため、9.5で表示密度が
+          // 突然落ちることなく、自然に個別地点へ近づいていく。
+          candidates.push({
+            gx,
+            gy,
+            ring: Math.max(Math.abs(gx - centerGX), Math.abs(gy - centerGY)),
+            distance: Math.abs(gx - centerGX) + Math.abs(gy - centerGY),
+          });
+        }
+      }
+      candidates.sort((a, b) => a.ring - b.ring
+        || a.distance - b.distance || a.gy - b.gy || a.gx - b.gx);
+      const fillCount = Math.min(
+        candidates.length,
+        Math.max(1, Math.round(Number(cell.count) || 1)),
+      );
+      for (let index = 0; index < fillCount; index += 1) {
+        setPixel(candidates[index].gx, candidates[index].gy);
+      }
+    }
+    if (occupied === 0) return;
+    context.putImageData(imageData, 0, 0);
+    const image = window.svgImage.createElement('image');
+    const href = canvas.toDataURL('image/png');
+    image.setAttribute('href', href);
+    image.setAttributeNS(XLINK_NS, 'xlink:href', href);
+    image.setAttribute('x', String((minGX * step - 180) * 100));
+    image.setAttribute('y', String(-(maxGY + 1) * step * 100 + 18000));
+    image.setAttribute('width', String(rasterWidth * step * 100));
+    image.setAttribute('height', String(rasterHeight * step * 100));
+    image.setAttribute('preserveAspectRatio', 'none');
+    image.setAttribute('style', 'image-rendering:pixelated');
+    image.setAttribute('pointer-events', 'none');
+    image.setAttribute('data-density-layer', state.layerId);
+    image.setAttribute('data-density-count', String(occupied));
+    image.setAttribute('data-density-cell-count', String(cells.length));
+    image.setAttribute('data-density-source-count', String(cells.reduce((sum, cell) => sum + Number(cell.count || 0), 0)));
+    image.setAttribute('data-density-shape', 'pixel-raster');
+    image.setAttribute('data-density-mode', 'continuous-coverage');
+    image.setAttribute('data-density-color', color);
+    const canvasWidth = Number(window.svgMap?.getCanvasSize?.()?.width);
+    image.setAttribute('data-density-pixel-css', String(canvasWidth > 0 ? canvasWidth * step / Number(view.width) : 0));
+    group.appendChild(image);
   };
 
   const featurePayload = (item) => ({
@@ -507,9 +723,9 @@ export const initRepresentativePinsLayer = ({
   const currentRenderContext = () => {
     const geoViewBox = window.svgMap?.getGeoViewBox?.();
     if (!geoViewBox || !Number.isFinite(Number(geoViewBox.width))) return null;
-    const zoom = Math.floor(currentZoom(geoViewBox));
+    const zoom = currentZoom(geoViewBox);
     const targetDepth = targetDepthForZoom(zoom);
-    const showIndividuals = zoom >= Number(profile().individualZoom || 12);
+    const showIndividuals = zoom >= Number(profile().individualZoom || 13);
     const useDetail = showIndividuals;
     return {
       geoViewBox,
@@ -532,13 +748,17 @@ export const initRepresentativePinsLayer = ({
     if (!state.visible) {
       clearGroup();
       state.signature = '';
+      // 消した事実を伝えないと、SVGMap 側に当たり判定だけが残る。
+      notePoiSetChanged('hidden', 0);
       return;
     }
     let context = currentRenderContext();
     if (!context) return;
     // summary / detail のどちらでも、表示範囲に交差するシャードを揃える。
     const activeTarget = context.useDetail ? 'detail' : 'summary';
-    if (shardState(activeTarget).index) {
+    const globalDensityReady = !context.showIndividuals
+      && Boolean(shardState(activeTarget).index?._densityPoints?.length);
+    if (shardState(activeTarget).index && !globalDensityReady) {
       ensureShardsForView(activeTarget, context.geoViewBox, context.targetDepth);
       context = currentRenderContext();
     }
@@ -569,6 +789,7 @@ export const initRepresentativePinsLayer = ({
       // どちらも無いときだけ消す。
       if (shardState(activeTarget).index) {
         clearGroup();
+        notePoiSetChanged(`empty:${activeTarget}`, 0);
         return;
       }
     }
@@ -600,6 +821,7 @@ export const initRepresentativePinsLayer = ({
       targetDepth,
       densityLimit,
       state.statusOverlayVersion,
+      state.overlayVersion,
       state.codesLoaded.size,
       state.shards.summary.trees.size,
       state.shards.detail.trees.size,
@@ -613,16 +835,32 @@ export const initRepresentativePinsLayer = ({
     if (state.signature === signature) return;
     state.signature = signature;
 
-    const items = selectQtctFeatures({
-      tree: renderTree,
-      view: geoViewBox,
-      // 代替表示中は個別ピンを名乗らせない（summary には個票が無い）。
-      zoom: renderIsFallback && useDetail ? 0 : context.zoom,
-      individualZoom: profile().individualZoom,
-    });
+    const showDensity = !showIndividuals && context.zoom < Number(profile().densityMaxZoom || 13);
+    const overlayTree = useDetail ? state.overlayDetailTree : state.overlaySummaryTree;
+    const items = showDensity ? [] : [
+      ...selectQtctFeatures({
+        tree: renderTree,
+        view: geoViewBox,
+        // 代替表示中は個別ピンを名乗らせない（summary には個票が無い）。
+        zoom: renderIsFallback && useDetail ? 0 : context.zoom,
+        individualZoom: profile().individualZoom,
+      }),
+      ...(overlayTree ? selectQtctFeatures({
+        tree: overlayTree, view: geoViewBox, zoom: context.zoom,
+        individualZoom: profile().individualZoom,
+      }) : []),
+    ];
     const groups = clearGroup();
     if (!groups) return;
     const { group } = groups;
+    if (showDensity) {
+      drawDensityCells(group, [
+        ...selectQtctDensityCells({ tree: renderTree, view: geoViewBox, zoom: context.zoom }),
+        ...(overlayTree ? selectQtctDensityCells({
+          tree: overlayTree, view: geoViewBox, zoom: context.zoom,
+        }) : []),
+      ], profile());
+    }
     for (const rawItem of items) {
       const use = window.svgImage.createElement('use');
       const layerId = rawItem.layerId || state.layerId;
@@ -655,7 +893,9 @@ export const initRepresentativePinsLayer = ({
       const payload = JSON.stringify(featurePayload(item));
       use.setAttribute('data-feature', payload);
       use.setAttribute('content', contentFor(featurePayload(item)));
-      use.setAttribute('xlink:title', item.title);
+      use.setAttribute('xlink:title', item.representative && Number(item.count) > 1
+        ? `${profile().label}: ${item.count}件（代表）`
+        : item.title);
       use.setAttribute('pointer-events', 'all');
       if (use.style) use.style.pointerEvents = 'all';
       group.appendChild(use);
@@ -673,19 +913,7 @@ export const initRepresentativePinsLayer = ({
       featureCount: items.length,
       drawMs: Math.round((performance.now() - drawStartedAt) * 10) / 10,
     });
-    if (items.length > 0 && lastRenderedSignature !== signature) {
-      lastRenderedSignature = signature;
-      if (mode === 'portal') {
-        bridge?.emitPoiLayerRendered?.({
-          layerId: state.layerId,
-          featureCount: items.length,
-          signature,
-          renderedAt: Date.now(),
-        });
-      } else {
-        scheduleNativePoiRefresh();
-      }
-    }
+    notePoiSetChanged(`${signature}#${items.length}`, items.length);
   };
 
   const ensureIconDefs = () => {
@@ -707,7 +935,47 @@ export const initRepresentativePinsLayer = ({
           const g = svg.createElement('g');
           g.setAttribute('id', id);
           const half = variant.size / 2;
-          if (href) {
+          if (variant.key === 'summary') {
+            const color = p.color || p.statusColors?.[status] || '#2563eb';
+            let marker;
+            if (p.markerShape === 'square') {
+              marker = svg.createElement('rect');
+              marker.setAttribute('x', String(-half + 1));
+              marker.setAttribute('y', String(-half + 1));
+              marker.setAttribute('width', String(variant.size - 2));
+              marker.setAttribute('height', String(variant.size - 2));
+              marker.setAttribute('rx', '3');
+            } else if (p.markerShape === 'diamond') {
+              marker = svg.createElement('path');
+              marker.setAttribute('d', `M0 ${-half + 1} L${half - 1} 0 L0 ${half - 1} L${-half + 1} 0 Z`);
+            } else if (p.markerShape === 'triangle') {
+              marker = svg.createElement('path');
+              marker.setAttribute('d', `M0 ${-half + 1} L${half - 1} ${half - 1} L${-half + 1} ${half - 1} Z`);
+            } else if (p.markerShape === 'hexagon') {
+              marker = svg.createElement('path');
+              marker.setAttribute('d', `M${-half / 2} ${-half + 1} L${half / 2} ${-half + 1} L${half - 1} 0 L${half / 2} ${half - 1} L${-half / 2} ${half - 1} L${-half + 1} 0 Z`);
+            } else {
+              marker = svg.createElement('circle');
+              marker.setAttribute('cx', '0');
+              marker.setAttribute('cy', '0');
+              marker.setAttribute('r', String(half - 1));
+            }
+            marker.setAttribute('fill', color);
+            marker.setAttribute('stroke', '#ffffff');
+            marker.setAttribute('stroke-width', '3');
+            marker.setAttribute('opacity', String(variant.opacity));
+            const text = svg.createElement('text');
+            text.setAttribute('x', '0');
+            text.setAttribute('y', '5');
+            text.setAttribute('text-anchor', 'middle');
+            text.setAttribute('font-size', '12');
+            text.setAttribute('font-weight', '900');
+            text.setAttribute('font-family', 'sans-serif');
+            text.setAttribute('fill', '#ffffff');
+            text.setAttribute('pointer-events', 'none');
+            text.textContent = String(p.symbol || p.label || layerId).slice(0, 1);
+            g.append(marker, text);
+          } else if (href) {
             const img = svg.createElement('image');
             img.setAttribute('href', href);
             img.setAttributeNS(XLINK_NS, 'xlink:href', href);
@@ -773,9 +1041,25 @@ export const initRepresentativePinsLayer = ({
           store.index = data;
           store.trees = new Map();
           store.failures = new Map();
+          if (isSummary && data.densityPointsUrl) {
+            try {
+              store.index._densityPoints = await fetchDensityPoints(data, url);
+            } catch (error) {
+              // 古い成果物との互換性を維持する。取得できない場合は従来の
+              // densityGrid / summary shardへ縮退し、レイヤー自体は消さない。
+              console.warn('[representativePinsCore] global density points unavailable', error);
+            }
+          }
           rebuildShardTree(target);
         } else if (data?.tree) {
           shardState(target).index = null;
+          if (isSummary && data.densityPointsUrl) {
+            try {
+              data.tree.densityPoints = await fetchDensityPoints(data, url);
+            } catch (error) {
+              console.warn('[representativePinsCore] global density points unavailable', error);
+            }
+          }
           state[treeKey] = data.tree;
           if (!isSummary) state.detailRecordIndex = null;
         } else {
@@ -889,13 +1173,54 @@ export const initRepresentativePinsLayer = ({
     return state.detailRecordIndex.get(id) || null;
   };
 
+  /**
+   * その記録が属する県の詳細から1件を引く。
+   *
+   * 全国 summary は容量のために pageUrl や住所を落としている。表示中の県の
+   * 詳細しか持っていないと、隣県のカメラを選んだときに公式ページの URL が
+   * 埋まらないまま詳細を開くことになる。県単位の詳細を必要になった時だけ
+   * 取りに行く（全国detailを常時読むより軽い）。
+   */
+  const recordFromRegionDetail = async (feature) => {
+    const template = state.detailByRegionUrlTemplate;
+    const regionId = String(feature?.regionId || '');
+    if (!template || !regionId || !template.includes('{recordRegionId}')) return null;
+    if (!state.detailByRegion.has(regionId)) {
+      const url = template.replaceAll('{recordRegionId}', regionId);
+      const promise = (async () => {
+        try {
+          const { data } = await fetchWithRuntimeCache(url, `representative:${state.layerId}:detail:${regionId}`, {
+            label: profile().label,
+            emitDataStatus,
+            logLabel: 'representativePinsLayer',
+          });
+          const index = new Map();
+          const pending = [data?.tree];
+          while (pending.length > 0) {
+            const node = pending.pop();
+            for (const record of node?.records || []) {
+              if (record?.id) index.set(record.id, record);
+            }
+            for (const child of node?.children || []) pending.push(child);
+          }
+          return index;
+        } catch (error) {
+          console.warn('[representativePinsCore] region detail unavailable', { regionId, url, error });
+          return new Map();
+        }
+      })();
+      state.detailByRegion.set(regionId, promise);
+    }
+    return (await state.detailByRegion.get(regionId)).get(feature.id) || null;
+  };
+
   const enrichRepresentativeFeature = async (feature) => {
     if (!feature || feature.address || feature.summary || feature.description ||
         feature.cameraId || feature.pageUrl || Object.keys(feature.properties || {}).length > 0) {
       return feature;
     }
     await loadTree('detail');
-    const record = detailRecordForId(feature.id);
+    const record = detailRecordForId(feature.id) || await recordFromRegionDetail(feature);
     if (!record) return feature;
     return {
       ...feature,
@@ -922,7 +1247,13 @@ export const initRepresentativePinsLayer = ({
   };
 
   window.preRenderFunction = draw;
-  window.addEventListener('zoomPanMap', draw);
+  window.addEventListener('zoomPanMap', () => {
+    // 表示範囲が変わった。ここより前に投げた取得の応答は、もう今の画面の
+    // ものではない可能性がある。
+    viewGeneration += 1;
+    observedViewportKey = viewportKey();
+    draw();
+  });
   bridge?.installMessageHandler?.({
     getLayerId: () => state.layerId,
     getNativeLayerId: () => String(window.layerID || ''),
@@ -1017,6 +1348,19 @@ export const initRepresentativePinsLayer = ({
       }
     };
     drawWhenViewReady();
+    // isolated controller では、ホストが setGeoViewPort した際の zoomPanMap / preRender
+    // が届かないランタイムがある。表示範囲だけを軽量に監視し、変化時に限って
+    // 描画することで、全国用ピクセルが市区町村表示へ残る状態を防ぐ。
+    observedViewportKey = viewportKey();
+    viewportWatchTimer = window.setInterval(() => {
+      if (document.visibilityState === 'hidden') return;
+      const nextKey = viewportKey();
+      if (!nextKey || nextKey === observedViewportKey) return;
+      observedViewportKey = nextKey;
+      viewGeneration += 1;
+      state.signature = '';
+      draw();
+    }, 150);
     const interval = Number(refreshIntervalMs);
     if (Number.isFinite(interval) && interval >= 60_000) {
       dataRefreshTimer = window.setInterval(() => {
@@ -1027,10 +1371,32 @@ export const initRepresentativePinsLayer = ({
   };
   window.addEventListener('pagehide', () => {
     if (dataRefreshTimer) window.clearInterval(dataRefreshTimer);
+    if (viewportWatchTimer) window.clearInterval(viewportWatchTimer);
     dataRefreshTimer = null;
+    viewportWatchTimer = null;
   }, { once: true });
   window.addEventListener('layerWebAppReady', start, { once: true });
   if (window.svgMap && window.svgImage) queueMicrotask(start);
+  return {
+    setOverlayDocuments({ summary = null, detail = null } = {}) {
+      state.overlaySummaryTree = summary?.tree || null;
+      state.overlayDetailTree = detail?.tree || null;
+      state.overlayVersion += 1;
+      state.signature = '';
+      lastRenderedSignature = '';
+      draw();
+      window.svgMap?.refreshScreen?.();
+    },
+    clearOverlay() {
+      state.overlaySummaryTree = null;
+      state.overlayDetailTree = null;
+      state.overlayVersion += 1;
+      state.signature = '';
+      lastRenderedSignature = '';
+      draw();
+      window.svgMap?.refreshScreen?.();
+    },
+  };
 };
 
 export default initRepresentativePinsLayer;

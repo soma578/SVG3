@@ -5,7 +5,7 @@ const PROPERTY_STYLES = `
       --property-accent-soft: #edf4fb;
       color: #172033;
       font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", system-ui, sans-serif;
-      font-size: 16px;
+      font-size: 18px;
       line-height: 1.5;
     }
     .svg3-property-evacuation {
@@ -17,19 +17,19 @@ const PROPERTY_STYLES = `
       --property-accent-soft: #edf3ff;
     }
     .svg3-property-header {
-      padding: 17px 52px 16px 20px;
+      padding: 21px 58px 20px 24px;
       background: var(--property-accent);
       color: #ffffff;
     }
     .svg3-property-kind {
       margin: 0 0 6px;
       color: rgba(255, 255, 255, 0.76);
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 700;
     }
     .svg3-property-title {
       margin: 0;
-      font-size: 18px;
+      font-size: 22px;
       font-weight: 700;
       line-height: 1.4;
       letter-spacing: 0;
@@ -43,7 +43,7 @@ const PROPERTY_STYLES = `
       border-radius: 999px;
       background: rgba(255, 255, 255, 0.15);
       color: #ffffff !important;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 700;
     }
     .svg3-property-dot {
@@ -58,31 +58,31 @@ const PROPERTY_STYLES = `
       grid-template-columns: minmax(0, 1fr);
       align-content: start;
       margin: 0;
-      padding: 9px 20px 10px;
+      padding: 12px 24px 14px;
       background: #ffffff;
     }
     .svg3-property-row {
       min-width: 0;
-      padding: 9px 0;
+      padding: 11px 0;
       border-bottom: 1px solid #edf1f2;
     }
     .svg3-property-row dt {
       color: var(--property-accent);
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 700;
     }
     .svg3-property-row dd {
       margin: 2px 0 0;
       color: #253044;
-      font-size: 16px;
+      font-size: 18px;
       overflow-wrap: anywhere;
       white-space: pre-wrap;
     }
     .svg3-property-link {
       display: inline-flex;
       align-items: center;
-      min-height: 34px;
-      padding: 5px 10px;
+      min-height: 42px;
+      padding: 7px 13px;
       border-radius: 6px;
       background: var(--property-accent);
       color: #ffffff !important;
@@ -108,7 +108,7 @@ const PROPERTY_STYLES = `
       display: block;
       margin-top: 3px;
       color: #64748b;
-      font-size: 13px;
+      font-size: 15px;
     }
     .svg3-property-actions {
       display: grid;
@@ -122,13 +122,13 @@ const PROPERTY_STYLES = `
       align-items: center;
       justify-content: center;
       min-width: 0;
-      min-height: 36px;
-      padding: 5px 8px;
+      min-height: 44px;
+      padding: 7px 10px;
       border: 1px solid var(--property-accent);
       border-radius: 6px;
       box-sizing: border-box;
       font: inherit;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 700;
       cursor: pointer;
     }
@@ -174,7 +174,7 @@ const PROPERTY_STYLES = `
     .svg3-property-list h3 {
       margin: 0 0 5px;
       color: var(--property-accent);
-      font-size: 16px;
+      font-size: 18px;
     }
     .svg3-property-list ul {
       display: flex;
@@ -186,7 +186,7 @@ const PROPERTY_STYLES = `
     }
     .svg3-property-list li {
       min-width: 180px;
-      font-size: 16px;
+      font-size: 18px;
     }
     .svg3-property-list small {
       display: block;
@@ -194,13 +194,13 @@ const PROPERTY_STYLES = `
     }
     @media (max-width: 640px) {
       .svg3-property {
-        font-size: 16px;
+        font-size: 18px;
       }
       .svg3-property-header {
         padding: 15px 58px 13px 16px;
       }
       .svg3-property-title {
-        font-size: 18px;
+        font-size: 22px;
       }
       .svg3-property-body {
         padding: 7px 16px 8px;
@@ -235,10 +235,12 @@ const findModalCloseButton = (root) => {
   return null;
 };
 
-export const showPropertyModal = (html, { width = 270 } = {}) => {
+// 従来の270x400は地図上で読みづらかったため、デスクトップの基準寸法を1.5倍にする。
+// 狭い画面では従来どおりviewport幅に収める。
+export const showPropertyModal = (html, { width = 405 } = {}) => {
   if (!window.svgMap?.showModal) return null;
 
-  const info = window.svgMap.showModal(`${PROPERTY_STYLES}${html}`, width, 400);
+  const info = window.svgMap.showModal(`${PROPERTY_STYLES}${html}`, width, 600);
   if (!info) return null;
 
   const root = info.getRootNode?.();

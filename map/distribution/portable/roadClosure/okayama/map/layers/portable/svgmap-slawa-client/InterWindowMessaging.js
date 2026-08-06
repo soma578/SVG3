@@ -73,6 +73,9 @@ class InterWindowMessaging {
 	#functionSet = {};
 	#targetOrigin = null;
 	#pendingResponses = new Map();
+	#sessionNonce = null;
+	#messageListener = null;
+	#destroyed = false;
 
 	/** getReady() で待機中の resolve 関数リスト */
 	#readyResolvers = [];
@@ -114,6 +117,7 @@ class InterWindowMessaging {
 			options.readyTimeoutMs ?? InterWindowMessaging.#DEFAULT_READY_TIMEOUT_MS;
 		this.#callTimeoutMs =
 			options.callTimeoutMs ?? InterWindowMessaging.#DEFAULT_CALL_TIMEOUT_MS;
+		this.#sessionNonce = options.sessionNonce || null;
 
 		// Getter関数のサポート
 		if (typeof targetWindow === "function") {
@@ -202,6 +206,7 @@ class InterWindowMessaging {
 	 * @returns {Promise<*>}
 	 */
 	async callRemoteFunc(command, parameter = [], transferables = [], timeoutMs) {
+		if (this.#destroyed) throw new Error("InterWindowMessaging has been destroyed");
 		await this.getReady();
 
 		const id = crypto.randomUUID();
@@ -253,7 +258,8 @@ class InterWindowMessaging {
 	// -----------------------------------------------------------------------
 
 	#setMessageListener() {
-		window.addEventListener("message", async (event) => {
+		this.#messageListener = async (event) => {
+			if (this.#destroyed) return;
 			// 自分が投げたメッセージが跳ね返ってきたものは無視
 			if (event.source === window) return;
 
@@ -288,6 +294,7 @@ class InterWindowMessaging {
 				console.warn("Invalid message data format:", event.data);
 				return;
 			}
+			if (this.#sessionNonce && msg.sessionNonce !== this.#sessionNonce) return;
 
 			// 親ウィンドウ（ネゴシエーションモード接続を受ける側）の処理
 			if (!this.#isNegotiating && msg.negotiationKey) {
@@ -389,7 +396,8 @@ class InterWindowMessaging {
 					});
 				}
 			}
-		});
+		};
+		window.addEventListener("message", this.#messageListener);
 	}
 
 	#completeConnection() {
@@ -417,6 +425,7 @@ class InterWindowMessaging {
 	}
 
 	#postMessage(messageObject, transferables = []) {
+		if (this.#destroyed) return;
 		const targetWin = this.#getTargetWindow();
 		if (!targetWin) {
 			// console.warn("Target window not available");
@@ -427,12 +436,26 @@ class InterWindowMessaging {
 		const postOrigin =
 			this.#isNegotiating && !this.#targetOrigin ? "*" : this.#targetOrigin;
 
+		const message = this.#sessionNonce
+			? { ...messageObject, sessionNonce: this.#sessionNonce }
+			: messageObject;
 		if (transferables.length > 0) {
-			targetWin.postMessage(messageObject, postOrigin, transferables);
+			targetWin.postMessage(message, postOrigin, transferables);
 		} else {
 			// 旧版との互換性を高めるため、基本はJSON文字列で送信
-			targetWin.postMessage(JSON.stringify(messageObject), postOrigin);
+			targetWin.postMessage(JSON.stringify(message), postOrigin);
 		}
+	}
+
+	destroy() {
+		if (this.#destroyed) return;
+		this.#destroyed = true;
+		if (this.#messageListener) window.removeEventListener("message", this.#messageListener);
+		for (const pending of this.#pendingResponses.values()) {
+			pending.reject(new Error("InterWindowMessaging was destroyed"));
+		}
+		this.#pendingResponses.clear();
+		this.#readyResolvers = [];
 	}
 
 	#submitReady() {

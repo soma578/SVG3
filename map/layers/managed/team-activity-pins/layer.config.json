@@ -19,9 +19,6 @@
     "kind": "poi",
     "note": "チーム活動の地点と地区境界",
     "toggleKey": "teamActivity",
-    "controllerUi": {
-      "label": "CSV追加"
-    },
     "manage": {
       "href": "/map/publishers/team-activity-csv/admin.html",
       "label": "CSV管理"

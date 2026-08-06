@@ -2,6 +2,7 @@ export const JAPAN_BOUNDS = { minLon: 122.434, minLat: 23.546, maxLon: 154.487, 
 export const MAX_DEPTH = 12
 export const LEAF_SIZE = 2
 export const SUMMARY_PRUNE_COUNT = 8
+export const DENSITY_CELL_DEPTH = 7
 
 const centroidRepresentative = (records) => {
   let lat = 0
@@ -130,6 +131,58 @@ const roundFloor4 = (value) => Math.floor(value * 1e4) / 1e4
 const roundCeil4 = (value) => Math.ceil(value * 1e4) / 1e4
 const round5 = (value) => Math.round(value * 1e5) / 1e5
 
+/**
+ * 低ズーム表示用の固定QTCTセルを作る。
+ *
+ * シャード境界は転送量の都合で決まり、人口密度とは無関係なので、そのまま塗ると
+ * カメラのような疎な層で日本の数分の一を覆う巨大矩形になる。表示専用セルは
+ * データ件数に関係なく同じ深さで集計し、インデックスだけで小さな密度分布を描ける
+ * ようにする。
+ */
+export const makeQtctDensityGrid = (records, {
+  bounds = JAPAN_BOUNDS,
+  depth = DENSITY_CELL_DEPTH,
+} = {}) => {
+  if (!Array.isArray(records) || records.length === 0) return { depth, cells: [] }
+  const side = 2 ** depth
+  const width = (bounds.maxLon - bounds.minLon) / side
+  const height = (bounds.maxLat - bounds.minLat) / side
+  const counts = new Map()
+  for (const record of records) {
+    const lon = Number(record.lon)
+    const lat = Number(record.lat)
+    if (!Number.isFinite(lon) || !Number.isFinite(lat)) continue
+    if (lon < bounds.minLon || lon > bounds.maxLon || lat < bounds.minLat || lat > bounds.maxLat) continue
+    const x = Math.min(side - 1, Math.max(0, Math.floor((lon - bounds.minLon) / width)))
+    const y = Math.min(side - 1, Math.max(0, Math.floor((lat - bounds.minLat) / height)))
+    const key = y * side + x
+    counts.set(key, (counts.get(key) || 0) + 1)
+  }
+  return { depth, cells: [...counts.entries()].sort(([a], [b]) => a - b) }
+}
+
+export const makeQtctDensityCells = (records, options = {}) => {
+  const bounds = options.bounds || JAPAN_BOUNDS
+  const grid = makeQtctDensityGrid(records, { ...options, bounds })
+  const side = 2 ** grid.depth
+  const width = (bounds.maxLon - bounds.minLon) / side
+  const height = (bounds.maxLat - bounds.minLat) / side
+  return grid.cells.map(([key, count]) => {
+    const x = key % side
+    const y = Math.floor(key / side)
+    return {
+      depth: grid.depth,
+      count,
+      bounds: {
+        minLon: roundFloor4(bounds.minLon + x * width),
+        minLat: roundFloor4(bounds.minLat + y * height),
+        maxLon: roundCeil4(bounds.minLon + (x + 1) * width),
+        maxLat: roundCeil4(bounds.minLat + (y + 1) * height),
+      },
+    }
+  })
+}
+
 export const slimSummaryNode = (node) => {
   if (!node) return null
   const rep = node.representative
@@ -172,6 +225,12 @@ export const makeQtctDocument = ({
 }) => {
   resetQtctNodeIds()
   const tree = records.length > 0 ? buildQtctNode(records, bounds, rootDepth) : null
+  const outputTree = summary ? slimSummaryNode(tree) : tree
+  // シャード化しない少数レイヤーも、全国境界そのものを密度図形として描かないよう
+  // 固定セルを持つ。CSV publisher を含む全QTCT生成経路へ同じ契約を適用する。
+  if (summary && regionId === 'all' && outputTree) {
+    outputTree.densityCells = makeQtctDensityCells(records, { bounds })
+  }
   return {
     schemaVersion: 1,
     layerId,
@@ -181,6 +240,6 @@ export const makeQtctDocument = ({
     total: records.length,
     maxDepth: MAX_DEPTH,
     leafSize: LEAF_SIZE,
-    tree: summary ? slimSummaryNode(tree) : tree,
+    tree: outputTree,
   }
 }
