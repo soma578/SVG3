@@ -20,6 +20,26 @@ const enableCamera = async (page) => {
   await row.locator('label.switch').click()
 }
 
+const setGeoViewPort = async (frame, lat, lon, latSpan, lonSpan) => {
+  let stableSince = 0
+  await expect.poll(async () => {
+    const view = await frame.evaluate(async ({ lat, lon, latSpan, lonSpan }) => {
+      const current = window.svgMap.getGeoViewBox?.()
+      if ((Number(current?.width) || 0) < lonSpan * 0.95) {
+        window.svgMap.setGeoViewPort(lat, lon, latSpan, lonSpan, false)
+        await window.svgMap.refreshScreen?.()
+      }
+      return window.svgMap.getGeoViewBox?.()
+    }, { lat, lon, latSpan, lonSpan })
+    if ((Number(view?.width) || 0) < lonSpan * 0.95) {
+      stableSince = 0
+      return 0
+    }
+    if (!stableSince) stableSince = Date.now()
+    return Date.now() - stableSince
+  }).toBeGreaterThanOrEqual(1_000)
+}
+
 const layerStats = (frame, id) => frame.evaluate((layerId) => {
   const images = window.svgMap.getSvgImages()
   const layer = images.root.querySelector(`[id="${layerId}"]`)
@@ -58,13 +78,12 @@ const layerStats = (frame, id) => frame.evaluate((layerId) => {
   }
 }, id)
 
-test('初期市区町村表示では細分化したピクセルを使う', async ({ page }) => {
+test('初期市区町村表示では詳細ピンを使う', async ({ page }) => {
   await page.goto(MAP_URL)
   await expect(page.locator('#loading')).toBeHidden()
   const frame = await mapFrame(page)
-  await expect.poll(async () => (await layerStats(frame, 'layer-evacuation'))?.densityCount || 0).toBeGreaterThan(0)
-  await expect.poll(async () => (await layerStats(frame, 'layer-evacuation'))?.densityPixelCss || 0).toBeGreaterThan(2)
-  expect((await layerStats(frame, 'layer-evacuation')).densityPixelCss).toBeLessThan(5)
+  await expect.poll(async () => (await layerStats(frame, 'layer-evacuation'))?.densityCount ?? -1).toBe(0)
+  await expect.poll(async () => (await layerStats(frame, 'layer-evacuation'))?.individuals || 0, { timeout: 60_000 }).toBeGreaterThan(0)
   const diagnostic = await frame.evaluate(() => {
     const view = window.svgMap.getGeoViewBox?.()
     const canvasWidth = Number(window.svgMap.getCanvasSize?.()?.width)
@@ -81,10 +100,10 @@ test('初期市区町村表示では細分化したピクセルを使う', async
       individuals: document_?.querySelectorAll('use[data-kind="poi"]').length || 0,
     }
   })
-  expect(diagnostic.zoom).toBeGreaterThan(9.5)
-  expect(diagnostic.density).toBeGreaterThan(0)
+  expect(diagnostic.zoom).toBeGreaterThanOrEqual(11)
+  expect(diagnostic.density).toBe(0)
   expect(diagnostic.summaries).toBe(0)
-  expect((await layerStats(frame, 'layer-evacuation')).densityMode).toBe('continuous-coverage')
+  expect(diagnostic.individuals).toBeGreaterThan(0)
 })
 
 test('低ズームの複数QTCTレイヤーを本家準拠のピクセルラスタと色で区別する', async ({ page }) => {
@@ -167,17 +186,17 @@ test('低・中・高ズームのLOD切替で表示が途切れない', async ({
   await expect.poll(async () => (await layerStats(frame, 'layer-evacuation'))?.densityOccupied || 0).toBeGreaterThan(0)
   expect((await layerStats(frame, 'layer-evacuation')).densityMode).toBe('continuous-coverage')
 
-  // 個別ピン直前のズーム帯も軽量ラスタを維持する。以前はここで詳細QTCTと
-  // 多数のDOMピンへ切り替わっていた。
+  // zoom 11の直前までは軽量ラスタを維持する。
   await frame.evaluate(async () => {
-    window.svgMap.setGeoViewPort(34.60, 133.85, 0.25, 0.35, false)
+    window.svgMap.setGeoViewPort(34.1, 133.2, 0.75, 1.0, false)
     await window.svgMap.refreshScreen?.()
   })
   await expect.poll(async () => (await layerStats(frame, 'layer-evacuation'))?.densityOccupied || 0).toBeGreaterThan(0)
   expect((await layerStats(frame, 'layer-evacuation')).individuals).toBe(0)
 
+  // 2段階早めたzoom 11を越えると詳細QTCTと個別ピンへ切り替わる。
   await frame.evaluate(async () => {
-    window.svgMap.setGeoViewPort(34.60, 133.85, 0.10, 0.14, false)
+    window.svgMap.setGeoViewPort(34.35, 133.45, 0.64, 0.85, false)
     await window.svgMap.refreshScreen?.()
   })
   await expect.poll(async () => (await layerStats(frame, 'layer-evacuation'))?.densityCount ?? -1).toBe(0)
@@ -188,16 +207,17 @@ test('低・中・高ズームのLOD切替で表示が途切れない', async ({
 test('共通csv-qtctレイヤーもdensity points形式で描画できる', async ({ page }) => {
   await page.goto(MAP_URL)
   await expect(page.locator('#loading')).toBeHidden()
-  await page.locator('#layer-button').click()
-  const activity = page.locator('#layer-list .layer-row').filter({ hasText: 'チーム活動' }).first()
-  await activity.locator('label.switch').click()
   const frame = await mapFrame(page)
-  await frame.evaluate(async () => {
-    window.svgMap.setGeoViewPort(31, 130, 8, 10, false)
-    await window.svgMap.refreshScreen?.()
-  })
+  await setGeoViewPort(frame, 31, 130, 8, 10)
+  await page.locator('#layer-button').click()
+  const activity = page.locator('#layer-list .layer-row[data-layer="layer-team-activity-pins"]')
+  await activity.locator('label.switch').click()
+  await expect(activity.locator('input[type="checkbox"]')).toBeChecked()
+  // controllerは現在の縮尺で初期化される。低ズームを先に確定することで、
+  // 有効化直後から詳細ピンではなくdensity表示を選ぶことも固定する。
   await expect.poll(async () =>
-    (await layerStats(frame, 'layer-team-activity-pins'))?.densityOccupied || 0).toBeGreaterThan(0)
+    (await layerStats(frame, 'layer-team-activity-pins'))?.densityOccupied || 0,
+  { timeout: 60_000 }).toBeGreaterThan(0)
   const activityStats = await layerStats(frame, 'layer-team-activity-pins')
   expect(activityStats.densityMode).toBe('continuous-coverage')
   expect(activityStats.densityRasterHref).toMatch(/^data:image\/png;base64,/)

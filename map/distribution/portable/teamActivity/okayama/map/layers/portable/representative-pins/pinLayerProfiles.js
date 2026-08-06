@@ -19,7 +19,7 @@
  *   placement            'point' = lat/lon をそのまま使う
  *                        'districtCentroid' = municipalityCode の地区ポリゴン重心に置き直す
  *   individualKind       featurePayload の kind (非代表ピン)
- *   individualZoom       個別ピン表示へ切り替えるズーム。未指定なら 13
+ *   individualZoom       個別ピン表示へ切り替えるズーム。未指定なら 11
  *   densityColor         低・中ズームの共通 density-points ラスタ色
  *   densityMaxZoom       ラスタ表示を終えるズーム。通常は individualZoom と揃える
  *
@@ -35,8 +35,8 @@ export const PIN_LAYER_PROFILES = {
     densityColor: '#2563eb',
     markerShape: 'circle',
     densityDash: '',
-    densityMaxZoom: 13,
-    individualZoom: 13,
+    densityMaxZoom: 11,
+    individualZoom: 11,
     statusAliases: {
       normal: ['normal', 'active', 'available', 'open', '平常'],
       unknown: ['unknown', '不明', '欠測'],
@@ -57,8 +57,8 @@ export const PIN_LAYER_PROFILES = {
     densityColor: '#ff6b00',
     markerShape: 'circle',
     densityDash: '',
-    densityMaxZoom: 13,
-    individualZoom: 13,
+    densityMaxZoom: 11,
+    individualZoom: 11,
     statusAliases: {
       open: ['open', 'opened', 'active', 'available', '利用可', '開設中'],
       limited: ['limited', 'crowded', 'near_full', '要確認'],
@@ -86,8 +86,8 @@ export const PIN_LAYER_PROFILES = {
     // 取得失敗時の縮退表示もひし形には戻さない。
     markerShape: 'circle',
     densityDash: '2 3',
-    densityMaxZoom: 13,
-    individualZoom: 13,
+    densityMaxZoom: 11,
+    individualZoom: 11,
     statusAliases: {
       active: ['open', 'opened', 'active', 'available', '利用可', '開設中'],
       limited: ['limited', 'crowded', 'near_full', '要確認'],
@@ -122,7 +122,7 @@ export const PIN_LAYER_PROFILES = {
     densityColor: '#00b8d9',
     markerShape: 'square',
     densityDash: '7 4',
-    densityMaxZoom: 13,
+    densityMaxZoom: 11,
     statusAliases: {
       available: ['available', 'active', 'open', '公式情報'],
       unknown: ['unknown'],
@@ -135,7 +135,7 @@ export const PIN_LAYER_PROFILES = {
     representativeStatus: 'available',
     placement: 'point',
     individualKind: 'webcam',
-    individualZoom: 13,
+    individualZoom: 11,
   },
   riverLevel: {
     label: '河川水位',
@@ -144,8 +144,8 @@ export const PIN_LAYER_PROFILES = {
     densityColor: '#2563eb',
     markerShape: 'triangle',
     densityDash: '10 3 2 3',
-    densityMaxZoom: 13,
-    individualZoom: 13,
+    densityMaxZoom: 11,
+    individualZoom: 11,
     statusAliases: {
       normal: ['normal', '平常'],
       advisory: ['advisory', '氾濫注意'],
@@ -178,8 +178,8 @@ export const PIN_LAYER_PROFILES = {
     densityColor: '#f2b705',
     markerShape: 'hexagon',
     densityDash: '4 3',
-    densityMaxZoom: 13,
-    individualZoom: 13,
+    densityMaxZoom: 11,
+    individualZoom: 11,
     statusAliases: {
       closed: ['closed', '通行止め', '通行止', '規制'],
       flooded: ['flooded', '冠水'],

@@ -8,6 +8,7 @@ import {
   targetDepthForZoom,
 } from '../../map/layers/portable/representative-pins/qtctFeatureEngine.js'
 import { makeQtctDensityCells, makeQtctDensityGrid, makeQtctDocument } from '../../map/layers/portable/representative-pins/qtctBuilder.mjs'
+import { PIN_LAYER_PROFILES } from '../../map/layers/portable/representative-pins/pinLayerProfiles.js'
 
 // 全国 summary は 96 個のシャードに分かれている。インデックスには各シャードの
 // depth と representative が載っているので、本体を取得していない「スタブ」の
@@ -30,6 +31,39 @@ const indexTree = (children) => ({
   count: children.reduce((sum, child) => sum + child.count, 0),
   representative: { id: 'root', lat: 35, lon: 137, count: 1000 },
   children,
+})
+
+test('個別ピンは従来より2段階早いzoom 11で表示する', () => {
+  const leaf = {
+    depth: 12,
+    bounds: bounds(130, 30, 140, 40),
+    count: 2,
+    representative: { id: 'leaf-summary', lon: 135, lat: 35, count: 2 },
+    records: [
+      { id: 'detail-a', lon: 134, lat: 34 },
+      { id: 'detail-b', lon: 136, lat: 36 },
+    ],
+  }
+  const tree = {
+    depth: 0,
+    bounds: bounds(130, 30, 140, 40),
+    count: 2,
+    representative: { id: 'summary', lon: 135, lat: 35, count: 2 },
+    children: [{
+      depth: 9,
+      bounds: bounds(130, 30, 140, 40),
+      count: 2,
+      representative: { id: 'depth-9-summary', lon: 135, lat: 35, count: 2 },
+      children: [leaf],
+    }],
+  }
+
+  assert.deepEqual(selectQtctFeatures({ tree, view, zoom: 10.99 }).map((item) => item.id), ['depth-9-summary'])
+  assert.deepEqual(selectQtctFeatures({ tree, view, zoom: 11 }).map((item) => item.id), ['detail-a', 'detail-b'])
+  for (const profile of Object.values(PIN_LAYER_PROFILES)) {
+    assert.equal(profile.individualZoom, 11)
+    assert.equal(profile.densityMaxZoom, 11)
+  }
 })
 
 test('未取得シャードのスタブだけでピンを描ける', () => {

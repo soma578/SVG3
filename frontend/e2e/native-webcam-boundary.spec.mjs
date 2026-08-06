@@ -25,7 +25,7 @@ test('詳細表示でも選択県外の河川カメラが消えない', async ({
   const frame = await handle.contentFrame()
   await expect.poll(() => frame.evaluate(() => Boolean(window.svgMap?.getSvgImages?.()?.root))).toBe(true)
   await frame.evaluate(() => {
-    // 個別ピンへ切り替わる zoom 13 以上を保ちつつ、福山市東部と井原・笠岡を含める。
+    // 個別ピンへ切り替わる zoom 11 以上を保ちつつ、福山市東部と井原・笠岡を含める。
     window.svgMap.setGeoViewPort(34.53, 133.38, 0.10, 0.18, false)
   })
 

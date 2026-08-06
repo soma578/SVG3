@@ -724,8 +724,10 @@ export const initRepresentativePinsLayer = ({
     const geoViewBox = window.svgMap?.getGeoViewBox?.();
     if (!geoViewBox || !Number.isFinite(Number(geoViewBox.width))) return null;
     const zoom = currentZoom(geoViewBox);
-    const targetDepth = targetDepthForZoom(zoom);
-    const showIndividuals = zoom >= Number(profile().individualZoom || 13);
+    const showIndividuals = zoom >= Number(profile().individualZoom || 11);
+    // 個別表示へ切り替えたら、低ズーム用の浅いQTCT深度に留まらず葉まで辿る。
+    // 閾値だけを早めて探索深度を据え置くと、詳細レコードではなく代表ピンが残る。
+    const targetDepth = showIndividuals ? targetDepthForZoom(12) : targetDepthForZoom(zoom);
     const useDetail = showIndividuals;
     return {
       geoViewBox,
@@ -835,7 +837,7 @@ export const initRepresentativePinsLayer = ({
     if (state.signature === signature) return;
     state.signature = signature;
 
-    const showDensity = !showIndividuals && context.zoom < Number(profile().densityMaxZoom || 13);
+    const showDensity = !showIndividuals && context.zoom < Number(profile().densityMaxZoom || 11);
     const overlayTree = useDetail ? state.overlayDetailTree : state.overlaySummaryTree;
     const items = showDensity ? [] : [
       ...selectQtctFeatures({

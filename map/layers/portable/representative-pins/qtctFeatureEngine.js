@@ -168,17 +168,18 @@ export const selectQtctFeatures = ({
   tree,
   view,
   zoom = zoomForGeoView(view),
-  individualZoom = 13,
+  individualZoom = 11,
 } = {}) => {
   if (!tree || !view) return [];
   const normalizedZoom = Number.isFinite(Number(zoom)) ? Number(zoom) : zoomForGeoView(view);
+  const showIndividuals = normalizedZoom >= Number(individualZoom || 11);
   const out = [];
   collectVisible(
     tree,
     view,
-    targetDepthForZoom(normalizedZoom),
+    showIndividuals ? targetDepthForZoom(12) : targetDepthForZoom(normalizedZoom),
     out,
-    normalizedZoom >= Number(individualZoom || 13),
+    showIndividuals,
     densityLimitForZoom(normalizedZoom),
   );
   return out.filter(Boolean);

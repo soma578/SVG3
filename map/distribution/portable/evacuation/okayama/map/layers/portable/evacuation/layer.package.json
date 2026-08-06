@@ -81,7 +81,7 @@
       "id": "representative-pins",
       "version": "1.2.2",
       "manifest": "representative-pins/runtime.package.json",
-      "integrity": "sha256-399bc79b19189dbedf37e0b59d5c787e46e106caae021ecc368796fcebac1522"
+      "integrity": "sha256-ed71b8552207a9722829946d2cbfa8758a6556b73adfa9e7ea9041c6f49cba11"
     },
     {
       "id": "svgmap-slawa-client",

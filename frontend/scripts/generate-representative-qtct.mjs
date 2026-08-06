@@ -293,7 +293,7 @@ const collectLayerRecordsByRegion = (layer) => {
 //    (summary/description/address 等はクラスタピンの詳細カードでは出さない)
 //  - bounds は外側丸め4桁 (~11m, intersects カリングには十分)、lat/lon は5桁 (~1.1m)
 //  - count<=SUMMARY_PRUNE_COUNT のサブツリーは1ノードに畳む (最深ズーム帯で ≤8件が
-//    1つの代表ピンになる。zoom>=11.5 は detail ツリーに切り替わるため影響は低ズーム帯のみ)
+//    1つの代表ピンになる。zoom>=11 は detail ツリーに切り替わるため影響は低ズーム帯のみ)
 const SUMMARY_PRUNE_COUNT = 8
 const roundFloor4 = (v) => Math.floor(v * 1e4) / 1e4
 const roundCeil4 = (v) => Math.ceil(v * 1e4) / 1e4
