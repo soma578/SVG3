@@ -158,11 +158,11 @@ test('幅が狭いだけのデスクトップをタッチ端末向けUIへ拡大
   })
 
   expect(sizes.coarsePointer).toBe(false)
-  expect(sizes.rowHeight).toBeLessThanOrEqual(46)
-  expect(sizes.toggleWidth).toBe(36)
+  expect(sizes.rowHeight).toBeLessThanOrEqual(42)
+  expect(sizes.toggleWidth).toBe(34)
 })
 
-test('スマホ幅でもレイヤー一覧を過度に拡大しない', async ({ page }) => {
+test('PCは画面幅が狭くてもレイヤー一覧を拡大しない', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 })
   await page.goto(MAP_URL)
   await expect(page.locator('#loading')).toBeHidden()
@@ -172,14 +172,29 @@ test('スマホ幅でもレイヤー一覧を過度に拡大しない', async ({
     const row = document.querySelector('#layer-list .layer-row').getBoundingClientRect()
     const toggle = document.querySelector('#layer-list .switch').getBoundingClientRect()
     const title = document.querySelector('#layer-list .layer-copy strong')
+    const communitySummary = document.querySelector('.community-compatibility summary').getBoundingClientRect()
+    const offlineSave = document.querySelector('.offline-save').getBoundingClientRect()
+    const search = document.querySelector('.search-box').getBoundingClientRect()
+    const selectors = document.querySelector('.selectors').getBoundingClientRect()
+    const topActions = document.querySelector('.top-actions').getBoundingClientRect()
     return {
       rowHeight: Math.round(row.height),
       toggleWidth: Math.round(toggle.width),
       titleFontSize: getComputedStyle(title).fontSize,
+      communitySummaryHeight: Math.round(communitySummary.height),
+      offlineSaveHeight: Math.round(offlineSave.height),
+      searchHeight: Math.round(search.height),
+      selectorsHeight: Math.round(selectors.height),
+      topActionsHeight: Math.round(topActions.height),
     }
   })
 
-  expect(sizes.rowHeight).toBeLessThanOrEqual(50)
-  expect(sizes.toggleWidth).toBe(38)
-  expect(sizes.titleFontSize).toBe('13px')
+  expect(sizes.rowHeight).toBeLessThanOrEqual(42)
+  expect(sizes.toggleWidth).toBe(34)
+  expect(sizes.titleFontSize).toBe('12px')
+  expect(sizes.communitySummaryHeight).toBeLessThanOrEqual(36)
+  expect(sizes.offlineSaveHeight).toBe(26)
+  expect(sizes.searchHeight).toBe(40)
+  expect(sizes.selectorsHeight).toBe(40)
+  expect(sizes.topActionsHeight).toBe(40)
 })

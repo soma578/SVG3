@@ -26,18 +26,17 @@ const mapFrame = async (page) => {
 
 const rowFor = (page, text) => page.locator('#layer-list .layer-row').filter({ hasText: text }).first()
 
-test('本家の有効なコミュニティ資産145件を、利用状態ごとに公開する', async ({ page }) => {
+test('本家のコミュニティ資産148件を、利用状態ごとに公開する', async ({ page }) => {
   await openPanel(page)
-  await expect(page.locator('#community-compatibility-summary')).toHaveText('2件検証済み・7件制限付き／全145件')
+  await expect(page.locator('#community-compatibility-summary')).toHaveText('検証2・制限6／148件')
   await page.locator('#community-compatibility summary').click()
-  await expect(page.locator('#community-compatibility-list li')).toHaveCount(145)
-  await expect(page.locator('#community-compatibility-list li[data-status="incompatible"]')).toHaveCount(0)
+  await expect(page.locator('#community-compatibility-list li')).toHaveCount(148)
+  await expect(page.locator('#community-compatibility-list li[data-status="incompatible"]')).toContainText('starlinkUnofficialGS')
   await expect(page.locator('#community-compatibility-list li[data-status="requires-config"]')).toContainText('経路検索(graphhopper)')
-  await expect(page.locator('#community-compatibility-list li[data-status="requires-proxy"]')).toContainText('starlinkUnofficialGS')
   await expect(page.locator('#community-compatibility-list')).not.toContainText('保存済み複数CSVデータ表示')
 
   const rows = page.locator('#layer-list .layer-row[data-kind="external"]')
-  await expect(rows).toHaveCount(9)
+  await expect(rows).toHaveCount(8)
   await expect(rowFor(page, 'geohashCoder')).toContainText('検証済み')
   await expect(rowFor(page, 'J_SHIS')).toContainText('オンライン限定')
 

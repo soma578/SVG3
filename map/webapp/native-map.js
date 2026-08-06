@@ -849,7 +849,7 @@ const renderCommunityCompatibility = async () => {
     }
     const counts = catalog.counts || {};
     elements.communityCompatibilitySummary.textContent =
-      `${counts.supported || 0}件検証済み・${counts.limited || 0}件制限付き／全${catalog.entries?.length || 0}件`;
+      `検証${counts.supported || 0}・制限${counts.limited || 0}／${catalog.entries?.length || 0}件`;
     renderCommunityCompatibilityList();
   } catch (error) {
     elements.communityCompatibilitySummary.textContent = '互換性一覧を取得できません';
