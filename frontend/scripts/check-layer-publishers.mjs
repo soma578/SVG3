@@ -41,6 +41,10 @@ const requireFile = (filePath, label) => {
 }
 
 const regions = readJson(regionsPath, regionsPath)?.regions || []
+const districtIndexes = new Map(regions.flatMap((region) => {
+  const indexPath = path.join(mapRoot, 'data', 'districts', region.id, 'district-index.json')
+  return fs.existsSync(indexPath) ? [[region.id, readJson(indexPath, indexPath)]] : []
+}))
 const configs = []
 if (fs.existsSync(publishersRoot)) {
   for (const entry of fs.readdirSync(publishersRoot, { withFileTypes: true })) {
@@ -165,6 +169,7 @@ for (const configPath of configs.sort()) {
       csvText: fs.readFileSync(sourcePath, 'utf8'),
       regions,
       config: layerConfig,
+      districtIndexes,
     })
     for (const error of artifacts.errors) fail(`${label}: ${error}`)
     for (const [relativePath, expected] of artifacts.files) {

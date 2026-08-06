@@ -175,6 +175,15 @@ const copyDistrictRegions = (requestedRegions, { clean = true } = {}) => {
       filter: (src) => !isIgnoredPath(src),
     })
   }
+  // 名称選択に使う軽量索引は全県分を置く。境界SVG本体（約770MB）は従来どおり
+  // 活動が存在する県だけを配置し、未使用県の大容量配信は避ける。
+  for (const regionId of known.keys()) {
+    const source = path.join(districtRoot, regionId, 'district-index.json')
+    if (!fs.existsSync(source)) continue
+    const destDir = path.join(publicDistrictRoot, regionId)
+    fs.mkdirSync(destDir, { recursive: true })
+    fs.copyFileSync(source, path.join(destDir, 'district-index.json'))
+  }
   const deployment = {
     schemaVersion: 1,
     sourceIndex: 'map/data/districts/index.json',

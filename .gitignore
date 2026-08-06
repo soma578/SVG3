@@ -170,3 +170,6 @@ frontend/.next/
 # 正規のランタイム形式はこれだが、リポジトリには入れず生成で作る。
 /map/data/qtct/*/detail-index.json
 /map/data/qtct/*/detail/
+
+# 地区名選択用索引は全国境界SVGから districts:index で再生成する。
+/map/data/districts/*/district-index.json

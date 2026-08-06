@@ -86,6 +86,18 @@ for (const region of index.regions || []) {
   assert.equal(bytes, manifest.bytes)
   assert.equal(region.fileCount, manifest.fileCount)
   assert.equal(region.bytes, manifest.bytes)
+  const districtIndexPath = path.join(districtRoot, region.id, 'district-index.json')
+  assert.ok(fs.existsSync(districtIndexPath), `${region.id}: district name index is missing`)
+  const districtIndex = JSON.parse(fs.readFileSync(districtIndexPath, 'utf8'))
+  assert.equal(districtIndex.regionId, region.id)
+  assert.ok(districtIndex.districts.length > 0, `${region.id}: district name index is empty`)
+  const districtKeys = new Set()
+  for (const district of districtIndex.districts) {
+    assert.ok(district.key && district.name && district.municipalityCode)
+    assert.ok(Number.isFinite(district.lat) && Number.isFinite(district.lon))
+    assert.ok(!districtKeys.has(district.key), `${region.id}: duplicate district key ${district.key}`)
+    districtKeys.add(district.key)
+  }
   const municipalitiesPath = path.join(projectRoot, 'map', 'regions', region.id, 'municipalities.json')
   const municipalities = JSON.parse(fs.readFileSync(municipalitiesPath, 'utf8')).municipalities || []
   for (const municipality of municipalities) {

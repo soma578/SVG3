@@ -107,6 +107,24 @@
         公開
       </label>
     </div>
+    <section class="summary" aria-labelledby="entryTitle">
+      <h2 id="entryTitle">活動を追加</h2>
+      <label>名称 <input id="activityTitle" type="text" placeholder="給水支援チーム"></label>
+      <label>都道府県 <select id="prefectureSelect"><option value="">選択してください</option></select></label>
+      <label>市区町村 <select id="municipalitySelect" disabled><option value="">選択してください</option></select></label>
+      <label>地区境界 <select id="districtSelect" disabled><option value="">選択してください</option></select></label>
+      <label>状態
+        <select id="activityStatus">
+          <option value="active">活動中</option>
+          <option value="standby">待機</option>
+          <option value="planned">予定</option>
+          <option value="completed">完了</option>
+          <option value="needs_attention">要対応</option>
+        </select>
+      </label>
+      <label>概要 <input id="activitySummary" type="text" placeholder="活動内容"></label>
+      <button id="addActivityButton" type="button" disabled>この地区へ追加</button>
+    </section>
     <div id="status" class="status">現在配信中のCSVを読み込んでいます。</div>
     <div class="summary">
       <span>有効レコード <strong id="recordCount">0</strong></span>
@@ -116,16 +134,22 @@
       <div id="empty" class="empty">プレビューなし</div>
       <table id="preview" hidden>
         <thead>
-          <tr><th>ID</th><th>名称</th><th>地域</th><th>状態</th><th>緯度</th><th>経度</th></tr>
+          <tr><th>ID</th><th>名称</th><th>市区町村</th><th>地区境界</th><th>状態</th></tr>
         </thead>
         <tbody></tbody>
       </table>
     </div>
   </main>
   <script type="module">
-    import { buildCsvQtctArtifacts } from '../shared/csvQtctPipeline.mjs';
+    import { buildCsvQtctArtifacts, parseCsv } from '../shared/csvQtctPipeline.mjs';
     import { createZipArchive } from '../shared/zipArchive.mjs';
-    import { TEAM_ACTIVITY_CSV_TEMPLATE } from '../../layers/portable/team-activity/teamActivityCsv.js';
+
+    const TEAM_ACTIVITY_CSV_COLUMNS = [
+      'id', 'title', 'prefecture', 'municipality', 'districtName',
+      'status', 'summary', 'description', 'area', 'operator',
+    ];
+    const TEAM_ACTIVITY_CSV_TEMPLATE = `${TEAM_ACTIVITY_CSV_COLUMNS.join(',')}\n`
+      + 'sample-001,給水支援チーム,岡山県,岡山市北区,岡山市 北区 駅元町,active,給水支援を実施中,活動内容の説明,岡山市北区 駅元町,支援本部\n';
 
     const csvFile = document.getElementById('csvFile');
     const writeButton = document.getElementById('writeButton');
@@ -139,11 +163,19 @@
     const recordCount = document.getElementById('recordCount');
     const errorCount = document.getElementById('errorCount');
     const backLink = document.getElementById('backLink');
+    const activityTitle = document.getElementById('activityTitle');
+    const prefectureSelect = document.getElementById('prefectureSelect');
+    const municipalitySelect = document.getElementById('municipalitySelect');
+    const districtSelect = document.getElementById('districtSelect');
+    const activityStatus = document.getElementById('activityStatus');
+    const activitySummary = document.getElementById('activitySummary');
+    const addActivityButton = document.getElementById('addActivityButton');
     let csvText = '';
     let artifacts = null;
     let regions = [];
     let layerConfig = null;
     let publisherConfig = null;
+    const districtIndexes = new Map();
 
     const returnPath = new URLSearchParams(location.search).get('return');
     if (returnPath?.startsWith('/map/') && !returnPath.startsWith('//')) backLink.href = returnPath;
@@ -170,7 +202,7 @@
       previewBody.replaceChildren();
       for (const record of records.slice(0, 100)) {
         const tr = document.createElement('tr');
-        for (const value of [record.id, record.title, record.regionId, record.status, record.lat, record.lon]) {
+        for (const value of [record.id, record.title, record.municipalityName, record.districtName, record.status]) {
           const td = document.createElement('td');
           td.textContent = String(value ?? '');
           tr.appendChild(td);
@@ -183,6 +215,75 @@
       zipButton.disabled = !csvText || errors.length > 0;
       if (errors.length > 0) setStatus(errors.slice(0, 8).join(' / '), 'error');
       else if (records.length > 0) setStatus(`${records.length}件をQTCTへ変換できます。`, 'success');
+    };
+
+    const normalizeName = (value) => String(value || '').normalize('NFKC').replace(/[\s　]+/g, '');
+    const regionForValue = (value) => regions.find((region) =>
+      region.id === value
+      || normalizeName(region.label) === normalizeName(value)
+      || normalizeName(region.prefecture) === normalizeName(value));
+
+    const ensureDistrictIndex = async (regionId) => {
+      if (!regionId || districtIndexes.has(regionId)) return districtIndexes.get(regionId);
+      const response = await fetch(`/data/${regionId}/district-index.json`);
+      if (!response.ok) throw new Error(`地区索引 ${regionId}: HTTP ${response.status}`);
+      const index = await response.json();
+      districtIndexes.set(regionId, index);
+      return index;
+    };
+
+    const prepareDistrictIndexes = async (text) => {
+      const rows = parseCsv(String(text || '').replace(/^\uFEFF/, ''));
+      if (rows.length < 2) return;
+      const headers = rows[0].map((value) => String(value).trim());
+      const requested = new Set();
+      for (const values of rows.slice(1)) {
+        const row = Object.fromEntries(headers.map((header, index) => [header, values[index] ?? '']));
+        const region = regionForValue(row.regionId || row.prefecture || row['都道府県']);
+        if (region) requested.add(region.id);
+      }
+      await Promise.all([...requested].map(ensureDistrictIndex));
+    };
+
+    const rebuildArtifacts = async () => {
+      await prepareDistrictIndexes(csvText);
+      artifacts = buildCsvQtctArtifacts({ csvText, regions, config: layerConfig, districtIndexes });
+      render();
+    };
+
+    const replaceOptions = (select, entries, placeholder) => {
+      select.replaceChildren(new Option(placeholder, ''));
+      for (const entry of entries) select.append(new Option(entry.label, entry.value));
+      select.disabled = entries.length === 0;
+    };
+
+    const refreshMunicipalities = async () => {
+      const index = await ensureDistrictIndex(prefectureSelect.value);
+      const byCode = new Map();
+      for (const district of index?.districts || []) {
+        if (!byCode.has(district.municipalityCode)) {
+          byCode.set(district.municipalityCode, district.municipalityName || district.municipalityCode);
+        }
+      }
+      replaceOptions(municipalitySelect, [...byCode].map(([value, label]) => ({ value, label }))
+        .sort((a, b) => a.label.localeCompare(b.label, 'ja')), '市区町村を選択');
+      replaceOptions(districtSelect, [], '地区境界を選択');
+      addActivityButton.disabled = true;
+    };
+
+    const refreshDistricts = () => {
+      const index = districtIndexes.get(prefectureSelect.value);
+      const entries = (index?.districts || [])
+        .filter((district) => district.municipalityCode === municipalitySelect.value)
+        .map((district) => ({ value: district.key, label: district.name }))
+        .sort((a, b) => a.label.localeCompare(b.label, 'ja'));
+      replaceOptions(districtSelect, entries, '地区境界を選択');
+      addActivityButton.disabled = true;
+    };
+
+    const csvCell = (value) => {
+      const text = String(value ?? '');
+      return /[",\r\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
     };
 
     const getDirectory = async (root, parts) => {
@@ -209,11 +310,13 @@
       const [index, loadedPublisherConfig] = await Promise.all([response.json(), publisherResponse.json()]);
       publisherConfig = loadedPublisherConfig;
       regions = index.regions || [];
+      for (const region of regions) prefectureSelect.append(new Option(region.label, region.id));
       layerConfig = await fetch(publisherConfig.layerConfig).then((result) => result.json());
       const sourceResponse = await fetch(publisherConfig.source, { cache: 'no-store' });
       if (!sourceResponse.ok) throw new Error(`現在のCSV: HTTP ${sourceResponse.status}`);
       csvText = await sourceResponse.text();
-      artifacts = buildCsvQtctArtifacts({ csvText, regions, config: layerConfig });
+      await prepareDistrictIndexes(csvText);
+      artifacts = buildCsvQtctArtifacts({ csvText, regions, config: layerConfig, districtIndexes });
       const publicationResponse = await fetch(publisherConfig.publication, { cache: 'no-store' });
       if (publicationResponse.ok) {
         const publication = await publicationResponse.json();
@@ -235,8 +338,39 @@
       const file = csvFile.files?.[0];
       if (!file) return;
       csvText = await file.text();
-      artifacts = buildCsvQtctArtifacts({ csvText, regions, config: layerConfig });
-      render();
+      await rebuildArtifacts();
+    });
+
+    prefectureSelect.addEventListener('change', () => {
+      void refreshMunicipalities().catch((error) => setStatus(`地区索引の読込みに失敗しました: ${error.message}`, 'error'));
+    });
+    municipalitySelect.addEventListener('change', refreshDistricts);
+    districtSelect.addEventListener('change', () => {
+      addActivityButton.disabled = !districtSelect.value || !activityTitle.value.trim();
+    });
+    activityTitle.addEventListener('input', () => {
+      addActivityButton.disabled = !districtSelect.value || !activityTitle.value.trim();
+    });
+
+    addActivityButton.addEventListener('click', async () => {
+      const region = regions.find((entry) => entry.id === prefectureSelect.value);
+      const index = districtIndexes.get(prefectureSelect.value);
+      const district = (index?.districts || []).find((entry) => entry.key === districtSelect.value);
+      if (!region || !district || !activityTitle.value.trim()) return;
+      const values = [
+        `team-${Date.now()}`, activityTitle.value.trim(), region.label,
+        district.municipalityName, district.name, activityStatus.value,
+        activitySummary.value.trim(), activitySummary.value.trim(), district.name, '',
+      ];
+      const header = TEAM_ACTIVITY_CSV_COLUMNS.join(',');
+      if (!csvText.trim()) csvText = `${header}\n`;
+      if (!csvText.endsWith('\n')) csvText += '\n';
+      csvText += `${values.map(csvCell).join(',')}\n`;
+      await rebuildArtifacts();
+      activityTitle.value = '';
+      activitySummary.value = '';
+      addActivityButton.disabled = true;
+      setStatus(`${district.name}へ活動を追加しました。書き出すと反映されます。`, 'success');
     });
 
     templateButton.addEventListener('click', () => {

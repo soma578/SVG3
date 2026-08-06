@@ -222,6 +222,15 @@ const checkCsvColumns = (configPath, dir, build) => {
     'municipalityCode',
     'municipality_code',
     '自治体コード',
+    'prefecture',
+    '都道府県',
+    'municipality',
+    'municipalityName',
+    '市区町村',
+    'districtName',
+    'districtKey',
+    '地区境界名',
+    '地区キー',
     'address',
     '住所',
     'summary',
@@ -239,7 +248,11 @@ const checkCsvColumns = (configPath, dir, build) => {
     build.latitudeColumn,
     build.regionColumn,
     build.prefCodeColumn,
+    build.prefectureColumn,
+    build.municipalityNameColumn,
     build.municipalityCodeColumn,
+    build.districtNameColumn,
+    build.districtKeyColumn,
     build.summaryColumn,
     build.descriptionColumn,
     build.statusColumn,
@@ -253,8 +266,13 @@ const checkCsvColumns = (configPath, dir, build) => {
   }
   const hasLat = [build.latitudeColumn, 'lat', 'latitude', '緯度'].filter(Boolean).some((column) => headers.has(column))
   const hasLon = [build.longitudeColumn, 'lon', 'lng', 'longitude', '経度'].filter(Boolean).some((column) => headers.has(column))
-  if (!hasLat) errors.push(`${configPath}: CSV latitude column not found`)
-  if (!hasLon) errors.push(`${configPath}: CSV longitude column not found`)
+  const hasNamedDistrict = [
+    build.prefectureColumn || 'prefecture',
+    build.municipalityNameColumn || 'municipality',
+    build.districtNameColumn || 'districtName',
+  ].every((column) => headers.has(column))
+  if (!hasNamedDistrict && !hasLat) errors.push(`${configPath}: CSV latitude column not found`)
+  if (!hasNamedDistrict && !hasLon) errors.push(`${configPath}: CSV longitude column not found`)
   for (const [propertyName, spec] of Object.entries(build.propertyColumns || {})) {
     const column = typeof spec === 'string' ? spec : spec?.column
     const type = typeof spec === 'object' ? spec.type || 'string' : 'string'

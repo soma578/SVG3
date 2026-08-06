@@ -124,6 +124,22 @@ test('CSV管理画面は現在配信中のCSVとひな形を表示する', async
   await expect(page.locator('#templateButton')).toHaveText('ひな形を保存')
 })
 
+test('CSV管理画面は地名の三段階選択だけで活動を追加できる', async ({ page }) => {
+  await page.goto('/map/publishers/team-activity-csv/admin.html')
+  await expect(page.locator('#status')).toContainText('現在配信中のCSVを表示しています')
+  await page.locator('#prefectureSelect').selectOption('okayama')
+  await expect(page.locator('#municipalitySelect')).toBeEnabled()
+  await page.locator('#municipalitySelect').selectOption('33101')
+  await expect(page.locator('#districtSelect')).toBeEnabled()
+  await page.locator('#districtSelect').selectOption('331010640')
+  await page.locator('#activityTitle').fill('地名入力テスト')
+  await page.locator('#activitySummary').fill('地区境界名から追加')
+  await expect(page.locator('#addActivityButton')).toBeEnabled()
+  await page.locator('#addActivityButton').click()
+  await expect(page.locator('#recordCount')).toHaveText('4')
+  await expect(page.locator('#preview tbody')).toContainText('岡山市 北区 駅元町')
+})
+
 test('SVGMap App Layers版にも自己完結したCSV管理画面がある', async ({ page }) => {
   await page.goto('/svgMapAppLayers/appLayers/okayamaUniversity/teamActivity/appLayersAdmin.html')
   await expect(page.locator('h1')).toHaveText('SVGMap App Layers チーム活動管理')

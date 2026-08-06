@@ -194,10 +194,17 @@ const generateCsvQtctLayer = ({ dir, configPath, config }, regionsContext) => {
   const sourcePath = path.resolve(dir, build.source || build.csv || 'data.csv')
   if (!fs.existsSync(sourcePath)) throw new Error(`${configPath}: CSV source not found: ${sourcePath}`)
   const qtctLayer = build.qtctLayer || config.layer || config.id.replace(/^layer-/, '')
+  const districtIndexes = new Map(regionsContext.regions.flatMap((region) => {
+    const indexPath = path.join(projectRoot, 'map', 'data', 'districts', region.id, 'district-index.json')
+    return fs.existsSync(indexPath)
+      ? [[region.id, JSON.parse(fs.readFileSync(indexPath, 'utf8'))]]
+      : []
+  }))
   const artifacts = buildCsvQtctArtifacts({
     csvText: fs.readFileSync(sourcePath, 'utf8'),
     regions: regionsContext.regions,
     config,
+    districtIndexes,
   })
   if (artifacts.errors.length > 0) {
     throw new Error(`${configPath}: CSV validation failed: ${artifacts.errors.join(' / ')}`)

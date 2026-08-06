@@ -66,6 +66,52 @@ const asBoolean = (value) => {
   return null
 }
 
+const normalizeName = (value) => String(value || '')
+  .normalize('NFKC')
+  .replace(/[\s　]+/g, '')
+  .replace(/[ヶケ]/g, 'ケ')
+
+const districtIndexFor = (districtIndexes, regionId) => {
+  if (districtIndexes instanceof Map) return districtIndexes.get(regionId)
+  return districtIndexes?.[regionId]
+}
+
+const resolveDistrict = ({ row, build, region, districtIndexes }) => {
+  const requestedKey = String(firstValue(row, [build.districtKeyColumn, 'districtKey', 'district_key', '地区キー']) || '').trim()
+  const requestedName = String(firstValue(row, [build.districtNameColumn, 'districtName', 'district_name', '地区境界名', '地区名']) || '').trim()
+  const municipalityCode = String(firstValue(row, [
+    build.municipalityCodeColumn, 'municipalityCode', 'municipality_code', '自治体コード',
+  ]) || '').trim()
+  const municipalityName = String(firstValue(row, [
+    build.municipalityNameColumn, 'municipality', 'municipalityName', '市区町村',
+  ]) || '').trim()
+  if (!requestedKey && !requestedName) return { district: null, error: '' }
+  if (!region?.id) return { district: null, error: '地区境界名を使う場合は都道府県が必要です' }
+  const index = districtIndexFor(districtIndexes, region.id)
+  if (!index) return { district: null, error: `${region.label}の地区索引を読み込めません` }
+  let candidates = index.districts || []
+  if (municipalityCode) candidates = candidates.filter((entry) => String(entry.municipalityCode) === municipalityCode)
+  if (municipalityName) {
+    const normalizedMunicipality = normalizeName(municipalityName)
+    candidates = candidates.filter((entry) => normalizeName(entry.municipalityName) === normalizedMunicipality)
+  }
+  if (requestedKey) candidates = candidates.filter((entry) => String(entry.key) === requestedKey)
+  else {
+    const normalizedDistrict = normalizeName(requestedName)
+    const exact = candidates.filter((entry) => normalizeName(entry.name) === normalizedDistrict)
+    candidates = exact.length > 0
+      ? exact
+      : candidates.filter((entry) => normalizeName(entry.name).endsWith(normalizedDistrict))
+  }
+  if (candidates.length === 0) {
+    return { district: null, error: `地区境界が見つかりません（${municipalityName || municipalityCode || region.label} / ${requestedName || requestedKey}）` }
+  }
+  if (candidates.length > 1) {
+    return { district: null, error: `地区境界名が重複しています（${requestedName || requestedKey}）。市区町村を指定してください` }
+  }
+  return { district: candidates[0], error: '' }
+}
+
 const propertyColumnsForRow = (row, propertyColumns = {}) => {
   const properties = {}
   for (const [propertyName, spec] of Object.entries(propertyColumns || {})) {
@@ -85,9 +131,9 @@ const propertyColumnsForRow = (row, propertyColumns = {}) => {
   return properties
 }
 
-const normalizeRecord = (row, config, build, regionId, index) => {
-  const lat = asNumber(firstValue(row, [build.latitudeColumn, 'lat', 'latitude', '緯度']))
-  const lon = asNumber(firstValue(row, [build.longitudeColumn, 'lon', 'lng', 'longitude', '経度']))
+const normalizeRecord = (row, config, build, regionId, index, district = null) => {
+  const lat = district?.lat ?? asNumber(firstValue(row, [build.latitudeColumn, 'lat', 'latitude', '緯度']))
+  const lon = district?.lon ?? asNumber(firstValue(row, [build.longitudeColumn, 'lon', 'lng', 'longitude', '経度']))
   if (lat == null || lon == null) return null
   const layerId = build.qtctLayer || config.layer || config.id.replace(/^layer-/, '')
   const id = String(firstValue(row, [build.idColumn, 'id', 'ID']) || `${layerId}:${regionId}:${index}`)
@@ -99,7 +145,10 @@ const normalizeRecord = (row, config, build, regionId, index) => {
     layerId,
     kind: build.kindName || 'csv-poi',
     status: String(firstValue(row, [build.statusColumn, 'status', '状態']) || build.defaultStatus || 'unknown'),
-    municipalityCode: String(firstValue(row, [build.municipalityCodeColumn, 'municipalityCode', 'municipality_code', '自治体コード']) || ''),
+    municipalityCode: String(district?.municipalityCode || firstValue(row, [build.municipalityCodeColumn, 'municipalityCode', 'municipality_code', '自治体コード']) || ''),
+    municipalityName: String(district?.municipalityName || firstValue(row, [build.municipalityNameColumn, 'municipality', 'municipalityName', '市区町村']) || ''),
+    districtKey: String(district?.key || firstValue(row, [build.districtKeyColumn, 'districtKey', 'district_key', '地区キー']) || ''),
+    districtName: String(district?.name || firstValue(row, [build.districtNameColumn, 'districtName', 'district_name', '地区境界名', '地区名']) || ''),
     regionId,
     lat,
     lon,
@@ -113,7 +162,7 @@ const normalizeRecord = (row, config, build, regionId, index) => {
   }
 }
 
-export const buildCsvQtctArtifacts = ({ csvText, regions, config }) => {
+export const buildCsvQtctArtifacts = ({ csvText, regions, config, districtIndexes = new Map() }) => {
   const build = config.build || {}
   const csvRows = parseCsv(String(csvText || '').replace(/^\uFEFF/, ''))
   if (csvRows.length === 0) return { records: [], errors: ['CSVが空です'], files: new Map(), byRegion: new Map() }
@@ -125,6 +174,10 @@ export const buildCsvQtctArtifacts = ({ csvText, regions, config }) => {
     Object.fromEntries(headers.map((header, index) => [header, String(values[index] ?? '').trim()])))
   const regionIds = new Set(regions.map((region) => region.id))
   const byPrefCode = new Map(regions.map((region) => [String(Number(region.prefCode)).padStart(2, '0'), region.id]))
+  const byRegionLabel = new Map(regions.flatMap((region) => [
+    [normalizeName(region.label), region.id],
+    [normalizeName(region.prefecture), region.id],
+  ]))
   const byRegion = new Map(regions.map((region) => [region.id, []]))
   const records = []
 
@@ -137,20 +190,29 @@ export const buildCsvQtctArtifacts = ({ csvText, regions, config }) => {
     }
     const explicitRegion = String(firstValue(row, [build.regionColumn, 'regionId', 'region_id']) || '').trim()
     const prefCode = String(firstValue(row, [build.prefCodeColumn, 'prefCode', 'pref_code', '都道府県コード']) || '').trim()
-    const resolvedRegion = explicitRegion || (prefCode ? byPrefCode.get(String(Number(prefCode)).padStart(2, '0')) || '' : '')
-    if ((explicitRegion || prefCode) && !regionIds.has(resolvedRegion)) {
-      errors.push(`${line}行目: regionId/prefCodeが不正です (${explicitRegion || prefCode})`)
+    const prefectureName = String(firstValue(row, [build.prefectureColumn, 'prefecture', '都道府県']) || '').trim()
+    const resolvedRegion = explicitRegion
+      || (prefCode ? byPrefCode.get(String(Number(prefCode)).padStart(2, '0')) || '' : '')
+      || (prefectureName ? byRegionLabel.get(normalizeName(prefectureName)) || '' : '')
+    if ((explicitRegion || prefCode || prefectureName) && !regionIds.has(resolvedRegion)) {
+      errors.push(`${line}行目: 都道府県を特定できません (${explicitRegion || prefCode || prefectureName})`)
+      return
+    }
+    const region = regions.find((entry) => entry.id === resolvedRegion)
+    const { district, error: districtError } = resolveDistrict({ row, build, region, districtIndexes })
+    if (districtError) {
+      errors.push(`${line}行目: ${districtError}`)
       return
     }
     const targetRegions = resolvedRegion ? [resolvedRegion] : regions.map((region) => region.id)
     let sourceRecord = null
     for (const regionId of targetRegions) {
-      const record = normalizeRecord(row, config, build, regionId, index)
+      const record = normalizeRecord(row, config, build, regionId, index, district)
       if (!record) continue
       byRegion.get(regionId).push(record)
       sourceRecord ||= record
     }
-    if (!sourceRecord) errors.push(`${line}行目: lat/lonが数値ではありません`)
+    if (!sourceRecord) errors.push(`${line}行目: 地区境界名またはlat/lonを指定してください`)
     else records.push(sourceRecord)
   })
 
