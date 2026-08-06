@@ -17,7 +17,7 @@
     },
     "publishedAt": "2026-07-21T00:00:00+09:00"
   },
-  "contentDigest": "sha256-e0aca61177cc599155a6a57bc6391ca80388bafb34b33a1c834fbd8228d42177",
+  "contentDigest": "sha256-d8f82e7e0450efc8af915a3ed6f3518cddf41dff1f492db184e477ccdf7fe4f0",
   "files": [
     {
       "path": "Container.isolated.svg",
@@ -232,7 +232,7 @@
     {
       "path": "map/layers/portable/artifact-sample/layer.package.json",
       "bytes": 2428,
-      "sha256": "ef3dff6b1f9844b6a6fcbd72cf1a601b5fbdf3759ca8a91d82a3493ca25b99ea"
+      "sha256": "1ef80deb8bb9a876a2f078d844437b63dc3d8fa06ce375da3d179135e70e9924"
     },
     {
       "path": "map/layers/portable/representative-pins/DENSITY_POINTS_FORMAT.md",
@@ -246,8 +246,8 @@
     },
     {
       "path": "map/layers/portable/representative-pins/mapMessages.js",
-      "bytes": 2147,
-      "sha256": "8e23fe77c82c61da342b1016f8eddd1e128d69ed6811eb9d2e70700e9899afe8"
+      "bytes": 2218,
+      "sha256": "cf2339cb215fab4f15971bb3b765c965ef69a7ef5ed10327606517180582c25f"
     },
     {
       "path": "map/layers/portable/representative-pins/observationFreshness.js",

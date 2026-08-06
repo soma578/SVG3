@@ -17,7 +17,7 @@
     },
     "publishedAt": "2026-07-21T00:00:00+09:00"
   },
-  "contentDigest": "sha256-1dd2fea7c4e15c8876b1ad361fa12a3c6715f4e8848481d06649c8a832d477d0",
+  "contentDigest": "sha256-97bfad222d7c4977c6d78f2e0203e92a5b9c631d16f86ed2f8c59ba1380b2f3b",
   "files": [
     {
       "path": "Container.isolated.svg",
@@ -241,8 +241,8 @@
     },
     {
       "path": "map/layers/portable/representative-pins/mapMessages.js",
-      "bytes": 2147,
-      "sha256": "8e23fe77c82c61da342b1016f8eddd1e128d69ed6811eb9d2e70700e9899afe8"
+      "bytes": 2218,
+      "sha256": "cf2339cb215fab4f15971bb3b765c965ef69a7ef5ed10327606517180582c25f"
     },
     {
       "path": "map/layers/portable/representative-pins/observationFreshness.js",
@@ -342,7 +342,7 @@
     {
       "path": "map/layers/portable/team-activity/layer.package.json",
       "bytes": 3118,
-      "sha256": "7ed8b2fb8e08ae1e7e9ad393d5ddbd04d49a5196b5259a665a6ffe90c1f7dc7c"
+      "sha256": "b911947a2fbb540963e89c631eca4dcad46e389c5455389c4591ef933aa0d3fd"
     },
     {
       "path": "map/layers/portable/team-activity/teamActivityAreaLayer.html",

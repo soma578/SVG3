@@ -28,7 +28,7 @@
     },
     "publishedAt": "2026-07-21T00:00:00+09:00"
   },
-  "contentDigest": "sha256-b341f4c6866c4d47b8faac5cd9a8be0a1014e56e1b2f9930c3c6e2697a5d4ad6",
+  "contentDigest": "sha256-c3c9f26bcf2dc619bc6cc8d0a5ad6947ba41b19a1c9313ea8baf8c73c2963f25",
   "portability": {
     "pathIndependent": true,
     "crossOrigin": false,
@@ -44,7 +44,7 @@
         "id": "representative-pins",
         "version": "1.2.2",
         "manifest": "representative-pins/runtime.package.json",
-        "integrity": "sha256-4badbc0397df39c7b01036c79b6632dadc5d755709c461d2b2163edb1bf5d345"
+        "integrity": "sha256-399bc79b19189dbedf37e0b59d5c787e46e106caae021ecc368796fcebac1522"
       },
       {
         "id": "svgmap-slawa-client",
@@ -69,7 +69,7 @@
     {
       "path": "layer.manifest.json",
       "bytes": 11821,
-      "sha256": "79a8f4ce9bef22ac45cfdbe8eec0e8c80d202f04c27e0f738e4dc0ac0fb36297"
+      "sha256": "3be8759c1b669b236880e3f261503d4d417fb8474dc7fd2a972945c790cdb44e"
     },
     {
       "path": "map/data/qtct/japanRiverWebcam/okayama/detail.json",
@@ -264,7 +264,7 @@
     {
       "path": "map/layers/portable/japan-river-webcams/layer.package.json",
       "bytes": 2163,
-      "sha256": "96cfc77c277e42bf6fcd97439bf3df06c602dc3097953abfa9d431f67a331cdc"
+      "sha256": "c80853a56b3a9424e5d38211b9f6f65ae1069d16d2bfea5a5e01173a18edd9fa"
     },
     {
       "path": "map/layers/portable/japan-river-webcams/webcamDetail.js",
@@ -293,8 +293,8 @@
     },
     {
       "path": "map/layers/portable/representative-pins/mapMessages.js",
-      "bytes": 2147,
-      "sha256": "8e23fe77c82c61da342b1016f8eddd1e128d69ed6811eb9d2e70700e9899afe8"
+      "bytes": 2218,
+      "sha256": "cf2339cb215fab4f15971bb3b765c965ef69a7ef5ed10327606517180582c25f"
     },
     {
       "path": "map/layers/portable/representative-pins/observationFreshness.js",

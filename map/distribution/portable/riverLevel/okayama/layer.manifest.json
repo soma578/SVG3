@@ -17,7 +17,7 @@
     },
     "publishedAt": "2026-07-21T00:00:00+09:00"
   },
-  "contentDigest": "sha256-68bf4b8ae93e1ff81476a34975d3d217ab623a10818b3d896119ea7ecb305ace",
+  "contentDigest": "sha256-1d68cd0a3fc8bc8cb5caa25204ad86e9e1a27922453d82d7ab3a362536538a7a",
   "files": [
     {
       "path": "Container.isolated.svg",
@@ -231,8 +231,8 @@
     },
     {
       "path": "map/layers/portable/representative-pins/mapMessages.js",
-      "bytes": 2147,
-      "sha256": "8e23fe77c82c61da342b1016f8eddd1e128d69ed6811eb9d2e70700e9899afe8"
+      "bytes": 2218,
+      "sha256": "cf2339cb215fab4f15971bb3b765c965ef69a7ef5ed10327606517180582c25f"
     },
     {
       "path": "map/layers/portable/representative-pins/observationFreshness.js",
@@ -287,7 +287,7 @@
     {
       "path": "map/layers/portable/river-level/layer.package.json",
       "bytes": 2263,
-      "sha256": "e3b9e940ddef7f8766a50c7a6f76874e24cea94f695ee1ecfa80e608d7827800"
+      "sha256": "972836a08a2ccf0cfba9e0eaf3fcc2b266c44a62482c0791f67a647322d5477a"
     },
     {
       "path": "map/layers/portable/river-level/riverLevelDetail.js",

@@ -155,12 +155,14 @@ frontend/.next/
 !/svgMapAppLayers/UPSTREAM.json
 !/svgMapAppLayers/Container.svg
 !/svgMapAppLayers/basemaps/
+!/svgMapAppLayers/commonLib/
 !/svgMapAppLayers/geoCoders/
 /svgMapAppLayers/geoCoders/*
 !/svgMapAppLayers/geoCoders/geohashCoder/
 !/svgMapAppLayers/appLayers/
 /svgMapAppLayers/appLayers/*
 !/svgMapAppLayers/appLayers/eStatPopulation/
+!/svgMapAppLayers/appLayers/moj/
 !/svgMapAppLayers/appLayers/okayamaUniversity/
 !/svgMapAppLayers/appLayers/jma/
 !/svgMapAppLayers/appLayers/usgsEq/

@@ -23,6 +23,7 @@ export const MAP_MESSAGES = Object.freeze({
   runtimeLayerReady: 'runtime:layerReady',
   runtimeViewportChanged: 'runtime:viewportChanged',
   runtimeLayerStateChanged: 'runtime:layerStateChanged',
+  runtimeLayerUiVisibilityChanged: 'runtime:layerUiVisibilityChanged',
   runtimeStartupMetrics: 'runtime:startupMetrics',
 
   mapSetViewport: 'map:setViewport',

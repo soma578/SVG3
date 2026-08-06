@@ -30,7 +30,7 @@
     },
     "publishedAt": "2026-07-21T00:00:00+09:00"
   },
-  "contentDigest": "sha256-51f1acc06a89965dd68e358e3949bb4a707c9f4a790c3a539f751d20f678003b",
+  "contentDigest": "sha256-cf60960b838c048667a91c4f11f9ccb9a351ed12473abe634d05a4fed49be70c",
   "portability": {
     "pathIndependent": true,
     "crossOrigin": false,
@@ -46,7 +46,7 @@
         "id": "representative-pins",
         "version": "1.2.2",
         "manifest": "representative-pins/runtime.package.json",
-        "integrity": "sha256-4badbc0397df39c7b01036c79b6632dadc5d755709c461d2b2163edb1bf5d345"
+        "integrity": "sha256-399bc79b19189dbedf37e0b59d5c787e46e106caae021ecc368796fcebac1522"
       },
       {
         "id": "svgmap-slawa-client",
@@ -71,7 +71,7 @@
     {
       "path": "layer.manifest.json",
       "bytes": 13073,
-      "sha256": "9572b3a0dafb677602143a737ea10ffc4d66c216e1dbc16c36cfacbe8065ec84"
+      "sha256": "667f676b0faca86fae54dff6f05a2f8e740f1e3840d8ab8f273fe3ebd3310002"
     },
     {
       "path": "map/data/districts/33101.svg",
@@ -285,8 +285,8 @@
     },
     {
       "path": "map/layers/portable/representative-pins/mapMessages.js",
-      "bytes": 2147,
-      "sha256": "8e23fe77c82c61da342b1016f8eddd1e128d69ed6811eb9d2e70700e9899afe8"
+      "bytes": 2218,
+      "sha256": "cf2339cb215fab4f15971bb3b765c965ef69a7ef5ed10327606517180582c25f"
     },
     {
       "path": "map/layers/portable/representative-pins/observationFreshness.js",
@@ -386,7 +386,7 @@
     {
       "path": "map/layers/portable/team-activity/layer.package.json",
       "bytes": 3118,
-      "sha256": "7ed8b2fb8e08ae1e7e9ad393d5ddbd04d49a5196b5259a665a6ffe90c1f7dc7c"
+      "sha256": "b911947a2fbb540963e89c631eca4dcad46e389c5455389c4591ef933aa0d3fd"
     },
     {
       "path": "map/layers/portable/team-activity/teamActivityAreaLayer.html",

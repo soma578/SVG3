@@ -28,7 +28,7 @@
     },
     "publishedAt": "2026-07-21T00:00:00+09:00"
   },
-  "contentDigest": "sha256-1b7fcbf9aeb67c7e0495290d47301acdc83a385e32a193914b5e81f24b954888",
+  "contentDigest": "sha256-195053c0b908387a30426861b545b8073aaf924b383e6a12940f4a6f181dc418",
   "portability": {
     "pathIndependent": true,
     "crossOrigin": false,
@@ -44,7 +44,7 @@
         "id": "representative-pins",
         "version": "1.2.2",
         "manifest": "representative-pins/runtime.package.json",
-        "integrity": "sha256-4badbc0397df39c7b01036c79b6632dadc5d755709c461d2b2163edb1bf5d345"
+        "integrity": "sha256-399bc79b19189dbedf37e0b59d5c787e46e106caae021ecc368796fcebac1522"
       },
       {
         "id": "svgmap-slawa-client",
@@ -69,7 +69,7 @@
     {
       "path": "layer.manifest.json",
       "bytes": 11787,
-      "sha256": "6b005d9b061a41615ec8e26d38d4ed1b878ab3d416ed4e2a608b7dcd3208c0cd"
+      "sha256": "1ec718eef2c2ebc86961afd1ad47d12a823abd42323f8e24744bd8f37223fff4"
     },
     {
       "path": "map/data/qtct/roadClosure/okayama/detail.json",
@@ -273,8 +273,8 @@
     },
     {
       "path": "map/layers/portable/representative-pins/mapMessages.js",
-      "bytes": 2147,
-      "sha256": "8e23fe77c82c61da342b1016f8eddd1e128d69ed6811eb9d2e70700e9899afe8"
+      "bytes": 2218,
+      "sha256": "cf2339cb215fab4f15971bb3b765c965ef69a7ef5ed10327606517180582c25f"
     },
     {
       "path": "map/layers/portable/representative-pins/observationFreshness.js",
@@ -329,7 +329,7 @@
     {
       "path": "map/layers/portable/road-closure/layer.package.json",
       "bytes": 2269,
-      "sha256": "81da77f379281d8b256454d750da005c6eb19636ea277a6e2d037f67cf59bc7d"
+      "sha256": "72eb002b9f9509c320bbf9f3ec2a8be2a1e52b242108586cfd51eff1e3f2f0ae"
     },
     {
       "path": "map/layers/portable/road-closure/roadClosureDetail.js",
