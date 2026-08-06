@@ -1,0 +1,405 @@
+{
+  "region": "shiga",
+  "label": "滋賀県",
+  "municipalities": [
+    {
+      "id": "25201",
+      "label": "大津市",
+      "municipalityCodes": [
+        "25201"
+      ],
+      "shelterCount": 265,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.07797,
+        "lon": 135.92871,
+        "latSpan": 0.537342,
+        "lonSpan": 0.296218
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shiga/districts-svg/25201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "25202",
+      "label": "彦根市",
+      "municipalityCodes": [
+        "25202"
+      ],
+      "shelterCount": 63,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.273085,
+        "lon": 136.217615,
+        "latSpan": 0.215605,
+        "lonSpan": 0.348179
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shiga/districts-svg/25202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "25203",
+      "label": "長浜市",
+      "municipalityCodes": [
+        "25203"
+      ],
+      "shelterCount": 78,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.52119,
+        "lon": 136.22725,
+        "latSpan": 0.474604,
+        "lonSpan": 0.35256
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shiga/districts-svg/25203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "25204",
+      "label": "近江八幡市",
+      "municipalityCodes": [
+        "25204"
+      ],
+      "shelterCount": 41,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.167175,
+        "lon": 136.08934,
+        "latSpan": 0.240045,
+        "lonSpan": 0.243074
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shiga/districts-svg/25204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "25206",
+      "label": "草津市",
+      "municipalityCodes": [
+        "25206"
+      ],
+      "shelterCount": 71,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.03015,
+        "lon": 135.943575,
+        "latSpan": 0.150722,
+        "lonSpan": 0.144599
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shiga/districts-svg/25206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "25207",
+      "label": "守山市",
+      "municipalityCodes": [
+        "25207"
+      ],
+      "shelterCount": 55,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.09205,
+        "lon": 135.9696,
+        "latSpan": 0.143416,
+        "lonSpan": 0.120536
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shiga/districts-svg/25207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "25208",
+      "label": "栗東市",
+      "municipalityCodes": [
+        "25208"
+      ],
+      "shelterCount": 55,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.99521,
+        "lon": 136.009895,
+        "latSpan": 0.144248,
+        "lonSpan": 0.133211
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shiga/districts-svg/25208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "25209",
+      "label": "甲賀市",
+      "municipalityCodes": [
+        "25209"
+      ],
+      "shelterCount": 116,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.9106,
+        "lon": 136.181175,
+        "latSpan": 0.312078,
+        "lonSpan": 0.624481
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shiga/districts-svg/25209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "25210",
+      "label": "野洲市",
+      "municipalityCodes": [
+        "25210"
+      ],
+      "shelterCount": 36,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.107775,
+        "lon": 136.01934,
+        "latSpan": 0.214331,
+        "lonSpan": 0.156078
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shiga/districts-svg/25210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "25211",
+      "label": "湖南市",
+      "municipalityCodes": [
+        "25211"
+      ],
+      "shelterCount": 48,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.00219,
+        "lon": 136.089855,
+        "latSpan": 0.141856,
+        "lonSpan": 0.136045
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shiga/districts-svg/25211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "25212",
+      "label": "高島市",
+      "municipalityCodes": [
+        "25212"
+      ],
+      "shelterCount": 58,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.38592,
+        "lon": 135.95846,
+        "latSpan": 0.402064,
+        "lonSpan": 0.505414
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shiga/districts-svg/25212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "25213",
+      "label": "東近江市",
+      "municipalityCodes": [
+        "25213"
+      ],
+      "shelterCount": 88,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.132855,
+        "lon": 136.270115,
+        "latSpan": 0.309361,
+        "lonSpan": 0.480701
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shiga/districts-svg/25213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "25214",
+      "label": "米原市",
+      "municipalityCodes": [
+        "25214"
+      ],
+      "shelterCount": 42,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.417025,
+        "lon": 136.327065,
+        "latSpan": 0.371527,
+        "lonSpan": 0.304941
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shiga/districts-svg/25214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "25383",
+      "label": "日野町",
+      "municipalityCodes": [
+        "25383"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.012955,
+        "lon": 136.26205,
+        "latSpan": 0.146679,
+        "lonSpan": 0.212056
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shiga/districts-svg/25383.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "25384",
+      "label": "竜王町",
+      "municipalityCodes": [
+        "25384"
+      ],
+      "shelterCount": 6,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.058215,
+        "lon": 136.11836,
+        "latSpan": 0.101283,
+        "lonSpan": 0.117494
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shiga/districts-svg/25384.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "25425",
+      "label": "愛荘町",
+      "municipalityCodes": [
+        "25425"
+      ],
+      "shelterCount": 12,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.168085,
+        "lon": 136.26427,
+        "latSpan": 0.080717,
+        "lonSpan": 0.185666
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shiga/districts-svg/25425.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "25441",
+      "label": "豊郷町",
+      "municipalityCodes": [
+        "25441"
+      ],
+      "shelterCount": 6,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.197705,
+        "lon": 136.235275,
+        "latSpan": 0.054197,
+        "lonSpan": 0.056641
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shiga/districts-svg/25441.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "25442",
+      "label": "甲良町",
+      "municipalityCodes": [
+        "25442"
+      ],
+      "shelterCount": 8,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.204805,
+        "lon": 136.264115,
+        "latSpan": 0.065195,
+        "lonSpan": 0.069043
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shiga/districts-svg/25442.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "25443",
+      "label": "多賀町",
+      "municipalityCodes": [
+        "25443"
+      ],
+      "shelterCount": 14,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.20952,
+        "lon": 136.337825,
+        "latSpan": 0.201734,
+        "lonSpan": 0.208351
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shiga/districts-svg/25443.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

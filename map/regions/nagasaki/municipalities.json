@@ -1,0 +1,447 @@
+{
+  "region": "nagasaki",
+  "label": "長崎県",
+  "municipalities": [
+    {
+      "id": "42201",
+      "label": "長崎市",
+      "municipalityCodes": [
+        "42201"
+      ],
+      "shelterCount": 494,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.758895,
+        "lon": 129.77331,
+        "latSpan": 0.545181,
+        "lonSpan": 0.573326
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagasaki/districts-svg/42201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "42202",
+      "label": "佐世保市",
+      "municipalityCodes": [
+        "42202"
+      ],
+      "shelterCount": 267,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.19638,
+        "lon": 129.464285,
+        "latSpan": 0.380354,
+        "lonSpan": 1.061827
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagasaki/districts-svg/42202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "42203",
+      "label": "島原市",
+      "municipalityCodes": [
+        "42203"
+      ],
+      "shelterCount": 78,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.80267,
+        "lon": 130.327035,
+        "latSpan": 0.169416,
+        "lonSpan": 0.140335
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagasaki/districts-svg/42203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "42204",
+      "label": "諫早市",
+      "municipalityCodes": [
+        "42204"
+      ],
+      "shelterCount": 145,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.863685,
+        "lon": 130.044515,
+        "latSpan": 0.290407,
+        "lonSpan": 0.413595
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagasaki/districts-svg/42204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "42205",
+      "label": "大村市",
+      "municipalityCodes": [
+        "42205"
+      ],
+      "shelterCount": 156,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.924015,
+        "lon": 129.99383,
+        "latSpan": 0.208247,
+        "lonSpan": 0.239122
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagasaki/districts-svg/42205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "42207",
+      "label": "平戸市",
+      "municipalityCodes": [
+        "42207"
+      ],
+      "shelterCount": 133,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.389945,
+        "lon": 129.482185,
+        "latSpan": 0.573703,
+        "lonSpan": 0.391989
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagasaki/districts-svg/42207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "42208",
+      "label": "松浦市",
+      "municipalityCodes": [
+        "42208"
+      ],
+      "shelterCount": 51,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.36869,
+        "lon": 129.74509,
+        "latSpan": 0.264576,
+        "lonSpan": 0.299494
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagasaki/districts-svg/42208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "42209",
+      "label": "対馬市",
+      "municipalityCodes": [
+        "42209"
+      ],
+      "shelterCount": 193,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.395985,
+        "lon": 129.33213,
+        "latSpan": 0.811291,
+        "lonSpan": 0.430118
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagasaki/districts-svg/42209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "42210",
+      "label": "壱岐市",
+      "municipalityCodes": [
+        "42210"
+      ],
+      "shelterCount": 62,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.78483,
+        "lon": 129.74678,
+        "latSpan": 0.224068,
+        "lonSpan": 0.320268
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagasaki/districts-svg/42210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "42211",
+      "label": "五島市",
+      "municipalityCodes": [
+        "42211"
+      ],
+      "shelterCount": 44,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.44184,
+        "lon": 128.67586,
+        "latSpan": 1.183182,
+        "lonSpan": 0.862654
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagasaki/districts-svg/42211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "42212",
+      "label": "西海市",
+      "municipalityCodes": [
+        "42212"
+      ],
+      "shelterCount": 57,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.997385,
+        "lon": 129.52327,
+        "latSpan": 0.264953,
+        "lonSpan": 0.78299
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagasaki/districts-svg/42212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "42213",
+      "label": "雲仙市",
+      "municipalityCodes": [
+        "42213"
+      ],
+      "shelterCount": 115,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.76845,
+        "lon": 130.223025,
+        "latSpan": 0.293592,
+        "lonSpan": 0.250627
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagasaki/districts-svg/42213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "42214",
+      "label": "南島原市",
+      "municipalityCodes": [
+        "42214"
+      ],
+      "shelterCount": 74,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.6708,
+        "lon": 130.250895,
+        "latSpan": 0.206882,
+        "lonSpan": 0.317187
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagasaki/districts-svg/42214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "42307",
+      "label": "長与町",
+      "municipalityCodes": [
+        "42307"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.845985,
+        "lon": 129.885305,
+        "latSpan": 0.129207,
+        "lonSpan": 0.101049
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagasaki/districts-svg/42307.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "42308",
+      "label": "時津町",
+      "municipalityCodes": [
+        "42308"
+      ],
+      "shelterCount": 43,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.850635,
+        "lon": 129.82976,
+        "latSpan": 0.106665,
+        "lonSpan": 0.100178
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagasaki/districts-svg/42308.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "42321",
+      "label": "東彼杵町",
+      "municipalityCodes": [
+        "42321"
+      ],
+      "shelterCount": 14,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.036985,
+        "lon": 129.959735,
+        "latSpan": 0.139113,
+        "lonSpan": 0.215527
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagasaki/districts-svg/42321.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "42322",
+      "label": "川棚町",
+      "municipalityCodes": [
+        "42322"
+      ],
+      "shelterCount": 13,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.073165,
+        "lon": 129.864285,
+        "latSpan": 0.094705,
+        "lonSpan": 0.158483
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagasaki/districts-svg/42322.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "42323",
+      "label": "波佐見町",
+      "municipalityCodes": [
+        "42323"
+      ],
+      "shelterCount": 41,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.13287,
+        "lon": 129.900095,
+        "latSpan": 0.0845,
+        "lonSpan": 0.147147
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagasaki/districts-svg/42323.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "42383",
+      "label": "小値賀町",
+      "municipalityCodes": [
+        "42383"
+      ],
+      "shelterCount": 16,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.189015,
+        "lon": 129.01869,
+        "latSpan": 0.101595,
+        "lonSpan": 0.324584
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagasaki/districts-svg/42383.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "42391",
+      "label": "佐々町",
+      "municipalityCodes": [
+        "42391"
+      ],
+      "shelterCount": 15,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.24312,
+        "lon": 129.65676,
+        "latSpan": 0.093262,
+        "lonSpan": 0.09022
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagasaki/districts-svg/42391.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "42411",
+      "label": "新上五島町",
+      "municipalityCodes": [
+        "42411"
+      ],
+      "shelterCount": 114,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.988675,
+        "lon": 129.06364,
+        "latSpan": 0.456495,
+        "lonSpan": 0.345592
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagasaki/districts-svg/42411.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

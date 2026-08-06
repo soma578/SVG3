@@ -1,0 +1,720 @@
+{
+  "region": "kochi",
+  "label": "高知県",
+  "municipalities": [
+    {
+      "id": "39201",
+      "label": "高知市",
+      "municipalityCodes": [
+        "39201"
+      ],
+      "shelterCount": 587,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.56991,
+        "lon": 133.50985,
+        "latSpan": 0.291148,
+        "lonSpan": 0.3003
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39202",
+      "label": "室戸市",
+      "municipalityCodes": [
+        "39202"
+      ],
+      "shelterCount": 54,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.366,
+        "lon": 134.134595,
+        "latSpan": 0.316394,
+        "lonSpan": 0.261859
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39203",
+      "label": "安芸市",
+      "municipalityCodes": [
+        "39203"
+      ],
+      "shelterCount": 132,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.582825,
+        "lon": 133.94508,
+        "latSpan": 0.355225,
+        "lonSpan": 0.325052
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39204",
+      "label": "南国市",
+      "municipalityCodes": [
+        "39204"
+      ],
+      "shelterCount": 135,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.613825,
+        "lon": 133.62254,
+        "latSpan": 0.238719,
+        "lonSpan": 0.162942
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39205",
+      "label": "土佐市",
+      "municipalityCodes": [
+        "39205"
+      ],
+      "shelterCount": 119,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.47142,
+        "lon": 133.392375,
+        "latSpan": 0.134758,
+        "lonSpan": 0.226551
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39206",
+      "label": "須崎市",
+      "municipalityCodes": [
+        "39206"
+      ],
+      "shelterCount": 96,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.40431,
+        "lon": 133.309115,
+        "latSpan": 0.165724,
+        "lonSpan": 0.347451
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39208",
+      "label": "宿毛市",
+      "municipalityCodes": [
+        "39208"
+      ],
+      "shelterCount": 143,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.905825,
+        "lon": 132.655475,
+        "latSpan": 0.528619,
+        "lonSpan": 0.455429
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39209",
+      "label": "土佐清水市",
+      "municipalityCodes": [
+        "39209"
+      ],
+      "shelterCount": 135,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.829615,
+        "lon": 132.89141,
+        "latSpan": 0.277953,
+        "lonSpan": 0.338754
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39210",
+      "label": "四万十市",
+      "municipalityCodes": [
+        "39210"
+      ],
+      "shelterCount": 97,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.085575,
+        "lon": 132.835855,
+        "latSpan": 0.459329,
+        "lonSpan": 0.574561
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39211",
+      "label": "香南市",
+      "municipalityCodes": [
+        "39211"
+      ],
+      "shelterCount": 84,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.589215,
+        "lon": 133.78309,
+        "latSpan": 0.190957,
+        "lonSpan": 0.268736
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39212",
+      "label": "香美市",
+      "municipalityCodes": [
+        "39212"
+      ],
+      "shelterCount": 112,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.71023,
+        "lon": 133.832525,
+        "latSpan": 0.33943,
+        "lonSpan": 0.613171
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39301",
+      "label": "東洋町",
+      "municipalityCodes": [
+        "39301"
+      ],
+      "shelterCount": 41,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.504825,
+        "lon": 134.253295,
+        "latSpan": 0.163059,
+        "lonSpan": 0.156429
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39301.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39302",
+      "label": "奈半利町",
+      "municipalityCodes": [
+        "39302"
+      ],
+      "shelterCount": 49,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.413055,
+        "lon": 134.059785,
+        "latSpan": 0.090077,
+        "lonSpan": 0.126425
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39302.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39303",
+      "label": "田野町",
+      "municipalityCodes": [
+        "39303"
+      ],
+      "shelterCount": 18,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.440955,
+        "lon": 134.011235,
+        "latSpan": 0.048217,
+        "lonSpan": 0.049231
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39303.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39304",
+      "label": "安田町",
+      "municipalityCodes": [
+        "39304"
+      ],
+      "shelterCount": 44,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.486625,
+        "lon": 134.012705,
+        "latSpan": 0.152607,
+        "lonSpan": 0.146679
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39304.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39305",
+      "label": "北川村",
+      "municipalityCodes": [
+        "39305"
+      ],
+      "shelterCount": 27,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.523325,
+        "lon": 134.117345,
+        "latSpan": 0.229775,
+        "lonSpan": 0.256165
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39305.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39306",
+      "label": "馬路村",
+      "municipalityCodes": [
+        "39306"
+      ],
+      "shelterCount": 8,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.611465,
+        "lon": 134.09555,
+        "latSpan": 0.219843,
+        "lonSpan": 0.230412
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39306.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39307",
+      "label": "芸西村",
+      "municipalityCodes": [
+        "39307"
+      ],
+      "shelterCount": 61,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.55417,
+        "lon": 133.82105,
+        "latSpan": 0.101062,
+        "lonSpan": 0.13273
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39307.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39341",
+      "label": "本山町",
+      "municipalityCodes": [
+        "39341"
+      ],
+      "shelterCount": 28,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.79194,
+        "lon": 133.57488,
+        "latSpan": 0.234572,
+        "lonSpan": 0.17771
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39341.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39344",
+      "label": "大豊町",
+      "municipalityCodes": [
+        "39344"
+      ],
+      "shelterCount": 82,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.783885,
+        "lon": 133.726775,
+        "latSpan": 0.258635,
+        "lonSpan": 0.381511
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39344.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39363",
+      "label": "土佐町",
+      "municipalityCodes": [
+        "39363"
+      ],
+      "shelterCount": 57,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.74876,
+        "lon": 133.471235,
+        "latSpan": 0.226512,
+        "lonSpan": 0.291577
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39363.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39364",
+      "label": "大川村",
+      "municipalityCodes": [
+        "39364"
+      ],
+      "shelterCount": 6,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.797375,
+        "lon": 133.41008,
+        "latSpan": 0.110513,
+        "lonSpan": 0.216502
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39364.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39386",
+      "label": "いの町",
+      "municipalityCodes": [
+        "39386"
+      ],
+      "shelterCount": 132,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.670875,
+        "lon": 133.31617,
+        "latSpan": 0.418119,
+        "lonSpan": 0.411658
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39386.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39387",
+      "label": "仁淀川町",
+      "municipalityCodes": [
+        "39387"
+      ],
+      "shelterCount": 60,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.58677,
+        "lon": 133.124075,
+        "latSpan": 0.374452,
+        "lonSpan": 0.287755
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39387.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39401",
+      "label": "中土佐町",
+      "municipalityCodes": [
+        "39401"
+      ],
+      "shelterCount": 49,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.328655,
+        "lon": 133.157585,
+        "latSpan": 0.241735,
+        "lonSpan": 0.277251
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39401.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39402",
+      "label": "佐川町",
+      "municipalityCodes": [
+        "39402"
+      ],
+      "shelterCount": 93,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.49962,
+        "lon": 133.268885,
+        "latSpan": 0.153218,
+        "lonSpan": 0.193245
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39402.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39403",
+      "label": "越知町",
+      "municipalityCodes": [
+        "39403"
+      ],
+      "shelterCount": 63,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.53866,
+        "lon": 133.22844,
+        "latSpan": 0.193076,
+        "lonSpan": 0.213486
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39403.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39405",
+      "label": "梼原町",
+      "municipalityCodes": [
+        "39405"
+      ],
+      "shelterCount": 10,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.380835,
+        "lon": 132.921025,
+        "latSpan": 0.255723,
+        "lonSpan": 0.297687
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39405.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39410",
+      "label": "日高村",
+      "municipalityCodes": [
+        "39410"
+      ],
+      "shelterCount": 62,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.539775,
+        "lon": 133.350515,
+        "latSpan": 0.106769,
+        "lonSpan": 0.139711
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39410.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39411",
+      "label": "津野町",
+      "municipalityCodes": [
+        "39411"
+      ],
+      "shelterCount": 20,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.41219,
+        "lon": 133.10717,
+        "latSpan": 0.179972,
+        "lonSpan": 0.392782
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39411.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39412",
+      "label": "四万十町",
+      "municipalityCodes": [
+        "39412"
+      ],
+      "shelterCount": 206,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.236985,
+        "lon": 133.021615,
+        "latSpan": 0.309881,
+        "lonSpan": 0.609635
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39412.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39424",
+      "label": "大月町",
+      "municipalityCodes": [
+        "39424"
+      ],
+      "shelterCount": 136,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.816405,
+        "lon": 132.69158,
+        "latSpan": 0.186485,
+        "lonSpan": 0.240734
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39424.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39427",
+      "label": "三原村",
+      "municipalityCodes": [
+        "39427"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.902155,
+        "lon": 132.841935,
+        "latSpan": 0.111917,
+        "lonSpan": 0.197509
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39427.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "39428",
+      "label": "黒潮町",
+      "municipalityCodes": [
+        "39428"
+      ],
+      "shelterCount": 201,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.083405,
+        "lon": 133.067945,
+        "latSpan": 0.276107,
+        "lonSpan": 0.299689
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kochi/districts-svg/39428.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

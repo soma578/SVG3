@@ -1,0 +1,959 @@
+{
+  "region": "kumamoto",
+  "label": "熊本県",
+  "municipalities": [
+    {
+      "id": "43100",
+      "label": "熊本市",
+      "municipalityCodes": [
+        "43101",
+        "43102",
+        "43103",
+        "43104",
+        "43105"
+      ],
+      "shelterCount": 316,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.8201,
+        "lon": 130.699925,
+        "latSpan": 0.415376,
+        "lonSpan": 0.333801
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43101.svg",
+        "/data/kumamoto/districts-svg/43102.svg",
+        "/data/kumamoto/districts-svg/43103.svg",
+        "/data/kumamoto/districts-svg/43104.svg",
+        "/data/kumamoto/districts-svg/43105.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43202",
+      "label": "八代市",
+      "municipalityCodes": [
+        "43202"
+      ],
+      "shelterCount": 121,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.471125,
+        "lon": 130.758205,
+        "latSpan": 0.340587,
+        "lonSpan": 0.695253
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43203",
+      "label": "人吉市",
+      "municipalityCodes": [
+        "43203"
+      ],
+      "shelterCount": 33,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.19424,
+        "lon": 130.76501,
+        "latSpan": 0.258232,
+        "lonSpan": 0.294762
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43204",
+      "label": "荒尾市",
+      "municipalityCodes": [
+        "43204"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.97435,
+        "lon": 130.47244,
+        "latSpan": 0.097942,
+        "lonSpan": 0.15158
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43205",
+      "label": "水俣市",
+      "municipalityCodes": [
+        "43205"
+      ],
+      "shelterCount": 66,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.17553,
+        "lon": 130.47847,
+        "latSpan": 0.162838,
+        "lonSpan": 0.307476
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43206",
+      "label": "玉名市",
+      "municipalityCodes": [
+        "43206"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.918585,
+        "lon": 130.55402,
+        "latSpan": 0.199017,
+        "lonSpan": 0.201604
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43208",
+      "label": "山鹿市",
+      "municipalityCodes": [
+        "43208"
+      ],
+      "shelterCount": 41,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.05176,
+        "lon": 130.737225,
+        "latSpan": 0.31083,
+        "lonSpan": 0.280319
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43210",
+      "label": "菊池市",
+      "municipalityCodes": [
+        "43210"
+      ],
+      "shelterCount": 65,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.998275,
+        "lon": 130.84928,
+        "latSpan": 0.251459,
+        "lonSpan": 0.314574
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43211",
+      "label": "宇土市",
+      "municipalityCodes": [
+        "43211"
+      ],
+      "shelterCount": 70,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.68182,
+        "lon": 130.60812,
+        "latSpan": 0.092274,
+        "lonSpan": 0.28249
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43212",
+      "label": "上天草市",
+      "municipalityCodes": [
+        "43212"
+      ],
+      "shelterCount": 60,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.4963,
+        "lon": 130.396135,
+        "latSpan": 0.336882,
+        "lonSpan": 0.237263
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43213",
+      "label": "宇城市",
+      "municipalityCodes": [
+        "43213"
+      ],
+      "shelterCount": 44,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.62001,
+        "lon": 130.614655,
+        "latSpan": 0.158912,
+        "lonSpan": 0.436943
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43214",
+      "label": "阿蘇市",
+      "municipalityCodes": [
+        "43214"
+      ],
+      "shelterCount": 48,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.96012,
+        "lon": 131.09826,
+        "latSpan": 0.22243,
+        "lonSpan": 0.404404
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43215",
+      "label": "天草市",
+      "municipalityCodes": [
+        "43215"
+      ],
+      "shelterCount": 255,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.348205,
+        "lon": 130.177545,
+        "latSpan": 0.530673,
+        "lonSpan": 0.554333
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43215.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43216",
+      "label": "合志市",
+      "municipalityCodes": [
+        "43216"
+      ],
+      "shelterCount": 50,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.88974,
+        "lon": 130.78355,
+        "latSpan": 0.098254,
+        "lonSpan": 0.165282
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43216.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43348",
+      "label": "美里町",
+      "municipalityCodes": [
+        "43348"
+      ],
+      "shelterCount": 11,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.612725,
+        "lon": 130.87535,
+        "latSpan": 0.135083,
+        "lonSpan": 0.264056
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43348.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43364",
+      "label": "玉東町",
+      "municipalityCodes": [
+        "43364"
+      ],
+      "shelterCount": 13,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.90282,
+        "lon": 130.62913,
+        "latSpan": 0.108888,
+        "lonSpan": 0.059358
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43364.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43367",
+      "label": "南関町",
+      "municipalityCodes": [
+        "43367"
+      ],
+      "shelterCount": 16,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.0378,
+        "lon": 130.54936,
+        "latSpan": 0.12857,
+        "lonSpan": 0.136838
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43367.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43368",
+      "label": "長洲町",
+      "municipalityCodes": [
+        "43368"
+      ],
+      "shelterCount": 25,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.926515,
+        "lon": 130.46762,
+        "latSpan": 0.067795,
+        "lonSpan": 0.077584
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43368.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43369",
+      "label": "和水町",
+      "municipalityCodes": [
+        "43369"
+      ],
+      "shelterCount": 35,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.028635,
+        "lon": 130.610215,
+        "latSpan": 0.227201,
+        "lonSpan": 0.125879
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43369.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43403",
+      "label": "大津町",
+      "municipalityCodes": [
+        "43403"
+      ],
+      "shelterCount": 36,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.89524,
+        "lon": 130.910065,
+        "latSpan": 0.151918,
+        "lonSpan": 0.203853
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43403.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43404",
+      "label": "菊陽町",
+      "municipalityCodes": [
+        "43404"
+      ],
+      "shelterCount": 32,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.85942,
+        "lon": 130.81148,
+        "latSpan": 0.097266,
+        "lonSpan": 0.163592
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43404.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43423",
+      "label": "南小国町",
+      "municipalityCodes": [
+        "43423"
+      ],
+      "shelterCount": 14,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.067795,
+        "lon": 131.098425,
+        "latSpan": 0.126009,
+        "lonSpan": 0.260559
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43423.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43424",
+      "label": "小国町",
+      "municipalityCodes": [
+        "43424"
+      ],
+      "shelterCount": 63,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.1446,
+        "lon": 131.075815,
+        "latSpan": 0.131352,
+        "lonSpan": 0.253123
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43424.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43425",
+      "label": "産山村",
+      "municipalityCodes": [
+        "43425"
+      ],
+      "shelterCount": 12,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.01591,
+        "lon": 131.20722,
+        "latSpan": 0.14339,
+        "lonSpan": 0.145574
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43425.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43428",
+      "label": "高森町",
+      "municipalityCodes": [
+        "43428"
+      ],
+      "shelterCount": 25,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.831045,
+        "lon": 131.21202,
+        "latSpan": 0.201773,
+        "lonSpan": 0.305474
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43428.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43432",
+      "label": "西原村",
+      "municipalityCodes": [
+        "43432"
+      ],
+      "shelterCount": 6,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.82337,
+        "lon": 130.933875,
+        "latSpan": 0.11401,
+        "lonSpan": 0.161317
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43432.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43433",
+      "label": "南阿蘇村",
+      "municipalityCodes": [
+        "43433"
+      ],
+      "shelterCount": 52,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.84676,
+        "lon": 131.03215,
+        "latSpan": 0.164086,
+        "lonSpan": 0.2171
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43433.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43441",
+      "label": "御船町",
+      "municipalityCodes": [
+        "43441"
+      ],
+      "shelterCount": 40,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.72714,
+        "lon": 130.858655,
+        "latSpan": 0.165594,
+        "lonSpan": 0.264173
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43441.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43442",
+      "label": "嘉島町",
+      "municipalityCodes": [
+        "43442"
+      ],
+      "shelterCount": 11,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.74611,
+        "lon": 130.74628,
+        "latSpan": 0.046228,
+        "lonSpan": 0.132574
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43442.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43443",
+      "label": "益城町",
+      "municipalityCodes": [
+        "43443"
+      ],
+      "shelterCount": 75,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.785495,
+        "lon": 130.834045,
+        "latSpan": 0.141219,
+        "lonSpan": 0.145405
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43443.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43444",
+      "label": "甲佐町",
+      "municipalityCodes": [
+        "43444"
+      ],
+      "shelterCount": 30,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.6733,
+        "lon": 130.814765,
+        "latSpan": 0.122278,
+        "lonSpan": 0.159523
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43444.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43447",
+      "label": "山都町",
+      "municipalityCodes": [
+        "43447"
+      ],
+      "shelterCount": 73,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.68419,
+        "lon": 131.061445,
+        "latSpan": 0.350922,
+        "lonSpan": 0.451269
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43447.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43468",
+      "label": "氷川町",
+      "municipalityCodes": [
+        "43468"
+      ],
+      "shelterCount": 13,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.57515,
+        "lon": 130.66981,
+        "latSpan": 0.123604,
+        "lonSpan": 0.136786
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43468.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43482",
+      "label": "芦北町",
+      "municipalityCodes": [
+        "43482"
+      ],
+      "shelterCount": 43,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.296405,
+        "lon": 130.55291,
+        "latSpan": 0.296075,
+        "lonSpan": 0.232128
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43482.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43484",
+      "label": "津奈木町",
+      "municipalityCodes": [
+        "43484"
+      ],
+      "shelterCount": 11,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.24964,
+        "lon": 130.45964,
+        "latSpan": 0.104936,
+        "lonSpan": 0.092326
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43484.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43501",
+      "label": "錦町",
+      "municipalityCodes": [
+        "43501"
+      ],
+      "shelterCount": 11,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.18639,
+        "lon": 130.847495,
+        "latSpan": 0.169312,
+        "lonSpan": 0.171431
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43501.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43505",
+      "label": "多良木町",
+      "municipalityCodes": [
+        "43505"
+      ],
+      "shelterCount": 11,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.255545,
+        "lon": 130.997155,
+        "latSpan": 0.268151,
+        "lonSpan": 0.290719
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43505.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43506",
+      "label": "湯前町",
+      "municipalityCodes": [
+        "43506"
+      ],
+      "shelterCount": 7,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.27474,
+        "lon": 131.00893,
+        "latSpan": 0.11804,
+        "lonSpan": 0.117728
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43506.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43507",
+      "label": "水上村",
+      "municipalityCodes": [
+        "43507"
+      ],
+      "shelterCount": 31,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.371585,
+        "lon": 131.02531,
+        "latSpan": 0.237029,
+        "lonSpan": 0.225082
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43507.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43510",
+      "label": "相良村",
+      "municipalityCodes": [
+        "43510"
+      ],
+      "shelterCount": 7,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.29218,
+        "lon": 130.83857,
+        "latSpan": 0.2262,
+        "lonSpan": 0.158184
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43510.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43511",
+      "label": "五木村",
+      "municipalityCodes": [
+        "43511"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.42043,
+        "lon": 130.840625,
+        "latSpan": 0.204204,
+        "lonSpan": 0.312429
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43511.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43512",
+      "label": "山江村",
+      "municipalityCodes": [
+        "43512"
+      ],
+      "shelterCount": 18,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.311095,
+        "lon": 130.75382,
+        "latSpan": 0.212745,
+        "lonSpan": 0.155766
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43512.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43513",
+      "label": "球磨村",
+      "municipalityCodes": [
+        "43513"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.26561,
+        "lon": 130.65686,
+        "latSpan": 0.292864,
+        "lonSpan": 0.201396
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43513.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43514",
+      "label": "あさぎり町",
+      "municipalityCodes": [
+        "43514"
+      ],
+      "shelterCount": 18,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.22086,
+        "lon": 130.92105,
+        "latSpan": 0.2743,
+        "lonSpan": 0.191204
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43514.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "43531",
+      "label": "苓北町",
+      "municipalityCodes": [
+        "43531"
+      ],
+      "shelterCount": 36,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.48652,
+        "lon": 130.07008,
+        "latSpan": 0.148408,
+        "lonSpan": 0.148174
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kumamoto/districts-svg/43531.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

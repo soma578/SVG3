@@ -1,0 +1,510 @@
+{
+  "region": "tokushima",
+  "label": "徳島県",
+  "municipalities": [
+    {
+      "id": "36201",
+      "label": "徳島市",
+      "municipalityCodes": [
+        "36201"
+      ],
+      "shelterCount": 649,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.04272,
+        "lon": 134.514995,
+        "latSpan": 0.227292,
+        "lonSpan": 0.240331
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokushima/districts-svg/36201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "36202",
+      "label": "鳴門市",
+      "municipalityCodes": [
+        "36202"
+      ],
+      "shelterCount": 209,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.1913,
+        "lon": 134.541275,
+        "latSpan": 0.15691,
+        "lonSpan": 0.266201
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokushima/districts-svg/36202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "36203",
+      "label": "小松島市",
+      "municipalityCodes": [
+        "36203"
+      ],
+      "shelterCount": 66,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.984185,
+        "lon": 134.59952,
+        "latSpan": 0.116519,
+        "lonSpan": 0.136656
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokushima/districts-svg/36203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "36204",
+      "label": "阿南市",
+      "municipalityCodes": [
+        "36204"
+      ],
+      "shelterCount": 155,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.88572,
+        "lon": 134.643475,
+        "latSpan": 0.26026,
+        "lonSpan": 0.458159
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokushima/districts-svg/36204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "36205",
+      "label": "吉野川市",
+      "municipalityCodes": [
+        "36205"
+      ],
+      "shelterCount": 84,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.03587,
+        "lon": 134.29302,
+        "latSpan": 0.147134,
+        "lonSpan": 0.28665
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokushima/districts-svg/36205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "36206",
+      "label": "阿波市",
+      "municipalityCodes": [
+        "36206"
+      ],
+      "shelterCount": 42,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.12442,
+        "lon": 134.29042,
+        "latSpan": 0.158262,
+        "lonSpan": 0.288808
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokushima/districts-svg/36206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "36207",
+      "label": "美馬市",
+      "municipalityCodes": [
+        "36207"
+      ],
+      "shelterCount": 50,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.014185,
+        "lon": 134.12767,
+        "latSpan": 0.419731,
+        "lonSpan": 0.332904
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokushima/districts-svg/36207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "36208",
+      "label": "三好市",
+      "municipalityCodes": [
+        "36208"
+      ],
+      "shelterCount": 197,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.95337,
+        "lon": 133.87845,
+        "latSpan": 0.421122,
+        "lonSpan": 0.565578
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokushima/districts-svg/36208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "36301",
+      "label": "勝浦町",
+      "municipalityCodes": [
+        "36301"
+      ],
+      "shelterCount": 70,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.913825,
+        "lon": 134.4999,
+        "latSpan": 0.146263,
+        "lonSpan": 0.181636
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokushima/districts-svg/36301.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "36302",
+      "label": "上勝町",
+      "municipalityCodes": [
+        "36302"
+      ],
+      "shelterCount": 13,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.902915,
+        "lon": 134.377755,
+        "latSpan": 0.141297,
+        "lonSpan": 0.205491
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokushima/districts-svg/36302.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "36321",
+      "label": "佐那河内村",
+      "municipalityCodes": [
+        "36321"
+      ],
+      "shelterCount": 14,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.98683,
+        "lon": 134.449165,
+        "latSpan": 0.09243,
+        "lonSpan": 0.129987
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokushima/districts-svg/36321.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "36341",
+      "label": "石井町",
+      "municipalityCodes": [
+        "36341"
+      ],
+      "shelterCount": 45,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.08239,
+        "lon": 134.43326,
+        "latSpan": 0.078104,
+        "lonSpan": 0.093288
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokushima/districts-svg/36341.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "36342",
+      "label": "神山町",
+      "municipalityCodes": [
+        "36342"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.981935,
+        "lon": 134.336715,
+        "latSpan": 0.195715,
+        "lonSpan": 0.303173
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokushima/districts-svg/36342.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "36368",
+      "label": "那賀町",
+      "municipalityCodes": [
+        "36368"
+      ],
+      "shelterCount": 79,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.800955,
+        "lon": 134.29472,
+        "latSpan": 0.301613,
+        "lonSpan": 0.680914
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokushima/districts-svg/36368.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "36383",
+      "label": "牟岐町",
+      "municipalityCodes": [
+        "36383"
+      ],
+      "shelterCount": 64,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.67612,
+        "lon": 134.43273,
+        "latSpan": 0.122902,
+        "lonSpan": 0.187642
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokushima/districts-svg/36383.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "36387",
+      "label": "美波町",
+      "municipalityCodes": [
+        "36387"
+      ],
+      "shelterCount": 45,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.7491,
+        "lon": 134.53533,
+        "latSpan": 0.17498,
+        "lonSpan": 0.373386
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokushima/districts-svg/36387.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "36388",
+      "label": "海陽町",
+      "municipalityCodes": [
+        "36388"
+      ],
+      "shelterCount": 77,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.636365,
+        "lon": 134.272405,
+        "latSpan": 0.249977,
+        "lonSpan": 0.317655
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokushima/districts-svg/36388.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "36401",
+      "label": "松茂町",
+      "municipalityCodes": [
+        "36401"
+      ],
+      "shelterCount": 55,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.12815,
+        "lon": 134.59262,
+        "latSpan": 0.070798,
+        "lonSpan": 0.085592
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokushima/districts-svg/36401.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "36402",
+      "label": "北島町",
+      "municipalityCodes": [
+        "36402"
+      ],
+      "shelterCount": 31,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.125995,
+        "lon": 134.55115,
+        "latSpan": 0.046241,
+        "lonSpan": 0.061204
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokushima/districts-svg/36402.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "36403",
+      "label": "藍住町",
+      "municipalityCodes": [
+        "36403"
+      ],
+      "shelterCount": 15,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.12721,
+        "lon": 134.493915,
+        "latSpan": 0.053924,
+        "lonSpan": 0.093821
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokushima/districts-svg/36403.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "36404",
+      "label": "板野町",
+      "municipalityCodes": [
+        "36404"
+      ],
+      "shelterCount": 45,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.153415,
+        "lon": 134.44984,
+        "latSpan": 0.101673,
+        "lonSpan": 0.095966
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokushima/districts-svg/36404.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "36405",
+      "label": "上板町",
+      "municipalityCodes": [
+        "36405"
+      ],
+      "shelterCount": 14,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.129795,
+        "lon": 134.41316,
+        "latSpan": 0.110669,
+        "lonSpan": 0.11778
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokushima/districts-svg/36405.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "36468",
+      "label": "つるぎ町",
+      "municipalityCodes": [
+        "36468"
+      ],
+      "shelterCount": 27,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.964485,
+        "lon": 134.046505,
+        "latSpan": 0.243217,
+        "lonSpan": 0.208169
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokushima/districts-svg/36468.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "36489",
+      "label": "東みよし町",
+      "municipalityCodes": [
+        "36489"
+      ],
+      "shelterCount": 15,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.034375,
+        "lon": 133.911475,
+        "latSpan": 0.191945,
+        "lonSpan": 0.240279
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokushima/districts-svg/36489.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

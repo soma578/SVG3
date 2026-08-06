@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>全国防災マップ | 地域選択</title>
+  <link rel="stylesheet" href="./region-picker.css">
+</head>
+<body>
+<main class="picker">
+  <header class="topbar">
+    <a class="brand" href="./region-picker.html" aria-label="全国の地域選択へ戻る">
+      <span class="brand-mark" aria-hidden="true">防</span>
+      <span class="brand-copy">
+        <strong>SVGMap 防災マップ</strong>
+        <small id="scope-label">全国</small>
+      </span>
+    </a>
+    <label class="search-box">
+      <span class="search-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="m20 20-4-4"></path>
+        </svg>
+      </span>
+      <input id="region-search" class="search-input" type="search" autocomplete="off" placeholder="都道府県を検索">
+    </label>
+  </header>
+
+  <section class="workspace">
+    <div class="map-stage">
+      <svg
+        id="japan-map"
+        class="japan-map"
+        viewBox="122.434 0 32.053 22.51"
+        role="group"
+        aria-label="都道府県選択地図"
+      >
+        <g id="prefecture-paths" transform="matrix(1 0 0 -1 0 46.056)"></g>
+      </svg>
+      <div id="map-label" class="map-label" aria-live="polite">全国</div>
+      <div class="map-controls" aria-label="地図操作">
+        <button id="zoom-in" type="button" aria-label="拡大" title="拡大">＋</button>
+        <button id="zoom-out" type="button" aria-label="縮小" title="縮小">−</button>
+        <button id="reset-view" type="button" aria-label="表示位置を戻す" title="表示位置を戻す">↺</button>
+      </div>
+      <div id="loading" class="loading">地域データを読み込み中</div>
+    </div>
+
+    <aside class="region-panel" aria-labelledby="region-heading">
+      <header class="panel-header">
+        <button id="back-button" class="back-button" type="button" aria-label="全国へ戻る" title="全国へ戻る" hidden>←</button>
+        <div>
+          <p id="panel-eyebrow">JAPAN</p>
+          <h1 id="region-heading">都道府県</h1>
+        </div>
+        <span id="region-count" class="region-count">47</span>
+        <button
+          id="panel-toggle"
+          class="panel-toggle"
+          type="button"
+          aria-label="一覧を折りたたむ"
+          aria-expanded="true"
+          title="一覧を折りたたむ"
+        >⌄</button>
+      </header>
+      <ul id="region-list" class="region-list"></ul>
+      <p id="empty-state" class="empty-state" hidden>一致する都道府県がありません</p>
+    </aside>
+  </section>
+</main>
+<script type="module" src="./region-picker.js"></script>
+</body>
+</html>

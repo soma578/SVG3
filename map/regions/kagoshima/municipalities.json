@@ -1,0 +1,909 @@
+{
+  "region": "kagoshima",
+  "label": "鹿児島県",
+  "municipalities": [
+    {
+      "id": "46201",
+      "label": "鹿児島市",
+      "municipalityCodes": [
+        "46201"
+      ],
+      "shelterCount": 696,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 31.522895,
+        "lon": 130.555845,
+        "latSpan": 0.596921,
+        "lonSpan": 0.439699
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46203",
+      "label": "鹿屋市",
+      "municipalityCodes": [
+        "46203"
+      ],
+      "shelterCount": 94,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 31.42237,
+        "lon": 130.8656,
+        "latSpan": 0.505908,
+        "lonSpan": 0.277186
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46204",
+      "label": "枕崎市",
+      "municipalityCodes": [
+        "46204"
+      ],
+      "shelterCount": 19,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 31.29331,
+        "lon": 130.309495,
+        "latSpan": 0.120042,
+        "lonSpan": 0.173199
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46206",
+      "label": "阿久根市",
+      "municipalityCodes": [
+        "46206"
+      ],
+      "shelterCount": 31,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.028245,
+        "lon": 130.23704,
+        "latSpan": 0.259857,
+        "lonSpan": 0.19565
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46208",
+      "label": "出水市",
+      "municipalityCodes": [
+        "46208"
+      ],
+      "shelterCount": 48,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.069225,
+        "lon": 130.36952,
+        "latSpan": 0.258401,
+        "lonSpan": 0.374374
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46210",
+      "label": "指宿市",
+      "municipalityCodes": [
+        "46210"
+      ],
+      "shelterCount": 76,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 31.23013,
+        "lon": 130.59386,
+        "latSpan": 0.192998,
+        "lonSpan": 0.227682
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46213",
+      "label": "西之表市",
+      "municipalityCodes": [
+        "46213"
+      ],
+      "shelterCount": 28,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 30.71353,
+        "lon": 130.959535,
+        "latSpan": 0.327626,
+        "lonSpan": 0.319917
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46214",
+      "label": "垂水市",
+      "municipalityCodes": [
+        "46214"
+      ],
+      "shelterCount": 33,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 31.52299,
+        "lon": 130.759335,
+        "latSpan": 0.283244,
+        "lonSpan": 0.177229
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46215",
+      "label": "薩摩川内市",
+      "municipalityCodes": [
+        "46215"
+      ],
+      "shelterCount": 176,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 31.80019,
+        "lon": 130.12378,
+        "latSpan": 0.46332,
+        "lonSpan": 1.210768
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46215.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46216",
+      "label": "日置市",
+      "municipalityCodes": [
+        "46216"
+      ],
+      "shelterCount": 74,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 31.604905,
+        "lon": 130.391975,
+        "latSpan": 0.335439,
+        "lonSpan": 0.205361
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46216.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46217",
+      "label": "曽於市",
+      "municipalityCodes": [
+        "46217"
+      ],
+      "shelterCount": 60,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 31.668155,
+        "lon": 131.012385,
+        "latSpan": 0.360659,
+        "lonSpan": 0.409591
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46217.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46218",
+      "label": "霧島市",
+      "municipalityCodes": [
+        "46218"
+      ],
+      "shelterCount": 101,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 31.773715,
+        "lon": 130.751735,
+        "latSpan": 0.439283,
+        "lonSpan": 0.421915
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46218.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46219",
+      "label": "いちき串木野市",
+      "municipalityCodes": [
+        "46219"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 31.72443,
+        "lon": 130.27807,
+        "latSpan": 0.171522,
+        "lonSpan": 0.259896
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46219.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46220",
+      "label": "南さつま市",
+      "municipalityCodes": [
+        "46220"
+      ],
+      "shelterCount": 186,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 31.160635,
+        "lon": 129.93387,
+        "latSpan": 0.863109,
+        "lonSpan": 1.33133
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46220.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46221",
+      "label": "志布志市",
+      "municipalityCodes": [
+        "46221"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 31.529605,
+        "lon": 131.06471,
+        "latSpan": 0.270127,
+        "lonSpan": 0.365924
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46221.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46222",
+      "label": "奄美市",
+      "municipalityCodes": [
+        "46222"
+      ],
+      "shelterCount": 240,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 28.36211,
+        "lon": 129.53271,
+        "latSpan": 0.438516,
+        "lonSpan": 0.492492
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46222.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46223",
+      "label": "南九州市",
+      "municipalityCodes": [
+        "46223"
+      ],
+      "shelterCount": 69,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 31.34458,
+        "lon": 130.427885,
+        "latSpan": 0.341094,
+        "lonSpan": 0.302289
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46223.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46224",
+      "label": "伊佐市",
+      "municipalityCodes": [
+        "46224"
+      ],
+      "shelterCount": 34,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.061185,
+        "lon": 130.598515,
+        "latSpan": 0.328419,
+        "lonSpan": 0.319085
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46224.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46225",
+      "label": "姶良市",
+      "municipalityCodes": [
+        "46225"
+      ],
+      "shelterCount": 92,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 31.77639,
+        "lon": 130.597605,
+        "latSpan": 0.2691,
+        "lonSpan": 0.325637
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46225.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46303",
+      "label": "三島村",
+      "municipalityCodes": [
+        "46303"
+      ],
+      "shelterCount": 9,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 30.81194,
+        "lon": 130.17529,
+        "latSpan": 0.102778,
+        "lonSpan": 0.703872
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46303.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46304",
+      "label": "十島村",
+      "municipalityCodes": [
+        "46304"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 29.39949,
+        "lon": 129.45879,
+        "latSpan": 1.58054,
+        "lonSpan": 1.264146
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46304.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46392",
+      "label": "さつま町",
+      "municipalityCodes": [
+        "46392"
+      ],
+      "shelterCount": 43,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 31.92532,
+        "lon": 130.482715,
+        "latSpan": 0.276302,
+        "lonSpan": 0.377247
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46392.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46404",
+      "label": "長島町",
+      "municipalityCodes": [
+        "46404"
+      ],
+      "shelterCount": 80,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.196185,
+        "lon": 130.180025,
+        "latSpan": 0.286559,
+        "lonSpan": 0.231101
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46404.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46452",
+      "label": "湧水町",
+      "municipalityCodes": [
+        "46452"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 31.981195,
+        "lon": 130.718395,
+        "latSpan": 0.201123,
+        "lonSpan": 0.254943
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46452.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46468",
+      "label": "大崎町",
+      "municipalityCodes": [
+        "46468"
+      ],
+      "shelterCount": 20,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 31.474135,
+        "lon": 130.980775,
+        "latSpan": 0.206245,
+        "lonSpan": 0.207077
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46468.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46482",
+      "label": "東串良町",
+      "municipalityCodes": [
+        "46482"
+      ],
+      "shelterCount": 16,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 31.392915,
+        "lon": 130.99399,
+        "latSpan": 0.111397,
+        "lonSpan": 0.10764
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46482.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46490",
+      "label": "錦江町",
+      "municipalityCodes": [
+        "46490"
+      ],
+      "shelterCount": 23,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 31.21597,
+        "lon": 130.85622,
+        "latSpan": 0.244972,
+        "lonSpan": 0.230204
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46490.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46491",
+      "label": "南大隅町",
+      "municipalityCodes": [
+        "46491"
+      ],
+      "shelterCount": 38,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 31.116465,
+        "lon": 130.77717,
+        "latSpan": 0.325169,
+        "lonSpan": 0.322296
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46491.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46492",
+      "label": "肝付町",
+      "municipalityCodes": [
+        "46492"
+      ],
+      "shelterCount": 18,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 31.25469,
+        "lon": 131.007215,
+        "latSpan": 0.368004,
+        "lonSpan": 0.324909
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46492.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46501",
+      "label": "中種子町",
+      "municipalityCodes": [
+        "46501"
+      ],
+      "shelterCount": 12,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 30.543735,
+        "lon": 130.958095,
+        "latSpan": 0.260013,
+        "lonSpan": 0.196911
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46501.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46502",
+      "label": "南種子町",
+      "municipalityCodes": [
+        "46502"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 30.41286,
+        "lon": 130.91501,
+        "latSpan": 0.178802,
+        "lonSpan": 0.172354
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46502.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46505",
+      "label": "屋久島町",
+      "municipalityCodes": [
+        "46505"
+      ],
+      "shelterCount": 52,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 30.35833,
+        "lon": 130.407735,
+        "latSpan": 0.343122,
+        "lonSpan": 0.686361
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46505.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46523",
+      "label": "大和村",
+      "municipalityCodes": [
+        "46523"
+      ],
+      "shelterCount": 23,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 28.33416,
+        "lon": 129.346885,
+        "latSpan": 0.132366,
+        "lonSpan": 0.228397
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46523.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46524",
+      "label": "宇検村",
+      "municipalityCodes": [
+        "46524"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 28.278295,
+        "lon": 129.257175,
+        "latSpan": 0.117325,
+        "lonSpan": 0.317941
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46524.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46525",
+      "label": "瀬戸内町",
+      "municipalityCodes": [
+        "46525"
+      ],
+      "shelterCount": 90,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 28.127835,
+        "lon": 129.282495,
+        "latSpan": 0.331123,
+        "lonSpan": 0.383773
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46525.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46527",
+      "label": "龍郷町",
+      "municipalityCodes": [
+        "46527"
+      ],
+      "shelterCount": 48,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 28.41077,
+        "lon": 129.585975,
+        "latSpan": 0.174538,
+        "lonSpan": 0.163137
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46527.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46529",
+      "label": "喜界町",
+      "municipalityCodes": [
+        "46529"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 28.32646,
+        "lon": 129.97366,
+        "latSpan": 0.135356,
+        "lonSpan": 0.157248
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46529.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46530",
+      "label": "徳之島町",
+      "municipalityCodes": [
+        "46530"
+      ],
+      "shelterCount": 56,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 27.80967,
+        "lon": 128.972115,
+        "latSpan": 0.296114,
+        "lonSpan": 0.167739
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46530.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46531",
+      "label": "天城町",
+      "municipalityCodes": [
+        "46531"
+      ],
+      "shelterCount": 31,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 27.81601,
+        "lon": 128.932,
+        "latSpan": 0.19981,
+        "lonSpan": 0.137488
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46531.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46532",
+      "label": "伊仙町",
+      "municipalityCodes": [
+        "46532"
+      ],
+      "shelterCount": 46,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 27.70708,
+        "lon": 128.940405,
+        "latSpan": 0.119808,
+        "lonSpan": 0.155207
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46532.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46533",
+      "label": "和泊町",
+      "municipalityCodes": [
+        "46533"
+      ],
+      "shelterCount": 38,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 27.401495,
+        "lon": 128.64423,
+        "latSpan": 0.102167,
+        "lonSpan": 0.181012
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46533.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46534",
+      "label": "知名町",
+      "municipalityCodes": [
+        "46534"
+      ],
+      "shelterCount": 32,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 27.367595,
+        "lon": 128.572015,
+        "latSpan": 0.097877,
+        "lonSpan": 0.135109
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46534.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "46535",
+      "label": "与論町",
+      "municipalityCodes": [
+        "46535"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 27.043465,
+        "lon": 128.427625,
+        "latSpan": 0.063635,
+        "lonSpan": 0.078481
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagoshima/districts-svg/46535.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

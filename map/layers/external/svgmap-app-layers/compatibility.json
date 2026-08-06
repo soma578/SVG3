@@ -1,0 +1,4283 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "name": "SVGMap App Layers",
+    "container": "/map/svgMapAppLayers/Container.svg",
+    "publisher": "SVGMap community",
+    "license": {
+      "name": "Mozilla Public License 2.0",
+      "spdx": "MPL-2.0"
+    }
+  },
+  "generatedAt": "2026-08-04",
+  "counts": {
+    "unverified": 134,
+    "limited": 7,
+    "supported": 2,
+    "requires-config": 1,
+    "requires-proxy": 1
+  },
+  "entries": [
+    {
+      "sourceIndex": 1,
+      "title": "sentinel2_2018_WMTS",
+      "href": "./basemaps/dynamicWMTS.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": false,
+      "externalDependencies": [
+        "s2maps.eu",
+        "wiki.openstreetmap.org",
+        "tiles.maps.eox.at"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "sentinel2_2018_WMTS",
+        "class": "basemap switch",
+        "visibility": "hidden",
+        "xlink:href": "./basemaps/dynamicWMTS.svg"
+      }
+    },
+    {
+      "sourceIndex": 2,
+      "title": "DenshiKokudo:orthoPhoto",
+      "href": "./basemaps/dynamicDenshiKokudo2016.svg#map=ort",
+      "status": "limited",
+      "category": "C",
+      "delivery": "online-only",
+      "runtime": "tight",
+      "offline": false,
+      "controller": false,
+      "externalDependencies": [
+        "cyberjapandata.gsi.go.jp"
+      ],
+      "verifiedAt": "2026-08-04",
+      "reason": "上流の動的SVGを固有URLのルートレイヤーとして直接起動し、地理院写真タイルの取得まで動作確認済み",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "DenshiKokudo:orthoPhoto",
+        "class": "basemap switch",
+        "visibility": "hidden",
+        "xlink:href": "./basemaps/dynamicDenshiKokudo2016.svg#map=ort"
+      },
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/gsi-ortho.svg#map=ort"
+    },
+    {
+      "sourceIndex": 3,
+      "title": "DenshiKokudo:淡色",
+      "href": "./basemaps/dynamicDenshiKokudo2016.svg#map=pale",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": false,
+      "externalDependencies": [
+        "maps.gsi.go.jp",
+        "cyberjapandata.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "DenshiKokudo:淡色",
+        "class": "basemap switch",
+        "visibility": "hidden",
+        "xlink:href": "./basemaps/dynamicDenshiKokudo2016.svg#map=pale"
+      }
+    },
+    {
+      "sourceIndex": 4,
+      "title": "DenshiKokudo:relief",
+      "href": "./basemaps/dynamicDenshiKokudo2016.svg#map=relief",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": false,
+      "externalDependencies": [
+        "maps.gsi.go.jp",
+        "cyberjapandata.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "DenshiKokudo:relief",
+        "class": "basemap switch",
+        "visibility": "hidden",
+        "xlink:href": "./basemaps/dynamicDenshiKokudo2016.svg#map=relief"
+      }
+    },
+    {
+      "sourceIndex": 5,
+      "title": "DenshiKokudo",
+      "href": "./basemaps/dynamicDenshiKokudo2016.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": false,
+      "externalDependencies": [
+        "maps.gsi.go.jp",
+        "cyberjapandata.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "DenshiKokudo",
+        "class": "basemap switch",
+        "visibility": "hidden",
+        "xlink:href": "./basemaps/dynamicDenshiKokudo2016.svg"
+      }
+    },
+    {
+      "sourceIndex": 6,
+      "title": "OpenStreetMap Etc",
+      "href": "./basemaps/osmTileProviders/osmtp.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "operations.osmfoundation.org",
+        "wiki.openstreetmap.org",
+        "tile.openstreetmap.jp",
+        "tile.openstreetmap.org"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "OpenStreetMap Etc",
+        "class": "basemap switch",
+        "visibility": "hidden",
+        "xlink:href": "./basemaps/osmTileProviders/osmtp.svg"
+      }
+    },
+    {
+      "sourceIndex": 7,
+      "title": "OpenStreetMap(Global)",
+      "href": "./basemaps/dynamicOSM_r11.svg",
+      "status": "limited",
+      "category": "C",
+      "delivery": "online-only",
+      "runtime": "tight",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "tile.openstreetmap.org"
+      ],
+      "verifiedAt": "2026-08-04",
+      "reason": "旧controller依存を除いた固有の動的SVGへ配置し、HTTPSのOSM公式タイル取得まで動作確認済み",
+      "animation": {
+        "x": "-300",
+        "y": "-300",
+        "width": "600",
+        "height": "600",
+        "title": "OpenStreetMap(Global)",
+        "class": "basemap switch",
+        "visibility": "visible",
+        "xlink:href": "./basemaps/dynamicOSM_r11.svg"
+      },
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/osm-global.svg",
+      "placement": {
+        "x": -30000,
+        "y": -30000,
+        "width": 60000,
+        "height": 60000
+      }
+    },
+    {
+      "sourceIndex": 8,
+      "title": "登記所備付地図データ(RawData)",
+      "href": "./appLayers/moj/kuwanauchi.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "github.com",
+        "www.moj.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "登記所備付地図データ(RawData)",
+        "class": "vectorEtcData clickable",
+        "visibility": "hidden",
+        "opacity": "0.7",
+        "xlink:href": "./appLayers/moj/kuwanauchi.svg"
+      }
+    },
+    {
+      "sourceIndex": 9,
+      "title": "e-stat街区レベル境界・人口データ",
+      "href": "./appLayers/eStatPopulation/adminAreaMap2.svg#complexGisLayer=Vector GIS Complex&test=true",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "unpkg.com",
+        "github.com",
+        "qiita.com",
+        "www.e-stat.go.jp",
+        "www.stat.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "e-stat街区レベル境界・人口データ",
+        "class": "vectorEtcData clickable",
+        "visibility": "hidden",
+        "opacity": "0.35",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/eStatPopulation/adminAreaMap2.svg#complexGisLayer=Vector GIS Complex&test=true"
+      }
+    },
+    {
+      "sourceIndex": 10,
+      "title": "Experimental GSI Vector Tile",
+      "href": "./appLayers/gsiVmExp/gsiVmExp.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "gist.github.com",
+        "cdn.jsdelivr.net",
+        "unpkg.com",
+        "github.com",
+        "cyberjapandata.gsi.go.jp",
+        "stackoverflow.com",
+        "maps.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "Experimental GSI Vector Tile",
+        "class": "vectorEtcData",
+        "visibility": "hidden",
+        "xlink:href": "./appLayers/gsiVmExp/gsiVmExp.svg"
+      }
+    },
+    {
+      "sourceIndex": 11,
+      "title": "e-stat data reverse-geocoder",
+      "href": "./geoCoders/eStatRevGeocoder/reverseGeoCoder.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "unpkg.com",
+        "github.com",
+        "qiita.com",
+        "www.e-stat.go.jp",
+        "www.stat.go.jp",
+        "www.pref.tottori.lg.jp",
+        "business.mapfan.com"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "e-stat data reverse-geocoder",
+        "class": "geoCoder",
+        "visibility": "hidden",
+        "opacity": "1",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./geoCoders/eStatRevGeocoder/reverseGeoCoder.svg"
+      }
+    },
+    {
+      "sourceIndex": 12,
+      "title": "plus coder",
+      "href": "./geoCoders/plusCoder/plusCode.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "support.google.com"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "plus coder",
+        "class": "geoCoder",
+        "visibility": "hidden",
+        "opacity": "1",
+        "xlink:href": "./geoCoders/plusCoder/plusCode.svg"
+      }
+    },
+    {
+      "sourceIndex": 13,
+      "title": "geohashCoder",
+      "href": "./geoCoders/geohashCoder/geohash.svg",
+      "status": "supported",
+      "category": "B",
+      "delivery": "adapter",
+      "runtime": "isolated",
+      "offline": true,
+      "controller": true,
+      "externalDependencies": [],
+      "verifiedAt": "2026-08-04",
+      "reason": "controllerと依存ライブラリを同一オリジンへ固定したアダプターで動作確認済み",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "geohashCoder",
+        "class": "geoCoder",
+        "visibility": "hidden",
+        "opacity": "1",
+        "xlink:href": "./geoCoders/geohashCoder/geohash.svg"
+      },
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/geohash-coder.svg"
+    },
+    {
+      "sourceIndex": 14,
+      "title": "UTMGridCoder",
+      "href": "./geoCoders/utmGridCoder/utmGridCoder.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "maps.gsi.go.jp",
+        "en.wikipedia.org"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "UTMGridCoder",
+        "class": "geoCoder",
+        "visibility": "hidden",
+        "opacity": "1",
+        "xlink:href": "./geoCoders/utmGridCoder/utmGridCoder.svg"
+      }
+    },
+    {
+      "sourceIndex": 15,
+      "title": "geolonia_GeoCoder",
+      "href": "./geoCoders/geoloniaGeocoder/geoloniaGeocoder.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "cdn.geolonia.com",
+        "github.com"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "geolonia_GeoCoder",
+        "class": "geoCoder",
+        "visibility": "hidden",
+        "opacity": "1",
+        "xlink:href": "./geoCoders/geoloniaGeocoder/geoloniaGeocoder.svg"
+      }
+    },
+    {
+      "sourceIndex": 16,
+      "title": "CSIS_GeoCoder",
+      "href": "./geoCoders/csisGeocoder/csisGeocode.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "t-sagara.github.io",
+        "geocode.csis.u-tokyo.ac.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "CSIS_GeoCoder",
+        "class": "geoCoder",
+        "visibility": "hidden",
+        "opacity": "1",
+        "xlink:href": "./geoCoders/csisGeocoder/csisGeocode.svg"
+      }
+    },
+    {
+      "sourceIndex": 17,
+      "title": "GSI_GeoCoder",
+      "href": "./geoCoders/gsiGeocoder/gsiGeoCoder.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "maps.gsi.go.jp",
+        "msearch.gsi.go.jp",
+        "mreversegeocoder.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "GSI_GeoCoder",
+        "class": "geoCoder",
+        "visibility": "hidden",
+        "opacity": "1",
+        "xlink:href": "./geoCoders/gsiGeocoder/gsiGeoCoder.svg"
+      }
+    },
+    {
+      "sourceIndex": 18,
+      "title": "Street View",
+      "href": "./appLayers/streetView/instantStreetView.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.instantstreetview.com",
+        "api.openstreetcam.org",
+        "openstreetcam.org",
+        "www.google.com",
+        "www.mapillary.com"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "Street View",
+        "class": "GIS",
+        "visibility": "hidden",
+        "opacity": "1",
+        "xlink:href": "./appLayers/streetView/instantStreetView.svg"
+      }
+    },
+    {
+      "sourceIndex": 19,
+      "title": "経路検索(graphhopper)",
+      "href": "./geoProcessingLayers/routing/routingD.svg#graphhopperurl={SET YOUR GRAPHHOPPER API ENDPOINT URL}",
+      "status": "requires-config",
+      "category": "C",
+      "delivery": "configuration-required",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [],
+      "verifiedAt": null,
+      "reason": "本家と同様にGraphHopper APIエンドポイントの設定が必要",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "経路検索(graphhopper)",
+        "class": "GIS clickable editable",
+        "visibility": "hidden",
+        "opacity": "1",
+        "xlink:href": "./geoProcessingLayers/routing/routingD.svg#graphhopperurl={SET YOUR GRAPHHOPPER API ENDPOINT URL}"
+      },
+      "configuration": {
+        "fields": [
+          {
+            "name": "graphhopperurl",
+            "label": "GraphHopper APIエンドポイント",
+            "type": "url",
+            "required": true,
+            "protocols": [
+              "https:"
+            ],
+            "placeholder": "https://graphhopper.example/api/1/route"
+          }
+        ]
+      }
+    },
+    {
+      "sourceIndex": 20,
+      "title": "標高検索",
+      "href": "./geoProcessingLayers/gsiAltCoder/altCoder.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "maps.gsi.go.jp",
+        "cyberjapandata.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "標高検索",
+        "class": "GIS",
+        "visibility": "hidden",
+        "opacity": "1",
+        "xlink:href": "./geoProcessingLayers/gsiAltCoder/altCoder.svg"
+      }
+    },
+    {
+      "sourceIndex": 21,
+      "title": "GeoidHeightCalculator",
+      "href": "./geoProcessingLayers/gsiGeoidCoder/geoidCalc.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "fgd.gsi.go.jp",
+        "www.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "GeoidHeightCalculator",
+        "class": "GIS",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "xlink:href": "./geoProcessingLayers/gsiGeoidCoder/geoidCalc.svg"
+      }
+    },
+    {
+      "sourceIndex": 22,
+      "title": "bitimageTracer",
+      "href": "./geoProcessingLayers/bitimage2vector/img2vector.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "github.com"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "bitimageTracer",
+        "class": "GIS editable",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./geoProcessingLayers/bitimage2vector/img2vector.svg"
+      }
+    },
+    {
+      "sourceIndex": 23,
+      "title": "Raster GIS",
+      "href": "./geoProcessingLayers/rasterGisLayer/rasterGisLayer6.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "www.w3.og",
+        "www.ogc.org",
+        "cdn.jsdelivr.net",
+        "webliker.info",
+        "write-remember.com",
+        "step-learn.com"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "Raster GIS",
+        "class": "GIS editable",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./geoProcessingLayers/rasterGisLayer/rasterGisLayer6.svg"
+      }
+    },
+    {
+      "sourceIndex": 24,
+      "title": "Vector GIS",
+      "href": "./geoProcessingLayers/vectorGisLayer/vectorGisLayer.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "www.w3.og",
+        "www.ogc.org",
+        "cdn.jsdelivr.net"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "Vector GIS",
+        "class": "GIS editable clickable",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "xlink:href": "./geoProcessingLayers/vectorGisLayer/vectorGisLayer.svg"
+      }
+    },
+    {
+      "sourceIndex": 25,
+      "title": "Vector GIS Complex",
+      "href": "./geoProcessingLayers/vectorGisLayer/vectorGIS_Lv2.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "www.w3.og",
+        "www.ogc.org",
+        "cdn.jsdelivr.net",
+        "cdnjs.cloudflare.com",
+        "norm-nois.com"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "Vector GIS Complex",
+        "class": "GIS clickable editable",
+        "visibility": "hidden",
+        "opacity": "1",
+        "xlink:href": "./geoProcessingLayers/vectorGisLayer/vectorGIS_Lv2.svg"
+      }
+    },
+    {
+      "sourceIndex": 26,
+      "title": "KML(MyMaps)データ表示",
+      "href": "./authoringLayers/local/kmlLoader/kmlLoader.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.google.com"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "KML(MyMaps)データ表示",
+        "class": "オーサリング・ファイル clickable",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./authoringLayers/local/kmlLoader/kmlLoader.svg"
+      }
+    },
+    {
+      "sourceIndex": 27,
+      "title": "shape・GeoJSONファイル表示",
+      "href": "./authoringLayers/local/vectorFileLoader/vectorFileLoader3.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "unpkg.com",
+        "github.com",
+        "qiita.com"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "shape・GeoJSONファイル表示",
+        "class": "オーサリング・ファイル clickable",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "xlink:href": "./authoringLayers/local/vectorFileLoader/vectorFileLoader3.svg"
+      }
+    },
+    {
+      "sourceIndex": 28,
+      "title": "任意XYZタイル表示",
+      "href": "./authoringLayers/local/userXYZtile/userXYZtile.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "cyberjapandata.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "任意XYZタイル表示",
+        "class": "オーサリング・ファイル",
+        "visibility": "hidden",
+        "opacity": "0.7",
+        "xlink:href": "./authoringLayers/local/userXYZtile/userXYZtile.svg"
+      }
+    },
+    {
+      "sourceIndex": 29,
+      "title": "free hand authoring",
+      "href": "./authoringLayers/local/simpleRaster/simpleRaster.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "proengineer.internous.co.jp",
+        "bagelee.com",
+        "cdn.jsdelivr.net"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "free hand authoring",
+        "class": "オーサリング・ファイル clickable editable",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "xlink:href": "./authoringLayers/local/simpleRaster/simpleRaster.svg"
+      }
+    },
+    {
+      "sourceIndex": 30,
+      "title": "vector authoring",
+      "href": "./authoringLayers/local/simpleVector/simpleVector.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "proengineer.internous.co.jp",
+        "bagelee.com",
+        "cdn.jsdelivr.net"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "vector authoring",
+        "class": "オーサリング・ファイル clickable editable",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "xlink:href": "./authoringLayers/local/simpleVector/simpleVector.svg"
+      }
+    },
+    {
+      "sourceIndex": 31,
+      "title": "CSVデータ可視化",
+      "href": "./authoringLayers/local/csvLayer/csvXhr_r20.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "cdnjs.cloudflare.com"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "CSVデータ可視化",
+        "class": "オーサリング・ファイル editable",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "xlink:href": "./authoringLayers/local/csvLayer/csvXhr_r20.svg"
+      }
+    },
+    {
+      "sourceIndex": 32,
+      "title": "bitimage2geoInfo",
+      "href": "./authoringLayers/local/bitImage2geoInfo/bitimage2geo.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "bagelee.com",
+        "cdn.jsdelivr.net"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "bitimage2geoInfo",
+        "class": "オーサリング・ファイル",
+        "visibility": "hidden",
+        "opacity": "0.5",
+        "xlink:href": "./authoringLayers/local/bitImage2geoInfo/bitimage2geo.svg"
+      }
+    },
+    {
+      "sourceIndex": 33,
+      "title": "JMA過去の災害記録(-2020年)",
+      "href": "./appLayers/jma/pastOldNowCast/jmaHrRain_r3.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.jma.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "JMA過去の災害記録(-2020年)",
+        "class": "災害",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "xlink:href": "./appLayers/jma/pastOldNowCast/jmaHrRain_r3.svg"
+      }
+    },
+    {
+      "sourceIndex": 34,
+      "title": "JMA過去の災害記録(2021年)",
+      "href": "./appLayers/jma/pastDisaster/jma_bm_r2.svg#type=1&cat=0&autoupdate&zmax=10&zstep=2",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.jma.go.jp",
+        "www.data.jma.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "JMA過去の災害記録(2021年)",
+        "class": "災害",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "xlink:href": "./appLayers/jma/pastDisaster/jma_bm_r2.svg#type=1&cat=0&autoupdate&zmax=10&zstep=2"
+      }
+    },
+    {
+      "sourceIndex": 35,
+      "title": "JMA過去の災害記録(2022年-)",
+      "href": "./appLayers/jma/pastDisaster/pastLog2022.svg#layers=危険度分布-洪水害(JMA),危険度分布-浸水害(JMA),危険度分布-土砂災害(JMA),警報注意報(JMA),大雨危険度(JMA),雨雲の動き（軽量版）(JMA),今後の雨（軽量版）(JMA),台風(JMA)",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.data.jma.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "JMA過去の災害記録(2022年-)",
+        "class": "災害",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "xlink:href": "./appLayers/jma/pastDisaster/pastLog2022.svg#layers=危険度分布-洪水害(JMA),危険度分布-浸水害(JMA),危険度分布-土砂災害(JMA),警報注意報(JMA),大雨危険度(JMA),雨雲の動き（軽量版）(JMA),今後の雨（軽量版）(JMA),台風(JMA)"
+      }
+    },
+    {
+      "sourceIndex": 36,
+      "title": "DRONEBIRD",
+      "href": "./appLayers/droneBird/droneBird.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "api.github.com",
+        "raw.githubusercontent.com",
+        "apps.kontur.io",
+        "dronebird.org",
+        "github.com"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "DRONEBIRD",
+        "class": "災害",
+        "visibility": "hidden",
+        "opacity": "0.7",
+        "xlink:href": "./appLayers/droneBird/droneBird.svg"
+      }
+    },
+    {
+      "sourceIndex": 37,
+      "title": "火災情報(NASA FIRMS)",
+      "href": "./appLayers/nasa_FIRMS/firms.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "firms.modaps.eosdis.nasa.gov"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "火災情報(NASA FIRMS)",
+        "class": "災害",
+        "visibility": "hidden",
+        "opacity": "0.7",
+        "xlink:href": "./appLayers/nasa_FIRMS/firms.svg"
+      }
+    },
+    {
+      "sourceIndex": 38,
+      "title": "沿岸海域土地条件図:昭和63年以前",
+      "href": "./basemaps/dynamicDenshiKokudo2016.svg#map=ccm2",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": false,
+      "externalDependencies": [
+        "maps.gsi.go.jp",
+        "cyberjapandata.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "沿岸海域土地条件図:昭和63年以前",
+        "class": "MARINE",
+        "visibility": "hidden",
+        "xlink:href": "./basemaps/dynamicDenshiKokudo2016.svg#map=ccm2"
+      }
+    },
+    {
+      "sourceIndex": 39,
+      "title": "沿岸海域土地条件図:平成元年以降",
+      "href": "./basemaps/dynamicDenshiKokudo2016.svg#map=ccm1",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": false,
+      "externalDependencies": [
+        "maps.gsi.go.jp",
+        "cyberjapandata.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "沿岸海域土地条件図:平成元年以降",
+        "class": "MARINE",
+        "visibility": "hidden",
+        "xlink:href": "./basemaps/dynamicDenshiKokudo2016.svg#map=ccm1"
+      }
+    },
+    {
+      "sourceIndex": 40,
+      "title": "dynamicOpenSeaMap seamark",
+      "href": "./appLayers/openSeaMap/dynamicOpenSeaMap.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": false,
+      "externalDependencies": [
+        "t1.openseamap.org"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "dynamicOpenSeaMap seamark",
+        "class": "MARINE",
+        "visibility": "hidden",
+        "xlink:href": "./appLayers/openSeaMap/dynamicOpenSeaMap.svg"
+      }
+    },
+    {
+      "sourceIndex": 41,
+      "title": "衛星画像(海しる)",
+      "href": "./appLayers/msil/dynamicWebTile.svg#globe&baseURL=none&zmax=11",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.data.jma.go.jp",
+        "www.msil.go.jp",
+        "www.jma.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "衛星画像(海しる)",
+        "class": "MARINE",
+        "visibility": "hidden",
+        "opacity": "0.4",
+        "data-controller": "msil_jma.html#exec=appearOnLayerLoad&requiredWidth=400",
+        "xlink:href": "./appLayers/msil/dynamicWebTile.svg#globe&baseURL=none&zmax=11"
+      }
+    },
+    {
+      "sourceIndex": 42,
+      "title": "海底ケーブル(海しる)",
+      "href": "./appLayers/msil/msilLayer.svg#layerName0=Infrastructure&layerName1=show:3",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "www.msil.go.jp",
+        "cdn.jsdelivr.net"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "海底ケーブル(海しる)",
+        "class": "MARINE",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/msil/msilLayer.svg#layerName0=Infrastructure&layerName1=show:3"
+      }
+    },
+    {
+      "sourceIndex": 43,
+      "title": "漁港(海しる)",
+      "href": "./appLayers/msil/msilLayer.svg#layerName0=Maritime&layerName1=show:32",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "www.msil.go.jp",
+        "cdn.jsdelivr.net"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "漁港(海しる)",
+        "class": "MARINE",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/msil/msilLayer.svg#layerName0=Maritime&layerName1=show:32"
+      }
+    },
+    {
+      "sourceIndex": 44,
+      "title": "等深線(海しる)",
+      "href": "./appLayers/msil/msilLayer.svg#layerName0=TopographyAndGeology&layerName1=show:1",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "www.msil.go.jp",
+        "cdn.jsdelivr.net"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "等深線(海しる)",
+        "class": "MARINE",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/msil/msilLayer.svg#layerName0=TopographyAndGeology&layerName1=show:1"
+      }
+    },
+    {
+      "sourceIndex": 45,
+      "title": "天気図４８時間予想(海しる)",
+      "href": "./appLayers/msil/msilImageLayer.svg#layerName=WeatherImg10&time=false",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": false,
+      "externalDependencies": [
+        "www.msil.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "天気図４８時間予想(海しる)",
+        "class": "MARINE",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/msil/msilImageLayer.svg#layerName=WeatherImg10&time=false"
+      }
+    },
+    {
+      "sourceIndex": 46,
+      "title": "天気図２４時間予想(海しる)",
+      "href": "./appLayers/msil/msilImageLayer.svg#layerName=WeatherImg9&time=false",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": false,
+      "externalDependencies": [
+        "www.msil.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "天気図２４時間予想(海しる)",
+        "class": "MARINE",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/msil/msilImageLayer.svg#layerName=WeatherImg9&time=false"
+      }
+    },
+    {
+      "sourceIndex": 47,
+      "title": "天気図現況(海しる)",
+      "href": "./appLayers/msil/msilImageLayer.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": false,
+      "externalDependencies": [
+        "www.msil.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "天気図現況(海しる)",
+        "class": "MARINE",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/msil/msilImageLayer.svg"
+      }
+    },
+    {
+      "sourceIndex": 48,
+      "title": "starlinkUnofficialGS",
+      "href": "./appLayers/starlinkUnofficialGS/test.svg",
+      "status": "requires-proxy",
+      "category": "C",
+      "delivery": "proxy-required",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "starlinkinsider.com",
+        "www.google.com"
+      ],
+      "verifiedAt": null,
+      "reason": "本体内のcontrollerへ補正できるが、取得元HTML用の制限付きCORSプロキシが必要",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "starlinkUnofficialGS",
+        "class": "インフラ情報",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "data-controller": "../info.html",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/starlinkUnofficialGS/test.svg"
+      },
+      "controllerHref": "/map/layers/external/svgmap-app-layers/adapters/starlink.html#exec=appearOnLayerLoad"
+    },
+    {
+      "sourceIndex": 49,
+      "title": "Open Infrastructure Map",
+      "href": "./appLayers/openinframap/openinframap.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "gist.github.com",
+        "unpkg.com",
+        "openinframap.org"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "Open Infrastructure Map",
+        "class": "インフラ情報 clickable",
+        "visibility": "hidden",
+        "xlink:href": "./appLayers/openinframap/openinframap.svg"
+      }
+    },
+    {
+      "sourceIndex": 50,
+      "title": "空間線量率(モニタリングポスト:原子力規制委員会)",
+      "href": "./appLayers/genshiryokuKisei/doseRate.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "service.svgmap.org",
+        "www.erms.nsr.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "空間線量率(モニタリングポスト:原子力規制委員会)",
+        "class": "GOV_LAYERS clickable",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "xlink:href": "./appLayers/genshiryokuKisei/doseRate.svg"
+      }
+    },
+    {
+      "sourceIndex": 51,
+      "title": "人口集中地区(DID)H27(総務省統計局/地理院地図)",
+      "href": "./basemaps/dynamicDenshiKokudo2016.svg#map=did2015",
+      "status": "supported",
+      "category": "B",
+      "delivery": "adapter",
+      "runtime": "tight",
+      "offline": false,
+      "controller": false,
+      "externalDependencies": [
+        "cyberjapandata.gsi.go.jp"
+      ],
+      "verifiedAt": "2026-08-04",
+      "reason": "上流の動的SVGを固有URLのルートレイヤーとして直接起動し、DIDタイルの取得まで動作確認済み",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "人口集中地区(DID)H27(総務省統計局/地理院地図)",
+        "class": "GOV_LAYERS",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "xlink:href": "./basemaps/dynamicDenshiKokudo2016.svg#map=did2015"
+      },
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/gsi-did2015.svg#map=did2015"
+    },
+    {
+      "sourceIndex": 52,
+      "title": "防災科研　南海トラフ広域地震防災研究PF",
+      "href": "./appLayers/bosaiKakenNankai/dynamic_WMS_general.svg#server=null",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "catalog.nankai-bosai.jp",
+        "www.data.jma.go.jp",
+        "www.msil.go.jp",
+        "nankai-bosai.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "防災科研　南海トラフ広域地震防災研究PF",
+        "class": "ハザードマップ",
+        "visibility": "hidden",
+        "opacity": "0.8",
+        "data-controller": "./nankaiBosaiController.html#exec=appearOnLayerLoad&requiredWidth=400&cat=12",
+        "xlink:href": "./appLayers/bosaiKakenNankai/dynamic_WMS_general.svg#server=null"
+      }
+    },
+    {
+      "sourceIndex": 53,
+      "title": "防災科研_J_SHIS_長期間平均ハザード(再現期間500年)",
+      "href": "./appLayers/bosaiKakenJSHIS/dynamicPCtile.svg#server=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2Fmapcache%2FA%2Fwmts%3Flayer%3DA-V8-MAP-AVR-TTL_MTTL-A0500_SI2%26style%3Ddefault%26tilematrixset%3DWGS84%26Service%3DWMTS%26Request%3DGetTile%26Version%3D1.0.0%26Format%3Dimage%252Fpng%26TileMatrix%3D%5B%5Blevel%5D%5D%26TileCol%3D%5B%5Bx%5D%5D%26TileRow%3D%5B%5By%5D%5D&comment=出典:防災科研J-SHIS&link=https://www.j-shis.bosai.go.jp/&legend=https://www.j-shis.bosai.go.jp/JSHIS2/IMAGE/etc/P-Y2020-SI.png",
+      "status": "limited",
+      "category": "C",
+      "delivery": "online-only",
+      "runtime": "tight",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "www.j-shis.bosai.go.jp"
+      ],
+      "verifiedAt": "2026-08-04",
+      "reason": "同梱済み旧式controllerをtight実行し、外部WMTSタイルの取得まで動作確認済み",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "防災科研_J_SHIS_長期間平均ハザード(再現期間500年)",
+        "class": "ハザードマップ",
+        "visibility": "hidden",
+        "opacity": "0.7",
+        "xlink:href": "./appLayers/bosaiKakenJSHIS/dynamicPCtile.svg#server=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2Fmapcache%2FA%2Fwmts%3Flayer%3DA-V8-MAP-AVR-TTL_MTTL-A0500_SI2%26style%3Ddefault%26tilematrixset%3DWGS84%26Service%3DWMTS%26Request%3DGetTile%26Version%3D1.0.0%26Format%3Dimage%252Fpng%26TileMatrix%3D%5B%5Blevel%5D%5D%26TileCol%3D%5B%5Bx%5D%5D%26TileRow%3D%5B%5By%5D%5D&comment=出典:防災科研J-SHIS&link=https://www.j-shis.bosai.go.jp/&legend=https://www.j-shis.bosai.go.jp/JSHIS2/IMAGE/etc/P-Y2020-SI.png"
+      },
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/jshis-500.svg#server=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2Fmapcache%2FA%2Fwmts%3Flayer%3DA-V8-MAP-AVR-TTL_MTTL-A0500_SI2%26style%3Ddefault%26tilematrixset%3DWGS84%26Service%3DWMTS%26Request%3DGetTile%26Version%3D1.0.0%26Format%3Dimage%252Fpng%26TileMatrix%3D%5B%5Blevel%5D%5D%26TileCol%3D%5B%5Bx%5D%5D%26TileRow%3D%5B%5By%5D%5D&comment=出典%3A防災科研J-SHIS&link=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2F&legend=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2FJSHIS2%2FIMAGE%2Fetc%2FP-Y2020-SI.png"
+    },
+    {
+      "sourceIndex": 54,
+      "title": "防災科研_J_SHIS_確率論的地震動予測地図2020_主要活断層帯",
+      "href": "./appLayers/bosaiKakenJSHIS/dynamicPCtile.svg#server=https://www.j-shis.bosai.go.jp/mapcache/P-Y2020/wmts?layer%3DP-Y2020-MAP-AVR-TTL_MTTL-T30_I55_PD2%26style%3Ddefault%26tilematrixset%3DWGS84%26Service%3DWMTS%26Request%3DGetTile%26Version%3D1.0.0%26Format%3Dimage%252Fpng%26TileMatrix%3D%5B%5Blevel%5D%5D%26TileCol%3D%5B%5Bx%5D%5D%26TileRow%3D%5B%5By%5D%5D&comment=出典:防災科研J-SHIS&link=https://www.j-shis.bosai.go.jp/&legend=https://www.j-shis.bosai.go.jp/JSHIS2/IMAGE/etc/P-Y2020-PD.png",
+      "status": "limited",
+      "category": "C",
+      "delivery": "online-only",
+      "runtime": "tight",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "www.j-shis.bosai.go.jp"
+      ],
+      "verifiedAt": "2026-08-04",
+      "reason": "共通SVGを固有URL化し、同梱controllerと外部WMTSタイルの取得まで動作確認済み",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "防災科研_J_SHIS_確率論的地震動予測地図2020_主要活断層帯",
+        "class": "ハザードマップ",
+        "visibility": "hidden",
+        "opacity": "0.7",
+        "xlink:href": "./appLayers/bosaiKakenJSHIS/dynamicPCtile.svg#server=https://www.j-shis.bosai.go.jp/mapcache/P-Y2020/wmts?layer%3DP-Y2020-MAP-AVR-TTL_MTTL-T30_I55_PD2%26style%3Ddefault%26tilematrixset%3DWGS84%26Service%3DWMTS%26Request%3DGetTile%26Version%3D1.0.0%26Format%3Dimage%252Fpng%26TileMatrix%3D%5B%5Blevel%5D%5D%26TileCol%3D%5B%5Bx%5D%5D%26TileRow%3D%5B%5By%5D%5D&comment=出典:防災科研J-SHIS&link=https://www.j-shis.bosai.go.jp/&legend=https://www.j-shis.bosai.go.jp/JSHIS2/IMAGE/etc/P-Y2020-PD.png"
+      },
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/jshis-active-fault.svg#server=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2Fmapcache%2FP-Y2020%2Fwmts%3Flayer%3DP-Y2020-MAP-AVR-TTL_MTTL-T30_I55_PD2%26style%3Ddefault%26tilematrixset%3DWGS84%26Service%3DWMTS%26Request%3DGetTile%26Version%3D1.0.0%26Format%3Dimage%252Fpng%26TileMatrix%3D%5B%5Blevel%5D%5D%26TileCol%3D%5B%5Bx%5D%5D%26TileRow%3D%5B%5By%5D%5D&comment=出典%3A防災科研J-SHIS&link=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2F&legend=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2FJSHIS2%2FIMAGE%2Fetc%2FP-Y2020-PD.png"
+    },
+    {
+      "sourceIndex": 55,
+      "title": "防災科研_J_SHIS_地すべり地形",
+      "href": "./appLayers/bosaiKakenJSHIS/dynamic_WMS_general.svg#server=https://www.j-shis.bosai.go.jp/map/wms/landslide?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&FORMAT=image%2Fpng&TRANSPARENT=true&layers=L-V3-ALL&transparent=true&format=image%2Fpng&TILED=true&CRS=EPSG%3A900913&STYLES=&MAP_RESOLUTION=112.5",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": false,
+      "externalDependencies": [
+        "www.j-shis.bosai.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "防災科研_J_SHIS_地すべり地形",
+        "class": "ハザードマップ",
+        "visibility": "hidden",
+        "opacity": "0.7",
+        "xlink:href": "./appLayers/bosaiKakenJSHIS/dynamic_WMS_general.svg#server=https://www.j-shis.bosai.go.jp/map/wms/landslide?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&FORMAT=image%2Fpng&TRANSPARENT=true&layers=L-V3-ALL&transparent=true&format=image%2Fpng&TILED=true&CRS=EPSG%3A900913&STYLES=&MAP_RESOLUTION=112.5"
+      }
+    },
+    {
+      "sourceIndex": 56,
+      "title": "防災科研_J_SHIS_震源断層",
+      "href": "./appLayers/bosaiKakenJSHIS/j_shis_geojson.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.j-shis.bosai.go.jp",
+        "stackoverflow.com"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "防災科研_J_SHIS_震源断層",
+        "class": "ハザードマップ clickable",
+        "visibility": "hidden",
+        "opacity": "0.5",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/bosaiKakenJSHIS/j_shis_geojson.svg"
+      }
+    },
+    {
+      "sourceIndex": 57,
+      "title": "防災科研_津波_J_THIS",
+      "href": "./appLayers/bosaiKakenJTHIS/dynamicWebTile.svg#globe&baseURL=none&zmax=11",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.j-this.bosai.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "防災科研_津波_J_THIS",
+        "class": "ハザードマップ",
+        "visibility": "hidden",
+        "opacity": "0.7",
+        "data-controller": "J_THIS.html#exec=appearOnLayerLoad&requiredWidth=400",
+        "xlink:href": "./appLayers/bosaiKakenJTHIS/dynamicWebTile.svg#globe&baseURL=none&zmax=11"
+      }
+    },
+    {
+      "sourceIndex": 58,
+      "title": "令和６年能登半島地震　道路復旧状況",
+      "href": "./appLayers/mlitRoad/notoEQ2024/notoRoad.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "cdnjs.cloudflare.com",
+        "www.mlit.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "令和６年能登半島地震　道路復旧状況",
+        "class": "国交省道路情報 batch clickable",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/mlitRoad/notoEQ2024/notoRoad.svg"
+      }
+    },
+    {
+      "sourceIndex": 59,
+      "title": "緊急輸送道路R",
+      "href": "./appLayers/mlitRoad/doroBosai/kinkyuYuso.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "www.thr.mlit.go.jp",
+        "www.ktr.mlit.go.jp",
+        "www.hrr.mlit.go.jp",
+        "www.cbr.mlit.go.jp",
+        "www.kkr.mlit.go.jp",
+        "www.cgr.mlit.go.jp",
+        "www.skr.mlit.go.jp",
+        "www.qsr.mlit.go.jp",
+        "www.dc.ogb.go.jp",
+        "developers.google.com",
+        "nlftp.mlit.go.jp",
+        "www.mlit.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "緊急輸送道路R",
+        "class": "国交省道路情報 batch",
+        "visibility": "hidden",
+        "opacity": "0.85",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/mlitRoad/doroBosai/kinkyuYuso.svg"
+      }
+    },
+    {
+      "sourceIndex": 60,
+      "title": "国道事務所等",
+      "href": "./appLayers/mlitRoad/jpAll2023.svg#layer=imusho",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.mlit.go.jp",
+        "www.road-info-prvs.mlit.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "国道事務所等",
+        "class": "国交省道路情報 batch",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/mlitRoad/jpAll2023.svg#layer=imusho"
+      }
+    },
+    {
+      "sourceIndex": 61,
+      "title": "道の駅R",
+      "href": "./appLayers/mlitRoad/jpAll2023.svg#layer=station",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.mlit.go.jp",
+        "www.road-info-prvs.mlit.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "道の駅R",
+        "class": "国交省道路情報 batch",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/mlitRoad/jpAll2023.svg#layer=station"
+      }
+    },
+    {
+      "sourceIndex": 62,
+      "title": "工事予定",
+      "href": "./appLayers/mlitRoad/jpAll2023.svg#layer=kojiyotei",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.mlit.go.jp",
+        "www.road-info-prvs.mlit.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "工事予定",
+        "class": "国交省道路情報 clickable batch",
+        "visibility": "hidden",
+        "opacity": "0.8",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/mlitRoad/jpAll2023.svg#layer=kojiyotei"
+      }
+    },
+    {
+      "sourceIndex": 63,
+      "title": "高速道路事前通行規制区間",
+      "href": "./appLayers/mlitRoad/jpAll2023.svg#layer=expressway",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.mlit.go.jp",
+        "www.road-info-prvs.mlit.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "高速道路事前通行規制区間",
+        "class": "国交省道路情報 clickable batch",
+        "visibility": "hidden",
+        "opacity": "0.8",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/mlitRoad/jpAll2023.svg#layer=expressway"
+      }
+    },
+    {
+      "sourceIndex": 64,
+      "title": "事前通行規制区間R",
+      "href": "./appLayers/mlitRoad/jpAll2023.svg#layer=jizenkisei",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.mlit.go.jp",
+        "www.road-info-prvs.mlit.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "事前通行規制区間R",
+        "class": "国交省道路情報 clickable batch",
+        "visibility": "hidden",
+        "opacity": "0.8",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/mlitRoad/jpAll2023.svg#layer=jizenkisei"
+      }
+    },
+    {
+      "sourceIndex": 65,
+      "title": "時間雨量",
+      "href": "./appLayers/mlitRoad/jpAll2023.svg#layer=weather",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.mlit.go.jp",
+        "www.road-info-prvs.mlit.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "時間雨量",
+        "class": "国交省道路情報 clickable batch",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/mlitRoad/jpAll2023.svg#layer=weather"
+      }
+    },
+    {
+      "sourceIndex": 66,
+      "title": "ライブカメラ",
+      "href": "./appLayers/mlitRoad/jpAll2023.svg#layer=camera",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.mlit.go.jp",
+        "www.road-info-prvs.mlit.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "ライブカメラ",
+        "class": "国交省道路情報 batch",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/mlitRoad/jpAll2023.svg#layer=camera"
+      }
+    },
+    {
+      "sourceIndex": 67,
+      "title": "通行規制",
+      "href": "./appLayers/mlitRoad/jpAll2023.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.mlit.go.jp",
+        "www.road-info-prvs.mlit.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "通行規制",
+        "class": "国交省道路情報 batch",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/mlitRoad/jpAll2023.svg"
+      }
+    },
+    {
+      "sourceIndex": 68,
+      "title": "地理院防災・災害データ：サブレイヤーあり",
+      "href": "./appLayers/gsiBosai/gsiBosai.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "cdnjs.cloudflare.com",
+        "www.gsi.go.jp",
+        "stackoverflow.com"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "地理院防災・災害データ：サブレイヤーあり",
+        "class": "国土地理院 clickable",
+        "visibility": "hidden",
+        "opacity": "0.8",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/gsiBosai/gsiBosai.svg"
+      }
+    },
+    {
+      "sourceIndex": 69,
+      "title": "地理院タイル：サブレイヤーあり",
+      "href": "./appLayers/gsiTiles/gsiTilesListLayer.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "maps.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "地理院タイル：サブレイヤーあり",
+        "class": "国土地理院 clickable",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "xlink:href": "./appLayers/gsiTiles/gsiTilesListLayer.svg"
+      }
+    },
+    {
+      "sourceIndex": 70,
+      "title": "重ねるハザードマップALL",
+      "href": "./appLayers/mlitHazard/mlitHazard.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "disaportal.gsi.go.jp",
+        "stackoverflow.com"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "重ねるハザードマップALL",
+        "class": "国交省ハザードマップ batch clickable",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "xlink:href": "./appLayers/mlitHazard/mlitHazard.svg"
+      }
+    },
+    {
+      "sourceIndex": 71,
+      "title": "高潮浸水想定区域(想定最大規模)",
+      "href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportal.gsi.go.jp/data/raster/03_hightide_l2_shinsuishin&zmax=17",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "disaportal.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "高潮浸水想定区域(想定最大規模)",
+        "class": "国交省ハザードマップ batch",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-controller": "mlitHazardNotice.html#legend=hanrei/highTide%2epng",
+        "xlink:href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportal.gsi.go.jp/data/raster/03_hightide_l2_shinsuishin&zmax=17"
+      }
+    },
+    {
+      "sourceIndex": 72,
+      "title": "浸水想定区域(想定最大規模)",
+      "href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin&zmax=17",
+      "status": "limited",
+      "category": "C",
+      "delivery": "online-only",
+      "runtime": "tight",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "disaportaldata.gsi.go.jp"
+      ],
+      "verifiedAt": "2026-08-04",
+      "reason": "壊れたシンボリックリンクの代わりに同梱commonLibの実体を固有SVGへ配置し、浸水タイル取得まで動作確認済み",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "浸水想定区域(想定最大規模)",
+        "class": "国交省ハザードマップ batch",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-controller": "mlitHazardNotice.html#legend=hanrei/shinsuishin%2epng",
+        "xlink:href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin&zmax=17"
+      },
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/mlit-flood-l2.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin&zmax=17",
+      "controllerHref": "/map/svgMapAppLayers/appLayers/mlitHazard/mlitHazardNotice.html#legend=hanrei/shinsuishin.png"
+    },
+    {
+      "sourceIndex": 73,
+      "title": "浸水想定区域(計画規模)",
+      "href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend&zmax=17",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "disaportaldata.gsi.go.jp",
+        "disaportal.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "浸水想定区域(計画規模)",
+        "class": "国交省ハザードマップ batch",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-controller": "mlitHazardNotice.html#legend=hanrei/shinsuishinKeikaku%2epng",
+        "xlink:href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend&zmax=17"
+      }
+    },
+    {
+      "sourceIndex": 74,
+      "title": "津波浸水想定区域(旧)",
+      "href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/04_tsunami_oldlegend&zmax=14",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "disaportaldata.gsi.go.jp",
+        "disaportal.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "津波浸水想定区域(旧)",
+        "class": "国交省ハザードマップ",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-controller": "mlitHazardNotice.html#legend=hanrei/tsunami%2epng",
+        "xlink:href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/04_tsunami_oldlegend&zmax=14"
+      }
+    },
+    {
+      "sourceIndex": 75,
+      "title": "地形区分に基づく液状化の発生傾向図",
+      "href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/08_03_ekijoka_zenkoku&zmax=14",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "disaportaldata.gsi.go.jp",
+        "disaportal.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "地形区分に基づく液状化の発生傾向図",
+        "class": "国交省ハザードマップ",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-controller": "mlitHazardNotice.html#legend=hanrei/hanrei_eki%2epng",
+        "xlink:href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/08_03_ekijoka_zenkoku&zmax=14"
+      }
+    },
+    {
+      "sourceIndex": 76,
+      "title": "津波浸水想定(最大規模)",
+      "href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend&zmax=14",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "disaportaldata.gsi.go.jp",
+        "disaportal.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "津波浸水想定(最大規模)",
+        "class": "国交省ハザードマップ",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-controller": "mlitHazardNotice.html#legend=hanrei/hanrei_tsunamiNew%2epng",
+        "xlink:href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend&zmax=14"
+      }
+    },
+    {
+      "sourceIndex": 77,
+      "title": "急傾斜警戒区域",
+      "href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki&zmax=16",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "disaportaldata.gsi.go.jp",
+        "disaportal.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "急傾斜警戒区域",
+        "class": "国交省ハザードマップ",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-controller": "mlitHazardNotice.html",
+        "xlink:href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki&zmax=16"
+      }
+    },
+    {
+      "sourceIndex": 78,
+      "title": "土石流警戒区域",
+      "href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki&zmax=16",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "disaportaldata.gsi.go.jp",
+        "disaportal.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "土石流警戒区域",
+        "class": "国交省ハザードマップ",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-controller": "mlitHazardNotice.html",
+        "xlink:href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki&zmax=16"
+      }
+    },
+    {
+      "sourceIndex": 79,
+      "title": "地すべり警戒区域",
+      "href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki&zmax=16",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "disaportaldata.gsi.go.jp",
+        "disaportal.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "地すべり警戒区域",
+        "class": "国交省ハザードマップ",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-controller": "mlitHazardNotice.html",
+        "xlink:href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki&zmax=16"
+      }
+    },
+    {
+      "sourceIndex": 80,
+      "title": "土石流危険渓流",
+      "href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_dosekiryukikenkeiryu&zmax=16",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "disaportaldata.gsi.go.jp",
+        "disaportal.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "土石流危険渓流",
+        "class": "国交省ハザードマップ",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-controller": "mlitHazardNotice.html",
+        "xlink:href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_dosekiryukikenkeiryu&zmax=16"
+      }
+    },
+    {
+      "sourceIndex": 81,
+      "title": "急傾斜地崩壊危険個所",
+      "href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_kyukeisyachihoukai&zmax=16",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "disaportaldata.gsi.go.jp",
+        "disaportal.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "急傾斜地崩壊危険個所",
+        "class": "国交省ハザードマップ",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-controller": "mlitHazardNotice.html",
+        "xlink:href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_kyukeisyachihoukai&zmax=16"
+      }
+    },
+    {
+      "sourceIndex": 82,
+      "title": "地すべり危険個所",
+      "href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_jisuberikikenkasyo&zmax=16",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "disaportaldata.gsi.go.jp",
+        "disaportal.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "地すべり危険個所",
+        "class": "国交省ハザードマップ",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-controller": "mlitHazardNotice.html",
+        "xlink:href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_jisuberikikenkasyo&zmax=16"
+      }
+    },
+    {
+      "sourceIndex": 83,
+      "title": "雪崩危険個所",
+      "href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo&zmax=16",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "disaportaldata.gsi.go.jp",
+        "disaportal.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "雪崩危険個所",
+        "class": "国交省ハザードマップ",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-controller": "mlitHazardNotice.html",
+        "xlink:href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo&zmax=16"
+      }
+    },
+    {
+      "sourceIndex": 84,
+      "title": "道路冠水想定個所",
+      "href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_kansui&zmax=14",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "disaportaldata.gsi.go.jp",
+        "disaportal.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "道路冠水想定個所",
+        "class": "国交省ハザードマップ",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-controller": "mlitHazardNotice.html",
+        "xlink:href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_kansui&zmax=14"
+      }
+    },
+    {
+      "sourceIndex": 85,
+      "title": "事前通行規制区間",
+      "href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_jizentuukoukiseikukan&zmax=12",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "disaportaldata.gsi.go.jp",
+        "disaportal.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "事前通行規制区間",
+        "class": "国交省ハザードマップ",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-controller": "mlitHazardNotice.html",
+        "xlink:href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_jizentuukoukiseikukan&zmax=12"
+      }
+    },
+    {
+      "sourceIndex": 86,
+      "title": "緊急輸送道路",
+      "href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_kinkyuuyusou&zmax=14",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "disaportaldata.gsi.go.jp",
+        "disaportal.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "緊急輸送道路",
+        "class": "国交省ハザードマップ",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-controller": "mlitHazardNotice.html",
+        "xlink:href": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_kinkyuuyusou&zmax=14"
+      }
+    },
+    {
+      "sourceIndex": 87,
+      "title": "名称未設定レイヤ 87",
+      "href": "./authoringLayers/local/csvLayer/csvXhr_r20.svg#csvPath=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_month.csv&latCol=1&lngCol=2&titleCol=0&variableIcon=4,3,4,5,6",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "earthquake.usgs.gov",
+        "cdn.jsdelivr.net",
+        "cdnjs.cloudflare.com"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "名称未設定レイヤ 87",
+        "xlink:href": "./authoringLayers/local/csvLayer/csvXhr_r20.svg#csvPath=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_month.csv&latCol=1&lngCol=2&titleCol=0&variableIcon=4,3,4,5,6"
+      }
+    },
+    {
+      "sourceIndex": 88,
+      "title": "地震 ALL 過去1週間(USGS)",
+      "href": "./authoringLayers/local/csvLayer/csvXhr_r20.svg#csvPath=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.csv&latCol=1&lngCol=2&titleCol=0&variableIcon=4,3,4,5,6",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "earthquake.usgs.gov",
+        "cdn.jsdelivr.net",
+        "cdnjs.cloudflare.com"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "地震 ALL 過去1週間(USGS)",
+        "class": "地震・火山",
+        "visibility": "hidden",
+        "opacity": "0.7",
+        "xlink:href": "./authoringLayers/local/csvLayer/csvXhr_r20.svg#csvPath=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.csv&latCol=1&lngCol=2&titleCol=0&variableIcon=4,3,4,5,6"
+      }
+    },
+    {
+      "sourceIndex": 89,
+      "title": "全球地震情報(USGS)",
+      "href": "./appLayers/usgsEq/usgsEarthquake.svg",
+      "status": "limited",
+      "category": "C",
+      "delivery": "online-only",
+      "runtime": "tight",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "earthquake.usgs.gov"
+      ],
+      "verifiedAt": "2026-08-04",
+      "reason": "controllerとSVGMapライブラリを同一オリジンへ固定し、USGS GeoJSONの取得と震源図形生成まで動作確認済み",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "全球地震情報(USGS)",
+        "class": "地震・火山 clickable",
+        "visibility": "hidden",
+        "opacity": "0.7",
+        "xlink:href": "./appLayers/usgsEq/usgsEarthquake.svg"
+      },
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/usgs-earthquakes.svg"
+    },
+    {
+      "sourceIndex": 90,
+      "title": "K-NET地震情報(防災科研)",
+      "href": "./appLayers/bosaiKakenKNET/K_NET.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.kyoshin.bosai.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "K-NET地震情報(防災科研)",
+        "class": "地震・火山 clickable",
+        "visibility": "hidden",
+        "opacity": "0.7",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/bosaiKakenKNET/K_NET.svg"
+      }
+    },
+    {
+      "sourceIndex": 91,
+      "title": "津波情報(JMA)",
+      "href": "./appLayers/jma/tsunami/tsunami.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.jma.go.jp",
+        "www.data.jma.go.jp",
+        "xml.kishou.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "津波情報(JMA)",
+        "class": "地震・火山 clickable",
+        "visibility": "hidden",
+        "opacity": "0.7",
+        "xlink:href": "./appLayers/jma/tsunami/tsunami.svg"
+      }
+    },
+    {
+      "sourceIndex": 92,
+      "title": "過去の地震データベース(JMA)",
+      "href": "./appLayers/jma/eq/quakeRecord.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.data.jma.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "過去の地震データベース(JMA)",
+        "class": "地震・火山 clickable",
+        "visibility": "hidden",
+        "opacity": "0.7",
+        "xlink:href": "./appLayers/jma/eq/quakeRecord.svg"
+      }
+    },
+    {
+      "sourceIndex": 93,
+      "title": "地震情報(JMA)",
+      "href": "./appLayers/jma/eq/quake.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.jma.go.jp",
+        "www.data.jma.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "地震情報(JMA)",
+        "class": "地震・火山 clickable",
+        "visibility": "hidden",
+        "opacity": "0.7",
+        "xlink:href": "./appLayers/jma/eq/quake.svg"
+      }
+    },
+    {
+      "sourceIndex": 94,
+      "title": "NOAA 海水温",
+      "href": "./appLayers/noaa_nowCOAST/wmsMercator.svg#global_sea_surface_temperature",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "nowcoast.noaa.gov",
+        "cdn.jsdelivr.net"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "NOAA 海水温",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "data-controller": "noaa.html#exec=appearOnLayerLoad",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/noaa_nowCOAST/wmsMercator.svg#global_sea_surface_temperature"
+      }
+    },
+    {
+      "sourceIndex": 95,
+      "title": "NOAA 雷",
+      "href": "./appLayers/noaa_nowCOAST/wmsMercator.svg#ldn_lightning_strike_density",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "nowcoast.noaa.gov",
+        "cdn.jsdelivr.net"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "NOAA 雷",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "data-controller": "noaa.html#exec=appearOnLayerLoad",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/noaa_nowCOAST/wmsMercator.svg#ldn_lightning_strike_density"
+      }
+    },
+    {
+      "sourceIndex": 96,
+      "title": "NOAA 湿度",
+      "href": "./appLayers/noaa_nowCOAST/wmsMercator.svg#global_water_vapor_imagery_mosaic",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "nowcoast.noaa.gov",
+        "cdn.jsdelivr.net"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "NOAA 湿度",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "data-controller": "noaa.html#exec=appearOnLayerLoad",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/noaa_nowCOAST/wmsMercator.svg#global_water_vapor_imagery_mosaic"
+      }
+    },
+    {
+      "sourceIndex": 97,
+      "title": "NOAA 赤外線",
+      "href": "./appLayers/noaa_nowCOAST/wmsMercator.svg#global_longwave_imagery_mosaic",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "nowcoast.noaa.gov",
+        "cdn.jsdelivr.net"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "NOAA 赤外線",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "data-controller": "noaa.html#exec=appearOnLayerLoad",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/noaa_nowCOAST/wmsMercator.svg#global_longwave_imagery_mosaic"
+      }
+    },
+    {
+      "sourceIndex": 98,
+      "title": "NOAA 可視光",
+      "href": "./appLayers/noaa_nowCOAST/wmsMercator.svg#global_visible_imagery_mosaic",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "nowcoast.noaa.gov",
+        "cdn.jsdelivr.net"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "NOAA 可視光",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "data-controller": "noaa.html#exec=appearOnLayerLoad",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/noaa_nowCOAST/wmsMercator.svg#global_visible_imagery_mosaic"
+      }
+    },
+    {
+      "sourceIndex": 99,
+      "title": "GPV降雨情報(MSM)",
+      "href": "./appLayers/niiDigitalArchives2011/dynamicWebTile.svg#globe&baseURL=none&zmax=11",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "agora.ex.nii.ac.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "GPV降雨情報(MSM)",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.4",
+        "data-controller": "gpv_msm_rain.html#exec=appearOnLayerLoad&requiredWidth=400",
+        "xlink:href": "./appLayers/niiDigitalArchives2011/dynamicWebTile.svg#globe&baseURL=none&zmax=11"
+      }
+    },
+    {
+      "sourceIndex": 100,
+      "title": "GPV風情報 [Animated-α版]",
+      "href": "./appLayers/windy/windy.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "agora.ex.nii.ac.jp",
+        "github.com",
+        "ja.wikipedia.org"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "GPV風情報 [Animated-α版]",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.5",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/windy/windy.svg"
+      }
+    },
+    {
+      "sourceIndex": 101,
+      "title": "GPV風情報",
+      "href": "./appLayers/niiDigitalTyphoon/wind.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "agora.ex.nii.ac.jp",
+        "qiita.com",
+        "en.wikipedia.org"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "GPV風情報",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.7",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/niiDigitalTyphoon/wind.svg"
+      }
+    },
+    {
+      "sourceIndex": 102,
+      "title": "気象警報",
+      "href": "./appLayers/niiDigitalTyphoon/warning/warning.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "www.opengis.net",
+        "cdn.jsdelivr.net",
+        "agora.ex.nii.ac.jp",
+        "qiita.com",
+        "en.wikipedia.org"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "気象警報",
+        "class": "気象 clickable",
+        "visibility": "hidden",
+        "opacity": "0.7",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/niiDigitalTyphoon/warning/warning.svg"
+      }
+    },
+    {
+      "sourceIndex": 103,
+      "title": "JTWC 台風情報(Joint Typhoon Warning Center)",
+      "href": "./appLayers/niiDigitalTyphoon/jtwcN.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "www.metoc.navy.mil",
+        "cdn.jsdelivr.net",
+        "www.petitmonte.com"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "JTWC 台風情報(Joint Typhoon Warning Center)",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.7",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/niiDigitalTyphoon/jtwcN.svg"
+      }
+    },
+    {
+      "sourceIndex": 104,
+      "title": "JTWC KML 台風情報",
+      "href": "./appLayers/niiDigitalTyphoon/jtwc_KML.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.metoc.navy.mil"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "JTWC KML 台風情報",
+        "class": "気象 clickable",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "xlink:href": "./appLayers/niiDigitalTyphoon/jtwc_KML.svg"
+      }
+    },
+    {
+      "sourceIndex": 105,
+      "title": "yr.no:気温・雲被覆・降雨情報",
+      "href": "./appLayers/yrNo/yrNoTiles.svg#noforecast",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "beta.yr-maps.met.no",
+        "tiles.yr.no",
+        "yr.no"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "yr.no:気温・雲被覆・降雨情報",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.4",
+        "xlink:href": "./appLayers/yrNo/yrNoTiles.svg#noforecast"
+      }
+    },
+    {
+      "sourceIndex": 106,
+      "title": "yr.no:風情報(Animated)",
+      "href": "./appLayers/yrNo/windy/windyYrNo.svg#noforecast",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.yr.no",
+        "www.met.no",
+        "beta.yr-maps.met.no",
+        "github.com",
+        "ja.wikipedia.org"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "yr.no:風情報(Animated)",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.7",
+        "xlink:href": "./appLayers/yrNo/windy/windyYrNo.svg#noforecast"
+      }
+    },
+    {
+      "sourceIndex": 107,
+      "title": "JAXA 衛星全球降水マップ",
+      "href": "./appLayers/jaxaGSMaP/dynamicWebTile.svg#globe&baseURL=none&zmax=11",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "sharaku.eorc.jaxa.jp",
+        "www.eorc.jaxa.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "JAXA 衛星全球降水マップ",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.65",
+        "data-controller": "GEMaP.html#exec=appearOnLayerLoad&requiredWidth=400&cat=GSMaP_NOW&autoupdate&noforecast",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/jaxaGSMaP/dynamicWebTile.svg#globe&baseURL=none&zmax=11"
+      }
+    },
+    {
+      "sourceIndex": 108,
+      "title": "JAXA 衛星全球降水マップ(風向矢印)",
+      "href": "./appLayers/jaxaGSMaP/dynamicWebTile.svg#globe&baseURL=none&zmax=11",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "sharaku.eorc.jaxa.jp",
+        "www.eorc.jaxa.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "JAXA 衛星全球降水マップ(風向矢印)",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.65",
+        "data-controller": "GEMaP.html#exec=appearOnLayerLoad&requiredWidth=400&cat=NEXRA:ss_uv10m_img&autoupdate&noforecast",
+        "xlink:href": "./appLayers/jaxaGSMaP/dynamicWebTile.svg#globe&baseURL=none&zmax=11"
+      }
+    },
+    {
+      "sourceIndex": 109,
+      "title": "今後の雨（軽量版）(JMA)",
+      "href": "./appLayers/jma/jma_bm_tiny.svg#forecast=true",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.data.jma.go.jp",
+        "www.jma.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "今後の雨（軽量版）(JMA)",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.65",
+        "xlink:href": "./appLayers/jma/jma_bm_tiny.svg#forecast=true"
+      }
+    },
+    {
+      "sourceIndex": 110,
+      "title": "雨雲の動き（軽量版）(JMA)",
+      "href": "./appLayers/jma/jma_bm_tiny.svg",
+      "status": "limited",
+      "category": "C",
+      "delivery": "online-only",
+      "runtime": "tight",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "www.jma.go.jp"
+      ],
+      "verifiedAt": "2026-08-04",
+      "reason": "controllerのSVGMapライブラリを同一オリジンへ固定し、気象庁の時刻JSONと降水タイル取得まで動作確認済み",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "雨雲の動き（軽量版）(JMA)",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.65",
+        "xlink:href": "./appLayers/jma/jma_bm_tiny.svg"
+      },
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/jma-rain-now.svg"
+    },
+    {
+      "sourceIndex": 111,
+      "title": "天気分布予報(JMA)",
+      "href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=16&autoupdate",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.jma.go.jp",
+        "www.data.jma.go.jp",
+        "www.msil.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "天気分布予報(JMA)",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.65",
+        "xlink:href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=16&autoupdate"
+      }
+    },
+    {
+      "sourceIndex": 112,
+      "title": "早期注意情報(JMA)",
+      "href": "./appLayers/jma/warnings/probability.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.jma.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "早期注意情報(JMA)",
+        "class": "気象 clickable",
+        "visibility": "hidden",
+        "opacity": "0.5",
+        "xlink:href": "./appLayers/jma/warnings/probability.svg"
+      }
+    },
+    {
+      "sourceIndex": 113,
+      "title": "警報注意報(JMA)",
+      "href": "./appLayers/jma/warnings/warnings.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "dmdata.jp",
+        "www.jma.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "警報注意報(JMA)",
+        "class": "気象 clickable",
+        "visibility": "hidden",
+        "opacity": "0.5",
+        "xlink:href": "./appLayers/jma/warnings/warnings.svg"
+      }
+    },
+    {
+      "sourceIndex": 114,
+      "title": "台風(JMA)",
+      "href": "./appLayers/jma/jma_typhoon.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.jma.go.jp",
+        "math.stackexchange.com",
+        "www.data.jma.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "台風(JMA)",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.65",
+        "xlink:href": "./appLayers/jma/jma_typhoon.svg"
+      }
+    },
+    {
+      "sourceIndex": 115,
+      "title": "降水短時間予報(JMA)",
+      "href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=6&autoupdate",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.jma.go.jp",
+        "www.data.jma.go.jp",
+        "www.msil.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "降水短時間予報(JMA)",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.65",
+        "xlink:href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=6&autoupdate"
+      }
+    },
+    {
+      "sourceIndex": 116,
+      "title": "大雨危険度(JMA)",
+      "href": "./appLayers/jma/kikendo/kikendo.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.jma.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "大雨危険度(JMA)",
+        "class": "気象 clickable",
+        "visibility": "hidden",
+        "opacity": "0.65",
+        "xlink:href": "./appLayers/jma/kikendo/kikendo.svg"
+      }
+    },
+    {
+      "sourceIndex": 117,
+      "title": "危険度分布-浸水害(JMA)",
+      "href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=4&autoupdate",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.jma.go.jp",
+        "www.data.jma.go.jp",
+        "www.msil.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "危険度分布-浸水害(JMA)",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.65",
+        "xlink:href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=4&autoupdate"
+      }
+    },
+    {
+      "sourceIndex": 118,
+      "title": "危険度分布-土砂災害(JMA)",
+      "href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=3&autoupdate",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.jma.go.jp",
+        "www.data.jma.go.jp",
+        "www.msil.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "危険度分布-土砂災害(JMA)",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.65",
+        "xlink:href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=3&autoupdate"
+      }
+    },
+    {
+      "sourceIndex": 119,
+      "title": "危険度分布-洪水害(JMA)",
+      "href": "./appLayers/jma/jma_vm.svg#cat=2&autoupdate",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "unpkg.com",
+        "www.jma.go.jp",
+        "www.data.jma.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "危険度分布-洪水害(JMA)",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.65",
+        "xlink:href": "./appLayers/jma/jma_vm.svg#cat=2&autoupdate"
+      }
+    },
+    {
+      "sourceIndex": 120,
+      "title": "国交省_川の防災情報_降雨レーダー",
+      "href": "./appLayers/mlitRadar/radar.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.river.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "国交省_川の防災情報_降雨レーダー",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.7",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/mlitRadar/radar.svg"
+      }
+    },
+    {
+      "sourceIndex": 121,
+      "title": "ひまわり8号(気象衛星センター)",
+      "href": "./appLayers/jmaSatelliteCenter/himawari8.svg#content=12",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "www.data.jma.go.jp",
+        "cdn.jsdelivr.net"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "ひまわり8号(気象衛星センター)",
+        "class": "気象",
+        "visibility": "hidden",
+        "xlink:href": "./appLayers/jmaSatelliteCenter/himawari8.svg#content=12"
+      }
+    },
+    {
+      "sourceIndex": 122,
+      "title": "ナウキャスト(降雨)(JMA)",
+      "href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=0&autoupdate",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.jma.go.jp",
+        "www.data.jma.go.jp",
+        "www.msil.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "ナウキャスト(降雨)(JMA)",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.65",
+        "xlink:href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=0&autoupdate"
+      }
+    },
+    {
+      "sourceIndex": 123,
+      "title": "ナウキャスト(降雪)(JMA)",
+      "href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=10&autoupdate",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.jma.go.jp",
+        "www.data.jma.go.jp",
+        "www.msil.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "ナウキャスト(降雪)(JMA)",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.65",
+        "xlink:href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=10&autoupdate"
+      }
+    },
+    {
+      "sourceIndex": 124,
+      "title": "ナウキャスト(落雷)(JMA)",
+      "href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=1&autoupdate",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.jma.go.jp",
+        "www.data.jma.go.jp",
+        "www.msil.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "ナウキャスト(落雷)(JMA)",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.65",
+        "xlink:href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=1&autoupdate"
+      }
+    },
+    {
+      "sourceIndex": 125,
+      "title": "ナウキャスト(竜巻)(JMA)",
+      "href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=2&autoupdate",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.jma.go.jp",
+        "www.data.jma.go.jp",
+        "www.msil.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "ナウキャスト(竜巻)(JMA)",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.65",
+        "xlink:href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=2&autoupdate"
+      }
+    },
+    {
+      "sourceIndex": 126,
+      "title": "天気図",
+      "href": "./appLayers/jma/tenkizu/tenkizu_r1.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "www.itsonlyamodel.us",
+        "www.jma.go.jp",
+        "cdn.jsdelivr.net"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "天気図",
+        "class": "気象",
+        "visibility": "hidden",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/jma/tenkizu/tenkizu_r1.svg"
+      }
+    },
+    {
+      "sourceIndex": 127,
+      "title": "気象庁_2021_VectorData",
+      "href": "./appLayers/jma/jma_vm.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "unpkg.com",
+        "www.jma.go.jp",
+        "www.data.jma.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "気象庁_2021_VectorData",
+        "class": "気象 clickable",
+        "visibility": "hidden",
+        "opacity": "0.65",
+        "xlink:href": "./appLayers/jma/jma_vm.svg"
+      }
+    },
+    {
+      "sourceIndex": 128,
+      "title": "気象庁_2021_火山",
+      "href": "./appLayers/jma/jma_volcano.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.jma.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "気象庁_2021_火山",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.7",
+        "xlink:href": "./appLayers/jma/jma_volcano.svg"
+      }
+    },
+    {
+      "sourceIndex": 129,
+      "title": "気象庁_2021_推計震度分布",
+      "href": "./appLayers/jma/jma_EQ_suikei.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.jma.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "気象庁_2021_推計震度分布",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.7",
+        "xlink:href": "./appLayers/jma/jma_EQ_suikei.svg"
+      }
+    },
+    {
+      "sourceIndex": 130,
+      "title": "気象庁_2021_ひまわり画像",
+      "href": "./appLayers/jma/jma_bm_r2.svg#type=2&cat=0&autoupdate&zmax=11",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.jma.go.jp",
+        "www.data.jma.go.jp",
+        "www.msil.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "気象庁_2021_ひまわり画像",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.65",
+        "xlink:href": "./appLayers/jma/jma_bm_r2.svg#type=2&cat=0&autoupdate&zmax=11"
+      }
+    },
+    {
+      "sourceIndex": 131,
+      "title": "気象庁_2021_TileImages",
+      "href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=0&autoupdate",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.jma.go.jp",
+        "www.data.jma.go.jp",
+        "www.msil.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "気象庁_2021_TileImages",
+        "class": "気象",
+        "visibility": "hidden",
+        "opacity": "0.65",
+        "xlink:href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=0&autoupdate"
+      }
+    },
+    {
+      "sourceIndex": 132,
+      "title": "気象庁_2021_アメダス",
+      "href": "./appLayers/jma/jma_amedas.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.jma.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "気象庁_2021_アメダス",
+        "class": "気象 clickable",
+        "visibility": "hidden",
+        "opacity": "0.65",
+        "xlink:href": "./appLayers/jma/jma_amedas.svg"
+      }
+    },
+    {
+      "sourceIndex": 133,
+      "title": "河川形状",
+      "href": "./appLayers/mlitRiver/riverLineTile.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.river.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "河川形状",
+        "class": "国交省_川の防災情報",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/mlitRiver/riverLineTile.svg"
+      }
+    },
+    {
+      "sourceIndex": 134,
+      "title": "水位観測所",
+      "href": "./appLayers/mlitRiver/stg.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.river.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "水位観測所",
+        "class": "国交省_川の防災情報",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/mlitRiver/stg.svg"
+      }
+    },
+    {
+      "sourceIndex": 135,
+      "title": "ダム",
+      "href": "./appLayers/mlitRiver/dam.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.river.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "ダム",
+        "class": "国交省_川の防災情報",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/mlitRiver/dam.svg"
+      }
+    },
+    {
+      "sourceIndex": 136,
+      "title": "警報のみ 水位計",
+      "href": "./appLayers/mlitRiver/overObs_swstg.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.river.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "警報のみ 水位計",
+        "class": "国交省_川の防災情報",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/mlitRiver/overObs_swstg.svg"
+      }
+    },
+    {
+      "sourceIndex": 137,
+      "title": "警報のみ 水位観測所",
+      "href": "./appLayers/mlitRiver/overObs_stg.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.river.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "警報のみ 水位観測所",
+        "class": "国交省_川の防災情報",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "xlink:href": "./appLayers/mlitRiver/overObs_stg.svg"
+      }
+    },
+    {
+      "sourceIndex": 138,
+      "title": "警報のみ ダム",
+      "href": "./appLayers/mlitRiver/overObs_dam.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.river.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "警報のみ ダム",
+        "class": "国交省_川の防災情報",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/mlitRiver/overObs_dam.svg"
+      }
+    },
+    {
+      "sourceIndex": 139,
+      "title": "道路(国土技術研究センター)",
+      "href": "./appLayers/jice/CCTVcontainerB.svg#cat=road",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.jice.or.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "道路(国土技術研究センター)",
+        "class": "ライブカメラ clickable",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/jice/CCTVcontainerB.svg#cat=road"
+      }
+    },
+    {
+      "sourceIndex": 140,
+      "title": "河川(国土技術研究センター)",
+      "href": "./appLayers/jice/CCTVcontainerB.svg#cat=river",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.jice.or.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "河川(国土技術研究センター)",
+        "class": "ライブカメラ clickable",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/jice/CCTVcontainerB.svg#cat=river"
+      }
+    },
+    {
+      "sourceIndex": 141,
+      "title": "国交省川の防災情報",
+      "href": "./appLayers/mlitRiver/CCTV.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.river.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "国交省川の防災情報",
+        "class": "ライブカメラ",
+        "visibility": "hidden",
+        "opacity": "0.75",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/mlitRiver/CCTV.svg"
+      }
+    },
+    {
+      "sourceIndex": 142,
+      "title": "警察庁_交通事故データ",
+      "href": "./appLayers/npaGoJp/ta.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "cdn.sheetjs.com",
+        "www.npa.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "警察庁_交通事故データ",
+        "class": "poi",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "xlink:href": "./appLayers/npaGoJp/ta.svg"
+      }
+    },
+    {
+      "sourceIndex": 143,
+      "title": "厚労省 病院・診療所・薬局等",
+      "href": "./appLayers/mhlw_IryouNet/IryouNetPoi.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "www.mhlw.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "厚労省 病院・診療所・薬局等",
+        "class": "poi",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/mhlw_IryouNet/IryouNetPoi.svg"
+      }
+    },
+    {
+      "sourceIndex": 144,
+      "title": "地理院 指定避難所",
+      "href": "./appLayers/gsiEvacuation/shelter.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "hinanmap.gsi.go.jp",
+        "www.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "地理院 指定避難所",
+        "class": "poi",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/gsiEvacuation/shelter.svg"
+      }
+    },
+    {
+      "sourceIndex": 145,
+      "title": "地理院 指定緊急避難場所",
+      "href": "./appLayers/gsiEvacuation/evacuationPlace.svg",
+      "status": "unverified",
+      "category": "C",
+      "delivery": "not-enabled",
+      "runtime": "isolated",
+      "offline": false,
+      "controller": true,
+      "externalDependencies": [
+        "cdn.jsdelivr.net",
+        "hinanmap.gsi.go.jp",
+        "www.gsi.go.jp"
+      ],
+      "verifiedAt": null,
+      "reason": "外部API・CDN・CORSまたはプロキシ依存を含むため未検証",
+      "animation": {
+        "x": "-30000",
+        "y": "-30000",
+        "width": "60000",
+        "height": "60000",
+        "title": "地理院 指定緊急避難場所",
+        "class": "poi",
+        "visibility": "hidden",
+        "opacity": "0.6",
+        "data-cross-origin-proxy-required": "true",
+        "xlink:href": "./appLayers/gsiEvacuation/evacuationPlace.svg"
+      }
+    }
+  ]
+}

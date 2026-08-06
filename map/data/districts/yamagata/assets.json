@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "regionId": "yamagata",
+  "publicBase": "/data/yamagata",
+  "fileCount": 35,
+  "bytes": 16145087,
+  "files": [
+    {
+      "code": "06201",
+      "path": "districts-svg/06201.svg",
+      "bytes": 1051589
+    },
+    {
+      "code": "06202",
+      "path": "districts-svg/06202.svg",
+      "bytes": 933684
+    },
+    {
+      "code": "06203",
+      "path": "districts-svg/06203.svg",
+      "bytes": 2173868
+    },
+    {
+      "code": "06204",
+      "path": "districts-svg/06204.svg",
+      "bytes": 1522714
+    },
+    {
+      "code": "06205",
+      "path": "districts-svg/06205.svg",
+      "bytes": 280494
+    },
+    {
+      "code": "06206",
+      "path": "districts-svg/06206.svg",
+      "bytes": 392310
+    },
+    {
+      "code": "06207",
+      "path": "districts-svg/06207.svg",
+      "bytes": 615614
+    },
+    {
+      "code": "06208",
+      "path": "districts-svg/06208.svg",
+      "bytes": 568010
+    },
+    {
+      "code": "06209",
+      "path": "districts-svg/06209.svg",
+      "bytes": 495682
+    },
+    {
+      "code": "06210",
+      "path": "districts-svg/06210.svg",
+      "bytes": 342853
+    },
+    {
+      "code": "06211",
+      "path": "districts-svg/06211.svg",
+      "bytes": 256361
+    },
+    {
+      "code": "06212",
+      "path": "districts-svg/06212.svg",
+      "bytes": 754988
+    },
+    {
+      "code": "06213",
+      "path": "districts-svg/06213.svg",
+      "bytes": 441314
+    },
+    {
+      "code": "06301",
+      "path": "districts-svg/06301.svg",
+      "bytes": 111586
+    },
+    {
+      "code": "06302",
+      "path": "districts-svg/06302.svg",
+      "bytes": 57312
+    },
+    {
+      "code": "06321",
+      "path": "districts-svg/06321.svg",
+      "bytes": 51180
+    },
+    {
+      "code": "06322",
+      "path": "districts-svg/06322.svg",
+      "bytes": 236344
+    },
+    {
+      "code": "06323",
+      "path": "districts-svg/06323.svg",
+      "bytes": 345022
+    },
+    {
+      "code": "06324",
+      "path": "districts-svg/06324.svg",
+      "bytes": 206156
+    },
+    {
+      "code": "06341",
+      "path": "districts-svg/06341.svg",
+      "bytes": 66386
+    },
+    {
+      "code": "06361",
+      "path": "districts-svg/06361.svg",
+      "bytes": 347486
+    },
+    {
+      "code": "06362",
+      "path": "districts-svg/06362.svg",
+      "bytes": 666365
+    },
+    {
+      "code": "06363",
+      "path": "districts-svg/06363.svg",
+      "bytes": 139384
+    },
+    {
+      "code": "06364",
+      "path": "districts-svg/06364.svg",
+      "bytes": 191550
+    },
+    {
+      "code": "06365",
+      "path": "districts-svg/06365.svg",
+      "bytes": 256665
+    },
+    {
+      "code": "06366",
+      "path": "districts-svg/06366.svg",
+      "bytes": 150486
+    },
+    {
+      "code": "06367",
+      "path": "districts-svg/06367.svg",
+      "bytes": 310348
+    },
+    {
+      "code": "06381",
+      "path": "districts-svg/06381.svg",
+      "bytes": 539985
+    },
+    {
+      "code": "06382",
+      "path": "districts-svg/06382.svg",
+      "bytes": 186909
+    },
+    {
+      "code": "06401",
+      "path": "districts-svg/06401.svg",
+      "bytes": 627910
+    },
+    {
+      "code": "06402",
+      "path": "districts-svg/06402.svg",
+      "bytes": 349388
+    },
+    {
+      "code": "06403",
+      "path": "districts-svg/06403.svg",
+      "bytes": 635683
+    },
+    {
+      "code": "06426",
+      "path": "districts-svg/06426.svg",
+      "bytes": 99368
+    },
+    {
+      "code": "06428",
+      "path": "districts-svg/06428.svg",
+      "bytes": 375968
+    },
+    {
+      "code": "06461",
+      "path": "districts-svg/06461.svg",
+      "bytes": 364125
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "id": "svgmap-app-layers",
+  "title": "SVGMap App Layers",
+  "container": "../../../../svgMapAppLayers/Container.svg",
+  "publicBase": "/map/svgMapAppLayers",
+  "orderOffset": 1000,
+  "defaultVisibility": "hidden",
+  "forceDefaultVisibility": true,
+  "compatibility": "compatibility.json",
+  "ui": {
+    "group": "SVGMapコミュニティ",
+    "note": "SVGMap App Layers由来",
+    "kind": "external",
+    "symbol": "コ",
+    "accent": "#72519A"
+  },
+  "include": [
+    "DenshiKokudo:orthoPhoto",
+    "OpenStreetMap(Global)",
+    "geohashCoder",
+    "人口集中地区(DID)H27(総務省統計局/地理院地図)",
+    "防災科研_J_SHIS_長期間平均ハザード(再現期間500年)",
+    "防災科研_J_SHIS_確率論的地震動予測地図2020_主要活断層帯",
+    "浸水想定区域(想定最大規模)",
+    "雨雲の動き（軽量版）(JMA)",
+    "全球地震情報(USGS)"
+  ],
+  "exclude": [],
+  "layers": [
+    {
+      "match": "DenshiKokudo:orthoPhoto",
+      "ui": {
+        "note": "制限付き・オンライン専用（国土地理院写真）",
+        "disabled": false
+      }
+    },
+    {
+      "match": "OpenStreetMap(Global)",
+      "ui": {
+        "note": "制限付き・オンライン専用（OSM公式タイル）",
+        "disabled": false
+      }
+    },
+    {
+      "match": "geohashCoder",
+      "ui": {
+        "note": "検証済み・オフライン対応（geohash controller）",
+        "disabled": false
+      }
+    },
+    {
+      "match": "人口集中地区(DID)H27(総務省統計局/地理院地図)",
+      "ui": {
+        "note": "検証済み・オンライン（DID専用SVG・旧式互換実行）",
+        "disabled": false
+      }
+    },
+    {
+      "match": "防災科研_J_SHIS_長期間平均ハザード(再現期間500年)",
+      "ui": {
+        "note": "制限付き・オンライン専用（旧式controller互換実行）",
+        "disabled": false
+      }
+    },
+    {
+      "match": "防災科研_J_SHIS_確率論的地震動予測地図2020_主要活断層帯",
+      "ui": {
+        "note": "制限付き・オンライン専用（防災科研J-SHIS）",
+        "disabled": false
+      }
+    },
+    {
+      "match": "浸水想定区域(想定最大規模)",
+      "ui": {
+        "note": "制限付き・オンライン専用（重ねるハザードマップ）",
+        "disabled": false
+      }
+    },
+    {
+      "match": "雨雲の動き（軽量版）(JMA)",
+      "ui": {
+        "note": "制限付き・オンライン専用（気象庁雨雲）",
+        "disabled": false
+      }
+    },
+    {
+      "match": "全球地震情報(USGS)",
+      "ui": {
+        "note": "制限付き・オンライン専用（USGS GeoJSON）",
+        "disabled": false
+      }
+    }
+  ],
+  "note": "互換性カタログで確認したレイヤだけを許可リストから標準搭載する。"
+}

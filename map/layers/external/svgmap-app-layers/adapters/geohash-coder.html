@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>geohash coder</title>
+  <script src="/map/vendor/svgmapjs/svgMapLayerLib.js"></script>
+  <script src="/map/svgMapAppLayers/geoCoders/geohashCoder/geohash.js"></script>
+</head>
+<body>
+  <label>緯度 <input id="latitude" type="number" step="any" value="35"></label>
+  <label>経度 <input id="longitude" type="number" step="any" value="135"></label>
+  <button id="encode" type="button">geohash取得</button>
+  <p id="result" role="status"></p>
+  <label>geohash <input id="geohash" value="wypzpgxczbzu"></label>
+  <button id="decode" type="button">緯度経度へ移動</button>
+  <script>
+    const showCurrentCenter = () => {
+      const center = window.svgMap?.getCentralGeoCoorinates?.();
+      if (!center) return;
+      latitude.value = center.lat;
+      longitude.value = center.lng;
+    };
+    encode.addEventListener('click', () => {
+      try {
+        const value = encodeGeoHash(Number(latitude.value), Number(longitude.value));
+        geohash.value = value;
+        result.textContent = `geohash: ${value}`;
+      } catch {
+        result.textContent = 'geohashを生成できません';
+      }
+    });
+    decode.addEventListener('click', () => {
+      try {
+        const value = decodeGeoHash(geohash.value);
+        const lat = Number(value.latitude[2]);
+        const lon = Number(value.longitude[2]);
+        latitude.value = lat;
+        longitude.value = lon;
+        result.textContent = `lat,lng: ${lat},${lon}`;
+        window.svgMap?.setGeoCenter?.(lat, lon);
+      } catch {
+        result.textContent = 'geohashを解決できません';
+      }
+    });
+    window.addEventListener('load', showCurrentCenter);
+    window.addEventListener('zoomPanMap', showCurrentCenter);
+  </script>
+</body>
+</html>

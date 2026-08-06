@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>SVGMap Native 防災マップ</title>
+<link rel="stylesheet" href="./native-map.css">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#124e3c">
+<link rel="icon" href="/map/icons/app/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="/map/icons/app/icon-192.png">
+</head>
+<body>
+<main class="app">
+  <header class="topbar">
+    <a class="brand" href="./region-picker.html" aria-label="全国の地域選択へ戻る">
+      <div class="brand-mark" aria-hidden="true">防</div>
+      <div class="brand-text">
+        <strong>SVGMap 防災マップ</strong>
+        <span>災害情報・避難所</span>
+      </div>
+    </a>
+
+    <div class="search-box" role="search">
+      <span class="search-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="m20 20-4-4"></path>
+        </svg>
+      </span>
+      <input
+        id="map-search"
+        class="search-input"
+        type="text"
+        inputmode="search"
+        enterkeyhint="search"
+        autocomplete="off"
+        placeholder="避難所・活動・カメラ・市区町村を検索"
+        aria-label="地図を検索"
+        aria-controls="search-results"
+      >
+      <button id="search-clear" class="search-clear" type="button" aria-label="検索を消去" title="消去" hidden>×</button>
+      <div id="search-results" class="search-results" hidden>
+        <ul id="search-result-list"></ul>
+        <p id="search-empty" class="search-empty" hidden>一致する場所がありません</p>
+      </div>
+    </div>
+
+    <div class="selectors">
+      <div class="field">
+        <label for="region-select">都道府県</label>
+        <select id="region-select" aria-label="都道府県"></select>
+      </div>
+      <div class="field municipality">
+        <label for="municipality-select">市区町村</label>
+        <select id="municipality-select" aria-label="市区町村"></select>
+      </div>
+    </div>
+
+    <div class="top-actions">
+      <button id="location-button" class="icon-button desktop-only" type="button" title="現在地" aria-label="現在地">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path>
+        </svg>
+      </button>
+      <button id="layer-button" class="icon-button" type="button" title="レイヤー" aria-label="レイヤーパネル">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m12 2 9 5-9 5-9-5 9-5Z"></path>
+          <path d="m3 12 9 5 9-5M3 17l9 5 9-5"></path>
+        </svg>
+      </button>
+      <button id="app-menu-button" class="icon-button" type="button" title="機能メニュー" aria-label="機能メニュー" aria-controls="app-menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    <nav id="app-menu" class="app-menu" aria-label="機能メニュー" hidden>
+      <p class="app-menu-title">機能</p>
+      <a class="app-menu-item" href="./region-picker.html">
+        <span class="app-menu-icon" aria-hidden="true">全</span>
+        <span class="app-menu-label"><strong>全国・地域を選択</strong><small>都道府県から地図を開く</small></span>
+      </a>
+      <a class="app-menu-item current" href="/map/webapp/native-map.html" aria-current="page">
+        <span class="app-menu-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3V6Z"></path>
+            <path d="M9 3v15M15 6v15"></path>
+          </svg>
+        </span>
+        <span class="app-menu-label"><strong>防災マップ</strong><small>現在の地図</small></span>
+      </a>
+      <a id="team-activity-publisher-link" class="app-menu-item" href="/map/publishers/team-activity-csv/admin.html">
+        <span class="app-menu-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16v16H4zM8 4v16M4 9h16M4 14h16"></path>
+          </svg>
+        </span>
+        <span class="app-menu-label"><strong>チーム活動CSV管理</strong><small>検証・公開データ生成</small></span>
+      </a>
+    </nav>
+  </header>
+
+  <section class="workspace">
+    <iframe id="map-frame" class="map-frame" title="SVGMap"></iframe>
+
+    <!-- データ鮮度表示。災害時に最も危険な失敗は「古い開設状況を最新だと思って見る」こと。
+         ハザード警報(alert-stack)とは別枠・非可読化不可(閉じるボタンなし)にしている。 -->
+    <div id="data-status-bar" class="data-status-bar" role="status" aria-live="polite" hidden></div>
+
+    <div id="alert-stack" class="alert-stack" aria-live="assertive" hidden></div>
+
+    <div class="map-controls" aria-label="地図操作">
+      <button id="zoom-in" class="icon-button" type="button" title="拡大" aria-label="拡大">+</button>
+      <button id="zoom-out" class="icon-button" type="button" title="縮小" aria-label="縮小">−</button>
+      <button id="reset-view" class="icon-button" type="button" title="表示位置を戻す" aria-label="表示位置を戻す">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12a9 9 0 1 0 3-6.7"></path>
+          <path d="M3 4v6h6"></path>
+        </svg>
+      </button>
+    </div>
+
+    <aside id="layer-panel" class="layer-panel">
+      <header class="panel-header">
+        <div>
+          <p>CONTAINER LAYERS</p>
+          <h1>表示レイヤー</h1>
+        </div>
+        <div class="panel-header-actions">
+          <span id="layer-count" class="layer-count">0 / 0</span>
+          <button id="panel-close" class="panel-close" type="button" aria-label="レイヤーパネルを閉じる" title="閉じる">×</button>
+        </div>
+      </header>
+      <form id="layer-import-form" class="layer-import-form" hidden>
+        <select id="layer-import-kind" aria-label="インポート形式">
+          <option value="artifact">検証済みレイヤー</option>
+          <option value="signed-index">署名済み配布一覧</option>
+          <option value="container">Container.svg</option>
+          <option value="layer">SVG / HTML</option>
+        </select>
+        <input id="layer-import-index-url" class="layer-import-index-url" type="url" inputmode="url" autocomplete="url" placeholder="https://publisher.example/index.json" hidden>
+        <div id="layer-import-index-actions" class="layer-import-index-actions" hidden>
+          <button id="layer-import-index-load" class="layer-import-index-load" type="button">署名を確認</button>
+        </div>
+        <select id="layer-import-artifact" class="layer-import-artifact" aria-label="検証済みレイヤー"></select>
+        <dl id="layer-import-artifact-meta" class="layer-import-artifact-meta" hidden>
+          <dt>発行者</dt><dd id="artifact-publisher"></dd>
+          <dt>ライセンス</dt><dd id="artifact-license"></dd>
+          <dt>公開</dt><dd id="artifact-release"></dd>
+        </dl>
+        <p id="artifact-description" class="artifact-description" hidden></p>
+        <p id="artifact-action-help" class="artifact-action-help" hidden>この地図で表示すると現在の地図へ追加します。ZIPには単体ビューア、Container、データ、利用案内が含まれます。</p>
+        <input id="layer-import-url" class="layer-import-url" type="text" inputmode="url" autocomplete="url" placeholder="https://example.jp/Container.svg" hidden>
+        <input id="layer-import-file" class="layer-import-file" type="file" accept=".svg,.html,.htm,image/svg+xml,text/html" hidden>
+        <input id="layer-import-title" class="layer-import-title" type="text" autocomplete="off" placeholder="レイヤー名" hidden>
+        <div class="layer-import-actions">
+          <a id="layer-download" class="layer-download" href="#" download hidden>ZIPで保存</a>
+          <button id="layer-import-submit" class="layer-import-submit" type="submit">追加</button>
+        </div>
+        <p id="layer-import-status" class="layer-import-status" role="status"></p>
+      </form>
+      <details id="community-compatibility" class="community-compatibility">
+        <summary>
+          <span>SVGMapコミュニティ</span>
+          <small id="community-compatibility-summary">互換性一覧を読み込み中</small>
+        </summary>
+        <p>本家svgmapAppLayersの同梱資産を検索し、現在の地図へ個別に追加できます。</p>
+        <div class="community-catalog-tools">
+          <input id="community-catalog-search" type="search" autocomplete="off" placeholder="レイヤー名・通信先を検索" aria-label="SVGMapコミュニティレイヤーを検索">
+          <span id="community-catalog-status" role="status"></span>
+        </div>
+        <ul id="community-compatibility-list"></ul>
+      </details>
+      <!-- オフライン保存。通信が無くなる前に備えられるようにする。 -->
+      <section class="offline-storage" aria-labelledby="offline-storage-title">
+        <header class="offline-storage-header">
+          <h2 id="offline-storage-title">オフライン保存</h2>
+          <button id="offline-save-region" class="offline-save" type="button">この地域を保存</button>
+        </header>
+        <p id="offline-storage-status" class="offline-storage-status" role="status"></p>
+        <ul id="offline-region-list" class="offline-region-list"></ul>
+        <p id="offline-storage-empty" class="offline-storage-empty">保存済みの地域はありません</p>
+      </section>
+
+      <div id="layer-presets" class="layer-presets" aria-label="レイヤープリセット"></div>
+      <ul id="layer-list" class="layer-list"></ul>
+      <footer class="panel-footer">
+        <span id="ready-dot" class="ready-dot" aria-hidden="true"></span>
+        <span id="status-text">地域設定を読み込み中</span>
+      </footer>
+    </aside>
+
+    <div id="loading" class="loading">地図を読み込み中...</div>
+  </section>
+</main>
+
+<script type="module" src="./native-map.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "id": "floodWarning",
+  "title": "Flood and Weather Warning Portable Layer",
+  "version": "1.0.0",
+  "type": "svgmap-portable-layer",
+  "distribution": {
+    "publisher": { "id": "svg3", "name": "SVG3" },
+    "license": { "spdx": "NOASSERTION", "name": "気象庁ホームページ利用規約", "status": "declared", "redistributable": true },
+    "publishedAt": "2026-08-04T00:00:00+09:00"
+  },
+  "entrypoint": "floodWarningLayer.svg",
+  "portability": {
+    "level": "distribution-portable",
+    "dataInjection": "fixed-authority-url",
+    "limitations": ["気象庁のJSON配信にネットワーク接続が必要。取得失敗時は端末キャッシュを使用する。"]
+  },
+  "runtime": {
+    "lawaModes": ["tight", "isolated"],
+    "readyEvent": "layerWebAppReady",
+    "requiredApis": ["svgMap.getGeoViewBox", "svgMap.setShowPoiProperty", "svgMap.showModal", "svgImage"]
+  },
+  "runtimeDependencies": [
+    { "id": "representative-pins", "version": "1.2.2", "manifest": "../representative-pins/runtime.package.json" },
+    { "id": "svgmap-slawa-client", "version": "1.0.0", "manifest": "../svgmap-slawa-client/runtime.package.json" }
+  ],
+  "shared": ["floodWarningLayer.js", "floodWarningDetail.js", "jmaWarnings.js"],
+  "data": { "kind": "runtime-json", "injection": { "transport": "fixed-authority-url", "required": [], "optional": [] } }
+}

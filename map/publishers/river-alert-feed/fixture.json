@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "receivedAt": "2026-07-23T09:00:00+09:00",
+  "stations": [
+    {
+      "id": "fixture-normal",
+      "regionId": "okayama",
+      "title": "旭川 検証観測所",
+      "river": "旭川",
+      "location": "岡山市",
+      "lat": 34.6654,
+      "lon": 133.9306,
+      "currentLevel": 2.1,
+      "change1h": 0.1,
+      "advisoryLevel": 3.2,
+      "evacuationLevel": 4.1,
+      "dangerLevel": 4.8,
+      "unit": "m",
+      "observedAt": "2026-07-23T08:55:00+09:00",
+      "sourceUrl": "https://example.invalid/river/fixture-normal",
+      "quality": "normal"
+    },
+    {
+      "id": "fixture-danger",
+      "regionId": "okayama",
+      "title": "高梁川 検証観測所",
+      "river": "高梁川",
+      "location": "倉敷市",
+      "lat": 34.5839,
+      "lon": 133.7656,
+      "currentLevel": 5.1,
+      "change1h": 0.7,
+      "advisoryLevel": 3.3,
+      "evacuationLevel": 4.4,
+      "dangerLevel": 4.9,
+      "unit": "m",
+      "observedAt": "2026-07-23T08:55:00+09:00",
+      "sourceUrl": "https://example.invalid/river/fixture-danger",
+      "quality": "provisional"
+    }
+  ]
+}

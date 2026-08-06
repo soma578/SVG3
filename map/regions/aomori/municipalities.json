@@ -1,0 +1,846 @@
+{
+  "region": "aomori",
+  "label": "青森県",
+  "municipalities": [
+    {
+      "id": "02201",
+      "label": "青森市",
+      "municipalityCodes": [
+        "02201"
+      ],
+      "shelterCount": 327,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.78759,
+        "lon": 140.750425,
+        "latSpan": 0.472342,
+        "lonSpan": 0.598481
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02202",
+      "label": "弘前市",
+      "municipalityCodes": [
+        "02202"
+      ],
+      "shelterCount": 247,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.61446,
+        "lon": 140.37646,
+        "latSpan": 0.381966,
+        "lonSpan": 0.576394
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02203",
+      "label": "八戸市",
+      "municipalityCodes": [
+        "02203"
+      ],
+      "shelterCount": 208,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.475505,
+        "lon": 141.50064,
+        "latSpan": 0.332553,
+        "lonSpan": 0.379288
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02204",
+      "label": "黒石市",
+      "municipalityCodes": [
+        "02204"
+      ],
+      "shelterCount": 46,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.614685,
+        "lon": 140.70467,
+        "latSpan": 0.201279,
+        "lonSpan": 0.36296
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02205",
+      "label": "五所川原市",
+      "municipalityCodes": [
+        "02205"
+      ],
+      "shelterCount": 184,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.92837,
+        "lon": 140.4487,
+        "latSpan": 0.516568,
+        "lonSpan": 0.371358
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02206",
+      "label": "十和田市",
+      "municipalityCodes": [
+        "02206"
+      ],
+      "shelterCount": 52,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.56147,
+        "lon": 141.077975,
+        "latSpan": 0.36452,
+        "lonSpan": 0.588965
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02207",
+      "label": "三沢市",
+      "municipalityCodes": [
+        "02207"
+      ],
+      "shelterCount": 95,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.77388,
+        "lon": 141.37551,
+        "latSpan": 0.293124,
+        "lonSpan": 0.169546
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02208",
+      "label": "むつ市",
+      "municipalityCodes": [
+        "02208"
+      ],
+      "shelterCount": 148,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 41.291455,
+        "lon": 141.05158,
+        "latSpan": 0.425893,
+        "lonSpan": 0.747214
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02209",
+      "label": "つがる市",
+      "municipalityCodes": [
+        "02209"
+      ],
+      "shelterCount": 105,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.883835,
+        "lon": 140.343975,
+        "latSpan": 0.329511,
+        "lonSpan": 0.244517
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02210",
+      "label": "平川市",
+      "municipalityCodes": [
+        "02210"
+      ],
+      "shelterCount": 132,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.51622,
+        "lon": 140.694485,
+        "latSpan": 0.296088,
+        "lonSpan": 0.482495
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02301",
+      "label": "平内町",
+      "municipalityCodes": [
+        "02301"
+      ],
+      "shelterCount": 40,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.91182,
+        "lon": 140.96125,
+        "latSpan": 0.274222,
+        "lonSpan": 0.319488
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02301.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02303",
+      "label": "今別町",
+      "municipalityCodes": [
+        "02303"
+      ],
+      "shelterCount": 40,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 41.16562,
+        "lon": 140.50512,
+        "latSpan": 0.164398,
+        "lonSpan": 0.255476
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02303.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02304",
+      "label": "蓬田村",
+      "municipalityCodes": [
+        "02304"
+      ],
+      "shelterCount": 23,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.9924,
+        "lon": 140.58846,
+        "latSpan": 0.115128,
+        "lonSpan": 0.188058
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02304.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02307",
+      "label": "外ヶ浜町",
+      "municipalityCodes": [
+        "02307"
+      ],
+      "shelterCount": 62,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 41.142395,
+        "lon": 140.49284,
+        "latSpan": 0.312507,
+        "lonSpan": 0.400166
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02307.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02321",
+      "label": "鰺ヶ沢町",
+      "municipalityCodes": [
+        "02321"
+      ],
+      "shelterCount": 84,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.618185,
+        "lon": 140.20261,
+        "latSpan": 0.473941,
+        "lonSpan": 0.349752
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02321.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02323",
+      "label": "深浦町",
+      "municipalityCodes": [
+        "02323"
+      ],
+      "shelterCount": 71,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.59455,
+        "lon": 140.013715,
+        "latSpan": 0.454142,
+        "lonSpan": 0.398593
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02323.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02343",
+      "label": "西目屋村",
+      "municipalityCodes": [
+        "02343"
+      ],
+      "shelterCount": 7,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.52333,
+        "lon": 140.23368,
+        "latSpan": 0.239668,
+        "lonSpan": 0.296738
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02343.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02361",
+      "label": "藤崎町",
+      "municipalityCodes": [
+        "02361"
+      ],
+      "shelterCount": 0,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.68161,
+        "lon": 140.519515,
+        "latSpan": 0.10491,
+        "lonSpan": 0.152711
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02361.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02362",
+      "label": "大鰐町",
+      "municipalityCodes": [
+        "02362"
+      ],
+      "shelterCount": 48,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.473535,
+        "lon": 140.556045,
+        "latSpan": 0.198835,
+        "lonSpan": 0.319475
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02362.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02367",
+      "label": "田舎館村",
+      "municipalityCodes": [
+        "02367"
+      ],
+      "shelterCount": 45,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.644835,
+        "lon": 140.53957,
+        "latSpan": 0.076947,
+        "lonSpan": 0.110526
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02367.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02381",
+      "label": "板柳町",
+      "municipalityCodes": [
+        "02381"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.71313,
+        "lon": 140.476925,
+        "latSpan": 0.12168,
+        "lonSpan": 0.130975
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02381.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02384",
+      "label": "鶴田町",
+      "municipalityCodes": [
+        "02384"
+      ],
+      "shelterCount": 52,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.755915,
+        "lon": 140.420525,
+        "latSpan": 0.088153,
+        "lonSpan": 0.210353
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02384.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02387",
+      "label": "中泊町",
+      "municipalityCodes": [
+        "02387"
+      ],
+      "shelterCount": 80,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 41.084165,
+        "lon": 140.385385,
+        "latSpan": 0.428545,
+        "lonSpan": 0.355615
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02387.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02401",
+      "label": "野辺地町",
+      "municipalityCodes": [
+        "02401"
+      ],
+      "shelterCount": 13,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.900845,
+        "lon": 141.148015,
+        "latSpan": 0.183469,
+        "lonSpan": 0.283361
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02401.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02402",
+      "label": "七戸町",
+      "municipalityCodes": [
+        "02402"
+      ],
+      "shelterCount": 57,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.724865,
+        "lon": 141.086375,
+        "latSpan": 0.238537,
+        "lonSpan": 0.481377
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02402.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02405",
+      "label": "六戸町",
+      "municipalityCodes": [
+        "02405"
+      ],
+      "shelterCount": 30,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.631845,
+        "lon": 141.318325,
+        "latSpan": 0.179725,
+        "lonSpan": 0.159315
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02405.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02406",
+      "label": "横浜町",
+      "municipalityCodes": [
+        "02406"
+      ],
+      "shelterCount": 16,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 41.064385,
+        "lon": 141.286845,
+        "latSpan": 0.242619,
+        "lonSpan": 0.171223
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02406.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02408",
+      "label": "東北町",
+      "municipalityCodes": [
+        "02408"
+      ],
+      "shelterCount": 64,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.798055,
+        "lon": 141.187215,
+        "latSpan": 0.347269,
+        "lonSpan": 0.469339
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02408.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02411",
+      "label": "六ヶ所村",
+      "municipalityCodes": [
+        "02411"
+      ],
+      "shelterCount": 40,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.98226,
+        "lon": 141.320325,
+        "latSpan": 0.39026,
+        "lonSpan": 0.228475
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02411.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02412",
+      "label": "おいらせ町",
+      "municipalityCodes": [
+        "02412"
+      ],
+      "shelterCount": 91,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.627255,
+        "lon": 141.403675,
+        "latSpan": 0.120133,
+        "lonSpan": 0.155623
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02412.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02423",
+      "label": "大間町",
+      "municipalityCodes": [
+        "02423"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 41.488265,
+        "lon": 140.924875,
+        "latSpan": 0.175617,
+        "lonSpan": 0.111059
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02423.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02424",
+      "label": "東通村",
+      "municipalityCodes": [
+        "02424"
+      ],
+      "shelterCount": 44,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 41.269075,
+        "lon": 141.34739,
+        "latSpan": 0.421551,
+        "lonSpan": 0.31499
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02424.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02425",
+      "label": "風間浦村",
+      "municipalityCodes": [
+        "02425"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 41.474855,
+        "lon": 141.02479,
+        "latSpan": 0.140673,
+        "lonSpan": 0.23634
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02425.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02426",
+      "label": "佐井村",
+      "municipalityCodes": [
+        "02426"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 41.339405,
+        "lon": 140.85933,
+        "latSpan": 0.336089,
+        "lonSpan": 0.210704
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02426.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02441",
+      "label": "三戸町",
+      "municipalityCodes": [
+        "02441"
+      ],
+      "shelterCount": 37,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.3633,
+        "lon": 141.14925,
+        "latSpan": 0.152126,
+        "lonSpan": 0.43641
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02441.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02442",
+      "label": "五戸町",
+      "municipalityCodes": [
+        "02442"
+      ],
+      "shelterCount": 91,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.502835,
+        "lon": 141.29991,
+        "latSpan": 0.219479,
+        "lonSpan": 0.323596
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02442.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02443",
+      "label": "田子町",
+      "municipalityCodes": [
+        "02443"
+      ],
+      "shelterCount": 38,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.307205,
+        "lon": 141.063665,
+        "latSpan": 0.231829,
+        "lonSpan": 0.311207
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02443.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02445",
+      "label": "南部町",
+      "municipalityCodes": [
+        "02445"
+      ],
+      "shelterCount": 100,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.41784,
+        "lon": 141.33226,
+        "latSpan": 0.224666,
+        "lonSpan": 0.315224
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02445.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02446",
+      "label": "階上町",
+      "municipalityCodes": [
+        "02446"
+      ],
+      "shelterCount": 29,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.419115,
+        "lon": 141.600635,
+        "latSpan": 0.157183,
+        "lonSpan": 0.212849
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02446.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "02450",
+      "label": "新郷村",
+      "municipalityCodes": [
+        "02450"
+      ],
+      "shelterCount": 2,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.4498,
+        "lon": 141.108575,
+        "latSpan": 0.127062,
+        "lonSpan": 0.337519
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aomori/districts-svg/02450.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

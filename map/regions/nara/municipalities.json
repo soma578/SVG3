@@ -1,0 +1,825 @@
+{
+  "region": "nara",
+  "label": "奈良県",
+  "municipalities": [
+    {
+      "id": "29201",
+      "label": "奈良市",
+      "municipalityCodes": [
+        "29201"
+      ],
+      "shelterCount": 165,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.65809,
+        "lon": 135.89214,
+        "latSpan": 0.258908,
+        "lonSpan": 0.465218
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29202",
+      "label": "大和高田市",
+      "municipalityCodes": [
+        "29202"
+      ],
+      "shelterCount": 19,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.504355,
+        "lon": 135.74024,
+        "latSpan": 0.071877,
+        "lonSpan": 0.067002
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29203",
+      "label": "大和郡山市",
+      "municipalityCodes": [
+        "29203"
+      ],
+      "shelterCount": 38,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.63114,
+        "lon": 135.77274,
+        "latSpan": 0.092586,
+        "lonSpan": 0.13299
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29204",
+      "label": "天理市",
+      "municipalityCodes": [
+        "29204"
+      ],
+      "shelterCount": 51,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.596565,
+        "lon": 135.8688,
+        "latSpan": 0.125333,
+        "lonSpan": 0.21424
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29205",
+      "label": "橿原市",
+      "municipalityCodes": [
+        "29205"
+      ],
+      "shelterCount": 45,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.500335,
+        "lon": 135.79083,
+        "latSpan": 0.096707,
+        "lonSpan": 0.104442
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29206",
+      "label": "桜井市",
+      "municipalityCodes": [
+        "29206"
+      ],
+      "shelterCount": 66,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.51738,
+        "lon": 135.883065,
+        "latSpan": 0.19266,
+        "lonSpan": 0.167583
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29207",
+      "label": "五條市",
+      "municipalityCodes": [
+        "29207"
+      ],
+      "shelterCount": 63,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.245825,
+        "lon": 135.78076,
+        "latSpan": 0.422487,
+        "lonSpan": 0.337038
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29208",
+      "label": "御所市",
+      "municipalityCodes": [
+        "29208"
+      ],
+      "shelterCount": 36,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.434785,
+        "lon": 135.71821,
+        "latSpan": 0.121901,
+        "lonSpan": 0.140192
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29209",
+      "label": "生駒市",
+      "municipalityCodes": [
+        "29209"
+      ],
+      "shelterCount": 35,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.714005,
+        "lon": 135.71408,
+        "latSpan": 0.172029,
+        "lonSpan": 0.111748
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29210",
+      "label": "香芝市",
+      "municipalityCodes": [
+        "29210"
+      ],
+      "shelterCount": 37,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.547105,
+        "lon": 135.6896,
+        "latSpan": 0.072475,
+        "lonSpan": 0.102076
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29211",
+      "label": "葛城市",
+      "municipalityCodes": [
+        "29211"
+      ],
+      "shelterCount": 80,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.503035,
+        "lon": 135.70838,
+        "latSpan": 0.099229,
+        "lonSpan": 0.10998
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29212",
+      "label": "宇陀市",
+      "municipalityCodes": [
+        "29212"
+      ],
+      "shelterCount": 38,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.531415,
+        "lon": 135.99719,
+        "latSpan": 0.271141,
+        "lonSpan": 0.285506
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29322",
+      "label": "山添村",
+      "municipalityCodes": [
+        "29322"
+      ],
+      "shelterCount": 15,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.661715,
+        "lon": 136.019295,
+        "latSpan": 0.108563,
+        "lonSpan": 0.172757
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29322.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29342",
+      "label": "平群町",
+      "municipalityCodes": [
+        "29342"
+      ],
+      "shelterCount": 20,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.633895,
+        "lon": 135.689305,
+        "latSpan": 0.071929,
+        "lonSpan": 0.081965
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29342.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29343",
+      "label": "三郷町",
+      "municipalityCodes": [
+        "29343"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.600355,
+        "lon": 135.68196,
+        "latSpan": 0.040495,
+        "lonSpan": 0.078442
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29343.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29344",
+      "label": "斑鳩町",
+      "municipalityCodes": [
+        "29344"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.618735,
+        "lon": 135.733125,
+        "latSpan": 0.072163,
+        "lonSpan": 0.061945
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29344.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29345",
+      "label": "安堵町",
+      "municipalityCodes": [
+        "29345"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.604,
+        "lon": 135.75414,
+        "latSpan": 0.04,
+        "lonSpan": 0.04
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29345.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29361",
+      "label": "川西町",
+      "municipalityCodes": [
+        "29361"
+      ],
+      "shelterCount": 10,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.58876,
+        "lon": 135.773,
+        "latSpan": 0.04,
+        "lonSpan": 0.05746
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29361.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29362",
+      "label": "三宅町",
+      "municipalityCodes": [
+        "29362"
+      ],
+      "shelterCount": 9,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.570775,
+        "lon": 135.7733,
+        "latSpan": 0.04,
+        "lonSpan": 0.05395
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29362.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29363",
+      "label": "田原本町",
+      "municipalityCodes": [
+        "29363"
+      ],
+      "shelterCount": 14,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.559505,
+        "lon": 135.79442,
+        "latSpan": 0.077935,
+        "lonSpan": 0.082498
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29363.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29385",
+      "label": "曽爾村",
+      "municipalityCodes": [
+        "29385"
+      ],
+      "shelterCount": 20,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.51713,
+        "lon": 136.11993,
+        "latSpan": 0.113932,
+        "lonSpan": 0.133458
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29385.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29386",
+      "label": "御杖村",
+      "municipalityCodes": [
+        "29386"
+      ],
+      "shelterCount": 16,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.48209,
+        "lon": 136.155115,
+        "latSpan": 0.121862,
+        "lonSpan": 0.194077
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29386.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29401",
+      "label": "高取町",
+      "municipalityCodes": [
+        "29401"
+      ],
+      "shelterCount": 31,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.44206,
+        "lon": 135.803515,
+        "latSpan": 0.076492,
+        "lonSpan": 0.112437
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29401.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29402",
+      "label": "明日香村",
+      "municipalityCodes": [
+        "29402"
+      ],
+      "shelterCount": 13,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.46224,
+        "lon": 135.82428,
+        "latSpan": 0.086528,
+        "lonSpan": 0.113022
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29402.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29424",
+      "label": "上牧町",
+      "municipalityCodes": [
+        "29424"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.566565,
+        "lon": 135.71679,
+        "latSpan": 0.041275,
+        "lonSpan": 0.04
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29424.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29425",
+      "label": "王寺町",
+      "municipalityCodes": [
+        "29425"
+      ],
+      "shelterCount": 13,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.585855,
+        "lon": 135.693265,
+        "latSpan": 0.04,
+        "lonSpan": 0.058929
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29425.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29426",
+      "label": "広陵町",
+      "municipalityCodes": [
+        "29426"
+      ],
+      "shelterCount": 48,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.552965,
+        "lon": 135.744855,
+        "latSpan": 0.065923,
+        "lonSpan": 0.065013
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29426.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29427",
+      "label": "河合町",
+      "municipalityCodes": [
+        "29427"
+      ],
+      "shelterCount": 42,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.57563,
+        "lon": 135.731515,
+        "latSpan": 0.052494,
+        "lonSpan": 0.057421
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29427.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29441",
+      "label": "吉野町",
+      "municipalityCodes": [
+        "29441"
+      ],
+      "shelterCount": 58,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.393285,
+        "lon": 135.89873,
+        "latSpan": 0.156325,
+        "lonSpan": 0.209872
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29441.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29442",
+      "label": "大淀町",
+      "municipalityCodes": [
+        "29442"
+      ],
+      "shelterCount": 34,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.403035,
+        "lon": 135.79896,
+        "latSpan": 0.067405,
+        "lonSpan": 0.154544
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29442.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29443",
+      "label": "下市町",
+      "municipalityCodes": [
+        "29443"
+      ],
+      "shelterCount": 70,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.333565,
+        "lon": 135.817915,
+        "latSpan": 0.139841,
+        "lonSpan": 0.130299
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29443.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29444",
+      "label": "黒滝村",
+      "municipalityCodes": [
+        "29444"
+      ],
+      "shelterCount": 20,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.307845,
+        "lon": 135.86473,
+        "latSpan": 0.098657,
+        "lonSpan": 0.129324
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29444.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29446",
+      "label": "天川村",
+      "municipalityCodes": [
+        "29446"
+      ],
+      "shelterCount": 27,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.23136,
+        "lon": 135.85796,
+        "latSpan": 0.159276,
+        "lonSpan": 0.299312
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29446.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29447",
+      "label": "野迫川村",
+      "municipalityCodes": [
+        "29447"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.14473,
+        "lon": 135.634605,
+        "latSpan": 0.207532,
+        "lonSpan": 0.246753
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29447.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29449",
+      "label": "十津川村",
+      "municipalityCodes": [
+        "29449"
+      ],
+      "shelterCount": 82,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.005795,
+        "lon": 135.733655,
+        "latSpan": 0.381225,
+        "lonSpan": 0.474071
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29449.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29450",
+      "label": "下北山村",
+      "municipalityCodes": [
+        "29450"
+      ],
+      "shelterCount": 16,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.05003,
+        "lon": 135.973215,
+        "latSpan": 0.201344,
+        "lonSpan": 0.214253
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29450.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29451",
+      "label": "上北山村",
+      "municipalityCodes": [
+        "29451"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.12961,
+        "lon": 136.011075,
+        "latSpan": 0.27859,
+        "lonSpan": 0.279695
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29451.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29452",
+      "label": "川上村",
+      "municipalityCodes": [
+        "29452"
+      ],
+      "shelterCount": 32,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.28848,
+        "lon": 136.009935,
+        "latSpan": 0.241228,
+        "lonSpan": 0.316979
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29452.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "29453",
+      "label": "東吉野村",
+      "municipalityCodes": [
+        "29453"
+      ],
+      "shelterCount": 45,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.41171,
+        "lon": 136.016305,
+        "latSpan": 0.176592,
+        "lonSpan": 0.206947
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nara/districts-svg/29453.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

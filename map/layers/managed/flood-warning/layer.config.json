@@ -1,0 +1,28 @@
+{
+  "id": "layer-flood-warning",
+  "title": "洪水・気象警報",
+  "href": "/map/layers/portable/flood-warning/floodWarningLayer.svg",
+  "class": "poi clickable",
+  "visibility": "hidden",
+  "opacity": "1",
+  "extent": "japan",
+  "order": 65,
+  "layerPackage": "/map/layers/portable/flood-warning/layer.package.json",
+  "ui": {
+    "catalog": true,
+    "group": "防災情報",
+    "symbol": "警",
+    "accent": "#C62828",
+    "kind": "poi",
+    "note": "気象庁の市区町村単位の気象警報・注意報（観測所水位ではありません）",
+    "messages": { "toHost": ["runtime:dataStatus"], "fromHost": [] }
+  },
+  "dataSource": {
+    "ownership": "external",
+    "authority": { "name": "気象庁", "url": "https://www.jma.go.jp/bosai/warning/" },
+    "delivery": "user-action-direct",
+    "runtimeFetch": true,
+    "snapshot": { "timestampField": "reportDatetime" },
+    "freshness": { "staleAfterMinutes": 180 }
+  }
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="12243.4 -4605.6 3205.3 2251.0"
+     pointer-events="none">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+
+  <g id="hazard-flood" fill="#3b82f6" fill-opacity="0.28" stroke="#1d4ed8" stroke-opacity="0.70" stroke-width="0.10" pointer-events="none">
+    <path d="M 13960.19 -3538.69 L 13960.23 -3538.52 L 13960.19 -3538.68 L 13960.19 -3538.69 Z M 13960.23 -3538.83 L 13960.16 -3538.95 L 13960.21 -3538.83 L 13960.23 -3538.83 Z M 13960.26 -3538.58 L 13960.30 -3538.46 L 13960.26 -3538.58 L 13960.26 -3538.58 Z M 13960.24 -3538.73 L 13960.21 -3538.63 L 13960.24 -3538.72 L 13960.24 -3538.73 Z M 13960.22 -3538.82 L 13960.23 -3538.62 L 13960.23 -3538.82 L 13960.22 -3538.82 Z M 13960.11 -3538.91 L 13960.12 -3538.98 L 13960.11 -3538.91 L 13960.11 -3538.91 Z M 13960.03 -3538.98 L 13960.18 -3538.82 L 13960.01 -3539.19 L 13959.93 -3539.16 L 13960.04 -3538.98 L 13960.03 -3538.98 Z" />
+  </g>
+  <g id="hazard-tsunami-inundation" fill="#a855f7" fill-opacity="0.28" stroke="#7e22ce" stroke-opacity="0.70" stroke-width="0.10" pointer-events="none">
+
+  </g>
+  <g id="hazard-landslide-warning" fill="#f97316" fill-opacity="0.22" stroke="#c2410c" stroke-opacity="0.80" stroke-width="0.10" pointer-events="none">
+
+  </g>
+  <g id="hazard-landslide-special" fill="#ef4444" fill-opacity="0.35" stroke="#991b1b" stroke-opacity="0.90" stroke-width="0.12" pointer-events="none">
+
+  </g>
+</svg>

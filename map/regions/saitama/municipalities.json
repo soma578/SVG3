@@ -1,0 +1,1366 @@
+{
+  "region": "saitama",
+  "label": "埼玉県",
+  "municipalities": [
+    {
+      "id": "11100",
+      "label": "さいたま市",
+      "municipalityCodes": [
+        "11101",
+        "11102",
+        "11103",
+        "11104",
+        "11105",
+        "11106",
+        "11107",
+        "11108",
+        "11109"
+      ],
+      "shelterCount": 304,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.89732,
+        "lon": 139.642565,
+        "latSpan": 0.17862,
+        "lonSpan": 0.265057
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11101.svg",
+        "/data/saitama/districts-svg/11102.svg",
+        "/data/saitama/districts-svg/11103.svg",
+        "/data/saitama/districts-svg/11104.svg",
+        "/data/saitama/districts-svg/11105.svg",
+        "/data/saitama/districts-svg/11106.svg",
+        "/data/saitama/districts-svg/11107.svg",
+        "/data/saitama/districts-svg/11108.svg",
+        "/data/saitama/districts-svg/11109.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11110",
+      "label": "岩槻区",
+      "municipalityCodes": [
+        "11110"
+      ],
+      "shelterCount": 0,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.941075,
+        "lon": 139.70572,
+        "latSpan": 0.158041,
+        "lonSpan": 0.134212
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11110.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11201",
+      "label": "川越市",
+      "municipalityCodes": [
+        "11201"
+      ],
+      "shelterCount": 104,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.899765,
+        "lon": 139.467915,
+        "latSpan": 0.161681,
+        "lonSpan": 0.235235
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11202",
+      "label": "熊谷市",
+      "municipalityCodes": [
+        "11202"
+      ],
+      "shelterCount": 218,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.161915,
+        "lon": 139.368115,
+        "latSpan": 0.239811,
+        "lonSpan": 0.204113
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11203",
+      "label": "川口市",
+      "municipalityCodes": [
+        "11203"
+      ],
+      "shelterCount": 156,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.83364,
+        "lon": 139.73176,
+        "latSpan": 0.138892,
+        "lonSpan": 0.146978
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11206",
+      "label": "行田市",
+      "municipalityCodes": [
+        "11206"
+      ],
+      "shelterCount": 72,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.14432,
+        "lon": 139.47722,
+        "latSpan": 0.1404,
+        "lonSpan": 0.151632
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11207",
+      "label": "秩父市",
+      "municipalityCodes": [
+        "11207"
+      ],
+      "shelterCount": 74,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.98204,
+        "lon": 138.94373,
+        "latSpan": 0.36972,
+        "lonSpan": 0.601068
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11208",
+      "label": "所沢市",
+      "municipalityCodes": [
+        "11208"
+      ],
+      "shelterCount": 72,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.803475,
+        "lon": 139.462485,
+        "latSpan": 0.104325,
+        "lonSpan": 0.213889
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11209",
+      "label": "飯能市",
+      "municipalityCodes": [
+        "11209"
+      ],
+      "shelterCount": 104,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.894255,
+        "lon": 139.23808,
+        "latSpan": 0.196261,
+        "lonSpan": 0.355264
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11210",
+      "label": "加須市",
+      "municipalityCodes": [
+        "11210"
+      ],
+      "shelterCount": 91,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.143005,
+        "lon": 139.613525,
+        "latSpan": 0.186927,
+        "lonSpan": 0.232713
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11211",
+      "label": "本庄市",
+      "municipalityCodes": [
+        "11211"
+      ],
+      "shelterCount": 74,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.19709,
+        "lon": 139.15222,
+        "latSpan": 0.201916,
+        "lonSpan": 0.247988
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11212",
+      "label": "東松山市",
+      "municipalityCodes": [
+        "11212"
+      ],
+      "shelterCount": 57,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.04321,
+        "lon": 139.394115,
+        "latSpan": 0.16016,
+        "lonSpan": 0.163709
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11214",
+      "label": "春日部市",
+      "municipalityCodes": [
+        "11214"
+      ],
+      "shelterCount": 77,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.989345,
+        "lon": 139.770595,
+        "latSpan": 0.139945,
+        "lonSpan": 0.163111
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11215",
+      "label": "狭山市",
+      "municipalityCodes": [
+        "11215"
+      ],
+      "shelterCount": 68,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.85937,
+        "lon": 139.4196,
+        "latSpan": 0.108004,
+        "lonSpan": 0.152646
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11215.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11216",
+      "label": "羽生市",
+      "municipalityCodes": [
+        "11216"
+      ],
+      "shelterCount": 91,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.1737,
+        "lon": 139.55057,
+        "latSpan": 0.095264,
+        "lonSpan": 0.162578
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11216.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11217",
+      "label": "鴻巣市",
+      "municipalityCodes": [
+        "11217"
+      ],
+      "shelterCount": 62,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.077825,
+        "lon": 139.50032,
+        "latSpan": 0.122213,
+        "lonSpan": 0.181896
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11217.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11218",
+      "label": "深谷市",
+      "municipalityCodes": [
+        "11218"
+      ],
+      "shelterCount": 60,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.177445,
+        "lon": 139.258565,
+        "latSpan": 0.189735,
+        "lonSpan": 0.201487
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11218.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11219",
+      "label": "上尾市",
+      "municipalityCodes": [
+        "11219"
+      ],
+      "shelterCount": 121,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.967765,
+        "lon": 139.5918,
+        "latSpan": 0.109395,
+        "lonSpan": 0.149032
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11219.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11221",
+      "label": "草加市",
+      "municipalityCodes": [
+        "11221"
+      ],
+      "shelterCount": 90,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.837645,
+        "lon": 139.802235,
+        "latSpan": 0.084123,
+        "lonSpan": 0.100425
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11221.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11222",
+      "label": "越谷市",
+      "municipalityCodes": [
+        "11222"
+      ],
+      "shelterCount": 129,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.906645,
+        "lon": 139.792385,
+        "latSpan": 0.135005,
+        "lonSpan": 0.122889
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11222.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11223",
+      "label": "蕨市",
+      "municipalityCodes": [
+        "11223"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.824955,
+        "lon": 139.68642,
+        "latSpan": 0.04,
+        "lonSpan": 0.060918
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11223.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11224",
+      "label": "戸田市",
+      "municipalityCodes": [
+        "11224"
+      ],
+      "shelterCount": 37,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.81656,
+        "lon": 139.65911,
+        "latSpan": 0.048594,
+        "lonSpan": 0.105066
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11224.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11225",
+      "label": "入間市",
+      "municipalityCodes": [
+        "11225"
+      ],
+      "shelterCount": 62,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.816825,
+        "lon": 139.36724,
+        "latSpan": 0.110643,
+        "lonSpan": 0.135772
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11225.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11227",
+      "label": "朝霞市",
+      "municipalityCodes": [
+        "11227"
+      ],
+      "shelterCount": 55,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.80681,
+        "lon": 139.598075,
+        "latSpan": 0.073944,
+        "lonSpan": 0.065767
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11227.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11228",
+      "label": "志木市",
+      "municipalityCodes": [
+        "11228"
+      ],
+      "shelterCount": 22,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.8395,
+        "lon": 139.58116,
+        "latSpan": 0.0546,
+        "lonSpan": 0.068224
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11228.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11229",
+      "label": "和光市",
+      "municipalityCodes": [
+        "11229"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.79004,
+        "lon": 139.62162,
+        "latSpan": 0.060242,
+        "lonSpan": 0.064168
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11229.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11230",
+      "label": "新座市",
+      "municipalityCodes": [
+        "11230"
+      ],
+      "shelterCount": 41,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.789595,
+        "lon": 139.55526,
+        "latSpan": 0.094159,
+        "lonSpan": 0.101088
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11230.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11231",
+      "label": "桶川市",
+      "municipalityCodes": [
+        "11231"
+      ],
+      "shelterCount": 22,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.00056,
+        "lon": 139.550885,
+        "latSpan": 0.10361,
+        "lonSpan": 0.116311
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11231.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11232",
+      "label": "久喜市",
+      "municipalityCodes": [
+        "11232"
+      ],
+      "shelterCount": 117,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.08699,
+        "lon": 139.642765,
+        "latSpan": 0.151086,
+        "lonSpan": 0.219167
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11232.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11233",
+      "label": "北本市",
+      "municipalityCodes": [
+        "11233"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.026815,
+        "lon": 139.529305,
+        "latSpan": 0.080067,
+        "lonSpan": 0.091013
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11233.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11234",
+      "label": "八潮市",
+      "municipalityCodes": [
+        "11234"
+      ],
+      "shelterCount": 35,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.82409,
+        "lon": 139.84043,
+        "latSpan": 0.086138,
+        "lonSpan": 0.074932
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11234.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11235",
+      "label": "富士見市",
+      "municipalityCodes": [
+        "11235"
+      ],
+      "shelterCount": 34,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.85727,
+        "lon": 139.549275,
+        "latSpan": 0.077896,
+        "lonSpan": 0.098085
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11235.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11237",
+      "label": "三郷市",
+      "municipalityCodes": [
+        "11237"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.824505,
+        "lon": 139.869495,
+        "latSpan": 0.111085,
+        "lonSpan": 0.077259
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11237.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11238",
+      "label": "蓮田市",
+      "municipalityCodes": [
+        "11238"
+      ],
+      "shelterCount": 40,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.999665,
+        "lon": 139.641895,
+        "latSpan": 0.097357,
+        "lonSpan": 0.139633
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11238.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11239",
+      "label": "坂戸市",
+      "municipalityCodes": [
+        "11239"
+      ],
+      "shelterCount": 40,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.95921,
+        "lon": 139.395675,
+        "latSpan": 0.100854,
+        "lonSpan": 0.187265
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11239.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11240",
+      "label": "幸手市",
+      "municipalityCodes": [
+        "11240"
+      ],
+      "shelterCount": 35,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.073285,
+        "lon": 139.741295,
+        "latSpan": 0.090467,
+        "lonSpan": 0.125359
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11240.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11241",
+      "label": "鶴ヶ島市",
+      "municipalityCodes": [
+        "11241"
+      ],
+      "shelterCount": 25,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.93592,
+        "lon": 139.390675,
+        "latSpan": 0.056394,
+        "lonSpan": 0.099177
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11241.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11242",
+      "label": "日高市",
+      "municipalityCodes": [
+        "11242"
+      ],
+      "shelterCount": 29,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.89834,
+        "lon": 139.338705,
+        "latSpan": 0.07761,
+        "lonSpan": 0.164463
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11242.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11243",
+      "label": "吉川市",
+      "municipalityCodes": [
+        "11243"
+      ],
+      "shelterCount": 27,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.89952,
+        "lon": 139.86376,
+        "latSpan": 0.104234,
+        "lonSpan": 0.09217
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11243.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11245",
+      "label": "ふじみ野市",
+      "municipalityCodes": [
+        "11245"
+      ],
+      "shelterCount": 40,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.867075,
+        "lon": 139.509055,
+        "latSpan": 0.065117,
+        "lonSpan": 0.105625
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11245.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11246",
+      "label": "白岡市",
+      "municipalityCodes": [
+        "11246"
+      ],
+      "shelterCount": 19,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.02243,
+        "lon": 139.658875,
+        "latSpan": 0.070512,
+        "lonSpan": 0.142727
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11246.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11301",
+      "label": "伊奈町",
+      "municipalityCodes": [
+        "11301"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.99847,
+        "lon": 139.61819,
+        "latSpan": 0.074802,
+        "lonSpan": 0.071188
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11301.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11324",
+      "label": "三芳町",
+      "municipalityCodes": [
+        "11324"
+      ],
+      "shelterCount": 8,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.832955,
+        "lon": 139.516595,
+        "latSpan": 0.048477,
+        "lonSpan": 0.100607
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11324.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11326",
+      "label": "毛呂山町",
+      "municipalityCodes": [
+        "11326"
+      ],
+      "shelterCount": 18,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.934835,
+        "lon": 139.311255,
+        "latSpan": 0.089115,
+        "lonSpan": 0.129753
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11326.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11327",
+      "label": "越生町",
+      "municipalityCodes": [
+        "11327"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.958155,
+        "lon": 139.266955,
+        "latSpan": 0.091611,
+        "lonSpan": 0.141479
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11327.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11341",
+      "label": "滑川町",
+      "municipalityCodes": [
+        "11341"
+      ],
+      "shelterCount": 22,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.07031,
+        "lon": 139.35403,
+        "latSpan": 0.087672,
+        "lonSpan": 0.086112
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11341.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11342",
+      "label": "嵐山町",
+      "municipalityCodes": [
+        "11342"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.05864,
+        "lon": 139.317025,
+        "latSpan": 0.13442,
+        "lonSpan": 0.075023
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11342.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11343",
+      "label": "小川町",
+      "municipalityCodes": [
+        "11343"
+      ],
+      "shelterCount": 30,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.05197,
+        "lon": 139.247045,
+        "latSpan": 0.122148,
+        "lonSpan": 0.158613
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11343.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11346",
+      "label": "川島町",
+      "municipalityCodes": [
+        "11346"
+      ],
+      "shelterCount": 19,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.984045,
+        "lon": 139.483545,
+        "latSpan": 0.092495,
+        "lonSpan": 0.160641
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11346.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11347",
+      "label": "吉見町",
+      "municipalityCodes": [
+        "11347"
+      ],
+      "shelterCount": 44,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.04782,
+        "lon": 139.45941,
+        "latSpan": 0.093054,
+        "lonSpan": 0.118586
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11347.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11348",
+      "label": "鳩山町",
+      "municipalityCodes": [
+        "11348"
+      ],
+      "shelterCount": 20,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.98565,
+        "lon": 139.33341,
+        "latSpan": 0.060736,
+        "lonSpan": 0.11947
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11348.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11349",
+      "label": "ときがわ町",
+      "municipalityCodes": [
+        "11349"
+      ],
+      "shelterCount": 29,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.99723,
+        "lon": 139.24296,
+        "latSpan": 0.106054,
+        "lonSpan": 0.191464
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11349.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11361",
+      "label": "横瀬町",
+      "municipalityCodes": [
+        "11361"
+      ],
+      "shelterCount": 31,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.968305,
+        "lon": 139.132355,
+        "latSpan": 0.102219,
+        "lonSpan": 0.118417
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11361.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11362",
+      "label": "皆野町",
+      "municipalityCodes": [
+        "11362"
+      ],
+      "shelterCount": 16,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.07596,
+        "lon": 139.081835,
+        "latSpan": 0.127582,
+        "lonSpan": 0.201643
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11362.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11363",
+      "label": "長瀞町",
+      "municipalityCodes": [
+        "11363"
+      ],
+      "shelterCount": 8,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.115985,
+        "lon": 139.121585,
+        "latSpan": 0.083863,
+        "lonSpan": 0.101491
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11363.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11365",
+      "label": "小鹿野町",
+      "municipalityCodes": [
+        "11365"
+      ],
+      "shelterCount": 45,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.03018,
+        "lon": 138.940195,
+        "latSpan": 0.165282,
+        "lonSpan": 0.290667
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11365.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11369",
+      "label": "東秩父村",
+      "municipalityCodes": [
+        "11369"
+      ],
+      "shelterCount": 10,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.04516,
+        "lon": 139.19525,
+        "latSpan": 0.123318,
+        "lonSpan": 0.113724
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11369.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11381",
+      "label": "美里町",
+      "municipalityCodes": [
+        "11381"
+      ],
+      "shelterCount": 8,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.171285,
+        "lon": 139.17265,
+        "latSpan": 0.102089,
+        "lonSpan": 0.093574
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11381.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11383",
+      "label": "神川町",
+      "municipalityCodes": [
+        "11383"
+      ],
+      "shelterCount": 13,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.166485,
+        "lon": 139.056215,
+        "latSpan": 0.186589,
+        "lonSpan": 0.207285
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11383.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11385",
+      "label": "上里町",
+      "municipalityCodes": [
+        "11385"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.25103,
+        "lon": 139.13378,
+        "latSpan": 0.084006,
+        "lonSpan": 0.09854
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11385.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11408",
+      "label": "寄居町",
+      "municipalityCodes": [
+        "11408"
+      ],
+      "shelterCount": 23,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.12268,
+        "lon": 139.212675,
+        "latSpan": 0.140374,
+        "lonSpan": 0.196287
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11408.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11442",
+      "label": "宮代町",
+      "municipalityCodes": [
+        "11442"
+      ],
+      "shelterCount": 25,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.02729,
+        "lon": 139.717165,
+        "latSpan": 0.078858,
+        "lonSpan": 0.090103
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11442.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11464",
+      "label": "杉戸町",
+      "municipalityCodes": [
+        "11464"
+      ],
+      "shelterCount": 20,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.03098,
+        "lon": 139.75148,
+        "latSpan": 0.081588,
+        "lonSpan": 0.144222
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11464.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "11465",
+      "label": "松伏町",
+      "municipalityCodes": [
+        "11465"
+      ],
+      "shelterCount": 31,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.93829,
+        "lon": 139.82586,
+        "latSpan": 0.079768,
+        "lonSpan": 0.060918
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/saitama/districts-svg/11465.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

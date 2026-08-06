@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>洪水・気象警報</title>
+  <script src="../svgmap-slawa-client/svgMapLayerLib.js"></script>
+</head>
+<body>
+<script type="module">
+import { initFloodWarningLayer } from './floodWarningLayer.js';
+
+let started = false;
+const start = () => {
+  if (started) return;
+  started = true;
+  initFloodWarningLayer();
+};
+window.addEventListener('layerWebAppReady', start, { once: true });
+if (window.svgMap && window.svgImage) queueMicrotask(start);
+</script>
+</body>
+</html>

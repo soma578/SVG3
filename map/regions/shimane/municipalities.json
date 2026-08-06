@@ -1,0 +1,405 @@
+{
+  "region": "shimane",
+  "label": "島根県",
+  "municipalities": [
+    {
+      "id": "32201",
+      "label": "松江市",
+      "municipalityCodes": [
+        "32201"
+      ],
+      "shelterCount": 183,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.46786,
+        "lon": 133.10163,
+        "latSpan": 0.355186,
+        "lonSpan": 0.58539
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shimane/districts-svg/32201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "32202",
+      "label": "浜田市",
+      "municipalityCodes": [
+        "32202"
+      ],
+      "shelterCount": 91,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.832375,
+        "lon": 132.143715,
+        "latSpan": 0.342251,
+        "lonSpan": 0.648609
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shimane/districts-svg/32202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "32203",
+      "label": "出雲市",
+      "municipalityCodes": [
+        "32203"
+      ],
+      "shelterCount": 286,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.33657,
+        "lon": 132.754955,
+        "latSpan": 0.459004,
+        "lonSpan": 0.466583
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shimane/districts-svg/32203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "32204",
+      "label": "益田市",
+      "municipalityCodes": [
+        "32204"
+      ],
+      "shelterCount": 62,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.644785,
+        "lon": 131.922895,
+        "latSpan": 0.500799,
+        "lonSpan": 0.621491
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shimane/districts-svg/32204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "32205",
+      "label": "大田市",
+      "municipalityCodes": [
+        "32205"
+      ],
+      "shelterCount": 97,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.135365,
+        "lon": 132.49265,
+        "latSpan": 0.355979,
+        "lonSpan": 0.464958
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shimane/districts-svg/32205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "32206",
+      "label": "安来市",
+      "municipalityCodes": [
+        "32206"
+      ],
+      "shelterCount": 103,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.34522,
+        "lon": 133.19262,
+        "latSpan": 0.354068,
+        "lonSpan": 0.342706
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shimane/districts-svg/32206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "32207",
+      "label": "江津市",
+      "municipalityCodes": [
+        "32207"
+      ],
+      "shelterCount": 89,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.980265,
+        "lon": 132.30387,
+        "latSpan": 0.218777,
+        "lonSpan": 0.4173
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shimane/districts-svg/32207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "32209",
+      "label": "雲南市",
+      "municipalityCodes": [
+        "32209"
+      ],
+      "shelterCount": 105,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.236625,
+        "lon": 132.886775,
+        "latSpan": 0.375063,
+        "lonSpan": 0.484991
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shimane/districts-svg/32209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "32343",
+      "label": "奥出雲町",
+      "municipalityCodes": [
+        "32343"
+      ],
+      "shelterCount": 32,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.15919,
+        "lon": 133.043825,
+        "latSpan": 0.23647,
+        "lonSpan": 0.392821
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shimane/districts-svg/32343.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "32386",
+      "label": "飯南町",
+      "municipalityCodes": [
+        "32386"
+      ],
+      "shelterCount": 71,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.061305,
+        "lon": 132.744585,
+        "latSpan": 0.294619,
+        "lonSpan": 0.300469
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shimane/districts-svg/32386.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "32441",
+      "label": "川本町",
+      "municipalityCodes": [
+        "32441"
+      ],
+      "shelterCount": 33,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.00019,
+        "lon": 132.47771,
+        "latSpan": 0.151034,
+        "lonSpan": 0.244478
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shimane/districts-svg/32441.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "32448",
+      "label": "美郷町",
+      "municipalityCodes": [
+        "32448"
+      ],
+      "shelterCount": 19,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.0134,
+        "lon": 132.598015,
+        "latSpan": 0.285454,
+        "lonSpan": 0.321763
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shimane/districts-svg/32448.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "32449",
+      "label": "邑南町",
+      "municipalityCodes": [
+        "32449"
+      ],
+      "shelterCount": 86,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.873635,
+        "lon": 132.50834,
+        "latSpan": 0.244959,
+        "lonSpan": 0.525876
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shimane/districts-svg/32449.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "32501",
+      "label": "津和野町",
+      "municipalityCodes": [
+        "32501"
+      ],
+      "shelterCount": 40,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.514985,
+        "lon": 131.819295,
+        "latSpan": 0.224887,
+        "lonSpan": 0.393445
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shimane/districts-svg/32501.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "32505",
+      "label": "吉賀町",
+      "municipalityCodes": [
+        "32505"
+      ],
+      "shelterCount": 75,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.393205,
+        "lon": 131.90932,
+        "latSpan": 0.235989,
+        "lonSpan": 0.379236
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shimane/districts-svg/32505.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "32525",
+      "label": "海士町",
+      "municipalityCodes": [
+        "32525"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.09178,
+        "lon": 133.11643,
+        "latSpan": 0.147394,
+        "lonSpan": 0.13546
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shimane/districts-svg/32525.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "32526",
+      "label": "西ノ島町",
+      "municipalityCodes": [
+        "32526"
+      ],
+      "shelterCount": 40,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.096515,
+        "lon": 133.019165,
+        "latSpan": 0.151125,
+        "lonSpan": 0.190125
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shimane/districts-svg/32526.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "32527",
+      "label": "知夫村",
+      "municipalityCodes": [
+        "32527"
+      ],
+      "shelterCount": 42,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.012655,
+        "lon": 133.039005,
+        "latSpan": 0.052689,
+        "lonSpan": 0.101023
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shimane/districts-svg/32527.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "32528",
+      "label": "隠岐の島町",
+      "municipalityCodes": [
+        "32528"
+      ],
+      "shelterCount": 42,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.687955,
+        "lon": 132.62439,
+        "latSpan": 1.442389,
+        "lonSpan": 1.97964
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shimane/districts-svg/32528.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

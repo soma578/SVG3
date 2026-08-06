@@ -1,0 +1,340 @@
+{
+  "schemaVersion": 1,
+  "publicUrlTemplate": "/data/{regionId}/districts-svg/{code}.svg",
+  "regions": [
+    {
+      "id": "hokkaido",
+      "label": "北海道",
+      "manifest": "/map/data/districts/hokkaido/assets.json",
+      "fileCount": 188,
+      "bytes": 39966617
+    },
+    {
+      "id": "aomori",
+      "label": "青森県",
+      "manifest": "/map/data/districts/aomori/assets.json",
+      "fileCount": 40,
+      "bytes": 17202528
+    },
+    {
+      "id": "iwate",
+      "label": "岩手県",
+      "manifest": "/map/data/districts/iwate/assets.json",
+      "fileCount": 33,
+      "bytes": 18318135
+    },
+    {
+      "id": "miyagi",
+      "label": "宮城県",
+      "manifest": "/map/data/districts/miyagi/assets.json",
+      "fileCount": 39,
+      "bytes": 20157040
+    },
+    {
+      "id": "akita",
+      "label": "秋田県",
+      "manifest": "/map/data/districts/akita/assets.json",
+      "fileCount": 25,
+      "bytes": 15650486
+    },
+    {
+      "id": "yamagata",
+      "label": "山形県",
+      "manifest": "/map/data/districts/yamagata/assets.json",
+      "fileCount": 35,
+      "bytes": 16145087
+    },
+    {
+      "id": "fukushima",
+      "label": "福島県",
+      "manifest": "/map/data/districts/fukushima/assets.json",
+      "fileCount": 59,
+      "bytes": 25028255
+    },
+    {
+      "id": "ibaraki",
+      "label": "茨城県",
+      "manifest": "/map/data/districts/ibaraki/assets.json",
+      "fileCount": 44,
+      "bytes": 17742053
+    },
+    {
+      "id": "tochigi",
+      "label": "栃木県",
+      "manifest": "/map/data/districts/tochigi/assets.json",
+      "fileCount": 25,
+      "bytes": 9218338
+    },
+    {
+      "id": "gunma",
+      "label": "群馬県",
+      "manifest": "/map/data/districts/gunma/assets.json",
+      "fileCount": 35,
+      "bytes": 10769427
+    },
+    {
+      "id": "saitama",
+      "label": "埼玉県",
+      "manifest": "/map/data/districts/saitama/assets.json",
+      "fileCount": 72,
+      "bytes": 14922808
+    },
+    {
+      "id": "chiba",
+      "label": "千葉県",
+      "manifest": "/map/data/districts/chiba/assets.json",
+      "fileCount": 59,
+      "bytes": 24564081
+    },
+    {
+      "id": "tokyo",
+      "label": "東京都",
+      "manifest": "/map/data/districts/tokyo/assets.json",
+      "fileCount": 62,
+      "bytes": 14456220
+    },
+    {
+      "id": "kanagawa",
+      "label": "神奈川県",
+      "manifest": "/map/data/districts/kanagawa/assets.json",
+      "fileCount": 58,
+      "bytes": 13293649
+    },
+    {
+      "id": "niigata",
+      "label": "新潟県",
+      "manifest": "/map/data/districts/niigata/assets.json",
+      "fileCount": 37,
+      "bytes": 24373289
+    },
+    {
+      "id": "toyama",
+      "label": "富山県",
+      "manifest": "/map/data/districts/toyama/assets.json",
+      "fileCount": 15,
+      "bytes": 9000962
+    },
+    {
+      "id": "ishikawa",
+      "label": "石川県",
+      "manifest": "/map/data/districts/ishikawa/assets.json",
+      "fileCount": 19,
+      "bytes": 11218857
+    },
+    {
+      "id": "fukui",
+      "label": "福井県",
+      "manifest": "/map/data/districts/fukui/assets.json",
+      "fileCount": 17,
+      "bytes": 11160275
+    },
+    {
+      "id": "yamanashi",
+      "label": "山梨県",
+      "manifest": "/map/data/districts/yamanashi/assets.json",
+      "fileCount": 27,
+      "bytes": 6859720
+    },
+    {
+      "id": "nagano",
+      "label": "長野県",
+      "manifest": "/map/data/districts/nagano/assets.json",
+      "fileCount": 77,
+      "bytes": 17538691
+    },
+    {
+      "id": "gifu",
+      "label": "岐阜県",
+      "manifest": "/map/data/districts/gifu/assets.json",
+      "fileCount": 42,
+      "bytes": 23977618
+    },
+    {
+      "id": "shizuoka",
+      "label": "静岡県",
+      "manifest": "/map/data/districts/shizuoka/assets.json",
+      "fileCount": 43,
+      "bytes": 18511998
+    },
+    {
+      "id": "aichi",
+      "label": "愛知県",
+      "manifest": "/map/data/districts/aichi/assets.json",
+      "fileCount": 69,
+      "bytes": 23351964
+    },
+    {
+      "id": "mie",
+      "label": "三重県",
+      "manifest": "/map/data/districts/mie/assets.json",
+      "fileCount": 29,
+      "bytes": 17203534
+    },
+    {
+      "id": "shiga",
+      "label": "滋賀県",
+      "manifest": "/map/data/districts/shiga/assets.json",
+      "fileCount": 19,
+      "bytes": 9338839
+    },
+    {
+      "id": "kyoto",
+      "label": "京都府",
+      "manifest": "/map/data/districts/kyoto/assets.json",
+      "fileCount": 36,
+      "bytes": 18266253
+    },
+    {
+      "id": "osaka",
+      "label": "大阪府",
+      "manifest": "/map/data/districts/osaka/assets.json",
+      "fileCount": 72,
+      "bytes": 18388839
+    },
+    {
+      "id": "hyogo",
+      "label": "兵庫県",
+      "manifest": "/map/data/districts/hyogo/assets.json",
+      "fileCount": 49,
+      "bytes": 27974757
+    },
+    {
+      "id": "nara",
+      "label": "奈良県",
+      "manifest": "/map/data/districts/nara/assets.json",
+      "fileCount": 39,
+      "bytes": 9813363
+    },
+    {
+      "id": "wakayama",
+      "label": "和歌山県",
+      "manifest": "/map/data/districts/wakayama/assets.json",
+      "fileCount": 30,
+      "bytes": 11101074
+    },
+    {
+      "id": "tottori",
+      "label": "鳥取県",
+      "manifest": "/map/data/districts/tottori/assets.json",
+      "fileCount": 19,
+      "bytes": 6290659
+    },
+    {
+      "id": "shimane",
+      "label": "島根県",
+      "manifest": "/map/data/districts/shimane/assets.json",
+      "fileCount": 19,
+      "bytes": 10974324
+    },
+    {
+      "id": "okayama",
+      "label": "岡山県",
+      "manifest": "/map/data/districts/okayama/assets.json",
+      "fileCount": 30,
+      "bytes": 18228638
+    },
+    {
+      "id": "hiroshima",
+      "label": "広島県",
+      "manifest": "/map/data/districts/hiroshima/assets.json",
+      "fileCount": 30,
+      "bytes": 23320166
+    },
+    {
+      "id": "yamaguchi",
+      "label": "山口県",
+      "manifest": "/map/data/districts/yamaguchi/assets.json",
+      "fileCount": 19,
+      "bytes": 20511077
+    },
+    {
+      "id": "tokushima",
+      "label": "徳島県",
+      "manifest": "/map/data/districts/tokushima/assets.json",
+      "fileCount": 24,
+      "bytes": 6899770
+    },
+    {
+      "id": "kagawa",
+      "label": "香川県",
+      "manifest": "/map/data/districts/kagawa/assets.json",
+      "fileCount": 17,
+      "bytes": 8124086
+    },
+    {
+      "id": "ehime",
+      "label": "愛媛県",
+      "manifest": "/map/data/districts/ehime/assets.json",
+      "fileCount": 20,
+      "bytes": 15231030
+    },
+    {
+      "id": "kochi",
+      "label": "高知県",
+      "manifest": "/map/data/districts/kochi/assets.json",
+      "fileCount": 34,
+      "bytes": 12270149
+    },
+    {
+      "id": "fukuoka",
+      "label": "福岡県",
+      "manifest": "/map/data/districts/fukuoka/assets.json",
+      "fileCount": 72,
+      "bytes": 24153104
+    },
+    {
+      "id": "saga",
+      "label": "佐賀県",
+      "manifest": "/map/data/districts/saga/assets.json",
+      "fileCount": 20,
+      "bytes": 8963930
+    },
+    {
+      "id": "nagasaki",
+      "label": "長崎県",
+      "manifest": "/map/data/districts/nagasaki/assets.json",
+      "fileCount": 21,
+      "bytes": 30836729
+    },
+    {
+      "id": "kumamoto",
+      "label": "熊本県",
+      "manifest": "/map/data/districts/kumamoto/assets.json",
+      "fileCount": 49,
+      "bytes": 17495104
+    },
+    {
+      "id": "oita",
+      "label": "大分県",
+      "manifest": "/map/data/districts/oita/assets.json",
+      "fileCount": 18,
+      "bytes": 13321368
+    },
+    {
+      "id": "miyazaki",
+      "label": "宮崎県",
+      "manifest": "/map/data/districts/miyazaki/assets.json",
+      "fileCount": 26,
+      "bytes": 10331712
+    },
+    {
+      "id": "kagoshima",
+      "label": "鹿児島県",
+      "manifest": "/map/data/districts/kagoshima/assets.json",
+      "fileCount": 43,
+      "bytes": 18127045
+    },
+    {
+      "id": "okinawa",
+      "label": "沖縄県",
+      "manifest": "/map/data/districts/okinawa/assets.json",
+      "fileCount": 41,
+      "bytes": 9362889
+    }
+  ],
+  "totals": {
+    "regions": 47,
+    "files": 1896,
+    "bytes": 769956537
+  }
+}

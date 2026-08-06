@@ -1,0 +1,531 @@
+{
+  "region": "akita",
+  "label": "秋田県",
+  "municipalities": [
+    {
+      "id": "05201",
+      "label": "秋田市",
+      "municipalityCodes": [
+        "05201"
+      ],
+      "shelterCount": 251,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 39.656705,
+        "lon": 140.260185,
+        "latSpan": 0.538811,
+        "lonSpan": 0.664105
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/akita/districts-svg/05201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "05202",
+      "label": "能代市",
+      "municipalityCodes": [
+        "05202"
+      ],
+      "shelterCount": 119,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.210805,
+        "lon": 140.13393,
+        "latSpan": 0.424593,
+        "lonSpan": 0.431236
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/akita/districts-svg/05202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "05203",
+      "label": "横手市",
+      "municipalityCodes": [
+        "05203"
+      ],
+      "shelterCount": 154,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 39.2511,
+        "lon": 140.52528,
+        "latSpan": 0.412464,
+        "lonSpan": 0.684788
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/akita/districts-svg/05203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "05204",
+      "label": "大館市",
+      "municipalityCodes": [
+        "05204"
+      ],
+      "shelterCount": 155,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.26772,
+        "lon": 140.5388,
+        "latSpan": 0.570284,
+        "lonSpan": 0.53404
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/akita/districts-svg/05204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "05206",
+      "label": "男鹿市",
+      "municipalityCodes": [
+        "05206"
+      ],
+      "shelterCount": 172,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 39.965185,
+        "lon": 139.834785,
+        "latSpan": 0.280397,
+        "lonSpan": 0.368017
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/akita/districts-svg/05206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "05207",
+      "label": "湯沢市",
+      "municipalityCodes": [
+        "05207"
+      ],
+      "shelterCount": 53,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 39.04562,
+        "lon": 140.542365,
+        "latSpan": 0.448396,
+        "lonSpan": 0.554489
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/akita/districts-svg/05207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "05209",
+      "label": "鹿角市",
+      "municipalityCodes": [
+        "05209"
+      ],
+      "shelterCount": 49,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.19509,
+        "lon": 140.84624,
+        "latSpan": 0.612976,
+        "lonSpan": 0.387894
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/akita/districts-svg/05209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "05210",
+      "label": "由利本荘市",
+      "municipalityCodes": [
+        "05210"
+      ],
+      "shelterCount": 139,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 39.30569,
+        "lon": 140.168025,
+        "latSpan": 0.75946,
+        "lonSpan": 0.488553
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/akita/districts-svg/05210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "05211",
+      "label": "潟上市",
+      "municipalityCodes": [
+        "05211"
+      ],
+      "shelterCount": 106,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 39.86615,
+        "lon": 140.07636,
+        "latSpan": 0.160316,
+        "lonSpan": 0.318968
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/akita/districts-svg/05211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "05212",
+      "label": "大仙市",
+      "municipalityCodes": [
+        "05212"
+      ],
+      "shelterCount": 187,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 39.544435,
+        "lon": 140.484335,
+        "latSpan": 0.466167,
+        "lonSpan": 0.668265
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/akita/districts-svg/05212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "05213",
+      "label": "北秋田市",
+      "municipalityCodes": [
+        "05213"
+      ],
+      "shelterCount": 81,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.07527,
+        "lon": 140.487755,
+        "latSpan": 0.727012,
+        "lonSpan": 0.636545
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/akita/districts-svg/05213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "05214",
+      "label": "にかほ市",
+      "municipalityCodes": [
+        "05214"
+      ],
+      "shelterCount": 265,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 39.209305,
+        "lon": 139.966735,
+        "latSpan": 0.269841,
+        "lonSpan": 0.252577
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/akita/districts-svg/05214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "05215",
+      "label": "仙北市",
+      "municipalityCodes": [
+        "05215"
+      ],
+      "shelterCount": 77,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 39.774145,
+        "lon": 140.67175,
+        "latSpan": 0.580229,
+        "lonSpan": 0.53976
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/akita/districts-svg/05215.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "05303",
+      "label": "小坂町",
+      "municipalityCodes": [
+        "05303"
+      ],
+      "shelterCount": 22,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.396305,
+        "lon": 140.801395,
+        "latSpan": 0.296257,
+        "lonSpan": 0.325975
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/akita/districts-svg/05303.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "05327",
+      "label": "上小阿仁村",
+      "municipalityCodes": [
+        "05327"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 39.94393,
+        "lon": 140.317565,
+        "latSpan": 0.38337,
+        "lonSpan": 0.216359
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/akita/districts-svg/05327.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "05346",
+      "label": "藤里町",
+      "municipalityCodes": [
+        "05346"
+      ],
+      "shelterCount": 20,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.343275,
+        "lon": 140.228205,
+        "latSpan": 0.267735,
+        "lonSpan": 0.333385
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/akita/districts-svg/05346.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "05348",
+      "label": "三種町",
+      "municipalityCodes": [
+        "05348"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.065995,
+        "lon": 140.095195,
+        "latSpan": 0.237315,
+        "lonSpan": 0.389545
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/akita/districts-svg/05348.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "05349",
+      "label": "八峰町",
+      "municipalityCodes": [
+        "05349"
+      ],
+      "shelterCount": 9,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.358045,
+        "lon": 140.050135,
+        "latSpan": 0.288119,
+        "lonSpan": 0.295945
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/akita/districts-svg/05349.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "05361",
+      "label": "五城目町",
+      "municipalityCodes": [
+        "05361"
+      ],
+      "shelterCount": 29,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 39.920145,
+        "lon": 140.16124,
+        "latSpan": 0.241189,
+        "lonSpan": 0.377624
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/akita/districts-svg/05361.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "05363",
+      "label": "八郎潟町",
+      "municipalityCodes": [
+        "05363"
+      ],
+      "shelterCount": 42,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 39.959825,
+        "lon": 140.08258,
+        "latSpan": 0.070213,
+        "lonSpan": 0.099996
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/akita/districts-svg/05363.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "05366",
+      "label": "井川町",
+      "municipalityCodes": [
+        "05366"
+      ],
+      "shelterCount": 60,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 39.893895,
+        "lon": 140.11646,
+        "latSpan": 0.102739,
+        "lonSpan": 0.261196
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/akita/districts-svg/05366.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "05368",
+      "label": "大潟村",
+      "municipalityCodes": [
+        "05368"
+      ],
+      "shelterCount": 13,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 40.007015,
+        "lon": 139.99687,
+        "latSpan": 0.226629,
+        "lonSpan": 0.193518
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/akita/districts-svg/05368.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "05434",
+      "label": "美郷町",
+      "municipalityCodes": [
+        "05434"
+      ],
+      "shelterCount": 56,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 39.42482,
+        "lon": 140.592295,
+        "latSpan": 0.191022,
+        "lonSpan": 0.275223
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/akita/districts-svg/05434.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "05463",
+      "label": "羽後町",
+      "municipalityCodes": [
+        "05463"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 39.173025,
+        "lon": 140.340365,
+        "latSpan": 0.235989,
+        "lonSpan": 0.311571
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/akita/districts-svg/05463.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "05464",
+      "label": "東成瀬村",
+      "municipalityCodes": [
+        "05464"
+      ],
+      "shelterCount": 29,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 39.08316,
+        "lon": 140.714405,
+        "latSpan": 0.327886,
+        "lonSpan": 0.249197
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/akita/districts-svg/05464.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

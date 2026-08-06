@@ -1,0 +1,405 @@
+{
+  "region": "yamaguchi",
+  "label": "山口県",
+  "municipalities": [
+    {
+      "id": "35201",
+      "label": "下関市",
+      "municipalityCodes": [
+        "35201"
+      ],
+      "shelterCount": 243,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.14243,
+        "lon": 130.973785,
+        "latSpan": 0.601328,
+        "lonSpan": 0.516581
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamaguchi/districts-svg/35201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "35202",
+      "label": "宇部市",
+      "municipalityCodes": [
+        "35202"
+      ],
+      "shelterCount": 112,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.04285,
+        "lon": 131.28142,
+        "latSpan": 0.322088,
+        "lonSpan": 0.254514
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamaguchi/districts-svg/35202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "35203",
+      "label": "山口市",
+      "municipalityCodes": [
+        "35203"
+      ],
+      "shelterCount": 153,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.23624,
+        "lon": 131.54348,
+        "latSpan": 0.69641,
+        "lonSpan": 0.653796
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamaguchi/districts-svg/35203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "35204",
+      "label": "萩市",
+      "municipalityCodes": [
+        "35204"
+      ],
+      "shelterCount": 139,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.504555,
+        "lon": 131.42725,
+        "latSpan": 0.764647,
+        "lonSpan": 0.780728
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamaguchi/districts-svg/35204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "35206",
+      "label": "防府市",
+      "municipalityCodes": [
+        "35206"
+      ],
+      "shelterCount": 107,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.04734,
+        "lon": 131.57827,
+        "latSpan": 0.292266,
+        "lonSpan": 0.319878
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamaguchi/districts-svg/35206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "35207",
+      "label": "下松市",
+      "municipalityCodes": [
+        "35207"
+      ],
+      "shelterCount": 37,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.022935,
+        "lon": 131.8678,
+        "latSpan": 0.238875,
+        "lonSpan": 0.176618
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamaguchi/districts-svg/35207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "35208",
+      "label": "岩国市",
+      "municipalityCodes": [
+        "35208"
+      ],
+      "shelterCount": 134,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.224345,
+        "lon": 132.155185,
+        "latSpan": 0.635817,
+        "lonSpan": 0.719563
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamaguchi/districts-svg/35208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "35210",
+      "label": "光市",
+      "municipalityCodes": [
+        "35210"
+      ],
+      "shelterCount": 73,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.94241,
+        "lon": 131.97787,
+        "latSpan": 0.23543,
+        "lonSpan": 0.224328
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamaguchi/districts-svg/35210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "35211",
+      "label": "長門市",
+      "municipalityCodes": [
+        "35211"
+      ],
+      "shelterCount": 60,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.35183,
+        "lon": 131.142115,
+        "latSpan": 0.233766,
+        "lonSpan": 0.538759
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamaguchi/districts-svg/35211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "35212",
+      "label": "柳井市",
+      "municipalityCodes": [
+        "35212"
+      ],
+      "shelterCount": 48,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.91032,
+        "lon": 132.165475,
+        "latSpan": 0.367848,
+        "lonSpan": 0.280449
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamaguchi/districts-svg/35212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "35213",
+      "label": "美祢市",
+      "municipalityCodes": [
+        "35213"
+      ],
+      "shelterCount": 58,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.208445,
+        "lon": 131.246115,
+        "latSpan": 0.329407,
+        "lonSpan": 0.425113
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamaguchi/districts-svg/35213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "35215",
+      "label": "周南市",
+      "municipalityCodes": [
+        "35215"
+      ],
+      "shelterCount": 181,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.16198,
+        "lon": 131.83243,
+        "latSpan": 0.504946,
+        "lonSpan": 0.514722
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamaguchi/districts-svg/35215.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "35216",
+      "label": "山陽小野田市",
+      "municipalityCodes": [
+        "35216"
+      ],
+      "shelterCount": 64,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.02432,
+        "lon": 131.14727,
+        "latSpan": 0.244166,
+        "lonSpan": 0.206648
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamaguchi/districts-svg/35216.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "35305",
+      "label": "周防大島町",
+      "municipalityCodes": [
+        "35305"
+      ],
+      "shelterCount": 141,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.89353,
+        "lon": 132.32267,
+        "latSpan": 0.302302,
+        "lonSpan": 0.438516
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamaguchi/districts-svg/35305.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "35321",
+      "label": "和木町",
+      "municipalityCodes": [
+        "35321"
+      ],
+      "shelterCount": 35,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.19497,
+        "lon": 132.215145,
+        "latSpan": 0.04082,
+        "lonSpan": 0.082277
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamaguchi/districts-svg/35321.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "35341",
+      "label": "上関町",
+      "municipalityCodes": [
+        "35341"
+      ],
+      "shelterCount": 34,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.787425,
+        "lon": 132.04176,
+        "latSpan": 0.193713,
+        "lonSpan": 0.28925
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamaguchi/districts-svg/35341.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "35343",
+      "label": "田布施町",
+      "municipalityCodes": [
+        "35343"
+      ],
+      "shelterCount": 34,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.95282,
+        "lon": 132.02718,
+        "latSpan": 0.178022,
+        "lonSpan": 0.120718
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamaguchi/districts-svg/35343.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "35344",
+      "label": "平生町",
+      "municipalityCodes": [
+        "35344"
+      ],
+      "shelterCount": 30,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.909525,
+        "lon": 132.08915,
+        "latSpan": 0.128011,
+        "lonSpan": 0.115076
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamaguchi/districts-svg/35344.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "35502",
+      "label": "阿武町",
+      "municipalityCodes": [
+        "35502"
+      ],
+      "shelterCount": 9,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.54351,
+        "lon": 131.54816,
+        "latSpan": 0.165386,
+        "lonSpan": 0.259142
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamaguchi/districts-svg/35502.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

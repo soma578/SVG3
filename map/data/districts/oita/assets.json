@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "regionId": "oita",
+  "publicBase": "/data/oita",
+  "fileCount": 18,
+  "bytes": 13321368,
+  "files": [
+    {
+      "code": "44201",
+      "path": "districts-svg/44201.svg",
+      "bytes": 2306321
+    },
+    {
+      "code": "44202",
+      "path": "districts-svg/44202.svg",
+      "bytes": 478222
+    },
+    {
+      "code": "44203",
+      "path": "districts-svg/44203.svg",
+      "bytes": 684618
+    },
+    {
+      "code": "44204",
+      "path": "districts-svg/44204.svg",
+      "bytes": 741868
+    },
+    {
+      "code": "44205",
+      "path": "districts-svg/44205.svg",
+      "bytes": 2457183
+    },
+    {
+      "code": "44206",
+      "path": "districts-svg/44206.svg",
+      "bytes": 771122
+    },
+    {
+      "code": "44207",
+      "path": "districts-svg/44207.svg",
+      "bytes": 513081
+    },
+    {
+      "code": "44208",
+      "path": "districts-svg/44208.svg",
+      "bytes": 727750
+    },
+    {
+      "code": "44209",
+      "path": "districts-svg/44209.svg",
+      "bytes": 420862
+    },
+    {
+      "code": "44210",
+      "path": "districts-svg/44210.svg",
+      "bytes": 525097
+    },
+    {
+      "code": "44211",
+      "path": "districts-svg/44211.svg",
+      "bytes": 967351
+    },
+    {
+      "code": "44212",
+      "path": "districts-svg/44212.svg",
+      "bytes": 931863
+    },
+    {
+      "code": "44213",
+      "path": "districts-svg/44213.svg",
+      "bytes": 500236
+    },
+    {
+      "code": "44214",
+      "path": "districts-svg/44214.svg",
+      "bytes": 714719
+    },
+    {
+      "code": "44322",
+      "path": "districts-svg/44322.svg",
+      "bytes": 60315
+    },
+    {
+      "code": "44341",
+      "path": "districts-svg/44341.svg",
+      "bytes": 124356
+    },
+    {
+      "code": "44461",
+      "path": "districts-svg/44461.svg",
+      "bytes": 162792
+    },
+    {
+      "code": "44462",
+      "path": "districts-svg/44462.svg",
+      "bytes": 233612
+    }
+  ]
+}

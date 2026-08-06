@@ -1,0 +1,503 @@
+{
+  "region": "hiroshima",
+  "label": "広島県",
+  "municipalities": [
+    {
+      "id": "34100",
+      "label": "広島市",
+      "municipalityCodes": [
+        "34101",
+        "34102",
+        "34103",
+        "34104",
+        "34105",
+        "34106",
+        "34107",
+        "34108"
+      ],
+      "shelterCount": 890,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.45596,
+        "lon": 132.437525,
+        "latSpan": 0.412906,
+        "lonSpan": 0.672295
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hiroshima/districts-svg/34101.svg",
+        "/data/hiroshima/districts-svg/34102.svg",
+        "/data/hiroshima/districts-svg/34103.svg",
+        "/data/hiroshima/districts-svg/34104.svg",
+        "/data/hiroshima/districts-svg/34105.svg",
+        "/data/hiroshima/districts-svg/34106.svg",
+        "/data/hiroshima/districts-svg/34107.svg",
+        "/data/hiroshima/districts-svg/34108.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "34202",
+      "label": "呉市",
+      "municipalityCodes": [
+        "34202"
+      ],
+      "shelterCount": 387,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.183965,
+        "lon": 132.658085,
+        "latSpan": 0.388011,
+        "lonSpan": 0.546923
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hiroshima/districts-svg/34202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "34203",
+      "label": "竹原市",
+      "municipalityCodes": [
+        "34203"
+      ],
+      "shelterCount": 51,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.36294,
+        "lon": 132.89637,
+        "latSpan": 0.172614,
+        "lonSpan": 0.297102
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hiroshima/districts-svg/34203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "34204",
+      "label": "三原市",
+      "municipalityCodes": [
+        "34204"
+      ],
+      "shelterCount": 121,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.455425,
+        "lon": 133.00521,
+        "latSpan": 0.359385,
+        "lonSpan": 0.408928
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hiroshima/districts-svg/34204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "34205",
+      "label": "尾道市",
+      "municipalityCodes": [
+        "34205"
+      ],
+      "shelterCount": 215,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.41481,
+        "lon": 133.173965,
+        "latSpan": 0.411554,
+        "lonSpan": 0.319163
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hiroshima/districts-svg/34205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "34207",
+      "label": "福山市",
+      "municipalityCodes": [
+        "34207"
+      ],
+      "shelterCount": 331,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.510815,
+        "lon": 133.34064,
+        "latSpan": 0.523341,
+        "lonSpan": 0.338078
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hiroshima/districts-svg/34207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "34208",
+      "label": "府中市",
+      "municipalityCodes": [
+        "34208"
+      ],
+      "shelterCount": 101,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.64126,
+        "lon": 133.176315,
+        "latSpan": 0.296608,
+        "lonSpan": 0.239681
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hiroshima/districts-svg/34208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "34209",
+      "label": "三次市",
+      "municipalityCodes": [
+        "34209"
+      ],
+      "shelterCount": 81,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.804955,
+        "lon": 132.87162,
+        "latSpan": 0.519077,
+        "lonSpan": 0.617734
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hiroshima/districts-svg/34209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "34210",
+      "label": "庄原市",
+      "municipalityCodes": [
+        "34210"
+      ],
+      "shelterCount": 233,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.92003,
+        "lon": 133.047145,
+        "latSpan": 0.48113,
+        "lonSpan": 0.737659
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hiroshima/districts-svg/34210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "34211",
+      "label": "大竹市",
+      "municipalityCodes": [
+        "34211"
+      ],
+      "shelterCount": 59,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.22516,
+        "lon": 132.221825,
+        "latSpan": 0.276198,
+        "lonSpan": 0.254371
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hiroshima/districts-svg/34211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "34212",
+      "label": "東広島市",
+      "municipalityCodes": [
+        "34212"
+      ],
+      "shelterCount": 261,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.44391,
+        "lon": 132.760695,
+        "latSpan": 0.468416,
+        "lonSpan": 0.416455
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hiroshima/districts-svg/34212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "34213",
+      "label": "廿日市市",
+      "municipalityCodes": [
+        "34213"
+      ],
+      "shelterCount": 121,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.408455,
+        "lon": 132.19573,
+        "latSpan": 0.454207,
+        "lonSpan": 0.414128
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hiroshima/districts-svg/34213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "34214",
+      "label": "安芸高田市",
+      "municipalityCodes": [
+        "34214"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.693135,
+        "lon": 132.672615,
+        "latSpan": 0.411671,
+        "lonSpan": 0.349843
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hiroshima/districts-svg/34214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "34215",
+      "label": "江田島市",
+      "municipalityCodes": [
+        "34215"
+      ],
+      "shelterCount": 106,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.21239,
+        "lon": 132.426705,
+        "latSpan": 0.218088,
+        "lonSpan": 0.186719
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hiroshima/districts-svg/34215.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "34302",
+      "label": "府中町",
+      "municipalityCodes": [
+        "34302"
+      ],
+      "shelterCount": 8,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.39826,
+        "lon": 132.51828,
+        "latSpan": 0.060398,
+        "lonSpan": 0.058344
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hiroshima/districts-svg/34302.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "34304",
+      "label": "海田町",
+      "municipalityCodes": [
+        "34304"
+      ],
+      "shelterCount": 65,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.364825,
+        "lon": 132.54845,
+        "latSpan": 0.055185,
+        "lonSpan": 0.078754
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hiroshima/districts-svg/34304.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "34307",
+      "label": "熊野町",
+      "municipalityCodes": [
+        "34307"
+      ],
+      "shelterCount": 18,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.34284,
+        "lon": 132.591565,
+        "latSpan": 0.098592,
+        "lonSpan": 0.103571
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hiroshima/districts-svg/34307.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "34309",
+      "label": "坂町",
+      "municipalityCodes": [
+        "34309"
+      ],
+      "shelterCount": 85,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.32665,
+        "lon": 132.514165,
+        "latSpan": 0.077766,
+        "lonSpan": 0.057915
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hiroshima/districts-svg/34309.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "34368",
+      "label": "安芸太田町",
+      "municipalityCodes": [
+        "34368"
+      ],
+      "shelterCount": 3,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.605725,
+        "lon": 132.26053,
+        "latSpan": 0.284271,
+        "lonSpan": 0.37479
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hiroshima/districts-svg/34368.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "34369",
+      "label": "北広島町",
+      "municipalityCodes": [
+        "34369"
+      ],
+      "shelterCount": 95,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.702085,
+        "lon": 132.366705,
+        "latSpan": 0.309049,
+        "lonSpan": 0.616603
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hiroshima/districts-svg/34369.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "34431",
+      "label": "大崎上島町",
+      "municipalityCodes": [
+        "34431"
+      ],
+      "shelterCount": 59,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.253305,
+        "lon": 132.87285,
+        "latSpan": 0.121927,
+        "lonSpan": 0.186394
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hiroshima/districts-svg/34431.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "34462",
+      "label": "世羅町",
+      "municipalityCodes": [
+        "34462"
+      ],
+      "shelterCount": 35,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.61091,
+        "lon": 133.014945,
+        "latSpan": 0.191074,
+        "lonSpan": 0.382213
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hiroshima/districts-svg/34462.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "34545",
+      "label": "神石高原町",
+      "municipalityCodes": [
+        "34545"
+      ],
+      "shelterCount": 31,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.74895,
+        "lon": 133.256595,
+        "latSpan": 0.29237,
+        "lonSpan": 0.315887
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hiroshima/districts-svg/34545.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

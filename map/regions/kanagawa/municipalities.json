@@ -1,0 +1,768 @@
+{
+  "region": "kanagawa",
+  "label": "神奈川県",
+  "municipalities": [
+    {
+      "id": "14100",
+      "label": "横浜市",
+      "municipalityCodes": [
+        "14101",
+        "14102",
+        "14103",
+        "14104",
+        "14105",
+        "14106",
+        "14107",
+        "14108",
+        "14109",
+        "14111",
+        "14112",
+        "14113",
+        "14114",
+        "14115",
+        "14116",
+        "14117",
+        "14118"
+      ],
+      "shelterCount": 453,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.4525,
+        "lon": 139.595055,
+        "latSpan": 0.364,
+        "lonSpan": 0.338715
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14101.svg",
+        "/data/kanagawa/districts-svg/14102.svg",
+        "/data/kanagawa/districts-svg/14103.svg",
+        "/data/kanagawa/districts-svg/14104.svg",
+        "/data/kanagawa/districts-svg/14105.svg",
+        "/data/kanagawa/districts-svg/14106.svg",
+        "/data/kanagawa/districts-svg/14107.svg",
+        "/data/kanagawa/districts-svg/14108.svg",
+        "/data/kanagawa/districts-svg/14109.svg",
+        "/data/kanagawa/districts-svg/14111.svg",
+        "/data/kanagawa/districts-svg/14112.svg",
+        "/data/kanagawa/districts-svg/14113.svg",
+        "/data/kanagawa/districts-svg/14114.svg",
+        "/data/kanagawa/districts-svg/14115.svg",
+        "/data/kanagawa/districts-svg/14116.svg",
+        "/data/kanagawa/districts-svg/14117.svg",
+        "/data/kanagawa/districts-svg/14118.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14110",
+      "label": "戸塚区",
+      "municipalityCodes": [
+        "14110"
+      ],
+      "shelterCount": 0,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.403085,
+        "lon": 139.529825,
+        "latSpan": 0.117975,
+        "lonSpan": 0.119041
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14110.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14130",
+      "label": "川崎市",
+      "municipalityCodes": [
+        "14131",
+        "14132",
+        "14133",
+        "14134",
+        "14135",
+        "14136",
+        "14137"
+      ],
+      "shelterCount": 186,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.55588,
+        "lon": 139.64253,
+        "latSpan": 0.223808,
+        "lonSpan": 0.50245
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14131.svg",
+        "/data/kanagawa/districts-svg/14132.svg",
+        "/data/kanagawa/districts-svg/14133.svg",
+        "/data/kanagawa/districts-svg/14134.svg",
+        "/data/kanagawa/districts-svg/14135.svg",
+        "/data/kanagawa/districts-svg/14136.svg",
+        "/data/kanagawa/districts-svg/14137.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14150",
+      "label": "相模原市",
+      "municipalityCodes": [
+        "14151",
+        "14152",
+        "14153"
+      ],
+      "shelterCount": 165,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.573725,
+        "lon": 139.262145,
+        "latSpan": 0.257855,
+        "lonSpan": 0.509873
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14151.svg",
+        "/data/kanagawa/districts-svg/14152.svg",
+        "/data/kanagawa/districts-svg/14153.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14201",
+      "label": "横須賀市",
+      "municipalityCodes": [
+        "14201"
+      ],
+      "shelterCount": 93,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.26015,
+        "lon": 139.662135,
+        "latSpan": 0.182572,
+        "lonSpan": 0.218621
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14203",
+      "label": "平塚市",
+      "municipalityCodes": [
+        "14203"
+      ],
+      "shelterCount": 82,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.357965,
+        "lon": 139.306975,
+        "latSpan": 0.119197,
+        "lonSpan": 0.177411
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14204",
+      "label": "鎌倉市",
+      "municipalityCodes": [
+        "14204"
+      ],
+      "shelterCount": 25,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.33348,
+        "lon": 139.540915,
+        "latSpan": 0.088582,
+        "lonSpan": 0.135837
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14205",
+      "label": "藤沢市",
+      "municipalityCodes": [
+        "14205"
+      ],
+      "shelterCount": 117,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.363765,
+        "lon": 139.455405,
+        "latSpan": 0.169455,
+        "lonSpan": 0.159705
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14206",
+      "label": "小田原市",
+      "municipalityCodes": [
+        "14206"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.25437,
+        "lon": 139.1485,
+        "latSpan": 0.19643,
+        "lonSpan": 0.232934
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14207",
+      "label": "茅ヶ崎市",
+      "municipalityCodes": [
+        "14207"
+      ],
+      "shelterCount": 62,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.350125,
+        "lon": 139.406795,
+        "latSpan": 0.090467,
+        "lonSpan": 0.097123
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14208",
+      "label": "逗子市",
+      "municipalityCodes": [
+        "14208"
+      ],
+      "shelterCount": 82,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.29814,
+        "lon": 139.587185,
+        "latSpan": 0.05746,
+        "lonSpan": 0.092781
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14210",
+      "label": "三浦市",
+      "municipalityCodes": [
+        "14210"
+      ],
+      "shelterCount": 37,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.16941,
+        "lon": 139.64316,
+        "latSpan": 0.104884,
+        "lonSpan": 0.094146
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14211",
+      "label": "秦野市",
+      "municipalityCodes": [
+        "14211"
+      ],
+      "shelterCount": 27,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.403265,
+        "lon": 139.216515,
+        "latSpan": 0.148889,
+        "lonSpan": 0.195299
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14212",
+      "label": "厚木市",
+      "municipalityCodes": [
+        "14212"
+      ],
+      "shelterCount": 130,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.460395,
+        "lon": 139.30416,
+        "latSpan": 0.174395,
+        "lonSpan": 0.197236
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14213",
+      "label": "大和市",
+      "municipalityCodes": [
+        "14213"
+      ],
+      "shelterCount": 71,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.47161,
+        "lon": 139.45495,
+        "latSpan": 0.127036,
+        "lonSpan": 0.066846
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14214",
+      "label": "伊勢原市",
+      "municipalityCodes": [
+        "14214"
+      ],
+      "shelterCount": 0,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.40866,
+        "lon": 139.29288,
+        "latSpan": 0.10205,
+        "lonSpan": 0.162864
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14215",
+      "label": "海老名市",
+      "municipalityCodes": [
+        "14215"
+      ],
+      "shelterCount": 48,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.439035,
+        "lon": 139.40292,
+        "latSpan": 0.099723,
+        "lonSpan": 0.087282
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14215.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14216",
+      "label": "座間市",
+      "municipalityCodes": [
+        "14216"
+      ],
+      "shelterCount": 40,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.49204,
+        "lon": 139.406405,
+        "latSpan": 0.060814,
+        "lonSpan": 0.084331
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14216.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14217",
+      "label": "南足柄市",
+      "municipalityCodes": [
+        "14217"
+      ],
+      "shelterCount": 16,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.31201,
+        "lon": 139.07086,
+        "latSpan": 0.104494,
+        "lonSpan": 0.17225
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14217.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14218",
+      "label": "綾瀬市",
+      "municipalityCodes": [
+        "14218"
+      ],
+      "shelterCount": 37,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.437645,
+        "lon": 139.429765,
+        "latSpan": 0.078715,
+        "lonSpan": 0.069823
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14218.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14301",
+      "label": "葉山町",
+      "municipalityCodes": [
+        "14301"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.27221,
+        "lon": 139.603965,
+        "latSpan": 0.049738,
+        "lonSpan": 0.096395
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14301.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14321",
+      "label": "寒川町",
+      "municipalityCodes": [
+        "14321"
+      ],
+      "shelterCount": 0,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.376225,
+        "lon": 139.386825,
+        "latSpan": 0.065169,
+        "lonSpan": 0.047281
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14321.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14341",
+      "label": "大磯町",
+      "municipalityCodes": [
+        "14341"
+      ],
+      "shelterCount": 54,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.31575,
+        "lon": 139.29246,
+        "latSpan": 0.047996,
+        "lonSpan": 0.108186
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14341.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14342",
+      "label": "二宮町",
+      "municipalityCodes": [
+        "14342"
+      ],
+      "shelterCount": 20,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.307665,
+        "lon": 139.2511,
+        "latSpan": 0.054977,
+        "lonSpan": 0.047242
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14342.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14361",
+      "label": "中井町",
+      "municipalityCodes": [
+        "14361"
+      ],
+      "shelterCount": 5,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.333785,
+        "lon": 139.21875,
+        "latSpan": 0.068575,
+        "lonSpan": 0.084344
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14361.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14362",
+      "label": "大井町",
+      "municipalityCodes": [
+        "14362"
+      ],
+      "shelterCount": 5,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.336485,
+        "lon": 139.166355,
+        "latSpan": 0.059449,
+        "lonSpan": 0.078819
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14362.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14363",
+      "label": "松田町",
+      "municipalityCodes": [
+        "14363"
+      ],
+      "shelterCount": 8,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.3914,
+        "lon": 139.130805,
+        "latSpan": 0.142168,
+        "lonSpan": 0.082875
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14363.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14364",
+      "label": "山北町",
+      "municipalityCodes": [
+        "14364"
+      ],
+      "shelterCount": 0,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.419755,
+        "lon": 139.04056,
+        "latSpan": 0.233753,
+        "lonSpan": 0.324324
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14364.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14366",
+      "label": "開成町",
+      "municipalityCodes": [
+        "14366"
+      ],
+      "shelterCount": 10,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.335155,
+        "lon": 139.124825,
+        "latSpan": 0.044317,
+        "lonSpan": 0.047411
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14366.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14382",
+      "label": "箱根町",
+      "municipalityCodes": [
+        "14382"
+      ],
+      "shelterCount": 38,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.232525,
+        "lon": 139.04813,
+        "latSpan": 0.148447,
+        "lonSpan": 0.188916
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14382.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14383",
+      "label": "真鶴町",
+      "municipalityCodes": [
+        "14383"
+      ],
+      "shelterCount": 6,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.163875,
+        "lon": 139.132415,
+        "latSpan": 0.060385,
+        "lonSpan": 0.076427
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14383.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14384",
+      "label": "湯河原町",
+      "municipalityCodes": [
+        "14384"
+      ],
+      "shelterCount": 52,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.170725,
+        "lon": 139.081865,
+        "latSpan": 0.079391,
+        "lonSpan": 0.144287
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14384.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14401",
+      "label": "愛川町",
+      "municipalityCodes": [
+        "14401"
+      ],
+      "shelterCount": 62,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.527765,
+        "lon": 139.300005,
+        "latSpan": 0.074997,
+        "lonSpan": 0.141687
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14401.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "14402",
+      "label": "清川村",
+      "municipalityCodes": [
+        "14402"
+      ],
+      "shelterCount": 7,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.494975,
+        "lon": 139.23106,
+        "latSpan": 0.123617,
+        "lonSpan": 0.175942
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kanagawa/districts-svg/14402.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

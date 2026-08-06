@@ -1,0 +1,44 @@
+{
+  "version": "2",
+  "regionId": "aomori",
+  "prefCode": "02",
+  "label": "青森県",
+  "engine": "svgmap",
+  "containerUrl": "/map/containers/Containers_webapp_denshi_02.svg",
+  "iconsBaseUrl": "/map/icons",
+  "initialViewport": {
+    "lat": 40.88684,
+    "lon": 140.771515,
+    "latSpan": 1.553234,
+    "lonSpan": 2.077391
+  },
+  "layers": {
+    "baseArea": {
+      "layerUrl": "/map/layers/overview/pref/02.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "evacuation": {
+      "dataUrl": "/map/data/evacuation/aomori.json",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "teamActivity": {
+      "dataUrl": "/map/data/team-activity/aomori.json",
+      "baseAreaLayerUrl": "/map/layers/overview/pref/02.svg",
+      "districtSvgUrlTemplate": "/data/aomori/districts-svg/{code}.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "hazard": {
+      "layerUrl": "/map/layers/hazard/2/aomori.svg",
+      "svgUrlTemplate": "/map/layers/hazard/2/districts/{code}.svg",
+      "runtimeVisible": false,
+      "opacity": 0.7
+    }
+  },
+  "interaction": {
+    "disableDefaultPopup": true,
+    "featureSelectEvent": true
+  }
+}

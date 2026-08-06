@@ -1,0 +1,363 @@
+{
+  "region": "fukui",
+  "label": "福井県",
+  "municipalities": [
+    {
+      "id": "18201",
+      "label": "福井市",
+      "municipalityCodes": [
+        "18201"
+      ],
+      "shelterCount": 742,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.047235,
+        "lon": 136.215775,
+        "latSpan": 0.326703,
+        "lonSpan": 0.653653
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukui/districts-svg/18201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "18202",
+      "label": "敦賀市",
+      "municipalityCodes": [
+        "18202"
+      ],
+      "shelterCount": 130,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.64609,
+        "lon": 136.071025,
+        "latSpan": 0.311584,
+        "lonSpan": 0.275119
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukui/districts-svg/18202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "18204",
+      "label": "小浜市",
+      "municipalityCodes": [
+        "18204"
+      ],
+      "shelterCount": 86,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.48064,
+        "lon": 135.724005,
+        "latSpan": 0.25025,
+        "lonSpan": 0.351403
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukui/districts-svg/18204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "18205",
+      "label": "大野市",
+      "municipalityCodes": [
+        "18205"
+      ],
+      "shelterCount": 80,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.91831,
+        "lon": 136.62416,
+        "latSpan": 0.436748,
+        "lonSpan": 0.541294
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukui/districts-svg/18205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "18206",
+      "label": "勝山市",
+      "municipalityCodes": [
+        "18206"
+      ],
+      "shelterCount": 72,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.08306,
+        "lon": 136.52366,
+        "latSpan": 0.197808,
+        "lonSpan": 0.351962
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukui/districts-svg/18206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "18207",
+      "label": "鯖江市",
+      "municipalityCodes": [
+        "18207"
+      ],
+      "shelterCount": 94,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.96385,
+        "lon": 136.23028,
+        "latSpan": 0.097578,
+        "lonSpan": 0.276094
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukui/districts-svg/18207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "18208",
+      "label": "あわら市",
+      "municipalityCodes": [
+        "18208"
+      ],
+      "shelterCount": 32,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.23496,
+        "lon": 136.24948,
+        "latSpan": 0.156884,
+        "lonSpan": 0.215592
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukui/districts-svg/18208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "18209",
+      "label": "越前市",
+      "municipalityCodes": [
+        "18209"
+      ],
+      "shelterCount": 126,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.878225,
+        "lon": 136.1764,
+        "latSpan": 0.182689,
+        "lonSpan": 0.409084
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukui/districts-svg/18209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "18210",
+      "label": "坂井市",
+      "municipalityCodes": [
+        "18210"
+      ],
+      "shelterCount": 50,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.18019,
+        "lon": 136.26982,
+        "latSpan": 0.201318,
+        "lonSpan": 0.441454
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukui/districts-svg/18210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "18322",
+      "label": "永平寺町",
+      "municipalityCodes": [
+        "18322"
+      ],
+      "shelterCount": 33,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.081325,
+        "lon": 136.35399,
+        "latSpan": 0.123175,
+        "lonSpan": 0.218452
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukui/districts-svg/18322.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "18382",
+      "label": "池田町",
+      "municipalityCodes": [
+        "18382"
+      ],
+      "shelterCount": 14,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.866455,
+        "lon": 136.35822,
+        "latSpan": 0.224003,
+        "lonSpan": 0.26598
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukui/districts-svg/18382.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "18404",
+      "label": "南越前町",
+      "municipalityCodes": [
+        "18404"
+      ],
+      "shelterCount": 58,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.76879,
+        "lon": 136.18416,
+        "latSpan": 0.286416,
+        "lonSpan": 0.449618
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukui/districts-svg/18404.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "18423",
+      "label": "越前町",
+      "municipalityCodes": [
+        "18423"
+      ],
+      "shelterCount": 159,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.95024,
+        "lon": 136.05646,
+        "latSpan": 0.202488,
+        "lonSpan": 0.256802
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukui/districts-svg/18423.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "18442",
+      "label": "美浜町",
+      "municipalityCodes": [
+        "18442"
+      ],
+      "shelterCount": 13,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.6084,
+        "lon": 135.922155,
+        "latSpan": 0.316446,
+        "lonSpan": 0.279539
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukui/districts-svg/18442.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "18481",
+      "label": "高浜町",
+      "municipalityCodes": [
+        "18481"
+      ],
+      "shelterCount": 33,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.50301,
+        "lon": 135.53005,
+        "latSpan": 0.142818,
+        "lonSpan": 0.209586
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukui/districts-svg/18481.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "18483",
+      "label": "おおい町",
+      "municipalityCodes": [
+        "18483"
+      ],
+      "shelterCount": 30,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.445175,
+        "lon": 135.63859,
+        "latSpan": 0.263861,
+        "lonSpan": 0.39598
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukui/districts-svg/18483.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "18501",
+      "label": "若狭町",
+      "municipalityCodes": [
+        "18501"
+      ],
+      "shelterCount": 53,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.51875,
+        "lon": 135.872505,
+        "latSpan": 0.3211,
+        "lonSpan": 0.212615
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukui/districts-svg/18501.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

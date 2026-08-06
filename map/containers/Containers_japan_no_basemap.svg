@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="12243.4 -4605.6 3205.3 2251.0">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+
+  <animation id="layer-base-area" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
+             xlink:href="/map/layers/runtime_empty.svg"
+             title="L1 ベースエリア" class="vectorEtcData" visibility="visible" opacity="1"/>
+
+  <animation id="layer-evacuation" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
+             xlink:href="/map/layers/runtime_empty.svg"
+             title="L2 避難所" class="poi clickable" visibility="hidden" opacity="1"/>
+
+  <animation id="layer-team-activity" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
+             xlink:href="/map/layers/runtime_empty.svg"
+             title="L3 チーム活動" class="poi clickable" visibility="hidden" opacity="1"/>
+
+  <animation id="layer-overview" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
+             xlink:href="/map/layers/runtime_empty.svg"
+             title="概要レイヤー" class="vectorEtcData clickable" visibility="hidden" opacity="1"/>
+</svg>

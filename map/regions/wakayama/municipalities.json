@@ -1,0 +1,636 @@
+{
+  "region": "wakayama",
+  "label": "和歌山県",
+  "municipalities": [
+    {
+      "id": "30201",
+      "label": "和歌山市",
+      "municipalityCodes": [
+        "30201"
+      ],
+      "shelterCount": 323,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.233935,
+        "lon": 135.15688,
+        "latSpan": 0.212719,
+        "lonSpan": 0.410358
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30202",
+      "label": "海南市",
+      "municipalityCodes": [
+        "30202"
+      ],
+      "shelterCount": 182,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.1484,
+        "lon": 135.215095,
+        "latSpan": 0.143,
+        "lonSpan": 0.267969
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30203",
+      "label": "橋本市",
+      "municipalityCodes": [
+        "30203"
+      ],
+      "shelterCount": 44,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.31288,
+        "lon": 135.604055,
+        "latSpan": 0.18616,
+        "lonSpan": 0.200525
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30204",
+      "label": "有田市",
+      "municipalityCodes": [
+        "30204"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.08683,
+        "lon": 135.13507,
+        "latSpan": 0.08125,
+        "lonSpan": 0.150644
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30205",
+      "label": "御坊市",
+      "municipalityCodes": [
+        "30205"
+      ],
+      "shelterCount": 75,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.882045,
+        "lon": 135.17785,
+        "latSpan": 0.179153,
+        "lonSpan": 0.096044
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30206",
+      "label": "田辺市",
+      "municipalityCodes": [
+        "30206"
+      ],
+      "shelterCount": 190,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.856225,
+        "lon": 135.582945,
+        "latSpan": 0.550979,
+        "lonSpan": 0.642707
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30207",
+      "label": "新宮市",
+      "municipalityCodes": [
+        "30207"
+      ],
+      "shelterCount": 75,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.795995,
+        "lon": 135.867145,
+        "latSpan": 0.327457,
+        "lonSpan": 0.376337
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30208",
+      "label": "紀の川市",
+      "municipalityCodes": [
+        "30208"
+      ],
+      "shelterCount": 63,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.26207,
+        "lon": 135.38103,
+        "latSpan": 0.222664,
+        "lonSpan": 0.276952
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30209",
+      "label": "岩出市",
+      "municipalityCodes": [
+        "30209"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.279015,
+        "lon": 135.30482,
+        "latSpan": 0.104299,
+        "lonSpan": 0.087828
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30304",
+      "label": "紀美野町",
+      "municipalityCodes": [
+        "30304"
+      ],
+      "shelterCount": 50,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.153215,
+        "lon": 135.399185,
+        "latSpan": 0.126789,
+        "lonSpan": 0.283699
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30304.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30341",
+      "label": "かつらぎ町",
+      "municipalityCodes": [
+        "30341"
+      ],
+      "shelterCount": 66,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.22996,
+        "lon": 135.52421,
+        "latSpan": 0.345462,
+        "lonSpan": 0.209092
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30341.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30343",
+      "label": "九度山町",
+      "municipalityCodes": [
+        "30343"
+      ],
+      "shelterCount": 36,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.269395,
+        "lon": 135.58575,
+        "latSpan": 0.090389,
+        "lonSpan": 0.155376
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30343.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30344",
+      "label": "高野町",
+      "municipalityCodes": [
+        "30344"
+      ],
+      "shelterCount": 27,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.217075,
+        "lon": 135.621375,
+        "latSpan": 0.159107,
+        "lonSpan": 0.282893
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30344.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30361",
+      "label": "湯浅町",
+      "municipalityCodes": [
+        "30361"
+      ],
+      "shelterCount": 65,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.03658,
+        "lon": 135.185385,
+        "latSpan": 0.068926,
+        "lonSpan": 0.145249
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30361.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30362",
+      "label": "広川町",
+      "municipalityCodes": [
+        "30362"
+      ],
+      "shelterCount": 56,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.989695,
+        "lon": 135.20031,
+        "latSpan": 0.109473,
+        "lonSpan": 0.205322
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30362.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30366",
+      "label": "有田川町",
+      "municipalityCodes": [
+        "30366"
+      ],
+      "shelterCount": 76,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.078155,
+        "lon": 135.3681,
+        "latSpan": 0.199589,
+        "lonSpan": 0.472394
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30366.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30381",
+      "label": "美浜町",
+      "municipalityCodes": [
+        "30381"
+      ],
+      "shelterCount": 66,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.895175,
+        "lon": 135.105785,
+        "latSpan": 0.051051,
+        "lonSpan": 0.125151
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30381.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30382",
+      "label": "日高町",
+      "municipalityCodes": [
+        "30382"
+      ],
+      "shelterCount": 58,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.931935,
+        "lon": 135.117185,
+        "latSpan": 0.135343,
+        "lonSpan": 0.158067
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30382.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30383",
+      "label": "由良町",
+      "municipalityCodes": [
+        "30383"
+      ],
+      "shelterCount": 80,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.976225,
+        "lon": 135.122665,
+        "latSpan": 0.082225,
+        "lonSpan": 0.138749
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30383.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30390",
+      "label": "印南町",
+      "municipalityCodes": [
+        "30390"
+      ],
+      "shelterCount": 89,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.84994,
+        "lon": 135.290315,
+        "latSpan": 0.17979,
+        "lonSpan": 0.289237
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30390.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30391",
+      "label": "みなべ町",
+      "municipalityCodes": [
+        "30391"
+      ],
+      "shelterCount": 82,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.81498,
+        "lon": 135.362215,
+        "latSpan": 0.189566,
+        "lonSpan": 0.267267
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30391.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30392",
+      "label": "日高川町",
+      "municipalityCodes": [
+        "30392"
+      ],
+      "shelterCount": 142,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.95771,
+        "lon": 135.359565,
+        "latSpan": 0.22217,
+        "lonSpan": 0.489281
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30392.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30401",
+      "label": "白浜町",
+      "municipalityCodes": [
+        "30401"
+      ],
+      "shelterCount": 289,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.625385,
+        "lon": 135.498865,
+        "latSpan": 0.206375,
+        "lonSpan": 0.439907
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30401.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30404",
+      "label": "上富田町",
+      "municipalityCodes": [
+        "30404"
+      ],
+      "shelterCount": 27,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.717685,
+        "lon": 135.454325,
+        "latSpan": 0.132301,
+        "lonSpan": 0.149825
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30404.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30406",
+      "label": "すさみ町",
+      "municipalityCodes": [
+        "30406"
+      ],
+      "shelterCount": 102,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.566765,
+        "lon": 135.564655,
+        "latSpan": 0.179231,
+        "lonSpan": 0.269217
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30406.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30421",
+      "label": "那智勝浦町",
+      "municipalityCodes": [
+        "30421"
+      ],
+      "shelterCount": 50,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.634295,
+        "lon": 135.88263,
+        "latSpan": 0.230659,
+        "lonSpan": 0.274794
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30421.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30422",
+      "label": "太地町",
+      "municipalityCodes": [
+        "30422"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.59842,
+        "lon": 135.942025,
+        "latSpan": 0.052702,
+        "lonSpan": 0.049439
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30422.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30424",
+      "label": "古座川町",
+      "municipalityCodes": [
+        "30424"
+      ],
+      "shelterCount": 48,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.622265,
+        "lon": 135.735265,
+        "latSpan": 0.274261,
+        "lonSpan": 0.271141
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30424.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30427",
+      "label": "北山村",
+      "municipalityCodes": [
+        "30427"
+      ],
+      "shelterCount": 11,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.961625,
+        "lon": 135.952915,
+        "latSpan": 0.123539,
+        "lonSpan": 0.157079
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30427.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "30428",
+      "label": "串本町",
+      "municipalityCodes": [
+        "30428"
+      ],
+      "shelterCount": 229,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.511125,
+        "lon": 135.760515,
+        "latSpan": 0.198965,
+        "lonSpan": 0.360607
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/wakayama/districts-svg/30428.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "version": "2",
+  "regionId": "shizuoka",
+  "prefCode": "22",
+  "label": "静岡県",
+  "engine": "svgmap",
+  "containerUrl": "/map/containers/Containers_webapp_denshi_22.svg",
+  "iconsBaseUrl": "/map/icons",
+  "initialViewport": {
+    "lat": 35.10986,
+    "lon": 138.32533,
+    "latSpan": 1.265976,
+    "lonSpan": 1.946635
+  },
+  "layers": {
+    "baseArea": {
+      "layerUrl": "/map/layers/overview/pref/22.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "evacuation": {
+      "dataUrl": "/map/data/evacuation/shizuoka.json",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "teamActivity": {
+      "dataUrl": "/map/data/team-activity/shizuoka.json",
+      "baseAreaLayerUrl": "/map/layers/overview/pref/22.svg",
+      "districtSvgUrlTemplate": "/data/shizuoka/districts-svg/{code}.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "hazard": {
+      "layerUrl": "/map/layers/hazard/22/shizuoka.svg",
+      "svgUrlTemplate": "/map/layers/hazard/22/districts/{code}.svg",
+      "runtimeVisible": false,
+      "opacity": 0.7
+    }
+  },
+  "interaction": {
+    "disableDefaultPopup": true,
+    "featureSelectEvent": true
+  }
+}

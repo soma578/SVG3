@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="12243.4 -4605.6 3205.3 2251.0">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <animation id="layer-road-closure" xlink:href="map/layers/portable/road-closure/roadClosureLayer.svg#summary=..%2F..%2F..%2Fdata%2Fqtct%2FroadClosure%2Fokayama%2Fsummary.json&amp;data=..%2F..%2F..%2Fdata%2Fqtct%2FroadClosure%2Fokayama%2Fdetail.json&amp;layer=roadClosure" title="道路通行情報" class="poi clickable" visibility="visible" opacity="1" x="12243.4" y="-4605.6" width="3205.3" height="2251.0" />
+</svg>

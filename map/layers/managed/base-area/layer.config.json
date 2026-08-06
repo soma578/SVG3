@@ -1,0 +1,11 @@
+{
+  "id": "layer-base-area",
+  "published": false,
+  "title": "L1 行政界",
+  "href": "/map/layers/overview/pref/{prefCode}.svg",
+  "class": "vectorEtcData",
+  "visibility": "visible",
+  "opacity": "1",
+  "order": 20,
+  "comment": "layer-base-area: 市区町村境界 (overview/pref) — 地区境界SVGではない"
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="-42.8202 -50 513.8425 600"
+     data-controller="/map/layers/external/svgmap-app-layers/adapters/geohash-coder.html#exec=appearOnLayerLoad&amp;requiredHeight=300">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84"
+                          transform="matrix(100,0,0,-100,0,0)" />
+  <defs>
+    <g id="p0">
+      <image xlink:href="/map/svgMapAppLayers/geoCoders/geohashCoder/mappin.png"
+             preserveAspectRatio="none" x="-8" y="-25" width="19" height="27" />
+    </g>
+  </defs>
+</svg>

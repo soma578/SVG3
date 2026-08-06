@@ -1,0 +1,12 @@
+node_modules
+.next
+out
+.git
+venv
+data_archive
+*.log
+.env.local
+.env*.local
+trash
+G04b
+src-tauri

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "kind": "svg3-layer-alert-summary",
+  "layerId": "layer-river-level",
+  "dataId": "riverLevel",
+  "generatedAt": null,
+  "observedAt": null,
+  "active": false,
+  "maxSeverity": "unknown",
+  "counts": {
+    "normal": 0,
+    "advisory": 0,
+    "evacuation": 0,
+    "danger": 0,
+    "stale": 8,
+    "unknown": 0
+  },
+  "affected": []
+}

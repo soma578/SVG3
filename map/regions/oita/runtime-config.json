@@ -1,0 +1,44 @@
+{
+  "version": "2",
+  "regionId": "oita",
+  "prefCode": "44",
+  "label": "大分県",
+  "engine": "svgmap",
+  "containerUrl": "/map/containers/Containers_webapp_denshi_44.svg",
+  "iconsBaseUrl": "/map/icons",
+  "initialViewport": {
+    "lat": 33.227345,
+    "lon": 131.455035,
+    "latSpan": 1.21581,
+    "lonSpan": 1.469416
+  },
+  "layers": {
+    "baseArea": {
+      "layerUrl": "/map/layers/overview/pref/44.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "evacuation": {
+      "dataUrl": "/map/data/evacuation/oita.json",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "teamActivity": {
+      "dataUrl": "/map/data/team-activity/oita.json",
+      "baseAreaLayerUrl": "/map/layers/overview/pref/44.svg",
+      "districtSvgUrlTemplate": "/data/oita/districts-svg/{code}.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "hazard": {
+      "layerUrl": "/map/layers/hazard/44/oita.svg",
+      "svgUrlTemplate": "/map/layers/hazard/44/districts/{code}.svg",
+      "runtimeVisible": false,
+      "opacity": 0.7
+    }
+  },
+  "interaction": {
+    "disableDefaultPopup": true,
+    "featureSelectEvent": true
+  }
+}

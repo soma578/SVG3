@@ -1,0 +1,57 @@
+{
+  "id": "artifact-sample",
+  "title": "配布レイヤーサンプル",
+  "version": "1.0.0",
+  "type": "svgmap-portable-layer",
+  "distribution": {
+    "publisher": { "id": "svg3", "name": "SVG3" },
+    "license": { "spdx": "NOASSERTION", "name": "利用条件未設定", "status": "unresolved", "redistributable": false },
+    "publishedAt": "2026-07-21T00:00:00+09:00"
+  },
+  "entrypoint": "artifactSampleLayer.svg",
+  "portability": {
+    "level": "distribution-portable",
+    "dataInjection": "hash-params",
+    "limitations": []
+  },
+  "runtime": {
+    "lawaModes": ["tight", "isolated"],
+    "readyEvent": "layerWebAppReady",
+    "requiredApis": ["svgMap.setShowPoiProperty", "svgMap.showModal", "svgImage"]
+  },
+  "runtimeDependencies": [
+    { "id": "representative-pins", "version": "1.2.2", "manifest": "../representative-pins/runtime.package.json" },
+    { "id": "svgmap-slawa-client", "version": "1.0.0", "manifest": "../svgmap-slawa-client/runtime.package.json" }
+  ],
+  "shared": [
+    "artifactSampleLayer.html",
+    "data/summary.json",
+    "data/detail.json"
+  ],
+  "data": {
+    "kind": "qtct",
+    "summary": "data/summary.json",
+    "detail": "data/detail.json",
+    "injection": {
+      "transport": "svg-fragment-query",
+      "required": ["data", "layer"],
+      "optional": ["summary", "profile"]
+    }
+  },
+  "release": {
+    "kind": "standalone-static",
+    "regions": ["okayama"],
+    "layerId": "layer-portable-artifact-sample",
+    "title": "配布レイヤーサンプル",
+    "params": {
+      "summary": "data/summary.json",
+      "data": "data/detail.json",
+      "layer": "artifactSample"
+    }
+  },
+  "containerAnimation": {
+    "class": "poi clickable",
+    "visibility": "hidden",
+    "opacity": "1"
+  }
+}

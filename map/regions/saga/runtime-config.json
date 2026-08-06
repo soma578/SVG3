@@ -1,0 +1,44 @@
+{
+  "version": "2",
+  "regionId": "saga",
+  "prefCode": "41",
+  "label": "佐賀県",
+  "engine": "svgmap",
+  "containerUrl": "/map/containers/Containers_webapp_denshi_41.svg",
+  "iconsBaseUrl": "/map/icons",
+  "initialViewport": {
+    "lat": 33.284175,
+    "lon": 130.141035,
+    "latSpan": 0.828695,
+    "lonSpan": 0.974344
+  },
+  "layers": {
+    "baseArea": {
+      "layerUrl": "/map/layers/overview/pref/41.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "evacuation": {
+      "dataUrl": "/map/data/evacuation/saga.json",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "teamActivity": {
+      "dataUrl": "/map/data/team-activity/saga.json",
+      "baseAreaLayerUrl": "/map/layers/overview/pref/41.svg",
+      "districtSvgUrlTemplate": "/data/saga/districts-svg/{code}.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "hazard": {
+      "layerUrl": "/map/layers/hazard/41/saga.svg",
+      "svgUrlTemplate": "/map/layers/hazard/41/districts/{code}.svg",
+      "runtimeVisible": false,
+      "opacity": 0.7
+    }
+  },
+  "interaction": {
+    "disableDefaultPopup": true,
+    "featureSelectEvent": true
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "version": "2",
+  "regionId": "wakayama",
+  "prefCode": "30",
+  "label": "和歌山県",
+  "engine": "svgmap",
+  "containerUrl": "/map/containers/Containers_webapp_denshi_30.svg",
+  "iconsBaseUrl": "/map/icons",
+  "initialViewport": {
+    "lat": 33.90954,
+    "lon": 135.50621,
+    "latSpan": 1.13387,
+    "lonSpan": 1.203466
+  },
+  "layers": {
+    "baseArea": {
+      "layerUrl": "/map/layers/overview/pref/30.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "evacuation": {
+      "dataUrl": "/map/data/evacuation/wakayama.json",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "teamActivity": {
+      "dataUrl": "/map/data/team-activity/wakayama.json",
+      "baseAreaLayerUrl": "/map/layers/overview/pref/30.svg",
+      "districtSvgUrlTemplate": "/data/wakayama/districts-svg/{code}.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "hazard": {
+      "layerUrl": "/map/layers/hazard/30/wakayama.svg",
+      "svgUrlTemplate": "/map/layers/hazard/30/districts/{code}.svg",
+      "runtimeVisible": false,
+      "opacity": 0.7
+    }
+  },
+  "interaction": {
+    "disableDefaultPopup": true,
+    "featureSelectEvent": true
+  }
+}

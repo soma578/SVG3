@@ -1,0 +1,44 @@
+{
+  "version": "2",
+  "regionId": "nagano",
+  "prefCode": "20",
+  "label": "長野県",
+  "engine": "svgmap",
+  "containerUrl": "/map/containers/Containers_webapp_denshi_20.svg",
+  "iconsBaseUrl": "/map/icons",
+  "initialViewport": {
+    "lat": 36.114445,
+    "lon": 138.0319,
+    "latSpan": 2.086506,
+    "lonSpan": 1.635876
+  },
+  "layers": {
+    "baseArea": {
+      "layerUrl": "/map/layers/overview/pref/20.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "evacuation": {
+      "dataUrl": "/map/data/evacuation/nagano.json",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "teamActivity": {
+      "dataUrl": "/map/data/team-activity/nagano.json",
+      "baseAreaLayerUrl": "/map/layers/overview/pref/20.svg",
+      "districtSvgUrlTemplate": "/data/nagano/districts-svg/{code}.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "hazard": {
+      "layerUrl": "/map/layers/hazard/20/nagano.svg",
+      "svgUrlTemplate": "/map/layers/hazard/20/districts/{code}.svg",
+      "runtimeVisible": false,
+      "opacity": 0.7
+    }
+  },
+  "interaction": {
+    "disableDefaultPopup": true,
+    "featureSelectEvent": true
+  }
+}

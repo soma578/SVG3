@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SVG3 authorized river alert feed",
+  "type": "object",
+  "required": ["schemaVersion", "receivedAt", "stations"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "receivedAt": { "type": "string", "format": "date-time" },
+    "stations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "regionId", "title", "lat", "lon", "observedAt", "quality"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "regionId": { "type": "string", "pattern": "^[a-z][a-z0-9-]+$" },
+          "title": { "type": "string", "minLength": 1 },
+          "river": { "type": "string" },
+          "location": { "type": "string" },
+          "lat": { "type": "number", "minimum": 20, "maximum": 50 },
+          "lon": { "type": "number", "minimum": 120, "maximum": 155 },
+          "currentLevel": { "type": ["number", "null"] },
+          "change1h": { "type": ["number", "null"] },
+          "advisoryLevel": { "type": ["number", "null"] },
+          "evacuationLevel": { "type": ["number", "null"] },
+          "dangerLevel": { "type": ["number", "null"] },
+          "unit": { "type": "string" },
+          "observedAt": { "type": ["string", "null"], "format": "date-time" },
+          "sourceUrl": { "type": "string" },
+          "quality": { "enum": ["normal", "provisional", "missing"] }
+        }
+      }
+    }
+  }
+}

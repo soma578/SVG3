@@ -1,0 +1,122 @@
+{
+  "id": "teamActivity",
+  "title": "Team Activity Portable Layer",
+  "version": "1.0.0",
+  "entrypoint": "teamActivityLayer.svg",
+  "type": "svgmap-portable-layer",
+  "distribution": {
+    "publisher": {
+      "id": "svg3",
+      "name": "SVG3"
+    },
+    "license": {
+      "spdx": "NOASSERTION",
+      "name": "利用条件未設定",
+      "status": "unresolved",
+      "redistributable": false
+    },
+    "publishedAt": "2026-07-21T00:00:00+09:00"
+  },
+  "portability": {
+    "level": "distribution-portable",
+    "dataInjection": "hash-params",
+    "limitations": []
+  },
+  "runtime": {
+    "lawaModes": [
+      "tight",
+      "isolated"
+    ],
+    "readyEvent": "layerWebAppReady",
+    "requiredApis": [
+      "svgMap.getGeoViewBox",
+      "svgMap.setShowPoiProperty",
+      "svgMap.showModal",
+      "svgImage"
+    ]
+  },
+  "runtimeDependencies": [
+    {
+      "id": "representative-pins",
+      "version": "1.1.0",
+      "manifest": "../representative-pins/runtime.package.json"
+    },
+    {
+      "id": "svgmap-slawa-client",
+      "version": "1.0.0",
+      "manifest": "../svgmap-slawa-client/runtime.package.json"
+    }
+  ],
+  "detailMode": "svgMap.showModal",
+  "shared": [
+    "teamActivityDetail.js",
+    "teamActivityAreaLayer.svg",
+    "teamActivityAreaLayer.html"
+  ],
+  "containerAnimations": [
+    {
+      "id": "layer-team-activity-pins",
+      "entrypoint": "teamActivityLayer.svg",
+      "title": "チーム活動ピン",
+      "class": "poi clickable",
+      "opacity": "1",
+      "primary": true,
+      "dataParams": [
+        "summary",
+        "data",
+        "layer"
+      ]
+    },
+    {
+      "id": "layer-team-activity",
+      "entrypoint": "teamActivityAreaLayer.svg",
+      "title": "チーム活動エリア",
+      "class": "vectorEtcData",
+      "opacity": "0.9",
+      "dataParams": [
+        "data",
+        "districtSvgUrlTemplate",
+        "layer"
+      ]
+    }
+  ],
+  "data": {
+    "kind": "qtct",
+    "injection": {
+      "transport": "svg-fragment-query",
+      "required": [
+        "data",
+        "layer"
+      ],
+      "optional": [
+        "summary",
+        "statusOverlay",
+        "profile",
+        "municipalityCodes",
+        "districtSvgUrlTemplate"
+      ]
+    },
+    "summary": "../../../data/qtct/teamActivity/okayama/summary.json",
+    "detail": "../../../data/qtct/teamActivity/okayama/detail.json",
+    "regionId": "okayama"
+  },
+  "containerAnimation": {
+    "class": "poi clickable",
+    "visibility": "hidden",
+    "opacity": "1"
+  },
+  "runtimeDependencyLock": [
+    {
+      "id": "representative-pins",
+      "version": "1.1.0",
+      "manifest": "representative-pins/runtime.package.json",
+      "integrity": "sha256-9c710a53a18d829739d0571ed93aed014ddc98a57366eb73bd6b154ab4a318f1"
+    },
+    {
+      "id": "svgmap-slawa-client",
+      "version": "1.0.0",
+      "manifest": "svgmap-slawa-client/runtime.package.json",
+      "integrity": "sha256-8ad6f8c67a38d07362832f3e75c188947dee601546fe62b812df9221efdc7c22"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="12243.4 -4605.6 3205.3 2251.0"
+     pointer-events="none">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+
+  <g id="hazard-flood" fill="#3b82f6" fill-opacity="0.28" stroke="#1d4ed8" stroke-opacity="0.70" stroke-width="0.10" pointer-events="none">
+
+  </g>
+  <g id="hazard-tsunami-inundation" fill="#a855f7" fill-opacity="0.28" stroke="#7e22ce" stroke-opacity="0.70" stroke-width="0.10" pointer-events="none">
+
+  </g>
+  <g id="hazard-landslide-warning" fill="#f97316" fill-opacity="0.22" stroke="#c2410c" stroke-opacity="0.80" stroke-width="0.10" pointer-events="none">
+    <path d="M 14071.34 -4311.89 L 14071.25 -4311.84 L 14071.16 -4311.95 L 14071.26 -4311.99 L 14071.34 -4311.89 Z M 14072.15 -4312.08 L 14072.02 -4312.03 L 14071.97 -4312.12 L 14071.97 -4312.26 L 14072.03 -4312.28 L 14072.13 -4312.12 L 14072.15 -4312.08 Z M 14072.03 -4312.04 L 14072.00 -4312.24 L 14072.06 -4312.30 L 14072.18 -4312.25 L 14072.21 -4312.09 L 14072.07 -4312.05 L 14072.03 -4312.04 Z M 14073.76 -4312.61 L 14073.69 -4312.60 L 14073.64 -4312.72 L 14073.71 -4312.75 L 14073.76 -4312.61 Z M 14073.56 -4312.40 L 14073.50 -4312.34 L 14073.35 -4312.43 L 14073.33 -4312.51 L 14073.42 -4312.49 L 14073.56 -4312.40 Z M 14074.12 -4312.55 L 14074.39 -4312.39 L 14074.47 -4312.24 L 14074.32 -4312.38 L 14074.05 -4312.49 L 14074.11 -4312.54 L 14074.12 -4312.55 Z M 14073.36 -4312.76 L 14073.72 -4312.76 L 14073.58 -4312.59 L 14073.33 -4312.44 L 14073.32 -4312.74 L 14073.36 -4312.75 L 14073.36 -4312.76 Z M 14073.23 -4304.06 L 14073.43 -4303.97 L 14073.21 -4303.74 L 14073.09 -4303.75 L 14073.06 -4303.87 L 14073.23 -4304.06 L 14073.23 -4304.06 Z" />
+  </g>
+  <g id="hazard-landslide-special" fill="#ef4444" fill-opacity="0.35" stroke="#991b1b" stroke-opacity="0.90" stroke-width="0.12" pointer-events="none">
+    <path d="M 14073.33 -4312.72 L 14073.67 -4312.76 L 14073.40 -4312.48 L 14073.32 -4312.48 L 14073.37 -4312.53 L 14073.33 -4312.59 L 14073.33 -4312.72 Z" />
+  </g>
+</svg>

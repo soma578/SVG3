@@ -1,0 +1,650 @@
+{
+  "region": "niigata",
+  "label": "新潟県",
+  "municipalities": [
+    {
+      "id": "15100",
+      "label": "新潟市",
+      "municipalityCodes": [
+        "15101",
+        "15102",
+        "15103",
+        "15104",
+        "15105",
+        "15106",
+        "15107",
+        "15108"
+      ],
+      "shelterCount": 565,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.849665,
+        "lon": 139.02619,
+        "latSpan": 0.442507,
+        "lonSpan": 0.625664
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15101.svg",
+        "/data/niigata/districts-svg/15102.svg",
+        "/data/niigata/districts-svg/15103.svg",
+        "/data/niigata/districts-svg/15104.svg",
+        "/data/niigata/districts-svg/15105.svg",
+        "/data/niigata/districts-svg/15106.svg",
+        "/data/niigata/districts-svg/15107.svg",
+        "/data/niigata/districts-svg/15108.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15202",
+      "label": "長岡市",
+      "municipalityCodes": [
+        "15202"
+      ],
+      "shelterCount": 275,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.443625,
+        "lon": 138.884205,
+        "latSpan": 0.693173,
+        "lonSpan": 0.624221
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15204",
+      "label": "三条市",
+      "municipalityCodes": [
+        "15204"
+      ],
+      "shelterCount": 102,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.539865,
+        "lon": 139.0853,
+        "latSpan": 0.369681,
+        "lonSpan": 0.55354
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15205",
+      "label": "柏崎市",
+      "municipalityCodes": [
+        "15205"
+      ],
+      "shelterCount": 301,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.340925,
+        "lon": 138.569935,
+        "latSpan": 0.470769,
+        "lonSpan": 0.394771
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15206",
+      "label": "新発田市",
+      "municipalityCodes": [
+        "15206"
+      ],
+      "shelterCount": 75,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.91934,
+        "lon": 139.46175,
+        "latSpan": 0.338338,
+        "lonSpan": 0.57226
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15208",
+      "label": "小千谷市",
+      "municipalityCodes": [
+        "15208"
+      ],
+      "shelterCount": 94,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.295565,
+        "lon": 138.817745,
+        "latSpan": 0.230607,
+        "lonSpan": 0.252759
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15209",
+      "label": "加茂市",
+      "municipalityCodes": [
+        "15209"
+      ],
+      "shelterCount": 62,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.631745,
+        "lon": 139.11158,
+        "latSpan": 0.204399,
+        "lonSpan": 0.318396
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15210",
+      "label": "十日町市",
+      "municipalityCodes": [
+        "15210"
+      ],
+      "shelterCount": 54,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.052705,
+        "lon": 138.698955,
+        "latSpan": 0.479661,
+        "lonSpan": 0.457041
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15211",
+      "label": "見附市",
+      "municipalityCodes": [
+        "15211"
+      ],
+      "shelterCount": 28,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.526915,
+        "lon": 138.935855,
+        "latSpan": 0.172575,
+        "lonSpan": 0.167687
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15212",
+      "label": "村上市",
+      "municipalityCodes": [
+        "15212"
+      ],
+      "shelterCount": 185,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.315845,
+        "lon": 139.653955,
+        "latSpan": 0.616473,
+        "lonSpan": 0.639457
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15213",
+      "label": "燕市",
+      "municipalityCodes": [
+        "15213"
+      ],
+      "shelterCount": 114,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.66206,
+        "lon": 138.88078,
+        "latSpan": 0.177814,
+        "lonSpan": 0.243152
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15216",
+      "label": "糸魚川市",
+      "municipalityCodes": [
+        "15216"
+      ],
+      "shelterCount": 235,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.95716,
+        "lon": 137.873795,
+        "latSpan": 0.496626,
+        "lonSpan": 0.620893
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15216.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15217",
+      "label": "妙高市",
+      "municipalityCodes": [
+        "15217"
+      ],
+      "shelterCount": 199,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.935445,
+        "lon": 138.192865,
+        "latSpan": 0.351819,
+        "lonSpan": 0.492453
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15217.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15218",
+      "label": "五泉市",
+      "municipalityCodes": [
+        "15218"
+      ],
+      "shelterCount": 69,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.643585,
+        "lon": 139.220905,
+        "latSpan": 0.348101,
+        "lonSpan": 0.331773
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15218.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15222",
+      "label": "上越市",
+      "municipalityCodes": [
+        "15222"
+      ],
+      "shelterCount": 376,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.124115,
+        "lon": 138.31833,
+        "latSpan": 0.474435,
+        "lonSpan": 0.651456
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15222.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15223",
+      "label": "阿賀野市",
+      "municipalityCodes": [
+        "15223"
+      ],
+      "shelterCount": 33,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.81331,
+        "lon": 139.260615,
+        "latSpan": 0.205062,
+        "lonSpan": 0.285233
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15223.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15224",
+      "label": "佐渡市",
+      "municipalityCodes": [
+        "15224"
+      ],
+      "shelterCount": 80,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.06958,
+        "lon": 138.38917,
+        "latSpan": 0.693654,
+        "lonSpan": 0.480168
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15224.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15225",
+      "label": "魚沼市",
+      "municipalityCodes": [
+        "15225"
+      ],
+      "shelterCount": 36,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.1771,
+        "lon": 139.0476,
+        "latSpan": 0.615082,
+        "lonSpan": 0.553098
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15225.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15226",
+      "label": "南魚沼市",
+      "municipalityCodes": [
+        "15226"
+      ],
+      "shelterCount": 62,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.047945,
+        "lon": 138.93138,
+        "latSpan": 0.417755,
+        "lonSpan": 0.432822
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15226.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15227",
+      "label": "胎内市",
+      "municipalityCodes": [
+        "15227"
+      ],
+      "shelterCount": 22,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.0066,
+        "lon": 139.47277,
+        "latSpan": 0.372216,
+        "lonSpan": 0.41392
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15227.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15307",
+      "label": "聖籠町",
+      "municipalityCodes": [
+        "15307"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.9886,
+        "lon": 139.270905,
+        "latSpan": 0.109122,
+        "lonSpan": 0.117949
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15307.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15342",
+      "label": "弥彦村",
+      "municipalityCodes": [
+        "15342"
+      ],
+      "shelterCount": 23,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.687195,
+        "lon": 138.83884,
+        "latSpan": 0.081159,
+        "lonSpan": 0.086398
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15342.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15361",
+      "label": "田上町",
+      "municipalityCodes": [
+        "15361"
+      ],
+      "shelterCount": 16,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.703995,
+        "lon": 139.0692,
+        "latSpan": 0.085527,
+        "lonSpan": 0.100672
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15361.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15385",
+      "label": "阿賀町",
+      "municipalityCodes": [
+        "15385"
+      ],
+      "shelterCount": 0,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.650725,
+        "lon": 139.49602,
+        "latSpan": 0.529529,
+        "lonSpan": 0.63648
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15385.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15405",
+      "label": "出雲崎町",
+      "municipalityCodes": [
+        "15405"
+      ],
+      "shelterCount": 56,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.532755,
+        "lon": 138.712175,
+        "latSpan": 0.117819,
+        "lonSpan": 0.135109
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15405.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15461",
+      "label": "湯沢町",
+      "municipalityCodes": [
+        "15461"
+      ],
+      "shelterCount": 56,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.850745,
+        "lon": 138.80099,
+        "latSpan": 0.294073,
+        "lonSpan": 0.34177
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15461.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15482",
+      "label": "津南町",
+      "municipalityCodes": [
+        "15482"
+      ],
+      "shelterCount": 0,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.95555,
+        "lon": 138.642085,
+        "latSpan": 0.285714,
+        "lonSpan": 0.192361
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15482.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15504",
+      "label": "刈羽村",
+      "municipalityCodes": [
+        "15504"
+      ],
+      "shelterCount": 32,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.428075,
+        "lon": 138.649425,
+        "latSpan": 0.075725,
+        "lonSpan": 0.152971
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15504.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15581",
+      "label": "関川村",
+      "municipalityCodes": [
+        "15581"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.044055,
+        "lon": 139.591905,
+        "latSpan": 0.326729,
+        "lonSpan": 0.265161
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15581.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "15586",
+      "label": "粟島浦村",
+      "municipalityCodes": [
+        "15586"
+      ],
+      "shelterCount": 5,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.46416,
+        "lon": 139.23981,
+        "latSpan": 0.069706,
+        "lonSpan": 0.064636
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/niigata/districts-svg/15586.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

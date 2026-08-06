@@ -1,0 +1,888 @@
+{
+  "region": "gifu",
+  "label": "岐阜県",
+  "municipalities": [
+    {
+      "id": "21201",
+      "label": "岐阜市",
+      "municipalityCodes": [
+        "21201"
+      ],
+      "shelterCount": 574,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.447175,
+        "lon": 136.782525,
+        "latSpan": 0.248339,
+        "lonSpan": 0.269477
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21202",
+      "label": "大垣市",
+      "municipalityCodes": [
+        "21202"
+      ],
+      "shelterCount": 165,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.313805,
+        "lon": 136.53481,
+        "latSpan": 0.252369,
+        "lonSpan": 0.405002
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21203",
+      "label": "高山市",
+      "municipalityCodes": [
+        "21203"
+      ],
+      "shelterCount": 95,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.14523,
+        "lon": 137.20367,
+        "latSpan": 0.644072,
+        "lonSpan": 1.168414
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21204",
+      "label": "多治見市",
+      "municipalityCodes": [
+        "21204"
+      ],
+      "shelterCount": 132,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.33687,
+        "lon": 137.116385,
+        "latSpan": 0.172224,
+        "lonSpan": 0.182195
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21205",
+      "label": "関市",
+      "municipalityCodes": [
+        "21205"
+      ],
+      "shelterCount": 314,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.62009,
+        "lon": 136.88371,
+        "latSpan": 0.495352,
+        "lonSpan": 0.565708
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21206",
+      "label": "中津川市",
+      "municipalityCodes": [
+        "21206"
+      ],
+      "shelterCount": 65,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.58036,
+        "lon": 137.479855,
+        "latSpan": 0.574418,
+        "lonSpan": 0.402909
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21207",
+      "label": "美濃市",
+      "municipalityCodes": [
+        "21207"
+      ],
+      "shelterCount": 38,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.58147,
+        "lon": 136.908655,
+        "latSpan": 0.181948,
+        "lonSpan": 0.182039
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21208",
+      "label": "瑞浪市",
+      "municipalityCodes": [
+        "21208"
+      ],
+      "shelterCount": 51,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.381785,
+        "lon": 137.2718,
+        "latSpan": 0.241267,
+        "lonSpan": 0.209144
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21209",
+      "label": "羽島市",
+      "municipalityCodes": [
+        "21209"
+      ],
+      "shelterCount": 111,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.29896,
+        "lon": 136.7059,
+        "latSpan": 0.15054,
+        "lonSpan": 0.12493
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21210",
+      "label": "恵那市",
+      "municipalityCodes": [
+        "21210"
+      ],
+      "shelterCount": 88,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.38541,
+        "lon": 137.426475,
+        "latSpan": 0.422578,
+        "lonSpan": 0.459199
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21211",
+      "label": "美濃加茂市",
+      "municipalityCodes": [
+        "21211"
+      ],
+      "shelterCount": 57,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.49158,
+        "lon": 137.02318,
+        "latSpan": 0.160368,
+        "lonSpan": 0.165048
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21212",
+      "label": "土岐市",
+      "municipalityCodes": [
+        "21212"
+      ],
+      "shelterCount": 217,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.32764,
+        "lon": 137.21407,
+        "latSpan": 0.198068,
+        "lonSpan": 0.178984
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21213",
+      "label": "各務原市",
+      "municipalityCodes": [
+        "21213"
+      ],
+      "shelterCount": 116,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.401335,
+        "lon": 136.877155,
+        "latSpan": 0.118027,
+        "lonSpan": 0.221351
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21214",
+      "label": "可児市",
+      "municipalityCodes": [
+        "21214"
+      ],
+      "shelterCount": 43,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.414915,
+        "lon": 137.06929,
+        "latSpan": 0.130585,
+        "lonSpan": 0.236782
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21215",
+      "label": "山県市",
+      "municipalityCodes": [
+        "21215"
+      ],
+      "shelterCount": 52,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.60067,
+        "lon": 136.74205,
+        "latSpan": 0.302458,
+        "lonSpan": 0.204516
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21215.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21216",
+      "label": "瑞穂市",
+      "municipalityCodes": [
+        "21216"
+      ],
+      "shelterCount": 57,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.39779,
+        "lon": 136.669745,
+        "latSpan": 0.0806,
+        "lonSpan": 0.095563
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21216.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21217",
+      "label": "飛騨市",
+      "municipalityCodes": [
+        "21217"
+      ],
+      "shelterCount": 84,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.32407,
+        "lon": 137.245675,
+        "latSpan": 0.36595,
+        "lonSpan": 0.765167
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21217.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21218",
+      "label": "本巣市",
+      "municipalityCodes": [
+        "21218"
+      ],
+      "shelterCount": 149,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.612405,
+        "lon": 136.60606,
+        "latSpan": 0.505505,
+        "lonSpan": 0.241436
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21218.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21219",
+      "label": "郡上市",
+      "municipalityCodes": [
+        "21219"
+      ],
+      "shelterCount": 173,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.833195,
+        "lon": 136.94624,
+        "latSpan": 0.609661,
+        "lonSpan": 0.569816
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21219.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21220",
+      "label": "下呂市",
+      "municipalityCodes": [
+        "21220"
+      ],
+      "shelterCount": 85,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.8288,
+        "lon": 137.266655,
+        "latSpan": 0.54288,
+        "lonSpan": 0.563615
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21220.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21221",
+      "label": "海津市",
+      "municipalityCodes": [
+        "21221"
+      ],
+      "shelterCount": 42,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.212935,
+        "lon": 136.609735,
+        "latSpan": 0.205933,
+        "lonSpan": 0.190827
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21221.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21302",
+      "label": "岐南町",
+      "municipalityCodes": [
+        "21302"
+      ],
+      "shelterCount": 35,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.384465,
+        "lon": 136.79129,
+        "latSpan": 0.04,
+        "lonSpan": 0.07397
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21302.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21303",
+      "label": "笠松町",
+      "municipalityCodes": [
+        "21303"
+      ],
+      "shelterCount": 40,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.363365,
+        "lon": 136.774845,
+        "latSpan": 0.048035,
+        "lonSpan": 0.119249
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21303.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21341",
+      "label": "養老町",
+      "municipalityCodes": [
+        "21341"
+      ],
+      "shelterCount": 43,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.28576,
+        "lon": 136.5661,
+        "latSpan": 0.151216,
+        "lonSpan": 0.153686
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21341.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21361",
+      "label": "垂井町",
+      "municipalityCodes": [
+        "21361"
+      ],
+      "shelterCount": 50,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.38543,
+        "lon": 136.512975,
+        "latSpan": 0.136058,
+        "lonSpan": 0.127907
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21361.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21362",
+      "label": "関ケ原町",
+      "municipalityCodes": [
+        "21362"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.341225,
+        "lon": 136.455885,
+        "latSpan": 0.139737,
+        "lonSpan": 0.138385
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21362.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21381",
+      "label": "神戸町",
+      "municipalityCodes": [
+        "21381"
+      ],
+      "shelterCount": 71,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.417785,
+        "lon": 136.61261,
+        "latSpan": 0.079729,
+        "lonSpan": 0.073684
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21381.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21382",
+      "label": "輪之内町",
+      "municipalityCodes": [
+        "21382"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.282655,
+        "lon": 136.63887,
+        "latSpan": 0.078143,
+        "lonSpan": 0.087152
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21382.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21383",
+      "label": "安八町",
+      "municipalityCodes": [
+        "21383"
+      ],
+      "shelterCount": 73,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.345125,
+        "lon": 136.663425,
+        "latSpan": 0.098085,
+        "lonSpan": 0.065663
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21383.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21401",
+      "label": "揖斐川町",
+      "municipalityCodes": [
+        "21401"
+      ],
+      "shelterCount": 77,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.591935,
+        "lon": 136.465035,
+        "latSpan": 0.528437,
+        "lonSpan": 0.490919
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21401.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21403",
+      "label": "大野町",
+      "municipalityCodes": [
+        "21403"
+      ],
+      "shelterCount": 35,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.457035,
+        "lon": 136.62617,
+        "latSpan": 0.137995,
+        "lonSpan": 0.087282
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21403.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21404",
+      "label": "池田町",
+      "municipalityCodes": [
+        "21404"
+      ],
+      "shelterCount": 27,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.43881,
+        "lon": 136.55845,
+        "latSpan": 0.08944,
+        "lonSpan": 0.109434
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21404.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21421",
+      "label": "北方町",
+      "municipalityCodes": [
+        "21421"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.43042,
+        "lon": 136.68794,
+        "latSpan": 0.048932,
+        "lonSpan": 0.04
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21421.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21501",
+      "label": "坂祝町",
+      "municipalityCodes": [
+        "21501"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.43349,
+        "lon": 136.97751,
+        "latSpan": 0.050362,
+        "lonSpan": 0.075374
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21501.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21502",
+      "label": "富加町",
+      "municipalityCodes": [
+        "21502"
+      ],
+      "shelterCount": 16,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.48827,
+        "lon": 136.979465,
+        "latSpan": 0.05161,
+        "lonSpan": 0.078897
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21502.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21503",
+      "label": "川辺町",
+      "municipalityCodes": [
+        "21503"
+      ],
+      "shelterCount": 38,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.50772,
+        "lon": 137.084245,
+        "latSpan": 0.121108,
+        "lonSpan": 0.123409
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21503.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21504",
+      "label": "七宗町",
+      "municipalityCodes": [
+        "21504"
+      ],
+      "shelterCount": 13,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.57486,
+        "lon": 137.114255,
+        "latSpan": 0.151762,
+        "lonSpan": 0.182533
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21504.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21505",
+      "label": "八百津町",
+      "municipalityCodes": [
+        "21505"
+      ],
+      "shelterCount": 29,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.500695,
+        "lon": 137.181535,
+        "latSpan": 0.141115,
+        "lonSpan": 0.274989
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21505.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21506",
+      "label": "白川町",
+      "municipalityCodes": [
+        "21506"
+      ],
+      "shelterCount": 59,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.618975,
+        "lon": 137.267185,
+        "latSpan": 0.239187,
+        "lonSpan": 0.342589
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21506.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21507",
+      "label": "東白川村",
+      "municipalityCodes": [
+        "21507"
+      ],
+      "shelterCount": 56,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.646785,
+        "lon": 137.334915,
+        "latSpan": 0.128037,
+        "lonSpan": 0.202189
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21507.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21521",
+      "label": "御嵩町",
+      "municipalityCodes": [
+        "21521"
+      ],
+      "shelterCount": 22,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.43289,
+        "lon": 137.137715,
+        "latSpan": 0.105352,
+        "lonSpan": 0.177723
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21521.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "21604",
+      "label": "白川村",
+      "municipalityCodes": [
+        "21604"
+      ],
+      "shelterCount": 22,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.23039,
+        "lon": 136.870135,
+        "latSpan": 0.356564,
+        "lonSpan": 0.273455
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gifu/districts-svg/21604.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

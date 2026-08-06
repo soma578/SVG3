@@ -1,0 +1,83 @@
+{
+  "id": "layer-road-closure",
+  "title": "道路通行情報",
+  "href": "/map/layers/portable/road-closure/roadClosureLayer.svg#summary=/map/data/qtct/roadClosure/summary.json&data=/map/data/qtct/roadClosure/{regionId}/detail.json&layer=roadClosure&detailByRegion=/map/data/qtct/roadClosure/{recordRegionId}/detail.json",
+  "class": "poi clickable",
+  "visibility": "hidden",
+  "opacity": "1",
+  "extent": "japan",
+  "order": 67,
+  "layerPackage": "/map/layers/portable/road-closure/layer.package.json",
+  "bundle": {
+    "release": true
+  },
+  "ui": {
+    "catalog": false,
+    "disabled": true,
+    "group": "防災情報",
+    "symbol": "道",
+    "accent": "#9F3128",
+    "kind": "poi",
+    "note": "検証用スナップショット（公式ライブ情報ではありません）",
+    "messages": null
+  },
+  "dataSource": {
+    "ownership": "sample",
+    "authority": {
+      "name": "SVG3検証用スナップショット"
+    },
+    "delivery": "static-snapshot",
+    "runtimeFetch": false,
+    "snapshot": {
+      "timestampField": "properties.updatedAt"
+    },
+    "freshness": {
+      "staleAfterMinutes": 120
+    }
+  },
+  "build": {
+    "kind": "csv-qtct",
+    "source": "data.csv",
+    "qtctLayer": "roadClosure",
+    "idColumn": "id",
+    "titleColumn": "title",
+    "latitudeColumn": "lat",
+    "longitudeColumn": "lon",
+    "regionColumn": "regionId",
+    "statusColumn": "status",
+    "propertyColumns": {
+      "roadName": {
+        "column": "roadName",
+        "type": "string"
+      },
+      "section": {
+        "column": "section",
+        "type": "string"
+      },
+      "reason": {
+        "column": "reason",
+        "type": "string"
+      },
+      "startedAt": {
+        "column": "startedAt",
+        "type": "string"
+      },
+      "updatedAt": {
+        "column": "updatedAt",
+        "type": "string"
+      },
+      "reporter": {
+        "column": "reporter",
+        "type": "string"
+      },
+      "sourceUrl": {
+        "column": "sourceUrl",
+        "type": "string"
+      },
+      "note": {
+        "column": "note",
+        "type": "string"
+      }
+    }
+  }
+}

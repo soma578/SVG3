@@ -1,0 +1,44 @@
+{
+  "version": "3",
+  "regionId": "hokkaido",
+  "prefCode": "01",
+  "label": "北海道",
+  "engine": "svgmap",
+  "containerUrl": "/map/containers/Containers_webapp_denshi_01.svg",
+  "iconsBaseUrl": "/map/icons",
+  "initialViewport": {
+    "lat": 43.454575,
+    "lon": 144.11369,
+    "latSpan": 4.648871,
+    "lonSpan": 10.431374
+  },
+  "layers": {
+    "baseArea": {
+      "layerUrl": "/map/layers/overview/pref/01.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "evacuation": {
+      "dataUrl": "/map/data/evacuation/hokkaido.json",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "teamActivity": {
+      "dataUrl": "/map/data/team-activity/hokkaido.json",
+      "baseAreaLayerUrl": "/map/layers/overview/pref/01.svg",
+      "districtSvgUrlTemplate": "/data/hokkaido/districts-svg/{code}.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "hazard": {
+      "layerUrl": "/map/layers/hazard/1/hokkaido.svg",
+      "svgUrlTemplate": "/map/layers/hazard/1/districts/{code}.svg",
+      "runtimeVisible": false,
+      "opacity": 0.7
+    }
+  },
+  "interaction": {
+    "disableDefaultPopup": true,
+    "featureSelectEvent": true
+  }
+}

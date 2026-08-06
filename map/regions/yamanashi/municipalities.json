@@ -1,0 +1,573 @@
+{
+  "region": "yamanashi",
+  "label": "山梨県",
+  "municipalities": [
+    {
+      "id": "19201",
+      "label": "甲府市",
+      "municipalityCodes": [
+        "19201"
+      ],
+      "shelterCount": 119,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.687935,
+        "lon": 138.592255,
+        "latSpan": 0.483483,
+        "lonSpan": 0.178607
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "19202",
+      "label": "富士吉田市",
+      "municipalityCodes": [
+        "19202"
+      ],
+      "shelterCount": 69,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.447775,
+        "lon": 138.79625,
+        "latSpan": 0.220935,
+        "lonSpan": 0.17849
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "19204",
+      "label": "都留市",
+      "municipalityCodes": [
+        "19204"
+      ],
+      "shelterCount": 18,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.527465,
+        "lon": 138.91318,
+        "latSpan": 0.200525,
+        "lonSpan": 0.296348
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "19205",
+      "label": "山梨市",
+      "municipalityCodes": [
+        "19205"
+      ],
+      "shelterCount": 45,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.786075,
+        "lon": 138.704095,
+        "latSpan": 0.321269,
+        "lonSpan": 0.284713
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "19206",
+      "label": "大月市",
+      "municipalityCodes": [
+        "19206"
+      ],
+      "shelterCount": 33,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.65519,
+        "lon": 138.91704,
+        "latSpan": 0.223366,
+        "lonSpan": 0.39013
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "19207",
+      "label": "韮崎市",
+      "municipalityCodes": [
+        "19207"
+      ],
+      "shelterCount": 32,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.71824,
+        "lon": 138.408205,
+        "latSpan": 0.144846,
+        "lonSpan": 0.289419
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "19208",
+      "label": "南アルプス市",
+      "municipalityCodes": [
+        "19208"
+      ],
+      "shelterCount": 94,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.658725,
+        "lon": 138.34487,
+        "latSpan": 0.246805,
+        "lonSpan": 0.428272
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "19209",
+      "label": "北杜市",
+      "municipalityCodes": [
+        "19209"
+      ],
+      "shelterCount": 59,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.840765,
+        "lon": 138.40338,
+        "latSpan": 0.339599,
+        "lonSpan": 0.567346
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "19210",
+      "label": "甲斐市",
+      "municipalityCodes": [
+        "19210"
+      ],
+      "shelterCount": 23,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.718015,
+        "lon": 138.51545,
+        "latSpan": 0.231803,
+        "lonSpan": 0.130052
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "19211",
+      "label": "笛吹市",
+      "municipalityCodes": [
+        "19211"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.613875,
+        "lon": 138.68826,
+        "latSpan": 0.253929,
+        "lonSpan": 0.268762
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "19212",
+      "label": "上野原市",
+      "municipalityCodes": [
+        "19212"
+      ],
+      "shelterCount": 22,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.640915,
+        "lon": 139.051165,
+        "latSpan": 0.254657,
+        "lonSpan": 0.216359
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "19213",
+      "label": "甲州市",
+      "municipalityCodes": [
+        "19213"
+      ],
+      "shelterCount": 48,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.736365,
+        "lon": 138.785005,
+        "latSpan": 0.340665,
+        "lonSpan": 0.220727
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "19214",
+      "label": "中央市",
+      "municipalityCodes": [
+        "19214"
+      ],
+      "shelterCount": 5,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.584615,
+        "lon": 138.54005,
+        "latSpan": 0.100789,
+        "lonSpan": 0.114842
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "19346",
+      "label": "市川三郷町",
+      "municipalityCodes": [
+        "19346"
+      ],
+      "shelterCount": 76,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.526485,
+        "lon": 138.52096,
+        "latSpan": 0.148655,
+        "lonSpan": 0.196196
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19346.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "19364",
+      "label": "早川町",
+      "municipalityCodes": [
+        "19364"
+      ],
+      "shelterCount": 6,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.477585,
+        "lon": 138.32527,
+        "latSpan": 0.449059,
+        "lonSpan": 0.25194
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19364.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "19365",
+      "label": "身延町",
+      "municipalityCodes": [
+        "19365"
+      ],
+      "shelterCount": 38,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.407265,
+        "lon": 138.46959,
+        "latSpan": 0.290433,
+        "lonSpan": 0.345332
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19365.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "19366",
+      "label": "南部町",
+      "municipalityCodes": [
+        "19366"
+      ],
+      "shelterCount": 124,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.27432,
+        "lon": 138.45106,
+        "latSpan": 0.275444,
+        "lonSpan": 0.218478
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19366.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "19368",
+      "label": "富士川町",
+      "municipalityCodes": [
+        "19368"
+      ],
+      "shelterCount": 204,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.53668,
+        "lon": 138.40007,
+        "latSpan": 0.15171,
+        "lonSpan": 0.205296
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19368.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "19384",
+      "label": "昭和町",
+      "municipalityCodes": [
+        "19384"
+      ],
+      "shelterCount": 10,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.63002,
+        "lon": 138.531635,
+        "latSpan": 0.056342,
+        "lonSpan": 0.057317
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19384.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "19422",
+      "label": "道志村",
+      "municipalityCodes": [
+        "19422"
+      ],
+      "shelterCount": 9,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.4993,
+        "lon": 139.018895,
+        "latSpan": 0.131274,
+        "lonSpan": 0.247065
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19422.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "19423",
+      "label": "西桂町",
+      "municipalityCodes": [
+        "19423"
+      ],
+      "shelterCount": 6,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.52615,
+        "lon": 138.834355,
+        "latSpan": 0.063726,
+        "lonSpan": 0.082745
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19423.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "19424",
+      "label": "忍野村",
+      "municipalityCodes": [
+        "19424"
+      ],
+      "shelterCount": 19,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.46153,
+        "lon": 138.85378,
+        "latSpan": 0.064532,
+        "lonSpan": 0.123526
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19424.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "19425",
+      "label": "山中湖村",
+      "municipalityCodes": [
+        "19425"
+      ],
+      "shelterCount": 18,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.418565,
+        "lon": 138.870005,
+        "latSpan": 0.102427,
+        "lonSpan": 0.175019
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19425.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "19429",
+      "label": "鳴沢村",
+      "municipalityCodes": [
+        "19429"
+      ],
+      "shelterCount": 19,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.426005,
+        "lon": 138.694545,
+        "latSpan": 0.177645,
+        "lonSpan": 0.144521
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19429.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "19430",
+      "label": "富士河口湖町",
+      "municipalityCodes": [
+        "19430"
+      ],
+      "shelterCount": 48,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.482695,
+        "lon": 138.69605,
+        "latSpan": 0.232739,
+        "lonSpan": 0.296946
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19430.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "19442",
+      "label": "小菅村",
+      "municipalityCodes": [
+        "19442"
+      ],
+      "shelterCount": 4,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.74627,
+        "lon": 138.93153,
+        "latSpan": 0.088296,
+        "lonSpan": 0.20891
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19442.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "19443",
+      "label": "丹波山村",
+      "municipalityCodes": [
+        "19443"
+      ],
+      "shelterCount": 7,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.79983,
+        "lon": 138.901825,
+        "latSpan": 0.153218,
+        "lonSpan": 0.219947
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamanashi/districts-svg/19443.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

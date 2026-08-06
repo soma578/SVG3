@@ -1,0 +1,902 @@
+{
+  "region": "hyogo",
+  "label": "兵庫県",
+  "municipalities": [
+    {
+      "id": "28100",
+      "label": "神戸市",
+      "municipalityCodes": [
+        "28101",
+        "28102",
+        "28105",
+        "28106",
+        "28107",
+        "28108",
+        "28109",
+        "28111"
+      ],
+      "shelterCount": 671,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.75764,
+        "lon": 135.10706,
+        "latSpan": 0.34554,
+        "lonSpan": 0.512226
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28101.svg",
+        "/data/hyogo/districts-svg/28102.svg",
+        "/data/hyogo/districts-svg/28105.svg",
+        "/data/hyogo/districts-svg/28106.svg",
+        "/data/hyogo/districts-svg/28107.svg",
+        "/data/hyogo/districts-svg/28108.svg",
+        "/data/hyogo/districts-svg/28109.svg",
+        "/data/hyogo/districts-svg/28111.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28110",
+      "label": "中央区",
+      "municipalityCodes": [
+        "28110"
+      ],
+      "shelterCount": 0,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.68245,
+        "lon": 135.207335,
+        "latSpan": 0.136006,
+        "lonSpan": 0.098215
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28110.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28201",
+      "label": "姫路市",
+      "municipalityCodes": [
+        "28201"
+      ],
+      "shelterCount": 331,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.84373,
+        "lon": 134.623505,
+        "latSpan": 0.651586,
+        "lonSpan": 0.494351
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28202",
+      "label": "尼崎市",
+      "municipalityCodes": [
+        "28202"
+      ],
+      "shelterCount": 116,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.7289,
+        "lon": 135.4144,
+        "latSpan": 0.136058,
+        "lonSpan": 0.11934
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28203",
+      "label": "明石市",
+      "municipalityCodes": [
+        "28203"
+      ],
+      "shelterCount": 98,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.683215,
+        "lon": 134.947705,
+        "latSpan": 0.109681,
+        "lonSpan": 0.220519
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28204",
+      "label": "西宮市",
+      "municipalityCodes": [
+        "28204"
+      ],
+      "shelterCount": 201,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.766745,
+        "lon": 135.30718,
+        "latSpan": 0.245557,
+        "lonSpan": 0.2002
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28205",
+      "label": "洲本市",
+      "municipalityCodes": [
+        "28205"
+      ],
+      "shelterCount": 66,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.33376,
+        "lon": 134.84946,
+        "latSpan": 0.243048,
+        "lonSpan": 0.28301
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28206",
+      "label": "芦屋市",
+      "municipalityCodes": [
+        "28206"
+      ],
+      "shelterCount": 80,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.742925,
+        "lon": 135.29593,
+        "latSpan": 0.098995,
+        "lonSpan": 0.073866
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28207",
+      "label": "伊丹市",
+      "municipalityCodes": [
+        "28207"
+      ],
+      "shelterCount": 152,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.786105,
+        "lon": 135.40736,
+        "latSpan": 0.076245,
+        "lonSpan": 0.097084
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28208",
+      "label": "相生市",
+      "municipalityCodes": [
+        "28208"
+      ],
+      "shelterCount": 49,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.83483,
+        "lon": 134.45628,
+        "latSpan": 0.226642,
+        "lonSpan": 0.123136
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28209",
+      "label": "豊岡市",
+      "municipalityCodes": [
+        "28209"
+      ],
+      "shelterCount": 202,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.53021,
+        "lon": 134.83375,
+        "latSpan": 0.3757,
+        "lonSpan": 0.56407
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28210",
+      "label": "加古川市",
+      "municipalityCodes": [
+        "28210"
+      ],
+      "shelterCount": 85,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.786685,
+        "lon": 134.84922,
+        "latSpan": 0.208871,
+        "lonSpan": 0.222586
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28212",
+      "label": "赤穂市",
+      "municipalityCodes": [
+        "28212"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.7908,
+        "lon": 134.377575,
+        "latSpan": 0.17901,
+        "lonSpan": 0.212719
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28213",
+      "label": "西脇市",
+      "municipalityCodes": [
+        "28213"
+      ],
+      "shelterCount": 37,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.01258,
+        "lon": 134.99637,
+        "latSpan": 0.155324,
+        "lonSpan": 0.271414
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28214",
+      "label": "宝塚市",
+      "municipalityCodes": [
+        "28214"
+      ],
+      "shelterCount": 66,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.867225,
+        "lon": 135.343345,
+        "latSpan": 0.247403,
+        "lonSpan": 0.178451
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28215",
+      "label": "三木市",
+      "municipalityCodes": [
+        "28215"
+      ],
+      "shelterCount": 274,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.85241,
+        "lon": 135.046625,
+        "latSpan": 0.233688,
+        "lonSpan": 0.314301
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28215.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28216",
+      "label": "高砂市",
+      "municipalityCodes": [
+        "28216"
+      ],
+      "shelterCount": 80,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.7736,
+        "lon": 134.78299,
+        "latSpan": 0.107926,
+        "lonSpan": 0.10478
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28216.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28217",
+      "label": "川西市",
+      "municipalityCodes": [
+        "28217"
+      ],
+      "shelterCount": 81,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.869935,
+        "lon": 135.41395,
+        "latSpan": 0.180557,
+        "lonSpan": 0.138164
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28217.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28218",
+      "label": "小野市",
+      "municipalityCodes": [
+        "28218"
+      ],
+      "shelterCount": 33,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.861365,
+        "lon": 134.953695,
+        "latSpan": 0.144625,
+        "lonSpan": 0.184769
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28218.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28219",
+      "label": "三田市",
+      "municipalityCodes": [
+        "28219"
+      ],
+      "shelterCount": 51,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.954795,
+        "lon": 135.20143,
+        "latSpan": 0.213837,
+        "lonSpan": 0.283218
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28219.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28220",
+      "label": "加西市",
+      "municipalityCodes": [
+        "28220"
+      ],
+      "shelterCount": 32,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.929275,
+        "lon": 134.85995,
+        "latSpan": 0.231881,
+        "lonSpan": 0.192296
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28220.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28221",
+      "label": "篠山市",
+      "municipalityCodes": [
+        "28221"
+      ],
+      "shelterCount": 64,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.06667,
+        "lon": 135.231855,
+        "latSpan": 0.288054,
+        "lonSpan": 0.448305
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28221.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28222",
+      "label": "養父市",
+      "municipalityCodes": [
+        "28222"
+      ],
+      "shelterCount": 175,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.34676,
+        "lon": 134.683475,
+        "latSpan": 0.273234,
+        "lonSpan": 0.466583
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28222.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28223",
+      "label": "丹波市",
+      "municipalityCodes": [
+        "28223"
+      ],
+      "shelterCount": 77,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.17782,
+        "lon": 135.063985,
+        "latSpan": 0.340418,
+        "lonSpan": 0.428103
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28223.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28224",
+      "label": "南あわじ市",
+      "municipalityCodes": [
+        "28224"
+      ],
+      "shelterCount": 76,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.256045,
+        "lon": 134.762895,
+        "latSpan": 0.259883,
+        "lonSpan": 0.282373
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28224.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28225",
+      "label": "朝来市",
+      "municipalityCodes": [
+        "28225"
+      ],
+      "shelterCount": 236,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.27379,
+        "lon": 134.81205,
+        "latSpan": 0.3848,
+        "lonSpan": 0.329758
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28225.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28226",
+      "label": "淡路市",
+      "municipalityCodes": [
+        "28226"
+      ],
+      "shelterCount": 75,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.501385,
+        "lon": 134.9062,
+        "latSpan": 0.278057,
+        "lonSpan": 0.307554
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28226.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28227",
+      "label": "宍粟市",
+      "municipalityCodes": [
+        "28227"
+      ],
+      "shelterCount": 44,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.145795,
+        "lon": 134.55469,
+        "latSpan": 0.497835,
+        "lonSpan": 0.45123
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28227.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28228",
+      "label": "加東市",
+      "municipalityCodes": [
+        "28228"
+      ],
+      "shelterCount": 43,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.930585,
+        "lon": 135.007805,
+        "latSpan": 0.203619,
+        "lonSpan": 0.287677
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28228.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28229",
+      "label": "たつの市",
+      "municipalityCodes": [
+        "28229"
+      ],
+      "shelterCount": 66,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.874265,
+        "lon": 134.51356,
+        "latSpan": 0.349479,
+        "lonSpan": 0.220688
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28229.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28301",
+      "label": "猪名川町",
+      "municipalityCodes": [
+        "28301"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.944265,
+        "lon": 135.351695,
+        "latSpan": 0.209157,
+        "lonSpan": 0.173667
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28301.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28365",
+      "label": "多可町",
+      "municipalityCodes": [
+        "28365"
+      ],
+      "shelterCount": 29,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.097535,
+        "lon": 134.90681,
+        "latSpan": 0.304499,
+        "lonSpan": 0.186654
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28365.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28381",
+      "label": "稲美町",
+      "municipalityCodes": [
+        "28381"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.75013,
+        "lon": 134.92311,
+        "latSpan": 0.075296,
+        "lonSpan": 0.111748
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28381.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28382",
+      "label": "播磨町",
+      "municipalityCodes": [
+        "28382"
+      ],
+      "shelterCount": 62,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.71011,
+        "lon": 134.86537,
+        "latSpan": 0.052494,
+        "lonSpan": 0.06591
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28382.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28442",
+      "label": "市川町",
+      "municipalityCodes": [
+        "28442"
+      ],
+      "shelterCount": 14,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.01188,
+        "lon": 134.777095,
+        "latSpan": 0.125164,
+        "lonSpan": 0.184847
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28442.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28443",
+      "label": "福崎町",
+      "municipalityCodes": [
+        "28443"
+      ],
+      "shelterCount": 22,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.96873,
+        "lon": 134.75028,
+        "latSpan": 0.132912,
+        "lonSpan": 0.143312
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28443.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28446",
+      "label": "神河町",
+      "municipalityCodes": [
+        "28446"
+      ],
+      "shelterCount": 60,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.115465,
+        "lon": 134.78185,
+        "latSpan": 0.208455,
+        "lonSpan": 0.326768
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28446.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28464",
+      "label": "太子町",
+      "municipalityCodes": [
+        "28464"
+      ],
+      "shelterCount": 29,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.834605,
+        "lon": 134.594585,
+        "latSpan": 0.066495,
+        "lonSpan": 0.096447
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28464.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28481",
+      "label": "上郡町",
+      "municipalityCodes": [
+        "28481"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.882135,
+        "lon": 134.350895,
+        "latSpan": 0.166595,
+        "lonSpan": 0.254475
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28481.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28501",
+      "label": "佐用町",
+      "municipalityCodes": [
+        "28501"
+      ],
+      "shelterCount": 10,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.030445,
+        "lon": 134.37017,
+        "latSpan": 0.317967,
+        "lonSpan": 0.302744
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28501.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28585",
+      "label": "香美町",
+      "municipalityCodes": [
+        "28585"
+      ],
+      "shelterCount": 270,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.51808,
+        "lon": 134.602295,
+        "latSpan": 0.395512,
+        "lonSpan": 0.340379
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28585.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "28586",
+      "label": "新温泉町",
+      "municipalityCodes": [
+        "28586"
+      ],
+      "shelterCount": 120,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.54762,
+        "lon": 134.47823,
+        "latSpan": 0.30836,
+        "lonSpan": 0.281554
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hyogo/districts-svg/28586.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

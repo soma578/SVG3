@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="12243.4 -4605.6 3205.3 2251.0"
+     pointer-events="none">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+
+  <g id="hazard-flood" fill="#3b82f6" fill-opacity="0.28" stroke="#1d4ed8" stroke-opacity="0.70" stroke-width="0.10" pointer-events="none">
+
+  </g>
+  <g id="hazard-tsunami-inundation" fill="#a855f7" fill-opacity="0.28" stroke="#7e22ce" stroke-opacity="0.70" stroke-width="0.10" pointer-events="none">
+
+  </g>
+  <g id="hazard-landslide-warning" fill="#f97316" fill-opacity="0.22" stroke="#c2410c" stroke-opacity="0.80" stroke-width="0.10" pointer-events="none">
+    <path d="M 13949.83 -3578.06 L 13949.77 -3578.03 L 13949.82 -3578.07 L 13949.83 -3578.06 Z M 13950.16 -3578.06 L 13950.29 -3578.04 L 13950.29 -3578.00 L 13950.23 -3578.00 L 13950.13 -3578.04 L 13950.16 -3578.06 L 13950.16 -3578.06 Z M 13951.32 -3578.34 L 13951.35 -3578.33 L 13951.32 -3578.34 L 13951.32 -3578.34 Z M 13952.14 -3578.76 L 13952.16 -3578.70 L 13952.09 -3578.64 L 13952.00 -3578.66 L 13952.13 -3578.76 L 13952.14 -3578.76 Z M 13952.12 -3578.77 L 13952.33 -3578.82 L 13952.12 -3578.77 L 13952.12 -3578.77 Z M 13952.39 -3578.82 L 13952.42 -3578.91 L 13952.42 -3578.83 L 13952.39 -3578.82 Z M 13952.84 -3579.09 L 13952.79 -3579.12 L 13952.84 -3579.19 L 13952.86 -3579.11 L 13952.84 -3579.09 Z M 13952.99 -3579.24 L 13952.88 -3579.17 L 13952.85 -3579.21 L 13953.00 -3579.25 L 13952.99 -3579.24 Z" />
+  </g>
+  <g id="hazard-landslide-special" fill="#ef4444" fill-opacity="0.35" stroke="#991b1b" stroke-opacity="0.90" stroke-width="0.12" pointer-events="none">
+    <path d="M 13952.38 -3578.83 L 13952.43 -3578.91 L 13952.41 -3578.84 L 13952.38 -3578.83 Z M 13952.83 -3579.11 L 13952.84 -3579.18 L 13952.84 -3579.12 L 13952.83 -3579.11 Z" />
+  </g>
+</svg>

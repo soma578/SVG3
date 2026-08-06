@@ -1,0 +1,615 @@
+{
+  "region": "mie",
+  "label": "三重県",
+  "municipalities": [
+    {
+      "id": "24201",
+      "label": "津市",
+      "municipalityCodes": [
+        "24201"
+      ],
+      "shelterCount": 762,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.646105,
+        "lon": 136.365085,
+        "latSpan": 0.515775,
+        "lonSpan": 0.533819
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24202",
+      "label": "四日市市",
+      "municipalityCodes": [
+        "24202"
+      ],
+      "shelterCount": 135,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.985425,
+        "lon": 136.545535,
+        "latSpan": 0.220571,
+        "lonSpan": 0.343317
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24203",
+      "label": "伊勢市",
+      "municipalityCodes": [
+        "24203"
+      ],
+      "shelterCount": 151,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.47578,
+        "lon": 136.724345,
+        "latSpan": 0.235352,
+        "lonSpan": 0.238433
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24204",
+      "label": "松阪市",
+      "municipalityCodes": [
+        "24204"
+      ],
+      "shelterCount": 219,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.48221,
+        "lon": 136.34296,
+        "latSpan": 0.439114,
+        "lonSpan": 0.71149
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24205",
+      "label": "桑名市",
+      "municipalityCodes": [
+        "24205"
+      ],
+      "shelterCount": 301,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.100985,
+        "lon": 136.664285,
+        "latSpan": 0.207857,
+        "lonSpan": 0.236301
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24207",
+      "label": "鈴鹿市",
+      "municipalityCodes": [
+        "24207"
+      ],
+      "shelterCount": 508,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.893485,
+        "lon": 136.518765,
+        "latSpan": 0.245973,
+        "lonSpan": 0.321295
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24208",
+      "label": "名張市",
+      "municipalityCodes": [
+        "24208"
+      ],
+      "shelterCount": 70,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.61626,
+        "lon": 136.1178,
+        "latSpan": 0.182858,
+        "lonSpan": 0.201994
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24209",
+      "label": "尾鷲市",
+      "municipalityCodes": [
+        "24209"
+      ],
+      "shelterCount": 85,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.03392,
+        "lon": 136.1973,
+        "latSpan": 0.224406,
+        "lonSpan": 0.273182
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24210",
+      "label": "亀山市",
+      "municipalityCodes": [
+        "24210"
+      ],
+      "shelterCount": 183,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.877495,
+        "lon": 136.38188,
+        "latSpan": 0.195481,
+        "lonSpan": 0.297258
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24211",
+      "label": "鳥羽市",
+      "municipalityCodes": [
+        "24211"
+      ],
+      "shelterCount": 101,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.46413,
+        "lon": 136.884625,
+        "latSpan": 0.229034,
+        "lonSpan": 0.267995
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24212",
+      "label": "熊野市",
+      "municipalityCodes": [
+        "24212"
+      ],
+      "shelterCount": 115,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.91087,
+        "lon": 136.042505,
+        "latSpan": 0.33813,
+        "lonSpan": 0.492063
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24214",
+      "label": "いなべ市",
+      "municipalityCodes": [
+        "24214"
+      ],
+      "shelterCount": 30,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.160955,
+        "lon": 136.501535,
+        "latSpan": 0.251095,
+        "lonSpan": 0.241501
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24215",
+      "label": "志摩市",
+      "municipalityCodes": [
+        "24215"
+      ],
+      "shelterCount": 95,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.327135,
+        "lon": 136.804585,
+        "latSpan": 0.252681,
+        "lonSpan": 0.267267
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24215.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24216",
+      "label": "伊賀市",
+      "municipalityCodes": [
+        "24216"
+      ],
+      "shelterCount": 115,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.72979,
+        "lon": 136.181155,
+        "latSpan": 0.447278,
+        "lonSpan": 0.418301
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24216.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24303",
+      "label": "木曽岬町",
+      "municipalityCodes": [
+        "24303"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.063295,
+        "lon": 136.74339,
+        "latSpan": 0.108875,
+        "lonSpan": 0.076232
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24303.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24324",
+      "label": "東員町",
+      "municipalityCodes": [
+        "24324"
+      ],
+      "shelterCount": 15,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.082365,
+        "lon": 136.591405,
+        "latSpan": 0.087763,
+        "lonSpan": 0.074945
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24324.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24341",
+      "label": "菰野町",
+      "municipalityCodes": [
+        "24341"
+      ],
+      "shelterCount": 51,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.04172,
+        "lon": 136.488085,
+        "latSpan": 0.132834,
+        "lonSpan": 0.184509
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24341.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24343",
+      "label": "朝日町",
+      "municipalityCodes": [
+        "24343"
+      ],
+      "shelterCount": 22,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.03628,
+        "lon": 136.66294,
+        "latSpan": 0.04,
+        "lonSpan": 0.058708
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24343.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24344",
+      "label": "川越町",
+      "municipalityCodes": [
+        "24344"
+      ],
+      "shelterCount": 25,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.021515,
+        "lon": 136.67737,
+        "latSpan": 0.045435,
+        "lonSpan": 0.059748
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24344.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24441",
+      "label": "多気町",
+      "municipalityCodes": [
+        "24441"
+      ],
+      "shelterCount": 18,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.469555,
+        "lon": 136.50094,
+        "latSpan": 0.140751,
+        "lonSpan": 0.262418
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24441.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24442",
+      "label": "明和町",
+      "municipalityCodes": [
+        "24442"
+      ],
+      "shelterCount": 34,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.55219,
+        "lon": 136.62455,
+        "latSpan": 0.126464,
+        "lonSpan": 0.095524
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24442.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24443",
+      "label": "大台町",
+      "municipalityCodes": [
+        "24443"
+      ],
+      "shelterCount": 57,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.312185,
+        "lon": 136.322785,
+        "latSpan": 0.383435,
+        "lonSpan": 0.598273
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24443.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24461",
+      "label": "玉城町",
+      "municipalityCodes": [
+        "24461"
+      ],
+      "shelterCount": 7,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.48409,
+        "lon": 136.6248,
+        "latSpan": 0.095966,
+        "lonSpan": 0.11947
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24461.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24470",
+      "label": "度会町",
+      "municipalityCodes": [
+        "24470"
+      ],
+      "shelterCount": 18,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.387795,
+        "lon": 136.582325,
+        "latSpan": 0.185081,
+        "lonSpan": 0.182143
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24470.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24471",
+      "label": "大紀町",
+      "municipalityCodes": [
+        "24471"
+      ],
+      "shelterCount": 85,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.30947,
+        "lon": 136.39943,
+        "latSpan": 0.32721,
+        "lonSpan": 0.35191
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24471.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24472",
+      "label": "南伊勢町",
+      "municipalityCodes": [
+        "24472"
+      ],
+      "shelterCount": 204,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.308615,
+        "lon": 136.5863,
+        "latSpan": 0.231517,
+        "lonSpan": 0.441012
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24472.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24543",
+      "label": "紀北町",
+      "municipalityCodes": [
+        "24543"
+      ],
+      "shelterCount": 154,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.180525,
+        "lon": 136.23934,
+        "latSpan": 0.243737,
+        "lonSpan": 0.363766
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24543.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24561",
+      "label": "御浜町",
+      "municipalityCodes": [
+        "24561"
+      ],
+      "shelterCount": 36,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.833285,
+        "lon": 136.00177,
+        "latSpan": 0.158587,
+        "lonSpan": 0.171106
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24561.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "24562",
+      "label": "紀宝町",
+      "municipalityCodes": [
+        "24562"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.776585,
+        "lon": 135.96646,
+        "latSpan": 0.139685,
+        "lonSpan": 0.169156
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/mie/districts-svg/24562.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

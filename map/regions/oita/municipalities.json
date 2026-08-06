@@ -1,0 +1,384 @@
+{
+  "region": "oita",
+  "label": "大分県",
+  "municipalities": [
+    {
+      "id": "44201",
+      "label": "大分市",
+      "municipalityCodes": [
+        "44201"
+      ],
+      "shelterCount": 124,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.17598,
+        "lon": 131.689855,
+        "latSpan": 0.271154,
+        "lonSpan": 0.704613
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/oita/districts-svg/44201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "44202",
+      "label": "別府市",
+      "municipalityCodes": [
+        "44202"
+      ],
+      "shelterCount": 126,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.28922,
+        "lon": 131.449775,
+        "latSpan": 0.169312,
+        "lonSpan": 0.185393
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/oita/districts-svg/44202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "44203",
+      "label": "中津市",
+      "municipalityCodes": [
+        "44203"
+      ],
+      "shelterCount": 213,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.48405,
+        "lon": 131.102605,
+        "latSpan": 0.35269,
+        "lonSpan": 0.458419
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/oita/districts-svg/44203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "44204",
+      "label": "日田市",
+      "municipalityCodes": [
+        "44204"
+      ],
+      "shelterCount": 127,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.2407,
+        "lon": 130.957255,
+        "latSpan": 0.564018,
+        "lonSpan": 0.344253
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/oita/districts-svg/44204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "44205",
+      "label": "佐伯市",
+      "municipalityCodes": [
+        "44205"
+      ],
+      "shelterCount": 181,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.892195,
+        "lon": 131.78023,
+        "latSpan": 0.462085,
+        "lonSpan": 0.793234
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/oita/districts-svg/44205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "44206",
+      "label": "臼杵市",
+      "municipalityCodes": [
+        "44206"
+      ],
+      "shelterCount": 50,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.079475,
+        "lon": 131.770085,
+        "latSpan": 0.332917,
+        "lonSpan": 0.367887
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/oita/districts-svg/44206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "44207",
+      "label": "津久見市",
+      "municipalityCodes": [
+        "44207"
+      ],
+      "shelterCount": 226,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.10015,
+        "lon": 131.899525,
+        "latSpan": 0.185042,
+        "lonSpan": 0.304577
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/oita/districts-svg/44207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "44208",
+      "label": "竹田市",
+      "municipalityCodes": [
+        "44208"
+      ],
+      "shelterCount": 154,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.989955,
+        "lon": 131.325555,
+        "latSpan": 0.421161,
+        "lonSpan": 0.344305
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/oita/districts-svg/44208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "44209",
+      "label": "豊後高田市",
+      "municipalityCodes": [
+        "44209"
+      ],
+      "shelterCount": 59,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.579635,
+        "lon": 131.504315,
+        "latSpan": 0.271271,
+        "lonSpan": 0.239135
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/oita/districts-svg/44209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "44210",
+      "label": "杵築市",
+      "municipalityCodes": [
+        "44210"
+      ],
+      "shelterCount": 211,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.45748,
+        "lon": 131.562175,
+        "latSpan": 0.2652,
+        "lonSpan": 0.407095
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/oita/districts-svg/44210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "44211",
+      "label": "宇佐市",
+      "municipalityCodes": [
+        "44211"
+      ],
+      "shelterCount": 75,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.445805,
+        "lon": 131.332385,
+        "latSpan": 0.354679,
+        "lonSpan": 0.301847
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/oita/districts-svg/44211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "44212",
+      "label": "豊後大野市",
+      "municipalityCodes": [
+        "44212"
+      ],
+      "shelterCount": 27,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.96189,
+        "lon": 131.51279,
+        "latSpan": 0.412178,
+        "lonSpan": 0.430768
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/oita/districts-svg/44212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "44213",
+      "label": "由布市",
+      "municipalityCodes": [
+        "44213"
+      ],
+      "shelterCount": 86,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.21553,
+        "lon": 131.40035,
+        "latSpan": 0.287274,
+        "lonSpan": 0.372762
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/oita/districts-svg/44213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "44214",
+      "label": "国東市",
+      "municipalityCodes": [
+        "44214"
+      ],
+      "shelterCount": 283,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.564065,
+        "lon": 131.644225,
+        "latSpan": 0.334165,
+        "lonSpan": 0.262119
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/oita/districts-svg/44214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "44322",
+      "label": "姫島村",
+      "municipalityCodes": [
+        "44322"
+      ],
+      "shelterCount": 34,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.72824,
+        "lon": 131.66618,
+        "latSpan": 0.04,
+        "lonSpan": 0.09126
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/oita/districts-svg/44322.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "44341",
+      "label": "日出町",
+      "municipalityCodes": [
+        "44341"
+      ],
+      "shelterCount": 56,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.385445,
+        "lon": 131.51687,
+        "latSpan": 0.109941,
+        "lonSpan": 0.260416
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/oita/districts-svg/44341.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "44461",
+      "label": "九重町",
+      "municipalityCodes": [
+        "44461"
+      ],
+      "shelterCount": 23,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.189015,
+        "lon": 131.218155,
+        "latSpan": 0.300079,
+        "lonSpan": 0.278135
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/oita/districts-svg/44461.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "44462",
+      "label": "玖珠町",
+      "municipalityCodes": [
+        "44462"
+      ],
+      "shelterCount": 22,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.285875,
+        "lon": 131.183535,
+        "latSpan": 0.266695,
+        "lonSpan": 0.389623
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/oita/districts-svg/44462.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

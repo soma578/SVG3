@@ -1,0 +1,9 @@
+id,regionId,title,river,location,lat,lon,status,currentLevel,change1h,advisoryLevel,evacuationLevel,dangerLevel,unit,observedAt,sourceUrl,quality
+river-level-asahi-okayama,okayama,旭川 岡山観測所,旭川,岡山市北区,34.6654,133.9306,normal,2.16,0.08,3.20,4.10,4.80,m,2026-07-11T18:50:00+09:00,https://www.river.go.jp/,normal
+river-level-asahi-makiyama,okayama,旭川 牧山観測所,旭川,岡山市北区牧山,34.7508,133.9342,advisory,3.36,0.31,3.20,4.10,4.80,m,2026-07-11T18:50:00+09:00,https://www.river.go.jp/,normal
+river-level-sasagase,okayama,笹ヶ瀬川 今保観測所,笹ヶ瀬川,岡山市北区今保,34.6418,133.8769,normal,1.42,-0.04,2.60,3.20,3.70,m,2026-07-11T18:45:00+09:00,https://www.river.go.jp/,normal
+river-level-suna,okayama,砂川 赤磐観測所,砂川,赤磐市,34.7553,134.0191,evacuation,3.72,0.44,2.80,3.60,4.20,m,2026-07-11T18:50:00+09:00,https://www.river.go.jp/,normal
+river-level-takahashi-kurashiki,okayama,高梁川 倉敷観測所,高梁川,倉敷市,34.5839,133.7656,normal,2.08,0.02,4.00,5.20,6.10,m,2026-07-11T18:40:00+09:00,https://www.river.go.jp/,normal
+river-level-oda,okayama,小田川 矢掛観測所,小田川,小田郡矢掛町,34.6261,133.5876,danger,5.04,0.67,3.30,4.40,4.90,m,2026-07-11T18:50:00+09:00,https://www.river.go.jp/,normal
+river-level-yoshii,okayama,吉井川 津山観測所,吉井川,津山市,35.0667,134.0032,stale,1.84,0.00,3.10,4.20,4.90,m,2026-07-11T16:10:00+09:00,https://www.river.go.jp/,stale
+river-level-yoshii-saidaiji,okayama,吉井川 西大寺観測所,吉井川,岡山市東区西大寺,34.6531,134.0392,unknown,,,,,,m,,https://www.river.go.jp/,missing

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="12243.4 -4605.6 3205.3 2251.0"
+     data-controller="teamActivityLayer.html#exec=hiddenOnLayerLoad"
+     data-title="Team Activity Portable Layer">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <defs/>
+</svg>

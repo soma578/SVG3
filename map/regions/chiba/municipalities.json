@@ -1,0 +1,1150 @@
+{
+  "region": "chiba",
+  "label": "千葉県",
+  "municipalities": [
+    {
+      "id": "12100",
+      "label": "千葉市",
+      "municipalityCodes": [
+        "12101",
+        "12102",
+        "12103",
+        "12104",
+        "12105",
+        "12106"
+      ],
+      "shelterCount": 350,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.60382,
+        "lon": 140.160135,
+        "latSpan": 0.286598,
+        "lonSpan": 0.365261
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12101.svg",
+        "/data/chiba/districts-svg/12102.svg",
+        "/data/chiba/districts-svg/12103.svg",
+        "/data/chiba/districts-svg/12104.svg",
+        "/data/chiba/districts-svg/12105.svg",
+        "/data/chiba/districts-svg/12106.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12202",
+      "label": "銚子市",
+      "municipalityCodes": [
+        "12202"
+      ],
+      "shelterCount": 52,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.753735,
+        "lon": 140.782405,
+        "latSpan": 0.155311,
+        "lonSpan": 0.239551
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12203",
+      "label": "市川市",
+      "municipalityCodes": [
+        "12203"
+      ],
+      "shelterCount": 174,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.71553,
+        "lon": 139.931005,
+        "latSpan": 0.156182,
+        "lonSpan": 0.116831
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12204",
+      "label": "船橋市",
+      "municipalityCodes": [
+        "12204"
+      ],
+      "shelterCount": 229,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.731455,
+        "lon": 140.014145,
+        "latSpan": 0.175799,
+        "lonSpan": 0.196079
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12205",
+      "label": "館山市",
+      "municipalityCodes": [
+        "12205"
+      ],
+      "shelterCount": 65,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.983805,
+        "lon": 139.84784,
+        "latSpan": 0.188747,
+        "lonSpan": 0.2457
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12206",
+      "label": "木更津市",
+      "municipalityCodes": [
+        "12206"
+      ],
+      "shelterCount": 72,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.389085,
+        "lon": 140.00105,
+        "latSpan": 0.198627,
+        "lonSpan": 0.331786
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12207",
+      "label": "松戸市",
+      "municipalityCodes": [
+        "12207"
+      ],
+      "shelterCount": 122,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.798245,
+        "lon": 139.940285,
+        "latSpan": 0.133965,
+        "lonSpan": 0.158145
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12208",
+      "label": "野田市",
+      "municipalityCodes": [
+        "12208"
+      ],
+      "shelterCount": 78,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.00852,
+        "lon": 139.86406,
+        "latSpan": 0.248508,
+        "lonSpan": 0.228384
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12210",
+      "label": "茂原市",
+      "municipalityCodes": [
+        "12210"
+      ],
+      "shelterCount": 35,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.440955,
+        "lon": 140.31296,
+        "latSpan": 0.157937,
+        "lonSpan": 0.17784
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12211",
+      "label": "成田市",
+      "municipalityCodes": [
+        "12211"
+      ],
+      "shelterCount": 55,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.81282,
+        "lon": 140.360855,
+        "latSpan": 0.23283,
+        "lonSpan": 0.290251
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12212",
+      "label": "佐倉市",
+      "municipalityCodes": [
+        "12212"
+      ],
+      "shelterCount": 50,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.695475,
+        "lon": 140.2099,
+        "latSpan": 0.184015,
+        "lonSpan": 0.21749
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12213",
+      "label": "東金市",
+      "municipalityCodes": [
+        "12213"
+      ],
+      "shelterCount": 69,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.56582,
+        "lon": 140.36105,
+        "latSpan": 0.17082,
+        "lonSpan": 0.192296
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12215",
+      "label": "旭市",
+      "municipalityCodes": [
+        "12215"
+      ],
+      "shelterCount": 71,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.73915,
+        "lon": 140.661985,
+        "latSpan": 0.172874,
+        "lonSpan": 0.252863
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12215.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12216",
+      "label": "習志野市",
+      "municipalityCodes": [
+        "12216"
+      ],
+      "shelterCount": 49,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.68046,
+        "lon": 140.0358,
+        "latSpan": 0.072748,
+        "lonSpan": 0.12818
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12216.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12217",
+      "label": "柏市",
+      "municipalityCodes": [
+        "12217"
+      ],
+      "shelterCount": 146,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.85967,
+        "lon": 140.012365,
+        "latSpan": 0.198068,
+        "lonSpan": 0.257387
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12217.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12218",
+      "label": "勝浦市",
+      "municipalityCodes": [
+        "12218"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.179485,
+        "lon": 140.267345,
+        "latSpan": 0.169039,
+        "lonSpan": 0.206505
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12218.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12219",
+      "label": "市原市",
+      "municipalityCodes": [
+        "12219"
+      ],
+      "shelterCount": 95,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.39311,
+        "lon": 140.13423,
+        "latSpan": 0.42094,
+        "lonSpan": 0.317486
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12219.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12220",
+      "label": "流山市",
+      "municipalityCodes": [
+        "12220"
+      ],
+      "shelterCount": 83,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.87382,
+        "lon": 139.916135,
+        "latSpan": 0.11895,
+        "lonSpan": 0.107575
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12220.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12221",
+      "label": "八千代市",
+      "municipalityCodes": [
+        "12221"
+      ],
+      "shelterCount": 76,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.73794,
+        "lon": 140.1074,
+        "latSpan": 0.118378,
+        "lonSpan": 0.115648
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12221.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12222",
+      "label": "我孫子市",
+      "municipalityCodes": [
+        "12222"
+      ],
+      "shelterCount": 66,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.870705,
+        "lon": 140.067575,
+        "latSpan": 0.077753,
+        "lonSpan": 0.205127
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12222.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12223",
+      "label": "鴨川市",
+      "municipalityCodes": [
+        "12223"
+      ],
+      "shelterCount": 103,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.12121,
+        "lon": 140.07338,
+        "latSpan": 0.181168,
+        "lonSpan": 0.372008
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12223.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12224",
+      "label": "鎌ケ谷市",
+      "municipalityCodes": [
+        "12224"
+      ],
+      "shelterCount": 25,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.77104,
+        "lon": 139.998425,
+        "latSpan": 0.085514,
+        "lonSpan": 0.078039
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12224.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12225",
+      "label": "君津市",
+      "municipalityCodes": [
+        "12225"
+      ],
+      "shelterCount": 72,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.264665,
+        "lon": 140.00022,
+        "latSpan": 0.288093,
+        "lonSpan": 0.41873
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12225.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12226",
+      "label": "富津市",
+      "municipalityCodes": [
+        "12226"
+      ],
+      "shelterCount": 78,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.24911,
+        "lon": 139.871435,
+        "latSpan": 0.285896,
+        "lonSpan": 0.336609
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12226.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12227",
+      "label": "浦安市",
+      "municipalityCodes": [
+        "12227"
+      ],
+      "shelterCount": 87,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.64468,
+        "lon": 139.905475,
+        "latSpan": 0.072956,
+        "lonSpan": 0.088439
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12227.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12228",
+      "label": "四街道市",
+      "municipalityCodes": [
+        "12228"
+      ],
+      "shelterCount": 41,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.666435,
+        "lon": 140.175715,
+        "latSpan": 0.106171,
+        "lonSpan": 0.101959
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12228.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12229",
+      "label": "袖ケ浦市",
+      "municipalityCodes": [
+        "12229"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.411545,
+        "lon": 140.015585,
+        "latSpan": 0.176215,
+        "lonSpan": 0.200681
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12229.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12230",
+      "label": "八街市",
+      "municipalityCodes": [
+        "12230"
+      ],
+      "shelterCount": 28,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.644345,
+        "lon": 140.301495,
+        "latSpan": 0.186355,
+        "lonSpan": 0.137605
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12230.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12231",
+      "label": "印西市",
+      "municipalityCodes": [
+        "12231"
+      ],
+      "shelterCount": 55,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.79556,
+        "lon": 140.17717,
+        "latSpan": 0.144352,
+        "lonSpan": 0.229736
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12231.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12232",
+      "label": "白井市",
+      "municipalityCodes": [
+        "12232"
+      ],
+      "shelterCount": 34,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.80061,
+        "lon": 140.06315,
+        "latSpan": 0.091312,
+        "lonSpan": 0.124696
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12232.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12233",
+      "label": "富里市",
+      "municipalityCodes": [
+        "12233"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.726875,
+        "lon": 140.346285,
+        "latSpan": 0.131963,
+        "lonSpan": 0.151307
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12233.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12234",
+      "label": "南房総市",
+      "municipalityCodes": [
+        "12234"
+      ],
+      "shelterCount": 248,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.01423,
+        "lon": 139.92418,
+        "latSpan": 0.297492,
+        "lonSpan": 0.295906
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12234.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12235",
+      "label": "匝瑳市",
+      "municipalityCodes": [
+        "12235"
+      ],
+      "shelterCount": 43,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.69449,
+        "lon": 140.555595,
+        "latSpan": 0.173134,
+        "lonSpan": 0.180401
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12235.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12236",
+      "label": "香取市",
+      "municipalityCodes": [
+        "12236"
+      ],
+      "shelterCount": 69,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.856945,
+        "lon": 140.53776,
+        "latSpan": 0.264641,
+        "lonSpan": 0.293488
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12236.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12237",
+      "label": "山武市",
+      "municipalityCodes": [
+        "12237"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.616925,
+        "lon": 140.422945,
+        "latSpan": 0.181259,
+        "lonSpan": 0.266955
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12237.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12238",
+      "label": "いすみ市",
+      "municipalityCodes": [
+        "12238"
+      ],
+      "shelterCount": 41,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.269025,
+        "lon": 140.334145,
+        "latSpan": 0.199381,
+        "lonSpan": 0.208897
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12238.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12239",
+      "label": "大網白里市",
+      "municipalityCodes": [
+        "12239"
+      ],
+      "shelterCount": 33,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.516125,
+        "lon": 140.350555,
+        "latSpan": 0.115713,
+        "lonSpan": 0.207805
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12239.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12322",
+      "label": "酒々井町",
+      "municipalityCodes": [
+        "12322"
+      ],
+      "shelterCount": 11,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.7288,
+        "lon": 140.276495,
+        "latSpan": 0.07449,
+        "lonSpan": 0.076323
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12322.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12329",
+      "label": "栄町",
+      "municipalityCodes": [
+        "12329"
+      ],
+      "shelterCount": 12,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.83693,
+        "lon": 140.22857,
+        "latSpan": 0.095212,
+        "lonSpan": 0.158054
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12329.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12342",
+      "label": "神崎町",
+      "municipalityCodes": [
+        "12342"
+      ],
+      "shelterCount": 8,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.88227,
+        "lon": 140.40797,
+        "latSpan": 0.076648,
+        "lonSpan": 0.083408
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12342.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12347",
+      "label": "多古町",
+      "municipalityCodes": [
+        "12347"
+      ],
+      "shelterCount": 16,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.749205,
+        "lon": 140.47636,
+        "latSpan": 0.150579,
+        "lonSpan": 0.192686
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12347.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12349",
+      "label": "東庄町",
+      "municipalityCodes": [
+        "12349"
+      ],
+      "shelterCount": 11,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.81056,
+        "lon": 140.67175,
+        "latSpan": 0.11739,
+        "lonSpan": 0.12727
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12349.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12403",
+      "label": "九十九里町",
+      "municipalityCodes": [
+        "12403"
+      ],
+      "shelterCount": 13,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.53406,
+        "lon": 140.426745,
+        "latSpan": 0.093392,
+        "lonSpan": 0.112697
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12403.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12409",
+      "label": "芝山町",
+      "municipalityCodes": [
+        "12409"
+      ],
+      "shelterCount": 12,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.72402,
+        "lon": 140.410455,
+        "latSpan": 0.128076,
+        "lonSpan": 0.115947
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12409.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12410",
+      "label": "横芝光町",
+      "municipalityCodes": [
+        "12410"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.66195,
+        "lon": 140.48799,
+        "latSpan": 0.155558,
+        "lonSpan": 0.18577
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12410.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12421",
+      "label": "一宮町",
+      "municipalityCodes": [
+        "12421"
+      ],
+      "shelterCount": 28,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.36033,
+        "lon": 140.368975,
+        "latSpan": 0.080834,
+        "lonSpan": 0.074555
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12421.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12422",
+      "label": "睦沢町",
+      "municipalityCodes": [
+        "12422"
+      ],
+      "shelterCount": 9,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.36016,
+        "lon": 140.30106,
+        "latSpan": 0.121602,
+        "lonSpan": 0.129792
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12422.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12423",
+      "label": "長生村",
+      "municipalityCodes": [
+        "12423"
+      ],
+      "shelterCount": 11,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.40729,
+        "lon": 140.354645,
+        "latSpan": 0.06851,
+        "lonSpan": 0.110201
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12423.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12424",
+      "label": "白子町",
+      "municipalityCodes": [
+        "12424"
+      ],
+      "shelterCount": 10,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.44787,
+        "lon": 140.378005,
+        "latSpan": 0.07566,
+        "lonSpan": 0.098579
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12424.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12426",
+      "label": "長柄町",
+      "municipalityCodes": [
+        "12426"
+      ],
+      "shelterCount": 7,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.43884,
+        "lon": 140.215705,
+        "latSpan": 0.12454,
+        "lonSpan": 0.117299
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12426.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12427",
+      "label": "長南町",
+      "municipalityCodes": [
+        "12427"
+      ],
+      "shelterCount": 8,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.372195,
+        "lon": 140.253765,
+        "latSpan": 0.144209,
+        "lonSpan": 0.146757
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12427.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12441",
+      "label": "大多喜町",
+      "municipalityCodes": [
+        "12441"
+      ],
+      "shelterCount": 19,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.246185,
+        "lon": 140.2129,
+        "latSpan": 0.209651,
+        "lonSpan": 0.190632
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12441.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12443",
+      "label": "御宿町",
+      "municipalityCodes": [
+        "12443"
+      ],
+      "shelterCount": 3,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.19916,
+        "lon": 140.34412,
+        "latSpan": 0.064922,
+        "lonSpan": 0.105716
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12443.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "12463",
+      "label": "鋸南町",
+      "municipalityCodes": [
+        "12463"
+      ],
+      "shelterCount": 15,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.13206,
+        "lon": 139.872365,
+        "latSpan": 0.083824,
+        "lonSpan": 0.153985
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/chiba/districts-svg/12463.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

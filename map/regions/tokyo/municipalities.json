@@ -1,0 +1,1308 @@
+{
+  "region": "tokyo",
+  "label": "東京都",
+  "municipalities": [
+    {
+      "id": "13101",
+      "label": "千代田区",
+      "municipalityCodes": [
+        "13101"
+      ],
+      "shelterCount": 29,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.6875,
+        "lon": 139.75628,
+        "latSpan": 0.04576,
+        "lonSpan": 0.068276
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13101.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13102",
+      "label": "中央区",
+      "municipalityCodes": [
+        "13102"
+      ],
+      "shelterCount": 37,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.671305,
+        "lon": 139.773535,
+        "latSpan": 0.065689,
+        "lonSpan": 0.049959
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13102.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13103",
+      "label": "港区",
+      "municipalityCodes": [
+        "13103"
+      ],
+      "shelterCount": 72,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.652315,
+        "lon": 139.74547,
+        "latSpan": 0.075855,
+        "lonSpan": 0.095966
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13103.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13104",
+      "label": "新宿区",
+      "municipalityCodes": [
+        "13104"
+      ],
+      "shelterCount": 123,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.7014,
+        "lon": 139.709725,
+        "latSpan": 0.072722,
+        "lonSpan": 0.093977
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13104.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13105",
+      "label": "文京区",
+      "municipalityCodes": [
+        "13105"
+      ],
+      "shelterCount": 62,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.718,
+        "lon": 139.74499,
+        "latSpan": 0.046436,
+        "lonSpan": 0.071188
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13105.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13106",
+      "label": "台東区",
+      "municipalityCodes": [
+        "13106"
+      ],
+      "shelterCount": 52,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.71296,
+        "lon": 139.786255,
+        "latSpan": 0.047476,
+        "lonSpan": 0.061009
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13106.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13107",
+      "label": "墨田区",
+      "municipalityCodes": [
+        "13107"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.71521,
+        "lon": 139.815535,
+        "latSpan": 0.073372,
+        "lonSpan": 0.069199
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13107.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13108",
+      "label": "江東区",
+      "municipalityCodes": [
+        "13108"
+      ],
+      "shelterCount": 198,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.654925,
+        "lon": 139.80953,
+        "latSpan": 0.138021,
+        "lonSpan": 0.099268
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13108.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13109",
+      "label": "品川区",
+      "municipalityCodes": [
+        "13109"
+      ],
+      "shelterCount": 90,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.613335,
+        "lon": 139.734415,
+        "latSpan": 0.073645,
+        "lonSpan": 0.101465
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13109.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13110",
+      "label": "目黒区",
+      "municipalityCodes": [
+        "13110"
+      ],
+      "shelterCount": 37,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.632275,
+        "lon": 139.68956,
+        "latSpan": 0.082173,
+        "lonSpan": 0.073008
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13110.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13111",
+      "label": "大田区",
+      "municipalityCodes": [
+        "13111"
+      ],
+      "shelterCount": 91,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.56703,
+        "lon": 139.7395,
+        "latSpan": 0.119756,
+        "lonSpan": 0.224978
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13111.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13112",
+      "label": "世田谷区",
+      "municipalityCodes": [
+        "13112"
+      ],
+      "shelterCount": 126,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.636485,
+        "lon": 139.63452,
+        "latSpan": 0.120471,
+        "lonSpan": 0.13481
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13112.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13113",
+      "label": "渋谷区",
+      "municipalityCodes": [
+        "13113"
+      ],
+      "shelterCount": 50,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.666725,
+        "lon": 139.69258,
+        "latSpan": 0.065689,
+        "lonSpan": 0.080548
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13113.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13114",
+      "label": "中野区",
+      "municipalityCodes": [
+        "13114"
+      ],
+      "shelterCount": 62,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.705865,
+        "lon": 139.65933,
+        "latSpan": 0.076739,
+        "lonSpan": 0.091
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13114.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13115",
+      "label": "杉並区",
+      "municipalityCodes": [
+        "13115"
+      ],
+      "shelterCount": 81,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.697995,
+        "lon": 139.62632,
+        "latSpan": 0.083603,
+        "lonSpan": 0.107198
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13115.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13116",
+      "label": "豊島区",
+      "municipalityCodes": [
+        "13116"
+      ],
+      "shelterCount": 35,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.72903,
+        "lon": 139.71505,
+        "latSpan": 0.043576,
+        "lonSpan": 0.098046
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13116.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13117",
+      "label": "北区",
+      "municipalityCodes": [
+        "13117"
+      ],
+      "shelterCount": 57,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.76524,
+        "lon": 139.7303,
+        "latSpan": 0.087516,
+        "lonSpan": 0.106158
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13117.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13118",
+      "label": "荒川区",
+      "municipalityCodes": [
+        "13118"
+      ],
+      "shelterCount": 80,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.739895,
+        "lon": 139.78207,
+        "latSpan": 0.04,
+        "lonSpan": 0.084318
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13118.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13119",
+      "label": "板橋区",
+      "municipalityCodes": [
+        "13119"
+      ],
+      "shelterCount": 86,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.767385,
+        "lon": 139.673945,
+        "latSpan": 0.081939,
+        "lonSpan": 0.126763
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13119.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13120",
+      "label": "練馬区",
+      "municipalityCodes": [
+        "13120"
+      ],
+      "shelterCount": 213,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.74587,
+        "lon": 139.621815,
+        "latSpan": 0.088296,
+        "lonSpan": 0.153465
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13120.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13121",
+      "label": "足立区",
+      "municipalityCodes": [
+        "13121"
+      ],
+      "shelterCount": 226,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.778145,
+        "lon": 139.797275,
+        "latSpan": 0.102297,
+        "lonSpan": 0.159965
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13121.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13122",
+      "label": "葛飾区",
+      "municipalityCodes": [
+        "13122"
+      ],
+      "shelterCount": 76,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.75401,
+        "lon": 139.853625,
+        "latSpan": 0.112216,
+        "lonSpan": 0.104403
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13122.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13123",
+      "label": "江戸川区",
+      "municipalityCodes": [
+        "13123"
+      ],
+      "shelterCount": 112,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.6932,
+        "lon": 139.875945,
+        "latSpan": 0.148408,
+        "lonSpan": 0.111241
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13123.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13201",
+      "label": "八王子市",
+      "municipalityCodes": [
+        "13201"
+      ],
+      "shelterCount": 150,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.65887,
+        "lon": 139.295695,
+        "latSpan": 0.156494,
+        "lonSpan": 0.348647
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13202",
+      "label": "立川市",
+      "municipalityCodes": [
+        "13202"
+      ],
+      "shelterCount": 46,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.713085,
+        "lon": 139.399305,
+        "latSpan": 0.078845,
+        "lonSpan": 0.121719
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13203",
+      "label": "武蔵野市",
+      "municipalityCodes": [
+        "13203"
+      ],
+      "shelterCount": 19,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.70781,
+        "lon": 139.56096,
+        "latSpan": 0.04,
+        "lonSpan": 0.089726
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13204",
+      "label": "三鷹市",
+      "municipalityCodes": [
+        "13204"
+      ],
+      "shelterCount": 92,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.683545,
+        "lon": 139.55953,
+        "latSpan": 0.060411,
+        "lonSpan": 0.09009
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13205",
+      "label": "青梅市",
+      "municipalityCodes": [
+        "13205"
+      ],
+      "shelterCount": 67,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.80271,
+        "lon": 139.233615,
+        "latSpan": 0.125216,
+        "lonSpan": 0.250783
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13206",
+      "label": "府中市",
+      "municipalityCodes": [
+        "13206"
+      ],
+      "shelterCount": 66,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.67302,
+        "lon": 139.478145,
+        "latSpan": 0.069758,
+        "lonSpan": 0.125619
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13207",
+      "label": "昭島市",
+      "municipalityCodes": [
+        "13207"
+      ],
+      "shelterCount": 57,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.708435,
+        "lon": 139.36494,
+        "latSpan": 0.044603,
+        "lonSpan": 0.0871
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13208",
+      "label": "調布市",
+      "municipalityCodes": [
+        "13208"
+      ],
+      "shelterCount": 75,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.659975,
+        "lon": 139.55495,
+        "latSpan": 0.071201,
+        "lonSpan": 0.098566
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13209",
+      "label": "町田市",
+      "municipalityCodes": [
+        "13209"
+      ],
+      "shelterCount": 167,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.56287,
+        "lon": 139.387905,
+        "latSpan": 0.1573,
+        "lonSpan": 0.309673
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13210",
+      "label": "小金井市",
+      "municipalityCodes": [
+        "13210"
+      ],
+      "shelterCount": 30,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.701545,
+        "lon": 139.5092,
+        "latSpan": 0.045565,
+        "lonSpan": 0.064324
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13211",
+      "label": "小平市",
+      "municipalityCodes": [
+        "13211"
+      ],
+      "shelterCount": 98,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.726965,
+        "lon": 139.47379,
+        "latSpan": 0.049127,
+        "lonSpan": 0.132288
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13212",
+      "label": "日野市",
+      "municipalityCodes": [
+        "13212"
+      ],
+      "shelterCount": 81,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.665475,
+        "lon": 139.39968,
+        "latSpan": 0.068003,
+        "lonSpan": 0.110058
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13213",
+      "label": "東村山市",
+      "municipalityCodes": [
+        "13213"
+      ],
+      "shelterCount": 30,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.757535,
+        "lon": 139.47267,
+        "latSpan": 0.059865,
+        "lonSpan": 0.083512
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13214",
+      "label": "国分寺市",
+      "municipalityCodes": [
+        "13214"
+      ],
+      "shelterCount": 41,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.705615,
+        "lon": 139.45983,
+        "latSpan": 0.044889,
+        "lonSpan": 0.082056
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13215",
+      "label": "国立市",
+      "municipalityCodes": [
+        "13215"
+      ],
+      "shelterCount": 19,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.687225,
+        "lon": 139.43849,
+        "latSpan": 0.042653,
+        "lonSpan": 0.054392
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13215.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13218",
+      "label": "福生市",
+      "municipalityCodes": [
+        "13218"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.73373,
+        "lon": 139.336875,
+        "latSpan": 0.054912,
+        "lonSpan": 0.059813
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13218.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13219",
+      "label": "狛江市",
+      "municipalityCodes": [
+        "13219"
+      ],
+      "shelterCount": 42,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.634385,
+        "lon": 139.57776,
+        "latSpan": 0.041483,
+        "lonSpan": 0.041054
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13219.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13220",
+      "label": "東大和市",
+      "municipalityCodes": [
+        "13220"
+      ],
+      "shelterCount": 33,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.74961,
+        "lon": 139.421415,
+        "latSpan": 0.05083,
+        "lonSpan": 0.077389
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13220.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13221",
+      "label": "清瀬市",
+      "municipalityCodes": [
+        "13221"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.784535,
+        "lon": 139.52171,
+        "latSpan": 0.057473,
+        "lonSpan": 0.063726
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13221.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13222",
+      "label": "東久留米市",
+      "municipalityCodes": [
+        "13222"
+      ],
+      "shelterCount": 34,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.75302,
+        "lon": 139.516185,
+        "latSpan": 0.054496,
+        "lonSpan": 0.082303
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13222.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13223",
+      "label": "武蔵村山市",
+      "municipalityCodes": [
+        "13223"
+      ],
+      "shelterCount": 35,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.75357,
+        "lon": 139.384665,
+        "latSpan": 0.053404,
+        "lonSpan": 0.077363
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13223.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13224",
+      "label": "多摩市",
+      "municipalityCodes": [
+        "13224"
+      ],
+      "shelterCount": 74,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.631915,
+        "lon": 139.433855,
+        "latSpan": 0.067717,
+        "lonSpan": 0.103883
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13224.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13225",
+      "label": "稲城市",
+      "municipalityCodes": [
+        "13225"
+      ],
+      "shelterCount": 42,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.627755,
+        "lon": 139.494775,
+        "latSpan": 0.060957,
+        "lonSpan": 0.079599
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13225.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13227",
+      "label": "羽村市",
+      "municipalityCodes": [
+        "13227"
+      ],
+      "shelterCount": 13,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.763945,
+        "lon": 139.317385,
+        "latSpan": 0.043745,
+        "lonSpan": 0.065663
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13227.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13228",
+      "label": "あきる野市",
+      "municipalityCodes": [
+        "13228"
+      ],
+      "shelterCount": 58,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.733545,
+        "lon": 139.233665,
+        "latSpan": 0.117767,
+        "lonSpan": 0.253669
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13228.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13229",
+      "label": "西東京市",
+      "municipalityCodes": [
+        "13229"
+      ],
+      "shelterCount": 78,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.73645,
+        "lon": 139.542995,
+        "latSpan": 0.065364,
+        "lonSpan": 0.068341
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13229.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13303",
+      "label": "瑞穂町",
+      "municipalityCodes": [
+        "13303"
+      ],
+      "shelterCount": 16,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.768825,
+        "lon": 139.34984,
+        "latSpan": 0.071721,
+        "lonSpan": 0.082264
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13303.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13305",
+      "label": "日の出町",
+      "municipalityCodes": [
+        "13305"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.760275,
+        "lon": 139.223845,
+        "latSpan": 0.075179,
+        "lonSpan": 0.158093
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13305.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13307",
+      "label": "檜原村",
+      "municipalityCodes": [
+        "13307"
+      ],
+      "shelterCount": 14,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.722945,
+        "lon": 139.0922,
+        "latSpan": 0.146029,
+        "lonSpan": 0.207766
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13307.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13308",
+      "label": "奥多摩町",
+      "municipalityCodes": [
+        "13308"
+      ],
+      "shelterCount": 0,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.81842,
+        "lon": 139.060185,
+        "latSpan": 0.207584,
+        "lonSpan": 0.304629
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13308.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13361",
+      "label": "大島町",
+      "municipalityCodes": [
+        "13361"
+      ],
+      "shelterCount": 27,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.73887,
+        "lon": 139.39935,
+        "latSpan": 0.15652,
+        "lonSpan": 0.13169
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13361.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13362",
+      "label": "利島村",
+      "municipalityCodes": [
+        "13362"
+      ],
+      "shelterCount": 4,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.52219,
+        "lon": 139.28044,
+        "latSpan": 0.04,
+        "lonSpan": 0.04
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13362.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13363",
+      "label": "新島村",
+      "municipalityCodes": [
+        "13363"
+      ],
+      "shelterCount": 1,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.39724,
+        "lon": 139.24695,
+        "latSpan": 0.210886,
+        "lonSpan": 0.135304
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13363.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13364",
+      "label": "神津島村",
+      "municipalityCodes": [
+        "13364"
+      ],
+      "shelterCount": 7,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.213585,
+        "lon": 139.132175,
+        "latSpan": 0.078403,
+        "lonSpan": 0.156559
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13364.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13381",
+      "label": "三宅村",
+      "municipalityCodes": [
+        "13381"
+      ],
+      "shelterCount": 15,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.085205,
+        "lon": 139.475095,
+        "latSpan": 0.102505,
+        "lonSpan": 0.238771
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13381.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13382",
+      "label": "御蔵島村",
+      "municipalityCodes": [
+        "13382"
+      ],
+      "shelterCount": 4,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.876725,
+        "lon": 139.60446,
+        "latSpan": 0.063479,
+        "lonSpan": 0.071396
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13382.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13401",
+      "label": "八丈町",
+      "municipalityCodes": [
+        "13401"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.10219,
+        "lon": 139.766435,
+        "latSpan": 0.147654,
+        "lonSpan": 0.236769
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13401.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13402",
+      "label": "青ヶ島村",
+      "municipalityCodes": [
+        "13402"
+      ],
+      "shelterCount": 0,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.458165,
+        "lon": 139.76689,
+        "latSpan": 0.04,
+        "lonSpan": 0.04
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13402.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "13421",
+      "label": "小笠原村",
+      "municipalityCodes": [
+        "13421"
+      ],
+      "shelterCount": 6,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 25.9729,
+        "lon": 147.428535,
+        "latSpan": 4.543864,
+        "lonSpan": 17.049929
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tokyo/districts-svg/13421.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

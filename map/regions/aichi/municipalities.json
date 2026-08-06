@@ -1,0 +1,1189 @@
+{
+  "region": "aichi",
+  "label": "愛知県",
+  "municipalities": [
+    {
+      "id": "23100",
+      "label": "名古屋市",
+      "municipalityCodes": [
+        "23101",
+        "23102",
+        "23103",
+        "23104",
+        "23105",
+        "23106",
+        "23107",
+        "23108",
+        "23109",
+        "23111",
+        "23112",
+        "23113",
+        "23114",
+        "23115",
+        "23116"
+      ],
+      "shelterCount": 1353,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.14707,
+        "lon": 136.925925,
+        "latSpan": 0.294216,
+        "lonSpan": 0.348283
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23101.svg",
+        "/data/aichi/districts-svg/23102.svg",
+        "/data/aichi/districts-svg/23103.svg",
+        "/data/aichi/districts-svg/23104.svg",
+        "/data/aichi/districts-svg/23105.svg",
+        "/data/aichi/districts-svg/23106.svg",
+        "/data/aichi/districts-svg/23107.svg",
+        "/data/aichi/districts-svg/23108.svg",
+        "/data/aichi/districts-svg/23109.svg",
+        "/data/aichi/districts-svg/23111.svg",
+        "/data/aichi/districts-svg/23112.svg",
+        "/data/aichi/districts-svg/23113.svg",
+        "/data/aichi/districts-svg/23114.svg",
+        "/data/aichi/districts-svg/23115.svg",
+        "/data/aichi/districts-svg/23116.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23110",
+      "label": "中川区",
+      "municipalityCodes": [
+        "23110"
+      ],
+      "shelterCount": 0,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.13868,
+        "lon": 136.84776,
+        "latSpan": 0.074828,
+        "lonSpan": 0.130884
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23110.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23201",
+      "label": "豊橋市",
+      "municipalityCodes": [
+        "23201"
+      ],
+      "shelterCount": 340,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.75436,
+        "lon": 137.38833,
+        "latSpan": 0.277758,
+        "lonSpan": 0.294658
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23202",
+      "label": "岡崎市",
+      "municipalityCodes": [
+        "23202"
+      ],
+      "shelterCount": 113,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.950955,
+        "lon": 137.26205,
+        "latSpan": 0.235391,
+        "lonSpan": 0.41392
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23203",
+      "label": "一宮市",
+      "municipalityCodes": [
+        "23203"
+      ],
+      "shelterCount": 79,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.31012,
+        "lon": 136.790915,
+        "latSpan": 0.154648,
+        "lonSpan": 0.224471
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23204",
+      "label": "瀬戸市",
+      "municipalityCodes": [
+        "23204"
+      ],
+      "shelterCount": 58,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.24021,
+        "lon": 137.11929,
+        "latSpan": 0.159666,
+        "lonSpan": 0.18252
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23205",
+      "label": "半田市",
+      "municipalityCodes": [
+        "23205"
+      ],
+      "shelterCount": 171,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.90226,
+        "lon": 136.920495,
+        "latSpan": 0.102674,
+        "lonSpan": 0.142337
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23206",
+      "label": "春日井市",
+      "municipalityCodes": [
+        "23206"
+      ],
+      "shelterCount": 142,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.277845,
+        "lon": 137.010705,
+        "latSpan": 0.160407,
+        "lonSpan": 0.222495
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23207",
+      "label": "豊川市",
+      "municipalityCodes": [
+        "23207"
+      ],
+      "shelterCount": 307,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.84697,
+        "lon": 137.35874,
+        "latSpan": 0.163228,
+        "lonSpan": 0.266708
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23208",
+      "label": "津島市",
+      "municipalityCodes": [
+        "23208"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.1666,
+        "lon": 136.74782,
+        "latSpan": 0.0858,
+        "lonSpan": 0.10088
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23209",
+      "label": "碧南市",
+      "municipalityCodes": [
+        "23209"
+      ],
+      "shelterCount": 93,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.878605,
+        "lon": 136.993615,
+        "latSpan": 0.152321,
+        "lonSpan": 0.124943
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23210",
+      "label": "刈谷市",
+      "municipalityCodes": [
+        "23210"
+      ],
+      "shelterCount": 40,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.008295,
+        "lon": 137.02364,
+        "latSpan": 0.158353,
+        "lonSpan": 0.11635
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23211",
+      "label": "豊田市",
+      "municipalityCodes": [
+        "23211"
+      ],
+      "shelterCount": 124,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.140885,
+        "lon": 137.3104,
+        "latSpan": 0.390715,
+        "lonSpan": 0.703794
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23212",
+      "label": "安城市",
+      "municipalityCodes": [
+        "23212"
+      ],
+      "shelterCount": 181,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.949595,
+        "lon": 137.068525,
+        "latSpan": 0.159835,
+        "lonSpan": 0.150813
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23213",
+      "label": "西尾市",
+      "municipalityCodes": [
+        "23213"
+      ],
+      "shelterCount": 90,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.814795,
+        "lon": 137.070905,
+        "latSpan": 0.257517,
+        "lonSpan": 0.260429
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23214",
+      "label": "蒲郡市",
+      "municipalityCodes": [
+        "23214"
+      ],
+      "shelterCount": 101,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.817745,
+        "lon": 137.232675,
+        "latSpan": 0.136487,
+        "lonSpan": 0.179361
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23215",
+      "label": "犬山市",
+      "municipalityCodes": [
+        "23215"
+      ],
+      "shelterCount": 59,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.368515,
+        "lon": 136.98225,
+        "latSpan": 0.144781,
+        "lonSpan": 0.169962
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23215.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23216",
+      "label": "常滑市",
+      "municipalityCodes": [
+        "23216"
+      ],
+      "shelterCount": 125,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.87751,
+        "lon": 136.84524,
+        "latSpan": 0.16874,
+        "lonSpan": 0.121654
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23216.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23217",
+      "label": "江南市",
+      "municipalityCodes": [
+        "23217"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.3388,
+        "lon": 136.865985,
+        "latSpan": 0.102154,
+        "lonSpan": 0.087529
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23217.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23219",
+      "label": "小牧市",
+      "municipalityCodes": [
+        "23219"
+      ],
+      "shelterCount": 154,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.297455,
+        "lon": 136.964165,
+        "latSpan": 0.109161,
+        "lonSpan": 0.213369
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23219.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23220",
+      "label": "稲沢市",
+      "municipalityCodes": [
+        "23220"
+      ],
+      "shelterCount": 99,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.23523,
+        "lon": 136.75814,
+        "latSpan": 0.107822,
+        "lonSpan": 0.20878
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23220.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23221",
+      "label": "新城市",
+      "municipalityCodes": [
+        "23221"
+      ],
+      "shelterCount": 78,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.950125,
+        "lon": 137.546715,
+        "latSpan": 0.320645,
+        "lonSpan": 0.419679
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23221.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23222",
+      "label": "東海市",
+      "municipalityCodes": [
+        "23222"
+      ],
+      "shelterCount": 110,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.01903,
+        "lon": 136.89618,
+        "latSpan": 0.12857,
+        "lonSpan": 0.114842
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23222.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23223",
+      "label": "大府市",
+      "municipalityCodes": [
+        "23223"
+      ],
+      "shelterCount": 42,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.014575,
+        "lon": 136.958265,
+        "latSpan": 0.100659,
+        "lonSpan": 0.111475
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23223.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23224",
+      "label": "知多市",
+      "municipalityCodes": [
+        "23224"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.97146,
+        "lon": 136.864495,
+        "latSpan": 0.101816,
+        "lonSpan": 0.139035
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23224.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23225",
+      "label": "知立市",
+      "municipalityCodes": [
+        "23225"
+      ],
+      "shelterCount": 52,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.00084,
+        "lon": 137.051055,
+        "latSpan": 0.054522,
+        "lonSpan": 0.088413
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23225.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23226",
+      "label": "尾張旭市",
+      "municipalityCodes": [
+        "23226"
+      ],
+      "shelterCount": 117,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.21906,
+        "lon": 137.03487,
+        "latSpan": 0.070772,
+        "lonSpan": 0.086658
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23226.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23227",
+      "label": "高浜市",
+      "municipalityCodes": [
+        "23227"
+      ],
+      "shelterCount": 61,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.932465,
+        "lon": 137.000915,
+        "latSpan": 0.065325,
+        "lonSpan": 0.060567
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23227.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23228",
+      "label": "岩倉市",
+      "municipalityCodes": [
+        "23228"
+      ],
+      "shelterCount": 62,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.280485,
+        "lon": 136.86398,
+        "latSpan": 0.056641,
+        "lonSpan": 0.054574
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23228.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23229",
+      "label": "豊明市",
+      "municipalityCodes": [
+        "23229"
+      ],
+      "shelterCount": 29,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.060625,
+        "lon": 137.007535,
+        "latSpan": 0.087321,
+        "lonSpan": 0.091351
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23229.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23230",
+      "label": "日進市",
+      "municipalityCodes": [
+        "23230"
+      ],
+      "shelterCount": 68,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.13842,
+        "lon": 137.049655,
+        "latSpan": 0.0793,
+        "lonSpan": 0.127335
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23230.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23231",
+      "label": "田原市",
+      "municipalityCodes": [
+        "23231"
+      ],
+      "shelterCount": 56,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.65462,
+        "lon": 137.178245,
+        "latSpan": 0.198458,
+        "lonSpan": 0.424099
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23231.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23232",
+      "label": "愛西市",
+      "municipalityCodes": [
+        "23232"
+      ],
+      "shelterCount": 73,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.17652,
+        "lon": 136.721515,
+        "latSpan": 0.15366,
+        "lonSpan": 0.131261
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23232.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23233",
+      "label": "清須市",
+      "municipalityCodes": [
+        "23233"
+      ],
+      "shelterCount": 64,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.216165,
+        "lon": 136.850805,
+        "latSpan": 0.092573,
+        "lonSpan": 0.073047
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23233.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23234",
+      "label": "北名古屋市",
+      "municipalityCodes": [
+        "23234"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.245825,
+        "lon": 136.87076,
+        "latSpan": 0.053963,
+        "lonSpan": 0.082082
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23234.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23235",
+      "label": "弥富市",
+      "municipalityCodes": [
+        "23235"
+      ],
+      "shelterCount": 78,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.073385,
+        "lon": 136.75429,
+        "latSpan": 0.153205,
+        "lonSpan": 0.136344
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23235.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23236",
+      "label": "みよし市",
+      "municipalityCodes": [
+        "23236"
+      ],
+      "shelterCount": 87,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.099885,
+        "lon": 137.08743,
+        "latSpan": 0.116389,
+        "lonSpan": 0.11115
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23236.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23237",
+      "label": "あま市",
+      "municipalityCodes": [
+        "23237"
+      ],
+      "shelterCount": 48,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.182555,
+        "lon": 136.805155,
+        "latSpan": 0.090883,
+        "lonSpan": 0.111345
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23237.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23238",
+      "label": "長久手市",
+      "municipalityCodes": [
+        "23238"
+      ],
+      "shelterCount": 79,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.17533,
+        "lon": 137.05702,
+        "latSpan": 0.053456,
+        "lonSpan": 0.10166
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23238.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23302",
+      "label": "東郷町",
+      "municipalityCodes": [
+        "23302"
+      ],
+      "shelterCount": 27,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.09645,
+        "lon": 137.055065,
+        "latSpan": 0.07085,
+        "lonSpan": 0.088283
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23302.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23342",
+      "label": "豊山町",
+      "municipalityCodes": [
+        "23342"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.25062,
+        "lon": 136.9168,
+        "latSpan": 0.04,
+        "lonSpan": 0.04
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23342.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23361",
+      "label": "大口町",
+      "municipalityCodes": [
+        "23361"
+      ],
+      "shelterCount": 15,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.332955,
+        "lon": 136.91226,
+        "latSpan": 0.073801,
+        "lonSpan": 0.076206
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23361.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23362",
+      "label": "扶桑町",
+      "municipalityCodes": [
+        "23362"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.360185,
+        "lon": 136.91585,
+        "latSpan": 0.048997,
+        "lonSpan": 0.0624
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23362.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23424",
+      "label": "大治町",
+      "municipalityCodes": [
+        "23424"
+      ],
+      "shelterCount": 12,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.17396,
+        "lon": 136.824145,
+        "latSpan": 0.041938,
+        "lonSpan": 0.044135
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23424.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23425",
+      "label": "蟹江町",
+      "municipalityCodes": [
+        "23425"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.12716,
+        "lon": 136.78334,
+        "latSpan": 0.078572,
+        "lonSpan": 0.050648
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23425.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23427",
+      "label": "飛島村",
+      "municipalityCodes": [
+        "23427"
+      ],
+      "shelterCount": 12,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.062235,
+        "lon": 136.79867,
+        "latSpan": 0.092521,
+        "lonSpan": 0.10478
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23427.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23441",
+      "label": "阿久比町",
+      "municipalityCodes": [
+        "23441"
+      ],
+      "shelterCount": 61,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.936855,
+        "lon": 136.911055,
+        "latSpan": 0.067327,
+        "lonSpan": 0.084513
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23441.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23442",
+      "label": "東浦町",
+      "municipalityCodes": [
+        "23442"
+      ],
+      "shelterCount": 62,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.967835,
+        "lon": 136.94898,
+        "latSpan": 0.092703,
+        "lonSpan": 0.089128
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23442.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23445",
+      "label": "南知多町",
+      "municipalityCodes": [
+        "23445"
+      ],
+      "shelterCount": 16,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.711525,
+        "lon": 136.932605,
+        "latSpan": 0.142727,
+        "lonSpan": 0.209989
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23445.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23446",
+      "label": "美浜町",
+      "municipalityCodes": [
+        "23446"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.77031,
+        "lon": 136.891255,
+        "latSpan": 0.113724,
+        "lonSpan": 0.132301
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23446.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23447",
+      "label": "武豊町",
+      "municipalityCodes": [
+        "23447"
+      ],
+      "shelterCount": 19,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.84471,
+        "lon": 136.90821,
+        "latSpan": 0.087438,
+        "lonSpan": 0.084552
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23447.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23501",
+      "label": "幸田町",
+      "municipalityCodes": [
+        "23501"
+      ],
+      "shelterCount": 110,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.862335,
+        "lon": 137.156925,
+        "latSpan": 0.123175,
+        "lonSpan": 0.143559
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23501.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23561",
+      "label": "設楽町",
+      "municipalityCodes": [
+        "23561"
+      ],
+      "shelterCount": 52,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.11766,
+        "lon": 137.55372,
+        "latSpan": 0.259714,
+        "lonSpan": 0.323232
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23561.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23562",
+      "label": "東栄町",
+      "municipalityCodes": [
+        "23562"
+      ],
+      "shelterCount": 79,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.08055,
+        "lon": 137.69188,
+        "latSpan": 0.171054,
+        "lonSpan": 0.224614
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23562.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "23563",
+      "label": "豊根村",
+      "municipalityCodes": [
+        "23563"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.16532,
+        "lon": 137.74602,
+        "latSpan": 0.181402,
+        "lonSpan": 0.23946
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/aichi/districts-svg/23563.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

@@ -1,0 +1,531 @@
+{
+  "region": "tochigi",
+  "label": "栃木県",
+  "municipalities": [
+    {
+      "id": "09201",
+      "label": "宇都宮市",
+      "municipalityCodes": [
+        "09201"
+      ],
+      "shelterCount": 230,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.597045,
+        "lon": 139.87692,
+        "latSpan": 0.345891,
+        "lonSpan": 0.34801
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tochigi/districts-svg/09201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "09202",
+      "label": "足利市",
+      "municipalityCodes": [
+        "09202"
+      ],
+      "shelterCount": 43,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.357825,
+        "lon": 139.454515,
+        "latSpan": 0.226733,
+        "lonSpan": 0.243061
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tochigi/districts-svg/09202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "09203",
+      "label": "栃木市",
+      "municipalityCodes": [
+        "09203"
+      ],
+      "shelterCount": 92,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.347975,
+        "lon": 139.68805,
+        "latSpan": 0.385567,
+        "lonSpan": 0.32292
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tochigi/districts-svg/09203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "09204",
+      "label": "佐野市",
+      "municipalityCodes": [
+        "09204"
+      ],
+      "shelterCount": 58,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.422645,
+        "lon": 139.52645,
+        "latSpan": 0.404339,
+        "lonSpan": 0.31187
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tochigi/districts-svg/09204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "09205",
+      "label": "鹿沼市",
+      "municipalityCodes": [
+        "09205"
+      ],
+      "shelterCount": 64,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.588105,
+        "lon": 139.648225,
+        "latSpan": 0.330005,
+        "lonSpan": 0.478569
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tochigi/districts-svg/09205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "09206",
+      "label": "日光市",
+      "municipalityCodes": [
+        "09206"
+      ],
+      "shelterCount": 150,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.84643,
+        "lon": 139.58974,
+        "latSpan": 0.638196,
+        "lonSpan": 0.683904
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tochigi/districts-svg/09206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "09208",
+      "label": "小山市",
+      "municipalityCodes": [
+        "09208"
+      ],
+      "shelterCount": 100,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.306035,
+        "lon": 139.80132,
+        "latSpan": 0.215085,
+        "lonSpan": 0.295724
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tochigi/districts-svg/09208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "09209",
+      "label": "真岡市",
+      "municipalityCodes": [
+        "09209"
+      ],
+      "shelterCount": 46,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.42248,
+        "lon": 139.98978,
+        "latSpan": 0.2275,
+        "lonSpan": 0.214162
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tochigi/districts-svg/09209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "09210",
+      "label": "大田原市",
+      "municipalityCodes": [
+        "09210"
+      ],
+      "shelterCount": 95,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.857335,
+        "lon": 140.09448,
+        "latSpan": 0.232219,
+        "lonSpan": 0.448968
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tochigi/districts-svg/09210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "09211",
+      "label": "矢板市",
+      "municipalityCodes": [
+        "09211"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.827085,
+        "lon": 139.890685,
+        "latSpan": 0.261157,
+        "lonSpan": 0.269425
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tochigi/districts-svg/09211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "09213",
+      "label": "那須塩原市",
+      "municipalityCodes": [
+        "09213"
+      ],
+      "shelterCount": 53,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.995325,
+        "lon": 139.937065,
+        "latSpan": 0.411879,
+        "lonSpan": 0.530621
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tochigi/districts-svg/09213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "09214",
+      "label": "さくら市",
+      "municipalityCodes": [
+        "09214"
+      ],
+      "shelterCount": 52,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.72124,
+        "lon": 139.995565,
+        "latSpan": 0.211042,
+        "lonSpan": 0.230581
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tochigi/districts-svg/09214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "09215",
+      "label": "那須烏山市",
+      "municipalityCodes": [
+        "09215"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.66593,
+        "lon": 140.135965,
+        "latSpan": 0.204776,
+        "lonSpan": 0.277563
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tochigi/districts-svg/09215.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "09216",
+      "label": "下野市",
+      "municipalityCodes": [
+        "09216"
+      ],
+      "shelterCount": 42,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.41875,
+        "lon": 139.86032,
+        "latSpan": 0.177762,
+        "lonSpan": 0.164138
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tochigi/districts-svg/09216.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "09301",
+      "label": "上三川町",
+      "municipalityCodes": [
+        "09301"
+      ],
+      "shelterCount": 18,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.442295,
+        "lon": 139.910175,
+        "latSpan": 0.123929,
+        "lonSpan": 0.137475
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tochigi/districts-svg/09301.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "09342",
+      "label": "益子町",
+      "municipalityCodes": [
+        "09342"
+      ],
+      "shelterCount": 16,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.461565,
+        "lon": 140.11163,
+        "latSpan": 0.165139,
+        "lonSpan": 0.12649
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tochigi/districts-svg/09342.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "09343",
+      "label": "茂木町",
+      "municipalityCodes": [
+        "09343"
+      ],
+      "shelterCount": 10,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.51122,
+        "lon": 140.194365,
+        "latSpan": 0.295854,
+        "lonSpan": 0.171119
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tochigi/districts-svg/09343.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "09344",
+      "label": "市貝町",
+      "municipalityCodes": [
+        "09344"
+      ],
+      "shelterCount": 12,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.556905,
+        "lon": 140.10047,
+        "latSpan": 0.179595,
+        "lonSpan": 0.14053
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tochigi/districts-svg/09344.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "09345",
+      "label": "芳賀町",
+      "municipalityCodes": [
+        "09345"
+      ],
+      "shelterCount": 11,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.552355,
+        "lon": 140.0412,
+        "latSpan": 0.163501,
+        "lonSpan": 0.124332
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tochigi/districts-svg/09345.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "09361",
+      "label": "壬生町",
+      "municipalityCodes": [
+        "09361"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.45441,
+        "lon": 139.802355,
+        "latSpan": 0.149162,
+        "lonSpan": 0.118469
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tochigi/districts-svg/09361.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "09364",
+      "label": "野木町",
+      "municipalityCodes": [
+        "09364"
+      ],
+      "shelterCount": 27,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.232465,
+        "lon": 139.735165,
+        "latSpan": 0.079599,
+        "lonSpan": 0.132093
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tochigi/districts-svg/09364.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "09384",
+      "label": "塩谷町",
+      "municipalityCodes": [
+        "09384"
+      ],
+      "shelterCount": 25,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.81319,
+        "lon": 139.83264,
+        "latSpan": 0.24232,
+        "lonSpan": 0.275444
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tochigi/districts-svg/09384.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "09386",
+      "label": "高根沢町",
+      "municipalityCodes": [
+        "09386"
+      ],
+      "shelterCount": 29,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.62719,
+        "lon": 140.02002,
+        "latSpan": 0.131508,
+        "lonSpan": 0.16809
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tochigi/districts-svg/09386.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "09407",
+      "label": "那須町",
+      "municipalityCodes": [
+        "09407"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.03188,
+        "lon": 140.09209,
+        "latSpan": 0.303862,
+        "lonSpan": 0.4186
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tochigi/districts-svg/09407.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "09411",
+      "label": "那珂川町",
+      "municipalityCodes": [
+        "09411"
+      ],
+      "shelterCount": 44,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.75797,
+        "lon": 140.16872,
+        "latSpan": 0.220662,
+        "lonSpan": 0.320944
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tochigi/districts-svg/09411.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

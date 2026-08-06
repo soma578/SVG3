@@ -1,0 +1,44 @@
+{
+  "version": "2",
+  "regionId": "tottori",
+  "prefCode": "31",
+  "label": "鳥取県",
+  "engine": "svgmap",
+  "containerUrl": "/map/containers/Containers_webapp_denshi_31.svg",
+  "iconsBaseUrl": "/map/icons",
+  "initialViewport": {
+    "lat": 35.336135,
+    "lon": 133.82571,
+    "latSpan": 0.709463,
+    "lonSpan": 1.597558
+  },
+  "layers": {
+    "baseArea": {
+      "layerUrl": "/map/layers/overview/pref/31.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "evacuation": {
+      "dataUrl": "/map/data/evacuation/tottori.json",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "teamActivity": {
+      "dataUrl": "/map/data/team-activity/tottori.json",
+      "baseAreaLayerUrl": "/map/layers/overview/pref/31.svg",
+      "districtSvgUrlTemplate": "/data/tottori/districts-svg/{code}.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "hazard": {
+      "layerUrl": "/map/layers/hazard/31/tottori.svg",
+      "svgUrlTemplate": "/map/layers/hazard/31/districts/{code}.svg",
+      "runtimeVisible": false,
+      "opacity": 0.7
+    }
+  },
+  "interaction": {
+    "disableDefaultPopup": true,
+    "featureSelectEvent": true
+  }
+}

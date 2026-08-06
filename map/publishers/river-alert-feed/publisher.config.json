@@ -1,0 +1,24 @@
+{
+  "id": "river-alert-feed",
+  "title": "河川危険度 Feed Publisher",
+  "kind": "authorized-river-feed",
+  "inputSchema": "input.schema.json",
+  "fixture": "fixture.json",
+  "layerConfig": "/map/layers/managed/river-level/layer.config.json",
+  "sourceOutput": "/map/layers/managed/river-level/data.csv",
+  "publication": "/map/layers/managed/river-level/publication.json",
+  "health": "/map/data/source-health/riverLevel.json",
+  "layerPackage": "/map/layers/portable/river-level/layer.package.json",
+  "outputs": {
+    "summary": "/map/data/qtct/riverLevel/summary.json",
+    "detailTemplate": "/map/data/qtct/riverLevel/{regionId}/detail.json",
+    "alertSummary": "/map/data/alerts/riverLevel.json"
+  },
+  "policy": {
+    "staleAfterMinutes": 20,
+    "maximumFeedAgeMinutes": 20,
+    "futureToleranceMinutes": 5,
+    "minimumCoverageRatio": 0.9,
+    "retainLastGood": true
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "layerId": "layer-river-level",
+  "dataId": "riverLevel",
+  "status": "stale",
+  "lastAttemptAt": null,
+  "lastSuccessAt": null,
+  "snapshotUpdatedAt": null,
+  "staleAfterAt": null,
+  "recordCount": 8,
+  "nextScheduledAt": null,
+  "lastError": null
+}

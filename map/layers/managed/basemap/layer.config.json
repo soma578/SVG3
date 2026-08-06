@@ -1,0 +1,18 @@
+{
+  "id": "layer-basemap",
+  "title": "国土地理院 淡色地図",
+  "href": "/map/svgMapAppLayers/basemaps/dynamicDenshiKokudo2016.svg#map=pale",
+  "class": "basemap switch",
+  "visibility": "visible",
+  "opacity": "1",
+  "extent": "world",
+  "order": 10,
+  "ui": {
+    "catalog": true,
+    "group": "背景",
+    "symbol": "地",
+    "accent": "#65777f",
+    "kind": "vector",
+    "note": "オンラインの標準背景（国土地理院）"
+  }
+}

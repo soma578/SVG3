@@ -1,0 +1,44 @@
+{
+  "version": "2",
+  "regionId": "shimane",
+  "prefCode": "32",
+  "label": "島根県",
+  "engine": "svgmap",
+  "containerUrl": "/map/containers/Containers_webapp_denshi_32.svg",
+  "iconsBaseUrl": "/map/icons",
+  "initialViewport": {
+    "lat": 35.772695,
+    "lon": 132.52692,
+    "latSpan": 3.283751,
+    "lonSpan": 1.963332
+  },
+  "layers": {
+    "baseArea": {
+      "layerUrl": "/map/layers/overview/pref/32.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "evacuation": {
+      "dataUrl": "/map/data/evacuation/shimane.json",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "teamActivity": {
+      "dataUrl": "/map/data/team-activity/shimane.json",
+      "baseAreaLayerUrl": "/map/layers/overview/pref/32.svg",
+      "districtSvgUrlTemplate": "/data/shimane/districts-svg/{code}.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "hazard": {
+      "layerUrl": "/map/layers/hazard/32/shimane.svg",
+      "svgUrlTemplate": "/map/layers/hazard/32/districts/{code}.svg",
+      "runtimeVisible": false,
+      "opacity": 0.7
+    }
+  },
+  "interaction": {
+    "disableDefaultPopup": true,
+    "featureSelectEvent": true
+  }
+}

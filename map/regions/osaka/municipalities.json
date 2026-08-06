@@ -1,0 +1,986 @@
+{
+  "region": "osaka",
+  "label": "大阪府",
+  "municipalities": [
+    {
+      "id": "27100",
+      "label": "大阪市",
+      "municipalityCodes": [
+        "27102",
+        "27103",
+        "27104",
+        "27106",
+        "27107",
+        "27108",
+        "27109",
+        "27111",
+        "27113",
+        "27114",
+        "27115",
+        "27116",
+        "27117",
+        "27118",
+        "27119",
+        "27121",
+        "27122",
+        "27123",
+        "27124",
+        "27125",
+        "27126",
+        "27127",
+        "27128"
+      ],
+      "shelterCount": 2503,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.677685,
+        "lon": 135.47146,
+        "latSpan": 0.235989,
+        "lonSpan": 0.332514
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27102.svg",
+        "/data/osaka/districts-svg/27103.svg",
+        "/data/osaka/districts-svg/27104.svg",
+        "/data/osaka/districts-svg/27106.svg",
+        "/data/osaka/districts-svg/27107.svg",
+        "/data/osaka/districts-svg/27108.svg",
+        "/data/osaka/districts-svg/27109.svg",
+        "/data/osaka/districts-svg/27111.svg",
+        "/data/osaka/districts-svg/27113.svg",
+        "/data/osaka/districts-svg/27114.svg",
+        "/data/osaka/districts-svg/27115.svg",
+        "/data/osaka/districts-svg/27116.svg",
+        "/data/osaka/districts-svg/27117.svg",
+        "/data/osaka/districts-svg/27118.svg",
+        "/data/osaka/districts-svg/27119.svg",
+        "/data/osaka/districts-svg/27121.svg",
+        "/data/osaka/districts-svg/27122.svg",
+        "/data/osaka/districts-svg/27123.svg",
+        "/data/osaka/districts-svg/27124.svg",
+        "/data/osaka/districts-svg/27125.svg",
+        "/data/osaka/districts-svg/27126.svg",
+        "/data/osaka/districts-svg/27127.svg",
+        "/data/osaka/districts-svg/27128.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27120",
+      "label": "住吉区",
+      "municipalityCodes": [
+        "27120"
+      ],
+      "shelterCount": 0,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.604805,
+        "lon": 135.5053,
+        "latSpan": 0.048477,
+        "lonSpan": 0.047684
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27120.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27140",
+      "label": "堺市",
+      "municipalityCodes": [
+        "27141",
+        "27142",
+        "27143",
+        "27144",
+        "27145",
+        "27146",
+        "27147"
+      ],
+      "shelterCount": 558,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.519255,
+        "lon": 135.49482,
+        "latSpan": 0.231595,
+        "lonSpan": 0.24115
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27141.svg",
+        "/data/osaka/districts-svg/27142.svg",
+        "/data/osaka/districts-svg/27143.svg",
+        "/data/osaka/districts-svg/27144.svg",
+        "/data/osaka/districts-svg/27145.svg",
+        "/data/osaka/districts-svg/27146.svg",
+        "/data/osaka/districts-svg/27147.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27202",
+      "label": "岸和田市",
+      "municipalityCodes": [
+        "27202"
+      ],
+      "shelterCount": 108,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.424725,
+        "lon": 135.407355,
+        "latSpan": 0.196755,
+        "lonSpan": 0.146289
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27203",
+      "label": "豊中市",
+      "municipalityCodes": [
+        "27203"
+      ],
+      "shelterCount": 275,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.777925,
+        "lon": 135.474715,
+        "latSpan": 0.122083,
+        "lonSpan": 0.087295
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27204",
+      "label": "池田市",
+      "municipalityCodes": [
+        "27204"
+      ],
+      "shelterCount": 74,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.83456,
+        "lon": 135.43796,
+        "latSpan": 0.110656,
+        "lonSpan": 0.057122
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27205",
+      "label": "吹田市",
+      "municipalityCodes": [
+        "27205"
+      ],
+      "shelterCount": 181,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.78769,
+        "lon": 135.52129,
+        "latSpan": 0.112112,
+        "lonSpan": 0.086788
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27206",
+      "label": "泉大津市",
+      "municipalityCodes": [
+        "27206"
+      ],
+      "shelterCount": 45,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.506715,
+        "lon": 135.401115,
+        "latSpan": 0.065455,
+        "lonSpan": 0.088283
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27207",
+      "label": "高槻市",
+      "municipalityCodes": [
+        "27207"
+      ],
+      "shelterCount": 165,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.8783,
+        "lon": 135.614975,
+        "latSpan": 0.254254,
+        "lonSpan": 0.150241
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27208",
+      "label": "貝塚市",
+      "municipalityCodes": [
+        "27208"
+      ],
+      "shelterCount": 45,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.40521,
+        "lon": 135.38118,
+        "latSpan": 0.166634,
+        "lonSpan": 0.138086
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27209",
+      "label": "守口市",
+      "municipalityCodes": [
+        "27209"
+      ],
+      "shelterCount": 36,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.73821,
+        "lon": 135.57984,
+        "latSpan": 0.076206,
+        "lonSpan": 0.068744
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27210",
+      "label": "枚方市",
+      "municipalityCodes": [
+        "27210"
+      ],
+      "shelterCount": 93,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.827215,
+        "lon": 135.68036,
+        "latSpan": 0.140725,
+        "lonSpan": 0.17186
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27211",
+      "label": "茨木市",
+      "municipalityCodes": [
+        "27211"
+      ],
+      "shelterCount": 80,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.85212,
+        "lon": 135.551045,
+        "latSpan": 0.199368,
+        "lonSpan": 0.143611
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27212",
+      "label": "八尾市",
+      "municipalityCodes": [
+        "27212"
+      ],
+      "shelterCount": 130,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.61703,
+        "lon": 135.613125,
+        "latSpan": 0.087334,
+        "lonSpan": 0.133029
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27213",
+      "label": "泉佐野市",
+      "municipalityCodes": [
+        "27213"
+      ],
+      "shelterCount": 60,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.39183,
+        "lon": 135.31843,
+        "latSpan": 0.164814,
+        "lonSpan": 0.231686
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27214",
+      "label": "富田林市",
+      "municipalityCodes": [
+        "27214"
+      ],
+      "shelterCount": 56,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.48596,
+        "lon": 135.593075,
+        "latSpan": 0.120536,
+        "lonSpan": 0.090025
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27215",
+      "label": "寝屋川市",
+      "municipalityCodes": [
+        "27215"
+      ],
+      "shelterCount": 82,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.75986,
+        "lon": 135.624545,
+        "latSpan": 0.08229,
+        "lonSpan": 0.097591
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27215.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27216",
+      "label": "河内長野市",
+      "municipalityCodes": [
+        "27216"
+      ],
+      "shelterCount": 51,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.408005,
+        "lon": 135.57438,
+        "latSpan": 0.185809,
+        "lonSpan": 0.2314
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27216.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27217",
+      "label": "松原市",
+      "municipalityCodes": [
+        "27217"
+      ],
+      "shelterCount": 84,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.576635,
+        "lon": 135.553875,
+        "latSpan": 0.059241,
+        "lonSpan": 0.082901
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27217.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27218",
+      "label": "大東市",
+      "municipalityCodes": [
+        "27218"
+      ],
+      "shelterCount": 49,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.713775,
+        "lon": 135.632525,
+        "latSpan": 0.046319,
+        "lonSpan": 0.106769
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27218.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27219",
+      "label": "和泉市",
+      "municipalityCodes": [
+        "27219"
+      ],
+      "shelterCount": 36,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.43136,
+        "lon": 135.471105,
+        "latSpan": 0.218452,
+        "lonSpan": 0.145093
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27219.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27220",
+      "label": "箕面市",
+      "municipalityCodes": [
+        "27220"
+      ],
+      "shelterCount": 32,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.859035,
+        "lon": 135.481825,
+        "latSpan": 0.134771,
+        "lonSpan": 0.113347
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27220.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27221",
+      "label": "柏原市",
+      "municipalityCodes": [
+        "27221"
+      ],
+      "shelterCount": 49,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.57716,
+        "lon": 135.64472,
+        "latSpan": 0.07709,
+        "lonSpan": 0.096304
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27221.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27222",
+      "label": "羽曳野市",
+      "municipalityCodes": [
+        "27222"
+      ],
+      "shelterCount": 64,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.553945,
+        "lon": 135.613665,
+        "latSpan": 0.072969,
+        "lonSpan": 0.120835
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27222.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27223",
+      "label": "門真市",
+      "municipalityCodes": [
+        "27223"
+      ],
+      "shelterCount": 23,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.730485,
+        "lon": 135.59744,
+        "latSpan": 0.051259,
+        "lonSpan": 0.068588
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27223.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27224",
+      "label": "摂津市",
+      "municipalityCodes": [
+        "27224"
+      ],
+      "shelterCount": 71,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.776325,
+        "lon": 135.56954,
+        "latSpan": 0.058071,
+        "lonSpan": 0.085098
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27224.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27225",
+      "label": "高石市",
+      "municipalityCodes": [
+        "27225"
+      ],
+      "shelterCount": 62,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.529235,
+        "lon": 135.42667,
+        "latSpan": 0.046787,
+        "lonSpan": 0.085358
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27225.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27226",
+      "label": "藤井寺市",
+      "municipalityCodes": [
+        "27226"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.57153,
+        "lon": 135.604405,
+        "latSpan": 0.046852,
+        "lonSpan": 0.060281
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27226.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27227",
+      "label": "東大阪市",
+      "municipalityCodes": [
+        "27227"
+      ],
+      "shelterCount": 233,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.6676,
+        "lon": 135.61789,
+        "latSpan": 0.092092,
+        "lonSpan": 0.158132
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27227.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27228",
+      "label": "泉南市",
+      "municipalityCodes": [
+        "27228"
+      ],
+      "shelterCount": 42,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.36887,
+        "lon": 135.270775,
+        "latSpan": 0.181038,
+        "lonSpan": 0.180973
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27228.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27229",
+      "label": "四條畷市",
+      "municipalityCodes": [
+        "27229"
+      ],
+      "shelterCount": 16,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.725715,
+        "lon": 135.664285,
+        "latSpan": 0.062257,
+        "lonSpan": 0.103311
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27229.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27230",
+      "label": "交野市",
+      "municipalityCodes": [
+        "27230"
+      ],
+      "shelterCount": 35,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.772775,
+        "lon": 135.688115,
+        "latSpan": 0.079677,
+        "lonSpan": 0.074295
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27230.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27231",
+      "label": "大阪狭山市",
+      "municipalityCodes": [
+        "27231"
+      ],
+      "shelterCount": 16,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.49796,
+        "lon": 135.54959,
+        "latSpan": 0.081796,
+        "lonSpan": 0.04407
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27231.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27232",
+      "label": "阪南市",
+      "municipalityCodes": [
+        "27232"
+      ],
+      "shelterCount": 67,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.33891,
+        "lon": 135.23534,
+        "latSpan": 0.09893,
+        "lonSpan": 0.122746
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27232.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27301",
+      "label": "島本町",
+      "municipalityCodes": [
+        "27301"
+      ],
+      "shelterCount": 41,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.90188,
+        "lon": 135.6554,
+        "latSpan": 0.08281,
+        "lonSpan": 0.070954
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27301.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27321",
+      "label": "豊能町",
+      "municipalityCodes": [
+        "27321"
+      ],
+      "shelterCount": 8,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.91063,
+        "lon": 135.47204,
+        "latSpan": 0.095628,
+        "lonSpan": 0.138684
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27321.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27322",
+      "label": "能勢町",
+      "municipalityCodes": [
+        "27322"
+      ],
+      "shelterCount": 13,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.98873,
+        "lon": 135.4119,
+        "latSpan": 0.162396,
+        "lonSpan": 0.21242
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27322.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27341",
+      "label": "忠岡町",
+      "municipalityCodes": [
+        "27341"
+      ],
+      "shelterCount": 28,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.490695,
+        "lon": 135.394775,
+        "latSpan": 0.044603,
+        "lonSpan": 0.062153
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27341.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27361",
+      "label": "熊取町",
+      "municipalityCodes": [
+        "27361"
+      ],
+      "shelterCount": 14,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.38685,
+        "lon": 135.36261,
+        "latSpan": 0.081692,
+        "lonSpan": 0.06682
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27361.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27362",
+      "label": "田尻町",
+      "municipalityCodes": [
+        "27362"
+      ],
+      "shelterCount": 9,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.41473,
+        "lon": 135.259215,
+        "latSpan": 0.081432,
+        "lonSpan": 0.107029
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27362.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27366",
+      "label": "岬町",
+      "municipalityCodes": [
+        "27366"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.304975,
+        "lon": 135.14978,
+        "latSpan": 0.086203,
+        "lonSpan": 0.150228
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27366.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27381",
+      "label": "太子町",
+      "municipalityCodes": [
+        "27381"
+      ],
+      "shelterCount": 20,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.51947,
+        "lon": 135.648665,
+        "latSpan": 0.05616,
+        "lonSpan": 0.073489
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27381.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27382",
+      "label": "河南町",
+      "municipalityCodes": [
+        "27382"
+      ],
+      "shelterCount": 54,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.48073,
+        "lon": 135.64874,
+        "latSpan": 0.088634,
+        "lonSpan": 0.093548
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27382.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "27383",
+      "label": "千早赤阪村",
+      "municipalityCodes": [
+        "27383"
+      ],
+      "shelterCount": 10,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.43619,
+        "lon": 135.644435,
+        "latSpan": 0.104182,
+        "lonSpan": 0.109993
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/osaka/districts-svg/27383.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

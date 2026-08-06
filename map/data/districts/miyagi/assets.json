@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 1,
+  "regionId": "miyagi",
+  "publicBase": "/data/miyagi",
+  "fileCount": 39,
+  "bytes": 20157040,
+  "files": [
+    {
+      "code": "04101",
+      "path": "districts-svg/04101.svg",
+      "bytes": 888633
+    },
+    {
+      "code": "04102",
+      "path": "districts-svg/04102.svg",
+      "bytes": 506775
+    },
+    {
+      "code": "04103",
+      "path": "districts-svg/04103.svg",
+      "bytes": 247993
+    },
+    {
+      "code": "04104",
+      "path": "districts-svg/04104.svg",
+      "bytes": 795178
+    },
+    {
+      "code": "04105",
+      "path": "districts-svg/04105.svg",
+      "bytes": 747954
+    },
+    {
+      "code": "04202",
+      "path": "districts-svg/04202.svg",
+      "bytes": 2602573
+    },
+    {
+      "code": "04203",
+      "path": "districts-svg/04203.svg",
+      "bytes": 587216
+    },
+    {
+      "code": "04205",
+      "path": "districts-svg/04205.svg",
+      "bytes": 1645082
+    },
+    {
+      "code": "04206",
+      "path": "districts-svg/04206.svg",
+      "bytes": 576845
+    },
+    {
+      "code": "04207",
+      "path": "districts-svg/04207.svg",
+      "bytes": 539440
+    },
+    {
+      "code": "04208",
+      "path": "districts-svg/04208.svg",
+      "bytes": 240096
+    },
+    {
+      "code": "04209",
+      "path": "districts-svg/04209.svg",
+      "bytes": 154588
+    },
+    {
+      "code": "04211",
+      "path": "districts-svg/04211.svg",
+      "bytes": 174813
+    },
+    {
+      "code": "04212",
+      "path": "districts-svg/04212.svg",
+      "bytes": 1024471
+    },
+    {
+      "code": "04213",
+      "path": "districts-svg/04213.svg",
+      "bytes": 1474181
+    },
+    {
+      "code": "04214",
+      "path": "districts-svg/04214.svg",
+      "bytes": 696147
+    },
+    {
+      "code": "04215",
+      "path": "districts-svg/04215.svg",
+      "bytes": 1433933
+    },
+    {
+      "code": "04216",
+      "path": "districts-svg/04216.svg",
+      "bytes": 257401
+    },
+    {
+      "code": "04301",
+      "path": "districts-svg/04301.svg",
+      "bytes": 202759
+    },
+    {
+      "code": "04302",
+      "path": "districts-svg/04302.svg",
+      "bytes": 99841
+    },
+    {
+      "code": "04321",
+      "path": "districts-svg/04321.svg",
+      "bytes": 97445
+    },
+    {
+      "code": "04322",
+      "path": "districts-svg/04322.svg",
+      "bytes": 153590
+    },
+    {
+      "code": "04323",
+      "path": "districts-svg/04323.svg",
+      "bytes": 255245
+    },
+    {
+      "code": "04324",
+      "path": "districts-svg/04324.svg",
+      "bytes": 255291
+    },
+    {
+      "code": "04341",
+      "path": "districts-svg/04341.svg",
+      "bytes": 154949
+    },
+    {
+      "code": "04361",
+      "path": "districts-svg/04361.svg",
+      "bytes": 192384
+    },
+    {
+      "code": "04362",
+      "path": "districts-svg/04362.svg",
+      "bytes": 192913
+    },
+    {
+      "code": "04401",
+      "path": "districts-svg/04401.svg",
+      "bytes": 380399
+    },
+    {
+      "code": "04404",
+      "path": "districts-svg/04404.svg",
+      "bytes": 667568
+    },
+    {
+      "code": "04406",
+      "path": "districts-svg/04406.svg",
+      "bytes": 309436
+    },
+    {
+      "code": "04421",
+      "path": "districts-svg/04421.svg",
+      "bytes": 187920
+    },
+    {
+      "code": "04422",
+      "path": "districts-svg/04422.svg",
+      "bytes": 188098
+    },
+    {
+      "code": "04424",
+      "path": "districts-svg/04424.svg",
+      "bytes": 100380
+    },
+    {
+      "code": "04444",
+      "path": "districts-svg/04444.svg",
+      "bytes": 116212
+    },
+    {
+      "code": "04445",
+      "path": "districts-svg/04445.svg",
+      "bytes": 354915
+    },
+    {
+      "code": "04501",
+      "path": "districts-svg/04501.svg",
+      "bytes": 101239
+    },
+    {
+      "code": "04505",
+      "path": "districts-svg/04505.svg",
+      "bytes": 79816
+    },
+    {
+      "code": "04581",
+      "path": "districts-svg/04581.svg",
+      "bytes": 841672
+    },
+    {
+      "code": "04606",
+      "path": "districts-svg/04606.svg",
+      "bytes": 631649
+    }
+  ]
+}

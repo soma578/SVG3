@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Current Location Layer</title>
+  <script src="../svgmap-slawa-client/svgMapLayerLib.js"></script>
+</head>
+<body>
+<script type="module">
+const MESSAGE_TYPE = 'map:setCurrentLocation';
+let ready = false;
+let pendingLocation = null;
+
+window.hiddenOnLayerLoad = () => {};
+
+const render = (location) => {
+  if (!ready) {
+    pendingLocation = location;
+    return;
+  }
+  const pin = window.svgImage?.getElementById?.('current-location-pin');
+  if (!pin) return;
+  const lat = Number(location?.lat);
+  const lon = Number(location?.lon);
+  if (!Number.isFinite(lat) || !Number.isFinite(lon)) {
+    pin.setAttribute('visibility', 'hidden');
+    window.svgMap?.refreshScreen?.();
+    return;
+  }
+  pin.setAttribute('transform', `ref(svg,${(lon * 100).toFixed(6)},${(-lat * 100).toFixed(6)})`);
+  pin.setAttribute('visibility', 'visible');
+  window.svgMap?.refreshScreen?.();
+};
+
+window.addEventListener('message', (event) => {
+  const message = event.data || {};
+  if (message.type !== MESSAGE_TYPE) return;
+  render(message.location || message.payload || message);
+});
+
+const start = () => {
+  if (ready) return;
+  ready = true;
+  if (pendingLocation) {
+    const location = pendingLocation;
+    pendingLocation = null;
+    render(location);
+  }
+};
+
+window.addEventListener('layerWebAppReady', start, { once: true });
+if (window.svgMap && window.svgImage) queueMicrotask(start);
+</script>
+</body>
+</html>

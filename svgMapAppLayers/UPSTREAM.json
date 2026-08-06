@@ -1,0 +1,15 @@
+{
+  "note": "上流配布物の部分取り込み。以前は .gitmodules の無い gitlink が登録されており、クローン先で取得できずビルドが落ちていた。",
+  "vendoredPaths": [
+    "Container.svg",
+    "basemaps/",
+    "appLayers/eStatPopulation/"
+  ],
+  "reason": "Container.svg が参照するのはこの2つだけで、依存も各ディレクトリ内に閉じている。残りは取り込まない。",
+  "referencedBy": [
+    "map/layers/managed/basemap/layer.config.json",
+    "map/layers/external/svgmap-app-layers",
+    "map/layers/external/svgmap-app-layers/import.config.json"
+  ],
+  "license": "svgMapAppLayers/LICENSE を参照"
+}

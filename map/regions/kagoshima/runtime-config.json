@@ -1,0 +1,44 @@
+{
+  "version": "2",
+  "regionId": "kagoshima",
+  "prefCode": "46",
+  "label": "鹿児島県",
+  "engine": "svgmap",
+  "containerUrl": "/map/containers/Containers_webapp_denshi_46.svg",
+  "iconsBaseUrl": "/map/icons",
+  "initialViewport": {
+    "lat": 29.66281,
+    "lon": 129.80047,
+    "latSpan": 5.818673,
+    "lonSpan": 3.142757
+  },
+  "layers": {
+    "baseArea": {
+      "layerUrl": "/map/layers/overview/pref/46.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "evacuation": {
+      "dataUrl": "/map/data/evacuation/kagoshima.json",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "teamActivity": {
+      "dataUrl": "/map/data/team-activity/kagoshima.json",
+      "baseAreaLayerUrl": "/map/layers/overview/pref/46.svg",
+      "districtSvgUrlTemplate": "/data/kagoshima/districts-svg/{code}.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "hazard": {
+      "layerUrl": "/map/layers/hazard/46/kagoshima.svg",
+      "svgUrlTemplate": "/map/layers/hazard/46/districts/{code}.svg",
+      "runtimeVisible": false,
+      "opacity": 0.7
+    }
+  },
+  "interaction": {
+    "disableDefaultPopup": true,
+    "featureSelectEvent": true
+  }
+}

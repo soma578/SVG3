@@ -1,0 +1,44 @@
+{
+  "version": "2",
+  "regionId": "osaka",
+  "prefCode": "27",
+  "label": "大阪府",
+  "engine": "svgmap",
+  "containerUrl": "/map/containers/Containers_webapp_denshi_27.svg",
+  "iconsBaseUrl": "/map/icons",
+  "initialViewport": {
+    "lat": 34.66154,
+    "lon": 135.419295,
+    "latSpan": 0.949795,
+    "lonSpan": 0.814957
+  },
+  "layers": {
+    "baseArea": {
+      "layerUrl": "/map/layers/overview/pref/27.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "evacuation": {
+      "dataUrl": "/map/data/evacuation/osaka.json",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "teamActivity": {
+      "dataUrl": "/map/data/team-activity/osaka.json",
+      "baseAreaLayerUrl": "/map/layers/overview/pref/27.svg",
+      "districtSvgUrlTemplate": "/data/osaka/districts-svg/{code}.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "hazard": {
+      "layerUrl": "/map/layers/hazard/27/osaka.svg",
+      "svgUrlTemplate": "/map/layers/hazard/27/districts/{code}.svg",
+      "runtimeVisible": false,
+      "opacity": 0.7
+    }
+  },
+  "interaction": {
+    "disableDefaultPopup": true,
+    "featureSelectEvent": true
+  }
+}

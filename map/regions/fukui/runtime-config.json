@@ -1,0 +1,44 @@
+{
+  "version": "2",
+  "regionId": "fukui",
+  "prefCode": "18",
+  "label": "福井県",
+  "engine": "svgmap",
+  "containerUrl": "/map/containers/Containers_webapp_denshi_18.svg",
+  "iconsBaseUrl": "/map/icons",
+  "initialViewport": {
+    "lat": 35.819505,
+    "lon": 136.14085,
+    "latSpan": 1.13576,
+    "lonSpan": 1.601662
+  },
+  "layers": {
+    "baseArea": {
+      "layerUrl": "/map/layers/overview/pref/18.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "evacuation": {
+      "dataUrl": "/map/data/evacuation/fukui.json",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "teamActivity": {
+      "dataUrl": "/map/data/team-activity/fukui.json",
+      "baseAreaLayerUrl": "/map/layers/overview/pref/18.svg",
+      "districtSvgUrlTemplate": "/data/fukui/districts-svg/{code}.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "hazard": {
+      "layerUrl": "/map/layers/hazard/18/fukui.svg",
+      "svgUrlTemplate": "/map/layers/hazard/18/districts/{code}.svg",
+      "runtimeVisible": false,
+      "opacity": 0.7
+    }
+  },
+  "interaction": {
+    "disableDefaultPopup": true,
+    "featureSelectEvent": true
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "version": "2",
+  "regionId": "ibaraki",
+  "prefCode": "08",
+  "label": "茨城県",
+  "engine": "svgmap",
+  "containerUrl": "/map/containers/Containers_webapp_denshi_08.svg",
+  "iconsBaseUrl": "/map/icons",
+  "initialViewport": {
+    "lat": 36.342215,
+    "lon": 140.26984,
+    "latSpan": 1.410642,
+    "lonSpan": 1.365422
+  },
+  "layers": {
+    "baseArea": {
+      "layerUrl": "/map/layers/overview/pref/08.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "evacuation": {
+      "dataUrl": "/map/data/evacuation/ibaraki.json",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "teamActivity": {
+      "dataUrl": "/map/data/team-activity/ibaraki.json",
+      "baseAreaLayerUrl": "/map/layers/overview/pref/08.svg",
+      "districtSvgUrlTemplate": "/data/ibaraki/districts-svg/{code}.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "hazard": {
+      "layerUrl": "/map/layers/hazard/8/ibaraki.svg",
+      "svgUrlTemplate": "/map/layers/hazard/8/districts/{code}.svg",
+      "runtimeVisible": false,
+      "opacity": 0.7
+    }
+  },
+  "interaction": {
+    "disableDefaultPopup": true,
+    "featureSelectEvent": true
+  }
+}

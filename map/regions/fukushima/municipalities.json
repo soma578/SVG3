@@ -1,0 +1,1245 @@
+{
+  "region": "fukushima",
+  "label": "福島県",
+  "municipalities": [
+    {
+      "id": "07201",
+      "label": "福島市",
+      "municipalityCodes": [
+        "07201"
+      ],
+      "shelterCount": 239,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.80015,
+        "lon": 140.39952,
+        "latSpan": 0.456118,
+        "lonSpan": 0.440284
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07202",
+      "label": "会津若松市",
+      "municipalityCodes": [
+        "07202"
+      ],
+      "shelterCount": 228,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.45325,
+        "lon": 139.97617,
+        "latSpan": 0.337688,
+        "lonSpan": 0.356694
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07203",
+      "label": "郡山市",
+      "municipalityCodes": [
+        "07203"
+      ],
+      "shelterCount": 429,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.446,
+        "lon": 140.300055,
+        "latSpan": 0.467948,
+        "lonSpan": 0.685841
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07204",
+      "label": "いわき市",
+      "municipalityCodes": [
+        "07204"
+      ],
+      "shelterCount": 442,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.08801,
+        "lon": 140.78554,
+        "latSpan": 0.601978,
+        "lonSpan": 0.57096
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07205",
+      "label": "白河市",
+      "municipalityCodes": [
+        "07205"
+      ],
+      "shelterCount": 235,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.130855,
+        "lon": 140.25611,
+        "latSpan": 0.340041,
+        "lonSpan": 0.407732
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07207",
+      "label": "須賀川市",
+      "municipalityCodes": [
+        "07207"
+      ],
+      "shelterCount": 147,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.29812,
+        "lon": 140.32044,
+        "latSpan": 0.192764,
+        "lonSpan": 0.5577
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07208",
+      "label": "喜多方市",
+      "municipalityCodes": [
+        "07208"
+      ],
+      "shelterCount": 85,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.71712,
+        "lon": 139.834385,
+        "latSpan": 0.360906,
+        "lonSpan": 0.431327
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07209",
+      "label": "相馬市",
+      "municipalityCodes": [
+        "07209"
+      ],
+      "shelterCount": 79,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.782235,
+        "lon": 140.844515,
+        "latSpan": 0.157105,
+        "lonSpan": 0.434057
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07210",
+      "label": "二本松市",
+      "municipalityCodes": [
+        "07210"
+      ],
+      "shelterCount": 99,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.57523,
+        "lon": 140.48347,
+        "latSpan": 0.1976,
+        "lonSpan": 0.527254
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07211",
+      "label": "田村市",
+      "municipalityCodes": [
+        "07211"
+      ],
+      "shelterCount": 51,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.406425,
+        "lon": 140.683085,
+        "latSpan": 0.342303,
+        "lonSpan": 0.465153
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07212",
+      "label": "南相馬市",
+      "municipalityCodes": [
+        "07212"
+      ],
+      "shelterCount": 79,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.62755,
+        "lon": 140.92312,
+        "latSpan": 0.310414,
+        "lonSpan": 0.289796
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07213",
+      "label": "伊達市",
+      "municipalityCodes": [
+        "07213"
+      ],
+      "shelterCount": 113,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.80229,
+        "lon": 140.610625,
+        "latSpan": 0.293462,
+        "lonSpan": 0.326547
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07214",
+      "label": "本宮市",
+      "municipalityCodes": [
+        "07214"
+      ],
+      "shelterCount": 72,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.51081,
+        "lon": 140.41638,
+        "latSpan": 0.1131,
+        "lonSpan": 0.263328
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07301",
+      "label": "桑折町",
+      "municipalityCodes": [
+        "07301"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.864155,
+        "lon": 140.511235,
+        "latSpan": 0.097175,
+        "lonSpan": 0.136331
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07301.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07303",
+      "label": "国見町",
+      "municipalityCodes": [
+        "07303"
+      ],
+      "shelterCount": 19,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.8895,
+        "lon": 140.542855,
+        "latSpan": 0.086554,
+        "lonSpan": 0.144443
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07303.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07308",
+      "label": "川俣町",
+      "municipalityCodes": [
+        "07308"
+      ],
+      "shelterCount": 52,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.63074,
+        "lon": 140.632955,
+        "latSpan": 0.216918,
+        "lonSpan": 0.242593
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07308.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07322",
+      "label": "大玉村",
+      "municipalityCodes": [
+        "07322"
+      ],
+      "shelterCount": 14,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.56371,
+        "lon": 140.348205,
+        "latSpan": 0.1482,
+        "lonSpan": 0.182195
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07322.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07342",
+      "label": "鏡石町",
+      "municipalityCodes": [
+        "07342"
+      ],
+      "shelterCount": 25,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.2485,
+        "lon": 140.35317,
+        "latSpan": 0.0832,
+        "lonSpan": 0.11297
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07342.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07344",
+      "label": "天栄村",
+      "municipalityCodes": [
+        "07344"
+      ],
+      "shelterCount": 40,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.269215,
+        "lon": 140.1326,
+        "latSpan": 0.189501,
+        "lonSpan": 0.48022
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07344.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07362",
+      "label": "下郷町",
+      "municipalityCodes": [
+        "07362"
+      ],
+      "shelterCount": 5,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.253665,
+        "lon": 139.85876,
+        "latSpan": 0.279591,
+        "lonSpan": 0.398476
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07362.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07364",
+      "label": "檜枝岐村",
+      "municipalityCodes": [
+        "07364"
+      ],
+      "shelterCount": 5,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.05633,
+        "lon": 139.345255,
+        "latSpan": 0.378378,
+        "lonSpan": 0.298155
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07364.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07367",
+      "label": "只見町",
+      "municipalityCodes": [
+        "07367"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.292315,
+        "lon": 139.37015,
+        "latSpan": 0.461903,
+        "lonSpan": 0.534014
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07367.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07368",
+      "label": "南会津町",
+      "municipalityCodes": [
+        "07368"
+      ],
+      "shelterCount": 127,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.13984,
+        "lon": 139.62048,
+        "latSpan": 0.446966,
+        "lonSpan": 0.639106
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07368.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07402",
+      "label": "北塩原村",
+      "municipalityCodes": [
+        "07402"
+      ],
+      "shelterCount": 37,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.690935,
+        "lon": 140.0409,
+        "latSpan": 0.229905,
+        "lonSpan": 0.340704
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07402.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07405",
+      "label": "西会津町",
+      "municipalityCodes": [
+        "07405"
+      ],
+      "shelterCount": 28,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.6591,
+        "lon": 139.64586,
+        "latSpan": 0.398164,
+        "lonSpan": 0.259532
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07405.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07407",
+      "label": "磐梯町",
+      "municipalityCodes": [
+        "07407"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.57441,
+        "lon": 139.99957,
+        "latSpan": 0.10556,
+        "lonSpan": 0.187876
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07407.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07408",
+      "label": "猪苗代町",
+      "municipalityCodes": [
+        "07408"
+      ],
+      "shelterCount": 32,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.60246,
+        "lon": 140.149815,
+        "latSpan": 0.399308,
+        "lonSpan": 0.352183
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07408.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07421",
+      "label": "会津坂下町",
+      "municipalityCodes": [
+        "07421"
+      ],
+      "shelterCount": 40,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.57582,
+        "lon": 139.79517,
+        "latSpan": 0.16055,
+        "lonSpan": 0.201136
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07421.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07422",
+      "label": "湯川村",
+      "municipalityCodes": [
+        "07422"
+      ],
+      "shelterCount": 14,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.568135,
+        "lon": 139.883465,
+        "latSpan": 0.066027,
+        "lonSpan": 0.060593
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07422.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07423",
+      "label": "柳津町",
+      "municipalityCodes": [
+        "07423"
+      ],
+      "shelterCount": 57,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.46155,
+        "lon": 139.68223,
+        "latSpan": 0.29419,
+        "lonSpan": 0.228124
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07423.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07444",
+      "label": "三島町",
+      "municipalityCodes": [
+        "07444"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.43456,
+        "lon": 139.65055,
+        "latSpan": 0.17563,
+        "lonSpan": 0.166946
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07444.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07445",
+      "label": "金山町",
+      "municipalityCodes": [
+        "07445"
+      ],
+      "shelterCount": 41,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.425555,
+        "lon": 139.49018,
+        "latSpan": 0.240019,
+        "lonSpan": 0.32617
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07445.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07446",
+      "label": "昭和村",
+      "municipalityCodes": [
+        "07446"
+      ],
+      "shelterCount": 18,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.300285,
+        "lon": 139.631325,
+        "latSpan": 0.243789,
+        "lonSpan": 0.299091
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07446.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07447",
+      "label": "会津美里町",
+      "municipalityCodes": [
+        "07447"
+      ],
+      "shelterCount": 33,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.406825,
+        "lon": 139.81936,
+        "latSpan": 0.326105,
+        "lonSpan": 0.273884
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07447.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07461",
+      "label": "西郷村",
+      "municipalityCodes": [
+        "07461"
+      ],
+      "shelterCount": 57,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.16953,
+        "lon": 140.08531,
+        "latSpan": 0.200252,
+        "lonSpan": 0.326144
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07461.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07464",
+      "label": "泉崎村",
+      "municipalityCodes": [
+        "07464"
+      ],
+      "shelterCount": 15,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.1565,
+        "lon": 140.28656,
+        "latSpan": 0.09334,
+        "lonSpan": 0.134264
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07464.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07465",
+      "label": "中島村",
+      "municipalityCodes": [
+        "07465"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.148025,
+        "lon": 140.37008,
+        "latSpan": 0.079911,
+        "lonSpan": 0.088842
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07465.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07466",
+      "label": "矢吹町",
+      "municipalityCodes": [
+        "07466"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.190855,
+        "lon": 140.344355,
+        "latSpan": 0.121381,
+        "lonSpan": 0.168779
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07466.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07481",
+      "label": "棚倉町",
+      "municipalityCodes": [
+        "07481"
+      ],
+      "shelterCount": 23,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.008285,
+        "lon": 140.35005,
+        "latSpan": 0.203151,
+        "lonSpan": 0.284622
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07481.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07482",
+      "label": "矢祭町",
+      "municipalityCodes": [
+        "07482"
+      ],
+      "shelterCount": 20,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.866135,
+        "lon": 140.406025,
+        "latSpan": 0.193791,
+        "lonSpan": 0.318383
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07482.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07483",
+      "label": "塙町",
+      "municipalityCodes": [
+        "07483"
+      ],
+      "shelterCount": 67,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.929465,
+        "lon": 140.441455,
+        "latSpan": 0.227799,
+        "lonSpan": 0.394771
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07483.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07484",
+      "label": "鮫川村",
+      "municipalityCodes": [
+        "07484"
+      ],
+      "shelterCount": 20,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.011445,
+        "lon": 140.510665,
+        "latSpan": 0.192595,
+        "lonSpan": 0.198575
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07484.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07501",
+      "label": "石川町",
+      "municipalityCodes": [
+        "07501"
+      ],
+      "shelterCount": 38,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.140895,
+        "lon": 140.45345,
+        "latSpan": 0.162357,
+        "lonSpan": 0.222898
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07501.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07502",
+      "label": "玉川村",
+      "municipalityCodes": [
+        "07502"
+      ],
+      "shelterCount": 19,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.21825,
+        "lon": 140.454295,
+        "latSpan": 0.100126,
+        "lonSpan": 0.169091
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07502.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07503",
+      "label": "平田村",
+      "municipalityCodes": [
+        "07503"
+      ],
+      "shelterCount": 23,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.2147,
+        "lon": 140.555425,
+        "latSpan": 0.15236,
+        "lonSpan": 0.151801
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07503.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07504",
+      "label": "浅川町",
+      "municipalityCodes": [
+        "07504"
+      ],
+      "shelterCount": 14,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.07173,
+        "lon": 140.42028,
+        "latSpan": 0.127842,
+        "lonSpan": 0.123292
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07504.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07505",
+      "label": "古殿町",
+      "municipalityCodes": [
+        "07505"
+      ],
+      "shelterCount": 8,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.08045,
+        "lon": 140.57926,
+        "latSpan": 0.228644,
+        "lonSpan": 0.222612
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07505.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07521",
+      "label": "三春町",
+      "municipalityCodes": [
+        "07521"
+      ],
+      "shelterCount": 22,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.44079,
+        "lon": 140.49405,
+        "latSpan": 0.183274,
+        "lonSpan": 0.183378
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07521.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07522",
+      "label": "小野町",
+      "municipalityCodes": [
+        "07522"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.285575,
+        "lon": 140.615795,
+        "latSpan": 0.211653,
+        "lonSpan": 0.202969
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07522.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07541",
+      "label": "広野町",
+      "municipalityCodes": [
+        "07541"
+      ],
+      "shelterCount": 31,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.216195,
+        "lon": 140.94778,
+        "latSpan": 0.084643,
+        "lonSpan": 0.209716
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07541.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07542",
+      "label": "楢葉町",
+      "municipalityCodes": [
+        "07542"
+      ],
+      "shelterCount": 49,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.288445,
+        "lon": 140.947995,
+        "latSpan": 0.128011,
+        "lonSpan": 0.208325
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07542.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07543",
+      "label": "富岡町",
+      "municipalityCodes": [
+        "07543"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.34419,
+        "lon": 140.96965,
+        "latSpan": 0.102726,
+        "lonSpan": 0.17901
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07543.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07544",
+      "label": "川内村",
+      "municipalityCodes": [
+        "07544"
+      ],
+      "shelterCount": 16,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.328045,
+        "lon": 140.807925,
+        "latSpan": 0.199043,
+        "lonSpan": 0.283257
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07544.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07545",
+      "label": "大熊町",
+      "municipalityCodes": [
+        "07545"
+      ],
+      "shelterCount": 4,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.40338,
+        "lon": 140.944295,
+        "latSpan": 0.079664,
+        "lonSpan": 0.235469
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07545.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07546",
+      "label": "双葉町",
+      "municipalityCodes": [
+        "07546"
+      ],
+      "shelterCount": 0,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.44662,
+        "lon": 140.96508,
+        "latSpan": 0.078624,
+        "lonSpan": 0.187148
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07546.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07547",
+      "label": "浪江町",
+      "municipalityCodes": [
+        "07547"
+      ],
+      "shelterCount": 16,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.51725,
+        "lon": 140.86335,
+        "latSpan": 0.253656,
+        "lonSpan": 0.46709
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07547.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07548",
+      "label": "葛尾村",
+      "municipalityCodes": [
+        "07548"
+      ],
+      "shelterCount": 16,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.50277,
+        "lon": 140.76698,
+        "latSpan": 0.106548,
+        "lonSpan": 0.220506
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07548.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07561",
+      "label": "新地町",
+      "municipalityCodes": [
+        "07561"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.870095,
+        "lon": 140.905025,
+        "latSpan": 0.088829,
+        "lonSpan": 0.140803
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07561.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "07564",
+      "label": "飯舘村",
+      "municipalityCodes": [
+        "07564"
+      ],
+      "shelterCount": 2,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.677495,
+        "lon": 140.74393,
+        "latSpan": 0.218699,
+        "lonSpan": 0.257478
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukushima/districts-svg/07564.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

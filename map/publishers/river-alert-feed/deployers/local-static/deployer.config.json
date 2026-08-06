@@ -1,0 +1,18 @@
+{
+  "apiVersion": 1,
+  "id": "local-static",
+  "title": "Local static root",
+  "module": "deployer.mjs",
+  "networkAccess": false,
+  "requiredEnvironment": [],
+  "requiredOptions": [
+    "target"
+  ],
+  "optionalOptions": [],
+  "capabilities": [
+    "atomic-file-replace",
+    "rollback",
+    "stale-file-cleanup",
+    "exclusive-lock"
+  ]
+}

@@ -1,0 +1,321 @@
+{
+  "region": "toyama",
+  "label": "富山県",
+  "municipalities": [
+    {
+      "id": "16201",
+      "label": "富山市",
+      "municipalityCodes": [
+        "16201"
+      ],
+      "shelterCount": 306,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.56881,
+        "lon": 137.366825,
+        "latSpan": 0.511784,
+        "lonSpan": 0.880477
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/toyama/districts-svg/16201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "16202",
+      "label": "高岡市",
+      "municipalityCodes": [
+        "16202"
+      ],
+      "shelterCount": 190,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.743225,
+        "lon": 136.96868,
+        "latSpan": 0.224029,
+        "lonSpan": 0.351572
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/toyama/districts-svg/16202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "16204",
+      "label": "魚津市",
+      "municipalityCodes": [
+        "16204"
+      ],
+      "shelterCount": 57,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.7668,
+        "lon": 137.49676,
+        "latSpan": 0.244868,
+        "lonSpan": 0.2977
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/toyama/districts-svg/16204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "16205",
+      "label": "氷見市",
+      "municipalityCodes": [
+        "16205"
+      ],
+      "shelterCount": 224,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.868495,
+        "lon": 136.94992,
+        "latSpan": 0.256633,
+        "lonSpan": 0.264628
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/toyama/districts-svg/16205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "16206",
+      "label": "滑川市",
+      "municipalityCodes": [
+        "16206"
+      ],
+      "shelterCount": 51,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.74975,
+        "lon": 137.38359,
+        "latSpan": 0.131586,
+        "lonSpan": 0.17654
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/toyama/districts-svg/16206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "16207",
+      "label": "黒部市",
+      "municipalityCodes": [
+        "16207"
+      ],
+      "shelterCount": 78,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.772515,
+        "lon": 137.58569,
+        "latSpan": 0.389207,
+        "lonSpan": 0.45773
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/toyama/districts-svg/16207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "16208",
+      "label": "砺波市",
+      "municipalityCodes": [
+        "16208"
+      ],
+      "shelterCount": 88,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.613675,
+        "lon": 136.98571,
+        "latSpan": 0.188981,
+        "lonSpan": 0.207038
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/toyama/districts-svg/16208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "16209",
+      "label": "小矢部市",
+      "municipalityCodes": [
+        "16209"
+      ],
+      "shelterCount": 63,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.66387,
+        "lon": 136.861205,
+        "latSpan": 0.203424,
+        "lonSpan": 0.198601
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/toyama/districts-svg/16209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "16210",
+      "label": "南砺市",
+      "municipalityCodes": [
+        "16210"
+      ],
+      "shelterCount": 153,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.45055,
+        "lon": 136.916465,
+        "latSpan": 0.458094,
+        "lonSpan": 0.384319
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/toyama/districts-svg/16210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "16211",
+      "label": "射水市",
+      "municipalityCodes": [
+        "16211"
+      ],
+      "shelterCount": 133,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.71998,
+        "lon": 137.09558,
+        "latSpan": 0.192218,
+        "lonSpan": 0.21983
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/toyama/districts-svg/16211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "16321",
+      "label": "舟橋村",
+      "municipalityCodes": [
+        "16321"
+      ],
+      "shelterCount": 0,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.699985,
+        "lon": 137.306975,
+        "latSpan": 0.04,
+        "lonSpan": 0.04
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/toyama/districts-svg/16321.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "16322",
+      "label": "上市町",
+      "municipalityCodes": [
+        "16322"
+      ],
+      "shelterCount": 35,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.66573,
+        "lon": 137.47142,
+        "latSpan": 0.192166,
+        "lonSpan": 0.40547
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/toyama/districts-svg/16322.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "16323",
+      "label": "立山町",
+      "municipalityCodes": [
+        "16323"
+      ],
+      "shelterCount": 52,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.61255,
+        "lon": 137.51506,
+        "latSpan": 0.240526,
+        "lonSpan": 0.617578
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/toyama/districts-svg/16323.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "16342",
+      "label": "入善町",
+      "municipalityCodes": [
+        "16342"
+      ],
+      "shelterCount": 61,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.906835,
+        "lon": 137.51825,
+        "latSpan": 0.140985,
+        "lonSpan": 0.23946
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/toyama/districts-svg/16342.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "16343",
+      "label": "朝日町",
+      "municipalityCodes": [
+        "16343"
+      ],
+      "shelterCount": 109,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.866915,
+        "lon": 137.64569,
+        "latSpan": 0.293501,
+        "lonSpan": 0.30602
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/toyama/districts-svg/16343.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

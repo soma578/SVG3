@@ -1,0 +1,10 @@
+{
+  "apiVersion": 1,
+  "id": "normalized-json",
+  "title": "Normalized River Alert JSON",
+  "module": "adapter.mjs",
+  "sourceId": "normalized-json",
+  "networkAccess": false,
+  "maxInputBytes": 52428800,
+  "stabilityWaitMs": 1000
+}

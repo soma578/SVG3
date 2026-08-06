@@ -1,0 +1,165 @@
+# Dependencies
+node_modules/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.codex
+
+# Build outputs
+out/
+dist/
+build/
+*.egg-info/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Data files (too large for git)
+data/*.zip
+data/raw/
+data/okayama_clip/
+data/backup/
+data/source/
+data_archive/*.tar.gz
+mergeFromCity_*.geojson
+mergeFromCity_*.zip
+map/okayama_districts.svg
+map/layers/districts/okayama/evacuation/
+map/layers/districts/okayama/team_activity/
+frontend/public/map/layers/districts/okayama/evacuation/
+frontend/public/map/layers/districts/okayama/team_activity/
+
+# GML data files (large source data)
+N03-*_GML/
+P14-*_GML/
+
+# PMTiles (generated, too large for git)
+frontend/public/tiles/
+!frontend/public/tiles/
+frontend/public/tiles/*
+!frontend/public/tiles/welfare_roujin.pmtiles
+!frontend/public/tiles/n03_municipalities.pmtiles
+!frontend/public/tiles/test_landslide.pmtiles
+
+# Frontend local links/placeholders created by setup
+frontend/public/map
+frontend/public/svgMapAppLayers
+frontend/public/data/
+
+# Keep data directory structure but exclude large files
+!data/README.md
+!data/*.json
+!data/*.csv
+!data/*.xml
+!data/second_project.md
+!data_archive/.gitkeep
+data/raw_sources/
+
+# Map layers - exclude large raster/build files
+map/layers/_build/
+map/layers/*.png
+map/layers/*.tif
+map/layers/*.aux.xml
+
+# Keep SVG layers (small and essential)
+!map/layers/*.svg
+!map/*.svg
+
+# Tauri build dependencies (root directory only)
+/lib/
+pkgconfig/
+
+# Windows metadata
+*.Zone.Identifier
+*:Zone.Identifier
+
+# Claude
+.claude/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+trash/
+
+# Machi cards multi-agent working files
+scripts/machi_cards/
+docs/MACHI_CARD_MULTI_AGENT_SPEC.md
+docs/MACHI_CARD_MVP_SPEC.md
+docs/MACHI_CARD_THREAD_RUNBOOK.md
+data/agent_state/
+data/pipeline/
+
+# Local build/tool caches
+.m2/
+tools/svgMapTools/target/
+
+# Downloaded archives (root/local work files)
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+*.tsbuildinfo
+
+# Generated slope tile outputs
+map/layers/slope_svgmaptiles/
+
+# Docs: ignore all local working docs
+docs/*
+!docs/map-runtime-contract.md
+!docs/legacy/
+docs/legacy/*
+!docs/legacy/README.md
+!docs/legacy/01_overview.md
+!docs/legacy/02_frontend.md
+!docs/legacy/06_svgmap_lightweight.md
+frontend/.next/
+.next/
+
+# svgMapAppLayers は上流の配布物。以前は .gitmodules の無い gitlink だけが
+# 登録されており、クローン先で取得できずビルドが落ちていた。
+# 実際に参照されるのは Container が指す2ディレクトリだけなので、それだけを
+# 通常ファイルとして取り込み、残り(約44MB)は追跡しない。
+/svgMapAppLayers/*
+!/svgMapAppLayers/LICENSE
+!/svgMapAppLayers/README.md
+!/svgMapAppLayers/UPSTREAM.json
+!/svgMapAppLayers/Container.svg
+!/svgMapAppLayers/basemaps/
+!/svgMapAppLayers/appLayers/
+/svgMapAppLayers/appLayers/*
+!/svgMapAppLayers/appLayers/eStatPopulation/
+
+# 全国detailシャードは map:generate の成果物。114MB あり恒久追跡しない。
+# 正規のランタイム形式はこれだが、リポジトリには入れず生成で作る。
+/map/data/qtct/*/detail-index.json
+/map/data/qtct/*/detail/

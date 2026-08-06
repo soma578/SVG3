@@ -1,0 +1,1291 @@
+{
+  "region": "fukuoka",
+  "label": "福岡県",
+  "municipalities": [
+    {
+      "id": "40100",
+      "label": "福岡市",
+      "municipalityCodes": [
+        "40101",
+        "40103",
+        "40105",
+        "40106",
+        "40107",
+        "40108",
+        "40109"
+      ],
+      "shelterCount": 624,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.87016,
+        "lon": 130.85609,
+        "latSpan": 0.38714,
+        "lonSpan": 0.475514
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40101.svg",
+        "/data/fukuoka/districts-svg/40103.svg",
+        "/data/fukuoka/districts-svg/40105.svg",
+        "/data/fukuoka/districts-svg/40106.svg",
+        "/data/fukuoka/districts-svg/40107.svg",
+        "/data/fukuoka/districts-svg/40108.svg",
+        "/data/fukuoka/districts-svg/40109.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40130",
+      "label": "北九州市",
+      "municipalityCodes": [
+        "40131",
+        "40132",
+        "40133",
+        "40134",
+        "40135",
+        "40136",
+        "40137"
+      ],
+      "shelterCount": 580,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.64954,
+        "lon": 130.26377,
+        "latSpan": 0.583908,
+        "lonSpan": 0.600002
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40131.svg",
+        "/data/fukuoka/districts-svg/40132.svg",
+        "/data/fukuoka/districts-svg/40133.svg",
+        "/data/fukuoka/districts-svg/40134.svg",
+        "/data/fukuoka/districts-svg/40135.svg",
+        "/data/fukuoka/districts-svg/40136.svg",
+        "/data/fukuoka/districts-svg/40137.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40202",
+      "label": "大牟田市",
+      "municipalityCodes": [
+        "40202"
+      ],
+      "shelterCount": 71,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.049295,
+        "lon": 130.469545,
+        "latSpan": 0.128115,
+        "lonSpan": 0.189553
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40203",
+      "label": "久留米市",
+      "municipalityCodes": [
+        "40203"
+      ],
+      "shelterCount": 140,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.29573,
+        "lon": 130.55849,
+        "latSpan": 0.186576,
+        "lonSpan": 0.450528
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40204",
+      "label": "直方市",
+      "municipalityCodes": [
+        "40204"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.74803,
+        "lon": 130.742065,
+        "latSpan": 0.124852,
+        "lonSpan": 0.161109
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40205",
+      "label": "飯塚市",
+      "municipalityCodes": [
+        "40205"
+      ],
+      "shelterCount": 67,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.605545,
+        "lon": 130.66691,
+        "latSpan": 0.263809,
+        "lonSpan": 0.2821
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40206",
+      "label": "田川市",
+      "municipalityCodes": [
+        "40206"
+      ],
+      "shelterCount": 34,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.632515,
+        "lon": 130.796965,
+        "latSpan": 0.166933,
+        "lonSpan": 0.127361
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40207",
+      "label": "柳川市",
+      "municipalityCodes": [
+        "40207"
+      ],
+      "shelterCount": 62,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.141635,
+        "lon": 130.41409,
+        "latSpan": 0.142883,
+        "lonSpan": 0.161044
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40210",
+      "label": "八女市",
+      "municipalityCodes": [
+        "40210"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.205015,
+        "lon": 130.70241,
+        "latSpan": 0.262509,
+        "lonSpan": 0.48113
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40211",
+      "label": "筑後市",
+      "municipalityCodes": [
+        "40211"
+      ],
+      "shelterCount": 42,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.212265,
+        "lon": 130.493675,
+        "latSpan": 0.107341,
+        "lonSpan": 0.109837
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40212",
+      "label": "大川市",
+      "municipalityCodes": [
+        "40212"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.20777,
+        "lon": 130.38156,
+        "latSpan": 0.096122,
+        "lonSpan": 0.108836
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40213",
+      "label": "行橋市",
+      "municipalityCodes": [
+        "40213"
+      ],
+      "shelterCount": 56,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.712715,
+        "lon": 130.97028,
+        "latSpan": 0.105287,
+        "lonSpan": 0.19656
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40214",
+      "label": "豊前市",
+      "municipalityCodes": [
+        "40214"
+      ],
+      "shelterCount": 32,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.571755,
+        "lon": 131.07807,
+        "latSpan": 0.163007,
+        "lonSpan": 0.229112
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40215",
+      "label": "中間市",
+      "municipalityCodes": [
+        "40215"
+      ],
+      "shelterCount": 69,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.821595,
+        "lon": 130.706335,
+        "latSpan": 0.052871,
+        "lonSpan": 0.097071
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40215.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40216",
+      "label": "小郡市",
+      "municipalityCodes": [
+        "40216"
+      ],
+      "shelterCount": 28,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.395665,
+        "lon": 130.57275,
+        "latSpan": 0.141089,
+        "lonSpan": 0.097292
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40216.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40217",
+      "label": "筑紫野市",
+      "municipalityCodes": [
+        "40217"
+      ],
+      "shelterCount": 98,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.49094,
+        "lon": 130.53757,
+        "latSpan": 0.163592,
+        "lonSpan": 0.218088
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40217.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40218",
+      "label": "春日市",
+      "municipalityCodes": [
+        "40218"
+      ],
+      "shelterCount": 130,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.524135,
+        "lon": 130.45555,
+        "latSpan": 0.064181,
+        "lonSpan": 0.0559
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40218.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40219",
+      "label": "大野城市",
+      "municipalityCodes": [
+        "40219"
+      ],
+      "shelterCount": 61,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.513305,
+        "lon": 130.482415,
+        "latSpan": 0.128661,
+        "lonSpan": 0.083395
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40219.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40220",
+      "label": "宗像市",
+      "municipalityCodes": [
+        "40220"
+      ],
+      "shelterCount": 48,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.00007,
+        "lon": 130.369115,
+        "latSpan": 0.649454,
+        "lonSpan": 0.703833
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40220.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40221",
+      "label": "太宰府市",
+      "municipalityCodes": [
+        "40221"
+      ],
+      "shelterCount": 66,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.514275,
+        "lon": 130.52764,
+        "latSpan": 0.109629,
+        "lonSpan": 0.115752
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40221.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40223",
+      "label": "古賀市",
+      "municipalityCodes": [
+        "40223"
+      ],
+      "shelterCount": 84,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.72037,
+        "lon": 130.502895,
+        "latSpan": 0.086788,
+        "lonSpan": 0.145067
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40223.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40224",
+      "label": "福津市",
+      "municipalityCodes": [
+        "40224"
+      ],
+      "shelterCount": 25,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.790655,
+        "lon": 130.499535,
+        "latSpan": 0.156117,
+        "lonSpan": 0.144495
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40224.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40225",
+      "label": "うきは市",
+      "municipalityCodes": [
+        "40225"
+      ],
+      "shelterCount": 36,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.31353,
+        "lon": 130.792965,
+        "latSpan": 0.15509,
+        "lonSpan": 0.193999
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40225.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40226",
+      "label": "宮若市",
+      "municipalityCodes": [
+        "40226"
+      ],
+      "shelterCount": 20,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.714345,
+        "lon": 130.627435,
+        "latSpan": 0.198315,
+        "lonSpan": 0.227955
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40226.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40227",
+      "label": "嘉麻市",
+      "municipalityCodes": [
+        "40227"
+      ],
+      "shelterCount": 130,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.547665,
+        "lon": 130.74001,
+        "latSpan": 0.199355,
+        "lonSpan": 0.201812
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40227.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40228",
+      "label": "朝倉市",
+      "municipalityCodes": [
+        "40228"
+      ],
+      "shelterCount": 40,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.421555,
+        "lon": 130.73864,
+        "latSpan": 0.202059,
+        "lonSpan": 0.320216
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40228.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40229",
+      "label": "みやま市",
+      "municipalityCodes": [
+        "40229"
+      ],
+      "shelterCount": 27,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.12756,
+        "lon": 130.488725,
+        "latSpan": 0.144586,
+        "lonSpan": 0.200187
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40229.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40230",
+      "label": "糸島市",
+      "municipalityCodes": [
+        "40230"
+      ],
+      "shelterCount": 91,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.552855,
+        "lon": 130.16562,
+        "latSpan": 0.226031,
+        "lonSpan": 0.329134
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40230.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40231",
+      "label": "那珂川市",
+      "municipalityCodes": [
+        "40231"
+      ],
+      "shelterCount": 0,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.462485,
+        "lon": 130.418515,
+        "latSpan": 0.175357,
+        "lonSpan": 0.122941
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40231.svg"
+      ],
+      "districtSvgStatus": "available",
+      "displayCode": "40231"
+    },
+    {
+      "id": "40341",
+      "label": "宇美町",
+      "municipalityCodes": [
+        "40341"
+      ],
+      "shelterCount": 77,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.561565,
+        "lon": 130.534965,
+        "latSpan": 0.082563,
+        "lonSpan": 0.128167
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40341.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40342",
+      "label": "篠栗町",
+      "municipalityCodes": [
+        "40342"
+      ],
+      "shelterCount": 30,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.63071,
+        "lon": 130.547465,
+        "latSpan": 0.091104,
+        "lonSpan": 0.133393
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40342.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40343",
+      "label": "志免町",
+      "municipalityCodes": [
+        "40343"
+      ],
+      "shelterCount": 45,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.584975,
+        "lon": 130.47152,
+        "latSpan": 0.064207,
+        "lonSpan": 0.076024
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40343.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40344",
+      "label": "須恵町",
+      "municipalityCodes": [
+        "40344"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.595165,
+        "lon": 130.525605,
+        "latSpan": 0.051389,
+        "lonSpan": 0.096993
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40344.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40345",
+      "label": "新宮町",
+      "municipalityCodes": [
+        "40345"
+      ],
+      "shelterCount": 41,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.720665,
+        "lon": 130.43381,
+        "latSpan": 0.120627,
+        "lonSpan": 0.193856
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40345.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40348",
+      "label": "久山町",
+      "municipalityCodes": [
+        "40348"
+      ],
+      "shelterCount": 27,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.67211,
+        "lon": 130.51499,
+        "latSpan": 0.098956,
+        "lonSpan": 0.120172
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40348.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40349",
+      "label": "粕屋町",
+      "municipalityCodes": [
+        "40349"
+      ],
+      "shelterCount": 55,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.615,
+        "lon": 130.470415,
+        "latSpan": 0.05772,
+        "lonSpan": 0.076245
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40349.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40381",
+      "label": "芦屋町",
+      "municipalityCodes": [
+        "40381"
+      ],
+      "shelterCount": 38,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.89335,
+        "lon": 130.660435,
+        "latSpan": 0.065858,
+        "lonSpan": 0.064467
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40381.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40382",
+      "label": "水巻町",
+      "municipalityCodes": [
+        "40382"
+      ],
+      "shelterCount": 25,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.860305,
+        "lon": 130.697515,
+        "latSpan": 0.078507,
+        "lonSpan": 0.054457
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40382.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40383",
+      "label": "岡垣町",
+      "municipalityCodes": [
+        "40383"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.852195,
+        "lon": 130.597265,
+        "latSpan": 0.102557,
+        "lonSpan": 0.144911
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40383.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40384",
+      "label": "遠賀町",
+      "municipalityCodes": [
+        "40384"
+      ],
+      "shelterCount": 50,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.85007,
+        "lon": 130.66362,
+        "latSpan": 0.105118,
+        "lonSpan": 0.07189
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40384.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40401",
+      "label": "小竹町",
+      "municipalityCodes": [
+        "40401"
+      ],
+      "shelterCount": 13,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.70777,
+        "lon": 130.699,
+        "latSpan": 0.063804,
+        "lonSpan": 0.072488
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40401.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40402",
+      "label": "鞍手町",
+      "municipalityCodes": [
+        "40402"
+      ],
+      "shelterCount": 18,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.78056,
+        "lon": 130.670325,
+        "latSpan": 0.106496,
+        "lonSpan": 0.095771
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40402.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40421",
+      "label": "桂川町",
+      "municipalityCodes": [
+        "40421"
+      ],
+      "shelterCount": 11,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.565785,
+        "lon": 130.67656,
+        "latSpan": 0.095433,
+        "lonSpan": 0.071578
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40421.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40447",
+      "label": "筑前町",
+      "municipalityCodes": [
+        "40447"
+      ],
+      "shelterCount": 18,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.457925,
+        "lon": 130.614755,
+        "latSpan": 0.137865,
+        "lonSpan": 0.139997
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40447.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40448",
+      "label": "東峰村",
+      "municipalityCodes": [
+        "40448"
+      ],
+      "shelterCount": 31,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.4313,
+        "lon": 130.832365,
+        "latSpan": 0.151684,
+        "lonSpan": 0.176579
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40448.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40503",
+      "label": "大刀洗町",
+      "municipalityCodes": [
+        "40503"
+      ],
+      "shelterCount": 10,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.382775,
+        "lon": 130.62261,
+        "latSpan": 0.077831,
+        "lonSpan": 0.114868
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40503.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40522",
+      "label": "大木町",
+      "municipalityCodes": [
+        "40522"
+      ],
+      "shelterCount": 11,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.213215,
+        "lon": 130.438045,
+        "latSpan": 0.083187,
+        "lonSpan": 0.066703
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40522.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40544",
+      "label": "広川町",
+      "municipalityCodes": [
+        "40544"
+      ],
+      "shelterCount": 10,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.257495,
+        "lon": 130.56934,
+        "latSpan": 0.070733,
+        "lonSpan": 0.157924
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40544.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40601",
+      "label": "香春町",
+      "municipalityCodes": [
+        "40601"
+      ],
+      "shelterCount": 11,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.68764,
+        "lon": 130.856275,
+        "latSpan": 0.124956,
+        "lonSpan": 0.089063
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40601.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40602",
+      "label": "添田町",
+      "municipalityCodes": [
+        "40602"
+      ],
+      "shelterCount": 66,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.519845,
+        "lon": 130.880305,
+        "latSpan": 0.187629,
+        "lonSpan": 0.180921
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40602.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40604",
+      "label": "糸田町",
+      "municipalityCodes": [
+        "40604"
+      ],
+      "shelterCount": 11,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.6571,
+        "lon": 130.772125,
+        "latSpan": 0.046254,
+        "lonSpan": 0.053313
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40604.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40605",
+      "label": "川崎町",
+      "municipalityCodes": [
+        "40605"
+      ],
+      "shelterCount": 16,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.56637,
+        "lon": 130.81334,
+        "latSpan": 0.14742,
+        "lonSpan": 0.07332
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40605.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40608",
+      "label": "大任町",
+      "municipalityCodes": [
+        "40608"
+      ],
+      "shelterCount": 15,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.613595,
+        "lon": 130.85159,
+        "latSpan": 0.083811,
+        "lonSpan": 0.050362
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40608.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40609",
+      "label": "赤村",
+      "municipalityCodes": [
+        "40609"
+      ],
+      "shelterCount": 18,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.603515,
+        "lon": 130.88977,
+        "latSpan": 0.119769,
+        "lonSpan": 0.083876
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40609.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40610",
+      "label": "福智町",
+      "municipalityCodes": [
+        "40610"
+      ],
+      "shelterCount": 75,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.70364,
+        "lon": 130.78743,
+        "latSpan": 0.09984,
+        "lonSpan": 0.113386
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40610.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40621",
+      "label": "苅田町",
+      "municipalityCodes": [
+        "40621"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.78563,
+        "lon": 130.975555,
+        "latSpan": 0.129922,
+        "lonSpan": 0.172393
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40621.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40625",
+      "label": "みやこ町",
+      "municipalityCodes": [
+        "40625"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.61583,
+        "lon": 130.939185,
+        "latSpan": 0.333216,
+        "lonSpan": 0.185497
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40625.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40642",
+      "label": "吉富町",
+      "municipalityCodes": [
+        "40642"
+      ],
+      "shelterCount": 10,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.605285,
+        "lon": 131.16924,
+        "latSpan": 0.044343,
+        "lonSpan": 0.042458
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40642.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40646",
+      "label": "上毛町",
+      "municipalityCodes": [
+        "40646"
+      ],
+      "shelterCount": 12,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.549925,
+        "lon": 131.129385,
+        "latSpan": 0.125645,
+        "lonSpan": 0.159081
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40646.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "40647",
+      "label": "築上町",
+      "municipalityCodes": [
+        "40647"
+      ],
+      "shelterCount": 29,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.59916,
+        "lon": 131.024055,
+        "latSpan": 0.23764,
+        "lonSpan": 0.162773
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/fukuoka/districts-svg/40647.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

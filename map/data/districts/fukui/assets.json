@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "regionId": "fukui",
+  "publicBase": "/data/fukui",
+  "fileCount": 17,
+  "bytes": 11160275,
+  "files": [
+    {
+      "code": "18201",
+      "path": "districts-svg/18201.svg",
+      "bytes": 1799629
+    },
+    {
+      "code": "18202",
+      "path": "districts-svg/18202.svg",
+      "bytes": 913313
+    },
+    {
+      "code": "18204",
+      "path": "districts-svg/18204.svg",
+      "bytes": 972091
+    },
+    {
+      "code": "18205",
+      "path": "districts-svg/18205.svg",
+      "bytes": 983180
+    },
+    {
+      "code": "18206",
+      "path": "districts-svg/18206.svg",
+      "bytes": 304838
+    },
+    {
+      "code": "18207",
+      "path": "districts-svg/18207.svg",
+      "bytes": 350977
+    },
+    {
+      "code": "18208",
+      "path": "districts-svg/18208.svg",
+      "bytes": 334396
+    },
+    {
+      "code": "18209",
+      "path": "districts-svg/18209.svg",
+      "bytes": 718816
+    },
+    {
+      "code": "18210",
+      "path": "districts-svg/18210.svg",
+      "bytes": 762132
+    },
+    {
+      "code": "18322",
+      "path": "districts-svg/18322.svg",
+      "bytes": 680737
+    },
+    {
+      "code": "18382",
+      "path": "districts-svg/18382.svg",
+      "bytes": 194454
+    },
+    {
+      "code": "18404",
+      "path": "districts-svg/18404.svg",
+      "bytes": 377285
+    },
+    {
+      "code": "18423",
+      "path": "districts-svg/18423.svg",
+      "bytes": 682106
+    },
+    {
+      "code": "18442",
+      "path": "districts-svg/18442.svg",
+      "bytes": 486702
+    },
+    {
+      "code": "18481",
+      "path": "districts-svg/18481.svg",
+      "bytes": 379172
+    },
+    {
+      "code": "18483",
+      "path": "districts-svg/18483.svg",
+      "bytes": 557237
+    },
+    {
+      "code": "18501",
+      "path": "districts-svg/18501.svg",
+      "bytes": 663210
+    }
+  ]
+}

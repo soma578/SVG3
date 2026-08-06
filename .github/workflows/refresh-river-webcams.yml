@@ -1,0 +1,82 @@
+name: Refresh river webcam data
+
+on:
+  schedule:
+    # 台帳の新設・廃止反映用。毎月1日 02:17 UTC (11:17 JST)
+    - cron: '17 2 1 * *'
+  workflow_dispatch:
+    inputs:
+      refresh_metadata:
+        description: Refresh metadata for every camera (high upstream load)
+        required: false
+        type: boolean
+        default: false
+
+# 更新結果をリポジトリへ書き戻すため write が要る。
+# 月に1回、一覧の差分だけを取り込む。全カメラの個別メタデータ更新は
+# workflow_dispatch で refresh_metadata=true を指定した場合に限る。
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-river-webcams
+  cancel-in-progress: false
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Install frontend tooling
+        working-directory: frontend
+        run: npm ci
+      - name: Build camera data release
+        working-directory: frontend
+        env:
+          REFRESH_METADATA: ${{ inputs.refresh_metadata }}
+        run: |
+          args=(--output "$RUNNER_TEMP/japan-river-webcams")
+          if [[ "$REFRESH_METADATA" == "true" ]]; then
+            args+=(--refresh-metadata)
+          fi
+          npm run webcams:release -- "${args[@]}"
+      - name: Upload deployable release
+        uses: actions/upload-artifact@v4
+        with:
+          name: japan-river-webcams
+          path: ${{ runner.temp }}/japan-river-webcams
+          if-no-files-found: error
+          retention-days: 14
+
+      # artifact だけでは本番の台帳が更新されないため、検証済みsnapshotと
+      # 運用用source-healthをブランチへ書き戻す。差分が無ければ何もしない。
+      - name: Commit refreshed snapshot
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- \
+            map/sources/japan-river-webcams \
+            map/data/qtct/japanRiverWebcam \
+            map/data/search/japanRiverWebcam \
+            map/data/source-health/japanRiverWebcam.json \
+            map/data/layer-build-manifest.json
+          if git diff --cached --quiet; then
+            echo "no camera registry changes to commit"
+            exit 0
+          fi
+          git commit \
+            -m "chore(data): refresh river webcam registry" \
+            -m "Refreshed by the scheduled registry workflow. Upstream: 国土交通省 川の防災情報."
+          git push origin HEAD:"${GITHUB_REF_NAME}"
+
+      - name: Report resulting freshness
+        if: always()
+        working-directory: frontend
+        run: npm run source-health:check

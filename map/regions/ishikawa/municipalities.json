@@ -1,0 +1,405 @@
+{
+  "region": "ishikawa",
+  "label": "石川県",
+  "municipalities": [
+    {
+      "id": "17201",
+      "label": "金沢市",
+      "municipalityCodes": [
+        "17201"
+      ],
+      "shelterCount": 496,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.50619,
+        "lon": 136.68714,
+        "latSpan": 0.436722,
+        "lonSpan": 0.338208
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ishikawa/districts-svg/17201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "17202",
+      "label": "七尾市",
+      "municipalityCodes": [
+        "17202"
+      ],
+      "shelterCount": 120,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.08009,
+        "lon": 136.917815,
+        "latSpan": 0.314392,
+        "lonSpan": 0.364923
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ishikawa/districts-svg/17202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "17203",
+      "label": "小松市",
+      "municipalityCodes": [
+        "17203"
+      ],
+      "shelterCount": 98,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.29501,
+        "lon": 136.4922,
+        "latSpan": 0.385788,
+        "lonSpan": 0.311662
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ishikawa/districts-svg/17203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "17204",
+      "label": "輪島市",
+      "municipalityCodes": [
+        "17204"
+      ],
+      "shelterCount": 83,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.522915,
+        "lon": 136.93302,
+        "latSpan": 0.864279,
+        "lonSpan": 0.618826
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ishikawa/districts-svg/17204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "17205",
+      "label": "珠洲市",
+      "municipalityCodes": [
+        "17205"
+      ],
+      "shelterCount": 121,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.44526,
+        "lon": 137.22319,
+        "latSpan": 0.23231,
+        "lonSpan": 0.356954
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ishikawa/districts-svg/17205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "17206",
+      "label": "加賀市",
+      "municipalityCodes": [
+        "17206"
+      ],
+      "shelterCount": 80,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.259635,
+        "lon": 136.371585,
+        "latSpan": 0.320697,
+        "lonSpan": 0.330551
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ishikawa/districts-svg/17206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "17207",
+      "label": "羽咋市",
+      "municipalityCodes": [
+        "17207"
+      ],
+      "shelterCount": 42,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.91613,
+        "lon": 136.81751,
+        "latSpan": 0.133484,
+        "lonSpan": 0.177216
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ishikawa/districts-svg/17207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "17209",
+      "label": "かほく市",
+      "municipalityCodes": [
+        "17209"
+      ],
+      "shelterCount": 48,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.73694,
+        "lon": 136.74302,
+        "latSpan": 0.142142,
+        "lonSpan": 0.19136
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ishikawa/districts-svg/17209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "17210",
+      "label": "白山市",
+      "municipalityCodes": [
+        "17210"
+      ],
+      "shelterCount": 105,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.31749,
+        "lon": 136.658025,
+        "latSpan": 0.650676,
+        "lonSpan": 0.501605
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ishikawa/districts-svg/17210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "17211",
+      "label": "能美市",
+      "municipalityCodes": [
+        "17211"
+      ],
+      "shelterCount": 95,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.43019,
+        "lon": 136.52894,
+        "latSpan": 0.108186,
+        "lonSpan": 0.267072
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ishikawa/districts-svg/17211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "17212",
+      "label": "野々市市",
+      "municipalityCodes": [
+        "17212"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.525835,
+        "lon": 136.605575,
+        "latSpan": 0.075751,
+        "lonSpan": 0.065663
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ishikawa/districts-svg/17212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "17324",
+      "label": "川北町",
+      "municipalityCodes": [
+        "17324"
+      ],
+      "shelterCount": 15,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.469985,
+        "lon": 136.540985,
+        "latSpan": 0.04,
+        "lonSpan": 0.156689
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ishikawa/districts-svg/17324.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "17361",
+      "label": "津幡町",
+      "municipalityCodes": [
+        "17361"
+      ],
+      "shelterCount": 14,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.705735,
+        "lon": 136.765555,
+        "latSpan": 0.199719,
+        "lonSpan": 0.206869
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ishikawa/districts-svg/17361.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "17365",
+      "label": "内灘町",
+      "municipalityCodes": [
+        "17365"
+      ],
+      "shelterCount": 62,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.663305,
+        "lon": 136.655605,
+        "latSpan": 0.098085,
+        "lonSpan": 0.097149
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ishikawa/districts-svg/17365.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "17384",
+      "label": "志賀町",
+      "municipalityCodes": [
+        "17384"
+      ],
+      "shelterCount": 18,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.08282,
+        "lon": 136.76574,
+        "latSpan": 0.375908,
+        "lonSpan": 0.249808
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ishikawa/districts-svg/17384.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "17386",
+      "label": "宝達志水町",
+      "municipalityCodes": [
+        "17386"
+      ],
+      "shelterCount": 18,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.8232,
+        "lon": 136.79884,
+        "latSpan": 0.175552,
+        "lonSpan": 0.193856
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ishikawa/districts-svg/17386.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "17407",
+      "label": "中能登町",
+      "municipalityCodes": [
+        "17407"
+      ],
+      "shelterCount": 33,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.971065,
+        "lon": 136.904355,
+        "latSpan": 0.149539,
+        "lonSpan": 0.211965
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ishikawa/districts-svg/17407.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "17461",
+      "label": "穴水町",
+      "municipalityCodes": [
+        "17461"
+      ],
+      "shelterCount": 113,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.23707,
+        "lon": 136.935745,
+        "latSpan": 0.177164,
+        "lonSpan": 0.383591
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ishikawa/districts-svg/17461.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "17463",
+      "label": "能登町",
+      "municipalityCodes": [
+        "17463"
+      ],
+      "shelterCount": 154,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.325955,
+        "lon": 137.114885,
+        "latSpan": 0.206323,
+        "lonSpan": 0.397319
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ishikawa/districts-svg/17463.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

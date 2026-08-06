@@ -1,0 +1,3802 @@
+{
+  "region": "hokkaido",
+  "label": "北海道",
+  "municipalities": [
+    {
+      "id": "01100",
+      "label": "札幌市",
+      "municipalityCodes": [
+        "01101",
+        "01102",
+        "01103",
+        "01104",
+        "01105",
+        "01106",
+        "01107",
+        "01108",
+        "01109"
+      ],
+      "shelterCount": 633,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.98515,
+        "lon": 141.248005,
+        "latSpan": 0.531206,
+        "lonSpan": 0.669279
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01101.svg",
+        "/data/hokkaido/districts-svg/01102.svg",
+        "/data/hokkaido/districts-svg/01103.svg",
+        "/data/hokkaido/districts-svg/01104.svg",
+        "/data/hokkaido/districts-svg/01105.svg",
+        "/data/hokkaido/districts-svg/01106.svg",
+        "/data/hokkaido/districts-svg/01107.svg",
+        "/data/hokkaido/districts-svg/01108.svg",
+        "/data/hokkaido/districts-svg/01109.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01110",
+      "label": "清田区",
+      "municipalityCodes": [
+        "01110"
+      ],
+      "shelterCount": 0,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.957295,
+        "lon": 141.434475,
+        "latSpan": 0.178867,
+        "lonSpan": 0.124657
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01110.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01202",
+      "label": "函館市",
+      "municipalityCodes": [
+        "01202"
+      ],
+      "shelterCount": 301,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 41.859725,
+        "lon": 140.94002,
+        "latSpan": 0.389025,
+        "lonSpan": 0.64324
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01203",
+      "label": "小樽市",
+      "municipalityCodes": [
+        "01203"
+      ],
+      "shelterCount": 67,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.150065,
+        "lon": 141.06832,
+        "latSpan": 0.231985,
+        "lonSpan": 0.581126
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01204",
+      "label": "旭川市",
+      "municipalityCodes": [
+        "01204"
+      ],
+      "shelterCount": 264,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.75026,
+        "lon": 142.444745,
+        "latSpan": 0.535496,
+        "lonSpan": 0.770809
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01205",
+      "label": "室蘭市",
+      "municipalityCodes": [
+        "01205"
+      ],
+      "shelterCount": 295,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.36939,
+        "lon": 140.981355,
+        "latSpan": 0.176462,
+        "lonSpan": 0.189891
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01206",
+      "label": "釧路市",
+      "municipalityCodes": [
+        "01206"
+      ],
+      "shelterCount": 280,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.18653,
+        "lon": 144.09444,
+        "latSpan": 0.895128,
+        "lonSpan": 1.017354
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01207",
+      "label": "帯広市",
+      "municipalityCodes": [
+        "01207"
+      ],
+      "shelterCount": 103,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.783845,
+        "lon": 142.97813,
+        "latSpan": 0.439361,
+        "lonSpan": 0.754442
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01208",
+      "label": "北見市",
+      "municipalityCodes": [
+        "01208"
+      ],
+      "shelterCount": 180,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.888105,
+        "lon": 143.62932,
+        "latSpan": 0.771121,
+        "lonSpan": 1.281852
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01209",
+      "label": "夕張市",
+      "municipalityCodes": [
+        "01209"
+      ],
+      "shelterCount": 13,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.04206,
+        "lon": 142.116455,
+        "latSpan": 0.473876,
+        "lonSpan": 0.555685
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01210",
+      "label": "岩見沢市",
+      "municipalityCodes": [
+        "01210"
+      ],
+      "shelterCount": 54,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.206545,
+        "lon": 141.827125,
+        "latSpan": 0.341055,
+        "lonSpan": 0.563511
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01211",
+      "label": "網走市",
+      "municipalityCodes": [
+        "01211"
+      ],
+      "shelterCount": 103,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.94653,
+        "lon": 144.226465,
+        "latSpan": 0.439946,
+        "lonSpan": 0.538109
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01212",
+      "label": "留萌市",
+      "municipalityCodes": [
+        "01212"
+      ],
+      "shelterCount": 54,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.87518,
+        "lon": 141.754075,
+        "latSpan": 0.308568,
+        "lonSpan": 0.380081
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01213",
+      "label": "苫小牧市",
+      "municipalityCodes": [
+        "01213"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.681295,
+        "lon": 141.58439,
+        "latSpan": 0.276705,
+        "lonSpan": 0.63713
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01214",
+      "label": "稚内市",
+      "municipalityCodes": [
+        "01214"
+      ],
+      "shelterCount": 64,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 45.34626,
+        "lon": 141.810935,
+        "latSpan": 0.45942,
+        "lonSpan": 0.630487
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01215",
+      "label": "美唄市",
+      "municipalityCodes": [
+        "01215"
+      ],
+      "shelterCount": 10,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.334115,
+        "lon": 141.8782,
+        "latSpan": 0.222469,
+        "lonSpan": 0.477828
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01215.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01216",
+      "label": "芦別市",
+      "municipalityCodes": [
+        "01216"
+      ],
+      "shelterCount": 80,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.433685,
+        "lon": 142.207055,
+        "latSpan": 0.590291,
+        "lonSpan": 0.418769
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01216.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01217",
+      "label": "江別市",
+      "municipalityCodes": [
+        "01217"
+      ],
+      "shelterCount": 123,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.09439,
+        "lon": 141.556595,
+        "latSpan": 0.203632,
+        "lonSpan": 0.291733
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01217.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01218",
+      "label": "赤平市",
+      "municipalityCodes": [
+        "01218"
+      ],
+      "shelterCount": 40,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.566015,
+        "lon": 142.062245,
+        "latSpan": 0.212589,
+        "lonSpan": 0.225407
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01218.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01219",
+      "label": "紋別市",
+      "municipalityCodes": [
+        "01219"
+      ],
+      "shelterCount": 60,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.196455,
+        "lon": 143.327155,
+        "latSpan": 0.531271,
+        "lonSpan": 0.602901
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01219.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01220",
+      "label": "士別市",
+      "municipalityCodes": [
+        "01220"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.106115,
+        "lon": 142.537345,
+        "latSpan": 0.496873,
+        "lonSpan": 0.949533
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01220.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01221",
+      "label": "名寄市",
+      "municipalityCodes": [
+        "01221"
+      ],
+      "shelterCount": 49,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.327825,
+        "lon": 142.45921,
+        "latSpan": 0.403715,
+        "lonSpan": 0.471094
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01221.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01222",
+      "label": "三笠市",
+      "municipalityCodes": [
+        "01222"
+      ],
+      "shelterCount": 44,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.250745,
+        "lon": 141.979755,
+        "latSpan": 0.280267,
+        "lonSpan": 0.472589
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01222.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01223",
+      "label": "根室市",
+      "municipalityCodes": [
+        "01223"
+      ],
+      "shelterCount": 62,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.405155,
+        "lon": 145.81593,
+        "latSpan": 0.640419,
+        "lonSpan": 1.612858
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01223.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01224",
+      "label": "千歳市",
+      "municipalityCodes": [
+        "01224"
+      ],
+      "shelterCount": 152,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.81722,
+        "lon": 141.52222,
+        "latSpan": 0.353496,
+        "lonSpan": 0.904176
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01224.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01225",
+      "label": "滝川市",
+      "municipalityCodes": [
+        "01225"
+      ],
+      "shelterCount": 29,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.602715,
+        "lon": 141.982065,
+        "latSpan": 0.181155,
+        "lonSpan": 0.270569
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01225.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01226",
+      "label": "砂川市",
+      "municipalityCodes": [
+        "01226"
+      ],
+      "shelterCount": 12,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.506425,
+        "lon": 141.93392,
+        "latSpan": 0.148473,
+        "lonSpan": 0.165958
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01226.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01227",
+      "label": "歌志内市",
+      "municipalityCodes": [
+        "01227"
+      ],
+      "shelterCount": 25,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.485685,
+        "lon": 142.031195,
+        "latSpan": 0.128999,
+        "lonSpan": 0.161941
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01227.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01228",
+      "label": "深川市",
+      "municipalityCodes": [
+        "01228"
+      ],
+      "shelterCount": 48,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.840165,
+        "lon": 142.100935,
+        "latSpan": 0.544271,
+        "lonSpan": 0.361595
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01228.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01229",
+      "label": "富良野市",
+      "municipalityCodes": [
+        "01229"
+      ],
+      "shelterCount": 42,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.278605,
+        "lon": 142.474625,
+        "latSpan": 0.316979,
+        "lonSpan": 0.527683
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01229.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01230",
+      "label": "登別市",
+      "municipalityCodes": [
+        "01230"
+      ],
+      "shelterCount": 173,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.453365,
+        "lon": 141.07887,
+        "latSpan": 0.263757,
+        "lonSpan": 0.286702
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01230.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01231",
+      "label": "恵庭市",
+      "municipalityCodes": [
+        "01231"
+      ],
+      "shelterCount": 125,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.891665,
+        "lon": 141.44399,
+        "latSpan": 0.249457,
+        "lonSpan": 0.542568
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01231.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01233",
+      "label": "伊達市",
+      "municipalityCodes": [
+        "01233"
+      ],
+      "shelterCount": 68,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.603495,
+        "lon": 140.98611,
+        "latSpan": 0.581919,
+        "lonSpan": 0.553722
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01233.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01234",
+      "label": "北広島市",
+      "municipalityCodes": [
+        "01234"
+      ],
+      "shelterCount": 148,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.95813,
+        "lon": 141.505655,
+        "latSpan": 0.173342,
+        "lonSpan": 0.238121
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01234.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01235",
+      "label": "石狩市",
+      "municipalityCodes": [
+        "01235"
+      ],
+      "shelterCount": 64,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.435705,
+        "lon": 141.422865,
+        "latSpan": 0.785421,
+        "lonSpan": 0.455949
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01235.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01236",
+      "label": "北斗市",
+      "municipalityCodes": [
+        "01236"
+      ],
+      "shelterCount": 86,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 41.861125,
+        "lon": 140.57353,
+        "latSpan": 0.359541,
+        "lonSpan": 0.379678
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01236.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01303",
+      "label": "当別町",
+      "municipalityCodes": [
+        "01303"
+      ],
+      "shelterCount": 58,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.37292,
+        "lon": 141.563535,
+        "latSpan": 0.549562,
+        "lonSpan": 0.426985
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01303.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01304",
+      "label": "新篠津村",
+      "municipalityCodes": [
+        "01304"
+      ],
+      "shelterCount": 10,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.221885,
+        "lon": 141.61977,
+        "latSpan": 0.167037,
+        "lonSpan": 0.138346
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01304.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01331",
+      "label": "松前町",
+      "municipalityCodes": [
+        "01331"
+      ],
+      "shelterCount": 49,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 41.49214,
+        "lon": 139.771355,
+        "latSpan": 0.363532,
+        "lonSpan": 1.136213
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01331.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01332",
+      "label": "福島町",
+      "municipalityCodes": [
+        "01332"
+      ],
+      "shelterCount": 28,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 41.515765,
+        "lon": 140.286615,
+        "latSpan": 0.288821,
+        "lonSpan": 0.317577
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01332.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01333",
+      "label": "知内町",
+      "municipalityCodes": [
+        "01333"
+      ],
+      "shelterCount": 32,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 41.59285,
+        "lon": 140.32585,
+        "latSpan": 0.197938,
+        "lonSpan": 0.295984
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01333.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01334",
+      "label": "木古内町",
+      "municipalityCodes": [
+        "01334"
+      ],
+      "shelterCount": 19,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 41.7328,
+        "lon": 140.41881,
+        "latSpan": 0.210262,
+        "lonSpan": 0.355914
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01334.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01337",
+      "label": "七飯町",
+      "municipalityCodes": [
+        "01337"
+      ],
+      "shelterCount": 57,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 41.954575,
+        "lon": 140.68131,
+        "latSpan": 0.281905,
+        "lonSpan": 0.276068
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01337.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01343",
+      "label": "鹿部町",
+      "municipalityCodes": [
+        "01343"
+      ],
+      "shelterCount": 18,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.011945,
+        "lon": 140.770965,
+        "latSpan": 0.222027,
+        "lonSpan": 0.243555
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01343.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01345",
+      "label": "森町",
+      "municipalityCodes": [
+        "01345"
+      ],
+      "shelterCount": 46,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.068705,
+        "lon": 140.580405,
+        "latSpan": 0.280865,
+        "lonSpan": 0.485615
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01345.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01346",
+      "label": "八雲町",
+      "municipalityCodes": [
+        "01346"
+      ],
+      "shelterCount": 71,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.209025,
+        "lon": 140.188865,
+        "latSpan": 0.483197,
+        "lonSpan": 0.697125
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01346.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01347",
+      "label": "長万部町",
+      "municipalityCodes": [
+        "01347"
+      ],
+      "shelterCount": 30,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.503415,
+        "lon": 140.366525,
+        "latSpan": 0.334087,
+        "lonSpan": 0.464711
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01347.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01361",
+      "label": "江差町",
+      "municipalityCodes": [
+        "01361"
+      ],
+      "shelterCount": 59,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 41.892955,
+        "lon": 140.18567,
+        "latSpan": 0.216385,
+        "lonSpan": 0.195988
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01361.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01362",
+      "label": "上ノ国町",
+      "municipalityCodes": [
+        "01362"
+      ],
+      "shelterCount": 62,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 41.716475,
+        "lon": 140.17505,
+        "latSpan": 0.365365,
+        "lonSpan": 0.475826
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01362.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01363",
+      "label": "厚沢部町",
+      "municipalityCodes": [
+        "01363"
+      ],
+      "shelterCount": 27,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 41.91994,
+        "lon": 140.3125,
+        "latSpan": 0.345774,
+        "lonSpan": 0.41873
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01363.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01364",
+      "label": "乙部町",
+      "municipalityCodes": [
+        "01364"
+      ],
+      "shelterCount": 58,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.02279,
+        "lon": 140.175075,
+        "latSpan": 0.182546,
+        "lonSpan": 0.272805
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01364.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01367",
+      "label": "奥尻町",
+      "municipalityCodes": [
+        "01367"
+      ],
+      "shelterCount": 23,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.133895,
+        "lon": 139.482955,
+        "latSpan": 0.308321,
+        "lonSpan": 0.202761
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01367.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01370",
+      "label": "今金町",
+      "municipalityCodes": [
+        "01370"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.444935,
+        "lon": 140.094215,
+        "latSpan": 0.449163,
+        "lonSpan": 0.446979
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01370.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01371",
+      "label": "せたな町",
+      "municipalityCodes": [
+        "01371"
+      ],
+      "shelterCount": 67,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.37589,
+        "lon": 139.90223,
+        "latSpan": 0.62517,
+        "lonSpan": 0.353392
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01371.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01391",
+      "label": "島牧村",
+      "municipalityCodes": [
+        "01391"
+      ],
+      "shelterCount": 50,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.67576,
+        "lon": 140.02756,
+        "latSpan": 0.339768,
+        "lonSpan": 0.53144
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01391.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01392",
+      "label": "寿都町",
+      "municipalityCodes": [
+        "01392"
+      ],
+      "shelterCount": 33,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.79916,
+        "lon": 140.276865,
+        "latSpan": 0.203866,
+        "lonSpan": 0.269425
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01392.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01393",
+      "label": "黒松内町",
+      "municipalityCodes": [
+        "01393"
+      ],
+      "shelterCount": 34,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.67927,
+        "lon": 140.37606,
+        "latSpan": 0.238056,
+        "lonSpan": 0.469664
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01393.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01394",
+      "label": "蘭越町",
+      "municipalityCodes": [
+        "01394"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.77432,
+        "lon": 140.50089,
+        "latSpan": 0.361166,
+        "lonSpan": 0.370084
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01394.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01395",
+      "label": "ニセコ町",
+      "municipalityCodes": [
+        "01395"
+      ],
+      "shelterCount": 29,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.79221,
+        "lon": 140.684555,
+        "latSpan": 0.220948,
+        "lonSpan": 0.317941
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01395.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01396",
+      "label": "真狩村",
+      "municipalityCodes": [
+        "01396"
+      ],
+      "shelterCount": 15,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.74231,
+        "lon": 140.815115,
+        "latSpan": 0.220012,
+        "lonSpan": 0.247793
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01396.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01397",
+      "label": "留寿都村",
+      "municipalityCodes": [
+        "01397"
+      ],
+      "shelterCount": 14,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.72091,
+        "lon": 140.89405,
+        "latSpan": 0.134056,
+        "lonSpan": 0.302484
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01397.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01398",
+      "label": "喜茂別町",
+      "municipalityCodes": [
+        "01398"
+      ],
+      "shelterCount": 22,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.80079,
+        "lon": 140.95698,
+        "latSpan": 0.221208,
+        "lonSpan": 0.390364
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01398.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01399",
+      "label": "京極町",
+      "municipalityCodes": [
+        "01399"
+      ],
+      "shelterCount": 1,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.895465,
+        "lon": 140.929795,
+        "latSpan": 0.235781,
+        "lonSpan": 0.319683
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01399.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01400",
+      "label": "倶知安町",
+      "municipalityCodes": [
+        "01400"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.916745,
+        "lon": 140.77076,
+        "latSpan": 0.249405,
+        "lonSpan": 0.397358
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01400.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01401",
+      "label": "共和町",
+      "municipalityCodes": [
+        "01401"
+      ],
+      "shelterCount": 29,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.991955,
+        "lon": 140.647195,
+        "latSpan": 0.271349,
+        "lonSpan": 0.322881
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01401.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01402",
+      "label": "岩内町",
+      "municipalityCodes": [
+        "01402"
+      ],
+      "shelterCount": 15,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.94932,
+        "lon": 140.457905,
+        "latSpan": 0.128908,
+        "lonSpan": 0.200291
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01402.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01403",
+      "label": "泊村",
+      "municipalityCodes": [
+        "01403"
+      ],
+      "shelterCount": 18,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.09394,
+        "lon": 140.517705,
+        "latSpan": 0.170534,
+        "lonSpan": 0.189475
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01403.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01404",
+      "label": "神恵内村",
+      "municipalityCodes": [
+        "01404"
+      ],
+      "shelterCount": 11,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.200355,
+        "lon": 140.43268,
+        "latSpan": 0.211861,
+        "lonSpan": 0.28067
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01404.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01405",
+      "label": "積丹町",
+      "municipalityCodes": [
+        "01405"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.29368,
+        "lon": 140.483245,
+        "latSpan": 0.213148,
+        "lonSpan": 0.381693
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01405.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01406",
+      "label": "古平町",
+      "municipalityCodes": [
+        "01406"
+      ],
+      "shelterCount": 31,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.186505,
+        "lon": 140.613305,
+        "latSpan": 0.281541,
+        "lonSpan": 0.226213
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01406.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01407",
+      "label": "仁木町",
+      "municipalityCodes": [
+        "01407"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.08855,
+        "lon": 140.73259,
+        "latSpan": 0.224874,
+        "lonSpan": 0.261846
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01407.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01408",
+      "label": "余市町",
+      "municipalityCodes": [
+        "01408"
+      ],
+      "shelterCount": 55,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.180655,
+        "lon": 140.78579,
+        "latSpan": 0.181987,
+        "lonSpan": 0.357994
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01408.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01409",
+      "label": "赤井川村",
+      "municipalityCodes": [
+        "01409"
+      ],
+      "shelterCount": 10,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.0435,
+        "lon": 140.90299,
+        "latSpan": 0.231088,
+        "lonSpan": 0.369252
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01409.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01423",
+      "label": "南幌町",
+      "municipalityCodes": [
+        "01423"
+      ],
+      "shelterCount": 19,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.058965,
+        "lon": 141.63666,
+        "latSpan": 0.160433,
+        "lonSpan": 0.188084
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01423.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01424",
+      "label": "奈井江町",
+      "municipalityCodes": [
+        "01424"
+      ],
+      "shelterCount": 19,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.41632,
+        "lon": 141.938395,
+        "latSpan": 0.115206,
+        "lonSpan": 0.300079
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01424.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01425",
+      "label": "上砂川町",
+      "municipalityCodes": [
+        "01425"
+      ],
+      "shelterCount": 12,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.446715,
+        "lon": 142.00887,
+        "latSpan": 0.098007,
+        "lonSpan": 0.165282
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01425.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01427",
+      "label": "由仁町",
+      "municipalityCodes": [
+        "01427"
+      ],
+      "shelterCount": 12,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.945345,
+        "lon": 141.89486,
+        "latSpan": 0.280605,
+        "lonSpan": 0.386672
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01427.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01428",
+      "label": "長沼町",
+      "municipalityCodes": [
+        "01428"
+      ],
+      "shelterCount": 9,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.98447,
+        "lon": 141.674815,
+        "latSpan": 0.258596,
+        "lonSpan": 0.247247
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01428.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01429",
+      "label": "栗山町",
+      "municipalityCodes": [
+        "01429"
+      ],
+      "shelterCount": 23,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.016205,
+        "lon": 141.86418,
+        "latSpan": 0.296387,
+        "lonSpan": 0.283426
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01429.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01430",
+      "label": "月形町",
+      "municipalityCodes": [
+        "01430"
+      ],
+      "shelterCount": 13,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.3716,
+        "lon": 141.677215,
+        "latSpan": 0.22893,
+        "lonSpan": 0.249717
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01430.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01431",
+      "label": "浦臼町",
+      "municipalityCodes": [
+        "01431"
+      ],
+      "shelterCount": 14,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.42894,
+        "lon": 141.794055,
+        "latSpan": 0.188266,
+        "lonSpan": 0.191451
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01431.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01432",
+      "label": "新十津川町",
+      "municipalityCodes": [
+        "01432"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.57568,
+        "lon": 141.697495,
+        "latSpan": 0.344968,
+        "lonSpan": 0.537875
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01432.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01433",
+      "label": "妹背牛町",
+      "municipalityCodes": [
+        "01433"
+      ],
+      "shelterCount": 10,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.70548,
+        "lon": 141.94695,
+        "latSpan": 0.112866,
+        "lonSpan": 0.124254
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01433.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01434",
+      "label": "秩父別町",
+      "municipalityCodes": [
+        "01434"
+      ],
+      "shelterCount": 8,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.77953,
+        "lon": 141.952435,
+        "latSpan": 0.090428,
+        "lonSpan": 0.149071
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01434.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01436",
+      "label": "雨竜町",
+      "municipalityCodes": [
+        "01436"
+      ],
+      "shelterCount": 16,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.676615,
+        "lon": 141.72321,
+        "latSpan": 0.181181,
+        "lonSpan": 0.515268
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01436.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01437",
+      "label": "北竜町",
+      "municipalityCodes": [
+        "01437"
+      ],
+      "shelterCount": 6,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.77825,
+        "lon": 141.71767,
+        "latSpan": 0.189956,
+        "lonSpan": 0.504972
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01437.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01438",
+      "label": "沼田町",
+      "municipalityCodes": [
+        "01438"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.886875,
+        "lon": 141.97204,
+        "latSpan": 0.310505,
+        "lonSpan": 0.295516
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01438.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01452",
+      "label": "鷹栖町",
+      "municipalityCodes": [
+        "01452"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.87479,
+        "lon": 142.346335,
+        "latSpan": 0.22893,
+        "lonSpan": 0.195169
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01452.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01453",
+      "label": "東神楽町",
+      "municipalityCodes": [
+        "01453"
+      ],
+      "shelterCount": 30,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.678175,
+        "lon": 142.510555,
+        "latSpan": 0.138671,
+        "lonSpan": 0.309933
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01453.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01454",
+      "label": "当麻町",
+      "municipalityCodes": [
+        "01454"
+      ],
+      "shelterCount": 23,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.81824,
+        "lon": 142.58514,
+        "latSpan": 0.206232,
+        "lonSpan": 0.33176
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01454.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01455",
+      "label": "比布町",
+      "municipalityCodes": [
+        "01455"
+      ],
+      "shelterCount": 9,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.916095,
+        "lon": 142.48802,
+        "latSpan": 0.200811,
+        "lonSpan": 0.145444
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01455.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01456",
+      "label": "愛別町",
+      "municipalityCodes": [
+        "01456"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.928975,
+        "lon": 142.64229,
+        "latSpan": 0.260663,
+        "lonSpan": 0.343122
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01456.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01457",
+      "label": "上川町",
+      "municipalityCodes": [
+        "01457"
+      ],
+      "shelterCount": 29,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.7397,
+        "lon": 142.93058,
+        "latSpan": 0.554892,
+        "lonSpan": 0.64766
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01457.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01458",
+      "label": "東川町",
+      "municipalityCodes": [
+        "01458"
+      ],
+      "shelterCount": 41,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.68318,
+        "lon": 142.69027,
+        "latSpan": 0.17563,
+        "lonSpan": 0.564408
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01458.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01459",
+      "label": "美瑛町",
+      "municipalityCodes": [
+        "01459"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.543285,
+        "lon": 142.61632,
+        "latSpan": 0.326729,
+        "lonSpan": 0.768872
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01459.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01460",
+      "label": "上富良野町",
+      "municipalityCodes": [
+        "01460"
+      ],
+      "shelterCount": 61,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.466305,
+        "lon": 142.53417,
+        "latSpan": 0.220337,
+        "lonSpan": 0.395564
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01460.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01461",
+      "label": "中富良野町",
+      "municipalityCodes": [
+        "01461"
+      ],
+      "shelterCount": 42,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.411425,
+        "lon": 142.453585,
+        "latSpan": 0.155909,
+        "lonSpan": 0.281125
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01461.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01462",
+      "label": "南富良野町",
+      "municipalityCodes": [
+        "01462"
+      ],
+      "shelterCount": 12,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.204245,
+        "lon": 142.51135,
+        "latSpan": 0.518323,
+        "lonSpan": 0.696202
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01462.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01463",
+      "label": "占冠村",
+      "municipalityCodes": [
+        "01463"
+      ],
+      "shelterCount": 4,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.00845,
+        "lon": 142.50028,
+        "latSpan": 0.324012,
+        "lonSpan": 0.591474
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01463.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01464",
+      "label": "和寒町",
+      "municipalityCodes": [
+        "01464"
+      ],
+      "shelterCount": 22,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.026435,
+        "lon": 142.36366,
+        "latSpan": 0.225901,
+        "lonSpan": 0.332696
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01464.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01465",
+      "label": "剣淵町",
+      "municipalityCodes": [
+        "01465"
+      ],
+      "shelterCount": 20,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.11182,
+        "lon": 142.357855,
+        "latSpan": 0.193856,
+        "lonSpan": 0.233389
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01465.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01468",
+      "label": "下川町",
+      "municipalityCodes": [
+        "01468"
+      ],
+      "shelterCount": 25,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.313685,
+        "lon": 142.705745,
+        "latSpan": 0.447031,
+        "lonSpan": 0.455013
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01468.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01469",
+      "label": "美深町",
+      "municipalityCodes": [
+        "01469"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.532085,
+        "lon": 142.41828,
+        "latSpan": 0.360763,
+        "lonSpan": 0.620906
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01469.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01470",
+      "label": "音威子府村",
+      "municipalityCodes": [
+        "01470"
+      ],
+      "shelterCount": 10,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.714965,
+        "lon": 142.27919,
+        "latSpan": 0.291239,
+        "lonSpan": 0.361972
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01470.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01471",
+      "label": "中川町",
+      "municipalityCodes": [
+        "01471"
+      ],
+      "shelterCount": 5,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.682605,
+        "lon": 142.09943,
+        "latSpan": 0.579189,
+        "lonSpan": 0.319878
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01471.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01472",
+      "label": "幌加内町",
+      "municipalityCodes": [
+        "01472"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.191625,
+        "lon": 142.172705,
+        "latSpan": 0.744289,
+        "lonSpan": 0.393055
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01472.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01481",
+      "label": "増毛町",
+      "municipalityCodes": [
+        "01481"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.79378,
+        "lon": 141.521085,
+        "latSpan": 0.284284,
+        "lonSpan": 0.477503
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01481.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01482",
+      "label": "小平町",
+      "municipalityCodes": [
+        "01482"
+      ],
+      "shelterCount": 27,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.070125,
+        "lon": 141.86449,
+        "latSpan": 0.376389,
+        "lonSpan": 0.555594
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01482.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01483",
+      "label": "苫前町",
+      "municipalityCodes": [
+        "01483"
+      ],
+      "shelterCount": 34,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.21934,
+        "lon": 141.86777,
+        "latSpan": 0.332436,
+        "lonSpan": 0.573066
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01483.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01484",
+      "label": "羽幌町",
+      "municipalityCodes": [
+        "01484"
+      ],
+      "shelterCount": 49,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.33115,
+        "lon": 141.67946,
+        "latSpan": 0.322634,
+        "lonSpan": 1.005992
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01484.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01485",
+      "label": "初山別村",
+      "municipalityCodes": [
+        "01485"
+      ],
+      "shelterCount": 16,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.5152,
+        "lon": 141.843085,
+        "latSpan": 0.332124,
+        "lonSpan": 0.249665
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01485.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01486",
+      "label": "遠別町",
+      "municipalityCodes": [
+        "01486"
+      ],
+      "shelterCount": 5,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.600265,
+        "lon": 141.93936,
+        "latSpan": 0.637481,
+        "lonSpan": 0.457574
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01486.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01487",
+      "label": "天塩町",
+      "municipalityCodes": [
+        "01487"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.87885,
+        "lon": 141.871395,
+        "latSpan": 0.297362,
+        "lonSpan": 0.407693
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01487.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01511",
+      "label": "猿払村",
+      "municipalityCodes": [
+        "01511"
+      ],
+      "shelterCount": 19,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 45.226545,
+        "lon": 142.151955,
+        "latSpan": 0.457067,
+        "lonSpan": 0.501657
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01511.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01512",
+      "label": "浜頓別町",
+      "municipalityCodes": [
+        "01512"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 45.08137,
+        "lon": 142.328645,
+        "latSpan": 0.288574,
+        "lonSpan": 0.456885
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01512.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01513",
+      "label": "中頓別町",
+      "municipalityCodes": [
+        "01513"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.90141,
+        "lon": 142.2786,
+        "latSpan": 0.320996,
+        "lonSpan": 0.395902
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01513.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01514",
+      "label": "枝幸町",
+      "municipalityCodes": [
+        "01514"
+      ],
+      "shelterCount": 59,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.819085,
+        "lon": 142.57236,
+        "latSpan": 0.626561,
+        "lonSpan": 0.70122
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01514.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01516",
+      "label": "豊富町",
+      "municipalityCodes": [
+        "01516"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 45.152685,
+        "lon": 141.798805,
+        "latSpan": 0.315523,
+        "lonSpan": 0.573443
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01516.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01517",
+      "label": "礼文町",
+      "municipalityCodes": [
+        "01517"
+      ],
+      "shelterCount": 72,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 45.377055,
+        "lon": 141.01517,
+        "latSpan": 0.267969,
+        "lonSpan": 0.135616
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01517.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01518",
+      "label": "利尻町",
+      "municipalityCodes": [
+        "01518"
+      ],
+      "shelterCount": 30,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 45.160745,
+        "lon": 141.19161,
+        "latSpan": 0.165711,
+        "lonSpan": 0.168428
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01518.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01519",
+      "label": "利尻富士町",
+      "municipalityCodes": [
+        "01519"
+      ],
+      "shelterCount": 10,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 45.17994,
+        "lon": 141.23971,
+        "latSpan": 0.20605,
+        "lonSpan": 0.235586
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01519.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01520",
+      "label": "幌延町",
+      "municipalityCodes": [
+        "01520"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.989345,
+        "lon": 141.91811,
+        "latSpan": 0.288951,
+        "lonSpan": 0.662038
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01520.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01543",
+      "label": "美幌町",
+      "municipalityCodes": [
+        "01543"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.745675,
+        "lon": 144.12146,
+        "latSpan": 0.384293,
+        "lonSpan": 0.54652
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01543.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01544",
+      "label": "津別町",
+      "municipalityCodes": [
+        "01544"
+      ],
+      "shelterCount": 19,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.614415,
+        "lon": 144.004805,
+        "latSpan": 0.398853,
+        "lonSpan": 0.598923
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01544.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01545",
+      "label": "斜里町",
+      "municipalityCodes": [
+        "01545"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.051055,
+        "lon": 144.945915,
+        "latSpan": 0.764543,
+        "lonSpan": 1.018485
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01545.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01546",
+      "label": "清里町",
+      "municipalityCodes": [
+        "01546"
+      ],
+      "shelterCount": 27,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.74204,
+        "lon": 144.60748,
+        "latSpan": 0.367536,
+        "lonSpan": 0.328276
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01546.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01547",
+      "label": "小清水町",
+      "municipalityCodes": [
+        "01547"
+      ],
+      "shelterCount": 6,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.817315,
+        "lon": 144.446615,
+        "latSpan": 0.360035,
+        "lonSpan": 0.298155
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01547.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01549",
+      "label": "訓子府町",
+      "municipalityCodes": [
+        "01549"
+      ],
+      "shelterCount": 36,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.700325,
+        "lon": 143.725205,
+        "latSpan": 0.217113,
+        "lonSpan": 0.281775
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01549.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01550",
+      "label": "置戸町",
+      "municipalityCodes": [
+        "01550"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.64201,
+        "lon": 143.4249,
+        "latSpan": 0.348036,
+        "lonSpan": 0.654966
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01550.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01552",
+      "label": "佐呂間町",
+      "municipalityCodes": [
+        "01552"
+      ],
+      "shelterCount": 34,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.00988,
+        "lon": 143.768835,
+        "latSpan": 0.349596,
+        "lonSpan": 0.514449
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01552.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01555",
+      "label": "遠軽町",
+      "municipalityCodes": [
+        "01555"
+      ],
+      "shelterCount": 56,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.904525,
+        "lon": 143.29894,
+        "latSpan": 0.540085,
+        "lonSpan": 0.758888
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01555.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01559",
+      "label": "湧別町",
+      "municipalityCodes": [
+        "01559"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.119915,
+        "lon": 143.59346,
+        "latSpan": 0.344773,
+        "lonSpan": 0.475774
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01559.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01560",
+      "label": "滝上町",
+      "municipalityCodes": [
+        "01560"
+      ],
+      "shelterCount": 10,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.102925,
+        "lon": 143.018085,
+        "latSpan": 0.490893,
+        "lonSpan": 0.467493
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01560.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01561",
+      "label": "興部町",
+      "municipalityCodes": [
+        "01561"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.392255,
+        "lon": 143.066235,
+        "latSpan": 0.274547,
+        "lonSpan": 0.545753
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01561.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01562",
+      "label": "西興部村",
+      "municipalityCodes": [
+        "01562"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.326905,
+        "lon": 142.93298,
+        "latSpan": 0.289705,
+        "lonSpan": 0.340236
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01562.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01563",
+      "label": "雄武町",
+      "municipalityCodes": [
+        "01563"
+      ],
+      "shelterCount": 20,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.559525,
+        "lon": 142.842165,
+        "latSpan": 0.331955,
+        "lonSpan": 0.671593
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01563.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01564",
+      "label": "大空町",
+      "municipalityCodes": [
+        "01564"
+      ],
+      "shelterCount": 43,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.837285,
+        "lon": 144.217245,
+        "latSpan": 0.339781,
+        "lonSpan": 0.443833
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01564.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01571",
+      "label": "豊浦町",
+      "municipalityCodes": [
+        "01571"
+      ],
+      "shelterCount": 25,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.64208,
+        "lon": 140.648,
+        "latSpan": 0.197106,
+        "lonSpan": 0.298558
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01571.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01575",
+      "label": "壮瞥町",
+      "municipalityCodes": [
+        "01575"
+      ],
+      "shelterCount": 23,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.57437,
+        "lon": 140.95683,
+        "latSpan": 0.184288,
+        "lonSpan": 0.341302
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01575.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01578",
+      "label": "白老町",
+      "municipalityCodes": [
+        "01578"
+      ],
+      "shelterCount": 102,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.58266,
+        "lon": 141.25505,
+        "latSpan": 0.341068,
+        "lonSpan": 0.441272
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01578.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01581",
+      "label": "厚真町",
+      "municipalityCodes": [
+        "01581"
+      ],
+      "shelterCount": 20,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.72814,
+        "lon": 141.94366,
+        "latSpan": 0.379418,
+        "lonSpan": 0.438516
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01581.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01584",
+      "label": "洞爺湖町",
+      "municipalityCodes": [
+        "01584"
+      ],
+      "shelterCount": 44,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.609935,
+        "lon": 140.84896,
+        "latSpan": 0.232817,
+        "lonSpan": 0.319618
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01584.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01585",
+      "label": "安平町",
+      "municipalityCodes": [
+        "01585"
+      ],
+      "shelterCount": 50,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.80904,
+        "lon": 141.84565,
+        "latSpan": 0.291798,
+        "lonSpan": 0.282802
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01585.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01586",
+      "label": "むかわ町",
+      "municipalityCodes": [
+        "01586"
+      ],
+      "shelterCount": 40,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.7578,
+        "lon": 142.105405,
+        "latSpan": 0.596258,
+        "lonSpan": 0.594347
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01586.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01601",
+      "label": "日高町",
+      "municipalityCodes": [
+        "01601"
+      ],
+      "shelterCount": 66,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.71553,
+        "lon": 142.37733,
+        "latSpan": 0.765102,
+        "lonSpan": 1.067222
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01601.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01602",
+      "label": "平取町",
+      "municipalityCodes": [
+        "01602"
+      ],
+      "shelterCount": 36,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.706505,
+        "lon": 142.37107,
+        "latSpan": 0.480935,
+        "lonSpan": 0.842348
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01602.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01604",
+      "label": "新冠町",
+      "municipalityCodes": [
+        "01604"
+      ],
+      "shelterCount": 63,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.54183,
+        "lon": 142.49324,
+        "latSpan": 0.511732,
+        "lonSpan": 0.704132
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01604.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01607",
+      "label": "浦河町",
+      "municipalityCodes": [
+        "01607"
+      ],
+      "shelterCount": 76,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.30152,
+        "lon": 142.882715,
+        "latSpan": 0.430118,
+        "lonSpan": 0.607321
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01607.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01608",
+      "label": "様似町",
+      "municipalityCodes": [
+        "01608"
+      ],
+      "shelterCount": 48,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.160635,
+        "lon": 143.033445,
+        "latSpan": 0.258999,
+        "lonSpan": 0.441051
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01608.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01609",
+      "label": "えりも町",
+      "municipalityCodes": [
+        "01609"
+      ],
+      "shelterCount": 49,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.05726,
+        "lon": 143.19702,
+        "latSpan": 0.345514,
+        "lonSpan": 0.335816
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01609.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01610",
+      "label": "新ひだか町",
+      "municipalityCodes": [
+        "01610"
+      ],
+      "shelterCount": 74,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.438205,
+        "lon": 142.61284,
+        "latSpan": 0.596089,
+        "lonSpan": 0.72358
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01610.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01631",
+      "label": "音更町",
+      "municipalityCodes": [
+        "01631"
+      ],
+      "shelterCount": 48,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.04606,
+        "lon": 143.208045,
+        "latSpan": 0.31317,
+        "lonSpan": 0.434993
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01631.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01632",
+      "label": "士幌町",
+      "municipalityCodes": [
+        "01632"
+      ],
+      "shelterCount": 22,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.163675,
+        "lon": 143.257685,
+        "latSpan": 0.223197,
+        "lonSpan": 0.410995
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01632.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01633",
+      "label": "上士幌町",
+      "municipalityCodes": [
+        "01633"
+      ],
+      "shelterCount": 16,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.39137,
+        "lon": 143.210315,
+        "latSpan": 0.529828,
+        "lonSpan": 0.524615
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01633.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01634",
+      "label": "鹿追町",
+      "municipalityCodes": [
+        "01634"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.2029,
+        "lon": 143.036515,
+        "latSpan": 0.49907,
+        "lonSpan": 0.296309
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01634.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01635",
+      "label": "新得町",
+      "municipalityCodes": [
+        "01635"
+      ],
+      "shelterCount": 33,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.291555,
+        "lon": 142.85863,
+        "latSpan": 0.723957,
+        "lonSpan": 0.485758
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01635.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01636",
+      "label": "清水町",
+      "municipalityCodes": [
+        "01636"
+      ],
+      "shelterCount": 27,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.9797,
+        "lon": 142.88256,
+        "latSpan": 0.365924,
+        "lonSpan": 0.368394
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01636.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01637",
+      "label": "芽室町",
+      "municipalityCodes": [
+        "01637"
+      ],
+      "shelterCount": 92,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.87841,
+        "lon": 142.932055,
+        "latSpan": 0.40651,
+        "lonSpan": 0.560105
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01637.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01638",
+      "label": "中札内村",
+      "municipalityCodes": [
+        "01638"
+      ],
+      "shelterCount": 19,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.6464,
+        "lon": 142.974185,
+        "latSpan": 0.22412,
+        "lonSpan": 0.579085
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01638.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01639",
+      "label": "更別村",
+      "municipalityCodes": [
+        "01639"
+      ],
+      "shelterCount": 14,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.64814,
+        "lon": 143.17144,
+        "latSpan": 0.201292,
+        "lonSpan": 0.34034
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01639.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01641",
+      "label": "大樹町",
+      "municipalityCodes": [
+        "01641"
+      ],
+      "shelterCount": 40,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.524255,
+        "lon": 143.17464,
+        "latSpan": 0.397111,
+        "lonSpan": 0.908752
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01641.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01642",
+      "label": "広尾町",
+      "municipalityCodes": [
+        "01642"
+      ],
+      "shelterCount": 49,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.304205,
+        "lon": 143.19426,
+        "latSpan": 0.374829,
+        "lonSpan": 0.505492
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01642.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01643",
+      "label": "幕別町",
+      "municipalityCodes": [
+        "01643"
+      ],
+      "shelterCount": 101,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.726055,
+        "lon": 143.327975,
+        "latSpan": 0.563667,
+        "lonSpan": 0.324051
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01643.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01644",
+      "label": "池田町",
+      "municipalityCodes": [
+        "01644"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.994645,
+        "lon": 143.455615,
+        "latSpan": 0.314067,
+        "lonSpan": 0.352495
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01644.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01645",
+      "label": "豊頃町",
+      "municipalityCodes": [
+        "01645"
+      ],
+      "shelterCount": 33,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.73371,
+        "lon": 143.509405,
+        "latSpan": 0.416624,
+        "lonSpan": 0.471497
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01645.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01646",
+      "label": "本別町",
+      "municipalityCodes": [
+        "01646"
+      ],
+      "shelterCount": 58,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.150635,
+        "lon": 143.591085,
+        "latSpan": 0.244179,
+        "lonSpan": 0.524095
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01646.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01647",
+      "label": "足寄町",
+      "municipalityCodes": [
+        "01647"
+      ],
+      "shelterCount": 62,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.374,
+        "lon": 143.62027,
+        "latSpan": 0.481754,
+        "lonSpan": 1.063478
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01647.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01648",
+      "label": "陸別町",
+      "municipalityCodes": [
+        "01648"
+      ],
+      "shelterCount": 19,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.493145,
+        "lon": 143.702955,
+        "latSpan": 0.383253,
+        "lonSpan": 0.641277
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01648.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01649",
+      "label": "浦幌町",
+      "municipalityCodes": [
+        "01649"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 42.931915,
+        "lon": 143.70918,
+        "latSpan": 0.604487,
+        "lonSpan": 0.416442
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01649.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01661",
+      "label": "釧路町",
+      "municipalityCodes": [
+        "01661"
+      ],
+      "shelterCount": 74,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.025625,
+        "lon": 144.591295,
+        "latSpan": 0.241787,
+        "lonSpan": 0.505349
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01661.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01662",
+      "label": "厚岸町",
+      "municipalityCodes": [
+        "01662"
+      ],
+      "shelterCount": 97,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.14919,
+        "lon": 144.788815,
+        "latSpan": 0.526474,
+        "lonSpan": 0.569465
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01662.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01663",
+      "label": "浜中町",
+      "municipalityCodes": [
+        "01663"
+      ],
+      "shelterCount": 20,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.124515,
+        "lon": 145.11933,
+        "latSpan": 0.347113,
+        "lonSpan": 0.53794
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01663.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01664",
+      "label": "標茶町",
+      "municipalityCodes": [
+        "01664"
+      ],
+      "shelterCount": 32,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.299795,
+        "lon": 144.527255,
+        "latSpan": 0.721747,
+        "lonSpan": 0.752895
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01664.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01665",
+      "label": "弟子屈町",
+      "municipalityCodes": [
+        "01665"
+      ],
+      "shelterCount": 30,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.546665,
+        "lon": 144.40587,
+        "latSpan": 0.411515,
+        "lonSpan": 0.49153
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01665.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01667",
+      "label": "鶴居村",
+      "municipalityCodes": [
+        "01667"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.263185,
+        "lon": 144.29001,
+        "latSpan": 0.495495,
+        "lonSpan": 0.418964
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01667.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01668",
+      "label": "白糠町",
+      "municipalityCodes": [
+        "01668"
+      ],
+      "shelterCount": 69,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.14794,
+        "lon": 143.991655,
+        "latSpan": 0.590954,
+        "lonSpan": 0.615979
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01668.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01691",
+      "label": "別海町",
+      "municipalityCodes": [
+        "01691"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.415165,
+        "lon": 145.014675,
+        "latSpan": 0.517985,
+        "lonSpan": 0.978211
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01691.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01692",
+      "label": "中標津町",
+      "municipalityCodes": [
+        "01692"
+      ],
+      "shelterCount": 32,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.581715,
+        "lon": 144.84204,
+        "latSpan": 0.312949,
+        "lonSpan": 0.705666
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01692.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01693",
+      "label": "標津町",
+      "municipalityCodes": [
+        "01693"
+      ],
+      "shelterCount": 32,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 43.732935,
+        "lon": 144.98318,
+        "latSpan": 0.440531,
+        "lonSpan": 0.68224
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01693.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "01694",
+      "label": "羅臼町",
+      "municipalityCodes": [
+        "01694"
+      ],
+      "shelterCount": 37,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 44.101115,
+        "lon": 145.12225,
+        "latSpan": 0.624507,
+        "lonSpan": 0.638274
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/hokkaido/districts-svg/01694.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

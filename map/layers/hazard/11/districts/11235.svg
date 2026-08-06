@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="12243.4 -4605.6 3205.3 2251.0"
+     pointer-events="none">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+
+  <g id="hazard-flood" fill="#3b82f6" fill-opacity="0.28" stroke="#1d4ed8" stroke-opacity="0.70" stroke-width="0.10" pointer-events="none">
+
+  </g>
+  <g id="hazard-tsunami-inundation" fill="#a855f7" fill-opacity="0.28" stroke="#7e22ce" stroke-opacity="0.70" stroke-width="0.10" pointer-events="none">
+
+  </g>
+  <g id="hazard-landslide-warning" fill="#f97316" fill-opacity="0.22" stroke="#c2410c" stroke-opacity="0.80" stroke-width="0.10" pointer-events="none">
+    <path d="M 13954.58 -3585.61 L 13954.62 -3585.64 L 13954.65 -3585.55 L 13954.59 -3585.60 L 13954.58 -3585.61 Z M 13954.87 -3584.99 L 13955.09 -3585.08 L 13955.03 -3585.14 L 13955.06 -3585.17 L 13955.12 -3585.13 L 13955.04 -3584.99 L 13954.87 -3584.98 L 13954.87 -3584.99 Z M 13954.71 -3584.88 L 13954.73 -3584.92 L 13954.77 -3584.88 L 13954.72 -3584.87 L 13954.71 -3584.88 Z M 13954.87 -3584.45 L 13954.91 -3584.47 L 13954.88 -3584.43 L 13954.87 -3584.45 Z M 13954.72 -3584.68 L 13954.76 -3584.71 L 13954.73 -3584.67 L 13954.72 -3584.68 Z M 13956.88 -3584.47 L 13956.99 -3584.50 L 13957.08 -3584.42 L 13956.89 -3584.47 L 13956.88 -3584.47 Z M 13956.51 -3584.08 L 13956.66 -3584.15 L 13956.73 -3584.13 L 13956.51 -3584.07 L 13956.51 -3584.08 Z M 13956.68 -3584.16 L 13956.73 -3584.15 L 13956.68 -3584.15 L 13956.68 -3584.16 Z M 13957.03 -3584.35 L 13957.09 -3584.36 L 13957.04 -3584.34 L 13957.03 -3584.35 Z" />
+  </g>
+  <g id="hazard-landslide-special" fill="#ef4444" fill-opacity="0.35" stroke="#991b1b" stroke-opacity="0.90" stroke-width="0.12" pointer-events="none">
+    <path d="M 13954.87 -3584.98 L 13955.02 -3585.00 L 13954.87 -3584.98 L 13954.87 -3584.98 Z M 13956.91 -3584.49 L 13957.04 -3584.47 L 13956.93 -3584.48 L 13956.91 -3584.49 Z M 13956.51 -3584.07 L 13956.72 -3584.13 L 13956.51 -3584.06 L 13956.51 -3584.07 Z M 13957.04 -3584.33 L 13957.09 -3584.37 L 13957.04 -3584.33 L 13957.04 -3584.33 Z" />
+  </g>
+</svg>

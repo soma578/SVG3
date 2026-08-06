@@ -1,0 +1,6 @@
+id,regionId,title,lat,lon,status,roadName,section,reason,startedAt,updatedAt,reporter,sourceUrl,note
+road-closure-kita-001,okayama,県道72号 冠水,34.6764,133.9027,flooded,県道72号,岡山市北区一宮付近,道路冠水,2026-07-12T07:10:00+09:00,2026-07-12T07:40:00+09:00,岡山市,https://www.pref.okayama.jp/,現地確認中
+road-closure-naka-001,okayama,旭川河川敷道路 通行止め,34.6659,133.9408,closed,旭川河川敷道路,相生橋北側,増水による閉鎖,2026-07-12T06:50:00+09:00,2026-07-12T07:30:00+09:00,岡山市,https://www.pref.okayama.jp/,
+road-closure-kurashiki-001,okayama,市道片側交互通行,34.5858,133.7716,restricted,市道,倉敷市酒津付近,倒木処理,2026-07-12T06:20:00+09:00,2026-07-12T07:15:00+09:00,倉敷市,https://www.pref.okayama.jp/,大型車注意
+road-closure-yakage-001,okayama,小田川沿い市道 通行止め,34.6269,133.5904,closed,町道,矢掛町小田川沿い,越水のおそれ,2026-07-12T07:00:00+09:00,2026-07-12T07:35:00+09:00,矢掛町,https://www.pref.okayama.jp/,
+road-closure-tsuyama-001,okayama,国道53号 規制解除,35.0693,134.0047,cleared,国道53号,津山市中心部,冠水解消,2026-07-12T05:40:00+09:00,2026-07-12T07:05:00+09:00,道路管理者,https://www.pref.okayama.jp/,

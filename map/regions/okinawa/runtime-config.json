@@ -1,0 +1,44 @@
+{
+  "version": "3",
+  "regionId": "okinawa",
+  "prefCode": "47",
+  "label": "沖縄県",
+  "engine": "svgmap",
+  "containerUrl": "/map/containers/Containers_webapp_denshi_47.svg",
+  "iconsBaseUrl": "/map/icons",
+  "initialViewport": {
+    "lat": 25.965455,
+    "lon": 127.132915,
+    "latSpan": 4.254844,
+    "lonSpan": 9.178261
+  },
+  "layers": {
+    "baseArea": {
+      "layerUrl": "/map/layers/overview/pref/47.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "evacuation": {
+      "dataUrl": "/map/data/evacuation/okinawa.json",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "teamActivity": {
+      "dataUrl": "/map/data/team-activity/okinawa.json",
+      "baseAreaLayerUrl": "/map/layers/overview/pref/47.svg",
+      "districtSvgUrlTemplate": "/data/okinawa/districts-svg/{code}.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "hazard": {
+      "layerUrl": "/map/layers/hazard/47/okinawa.svg",
+      "svgUrlTemplate": "/map/layers/hazard/47/districts/{code}.svg",
+      "runtimeVisible": false,
+      "opacity": 0.7
+    }
+  },
+  "interaction": {
+    "disableDefaultPopup": true,
+    "featureSelectEvent": true
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "version": "2",
+  "regionId": "toyama",
+  "prefCode": "16",
+  "label": "富山県",
+  "engine": "svgmap",
+  "containerUrl": "/map/containers/Containers_webapp_denshi_16.svg",
+  "iconsBaseUrl": "/map/icons",
+  "initialViewport": {
+    "lat": 36.62708,
+    "lon": 137.26596,
+    "latSpan": 0.869875,
+    "lonSpan": 1.182449
+  },
+  "layers": {
+    "baseArea": {
+      "layerUrl": "/map/layers/overview/pref/16.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "evacuation": {
+      "dataUrl": "/map/data/evacuation/toyama.json",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "teamActivity": {
+      "dataUrl": "/map/data/team-activity/toyama.json",
+      "baseAreaLayerUrl": "/map/layers/overview/pref/16.svg",
+      "districtSvgUrlTemplate": "/data/toyama/districts-svg/{code}.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "hazard": {
+      "layerUrl": "/map/layers/hazard/16/toyama.svg",
+      "svgUrlTemplate": "/map/layers/hazard/16/districts/{code}.svg",
+      "runtimeVisible": false,
+      "opacity": 0.7
+    }
+  },
+  "interaction": {
+    "disableDefaultPopup": true,
+    "featureSelectEvent": true
+  }
+}

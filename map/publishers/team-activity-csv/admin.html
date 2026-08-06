@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>チーム活動レイヤー管理</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+      color: #172033;
+      background: #f3f5f7;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 56px;
+      padding: 0 20px;
+      border-bottom: 1px solid #d7dde4;
+      background: #fff;
+    }
+    h1 { margin: 0; font-size: 17px; letter-spacing: 0; }
+    .pageNav { display: flex; align-items: center; gap: 6px; }
+    .navLink {
+      min-height: 34px;
+      padding: 7px 10px;
+      border-radius: 6px;
+      color: #176a63;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .navLink:hover,
+    .navLink:focus-visible { outline: none; background: #e7f4f2; }
+    .navCurrent { color: #667085; cursor: default; }
+    main { width: min(1040px, 100%); margin: 0 auto; padding: 20px; }
+    .toolbar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #d7dde4;
+    }
+    button, .fileButton {
+      min-height: 36px;
+      padding: 7px 12px;
+      border: 1px solid #aeb8c4;
+      border-radius: 6px;
+      background: #fff;
+      color: #172033;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button.primary { border-color: #12603f; background: #12603f; color: #fff; }
+    button:disabled { cursor: not-allowed; opacity: 0.45; }
+    input[type="file"] { position: absolute; width: 1px; height: 1px; opacity: 0; }
+    .publishControl { display: inline-flex; align-items: center; gap: 7px; margin-left: auto; font-weight: 700; }
+    .status {
+      min-height: 42px;
+      margin: 16px 0;
+      padding: 10px 12px;
+      border-left: 4px solid #64748b;
+      background: #fff;
+      font-size: 14px;
+    }
+    .status.error { border-left-color: #b42318; color: #8a1c13; }
+    .status.success { border-left-color: #12603f; color: #0f5132; }
+    .summary { display: flex; gap: 24px; margin: 12px 0; font-size: 14px; }
+    .summary strong { font-size: 20px; }
+    .tableWrap { overflow: auto; border: 1px solid #d7dde4; background: #fff; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 8px 10px; border-bottom: 1px solid #e5e9ee; text-align: left; white-space: nowrap; }
+    th { position: sticky; top: 0; background: #eef2f5; }
+    .empty { padding: 48px 16px; text-align: center; color: #667085; }
+    @media (max-width: 680px) {
+      header { align-items: flex-start; gap: 10px; padding: 12px 14px; }
+      .pageNav { flex-wrap: wrap; justify-content: flex-end; }
+      main { padding: 14px; }
+      .toolbar { align-items: stretch; flex-direction: column; }
+      .publishControl { margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>チーム活動レイヤー管理</h1>
+    <nav class="pageNav" aria-label="機能メニュー">
+      <a id="backLink" class="navLink" href="/map/webapp/native-map.html?regionId=okayama">防災マップ</a>
+      <span class="navLink navCurrent" aria-current="page">CSV管理</span>
+    </nav>
+  </header>
+  <main>
+    <div class="toolbar">
+      <label class="fileButton">
+        CSVを選択
+        <input id="csvFile" type="file" accept=".csv,text/csv" disabled>
+      </label>
+      <button id="writeButton" class="primary" type="button" disabled>mapへ書き出す</button>
+      <button id="zipButton" type="button" disabled>ZIPを保存</button>
+      <label class="publishControl">
+        <input id="published" type="checkbox" checked>
+        公開
+      </label>
+    </div>
+    <div id="status" class="status">CSVを選択してください。</div>
+    <div class="summary">
+      <span>有効レコード <strong id="recordCount">0</strong></span>
+      <span>エラー <strong id="errorCount">0</strong></span>
+    </div>
+    <div class="tableWrap">
+      <div id="empty" class="empty">プレビューなし</div>
+      <table id="preview" hidden>
+        <thead>
+          <tr><th>ID</th><th>名称</th><th>地域</th><th>状態</th><th>緯度</th><th>経度</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </main>
+  <script type="module">
+    import { buildCsvQtctArtifacts } from '../shared/csvQtctPipeline.mjs';
+    import { createZipArchive } from '../shared/zipArchive.mjs';
+
+    const csvFile = document.getElementById('csvFile');
+    const writeButton = document.getElementById('writeButton');
+    const zipButton = document.getElementById('zipButton');
+    const published = document.getElementById('published');
+    const status = document.getElementById('status');
+    const preview = document.getElementById('preview');
+    const previewBody = preview.querySelector('tbody');
+    const empty = document.getElementById('empty');
+    const recordCount = document.getElementById('recordCount');
+    const errorCount = document.getElementById('errorCount');
+    const backLink = document.getElementById('backLink');
+    let csvText = '';
+    let artifacts = null;
+    let regions = [];
+    let layerConfig = null;
+    let publisherConfig = null;
+
+    const returnPath = new URLSearchParams(location.search).get('return');
+    if (returnPath?.startsWith('/map/') && !returnPath.startsWith('//')) backLink.href = returnPath;
+
+    const setStatus = (message, tone = '') => {
+      status.textContent = message;
+      status.className = `status ${tone}`.trim();
+    };
+
+    const render = () => {
+      const records = artifacts?.records || [];
+      const errors = artifacts?.errors || [];
+      recordCount.textContent = String(records.length);
+      errorCount.textContent = String(errors.length);
+      previewBody.replaceChildren();
+      for (const record of records.slice(0, 100)) {
+        const tr = document.createElement('tr');
+        for (const value of [record.id, record.title, record.regionId, record.status, record.lat, record.lon]) {
+          const td = document.createElement('td');
+          td.textContent = String(value ?? '');
+          tr.appendChild(td);
+        }
+        previewBody.appendChild(tr);
+      }
+      preview.hidden = records.length === 0;
+      empty.hidden = records.length > 0;
+      writeButton.disabled = !csvText || errors.length > 0 || !('showDirectoryPicker' in window);
+      zipButton.disabled = !csvText || errors.length > 0;
+      if (errors.length > 0) setStatus(errors.slice(0, 8).join(' / '), 'error');
+      else if (records.length > 0) setStatus(`${records.length}件をQTCTへ変換できます。`, 'success');
+    };
+
+    const getDirectory = async (root, parts) => {
+      let current = root;
+      for (const part of parts) current = await current.getDirectoryHandle(part, { create: true });
+      return current;
+    };
+
+    const writeText = async (root, relativePath, text) => {
+      const parts = relativePath.split('/');
+      const fileName = parts.pop();
+      const dir = await getDirectory(root, parts);
+      const file = await dir.getFileHandle(fileName, { create: true });
+      const writable = await file.createWritable();
+      await writable.write(text);
+      await writable.close();
+    };
+
+    try {
+      const [response, publisherResponse] = await Promise.all([
+        fetch('/map/regions/index.json'),
+        fetch('./publisher.config.json'),
+      ]);
+      const [index, loadedPublisherConfig] = await Promise.all([response.json(), publisherResponse.json()]);
+      publisherConfig = loadedPublisherConfig;
+      regions = index.regions || [];
+      layerConfig = await fetch(publisherConfig.layerConfig).then((result) => result.json());
+      const publicationResponse = await fetch(publisherConfig.publication, { cache: 'no-store' });
+      if (publicationResponse.ok) {
+        const publication = await publicationResponse.json();
+        published.checked = publication.published !== false;
+      }
+      if (!('showDirectoryPicker' in window)) {
+        setStatus('このブラウザはローカルmap書き出しに対応していません。', 'error');
+      }
+      csvFile.disabled = false;
+    } catch (error) {
+      setStatus(`初期化に失敗しました: ${error.message}`, 'error');
+    }
+
+    csvFile.addEventListener('change', async () => {
+      const file = csvFile.files?.[0];
+      if (!file) return;
+      csvText = await file.text();
+      artifacts = buildCsvQtctArtifacts({ csvText, regions, config: layerConfig });
+      render();
+    });
+
+    writeButton.addEventListener('click', async () => {
+      if (!artifacts || artifacts.errors.length > 0) return;
+      try {
+        const mapRoot = await window.showDirectoryPicker({ mode: 'readwrite' });
+        setStatus('書き出し中...');
+        await writeText(mapRoot, publisherConfig.source.replace(/^\/map\//, ''), csvText);
+        await writeText(mapRoot, publisherConfig.publication.replace(/^\/map\//, ''), `${JSON.stringify({
+          published: published.checked,
+          updatedAt: new Date().toISOString(),
+        }, null, 2)}\n`);
+        for (const [relativePath, content] of artifacts.files) {
+          await writeText(mapRoot, relativePath, content);
+        }
+        setStatus(`書き出し完了: ${artifacts.records.length}件。Container再生成後に公開状態が確定します。`, 'success');
+      } catch (error) {
+        if (error?.name !== 'AbortError') setStatus(`書き出しに失敗しました: ${error.message}`, 'error');
+      }
+    });
+
+    zipButton.addEventListener('click', () => {
+      if (!artifacts || artifacts.errors.length > 0) return;
+      const files = new Map(artifacts.files);
+      const generatedAt = new Date().toISOString();
+      files.set(publisherConfig.source.replace(/^\/map\//, ''), csvText.endsWith('\n') ? csvText : `${csvText}\n`);
+      files.set(publisherConfig.publication.replace(/^\/map\//, ''), `${JSON.stringify({
+        published: published.checked,
+        updatedAt: generatedAt,
+      }, null, 2)}\n`);
+      files.set('publisher.archive.json', `${JSON.stringify({
+        schemaVersion: 1,
+        publisherId: publisherConfig.id,
+        generatedAt,
+        entries: [...files.keys()].sort(),
+      }, null, 2)}\n`);
+      const archive = createZipArchive(files);
+      const url = URL.createObjectURL(new Blob([archive], { type: 'application/zip' }));
+      const anchor = document.createElement('a');
+      anchor.href = url;
+      anchor.download = `team-activity-${new Date().toISOString().slice(0, 10)}.zip`;
+      anchor.click();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      setStatus(`${files.size}ファイルをZIPへまとめました。`, 'success');
+    });
+  </script>
+</body>
+</html>

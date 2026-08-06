@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="12243.4 -4605.6 3205.3 2251.0"
+     pointer-events="none">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+
+  <g id="hazard-flood" fill="#3b82f6" fill-opacity="0.28" stroke="#1d4ed8" stroke-opacity="0.70" stroke-width="0.10" pointer-events="none">
+
+  </g>
+  <g id="hazard-tsunami-inundation" fill="#a855f7" fill-opacity="0.28" stroke="#7e22ce" stroke-opacity="0.70" stroke-width="0.10" pointer-events="none">
+
+  </g>
+  <g id="hazard-landslide-warning" fill="#f97316" fill-opacity="0.22" stroke="#c2410c" stroke-opacity="0.80" stroke-width="0.10" pointer-events="none">
+    <path d="M 14098.11 -4307.90 L 14097.94 -4307.70 L 14097.81 -4307.70 L 14097.80 -4307.75 L 14097.97 -4307.96 L 14098.06 -4307.93 L 14098.11 -4307.90 Z M 14097.75 -4307.85 L 14097.81 -4307.79 L 14097.69 -4307.76 L 14097.75 -4307.84 L 14097.75 -4307.85 Z M 14099.29 -4306.53 L 14099.14 -4306.61 L 14098.82 -4306.93 L 14098.96 -4307.01 L 14099.34 -4306.63 L 14099.30 -4306.53 L 14099.29 -4306.53 Z M 14092.34 -4309.14 L 14092.23 -4308.71 L 14092.13 -4308.73 L 14092.25 -4309.10 L 14092.33 -4309.14 L 14092.34 -4309.14 Z M 14094.37 -4309.06 L 14094.40 -4309.17 L 14094.54 -4309.21 L 14094.58 -4309.15 L 14094.55 -4309.03 L 14094.41 -4309.04 L 14094.37 -4309.06 Z M 14095.55 -4309.11 L 14095.63 -4309.07 L 14095.64 -4308.88 L 14095.52 -4308.88 L 14095.52 -4309.08 L 14095.55 -4309.11 Z M 14077.45 -4308.70 L 14077.47 -4308.75 L 14077.55 -4308.75 L 14077.80 -4308.58 L 14077.71 -4308.51 L 14077.48 -4308.67 L 14077.45 -4308.70 Z" />
+  </g>
+  <g id="hazard-landslide-special" fill="#ef4444" fill-opacity="0.35" stroke="#991b1b" stroke-opacity="0.90" stroke-width="0.12" pointer-events="none">
+    <path d="M 14097.73 -4307.82 L 14097.79 -4307.77 L 14097.69 -4307.77 L 14097.72 -4307.81 L 14097.73 -4307.82 Z M 14099.32 -4306.54 L 14099.26 -4306.57 L 14099.31 -4306.56 L 14099.32 -4306.54 Z" />
+  </g>
+</svg>

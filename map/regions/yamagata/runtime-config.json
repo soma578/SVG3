@@ -1,0 +1,44 @@
+{
+  "version": "2",
+  "regionId": "yamagata",
+  "prefCode": "06",
+  "label": "山形県",
+  "engine": "svgmap",
+  "containerUrl": "/map/containers/Containers_webapp_denshi_06.svg",
+  "iconsBaseUrl": "/map/icons",
+  "initialViewport": {
+    "lat": 38.47119,
+    "lon": 140.08346,
+    "latSpan": 1.700698,
+    "lonSpan": 1.32408
+  },
+  "layers": {
+    "baseArea": {
+      "layerUrl": "/map/layers/overview/pref/06.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "evacuation": {
+      "dataUrl": "/map/data/evacuation/yamagata.json",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "teamActivity": {
+      "dataUrl": "/map/data/team-activity/yamagata.json",
+      "baseAreaLayerUrl": "/map/layers/overview/pref/06.svg",
+      "districtSvgUrlTemplate": "/data/yamagata/districts-svg/{code}.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "hazard": {
+      "layerUrl": "/map/layers/hazard/6/yamagata.svg",
+      "svgUrlTemplate": "/map/layers/hazard/6/districts/{code}.svg",
+      "runtimeVisible": false,
+      "opacity": 0.7
+    }
+  },
+  "interaction": {
+    "disableDefaultPopup": true,
+    "featureSelectEvent": true
+  }
+}

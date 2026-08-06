@@ -1,0 +1,749 @@
+{
+  "region": "miyagi",
+  "label": "宮城県",
+  "municipalities": [
+    {
+      "id": "04100",
+      "label": "仙台市",
+      "municipalityCodes": [
+        "04101",
+        "04102",
+        "04103",
+        "04104",
+        "04105"
+      ],
+      "shelterCount": 325,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.31413,
+        "lon": 140.76904,
+        "latSpan": 0.364364,
+        "lonSpan": 0.778804
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04101.svg",
+        "/data/miyagi/districts-svg/04102.svg",
+        "/data/miyagi/districts-svg/04103.svg",
+        "/data/miyagi/districts-svg/04104.svg",
+        "/data/miyagi/districts-svg/04105.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04202",
+      "label": "石巻市",
+      "municipalityCodes": [
+        "04202"
+      ],
+      "shelterCount": 300,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.43859,
+        "lon": 141.375065,
+        "latSpan": 0.500656,
+        "lonSpan": 0.556751
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04203",
+      "label": "塩竈市",
+      "municipalityCodes": [
+        "04203"
+      ],
+      "shelterCount": 45,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.328495,
+        "lon": 141.06312,
+        "latSpan": 0.066859,
+        "lonSpan": 0.179972
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04205",
+      "label": "気仙沼市",
+      "municipalityCodes": [
+        "04205"
+      ],
+      "shelterCount": 71,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.871005,
+        "lon": 141.536725,
+        "latSpan": 0.341575,
+        "lonSpan": 0.358553
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04206",
+      "label": "白石市",
+      "municipalityCodes": [
+        "04206"
+      ],
+      "shelterCount": 31,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.998155,
+        "lon": 140.586715,
+        "latSpan": 0.256321,
+        "lonSpan": 0.310011
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04207",
+      "label": "名取市",
+      "municipalityCodes": [
+        "04207"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.16448,
+        "lon": 140.87355,
+        "latSpan": 0.142272,
+        "lonSpan": 0.233012
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04208",
+      "label": "角田市",
+      "municipalityCodes": [
+        "04208"
+      ],
+      "shelterCount": 46,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.99469,
+        "lon": 140.771425,
+        "latSpan": 0.214396,
+        "lonSpan": 0.221663
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04209",
+      "label": "多賀城市",
+      "municipalityCodes": [
+        "04209"
+      ],
+      "shelterCount": 15,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.295315,
+        "lon": 141.00019,
+        "latSpan": 0.049179,
+        "lonSpan": 0.113724
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04211",
+      "label": "岩沼市",
+      "municipalityCodes": [
+        "04211"
+      ],
+      "shelterCount": 28,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.097495,
+        "lon": 140.859625,
+        "latSpan": 0.131469,
+        "lonSpan": 0.213707
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04212",
+      "label": "登米市",
+      "municipalityCodes": [
+        "04212"
+      ],
+      "shelterCount": 88,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.683905,
+        "lon": 141.23557,
+        "latSpan": 0.355251,
+        "lonSpan": 0.468312
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04213",
+      "label": "栗原市",
+      "municipalityCodes": [
+        "04213"
+      ],
+      "shelterCount": 296,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.79666,
+        "lon": 140.93678,
+        "latSpan": 0.435266,
+        "lonSpan": 0.596414
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04214",
+      "label": "東松島市",
+      "municipalityCodes": [
+        "04214"
+      ],
+      "shelterCount": 203,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.394795,
+        "lon": 141.176275,
+        "latSpan": 0.201721,
+        "lonSpan": 0.213733
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04215",
+      "label": "大崎市",
+      "municipalityCodes": [
+        "04215"
+      ],
+      "shelterCount": 227,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.6826,
+        "lon": 140.849635,
+        "latSpan": 0.627172,
+        "lonSpan": 0.808223
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04215.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04216",
+      "label": "富谷市",
+      "municipalityCodes": [
+        "04216"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.38176,
+        "lon": 140.898965,
+        "latSpan": 0.128258,
+        "lonSpan": 0.104845
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04216.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04301",
+      "label": "蔵王町",
+      "municipalityCodes": [
+        "04301"
+      ],
+      "shelterCount": 43,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.09207,
+        "lon": 140.574365,
+        "latSpan": 0.150436,
+        "lonSpan": 0.342511
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04301.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04302",
+      "label": "七ヶ宿町",
+      "municipalityCodes": [
+        "04302"
+      ],
+      "shelterCount": 14,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.038315,
+        "lon": 140.403865,
+        "latSpan": 0.237991,
+        "lonSpan": 0.334087
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04302.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04321",
+      "label": "大河原町",
+      "municipalityCodes": [
+        "04321"
+      ],
+      "shelterCount": 49,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.04957,
+        "lon": 140.71524,
+        "latSpan": 0.070408,
+        "lonSpan": 0.099814
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04321.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04322",
+      "label": "村田町",
+      "municipalityCodes": [
+        "04322"
+      ],
+      "shelterCount": 14,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.11969,
+        "lon": 140.716585,
+        "latSpan": 0.15912,
+        "lonSpan": 0.208039
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04322.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04323",
+      "label": "柴田町",
+      "municipalityCodes": [
+        "04323"
+      ],
+      "shelterCount": 33,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.08852,
+        "lon": 140.78889,
+        "latSpan": 0.126386,
+        "lonSpan": 0.119184
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04323.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04324",
+      "label": "川崎町",
+      "municipalityCodes": [
+        "04324"
+      ],
+      "shelterCount": 40,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.200645,
+        "lon": 140.597805,
+        "latSpan": 0.173901,
+        "lonSpan": 0.394927
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04324.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04341",
+      "label": "丸森町",
+      "municipalityCodes": [
+        "04341"
+      ],
+      "shelterCount": 40,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.870275,
+        "lon": 140.73994,
+        "latSpan": 0.252265,
+        "lonSpan": 0.315432
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04341.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04361",
+      "label": "亘理町",
+      "municipalityCodes": [
+        "04361"
+      ],
+      "shelterCount": 33,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.04193,
+        "lon": 140.87264,
+        "latSpan": 0.13754,
+        "lonSpan": 0.128726
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04361.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04362",
+      "label": "山元町",
+      "municipalityCodes": [
+        "04362"
+      ],
+      "shelterCount": 18,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.945945,
+        "lon": 140.88707,
+        "latSpan": 0.143117,
+        "lonSpan": 0.11466
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04362.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04401",
+      "label": "松島町",
+      "municipalityCodes": [
+        "04401"
+      ],
+      "shelterCount": 52,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.40027,
+        "lon": 141.07222,
+        "latSpan": 0.128466,
+        "lonSpan": 0.143078
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04401.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04404",
+      "label": "七ヶ浜町",
+      "municipalityCodes": [
+        "04404"
+      ],
+      "shelterCount": 55,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.30239,
+        "lon": 141.061105,
+        "latSpan": 0.066456,
+        "lonSpan": 0.075153
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04404.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04406",
+      "label": "利府町",
+      "municipalityCodes": [
+        "04406"
+      ],
+      "shelterCount": 135,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.34155,
+        "lon": 140.996515,
+        "latSpan": 0.08606,
+        "lonSpan": 0.163579
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04406.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04421",
+      "label": "大和町",
+      "municipalityCodes": [
+        "04421"
+      ],
+      "shelterCount": 29,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.42097,
+        "lon": 140.804555,
+        "latSpan": 0.193388,
+        "lonSpan": 0.464633
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04421.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04422",
+      "label": "大郷町",
+      "municipalityCodes": [
+        "04422"
+      ],
+      "shelterCount": 35,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.434395,
+        "lon": 141.005265,
+        "latSpan": 0.185809,
+        "lonSpan": 0.146263
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04422.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04424",
+      "label": "大衡村",
+      "municipalityCodes": [
+        "04424"
+      ],
+      "shelterCount": 30,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.478375,
+        "lon": 140.873375,
+        "latSpan": 0.090961,
+        "lonSpan": 0.226317
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04424.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04444",
+      "label": "色麻町",
+      "municipalityCodes": [
+        "04444"
+      ],
+      "shelterCount": 22,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.510065,
+        "lon": 140.75525,
+        "latSpan": 0.163241,
+        "lonSpan": 0.351936
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04444.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04445",
+      "label": "加美町",
+      "municipalityCodes": [
+        "04445"
+      ],
+      "shelterCount": 31,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.581505,
+        "lon": 140.722225,
+        "latSpan": 0.328393,
+        "lonSpan": 0.480363
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04445.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04501",
+      "label": "涌谷町",
+      "municipalityCodes": [
+        "04501"
+      ],
+      "shelterCount": 20,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.557085,
+        "lon": 141.1484,
+        "latSpan": 0.121017,
+        "lonSpan": 0.21489
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04501.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04505",
+      "label": "美里町",
+      "municipalityCodes": [
+        "04505"
+      ],
+      "shelterCount": 44,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.51565,
+        "lon": 141.085005,
+        "latSpan": 0.200824,
+        "lonSpan": 0.240045
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04505.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04581",
+      "label": "女川町",
+      "municipalityCodes": [
+        "04581"
+      ],
+      "shelterCount": 41,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.43865,
+        "lon": 141.502955,
+        "latSpan": 0.140296,
+        "lonSpan": 0.268047
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04581.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "04606",
+      "label": "南三陸町",
+      "municipalityCodes": [
+        "04606"
+      ],
+      "shelterCount": 52,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.67329,
+        "lon": 141.467015,
+        "latSpan": 0.208494,
+        "lonSpan": 0.258141
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/miyagi/districts-svg/04606.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

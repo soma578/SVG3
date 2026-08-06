@@ -1,0 +1,18 @@
+{
+  "id": "layer-offline-basemap",
+  "title": "オフライン背景",
+  "href": "/map/layers/offline-basemap/{regionId}.svg",
+  "class": "offline-fallback",
+  "visibility": "visible",
+  "opacity": "1",
+  "order": 5,
+  "ui": {
+    "catalog": false,
+    "userToggle": false,
+    "group": "背景",
+    "symbol": "背",
+    "accent": "#8c9aa3",
+    "kind": "vector",
+    "note": "オンライン背景の下に常時待機する軽量背景（県境・海岸線・地名）"
+  }
+}

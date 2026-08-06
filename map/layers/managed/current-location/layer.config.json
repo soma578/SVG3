@@ -1,0 +1,18 @@
+{
+  "id": "layer-current-location",
+  "title": "現在地",
+  "href": "/map/layers/portable/current-location/currentLocationLayer.svg",
+  "class": "vectorEtcData",
+  "visibility": "visible",
+  "opacity": "1",
+  "order": 900,
+  "layerPackage": "/map/layers/portable/current-location/layer.package.json",
+  "ui": {
+    "catalog": false,
+    "userToggle": false,
+    "messages": {
+      "toHost": [],
+      "fromHost": ["map:setCurrentLocation"]
+    }
+  }
+}

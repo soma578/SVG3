@@ -1,0 +1,44 @@
+{
+  "version": "2",
+  "regionId": "gunma",
+  "prefCode": "10",
+  "label": "群馬県",
+  "engine": "svgmap",
+  "containerUrl": "/map/containers/Containers_webapp_denshi_10.svg",
+  "iconsBaseUrl": "/map/icons",
+  "initialViewport": {
+    "lat": 36.521975,
+    "lon": 139.03354,
+    "latSpan": 1.267153,
+    "lonSpan": 1.482646
+  },
+  "layers": {
+    "baseArea": {
+      "layerUrl": "/map/layers/overview/pref/10.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "evacuation": {
+      "dataUrl": "/map/data/evacuation/gunma.json",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "teamActivity": {
+      "dataUrl": "/map/data/team-activity/gunma.json",
+      "baseAreaLayerUrl": "/map/layers/overview/pref/10.svg",
+      "districtSvgUrlTemplate": "/data/gunma/districts-svg/{code}.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "hazard": {
+      "layerUrl": "/map/layers/hazard/10/gunma.svg",
+      "svgUrlTemplate": "/map/layers/hazard/10/districts/{code}.svg",
+      "runtimeVisible": false,
+      "opacity": 0.7
+    }
+  },
+  "interaction": {
+    "disableDefaultPopup": true,
+    "featureSelectEvent": true
+  }
+}

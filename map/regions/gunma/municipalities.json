@@ -1,0 +1,741 @@
+{
+  "region": "gunma",
+  "label": "群馬県",
+  "municipalities": [
+    {
+      "id": "10201",
+      "label": "前橋市",
+      "municipalityCodes": [
+        "10201"
+      ],
+      "shelterCount": 238,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.439425,
+        "lon": 139.11601,
+        "latSpan": 0.319345,
+        "lonSpan": 0.295308
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10202",
+      "label": "高崎市",
+      "municipalityCodes": [
+        "10202"
+      ],
+      "shelterCount": 206,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.34113,
+        "lon": 138.886085,
+        "latSpan": 0.368862,
+        "lonSpan": 0.633295
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10203",
+      "label": "桐生市",
+      "municipalityCodes": [
+        "10203"
+      ],
+      "shelterCount": 148,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.47684,
+        "lon": 139.31989,
+        "latSpan": 0.307606,
+        "lonSpan": 0.341146
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10204",
+      "label": "伊勢崎市",
+      "municipalityCodes": [
+        "10204"
+      ],
+      "shelterCount": 145,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.32522,
+        "lon": 139.2093,
+        "latSpan": 0.21476,
+        "lonSpan": 0.18993
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10205",
+      "label": "太田市",
+      "municipalityCodes": [
+        "10205"
+      ],
+      "shelterCount": 149,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.307645,
+        "lon": 139.349705,
+        "latSpan": 0.184717,
+        "lonSpan": 0.244257
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10206",
+      "label": "沼田市",
+      "municipalityCodes": [
+        "10206"
+      ],
+      "shelterCount": 74,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.67811,
+        "lon": 139.178675,
+        "latSpan": 0.308568,
+        "lonSpan": 0.502619
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10207",
+      "label": "館林市",
+      "municipalityCodes": [
+        "10207"
+      ],
+      "shelterCount": 75,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.247585,
+        "lon": 139.542365,
+        "latSpan": 0.096499,
+        "lonSpan": 0.216463
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10208",
+      "label": "渋川市",
+      "municipalityCodes": [
+        "10208"
+      ],
+      "shelterCount": 243,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.52016,
+        "lon": 139.023505,
+        "latSpan": 0.186732,
+        "lonSpan": 0.379171
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10209",
+      "label": "藤岡市",
+      "municipalityCodes": [
+        "10209"
+      ],
+      "shelterCount": 54,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.20357,
+        "lon": 138.960625,
+        "latSpan": 0.227682,
+        "lonSpan": 0.391495
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10210",
+      "label": "富岡市",
+      "municipalityCodes": [
+        "10210"
+      ],
+      "shelterCount": 41,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.242925,
+        "lon": 138.844845,
+        "latSpan": 0.167661,
+        "lonSpan": 0.272571
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10211",
+      "label": "安中市",
+      "municipalityCodes": [
+        "10211"
+      ],
+      "shelterCount": 190,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.346125,
+        "lon": 138.80077,
+        "latSpan": 0.181441,
+        "lonSpan": 0.397488
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10212",
+      "label": "みどり市",
+      "municipalityCodes": [
+        "10212"
+      ],
+      "shelterCount": 74,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.50105,
+        "lon": 139.357665,
+        "latSpan": 0.344162,
+        "lonSpan": 0.327249
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10344",
+      "label": "榛東村",
+      "municipalityCodes": [
+        "10344"
+      ],
+      "shelterCount": 51,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.44193,
+        "lon": 138.951085,
+        "latSpan": 0.07748,
+        "lonSpan": 0.133497
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10344.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10345",
+      "label": "吉岡町",
+      "municipalityCodes": [
+        "10345"
+      ],
+      "shelterCount": 42,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.445745,
+        "lon": 138.985165,
+        "latSpan": 0.074269,
+        "lonSpan": 0.145743
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10345.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10366",
+      "label": "上野村",
+      "municipalityCodes": [
+        "10366"
+      ],
+      "shelterCount": 25,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.058995,
+        "lon": 138.729925,
+        "latSpan": 0.191529,
+        "lonSpan": 0.257881
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10366.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10367",
+      "label": "神流町",
+      "municipalityCodes": [
+        "10367"
+      ],
+      "shelterCount": 13,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.10086,
+        "lon": 138.86376,
+        "latSpan": 0.15483,
+        "lonSpan": 0.258778
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10367.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10382",
+      "label": "下仁田町",
+      "municipalityCodes": [
+        "10382"
+      ],
+      "shelterCount": 13,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.22034,
+        "lon": 138.72104,
+        "latSpan": 0.21502,
+        "lonSpan": 0.31382
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10382.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10383",
+      "label": "南牧村",
+      "municipalityCodes": [
+        "10383"
+      ],
+      "shelterCount": 19,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.165535,
+        "lon": 138.675125,
+        "latSpan": 0.127361,
+        "lonSpan": 0.254423
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10383.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10384",
+      "label": "甘楽町",
+      "municipalityCodes": [
+        "10384"
+      ],
+      "shelterCount": 12,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.21403,
+        "lon": 138.89466,
+        "latSpan": 0.140842,
+        "lonSpan": 0.178906
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10384.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10421",
+      "label": "中之条町",
+      "municipalityCodes": [
+        "10421"
+      ],
+      "shelterCount": 49,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.66152,
+        "lon": 138.717435,
+        "latSpan": 0.26689,
+        "lonSpan": 0.528489
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10421.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10424",
+      "label": "長野原町",
+      "municipalityCodes": [
+        "10424"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.49697,
+        "lon": 138.64245,
+        "latSpan": 0.222378,
+        "lonSpan": 0.20748
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10424.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10425",
+      "label": "嬬恋村",
+      "municipalityCodes": [
+        "10425"
+      ],
+      "shelterCount": 34,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.526095,
+        "lon": 138.49685,
+        "latSpan": 0.325429,
+        "lonSpan": 0.259272
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10425.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10426",
+      "label": "草津町",
+      "municipalityCodes": [
+        "10426"
+      ],
+      "shelterCount": 10,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.611925,
+        "lon": 138.577765,
+        "latSpan": 0.115531,
+        "lonSpan": 0.136903
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10426.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10428",
+      "label": "高山村",
+      "municipalityCodes": [
+        "10428"
+      ],
+      "shelterCount": 5,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.621285,
+        "lon": 138.941635,
+        "latSpan": 0.106509,
+        "lonSpan": 0.139373
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10428.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10429",
+      "label": "東吾妻町",
+      "municipalityCodes": [
+        "10429"
+      ],
+      "shelterCount": 23,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.525145,
+        "lon": 138.796155,
+        "latSpan": 0.190931,
+        "lonSpan": 0.406835
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10429.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10443",
+      "label": "片品村",
+      "municipalityCodes": [
+        "10443"
+      ],
+      "shelterCount": 10,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.83708,
+        "lon": 139.2729,
+        "latSpan": 0.331344,
+        "lonSpan": 0.34788
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10443.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10444",
+      "label": "川場村",
+      "municipalityCodes": [
+        "10444"
+      ],
+      "shelterCount": 16,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.733635,
+        "lon": 139.135805,
+        "latSpan": 0.185315,
+        "lonSpan": 0.158873
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10444.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10448",
+      "label": "昭和村",
+      "municipalityCodes": [
+        "10448"
+      ],
+      "shelterCount": 22,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.614275,
+        "lon": 139.102715,
+        "latSpan": 0.116233,
+        "lonSpan": 0.156507
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10448.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10449",
+      "label": "みなかみ町",
+      "municipalityCodes": [
+        "10449"
+      ],
+      "shelterCount": 120,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.851635,
+        "lon": 138.993765,
+        "latSpan": 0.538187,
+        "lonSpan": 0.531297
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10449.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10464",
+      "label": "玉村町",
+      "municipalityCodes": [
+        "10464"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.30403,
+        "lon": 139.129515,
+        "latSpan": 0.078806,
+        "lonSpan": 0.108823
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10464.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10521",
+      "label": "板倉町",
+      "municipalityCodes": [
+        "10521"
+      ],
+      "shelterCount": 36,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.230655,
+        "lon": 139.622945,
+        "latSpan": 0.113711,
+        "lonSpan": 0.122213
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10521.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10522",
+      "label": "明和町",
+      "municipalityCodes": [
+        "10522"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.20661,
+        "lon": 139.53509,
+        "latSpan": 0.04,
+        "lonSpan": 0.146718
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10522.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10523",
+      "label": "千代田町",
+      "municipalityCodes": [
+        "10523"
+      ],
+      "shelterCount": 46,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.218425,
+        "lon": 139.451405,
+        "latSpan": 0.070239,
+        "lonSpan": 0.109369
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10523.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10524",
+      "label": "大泉町",
+      "municipalityCodes": [
+        "10524"
+      ],
+      "shelterCount": 27,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.247205,
+        "lon": 139.40961,
+        "latSpan": 0.076037,
+        "lonSpan": 0.070642
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10524.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "10525",
+      "label": "邑楽町",
+      "municipalityCodes": [
+        "10525"
+      ],
+      "shelterCount": 29,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.253955,
+        "lon": 139.46523,
+        "latSpan": 0.090233,
+        "lonSpan": 0.100386
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/gunma/districts-svg/10525.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

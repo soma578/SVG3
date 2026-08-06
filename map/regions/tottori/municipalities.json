@@ -1,0 +1,405 @@
+{
+  "region": "tottori",
+  "label": "鳥取県",
+  "municipalities": [
+    {
+      "id": "31201",
+      "label": "鳥取市",
+      "municipalityCodes": [
+        "31201"
+      ],
+      "shelterCount": 373,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.42221,
+        "lon": 134.193405,
+        "latSpan": 0.3913,
+        "lonSpan": 0.643149
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tottori/districts-svg/31201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "31202",
+      "label": "米子市",
+      "municipalityCodes": [
+        "31202"
+      ],
+      "shelterCount": 178,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.43763,
+        "lon": 133.35355,
+        "latSpan": 0.16471,
+        "lonSpan": 0.32942
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tottori/districts-svg/31202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "31203",
+      "label": "倉吉市",
+      "municipalityCodes": [
+        "31203"
+      ],
+      "shelterCount": 74,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.39486,
+        "lon": 133.731855,
+        "latSpan": 0.224978,
+        "lonSpan": 0.404625
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tottori/districts-svg/31203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "31204",
+      "label": "境港市",
+      "municipalityCodes": [
+        "31204"
+      ],
+      "shelterCount": 106,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.51475,
+        "lon": 133.23523,
+        "latSpan": 0.097734,
+        "lonSpan": 0.09516
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tottori/districts-svg/31204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "31302",
+      "label": "岩美町",
+      "municipalityCodes": [
+        "31302"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.542705,
+        "lon": 134.357965,
+        "latSpan": 0.186875,
+        "lonSpan": 0.208455
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tottori/districts-svg/31302.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "31325",
+      "label": "若桜町",
+      "municipalityCodes": [
+        "31325"
+      ],
+      "shelterCount": 11,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.335985,
+        "lon": 134.434685,
+        "latSpan": 0.277719,
+        "lonSpan": 0.209443
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tottori/districts-svg/31325.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "31328",
+      "label": "智頭町",
+      "municipalityCodes": [
+        "31328"
+      ],
+      "shelterCount": 103,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.24157,
+        "lon": 134.262415,
+        "latSpan": 0.18824,
+        "lonSpan": 0.325195
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tottori/districts-svg/31328.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "31329",
+      "label": "八頭町",
+      "municipalityCodes": [
+        "31329"
+      ],
+      "shelterCount": 49,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.37635,
+        "lon": 134.33088,
+        "latSpan": 0.192244,
+        "lonSpan": 0.30251
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tottori/districts-svg/31329.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "31364",
+      "label": "三朝町",
+      "municipalityCodes": [
+        "31364"
+      ],
+      "shelterCount": 15,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.340545,
+        "lon": 133.902675,
+        "latSpan": 0.236743,
+        "lonSpan": 0.363025
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tottori/districts-svg/31364.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "31370",
+      "label": "湯梨浜町",
+      "municipalityCodes": [
+        "31370"
+      ],
+      "shelterCount": 93,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.474465,
+        "lon": 133.908765,
+        "latSpan": 0.132639,
+        "lonSpan": 0.161551
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tottori/districts-svg/31370.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "31371",
+      "label": "琴浦町",
+      "municipalityCodes": [
+        "31371"
+      ],
+      "shelterCount": 63,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.438635,
+        "lon": 133.64207,
+        "latSpan": 0.217191,
+        "lonSpan": 0.216138
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tottori/districts-svg/31371.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "31372",
+      "label": "北栄町",
+      "municipalityCodes": [
+        "31372"
+      ],
+      "shelterCount": 92,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.46236,
+        "lon": 133.76309,
+        "latSpan": 0.10959,
+        "lonSpan": 0.2405
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tottori/districts-svg/31372.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "31384",
+      "label": "日吉津村",
+      "municipalityCodes": [
+        "31384"
+      ],
+      "shelterCount": 4,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.44341,
+        "lon": 133.379585,
+        "latSpan": 0.04,
+        "lonSpan": 0.04
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tottori/districts-svg/31384.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "31386",
+      "label": "大山町",
+      "municipalityCodes": [
+        "31386"
+      ],
+      "shelterCount": 44,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.439375,
+        "lon": 133.518745,
+        "latSpan": 0.240877,
+        "lonSpan": 0.232505
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tottori/districts-svg/31386.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "31389",
+      "label": "南部町",
+      "municipalityCodes": [
+        "31389"
+      ],
+      "shelterCount": 23,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.310145,
+        "lon": 133.360175,
+        "latSpan": 0.202761,
+        "lonSpan": 0.175799
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tottori/districts-svg/31389.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "31390",
+      "label": "伯耆町",
+      "municipalityCodes": [
+        "31390"
+      ],
+      "shelterCount": 114,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.31989,
+        "lon": 133.442785,
+        "latSpan": 0.22074,
+        "lonSpan": 0.220233
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tottori/districts-svg/31390.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "31401",
+      "label": "日南町",
+      "municipalityCodes": [
+        "31401"
+      ],
+      "shelterCount": 8,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.16337,
+        "lon": 133.27445,
+        "latSpan": 0.274794,
+        "lonSpan": 0.359242
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tottori/districts-svg/31401.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "31402",
+      "label": "日野町",
+      "municipalityCodes": [
+        "31402"
+      ],
+      "shelterCount": 20,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.215035,
+        "lon": 133.411445,
+        "latSpan": 0.144495,
+        "lonSpan": 0.305851
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tottori/districts-svg/31402.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "31403",
+      "label": "江府町",
+      "municipalityCodes": [
+        "31403"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.29671,
+        "lon": 133.52066,
+        "latSpan": 0.174044,
+        "lonSpan": 0.19695
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/tottori/districts-svg/31403.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

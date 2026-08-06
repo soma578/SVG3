@@ -1,0 +1,31 @@
+{
+  "id": "current-location",
+  "title": "Current Location Layer",
+  "version": "1.0.0",
+  "entrypoint": "currentLocationLayer.svg",
+  "type": "svgmap-portable-layer",
+  "distribution": {
+    "publisher": { "id": "svg3", "name": "SVG3" },
+    "license": { "spdx": "NOASSERTION", "name": "利用条件未設定", "status": "unresolved", "redistributable": false },
+    "publishedAt": "2026-07-24T00:00:00+09:00"
+  },
+  "portability": {
+    "level": "workspace-portable",
+    "dataInjection": "message",
+    "limitations": ["The mounting environment supplies the session location by postMessage"]
+  },
+  "runtime": {
+    "lawaModes": ["tight", "isolated"],
+    "readyEvent": "layerWebAppReady",
+    "requiredApis": ["svgMap.refreshScreen", "svgImage"]
+  },
+  "runtimeDependencies": [
+    { "id": "svgmap-slawa-client", "version": "1.0.0", "manifest": "../svgmap-slawa-client/runtime.package.json" }
+  ],
+  "shared": ["currentLocationLayer.html"],
+  "containerAnimation": {
+    "class": "vectorEtcData",
+    "visibility": "visible",
+    "opacity": "1"
+  }
+}

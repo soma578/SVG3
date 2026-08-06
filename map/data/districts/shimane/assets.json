@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "regionId": "shimane",
+  "publicBase": "/data/shimane",
+  "fileCount": 19,
+  "bytes": 10974324,
+  "files": [
+    {
+      "code": "32201",
+      "path": "districts-svg/32201.svg",
+      "bytes": 2515963
+    },
+    {
+      "code": "32202",
+      "path": "districts-svg/32202.svg",
+      "bytes": 1325166
+    },
+    {
+      "code": "32203",
+      "path": "districts-svg/32203.svg",
+      "bytes": 1630790
+    },
+    {
+      "code": "32204",
+      "path": "districts-svg/32204.svg",
+      "bytes": 682809
+    },
+    {
+      "code": "32205",
+      "path": "districts-svg/32205.svg",
+      "bytes": 979074
+    },
+    {
+      "code": "32206",
+      "path": "districts-svg/32206.svg",
+      "bytes": 482541
+    },
+    {
+      "code": "32207",
+      "path": "districts-svg/32207.svg",
+      "bytes": 453536
+    },
+    {
+      "code": "32209",
+      "path": "districts-svg/32209.svg",
+      "bytes": 481933
+    },
+    {
+      "code": "32343",
+      "path": "districts-svg/32343.svg",
+      "bytes": 220963
+    },
+    {
+      "code": "32386",
+      "path": "districts-svg/32386.svg",
+      "bytes": 147163
+    },
+    {
+      "code": "32441",
+      "path": "districts-svg/32441.svg",
+      "bytes": 90363
+    },
+    {
+      "code": "32448",
+      "path": "districts-svg/32448.svg",
+      "bytes": 197436
+    },
+    {
+      "code": "32449",
+      "path": "districts-svg/32449.svg",
+      "bytes": 235543
+    },
+    {
+      "code": "32501",
+      "path": "districts-svg/32501.svg",
+      "bytes": 310067
+    },
+    {
+      "code": "32505",
+      "path": "districts-svg/32505.svg",
+      "bytes": 186341
+    },
+    {
+      "code": "32525",
+      "path": "districts-svg/32525.svg",
+      "bytes": 353065
+    },
+    {
+      "code": "32526",
+      "path": "districts-svg/32526.svg",
+      "bytes": 65283
+    },
+    {
+      "code": "32527",
+      "path": "districts-svg/32527.svg",
+      "bytes": 204830
+    },
+    {
+      "code": "32528",
+      "path": "districts-svg/32528.svg",
+      "bytes": 411458
+    }
+  ]
+}

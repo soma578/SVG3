@@ -1,0 +1,591 @@
+{
+  "region": "kyoto",
+  "label": "京都府",
+  "municipalities": [
+    {
+      "id": "26100",
+      "label": "京都市",
+      "municipalityCodes": [
+        "26101",
+        "26102",
+        "26103",
+        "26104",
+        "26105",
+        "26106",
+        "26107",
+        "26108",
+        "26109",
+        "26111"
+      ],
+      "shelterCount": 473,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.09808,
+        "lon": 135.718725,
+        "latSpan": 0.580216,
+        "lonSpan": 0.415259
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26101.svg",
+        "/data/kyoto/districts-svg/26102.svg",
+        "/data/kyoto/districts-svg/26103.svg",
+        "/data/kyoto/districts-svg/26104.svg",
+        "/data/kyoto/districts-svg/26105.svg",
+        "/data/kyoto/districts-svg/26106.svg",
+        "/data/kyoto/districts-svg/26107.svg",
+        "/data/kyoto/districts-svg/26108.svg",
+        "/data/kyoto/districts-svg/26109.svg",
+        "/data/kyoto/districts-svg/26111.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "26110",
+      "label": "山科区",
+      "municipalityCodes": [
+        "26110"
+      ],
+      "shelterCount": 0,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.98344,
+        "lon": 135.82501,
+        "latSpan": 0.086034,
+        "lonSpan": 0.09984
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26110.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "26201",
+      "label": "福知山市",
+      "municipalityCodes": [
+        "26201"
+      ],
+      "shelterCount": 85,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.315165,
+        "lon": 135.12069,
+        "latSpan": 0.401843,
+        "lonSpan": 0.529048
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "26202",
+      "label": "舞鶴市",
+      "municipalityCodes": [
+        "26202"
+      ],
+      "shelterCount": 167,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.547215,
+        "lon": 135.32296,
+        "latSpan": 0.434681,
+        "lonSpan": 0.425464
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "26203",
+      "label": "綾部市",
+      "municipalityCodes": [
+        "26203"
+      ],
+      "shelterCount": 109,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.359685,
+        "lon": 135.353655,
+        "latSpan": 0.246493,
+        "lonSpan": 0.470197
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "26204",
+      "label": "宇治市",
+      "municipalityCodes": [
+        "26204"
+      ],
+      "shelterCount": 68,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.90807,
+        "lon": 135.819785,
+        "latSpan": 0.12818,
+        "lonSpan": 0.156351
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "26205",
+      "label": "宮津市",
+      "municipalityCodes": [
+        "26205"
+      ],
+      "shelterCount": 37,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.57506,
+        "lon": 135.20605,
+        "latSpan": 0.31122,
+        "lonSpan": 0.21476
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "26206",
+      "label": "亀岡市",
+      "municipalityCodes": [
+        "26206"
+      ],
+      "shelterCount": 76,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.0083,
+        "lon": 135.512285,
+        "latSpan": 0.241774,
+        "lonSpan": 0.349427
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "26207",
+      "label": "城陽市",
+      "municipalityCodes": [
+        "26207"
+      ],
+      "shelterCount": 50,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.8458,
+        "lon": 135.798835,
+        "latSpan": 0.06292,
+        "lonSpan": 0.128375
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "26208",
+      "label": "向日市",
+      "municipalityCodes": [
+        "26208"
+      ],
+      "shelterCount": 31,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.949035,
+        "lon": 135.7003,
+        "latSpan": 0.051935,
+        "lonSpan": 0.044564
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "26209",
+      "label": "長岡京市",
+      "municipalityCodes": [
+        "26209"
+      ],
+      "shelterCount": 52,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.924435,
+        "lon": 135.67888,
+        "latSpan": 0.057837,
+        "lonSpan": 0.092872
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "26210",
+      "label": "八幡市",
+      "municipalityCodes": [
+        "26210"
+      ],
+      "shelterCount": 35,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.860945,
+        "lon": 135.7164,
+        "latSpan": 0.099541,
+        "lonSpan": 0.094848
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "26211",
+      "label": "京田辺市",
+      "municipalityCodes": [
+        "26211"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.80292,
+        "lon": 135.759605,
+        "latSpan": 0.132886,
+        "lonSpan": 0.106353
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "26212",
+      "label": "京丹後市",
+      "municipalityCodes": [
+        "26212"
+      ],
+      "shelterCount": 107,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.64526,
+        "lon": 135.04361,
+        "latSpan": 0.347308,
+        "lonSpan": 0.4927
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "26213",
+      "label": "南丹市",
+      "municipalityCodes": [
+        "26213"
+      ],
+      "shelterCount": 67,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.201245,
+        "lon": 135.58196,
+        "latSpan": 0.459173,
+        "lonSpan": 0.554398
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "26214",
+      "label": "木津川市",
+      "municipalityCodes": [
+        "26214"
+      ],
+      "shelterCount": 83,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.75431,
+        "lon": 135.84842,
+        "latSpan": 0.125684,
+        "lonSpan": 0.19149
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "26303",
+      "label": "大山崎町",
+      "municipalityCodes": [
+        "26303"
+      ],
+      "shelterCount": 9,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.900875,
+        "lon": 135.686815,
+        "latSpan": 0.04,
+        "lonSpan": 0.051259
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26303.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "26322",
+      "label": "久御山町",
+      "municipalityCodes": [
+        "26322"
+      ],
+      "shelterCount": 10,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.88487,
+        "lon": 135.773685,
+        "latSpan": 0.068952,
+        "lonSpan": 0.154713
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26322.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "26343",
+      "label": "井手町",
+      "municipalityCodes": [
+        "26343"
+      ],
+      "shelterCount": 8,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.808185,
+        "lon": 135.83337,
+        "latSpan": 0.047099,
+        "lonSpan": 0.110916
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26343.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "26344",
+      "label": "宇治田原町",
+      "municipalityCodes": [
+        "26344"
+      ],
+      "shelterCount": 11,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.85361,
+        "lon": 135.888235,
+        "latSpan": 0.104182,
+        "lonSpan": 0.152867
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26344.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "26364",
+      "label": "笠置町",
+      "municipalityCodes": [
+        "26364"
+      ],
+      "shelterCount": 14,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.767755,
+        "lon": 135.941215,
+        "latSpan": 0.078689,
+        "lonSpan": 0.097539
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26364.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "26365",
+      "label": "和束町",
+      "municipalityCodes": [
+        "26365"
+      ],
+      "shelterCount": 12,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.809015,
+        "lon": 135.94442,
+        "latSpan": 0.118989,
+        "lonSpan": 0.218504
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26365.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "26366",
+      "label": "精華町",
+      "municipalityCodes": [
+        "26366"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.75662,
+        "lon": 135.77254,
+        "latSpan": 0.08697,
+        "lonSpan": 0.092196
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26366.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "26367",
+      "label": "南山城村",
+      "municipalityCodes": [
+        "26367"
+      ],
+      "shelterCount": 20,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.766005,
+        "lon": 136.00352,
+        "latSpan": 0.155727,
+        "lonSpan": 0.135096
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26367.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "26407",
+      "label": "京丹波町",
+      "municipalityCodes": [
+        "26407"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.222715,
+        "lon": 135.39013,
+        "latSpan": 0.326547,
+        "lonSpan": 0.290134
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26407.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "26463",
+      "label": "伊根町",
+      "municipalityCodes": [
+        "26463"
+      ],
+      "shelterCount": 2,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.71457,
+        "lon": 135.248655,
+        "latSpan": 0.142454,
+        "lonSpan": 0.155207
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26463.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "26465",
+      "label": "与謝野町",
+      "municipalityCodes": [
+        "26465"
+      ],
+      "shelterCount": 46,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.5251,
+        "lon": 135.106795,
+        "latSpan": 0.211458,
+        "lonSpan": 0.193375
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kyoto/districts-svg/26465.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "version": "2",
+  "regionId": "nara",
+  "prefCode": "29",
+  "label": "奈良県",
+  "engine": "svgmap",
+  "containerUrl": "/map/containers/Containers_webapp_denshi_29.svg",
+  "iconsBaseUrl": "/map/icons",
+  "initialViewport": {
+    "lat": 34.32015,
+    "lon": 135.88474,
+    "latSpan": 1.10417,
+    "lonSpan": 0.853286
+  },
+  "layers": {
+    "baseArea": {
+      "layerUrl": "/map/layers/overview/pref/29.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "evacuation": {
+      "dataUrl": "/map/data/evacuation/nara.json",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "teamActivity": {
+      "dataUrl": "/map/data/team-activity/nara.json",
+      "baseAreaLayerUrl": "/map/layers/overview/pref/29.svg",
+      "districtSvgUrlTemplate": "/data/nara/districts-svg/{code}.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "hazard": {
+      "layerUrl": "/map/layers/hazard/29/nara.svg",
+      "svgUrlTemplate": "/map/layers/hazard/29/districts/{code}.svg",
+      "runtimeVisible": false,
+      "opacity": 0.7
+    }
+  },
+  "interaction": {
+    "disableDefaultPopup": true,
+    "featureSelectEvent": true
+  }
+}

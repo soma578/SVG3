@@ -1,0 +1,726 @@
+{
+  "region": "okayama",
+  "label": "岡山県",
+  "municipalities": [
+    {
+      "id": "okayama-kita",
+      "type": "city",
+      "label": "岡山市北区",
+      "displayCode": "33101",
+      "municipalityCodes": [
+        "33101"
+      ],
+      "shelterCount": 125,
+      "teamActivityCount": 2,
+      "dataStatus": "available",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33101.svg"
+      ],
+      "viewport": {
+        "lat": 34.7837,
+        "lon": 133.8669,
+        "latSpan": 0.43,
+        "lonSpan": 0.33
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "okayama-naka",
+      "type": "city",
+      "label": "岡山市中区",
+      "displayCode": "33102",
+      "municipalityCodes": [
+        "33102"
+      ],
+      "shelterCount": 49,
+      "teamActivityCount": 1,
+      "dataStatus": "available",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33102.svg"
+      ],
+      "viewport": {
+        "lat": 34.6566,
+        "lon": 133.9686,
+        "latSpan": 0.15,
+        "lonSpan": 0.1
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "okayama-higashi",
+      "type": "city",
+      "label": "岡山市東区",
+      "displayCode": "33103",
+      "municipalityCodes": [
+        "33103"
+      ],
+      "shelterCount": 69,
+      "teamActivityCount": 0,
+      "dataStatus": "available",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33103.svg"
+      ],
+      "viewport": {
+        "lat": 34.6701,
+        "lon": 134.0532,
+        "latSpan": 0.29,
+        "lonSpan": 0.18
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "okayama-minami",
+      "type": "city",
+      "label": "岡山市南区",
+      "displayCode": "33104",
+      "municipalityCodes": [
+        "33104"
+      ],
+      "shelterCount": 81,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33104.svg"
+      ],
+      "viewport": {
+        "lat": 34.5808,
+        "lon": 133.9317,
+        "latSpan": 0.16,
+        "lonSpan": 0.3
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "kurashiki",
+      "type": "city",
+      "label": "倉敷市",
+      "displayCode": "33202",
+      "municipalityCodes": [
+        "33202"
+      ],
+      "shelterCount": 248,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33202.svg"
+      ],
+      "viewport": {
+        "lat": 34.5435,
+        "lon": 133.7413,
+        "latSpan": 0.3273,
+        "lonSpan": 0.3609
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "tsuyama",
+      "type": "city",
+      "label": "津山市",
+      "displayCode": "33203",
+      "municipalityCodes": [
+        "33203"
+      ],
+      "shelterCount": 131,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33203.svg"
+      ],
+      "viewport": {
+        "lat": 35.1457,
+        "lon": 133.9949,
+        "latSpan": 0.4202,
+        "lonSpan": 0.4515
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "tamano",
+      "type": "city",
+      "label": "玉野市",
+      "displayCode": "33204",
+      "municipalityCodes": [
+        "33204"
+      ],
+      "shelterCount": 111,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33204.svg"
+      ],
+      "viewport": {
+        "lat": 34.4986,
+        "lon": 133.9475,
+        "latSpan": 0.2075,
+        "lonSpan": 0.2253
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "kasaoka",
+      "type": "city",
+      "label": "笠岡市",
+      "displayCode": "33205",
+      "municipalityCodes": [
+        "33205"
+      ],
+      "shelterCount": 67,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33205.svg"
+      ],
+      "viewport": {
+        "lat": 34.4508,
+        "lon": 133.5195,
+        "latSpan": 0.3965,
+        "lonSpan": 0.1938
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "ibara",
+      "type": "city",
+      "label": "井原市",
+      "displayCode": "33207",
+      "municipalityCodes": [
+        "33207"
+      ],
+      "shelterCount": 141,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33207.svg"
+      ],
+      "viewport": {
+        "lat": 34.6425,
+        "lon": 133.4834,
+        "latSpan": 0.2653,
+        "lonSpan": 0.3254
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "soja",
+      "type": "city",
+      "label": "総社市",
+      "displayCode": "33208",
+      "municipalityCodes": [
+        "33208"
+      ],
+      "shelterCount": 84,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33208.svg"
+      ],
+      "viewport": {
+        "lat": 34.7019,
+        "lon": 133.6941,
+        "latSpan": 0.2073,
+        "lonSpan": 0.2863
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "takahashi",
+      "type": "city",
+      "label": "高梁市",
+      "displayCode": "33209",
+      "municipalityCodes": [
+        "33209"
+      ],
+      "shelterCount": 112,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33209.svg"
+      ],
+      "viewport": {
+        "lat": 34.8218,
+        "lon": 133.5246,
+        "latSpan": 0.3587,
+        "lonSpan": 0.5089
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "niimi",
+      "type": "city",
+      "label": "新見市",
+      "displayCode": "33210",
+      "municipalityCodes": [
+        "33210"
+      ],
+      "shelterCount": 119,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33210.svg"
+      ],
+      "viewport": {
+        "lat": 35.0243,
+        "lon": 133.4445,
+        "latSpan": 0.4379,
+        "lonSpan": 0.4616
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "bizen",
+      "type": "city",
+      "label": "備前市",
+      "displayCode": "33211",
+      "municipalityCodes": [
+        "33211"
+      ],
+      "shelterCount": 52,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33211.svg"
+      ],
+      "viewport": {
+        "lat": 34.8143,
+        "lon": 134.2246,
+        "latSpan": 0.3487,
+        "lonSpan": 0.3181
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "setouchi",
+      "type": "city",
+      "label": "瀬戸内市",
+      "displayCode": "33212",
+      "municipalityCodes": [
+        "33212"
+      ],
+      "shelterCount": 82,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33212.svg"
+      ],
+      "viewport": {
+        "lat": 34.658,
+        "lon": 134.1627,
+        "latSpan": 0.1803,
+        "lonSpan": 0.288
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "akaiwa",
+      "type": "city",
+      "label": "赤磐市",
+      "displayCode": "33213",
+      "municipalityCodes": [
+        "33213"
+      ],
+      "shelterCount": 195,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33213.svg"
+      ],
+      "viewport": {
+        "lat": 34.8352,
+        "lon": 134.0538,
+        "latSpan": 0.3005,
+        "lonSpan": 0.2559
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "maniwa",
+      "type": "city",
+      "label": "真庭市",
+      "displayCode": "33214",
+      "municipalityCodes": [
+        "33214"
+      ],
+      "shelterCount": 365,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33214.svg"
+      ],
+      "viewport": {
+        "lat": 35.1228,
+        "lon": 133.7061,
+        "latSpan": 0.5777,
+        "lonSpan": 0.3626
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "mimasaka",
+      "type": "city",
+      "label": "美作市",
+      "displayCode": "33215",
+      "municipalityCodes": [
+        "33215"
+      ],
+      "shelterCount": 228,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33215.svg"
+      ],
+      "viewport": {
+        "lat": 35.0457,
+        "lon": 134.2498,
+        "latSpan": 0.4284,
+        "lonSpan": 0.4233
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "asakuchi",
+      "type": "city",
+      "label": "浅口市",
+      "displayCode": "33216",
+      "municipalityCodes": [
+        "33216"
+      ],
+      "shelterCount": 28,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33216.svg"
+      ],
+      "viewport": {
+        "lat": 34.5281,
+        "lon": 133.5954,
+        "latSpan": 0.1616,
+        "lonSpan": 0.1424
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "wake",
+      "type": "town",
+      "label": "和気町",
+      "displayCode": "33346",
+      "municipalityCodes": [
+        "33346"
+      ],
+      "shelterCount": 99,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33346.svg"
+      ],
+      "viewport": {
+        "lat": 34.8413,
+        "lon": 134.1266,
+        "latSpan": 0.2133,
+        "lonSpan": 0.233
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "hayashima",
+      "type": "town",
+      "label": "早島町",
+      "displayCode": "33423",
+      "municipalityCodes": [
+        "33423"
+      ],
+      "shelterCount": 22,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33423.svg"
+      ],
+      "viewport": {
+        "lat": 34.6092,
+        "lon": 133.8208,
+        "latSpan": 0.052,
+        "lonSpan": 0.065
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "satosho",
+      "type": "town",
+      "label": "里庄町",
+      "displayCode": "33445",
+      "municipalityCodes": [
+        "33445"
+      ],
+      "shelterCount": 46,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33445.svg"
+      ],
+      "viewport": {
+        "lat": 34.5145,
+        "lon": 133.5579,
+        "latSpan": 0.0607,
+        "lonSpan": 0.0732
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "yakage",
+      "type": "town",
+      "label": "矢掛町",
+      "displayCode": "33461",
+      "municipalityCodes": [
+        "33461"
+      ],
+      "shelterCount": 34,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33461.svg"
+      ],
+      "viewport": {
+        "lat": 34.6401,
+        "lon": 133.5841,
+        "latSpan": 0.173,
+        "lonSpan": 0.1697
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "shinjo",
+      "type": "village",
+      "label": "新庄村",
+      "displayCode": "33586",
+      "municipalityCodes": [
+        "33586"
+      ],
+      "shelterCount": 23,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33586.svg"
+      ],
+      "viewport": {
+        "lat": 35.2023,
+        "lon": 133.5575,
+        "latSpan": 0.1385,
+        "lonSpan": 0.135
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "kagamino",
+      "type": "town",
+      "label": "鏡野町",
+      "displayCode": "33606",
+      "municipalityCodes": [
+        "33606"
+      ],
+      "shelterCount": 40,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33606.svg"
+      ],
+      "viewport": {
+        "lat": 35.208,
+        "lon": 133.8982,
+        "latSpan": 0.3768,
+        "lonSpan": 0.343
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "katsuo",
+      "type": "town",
+      "label": "勝央町",
+      "displayCode": "33622",
+      "municipalityCodes": [
+        "33622"
+      ],
+      "shelterCount": 19,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33622.svg"
+      ],
+      "viewport": {
+        "lat": 35.0582,
+        "lon": 134.1324,
+        "latSpan": 0.1181,
+        "lonSpan": 0.1393
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "nagi",
+      "type": "town",
+      "label": "奈義町",
+      "displayCode": "33623",
+      "municipalityCodes": [
+        "33623"
+      ],
+      "shelterCount": 23,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33623.svg"
+      ],
+      "viewport": {
+        "lat": 35.1394,
+        "lon": 134.1825,
+        "latSpan": 0.1302,
+        "lonSpan": 0.1299
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "nishiawakura",
+      "type": "village",
+      "label": "西粟倉村",
+      "displayCode": "33643",
+      "municipalityCodes": [
+        "33643"
+      ],
+      "shelterCount": 23,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33643.svg"
+      ],
+      "viewport": {
+        "lat": 35.1995,
+        "lon": 134.3415,
+        "latSpan": 0.1368,
+        "lonSpan": 0.1593
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "kumeminami",
+      "type": "town",
+      "label": "久米南町",
+      "displayCode": "33663",
+      "municipalityCodes": [
+        "33663"
+      ],
+      "shelterCount": 13,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33663.svg"
+      ],
+      "viewport": {
+        "lat": 34.9225,
+        "lon": 133.9551,
+        "latSpan": 0.1373,
+        "lonSpan": 0.1584
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "misaki",
+      "type": "town",
+      "label": "美咲町",
+      "displayCode": "33666",
+      "municipalityCodes": [
+        "33666"
+      ],
+      "shelterCount": 62,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33666.svg"
+      ],
+      "viewport": {
+        "lat": 34.9871,
+        "lon": 133.9419,
+        "latSpan": 0.1676,
+        "lonSpan": 0.468
+      },
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "kibichuo",
+      "type": "town",
+      "label": "吉備中央町",
+      "displayCode": "33681",
+      "municipalityCodes": [
+        "33681"
+      ],
+      "shelterCount": 28,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "runtimeConfigUrl": "/map/regions/okayama/runtime-config.json",
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okayama/districts-svg/33681.svg"
+      ],
+      "viewport": {
+        "lat": 34.8489,
+        "lon": 133.7594,
+        "latSpan": 0.2744,
+        "lonSpan": 0.3093
+      },
+      "districtSvgStatus": "available"
+    }
+  ]
+}

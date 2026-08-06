@@ -1,0 +1,363 @@
+{
+  "region": "kagawa",
+  "label": "香川県",
+  "municipalities": [
+    {
+      "id": "37201",
+      "label": "高松市",
+      "municipalityCodes": [
+        "37201"
+      ],
+      "shelterCount": 196,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.272125,
+        "lon": 134.047775,
+        "latSpan": 0.418847,
+        "lonSpan": 0.331955
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagawa/districts-svg/37201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "37202",
+      "label": "丸亀市",
+      "municipalityCodes": [
+        "37202"
+      ],
+      "shelterCount": 91,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.308035,
+        "lon": 133.773675,
+        "latSpan": 0.278551,
+        "lonSpan": 0.341653
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagawa/districts-svg/37202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "37203",
+      "label": "坂出市",
+      "municipalityCodes": [
+        "37203"
+      ],
+      "shelterCount": 41,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.34535,
+        "lon": 133.87461,
+        "latSpan": 0.213252,
+        "lonSpan": 0.2054
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagawa/districts-svg/37203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "37204",
+      "label": "善通寺市",
+      "municipalityCodes": [
+        "37204"
+      ],
+      "shelterCount": 20,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.22329,
+        "lon": 133.77407,
+        "latSpan": 0.092456,
+        "lonSpan": 0.124098
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagawa/districts-svg/37204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "37205",
+      "label": "観音寺市",
+      "municipalityCodes": [
+        "37205"
+      ],
+      "shelterCount": 102,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.088945,
+        "lon": 133.594475,
+        "latSpan": 0.199069,
+        "lonSpan": 0.379535
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagawa/districts-svg/37205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "37206",
+      "label": "さぬき市",
+      "municipalityCodes": [
+        "37206"
+      ],
+      "shelterCount": 51,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.26819,
+        "lon": 134.22156,
+        "latSpan": 0.263744,
+        "lonSpan": 0.17303
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagawa/districts-svg/37206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "37207",
+      "label": "東かがわ市",
+      "municipalityCodes": [
+        "37207"
+      ],
+      "shelterCount": 32,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.22081,
+        "lon": 134.323575,
+        "latSpan": 0.165776,
+        "lonSpan": 0.303251
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagawa/districts-svg/37207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "37208",
+      "label": "三豊市",
+      "municipalityCodes": [
+        "37208"
+      ],
+      "shelterCount": 82,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.168605,
+        "lon": 133.69029,
+        "latSpan": 0.307879,
+        "lonSpan": 0.346554
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagawa/districts-svg/37208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "37322",
+      "label": "土庄町",
+      "municipalityCodes": [
+        "37322"
+      ],
+      "shelterCount": 40,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.511395,
+        "lon": 134.184295,
+        "latSpan": 0.134693,
+        "lonSpan": 0.385229
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagawa/districts-svg/37322.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "37324",
+      "label": "小豆島町",
+      "municipalityCodes": [
+        "37324"
+      ],
+      "shelterCount": 57,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.489325,
+        "lon": 134.283295,
+        "latSpan": 0.194025,
+        "lonSpan": 0.217087
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagawa/districts-svg/37324.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "37341",
+      "label": "三木町",
+      "municipalityCodes": [
+        "37341"
+      ],
+      "shelterCount": 29,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.23411,
+        "lon": 134.1376,
+        "latSpan": 0.21632,
+        "lonSpan": 0.083174
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagawa/districts-svg/37341.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "37364",
+      "label": "直島町",
+      "municipalityCodes": [
+        "37364"
+      ],
+      "shelterCount": 11,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.474305,
+        "lon": 133.987305,
+        "latSpan": 0.099359,
+        "lonSpan": 0.095095
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagawa/districts-svg/37364.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "37386",
+      "label": "宇多津町",
+      "municipalityCodes": [
+        "37386"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.312245,
+        "lon": 133.82485,
+        "latSpan": 0.066807,
+        "lonSpan": 0.04823
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagawa/districts-svg/37386.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "37387",
+      "label": "綾川町",
+      "municipalityCodes": [
+        "37387"
+      ],
+      "shelterCount": 36,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.20835,
+        "lon": 133.96105,
+        "latSpan": 0.182364,
+        "lonSpan": 0.176254
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagawa/districts-svg/37387.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "37403",
+      "label": "琴平町",
+      "municipalityCodes": [
+        "37403"
+      ],
+      "shelterCount": 18,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.19886,
+        "lon": 133.817965,
+        "latSpan": 0.061958,
+        "lonSpan": 0.046371
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagawa/districts-svg/37403.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "37404",
+      "label": "多度津町",
+      "municipalityCodes": [
+        "37404"
+      ],
+      "shelterCount": 48,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.29232,
+        "lon": 133.696955,
+        "latSpan": 0.161382,
+        "lonSpan": 0.206921
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagawa/districts-svg/37404.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "37406",
+      "label": "まんのう町",
+      "municipalityCodes": [
+        "37406"
+      ],
+      "shelterCount": 25,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.14916,
+        "lon": 133.9253,
+        "latSpan": 0.199004,
+        "lonSpan": 0.323908
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/kagawa/districts-svg/37406.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

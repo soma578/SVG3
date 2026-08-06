@@ -1,0 +1,867 @@
+{
+  "region": "okinawa",
+  "label": "沖縄県",
+  "municipalities": [
+    {
+      "id": "47201",
+      "label": "那覇市",
+      "municipalityCodes": [
+        "47201"
+      ],
+      "shelterCount": 110,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.21539,
+        "lon": 127.68743,
+        "latSpan": 0.098722,
+        "lonSpan": 0.132418
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47205",
+      "label": "宜野湾市",
+      "municipalityCodes": [
+        "47205"
+      ],
+      "shelterCount": 95,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.273025,
+        "lon": 127.7556,
+        "latSpan": 0.060229,
+        "lonSpan": 0.08125
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47207",
+      "label": "石垣市",
+      "municipalityCodes": [
+        "47207"
+      ],
+      "shelterCount": 89,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 25.128105,
+        "lon": 124.009255,
+        "latSpan": 2.081755,
+        "lonSpan": 1.429285
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47208",
+      "label": "浦添市",
+      "municipalityCodes": [
+        "47208"
+      ],
+      "shelterCount": 117,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.25331,
+        "lon": 127.710795,
+        "latSpan": 0.051532,
+        "lonSpan": 0.109629
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47209",
+      "label": "名護市",
+      "municipalityCodes": [
+        "47209"
+      ],
+      "shelterCount": 103,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.59295,
+        "lon": 128.025345,
+        "latSpan": 0.227994,
+        "lonSpan": 0.326495
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47210",
+      "label": "糸満市",
+      "municipalityCodes": [
+        "47210"
+      ],
+      "shelterCount": 81,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.122265,
+        "lon": 127.68977,
+        "latSpan": 0.123071,
+        "lonSpan": 0.108706
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47211",
+      "label": "沖縄市",
+      "municipalityCodes": [
+        "47211"
+      ],
+      "shelterCount": 49,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.36089,
+        "lon": 127.813895,
+        "latSpan": 0.158236,
+        "lonSpan": 0.108485
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47212",
+      "label": "豊見城市",
+      "municipalityCodes": [
+        "47212"
+      ],
+      "shelterCount": 50,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.175295,
+        "lon": 127.677315,
+        "latSpan": 0.060151,
+        "lonSpan": 0.095069
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47213",
+      "label": "うるま市",
+      "municipalityCodes": [
+        "47213"
+      ],
+      "shelterCount": 73,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.345685,
+        "lon": 127.896155,
+        "latSpan": 0.270283,
+        "lonSpan": 0.280319
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47214",
+      "label": "宮古島市",
+      "municipalityCodes": [
+        "47214"
+      ],
+      "shelterCount": 117,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 24.82492,
+        "lon": 125.302335,
+        "latSpan": 0.29471,
+        "lonSpan": 0.434135
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47215",
+      "label": "南城市",
+      "municipalityCodes": [
+        "47215"
+      ],
+      "shelterCount": 126,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.16206,
+        "lon": 127.819515,
+        "latSpan": 0.093886,
+        "lonSpan": 0.233935
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47215.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47301",
+      "label": "国頭村",
+      "municipalityCodes": [
+        "47301"
+      ],
+      "shelterCount": 45,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.771625,
+        "lon": 128.242555,
+        "latSpan": 0.270127,
+        "lonSpan": 0.239395
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47301.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47302",
+      "label": "大宜味村",
+      "municipalityCodes": [
+        "47302"
+      ],
+      "shelterCount": 27,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.666285,
+        "lon": 128.140245,
+        "latSpan": 0.133653,
+        "lonSpan": 0.155623
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47302.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47303",
+      "label": "東村",
+      "municipalityCodes": [
+        "47303"
+      ],
+      "shelterCount": 27,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.648895,
+        "lon": 128.18022,
+        "latSpan": 0.154453,
+        "lonSpan": 0.21983
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47303.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47306",
+      "label": "今帰仁村",
+      "municipalityCodes": [
+        "47306"
+      ],
+      "shelterCount": 45,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.67521,
+        "lon": 127.972695,
+        "latSpan": 0.102128,
+        "lonSpan": 0.143871
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47306.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47308",
+      "label": "本部町",
+      "municipalityCodes": [
+        "47308"
+      ],
+      "shelterCount": 48,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.658535,
+        "lon": 127.886795,
+        "latSpan": 0.138983,
+        "lonSpan": 0.197743
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47308.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47311",
+      "label": "恩納村",
+      "municipalityCodes": [
+        "47311"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.47332,
+        "lon": 127.841505,
+        "latSpan": 0.151138,
+        "lonSpan": 0.258609
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47311.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47313",
+      "label": "宜野座村",
+      "municipalityCodes": [
+        "47313"
+      ],
+      "shelterCount": 36,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.497085,
+        "lon": 127.96394,
+        "latSpan": 0.084461,
+        "lonSpan": 0.095758
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47313.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47314",
+      "label": "金武町",
+      "municipalityCodes": [
+        "47314"
+      ],
+      "shelterCount": 44,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.46798,
+        "lon": 127.892935,
+        "latSpan": 0.084942,
+        "lonSpan": 0.149643
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47314.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47315",
+      "label": "伊江村",
+      "municipalityCodes": [
+        "47315"
+      ],
+      "shelterCount": 0,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.7221,
+        "lon": 127.789275,
+        "latSpan": 0.044252,
+        "lonSpan": 0.103337
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47315.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47324",
+      "label": "読谷村",
+      "municipalityCodes": [
+        "47324"
+      ],
+      "shelterCount": 42,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.401125,
+        "lon": 127.74898,
+        "latSpan": 0.103623,
+        "lonSpan": 0.09633
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47324.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47325",
+      "label": "嘉手納町",
+      "municipalityCodes": [
+        "47325"
+      ],
+      "shelterCount": 31,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.37457,
+        "lon": 127.763455,
+        "latSpan": 0.086814,
+        "lonSpan": 0.065273
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47325.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47326",
+      "label": "北谷町",
+      "municipalityCodes": [
+        "47326"
+      ],
+      "shelterCount": 57,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.31987,
+        "lon": 127.764335,
+        "latSpan": 0.06838,
+        "lonSpan": 0.056043
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47326.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47327",
+      "label": "北中城村",
+      "municipalityCodes": [
+        "47327"
+      ],
+      "shelterCount": 45,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.30548,
+        "lon": 127.8023,
+        "latSpan": 0.053534,
+        "lonSpan": 0.068718
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47327.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47328",
+      "label": "中城村",
+      "municipalityCodes": [
+        "47328"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.261,
+        "lon": 127.79166,
+        "latSpan": 0.075608,
+        "lonSpan": 0.063804
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47328.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47329",
+      "label": "西原町",
+      "municipalityCodes": [
+        "47329"
+      ],
+      "shelterCount": 29,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.23079,
+        "lon": 127.76035,
+        "latSpan": 0.06058,
+        "lonSpan": 0.070616
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47329.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47348",
+      "label": "与那原町",
+      "municipalityCodes": [
+        "47348"
+      ],
+      "shelterCount": 37,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.20057,
+        "lon": 127.75759,
+        "latSpan": 0.04,
+        "lonSpan": 0.048048
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47348.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47350",
+      "label": "南風原町",
+      "municipalityCodes": [
+        "47350"
+      ],
+      "shelterCount": 53,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.19326,
+        "lon": 127.72817,
+        "latSpan": 0.064766,
+        "lonSpan": 0.053118
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47350.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47353",
+      "label": "渡嘉敷村",
+      "municipalityCodes": [
+        "47353"
+      ],
+      "shelterCount": 0,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.202005,
+        "lon": 127.46156,
+        "latSpan": 0.165321,
+        "lonSpan": 0.321152
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47353.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47354",
+      "label": "座間味村",
+      "municipalityCodes": [
+        "47354"
+      ],
+      "shelterCount": 0,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.203585,
+        "lon": 127.28392,
+        "latSpan": 0.125775,
+        "lonSpan": 0.134446
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47354.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47355",
+      "label": "粟国村",
+      "municipalityCodes": [
+        "47355"
+      ],
+      "shelterCount": 5,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.58846,
+        "lon": 127.228065,
+        "latSpan": 0.04,
+        "lonSpan": 0.048893
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47355.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47356",
+      "label": "渡名喜村",
+      "municipalityCodes": [
+        "47356"
+      ],
+      "shelterCount": 3,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.36851,
+        "lon": 127.13071,
+        "latSpan": 0.05005,
+        "lonSpan": 0.080158
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47356.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47357",
+      "label": "南大東村",
+      "municipalityCodes": [
+        "47357"
+      ],
+      "shelterCount": 0,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 25.84262,
+        "lon": 131.24341,
+        "latSpan": 0.07748,
+        "lonSpan": 0.077714
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47357.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47358",
+      "label": "北大東村",
+      "municipalityCodes": [
+        "47358"
+      ],
+      "shelterCount": 8,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 25.211165,
+        "lon": 131.25699,
+        "latSpan": 1.949571,
+        "lonSpan": 0.195312
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47358.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47359",
+      "label": "伊平屋村",
+      "municipalityCodes": [
+        "47359"
+      ],
+      "shelterCount": 0,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 27.04214,
+        "lon": 127.96732,
+        "latSpan": 0.136136,
+        "lonSpan": 0.141908
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47359.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47360",
+      "label": "伊是名村",
+      "municipalityCodes": [
+        "47360"
+      ],
+      "shelterCount": 13,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.93603,
+        "lon": 127.935155,
+        "latSpan": 0.10907,
+        "lonSpan": 0.060333
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47360.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47361",
+      "label": "久米島町",
+      "municipalityCodes": [
+        "47361"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 27.088235,
+        "lon": 127.47276,
+        "latSpan": 2.072317,
+        "lonSpan": 1.98549
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47361.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47362",
+      "label": "八重瀬町",
+      "municipalityCodes": [
+        "47362"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 26.13947,
+        "lon": 127.72938,
+        "latSpan": 0.10725,
+        "lonSpan": 0.08541
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47362.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47375",
+      "label": "多良間村",
+      "municipalityCodes": [
+        "47375"
+      ],
+      "shelterCount": 8,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 24.699845,
+        "lon": 124.69935,
+        "latSpan": 0.161395,
+        "lonSpan": 0.074204
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47375.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47381",
+      "label": "竹富町",
+      "municipalityCodes": [
+        "47381"
+      ],
+      "shelterCount": 0,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 24.261385,
+        "lon": 123.828895,
+        "latSpan": 0.560989,
+        "lonSpan": 0.710125
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47381.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "47382",
+      "label": "与那国町",
+      "municipalityCodes": [
+        "47382"
+      ],
+      "shelterCount": 15,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 24.456035,
+        "lon": 122.988825,
+        "latSpan": 0.049621,
+        "lonSpan": 0.143195
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/okinawa/districts-svg/47382.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

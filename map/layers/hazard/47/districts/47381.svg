@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="12243.4 -4605.6 3205.3 2251.0"
+     pointer-events="none">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+
+  <g id="hazard-flood" fill="#3b82f6" fill-opacity="0.28" stroke="#1d4ed8" stroke-opacity="0.70" stroke-width="0.10" pointer-events="none">
+
+  </g>
+  <g id="hazard-tsunami-inundation" fill="#a855f7" fill-opacity="0.28" stroke="#7e22ce" stroke-opacity="0.70" stroke-width="0.10" pointer-events="none">
+
+  </g>
+  <g id="hazard-landslide-warning" fill="#f97316" fill-opacity="0.22" stroke="#c2410c" stroke-opacity="0.80" stroke-width="0.10" pointer-events="none">
+    <path d="M 12374.89 -2436.05 L 12375.01 -2436.22 L 12375.00 -2436.09 L 12374.91 -2436.03 L 12374.89 -2436.05 Z M 12375.20 -2436.09 L 12375.21 -2436.03 L 12375.06 -2436.03 L 12375.02 -2436.08 L 12375.06 -2436.11 L 12375.20 -2436.09 L 12375.20 -2436.09 Z M 12375.17 -2436.08 L 12375.21 -2436.15 L 12375.25 -2436.05 L 12375.28 -2436.10 L 12375.26 -2435.96 L 12375.17 -2436.01 L 12375.18 -2436.07 L 12375.17 -2436.08 Z M 12375.24 -2436.01 L 12375.31 -2436.02 L 12375.38 -2435.83 L 12375.32 -2435.82 L 12375.24 -2435.95 L 12375.24 -2436.01 Z M 12374.64 -2436.21 L 12374.60 -2436.26 L 12374.73 -2436.19 L 12374.75 -2436.12 L 12374.64 -2436.19 L 12374.64 -2436.21 Z M 12374.90 -2436.15 L 12374.80 -2436.09 L 12374.69 -2436.16 L 12374.76 -2436.21 L 12374.88 -2436.20 L 12374.90 -2436.15 L 12374.90 -2436.15 Z M 12374.86 -2436.00 L 12374.73 -2436.08 L 12374.90 -2436.18 L 12374.86 -2436.02 L 12374.86 -2436.00 Z M 12375.22 -2435.89 L 12375.18 -2435.95 L 12375.29 -2436.03 L 12375.33 -2435.82 L 12375.23 -2435.88 L 12375.22 -2435.89 Z M 12375.10 -2435.96 L 12375.19 -2436.09 L 12375.33 -2435.82 L 12375.10 -2435.95 L 12375.10 -2435.96 Z" />
+  </g>
+  <g id="hazard-landslide-special" fill="#ef4444" fill-opacity="0.35" stroke="#991b1b" stroke-opacity="0.90" stroke-width="0.12" pointer-events="none">
+
+  </g>
+</svg>

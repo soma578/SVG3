@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "regionId": "toyama",
+  "publicBase": "/data/toyama",
+  "fileCount": 15,
+  "bytes": 9000962,
+  "files": [
+    {
+      "code": "16201",
+      "path": "districts-svg/16201.svg",
+      "bytes": 2707181
+    },
+    {
+      "code": "16202",
+      "path": "districts-svg/16202.svg",
+      "bytes": 1224771
+    },
+    {
+      "code": "16204",
+      "path": "districts-svg/16204.svg",
+      "bytes": 365115
+    },
+    {
+      "code": "16205",
+      "path": "districts-svg/16205.svg",
+      "bytes": 520053
+    },
+    {
+      "code": "16206",
+      "path": "districts-svg/16206.svg",
+      "bytes": 235508
+    },
+    {
+      "code": "16207",
+      "path": "districts-svg/16207.svg",
+      "bytes": 371149
+    },
+    {
+      "code": "16208",
+      "path": "districts-svg/16208.svg",
+      "bytes": 471374
+    },
+    {
+      "code": "16209",
+      "path": "districts-svg/16209.svg",
+      "bytes": 413927
+    },
+    {
+      "code": "16210",
+      "path": "districts-svg/16210.svg",
+      "bytes": 1121355
+    },
+    {
+      "code": "16211",
+      "path": "districts-svg/16211.svg",
+      "bytes": 570999
+    },
+    {
+      "code": "16321",
+      "path": "districts-svg/16321.svg",
+      "bytes": 25443
+    },
+    {
+      "code": "16322",
+      "path": "districts-svg/16322.svg",
+      "bytes": 326736
+    },
+    {
+      "code": "16323",
+      "path": "districts-svg/16323.svg",
+      "bytes": 283694
+    },
+    {
+      "code": "16342",
+      "path": "districts-svg/16342.svg",
+      "bytes": 131640
+    },
+    {
+      "code": "16343",
+      "path": "districts-svg/16343.svg",
+      "bytes": 232017
+    }
+  ]
+}

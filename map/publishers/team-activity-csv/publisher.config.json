@@ -1,0 +1,14 @@
+{
+  "id": "team-activity-csv",
+  "title": "チーム活動 CSV Publisher",
+  "kind": "csv-qtct-static",
+  "adminEntrypoint": "admin.html",
+  "source": "/map/layers/managed/team-activity-pins/data.csv",
+  "publication": "/map/layers/managed/team-activity-pins/publication.json",
+  "layerConfig": "/map/layers/managed/team-activity-pins/layer.config.json",
+  "outputs": {
+    "summary": "/map/data/qtct/teamActivity/summary.json",
+    "detailTemplate": "/map/data/qtct/teamActivity/{regionId}/detail.json"
+  },
+  "layerPackage": "/map/layers/portable/team-activity/layer.package.json"
+}

@@ -1,0 +1,44 @@
+{
+  "version": "2",
+  "regionId": "chiba",
+  "prefCode": "12",
+  "label": "千葉県",
+  "engine": "svgmap",
+  "containerUrl": "/map/containers/Containers_webapp_denshi_12.svg",
+  "iconsBaseUrl": "/map/icons",
+  "initialViewport": {
+    "lat": 35.501955,
+    "lon": 140.308255,
+    "latSpan": 1.408633,
+    "lonSpan": 1.331176
+  },
+  "layers": {
+    "baseArea": {
+      "layerUrl": "/map/layers/overview/pref/12.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "evacuation": {
+      "dataUrl": "/map/data/evacuation/chiba.json",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "teamActivity": {
+      "dataUrl": "/map/data/team-activity/chiba.json",
+      "baseAreaLayerUrl": "/map/layers/overview/pref/12.svg",
+      "districtSvgUrlTemplate": "/data/chiba/districts-svg/{code}.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "hazard": {
+      "layerUrl": "/map/layers/hazard/12/chiba.svg",
+      "svgUrlTemplate": "/map/layers/hazard/12/districts/{code}.svg",
+      "runtimeVisible": false,
+      "opacity": 0.7
+    }
+  },
+  "interaction": {
+    "disableDefaultPopup": true,
+    "featureSelectEvent": true
+  }
+}

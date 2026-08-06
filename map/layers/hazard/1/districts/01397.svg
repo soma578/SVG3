@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="12243.4 -4605.6 3205.3 2251.0"
+     pointer-events="none">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+
+  <g id="hazard-flood" fill="#3b82f6" fill-opacity="0.28" stroke="#1d4ed8" stroke-opacity="0.70" stroke-width="0.10" pointer-events="none">
+
+  </g>
+  <g id="hazard-tsunami-inundation" fill="#a855f7" fill-opacity="0.28" stroke="#7e22ce" stroke-opacity="0.70" stroke-width="0.10" pointer-events="none">
+
+  </g>
+  <g id="hazard-landslide-warning" fill="#f97316" fill-opacity="0.22" stroke="#c2410c" stroke-opacity="0.80" stroke-width="0.10" pointer-events="none">
+    <path d="M 14095.75 -4273.76 L 14096.11 -4273.80 L 14096.15 -4273.77 L 14095.97 -4273.70 L 14095.77 -4273.67 L 14095.75 -4273.71 L 14095.75 -4273.76 Z M 14093.90 -4273.95 L 14093.77 -4274.38 L 14093.85 -4274.50 L 14093.98 -4274.53 L 14093.94 -4274.45 L 14094.01 -4274.21 L 14093.98 -4273.95 L 14093.90 -4273.95 Z M 14093.68 -4273.97 L 14093.64 -4274.03 L 14093.74 -4274.13 L 14093.74 -4274.25 L 14093.85 -4274.50 L 14093.95 -4274.53 L 14093.95 -4274.41 L 14093.73 -4273.99 L 14093.68 -4273.97 Z M 14085.68 -4275.38 L 14085.83 -4275.52 L 14085.90 -4275.52 L 14085.91 -4275.82 L 14085.99 -4275.84 L 14086.02 -4275.74 L 14085.95 -4275.49 L 14085.81 -4275.31 L 14085.68 -4275.38 Z M 14088.88 -4271.20 L 14088.56 -4271.45 L 14088.25 -4271.54 L 14088.00 -4271.69 L 14087.72 -4271.74 L 14087.55 -4271.85 L 14087.66 -4272.00 L 14088.49 -4271.53 L 14088.71 -4271.46 L 14088.95 -4271.28 L 14088.88 -4271.20 Z M 14095.07 -4274.39 L 14095.14 -4274.33 L 14095.08 -4274.25 L 14094.99 -4274.32 L 14095.06 -4274.36 L 14095.07 -4274.39 Z" />
+  </g>
+  <g id="hazard-landslide-special" fill="#ef4444" fill-opacity="0.35" stroke="#991b1b" stroke-opacity="0.90" stroke-width="0.12" pointer-events="none">
+
+  </g>
+</svg>

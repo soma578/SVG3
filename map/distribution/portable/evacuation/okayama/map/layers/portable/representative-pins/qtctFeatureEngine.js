@@ -1,0 +1,123 @@
+export const targetDepthForZoom = (zoom) => {
+  if (zoom < 7.5) return 5;
+  if (zoom < 9) return 6;
+  if (zoom < 10) return 7;
+  if (zoom < 10.7) return 8;
+  if (zoom < 11.1) return 9;
+  if (zoom < 11.4) return 10;
+  if (zoom < 12) return 11;
+  return 12;
+};
+
+export const densityLimitForZoom = (zoom) => {
+  if (zoom < 7.5) return 200;
+  if (zoom < 9) return 120;
+  if (zoom < 10) return 60;
+  if (zoom < 10.7) return 32;
+  if (zoom < 11.4) return 20;
+  return 8;
+};
+
+export const intersectsQtctBounds = (bounds, view) => Boolean(bounds && view) &&
+  bounds.maxLon >= view.x &&
+  bounds.minLon <= view.x + view.width &&
+  bounds.maxLat >= view.y &&
+  bounds.minLat <= view.y + view.height;
+
+const nodeCount = (node) =>
+  Math.max(1, Number(node?.count ?? node?.representative?.count) || 1);
+
+const collectViewportPartitions = (node, view, targetDepth, out) => {
+  if (!node || !intersectsQtctBounds(node.bounds, view)) return;
+  if (!node.children?.length || node.depth >= targetDepth) {
+    out.push(node);
+    return;
+  }
+  node.children.forEach((child) => collectViewportPartitions(child, view, targetDepth, out));
+};
+
+// Adds one pin for every density-limit records and distributes them by branch weight.
+const allocatePinQuota = (nodes, quota) => {
+  const allocations = nodes.map(() => 0);
+  for (let seat = 0; seat < quota; seat += 1) {
+    let bestIndex = -1;
+    let bestScore = -1;
+    for (let index = 0; index < nodes.length; index += 1) {
+      const count = nodeCount(nodes[index]);
+      if (allocations[index] >= count) continue;
+      const score = count / (allocations[index] + 1);
+      if (score > bestScore) {
+        bestScore = score;
+        bestIndex = index;
+      }
+    }
+    if (bestIndex < 0) break;
+    allocations[bestIndex] += 1;
+  }
+  return allocations;
+};
+
+const emitDensityRepresentatives = (node, view, quota, out) => {
+  if (!node || quota <= 0 || !intersectsQtctBounds(node.bounds, view)) return;
+  const children = (node.children || []).filter((child) => intersectsQtctBounds(child.bounds, view));
+  if (quota === 1 || children.length === 0) {
+    if (node.representative) out.push(node.representative);
+    return;
+  }
+  const allocations = allocatePinQuota(children, quota);
+  children.forEach((child, index) => emitDensityRepresentatives(child, view, allocations[index], out));
+};
+
+const collectVisible = (node, view, targetDepth, out, showIndividuals, densityLimit) => {
+  if (!node || !intersectsQtctBounds(node.bounds, view)) return;
+  if (!showIndividuals) {
+    const partitions = [];
+    collectViewportPartitions(node, view, targetDepth, partitions);
+    const visibleCount = partitions.reduce((sum, partition) => sum + nodeCount(partition), 0);
+    const pinQuota = Math.max(1, Math.ceil(visibleCount / densityLimit));
+    const allocations = allocatePinQuota(partitions, pinQuota);
+    partitions.forEach((partition, index) =>
+      emitDensityRepresentatives(partition, view, allocations[index], out));
+    return;
+  }
+  if (!node.children?.length || node.depth >= targetDepth) {
+    if (Array.isArray(node.records)) {
+      for (const record of node.records) {
+        if (record.lon >= view.x && record.lon <= view.x + view.width &&
+          record.lat >= view.y && record.lat <= view.y + view.height) {
+          out.push({ ...record, representative: false, count: 1 });
+        }
+      }
+    } else if (node.representative) {
+      out.push(node.representative);
+    }
+    return;
+  }
+  node.children.forEach((child) =>
+    collectVisible(child, view, targetDepth, out, true, densityLimit));
+};
+
+export const zoomForGeoView = (view) => {
+  const width = Number(view?.width);
+  return Number.isFinite(width) && width > 0 ? Math.log2(360 / width) : 8;
+};
+
+export const selectQtctFeatures = ({
+  tree,
+  view,
+  zoom = zoomForGeoView(view),
+  individualZoom = 12,
+} = {}) => {
+  if (!tree || !view) return [];
+  const normalizedZoom = Number.isFinite(Number(zoom)) ? Number(zoom) : zoomForGeoView(view);
+  const out = [];
+  collectVisible(
+    tree,
+    view,
+    targetDepthForZoom(normalizedZoom),
+    out,
+    normalizedZoom >= Number(individualZoom || 12),
+    densityLimitForZoom(normalizedZoom),
+  );
+  return out.filter(Boolean);
+};

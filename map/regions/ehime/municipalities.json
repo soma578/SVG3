@@ -1,0 +1,426 @@
+{
+  "region": "ehime",
+  "label": "愛媛県",
+  "municipalities": [
+    {
+      "id": "38201",
+      "label": "松山市",
+      "municipalityCodes": [
+        "38201"
+      ],
+      "shelterCount": 663,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.87994,
+        "lon": 132.70873,
+        "latSpan": 0.500708,
+        "lonSpan": 0.563836
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ehime/districts-svg/38201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "38202",
+      "label": "今治市",
+      "municipalityCodes": [
+        "38202"
+      ],
+      "shelterCount": 211,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.100795,
+        "lon": 132.999935,
+        "latSpan": 0.517101,
+        "lonSpan": 0.497783
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ehime/districts-svg/38202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "38203",
+      "label": "宇和島市",
+      "municipalityCodes": [
+        "38203"
+      ],
+      "shelterCount": 239,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.180325,
+        "lon": 132.467375,
+        "latSpan": 0.409357,
+        "lonSpan": 0.534729
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ehime/districts-svg/38203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "38204",
+      "label": "八幡浜市",
+      "municipalityCodes": [
+        "38204"
+      ],
+      "shelterCount": 102,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.46057,
+        "lon": 132.41887,
+        "latSpan": 0.236704,
+        "lonSpan": 0.215618
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ehime/districts-svg/38204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "38205",
+      "label": "新居浜市",
+      "municipalityCodes": [
+        "38205"
+      ],
+      "shelterCount": 147,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.91127,
+        "lon": 133.34433,
+        "latSpan": 0.25103,
+        "lonSpan": 0.287768
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ehime/districts-svg/38205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "38206",
+      "label": "西条市",
+      "municipalityCodes": [
+        "38206"
+      ],
+      "shelterCount": 175,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.866485,
+        "lon": 133.117115,
+        "latSpan": 0.302081,
+        "lonSpan": 0.416637
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ehime/districts-svg/38206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "38207",
+      "label": "大洲市",
+      "municipalityCodes": [
+        "38207"
+      ],
+      "shelterCount": 122,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.57886,
+        "lon": 132.6324,
+        "latSpan": 0.415766,
+        "lonSpan": 0.538382
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ehime/districts-svg/38207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "38210",
+      "label": "伊予市",
+      "municipalityCodes": [
+        "38210"
+      ],
+      "shelterCount": 49,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.696485,
+        "lon": 132.656705,
+        "latSpan": 0.245765,
+        "lonSpan": 0.326157
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ehime/districts-svg/38210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "38213",
+      "label": "四国中央市",
+      "municipalityCodes": [
+        "38213"
+      ],
+      "shelterCount": 117,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.936435,
+        "lon": 133.521305,
+        "latSpan": 0.278707,
+        "lonSpan": 0.445289
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ehime/districts-svg/38213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "38214",
+      "label": "西予市",
+      "municipalityCodes": [
+        "38214"
+      ],
+      "shelterCount": 219,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.412665,
+        "lon": 132.6358,
+        "latSpan": 0.284063,
+        "lonSpan": 0.690612
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ehime/districts-svg/38214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "38215",
+      "label": "東温市",
+      "municipalityCodes": [
+        "38215"
+      ],
+      "shelterCount": 67,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.81395,
+        "lon": 132.9231,
+        "latSpan": 0.245258,
+        "lonSpan": 0.261378
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ehime/districts-svg/38215.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "38356",
+      "label": "上島町",
+      "municipalityCodes": [
+        "38356"
+      ],
+      "shelterCount": 139,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.232305,
+        "lon": 133.24934,
+        "latSpan": 0.180297,
+        "lonSpan": 0.303862
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ehime/districts-svg/38356.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "38386",
+      "label": "久万高原町",
+      "municipalityCodes": [
+        "38386"
+      ],
+      "shelterCount": 54,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.619565,
+        "lon": 132.99153,
+        "latSpan": 0.398463,
+        "lonSpan": 0.441168
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ehime/districts-svg/38386.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "38401",
+      "label": "松前町",
+      "municipalityCodes": [
+        "38401"
+      ],
+      "shelterCount": 23,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.789265,
+        "lon": 132.72828,
+        "latSpan": 0.049439,
+        "lonSpan": 0.1105
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ehime/districts-svg/38401.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "38402",
+      "label": "砥部町",
+      "municipalityCodes": [
+        "38402"
+      ],
+      "shelterCount": 37,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.70146,
+        "lon": 132.78696,
+        "latSpan": 0.244972,
+        "lonSpan": 0.131482
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ehime/districts-svg/38402.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "38422",
+      "label": "内子町",
+      "municipalityCodes": [
+        "38422"
+      ],
+      "shelterCount": 82,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.573165,
+        "lon": 132.76428,
+        "latSpan": 0.212875,
+        "lonSpan": 0.421356
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ehime/districts-svg/38422.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "38442",
+      "label": "伊方町",
+      "municipalityCodes": [
+        "38442"
+      ],
+      "shelterCount": 42,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.42995,
+        "lon": 132.19602,
+        "latSpan": 0.224042,
+        "lonSpan": 0.470886
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ehime/districts-svg/38442.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "38484",
+      "label": "松野町",
+      "municipalityCodes": [
+        "38484"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.20626,
+        "lon": 132.7109,
+        "latSpan": 0.184132,
+        "lonSpan": 0.198224
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ehime/districts-svg/38484.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "38488",
+      "label": "鬼北町",
+      "municipalityCodes": [
+        "38488"
+      ],
+      "shelterCount": 32,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 33.295465,
+        "lon": 132.752315,
+        "latSpan": 0.241163,
+        "lonSpan": 0.391469
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ehime/districts-svg/38488.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "38506",
+      "label": "愛南町",
+      "municipalityCodes": [
+        "38506"
+      ],
+      "shelterCount": 233,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 32.98071,
+        "lon": 132.53512,
+        "latSpan": 0.215124,
+        "lonSpan": 0.40664
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ehime/districts-svg/38506.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

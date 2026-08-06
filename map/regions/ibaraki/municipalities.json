@@ -1,0 +1,930 @@
+{
+  "region": "ibaraki",
+  "label": "茨城県",
+  "municipalities": [
+    {
+      "id": "08201",
+      "label": "水戸市",
+      "municipalityCodes": [
+        "08201"
+      ],
+      "shelterCount": 139,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.3825,
+        "lon": 140.454405,
+        "latSpan": 0.212628,
+        "lonSpan": 0.344253
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08202",
+      "label": "日立市",
+      "municipalityCodes": [
+        "08202"
+      ],
+      "shelterCount": 115,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.59811,
+        "lon": 140.617015,
+        "latSpan": 0.302874,
+        "lonSpan": 0.258973
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08203",
+      "label": "土浦市",
+      "municipalityCodes": [
+        "08203"
+      ],
+      "shelterCount": 53,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.094455,
+        "lon": 140.20446,
+        "latSpan": 0.207207,
+        "lonSpan": 0.207636
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08204",
+      "label": "古河市",
+      "municipalityCodes": [
+        "08204"
+      ],
+      "shelterCount": 58,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.1829,
+        "lon": 139.77683,
+        "latSpan": 0.14768,
+        "lonSpan": 0.231738
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08205",
+      "label": "石岡市",
+      "municipalityCodes": [
+        "08205"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.223675,
+        "lon": 140.22813,
+        "latSpan": 0.255879,
+        "lonSpan": 0.305968
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08207",
+      "label": "結城市",
+      "municipalityCodes": [
+        "08207"
+      ],
+      "shelterCount": 35,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.26202,
+        "lon": 139.862445,
+        "latSpan": 0.158964,
+        "lonSpan": 0.119483
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08208",
+      "label": "龍ケ崎市",
+      "municipalityCodes": [
+        "08208"
+      ],
+      "shelterCount": 64,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.94008,
+        "lon": 140.17493,
+        "latSpan": 0.176098,
+        "lonSpan": 0.22386
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08210",
+      "label": "下妻市",
+      "municipalityCodes": [
+        "08210"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.18891,
+        "lon": 139.97167,
+        "latSpan": 0.147004,
+        "lonSpan": 0.17212
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08211",
+      "label": "常総市",
+      "municipalityCodes": [
+        "08211"
+      ],
+      "shelterCount": 30,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.057795,
+        "lon": 139.961495,
+        "latSpan": 0.232479,
+        "lonSpan": 0.176189
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08212",
+      "label": "常陸太田市",
+      "municipalityCodes": [
+        "08212"
+      ],
+      "shelterCount": 64,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.677125,
+        "lon": 140.50808,
+        "latSpan": 0.485927,
+        "lonSpan": 0.2431
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08214",
+      "label": "高萩市",
+      "municipalityCodes": [
+        "08214"
+      ],
+      "shelterCount": 57,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.782785,
+        "lon": 140.634695,
+        "latSpan": 0.234351,
+        "lonSpan": 0.255983
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08215",
+      "label": "北茨城市",
+      "municipalityCodes": [
+        "08215"
+      ],
+      "shelterCount": 45,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.84697,
+        "lon": 140.68535,
+        "latSpan": 0.255606,
+        "lonSpan": 0.313014
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08215.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08216",
+      "label": "笠間市",
+      "municipalityCodes": [
+        "08216"
+      ],
+      "shelterCount": 28,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.35749,
+        "lon": 140.267085,
+        "latSpan": 0.238316,
+        "lonSpan": 0.267215
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08216.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08217",
+      "label": "取手市",
+      "municipalityCodes": [
+        "08217"
+      ],
+      "shelterCount": 47,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.912535,
+        "lon": 140.074205,
+        "latSpan": 0.108355,
+        "lonSpan": 0.205413
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08217.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08219",
+      "label": "牛久市",
+      "municipalityCodes": [
+        "08219"
+      ],
+      "shelterCount": 84,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.980395,
+        "lon": 140.19383,
+        "latSpan": 0.123695,
+        "lonSpan": 0.20566
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08219.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08220",
+      "label": "つくば市",
+      "municipalityCodes": [
+        "08220"
+      ],
+      "shelterCount": 118,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.09191,
+        "lon": 140.084415,
+        "latSpan": 0.375882,
+        "lonSpan": 0.230373
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08220.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08221",
+      "label": "ひたちなか市",
+      "municipalityCodes": [
+        "08221"
+      ],
+      "shelterCount": 57,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.399595,
+        "lon": 140.555055,
+        "latSpan": 0.165321,
+        "lonSpan": 0.187889
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08221.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08222",
+      "label": "鹿嶋市",
+      "municipalityCodes": [
+        "08222"
+      ],
+      "shelterCount": 89,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.00504,
+        "lon": 140.633245,
+        "latSpan": 0.200486,
+        "lonSpan": 0.206401
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08222.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08223",
+      "label": "潮来市",
+      "municipalityCodes": [
+        "08223"
+      ],
+      "shelterCount": 22,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.95763,
+        "lon": 140.55459,
+        "latSpan": 0.141596,
+        "lonSpan": 0.180206
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08223.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08224",
+      "label": "守谷市",
+      "municipalityCodes": [
+        "08224"
+      ],
+      "shelterCount": 18,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.943885,
+        "lon": 139.977045,
+        "latSpan": 0.089219,
+        "lonSpan": 0.118001
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08224.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08225",
+      "label": "常陸大宮市",
+      "municipalityCodes": [
+        "08225"
+      ],
+      "shelterCount": 185,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.60758,
+        "lon": 140.339965,
+        "latSpan": 0.303992,
+        "lonSpan": 0.311545
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08225.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08226",
+      "label": "那珂市",
+      "municipalityCodes": [
+        "08226"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.457135,
+        "lon": 140.47657,
+        "latSpan": 0.150969,
+        "lonSpan": 0.233272
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08226.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08227",
+      "label": "筑西市",
+      "municipalityCodes": [
+        "08227"
+      ],
+      "shelterCount": 151,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.28843,
+        "lon": 139.977855,
+        "latSpan": 0.23413,
+        "lonSpan": 0.232921
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08227.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08228",
+      "label": "坂東市",
+      "municipalityCodes": [
+        "08228"
+      ],
+      "shelterCount": 51,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.061995,
+        "lon": 139.889675,
+        "latSpan": 0.238563,
+        "lonSpan": 0.180713
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08228.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08229",
+      "label": "稲敷市",
+      "municipalityCodes": [
+        "08229"
+      ],
+      "shelterCount": 40,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.95239,
+        "lon": 140.3792,
+        "latSpan": 0.184366,
+        "lonSpan": 0.34333
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08229.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08230",
+      "label": "かすみがうら市",
+      "municipalityCodes": [
+        "08230"
+      ],
+      "shelterCount": 34,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.12325,
+        "lon": 140.29062,
+        "latSpan": 0.223002,
+        "lonSpan": 0.296608
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08230.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08231",
+      "label": "桜川市",
+      "municipalityCodes": [
+        "08231"
+      ],
+      "shelterCount": 25,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.31986,
+        "lon": 140.11317,
+        "latSpan": 0.244894,
+        "lonSpan": 0.202748
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08231.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08232",
+      "label": "神栖市",
+      "municipalityCodes": [
+        "08232"
+      ],
+      "shelterCount": 68,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.839925,
+        "lon": 140.725415,
+        "latSpan": 0.261859,
+        "lonSpan": 0.329043
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08232.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08233",
+      "label": "行方市",
+      "municipalityCodes": [
+        "08233"
+      ],
+      "shelterCount": 36,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.06797,
+        "lon": 140.464665,
+        "latSpan": 0.254826,
+        "lonSpan": 0.264979
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08233.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08234",
+      "label": "鉾田市",
+      "municipalityCodes": [
+        "08234"
+      ],
+      "shelterCount": 48,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.169965,
+        "lon": 140.51294,
+        "latSpan": 0.281489,
+        "lonSpan": 0.255632
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08234.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08235",
+      "label": "つくばみらい市",
+      "municipalityCodes": [
+        "08235"
+      ],
+      "shelterCount": 54,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.988535,
+        "lon": 140.04289,
+        "latSpan": 0.148135,
+        "lonSpan": 0.185848
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08235.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08236",
+      "label": "小美玉市",
+      "municipalityCodes": [
+        "08236"
+      ],
+      "shelterCount": 44,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.20568,
+        "lon": 140.36111,
+        "latSpan": 0.195442,
+        "lonSpan": 0.230724
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08236.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08302",
+      "label": "茨城町",
+      "municipalityCodes": [
+        "08302"
+      ],
+      "shelterCount": 18,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.28266,
+        "lon": 140.437725,
+        "latSpan": 0.163644,
+        "lonSpan": 0.246441
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08302.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08309",
+      "label": "大洗町",
+      "municipalityCodes": [
+        "08309"
+      ],
+      "shelterCount": 34,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.29605,
+        "lon": 140.558365,
+        "latSpan": 0.104676,
+        "lonSpan": 0.093483
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08309.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08310",
+      "label": "城里町",
+      "municipalityCodes": [
+        "08310"
+      ],
+      "shelterCount": 31,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.48812,
+        "lon": 140.308245,
+        "latSpan": 0.16016,
+        "lonSpan": 0.276133
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08310.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08341",
+      "label": "東海村",
+      "municipalityCodes": [
+        "08341"
+      ],
+      "shelterCount": 20,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.44854,
+        "lon": 140.58827,
+        "latSpan": 0.118924,
+        "lonSpan": 0.12701
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08341.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08364",
+      "label": "大子町",
+      "municipalityCodes": [
+        "08364"
+      ],
+      "shelterCount": 108,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.80604,
+        "lon": 140.359275,
+        "latSpan": 0.330616,
+        "lonSpan": 0.286819
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08364.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08442",
+      "label": "美浦村",
+      "municipalityCodes": [
+        "08442"
+      ],
+      "shelterCount": 8,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.01297,
+        "lon": 140.339035,
+        "latSpan": 0.099242,
+        "lonSpan": 0.183209
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08442.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08443",
+      "label": "阿見町",
+      "municipalityCodes": [
+        "08443"
+      ],
+      "shelterCount": 28,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.011785,
+        "lon": 140.22321,
+        "latSpan": 0.112567,
+        "lonSpan": 0.16796
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08443.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08447",
+      "label": "河内町",
+      "municipalityCodes": [
+        "08447"
+      ],
+      "shelterCount": 20,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.885045,
+        "lon": 140.288825,
+        "latSpan": 0.080431,
+        "lonSpan": 0.234351
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08447.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08521",
+      "label": "八千代町",
+      "municipalityCodes": [
+        "08521"
+      ],
+      "shelterCount": 20,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.17784,
+        "lon": 139.897365,
+        "latSpan": 0.147602,
+        "lonSpan": 0.121563
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08521.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08542",
+      "label": "五霞町",
+      "municipalityCodes": [
+        "08542"
+      ],
+      "shelterCount": 28,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.10826,
+        "lon": 139.748455,
+        "latSpan": 0.071968,
+        "lonSpan": 0.099645
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08542.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08546",
+      "label": "境町",
+      "municipalityCodes": [
+        "08546"
+      ],
+      "shelterCount": 85,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.106505,
+        "lon": 139.80684,
+        "latSpan": 0.128245,
+        "lonSpan": 0.124228
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08546.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "08564",
+      "label": "利根町",
+      "municipalityCodes": [
+        "08564"
+      ],
+      "shelterCount": 27,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.86559,
+        "lon": 140.17228,
+        "latSpan": 0.05941,
+        "lonSpan": 0.11674
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/ibaraki/districts-svg/08564.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

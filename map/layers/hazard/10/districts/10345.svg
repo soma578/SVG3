@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="12243.4 -4605.6 3205.3 2251.0"
+     pointer-events="none">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+
+  <g id="hazard-flood" fill="#3b82f6" fill-opacity="0.28" stroke="#1d4ed8" stroke-opacity="0.70" stroke-width="0.10" pointer-events="none">
+    <path d="M 13902.72 -3634.57 L 13902.69 -3634.50 L 13902.73 -3634.57 L 13902.72 -3634.57 Z M 13902.55 -3634.73 L 13902.52 -3634.90 L 13902.28 -3634.82 L 13902.38 -3634.72 L 13902.50 -3634.85 L 13902.53 -3634.73 L 13902.55 -3634.73 Z M 13902.74 -3635.04 L 13902.66 -3634.99 L 13902.81 -3634.98 L 13902.78 -3634.80 L 13902.90 -3634.82 L 13902.79 -3634.90 L 13902.86 -3635.02 L 13902.72 -3635.04 L 13902.74 -3635.04 Z M 13902.27 -3635.11 L 13902.28 -3635.21 L 13902.18 -3635.09 L 13902.26 -3635.10 L 13902.27 -3635.11 Z M 13902.63 -3635.20 L 13902.53 -3635.26 L 13902.51 -3635.12 L 13902.64 -3635.17 L 13902.54 -3635.25 L 13902.62 -3635.20 L 13902.63 -3635.20 Z M 13902.25 -3635.38 L 13902.17 -3635.42 L 13902.25 -3635.38 L 13902.25 -3635.38 Z M 13902.29 -3635.20 L 13902.31 -3634.97 L 13902.44 -3635.03 L 13902.29 -3635.19 L 13902.29 -3635.20 Z M 13902.37 -3635.17 L 13901.97 -3635.44 L 13902.38 -3635.17 L 13902.37 -3635.17 Z" />
+  </g>
+  <g id="hazard-tsunami-inundation" fill="#a855f7" fill-opacity="0.28" stroke="#7e22ce" stroke-opacity="0.70" stroke-width="0.10" pointer-events="none">
+
+  </g>
+  <g id="hazard-landslide-warning" fill="#f97316" fill-opacity="0.22" stroke="#c2410c" stroke-opacity="0.80" stroke-width="0.10" pointer-events="none">
+
+  </g>
+  <g id="hazard-landslide-special" fill="#ef4444" fill-opacity="0.35" stroke="#991b1b" stroke-opacity="0.90" stroke-width="0.12" pointer-events="none">
+
+  </g>
+</svg>

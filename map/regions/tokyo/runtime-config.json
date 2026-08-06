@@ -1,0 +1,44 @@
+{
+  "version": "2",
+  "regionId": "tokyo",
+  "prefCode": "13",
+  "label": "東京都",
+  "engine": "svgmap",
+  "containerUrl": "/map/containers/Containers_webapp_denshi_13.svg",
+  "iconsBaseUrl": "/map/icons",
+  "initialViewport": {
+    "lat": 30.061585,
+    "lon": 146.464775,
+    "latSpan": 12.715564,
+    "lonSpan": 16.355315
+  },
+  "layers": {
+    "baseArea": {
+      "layerUrl": "/map/layers/overview/pref/13.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "evacuation": {
+      "dataUrl": "/map/data/evacuation/tokyo.json",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "teamActivity": {
+      "dataUrl": "/map/data/team-activity/tokyo.json",
+      "baseAreaLayerUrl": "/map/layers/overview/pref/13.svg",
+      "districtSvgUrlTemplate": "/data/tokyo/districts-svg/{code}.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "hazard": {
+      "layerUrl": "/map/layers/hazard/13/tokyo.svg",
+      "svgUrlTemplate": "/map/layers/hazard/13/districts/{code}.svg",
+      "runtimeVisible": false,
+      "opacity": 0.7
+    }
+  },
+  "interaction": {
+    "disableDefaultPopup": true,
+    "featureSelectEvent": true
+  }
+}

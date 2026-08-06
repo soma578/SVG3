@@ -1,0 +1,44 @@
+{
+  "version": "2",
+  "regionId": "saitama",
+  "prefCode": "11",
+  "label": "埼玉県",
+  "engine": "svgmap",
+  "containerUrl": "/map/containers/Containers_webapp_denshi_11.svg",
+  "iconsBaseUrl": "/map/icons",
+  "initialViewport": {
+    "lat": 36.018385,
+    "lon": 139.30588,
+    "latSpan": 0.680411,
+    "lonSpan": 1.392034
+  },
+  "layers": {
+    "baseArea": {
+      "layerUrl": "/map/layers/overview/pref/11.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "evacuation": {
+      "dataUrl": "/map/data/evacuation/saitama.json",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "teamActivity": {
+      "dataUrl": "/map/data/team-activity/saitama.json",
+      "baseAreaLayerUrl": "/map/layers/overview/pref/11.svg",
+      "districtSvgUrlTemplate": "/data/saitama/districts-svg/{code}.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "hazard": {
+      "layerUrl": "/map/layers/hazard/11/saitama.svg",
+      "svgUrlTemplate": "/map/layers/hazard/11/districts/{code}.svg",
+      "runtimeVisible": false,
+      "opacity": 0.7
+    }
+  },
+  "interaction": {
+    "disableDefaultPopup": true,
+    "featureSelectEvent": true
+  }
+}

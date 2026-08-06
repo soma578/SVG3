@@ -1,0 +1,741 @@
+{
+  "region": "yamagata",
+  "label": "山形県",
+  "municipalities": [
+    {
+      "id": "06201",
+      "label": "山形市",
+      "municipalityCodes": [
+        "06201"
+      ],
+      "shelterCount": 358,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.2478,
+        "lon": 140.3545,
+        "latSpan": 0.270894,
+        "lonSpan": 0.455624
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06202",
+      "label": "米沢市",
+      "municipalityCodes": [
+        "06202"
+      ],
+      "shelterCount": 96,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.860955,
+        "lon": 140.116975,
+        "latSpan": 0.329147,
+        "lonSpan": 0.472745
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06203",
+      "label": "鶴岡市",
+      "municipalityCodes": [
+        "06203"
+      ],
+      "shelterCount": 635,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.571695,
+        "lon": 139.784775,
+        "latSpan": 0.662805,
+        "lonSpan": 0.637819
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06204",
+      "label": "酒田市",
+      "municipalityCodes": [
+        "06204"
+      ],
+      "shelterCount": 361,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.991325,
+        "lon": 139.83563,
+        "latSpan": 0.564785,
+        "lonSpan": 0.819442
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06205",
+      "label": "新庄市",
+      "municipalityCodes": [
+        "06205"
+      ],
+      "shelterCount": 52,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.79974,
+        "lon": 140.3426,
+        "latSpan": 0.266422,
+        "lonSpan": 0.389194
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06206",
+      "label": "寒河江市",
+      "municipalityCodes": [
+        "06206"
+      ],
+      "shelterCount": 48,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.43888,
+        "lon": 140.23606,
+        "latSpan": 0.251628,
+        "lonSpan": 0.223418
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06207",
+      "label": "上山市",
+      "municipalityCodes": [
+        "06207"
+      ],
+      "shelterCount": 56,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.138935,
+        "lon": 140.31477,
+        "latSpan": 0.221949,
+        "lonSpan": 0.340964
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06208",
+      "label": "村山市",
+      "municipalityCodes": [
+        "06208"
+      ],
+      "shelterCount": 135,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.517195,
+        "lon": 140.335995,
+        "latSpan": 0.160641,
+        "lonSpan": 0.332605
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06209",
+      "label": "長井市",
+      "municipalityCodes": [
+        "06209"
+      ],
+      "shelterCount": 33,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.143945,
+        "lon": 139.99335,
+        "latSpan": 0.266435,
+        "lonSpan": 0.301756
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06210",
+      "label": "天童市",
+      "municipalityCodes": [
+        "06210"
+      ],
+      "shelterCount": 156,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.357705,
+        "lon": 140.40953,
+        "latSpan": 0.123175,
+        "lonSpan": 0.274066
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06211",
+      "label": "東根市",
+      "municipalityCodes": [
+        "06211"
+      ],
+      "shelterCount": 53,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.41848,
+        "lon": 140.456595,
+        "latSpan": 0.178906,
+        "lonSpan": 0.336843
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06212",
+      "label": "尾花沢市",
+      "municipalityCodes": [
+        "06212"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.579125,
+        "lon": 140.46643,
+        "latSpan": 0.370747,
+        "lonSpan": 0.399386
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06213",
+      "label": "南陽市",
+      "municipalityCodes": [
+        "06213"
+      ],
+      "shelterCount": 33,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.121015,
+        "lon": 140.153745,
+        "latSpan": 0.264095,
+        "lonSpan": 0.218257
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06301",
+      "label": "山辺町",
+      "municipalityCodes": [
+        "06301"
+      ],
+      "shelterCount": 31,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.27531,
+        "lon": 140.22088,
+        "latSpan": 0.139984,
+        "lonSpan": 0.175396
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06301.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06302",
+      "label": "中山町",
+      "municipalityCodes": [
+        "06302"
+      ],
+      "shelterCount": 11,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.33294,
+        "lon": 140.258245,
+        "latSpan": 0.069212,
+        "lonSpan": 0.141037
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06302.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06321",
+      "label": "河北町",
+      "municipalityCodes": [
+        "06321"
+      ],
+      "shelterCount": 61,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.42415,
+        "lon": 140.30014,
+        "latSpan": 0.127348,
+        "lonSpan": 0.118898
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06321.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06322",
+      "label": "西川町",
+      "municipalityCodes": [
+        "06322"
+      ],
+      "shelterCount": 27,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.404845,
+        "lon": 140.040165,
+        "latSpan": 0.369109,
+        "lonSpan": 0.429897
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06322.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06323",
+      "label": "朝日町",
+      "municipalityCodes": [
+        "06323"
+      ],
+      "shelterCount": 11,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.271225,
+        "lon": 140.05782,
+        "latSpan": 0.238017,
+        "lonSpan": 0.36725
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06323.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06324",
+      "label": "大江町",
+      "municipalityCodes": [
+        "06324"
+      ],
+      "shelterCount": 12,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.338195,
+        "lon": 140.10756,
+        "latSpan": 0.180505,
+        "lonSpan": 0.422448
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06324.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06341",
+      "label": "大石田町",
+      "municipalityCodes": [
+        "06341"
+      ],
+      "shelterCount": 42,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.59701,
+        "lon": 140.325035,
+        "latSpan": 0.138502,
+        "lonSpan": 0.204607
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06341.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06361",
+      "label": "金山町",
+      "municipalityCodes": [
+        "06361"
+      ],
+      "shelterCount": 11,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.90414,
+        "lon": 140.38679,
+        "latSpan": 0.157924,
+        "lonSpan": 0.2743
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06361.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06362",
+      "label": "最上町",
+      "municipalityCodes": [
+        "06362"
+      ],
+      "shelterCount": 50,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.767095,
+        "lon": 140.51792,
+        "latSpan": 0.346515,
+        "lonSpan": 0.334204
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06362.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06363",
+      "label": "舟形町",
+      "municipalityCodes": [
+        "06363"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.66015,
+        "lon": 140.346535,
+        "latSpan": 0.23829,
+        "lonSpan": 0.294281
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06363.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06364",
+      "label": "真室川町",
+      "municipalityCodes": [
+        "06364"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.947275,
+        "lon": 140.280595,
+        "latSpan": 0.296361,
+        "lonSpan": 0.443729
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06364.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06365",
+      "label": "大蔵村",
+      "municipalityCodes": [
+        "06365"
+      ],
+      "shelterCount": 36,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.61377,
+        "lon": 140.149975,
+        "latSpan": 0.31187,
+        "lonSpan": 0.298935
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06365.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06366",
+      "label": "鮭川村",
+      "municipalityCodes": [
+        "06366"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.819915,
+        "lon": 140.200655,
+        "latSpan": 0.142233,
+        "lonSpan": 0.293657
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06366.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06367",
+      "label": "戸沢村",
+      "municipalityCodes": [
+        "06367"
+      ],
+      "shelterCount": 43,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.717475,
+        "lon": 140.12278,
+        "latSpan": 0.268827,
+        "lonSpan": 0.241774
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06367.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06381",
+      "label": "高畠町",
+      "municipalityCodes": [
+        "06381"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.98932,
+        "lon": 140.200535,
+        "latSpan": 0.242268,
+        "lonSpan": 0.231439
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06381.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06382",
+      "label": "川西町",
+      "municipalityCodes": [
+        "06382"
+      ],
+      "shelterCount": 22,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.97061,
+        "lon": 140.028875,
+        "latSpan": 0.249028,
+        "lonSpan": 0.278369
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06382.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06401",
+      "label": "小国町",
+      "municipalityCodes": [
+        "06401"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.053305,
+        "lon": 139.773745,
+        "latSpan": 0.578513,
+        "lonSpan": 0.387179
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06401.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06402",
+      "label": "白鷹町",
+      "municipalityCodes": [
+        "06402"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.198885,
+        "lon": 140.075355,
+        "latSpan": 0.182273,
+        "lonSpan": 0.254293
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06402.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06403",
+      "label": "飯豊町",
+      "municipalityCodes": [
+        "06403"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 37.95501,
+        "lon": 139.883895,
+        "latSpan": 0.394602,
+        "lonSpan": 0.395473
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06403.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06426",
+      "label": "三川町",
+      "municipalityCodes": [
+        "06426"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.793685,
+        "lon": 139.849455,
+        "latSpan": 0.122473,
+        "lonSpan": 0.103337
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06426.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06428",
+      "label": "庄内町",
+      "municipalityCodes": [
+        "06428"
+      ],
+      "shelterCount": 154,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 38.70622,
+        "lon": 139.982505,
+        "latSpan": 0.463892,
+        "lonSpan": 0.350701
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06428.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "06461",
+      "label": "遊佐町",
+      "municipalityCodes": [
+        "06461"
+      ],
+      "shelterCount": 42,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 39.05478,
+        "lon": 139.95369,
+        "latSpan": 0.204672,
+        "lonSpan": 0.294996
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/yamagata/districts-svg/06461.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

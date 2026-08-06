@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>河川水位</title>
+  <script src="../svgmap-slawa-client/svgMapLayerLib.js"></script>
+</head>
+<body>
+<script type="module">
+import { initRepresentativePinsLayer } from '../representative-pins/representativePinsCore.js';
+import { renderRiverLevelDetail } from './riverLevelDetail.js';
+
+let started = false;
+const start = () => {
+  if (started) return;
+  started = true;
+  initRepresentativePinsLayer({
+    mode: 'portable',
+    renderFeatureDetail: renderRiverLevelDetail,
+    refreshIntervalMs: 120_000,
+  });
+};
+window.addEventListener('layerWebAppReady', start, { once: true });
+if (window.svgMap && window.svgImage) queueMicrotask(start);
+</script>
+</body>
+</html>

@@ -1,0 +1,757 @@
+{
+  "region": "shizuoka",
+  "label": "静岡県",
+  "municipalities": [
+    {
+      "id": "22100",
+      "label": "静岡市",
+      "municipalityCodes": [
+        "22101",
+        "22102",
+        "22103"
+      ],
+      "shelterCount": 520,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.272255,
+        "lon": 138.36075,
+        "latSpan": 0.971633,
+        "lonSpan": 0.722254
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22101.svg",
+        "/data/shizuoka/districts-svg/22102.svg",
+        "/data/shizuoka/districts-svg/22103.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22130",
+      "label": "浜松市",
+      "municipalityCodes": [
+        "22131",
+        "22132",
+        "22133",
+        "22134",
+        "22135",
+        "22136",
+        "22137"
+      ],
+      "shelterCount": 53,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.975365,
+        "lon": 137.772855,
+        "latSpan": 0.855465,
+        "lonSpan": 0.743197
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22131.svg",
+        "/data/shizuoka/districts-svg/22132.svg",
+        "/data/shizuoka/districts-svg/22133.svg",
+        "/data/shizuoka/districts-svg/22134.svg",
+        "/data/shizuoka/districts-svg/22135.svg",
+        "/data/shizuoka/districts-svg/22136.svg",
+        "/data/shizuoka/districts-svg/22137.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22203",
+      "label": "沼津市",
+      "municipalityCodes": [
+        "22203"
+      ],
+      "shelterCount": 101,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.0786,
+        "lon": 138.838345,
+        "latSpan": 0.362492,
+        "lonSpan": 0.223145
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22205",
+      "label": "熱海市",
+      "municipalityCodes": [
+        "22205"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.08738,
+        "lon": 139.1022,
+        "latSpan": 0.162162,
+        "lonSpan": 0.19331
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22206",
+      "label": "三島市",
+      "municipalityCodes": [
+        "22206"
+      ],
+      "shelterCount": 103,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.13267,
+        "lon": 138.95948,
+        "latSpan": 0.148538,
+        "lonSpan": 0.14131
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22207",
+      "label": "富士宮市",
+      "municipalityCodes": [
+        "22207"
+      ],
+      "shelterCount": 71,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.298705,
+        "lon": 138.626745,
+        "latSpan": 0.382265,
+        "lonSpan": 0.298103
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22208",
+      "label": "伊東市",
+      "municipalityCodes": [
+        "22208"
+      ],
+      "shelterCount": 79,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.94403,
+        "lon": 139.09129,
+        "latSpan": 0.239954,
+        "lonSpan": 0.147446
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22209",
+      "label": "島田市",
+      "municipalityCodes": [
+        "22209"
+      ],
+      "shelterCount": 84,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.92516,
+        "lon": 138.13114,
+        "latSpan": 0.361712,
+        "lonSpan": 0.31109
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22210",
+      "label": "富士市",
+      "municipalityCodes": [
+        "22210"
+      ],
+      "shelterCount": 141,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.237805,
+        "lon": 138.685085,
+        "latSpan": 0.315419,
+        "lonSpan": 0.329563
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22211",
+      "label": "磐田市",
+      "municipalityCodes": [
+        "22211"
+      ],
+      "shelterCount": 197,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.7687,
+        "lon": 137.849955,
+        "latSpan": 0.318136,
+        "lonSpan": 0.162201
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22212",
+      "label": "焼津市",
+      "municipalityCodes": [
+        "22212"
+      ],
+      "shelterCount": 81,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.845,
+        "lon": 138.292585,
+        "latSpan": 0.201838,
+        "lonSpan": 0.145093
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22213",
+      "label": "掛川市",
+      "municipalityCodes": [
+        "22213"
+      ],
+      "shelterCount": 412,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.781205,
+        "lon": 138.019905,
+        "latSpan": 0.361075,
+        "lonSpan": 0.214227
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22214",
+      "label": "藤枝市",
+      "municipalityCodes": [
+        "22214"
+      ],
+      "shelterCount": 52,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.915895,
+        "lon": 138.23959,
+        "latSpan": 0.259441,
+        "lonSpan": 0.22854
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22215",
+      "label": "御殿場市",
+      "municipalityCodes": [
+        "22215"
+      ],
+      "shelterCount": 32,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.28859,
+        "lon": 138.86244,
+        "latSpan": 0.190788,
+        "lonSpan": 0.33995
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22215.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22216",
+      "label": "袋井市",
+      "municipalityCodes": [
+        "22216"
+      ],
+      "shelterCount": 89,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.74386,
+        "lon": 137.929735,
+        "latSpan": 0.2041,
+        "lonSpan": 0.207753
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22216.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22219",
+      "label": "下田市",
+      "municipalityCodes": [
+        "22219"
+      ],
+      "shelterCount": 60,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.673895,
+        "lon": 138.91948,
+        "latSpan": 0.260221,
+        "lonSpan": 0.19071
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22219.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22220",
+      "label": "裾野市",
+      "municipalityCodes": [
+        "22220"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.239805,
+        "lon": 138.87553,
+        "latSpan": 0.237107,
+        "lonSpan": 0.327756
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22220.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22221",
+      "label": "湖西市",
+      "municipalityCodes": [
+        "22221"
+      ],
+      "shelterCount": 54,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.730485,
+        "lon": 137.536345,
+        "latSpan": 0.146601,
+        "lonSpan": 0.161811
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22221.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22222",
+      "label": "伊豆市",
+      "municipalityCodes": [
+        "22222"
+      ],
+      "shelterCount": 45,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.92102,
+        "lon": 138.911555,
+        "latSpan": 0.245804,
+        "lonSpan": 0.408915
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22222.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22223",
+      "label": "御前崎市",
+      "municipalityCodes": [
+        "22223"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.647815,
+        "lon": 138.155985,
+        "latSpan": 0.137241,
+        "lonSpan": 0.202111
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22223.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22224",
+      "label": "菊川市",
+      "municipalityCodes": [
+        "22224"
+      ],
+      "shelterCount": 42,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.73547,
+        "lon": 138.094675,
+        "latSpan": 0.202332,
+        "lonSpan": 0.132301
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22224.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22225",
+      "label": "伊豆の国市",
+      "municipalityCodes": [
+        "22225"
+      ],
+      "shelterCount": 87,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.035645,
+        "lon": 138.97697,
+        "latSpan": 0.119561,
+        "lonSpan": 0.193154
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22225.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22226",
+      "label": "牧之原市",
+      "municipalityCodes": [
+        "22226"
+      ],
+      "shelterCount": 333,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.710355,
+        "lon": 138.191595,
+        "latSpan": 0.237211,
+        "lonSpan": 0.155155
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22226.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22301",
+      "label": "東伊豆町",
+      "municipalityCodes": [
+        "22301"
+      ],
+      "shelterCount": 33,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.82387,
+        "lon": 139.021915,
+        "latSpan": 0.155064,
+        "lonSpan": 0.157911
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22301.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22302",
+      "label": "河津町",
+      "municipalityCodes": [
+        "22302"
+      ],
+      "shelterCount": 33,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.77978,
+        "lon": 138.951025,
+        "latSpan": 0.161096,
+        "lonSpan": 0.194311
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22302.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22304",
+      "label": "南伊豆町",
+      "municipalityCodes": [
+        "22304"
+      ],
+      "shelterCount": 11,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.658445,
+        "lon": 138.822095,
+        "latSpan": 0.149487,
+        "lonSpan": 0.214981
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22304.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22305",
+      "label": "松崎町",
+      "municipalityCodes": [
+        "22305"
+      ],
+      "shelterCount": 7,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.750435,
+        "lon": 138.818215,
+        "latSpan": 0.130325,
+        "lonSpan": 0.205179
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22305.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22306",
+      "label": "西伊豆町",
+      "municipalityCodes": [
+        "22306"
+      ],
+      "shelterCount": 62,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.82239,
+        "lon": 138.821915,
+        "latSpan": 0.155532,
+        "lonSpan": 0.183963
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22306.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22325",
+      "label": "函南町",
+      "municipalityCodes": [
+        "22325"
+      ],
+      "shelterCount": 15,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.121925,
+        "lon": 138.97893,
+        "latSpan": 0.157157,
+        "lonSpan": 0.17121
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22325.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22341",
+      "label": "清水町",
+      "municipalityCodes": [
+        "22341"
+      ],
+      "shelterCount": 28,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.0981,
+        "lon": 138.89927,
+        "latSpan": 0.054886,
+        "lonSpan": 0.04
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22341.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22342",
+      "label": "長泉町",
+      "municipalityCodes": [
+        "22342"
+      ],
+      "shelterCount": 8,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.167,
+        "lon": 138.86168,
+        "latSpan": 0.140764,
+        "lonSpan": 0.129584
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22342.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22344",
+      "label": "小山町",
+      "municipalityCodes": [
+        "22344"
+      ],
+      "shelterCount": 12,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.34411,
+        "lon": 138.874655,
+        "latSpan": 0.153972,
+        "lonSpan": 0.374075
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22344.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22424",
+      "label": "吉田町",
+      "municipalityCodes": [
+        "22424"
+      ],
+      "shelterCount": 42,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.77183,
+        "lon": 138.25894,
+        "latSpan": 0.08086,
+        "lonSpan": 0.091832
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22424.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22429",
+      "label": "川根本町",
+      "municipalityCodes": [
+        "22429"
+      ],
+      "shelterCount": 51,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.159875,
+        "lon": 138.11912,
+        "latSpan": 0.487617,
+        "lonSpan": 0.313794
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22429.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "22461",
+      "label": "森町",
+      "municipalityCodes": [
+        "22461"
+      ],
+      "shelterCount": 16,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 34.879955,
+        "lon": 137.957885,
+        "latSpan": 0.248729,
+        "lonSpan": 0.224341
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/shizuoka/districts-svg/22461.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

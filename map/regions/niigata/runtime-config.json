@@ -1,0 +1,44 @@
+{
+  "version": "2",
+  "regionId": "niigata",
+  "prefCode": "15",
+  "label": "新潟県",
+  "engine": "svgmap",
+  "containerUrl": "/map/containers/Containers_webapp_denshi_15.svg",
+  "iconsBaseUrl": "/map/icons",
+  "initialViewport": {
+    "lat": 37.64507,
+    "lon": 138.76744,
+    "latSpan": 2.070382,
+    "lonSpan": 2.554114
+  },
+  "layers": {
+    "baseArea": {
+      "layerUrl": "/map/layers/overview/pref/15.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "evacuation": {
+      "dataUrl": "/map/data/evacuation/niigata.json",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "teamActivity": {
+      "dataUrl": "/map/data/team-activity/niigata.json",
+      "baseAreaLayerUrl": "/map/layers/overview/pref/15.svg",
+      "districtSvgUrlTemplate": "/data/niigata/districts-svg/{code}.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "hazard": {
+      "layerUrl": "/map/layers/hazard/15/niigata.svg",
+      "svgUrlTemplate": "/map/layers/hazard/15/districts/{code}.svg",
+      "runtimeVisible": false,
+      "opacity": 0.7
+    }
+  },
+  "interaction": {
+    "disableDefaultPopup": true,
+    "featureSelectEvent": true
+  }
+}

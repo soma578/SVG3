@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>河川監視カメラ</title>
+  <script src="../svgmap-slawa-client/svgMapLayerLib.js"></script>
+</head>
+<body>
+<script type="module">
+import { initRepresentativePinsLayer } from '../representative-pins/representativePinsCore.js';
+import { renderWebcamDetail } from './webcamDetail.js';
+
+const bindImageRefresh = (modal) => {
+  const image = modal?.querySelector?.('[data-webcam-image]');
+  const button = modal?.querySelector?.('[data-webcam-refresh]');
+  const status = modal?.querySelector?.('[data-webcam-status]');
+  if (!image || !button) return;
+  image.addEventListener('error', () => {
+    image.closest('figure')?.setAttribute('hidden', '');
+    if (status) status.textContent = '画像を取得できません';
+  });
+  image.addEventListener('load', () => {
+    image.closest('figure')?.removeAttribute('hidden');
+    if (status) status.textContent = '最新画像';
+  });
+  let cooldownUntil = 0;
+  button.addEventListener('click', () => {
+    const now = Date.now();
+    if (now < cooldownUntil) return;
+    const source = image.getAttribute('data-source');
+    if (!source) return;
+    cooldownUntil = now + 10_000;
+    button.disabled = true;
+    image.src = `${source}${source.includes('?') ? '&' : '?'}t=${now}`;
+    if (status) {
+      status.textContent = `更新 ${new Date().toLocaleTimeString('ja-JP', {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+      })}`;
+    }
+    window.setTimeout(() => {
+      button.disabled = false;
+    }, 10_000);
+  });
+};
+
+renderWebcamDetail.afterShow = (_feature, modal) => bindImageRefresh(modal);
+
+let started = false;
+const start = () => {
+  if (started) return;
+  started = true;
+  initRepresentativePinsLayer({
+    mode: 'portable',
+    renderFeatureDetail: renderWebcamDetail,
+  });
+};
+window.addEventListener('layerWebAppReady', start, { once: true });
+if (window.svgMap && window.svgImage) queueMicrotask(start);
+</script>
+</body>
+</html>

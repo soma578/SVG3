@@ -1,0 +1,487 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ハザード WebApp Layer</title>
+  <script src="../svgmap-slawa-client/svgMapLayerLib.js"></script>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+      color: #172033;
+      background: #fff;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 14px; font-size: 16px; }
+    header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e1e6eb;
+    }
+    h1 { margin: 0; font-size: 17px; letter-spacing: 0; }
+    #hazard-mode { color: #667085; font-size: 13px; white-space: nowrap; }
+    .hazard-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .hazard-option {
+      display: grid;
+      grid-template-columns: 18px 14px minmax(0, 1fr);
+      align-items: center;
+      gap: 7px;
+      min-height: 42px;
+      padding: 8px;
+      border: 1px solid #d8dee5;
+      border-radius: 6px;
+      background: #fff;
+      cursor: pointer;
+    }
+    .hazard-option:hover { background: #f7f9fb; }
+    .hazard-option input { width: 18px; height: 18px; margin: 0; accent-color: #ad3f31; }
+    .swatch { width: 12px; height: 12px; border-radius: 2px; }
+    .hazard-option span:last-child { min-width: 0; font-size: 14px; font-weight: 700; line-height: 1.3; }
+    .hazard-degraded {
+    margin: 6px 10px 0;
+    padding: 7px 9px;
+    border-left: 4px solid #d97706;
+    border-radius: 4px;
+    background: #fdf6ec;
+    color: #7c4a03;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>ハザード種類</h1>
+  <span id="hazard-mode">準備中</span>
+</header>
+<p id="hazard-degraded" class="hazard-degraded" role="status" hidden></p>
+<div class="hazard-options" aria-label="表示するハザード">
+  <label class="hazard-option">
+    <input type="checkbox" data-hazard-type="flood" checked>
+    <span class="swatch" style="background:#3b82f6"></span>
+    <span>洪水浸水</span>
+  </label>
+  <label class="hazard-option">
+    <input type="checkbox" data-hazard-type="tsunami" checked>
+    <span class="swatch" style="background:#a855f7"></span>
+    <span>津波浸水</span>
+  </label>
+  <label class="hazard-option">
+    <input type="checkbox" data-hazard-type="landslide-warning" checked>
+    <span class="swatch" style="background:#f97316"></span>
+    <span>土砂警戒</span>
+  </label>
+  <label class="hazard-option">
+    <input type="checkbox" data-hazard-type="landslide-special" checked>
+    <span class="swatch" style="background:#ef4444"></span>
+    <span>土砂特別警戒</span>
+  </label>
+</div>
+<script type="module">
+import { MAP_MESSAGES } from '../representative-pins/mapMessages.js';
+import { fetchWithRuntimeCache } from '../representative-pins/runtimeCache.js';
+import { hazardDisplayPlan, shouldRetryFailure } from './hazardFallback.js';
+
+(() => {
+  window.hiddenOnLayerLoad = () => {};
+
+  // hash params:
+  //   prefSvgUrl=/map/layers/hazard/{prefCode}/{regionId}.svg
+  //   svgUrlTemplate=/map/layers/hazard/{prefCode}/districts/{code}.svg
+  const parseHashParams = () => {
+    const raw = String(window.svgImageProps?.hash || window.svgImageProps?.Path?.split('#')?.[1] || '');
+    const params = new URLSearchParams(raw.replace(/^#/, ''));
+    return {
+      prefSvgUrl: params.get('prefSvgUrl') || '',
+      svgUrlTemplate: params.get('svgUrlTemplate') || '',
+      layerKey: params.get('layerKey') || 'layer-hazard',
+    };
+  };
+
+  // コンテナは visibility="visible" にして SVGMap にコントローラを起動させる。
+  // ポリゴンの表示/非表示は applyVisibility() で 4グループの visibility を制御する。
+  const state = {
+    prefSvgUrl: '',
+    svgUrlTemplate: '',
+    layerKey: 'layer-hazard',
+    currentCode: '',
+    visible: true,
+    loadedKey: '',
+    loadingKey: '',
+    mode: 'none',
+    pathCount: 0,
+    // 取得に失敗したキーと時刻。市区町村版が取れないときに県全体版へ戻すための材料。
+    failedKeys: new Map(),
+    prefLoaded: false,
+    degradedNotice: '',
+    enabledTypes: new Set(['flood', 'tsunami', 'landslide-warning', 'landslide-special']),
+  };
+  let lastStatusSignature = '';
+
+  const MIN_VISIBLE_ZOOM = 10;
+  const MUNICIPALITY_ZOOM = 12;
+
+  // ----------------------------------------------------------------
+  // 4グループを空にする
+  // ----------------------------------------------------------------
+  const HAZARD_GROUPS = {
+    flood: 'hazard-flood',
+    tsunami: 'hazard-tsunami-inundation',
+    'landslide-warning': 'hazard-landslide-warning',
+    'landslide-special': 'hazard-landslide-special',
+  };
+  const GROUP_IDS = Object.values(HAZARD_GROUPS);
+
+  const emitDataStatus = (payload = {}) => {
+    const entry = {
+      online: navigator.onLine,
+      updatedAt: new Date().toISOString(),
+      ...payload,
+      key: 'hazard',
+      label: payload.label || 'ハザード',
+    };
+    console.debug('[hazardLayer] dataStatus', entry);
+    // console に出すだけでは利用者に伝わらない。ホストの鮮度バナーへ渡す。
+    notifyHost(MAP_MESSAGES.runtimeDataStatus, entry);
+  };
+
+  const scheduleNativeRefresh = () => {
+    window.setTimeout(() => {
+      try {
+        window.svgMap?.refreshScreen?.();
+      } catch (error) {
+        console.warn('[hazardLayer] native refresh failed', error);
+      }
+    }, 50);
+  };
+
+  const notifyHost = (type, payload = {}) => {
+    window.parent?.postMessage?.(
+      { type, payload },
+      window.location.origin === 'null' ? '*' : window.location.origin,
+    );
+  };
+
+  const serializedLayerState = () => {
+    const params = new URLSearchParams();
+    params.set('types', Object.keys(HAZARD_GROUPS).filter((type) => state.enabledTypes.has(type)).join(','));
+    return params.toString();
+  };
+
+  const syncControllerUi = () => {
+    document.querySelectorAll('[data-hazard-type]').forEach((input) => {
+      input.checked = state.enabledTypes.has(input.dataset.hazardType);
+    });
+    const mode = document.getElementById('hazard-mode');
+    if (mode) {
+      mode.textContent = state.mode === 'municipality'
+        ? '市区町村'
+        : state.mode === 'pref'
+          ? '広域'
+          : '縮尺外';
+    }
+    // 縮退中であることを黙って隠さない。粗い版を詳細版と誤認させないため。
+    const notice = document.getElementById('hazard-degraded');
+    if (notice) {
+      notice.textContent = state.degradedNotice || '';
+      notice.hidden = !state.degradedNotice;
+    }
+  };
+
+  const restoreLayerState = (serialized) => {
+    const params = new URLSearchParams(String(serialized || ''));
+    if (!params.has('types')) return;
+    const enabled = new Set(
+      String(params.get('types') || '').split(',').filter((type) => HAZARD_GROUPS[type]),
+    );
+    state.enabledTypes = enabled;
+    syncControllerUi();
+    applyVisibility();
+    scheduleNativeRefresh();
+  };
+
+  const emitLayerState = () => {
+    notifyHost(MAP_MESSAGES.runtimeLayerStateChanged, {
+      layerId: state.layerKey,
+      state: serializedLayerState(),
+    });
+  };
+
+  const statusUrlForMode = () => {
+    if (state.mode === 'pref') return state.prefSvgUrl;
+    if (state.mode === 'municipality' && state.currentCode && state.svgUrlTemplate) {
+      return state.svgUrlTemplate.replace('{code}', state.currentCode);
+    }
+    return state.prefSvgUrl || state.svgUrlTemplate || '';
+  };
+
+  const emitHazardState = (message = '') => {
+    const zoom = getZoomLevel();
+    const signature = [
+      zoom,
+      state.visible,
+      state.mode,
+      state.currentCode,
+      state.loadedKey,
+      state.loadingKey,
+      state.pathCount,
+      state.prefSvgUrl,
+      state.svgUrlTemplate,
+      message,
+    ].join('|');
+    if (signature === lastStatusSignature) return;
+    lastStatusSignature = signature;
+    // ここでデータ源を名乗ってはいけない。loadedKey は「描画済みか」であって
+    // 「保存済みを表示中か」ではなく、以前は正常時にも 'cache'/'fallback' を
+    // 報告して鮮度バナーを誤点灯させていた。実際の取得結果は
+    // fetchWithRuntimeCache が network/cache/fallback で報告する。
+    console.debug('[hazardLayer] state', {
+      zoom,
+      mode: state.mode,
+      loadedKey: state.loadedKey,
+      url: statusUrlForMode(),
+      message,
+    });
+  };
+
+  const clearGroups = () => {
+    const svg = window.svgImage;
+    if (!svg) return;
+    state.pathCount = 0;
+    for (const id of GROUP_IDS) {
+      const g = svg.getElementById?.(id);
+      if (!g) continue;
+      while (g.firstChild) g.removeChild(g.firstChild);
+    }
+  };
+
+  // ----------------------------------------------------------------
+  // 取得した SVG テキストを解析してグループにパスを注入する
+  // ----------------------------------------------------------------
+  const injectSvg = (svgText) => {
+    const svg = window.svgImage;
+    if (!svg) return 0;
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(svgText, 'image/svg+xml');
+    clearGroups();
+    let pathCount = 0;
+    for (const id of GROUP_IDS) {
+      const srcG = doc.getElementById(id);
+      const dstG = svg.getElementById?.(id);
+      if (!srcG || !dstG) continue;
+      for (const child of Array.from(srcG.childNodes)) {
+        if (child.nodeType !== 1) continue; // element only
+        const imported = svg.importNode?.(child, true) || child.cloneNode(true);
+        dstG.appendChild(imported);
+        pathCount += 1;
+      }
+    }
+    state.pathCount = pathCount;
+    return pathCount;
+  };
+
+  // ----------------------------------------------------------------
+  // ハザードSVGを取得してレイヤーに注入する
+  // ----------------------------------------------------------------
+  const loadHazardSvg = async (key, url) => {
+    if (!url || !key) return;
+    if (state.loadedKey === key || state.loadingKey === key) return;
+
+    state.loadingKey = key;
+    console.log('[hazardLayer] fetch', { key, url });
+    emitHazardState(`fetching key=${key} url=${url}`);
+    try {
+      const { data: svgText, source } = await fetchWithRuntimeCache(url, `hazard:${key}`, {
+        responseType: 'text',
+        label: 'ハザード',
+        logLabel: 'hazardLayer',
+        emitDataStatus,
+      });
+      if (state.loadingKey !== key) return; // 別モード/別市に切り替わっていたら破棄
+      state.loadingKey = '';
+      console.log('[hazardLayer] loaded', { key, source });
+      const pathCount = injectSvg(svgText);
+      state.failedKeys.delete(key);
+      if (key === 'pref') state.prefLoaded = true;
+      state.loadedKey = key;
+      applyVisibility();
+      emitHazardState(`loaded key=${key} source=${source} paths=${pathCount}`);
+      scheduleNativeRefresh();
+    } catch (err) {
+      if (state.loadingKey === key) state.loadingKey = '';
+      console.warn('[hazardLayer] fetch failed', { url, err });
+      state.failedKeys.set(key, Date.now());
+      // ここで無条件に消すと、市区町村版が取れないだけでハザードが全部消える。
+      // 県全体版が使えるなら縮退して描き直す。
+      if (key !== 'pref') {
+        state.loadedKey = '';
+        draw();
+      } else {
+        clearGroups();
+        state.loadedKey = '';
+        state.prefLoaded = false;
+      }
+      emitHazardState(`failed url=${url} error=${err?.message || err}`);
+    }
+  };
+
+  const getZoomLevel = () => {
+    const scale = Number(window.svgImageProps?.scale);
+    if (Number.isFinite(scale) && scale > 0) return Math.floor(Math.LOG2E * Math.log(scale) + 7.25);
+    return 13;
+  };
+
+  const modeForZoom = (zoom) => {
+    if (!state.visible || zoom < MIN_VISIBLE_ZOOM) return 'none';
+    if (!state.currentCode) return 'pref';
+    return zoom >= MUNICIPALITY_ZOOM ? 'municipality' : 'pref';
+  };
+
+  // ----------------------------------------------------------------
+  // 表示/非表示切替
+  // ----------------------------------------------------------------
+  const applyVisibility = () => {
+    const svg = window.svgImage;
+    if (!svg) return;
+    const shown = state.visible && state.mode !== 'none';
+    const vis = shown ? 'visible' : 'hidden';
+    for (const [type, id] of Object.entries(HAZARD_GROUPS)) {
+      const g = svg.getElementById?.(id);
+      if (g) {
+        const typeShown = shown && state.enabledTypes.has(type);
+        g.setAttribute('visibility', typeShown ? vis : 'hidden');
+        g.setAttribute('display', typeShown ? 'inline' : 'none');
+      }
+    }
+    syncControllerUi();
+  };
+
+  const draw = () => {
+    const zoom = getZoomLevel();
+    const requestedMode = modeForZoom(zoom);
+    const municipalityKey = state.currentCode ? `municipality:${state.currentCode}` : '';
+
+    // 通信が戻ったら縮退したままにしない。
+    for (const [key, at] of state.failedKeys) {
+      if (shouldRetryFailure(at)) state.failedKeys.delete(key);
+    }
+
+    const plan = hazardDisplayPlan({
+      requestedMode,
+      failedKeys: new Set(state.failedKeys.keys()),
+      municipalityKey,
+      prefAvailable: state.prefLoaded || Boolean(state.prefSvgUrl),
+    });
+
+    if (plan.mode !== state.mode) {
+      state.mode = plan.mode;
+      applyVisibility();
+    }
+    if (plan.notice !== state.degradedNotice) {
+      state.degradedNotice = plan.notice;
+      syncControllerUi();
+      // 縮退していることを利用者へ伝える。黙って粗い版を出さない。
+      emitDataStatus({
+        source: plan.degraded ? 'cache' : 'network',
+        label: 'ハザード',
+        message: plan.notice || undefined,
+        url: statusUrlForMode(),
+      });
+    }
+    emitHazardState();
+    if (plan.mode === 'none') return;
+
+    if (plan.mode === 'pref') {
+      void loadHazardSvg('pref', state.prefSvgUrl);
+      return;
+    }
+
+    if (plan.mode === 'municipality' && state.currentCode && state.svgUrlTemplate) {
+      void loadHazardSvg(municipalityKey, state.svgUrlTemplate.replace('{code}', state.currentCode));
+    }
+  };
+
+  // ----------------------------------------------------------------
+  // メッセージハンドラ
+  // ----------------------------------------------------------------
+  window.addEventListener('message', (event) => {
+    const msg = event.data || {};
+
+    if (msg.type === MAP_MESSAGES.mapLayerVisibilityChanged) {
+      const key = msg.layerKey || msg.payload?.layerKey;
+      if (key !== state.layerKey) return;
+      state.visible = msg.visible !== false;
+      state.mode = modeForZoom(getZoomLevel());
+      applyVisibility();
+      emitHazardState('visibility changed');
+      if (state.visible) draw();
+      scheduleNativeRefresh();
+      return;
+    }
+
+    if (msg.type === MAP_MESSAGES.mapSetMunicipalityFilter) {
+      const codes = Array.isArray(msg.municipalityCodes) ? msg.municipalityCodes : [];
+      const code = codes[0] || '';
+      if (!code || code === state.currentCode) return;
+      state.currentCode = code;
+      emitHazardState('municipality changed');
+      if (state.visible) draw();
+      scheduleNativeRefresh();
+      return;
+    }
+
+    if (msg.type === MAP_MESSAGES.mapSetLayerState) {
+      const layerId = msg.layerId || msg.payload?.layerId;
+      if (layerId !== state.layerKey) return;
+      restoreLayerState(msg.state ?? msg.payload?.state ?? '');
+    }
+  });
+
+  document.querySelectorAll('[data-hazard-type]').forEach((input) => {
+    input.addEventListener('change', () => {
+      const type = input.dataset.hazardType;
+      if (!HAZARD_GROUPS[type]) return;
+      if (input.checked) state.enabledTypes.add(type);
+      else state.enabledTypes.delete(type);
+      applyVisibility();
+      emitLayerState();
+      scheduleNativeRefresh();
+    });
+  });
+
+  // ----------------------------------------------------------------
+  // 初期化
+  // ----------------------------------------------------------------
+  let started = false;
+  const start = () => {
+    if (started) return;
+    started = true;
+    const { prefSvgUrl, svgUrlTemplate, layerKey } = parseHashParams();
+    if (prefSvgUrl) state.prefSvgUrl = prefSvgUrl;
+    if (svgUrlTemplate) state.svgUrlTemplate = svgUrlTemplate;
+    if (layerKey) state.layerKey = layerKey;
+    // 初期非表示を適用してから ready を通知する
+    state.mode = modeForZoom(getZoomLevel());
+    applyVisibility();
+    emitHazardState('ready');
+    console.log('[hazardLayer] ready', { prefSvgUrl: state.prefSvgUrl, svgUrlTemplate: state.svgUrlTemplate });
+    draw();
+    scheduleNativeRefresh();
+    notifyHost(MAP_MESSAGES.runtimeLayerReady, { layerKey: state.layerKey });
+  };
+  window.addEventListener('layerWebAppReady', start, { once: true });
+  if (window.svgMap && window.svgImage) queueMicrotask(start);
+
+  window.preRenderFunction = draw;
+})();
+</script>
+</body>
+</html>

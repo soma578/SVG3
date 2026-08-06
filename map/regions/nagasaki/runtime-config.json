@@ -1,0 +1,44 @@
+{
+  "version": "2",
+  "regionId": "nagasaki",
+  "prefCode": "42",
+  "label": "長崎県",
+  "engine": "svgmap",
+  "containerUrl": "/map/containers/Containers_webapp_denshi_42.svg",
+  "iconsBaseUrl": "/map/icons",
+  "initialViewport": {
+    "lat": 33.347395,
+    "lon": 129.36238,
+    "latSpan": 3.04695,
+    "lonSpan": 2.308219
+  },
+  "layers": {
+    "baseArea": {
+      "layerUrl": "/map/layers/overview/pref/42.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "evacuation": {
+      "dataUrl": "/map/data/evacuation/nagasaki.json",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "teamActivity": {
+      "dataUrl": "/map/data/team-activity/nagasaki.json",
+      "baseAreaLayerUrl": "/map/layers/overview/pref/42.svg",
+      "districtSvgUrlTemplate": "/data/nagasaki/districts-svg/{code}.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "hazard": {
+      "layerUrl": "/map/layers/hazard/42/nagasaki.svg",
+      "svgUrlTemplate": "/map/layers/hazard/42/districts/{code}.svg",
+      "runtimeVisible": false,
+      "opacity": 0.7
+    }
+  },
+  "interaction": {
+    "disableDefaultPopup": true,
+    "featureSelectEvent": true
+  }
+}

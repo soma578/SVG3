@@ -1,0 +1,27 @@
+{
+  "id": "layer-team-activity",
+  "title": "L3 チーム活動エリア",
+  "href": "/map/layers/portable/team-activity/teamActivityAreaLayer.svg#data=/map/data/qtct/teamActivity/detail-index.json&districtSvgUrlTemplate={districtBaseUrlPattern}/districts-svg/{code}.svg&layer=teamActivity",
+  "class": "vectorEtcData",
+  "visibility": "hidden",
+  "opacity": "0.9",
+  "order": 60,
+  "layerPackage": "/map/layers/portable/team-activity/layer.package.json",
+  "publication": "/map/layers/managed/team-activity-pins/publication.json",
+  "bundle": {
+    "release": false
+  },
+  "ui": {
+    "messages": {
+      "toHost": [
+        "runtime:dataStatus"
+      ],
+      "fromHost": []
+    },
+    "catalog": false,
+    "userToggle": false,
+    "toggleKey": "teamActivity",
+    "group": "防災情報",
+    "note": "チーム活動エリア（チーム活動ピンと同時に切り替わります）"
+  }
+}

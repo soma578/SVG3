@@ -1,0 +1,44 @@
+{
+  "version": "2",
+  "regionId": "fukushima",
+  "prefCode": "07",
+  "label": "福島県",
+  "engine": "svgmap",
+  "containerUrl": "/map/containers/Containers_webapp_denshi_07.svg",
+  "iconsBaseUrl": "/map/icons",
+  "initialViewport": {
+    "lat": 37.383985,
+    "lon": 140.10388,
+    "latSpan": 1.388135,
+    "lonSpan": 2.136499
+  },
+  "layers": {
+    "baseArea": {
+      "layerUrl": "/map/layers/overview/pref/07.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "evacuation": {
+      "dataUrl": "/map/data/evacuation/fukushima.json",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "teamActivity": {
+      "dataUrl": "/map/data/team-activity/fukushima.json",
+      "baseAreaLayerUrl": "/map/layers/overview/pref/07.svg",
+      "districtSvgUrlTemplate": "/data/fukushima/districts-svg/{code}.svg",
+      "runtimeVisible": true,
+      "opacity": 1
+    },
+    "hazard": {
+      "layerUrl": "/map/layers/hazard/7/fukushima.svg",
+      "svgUrlTemplate": "/map/layers/hazard/7/districts/{code}.svg",
+      "runtimeVisible": false,
+      "opacity": 0.7
+    }
+  },
+  "interaction": {
+    "disableDefaultPopup": true,
+    "featureSelectEvent": true
+  }
+}

@@ -1,0 +1,1623 @@
+{
+  "region": "nagano",
+  "label": "長野県",
+  "municipalities": [
+    {
+      "id": "20201",
+      "label": "長野市",
+      "municipalityCodes": [
+        "20201"
+      ],
+      "shelterCount": 300,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.648215,
+        "lon": 138.114505,
+        "latSpan": 0.487539,
+        "lonSpan": 0.531427
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20201.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20202",
+      "label": "松本市",
+      "municipalityCodes": [
+        "20202"
+      ],
+      "shelterCount": 262,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.194535,
+        "lon": 137.84071,
+        "latSpan": 0.480753,
+        "lonSpan": 0.755378
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20202.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20203",
+      "label": "上田市",
+      "municipalityCodes": [
+        "20203"
+      ],
+      "shelterCount": 75,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.385965,
+        "lon": 138.241525,
+        "latSpan": 0.438347,
+        "lonSpan": 0.448383
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20203.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20204",
+      "label": "岡谷市",
+      "municipalityCodes": [
+        "20204"
+      ],
+      "shelterCount": 67,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.08902,
+        "lon": 138.04653,
+        "latSpan": 0.206466,
+        "lonSpan": 0.1417
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20204.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20205",
+      "label": "飯田市",
+      "municipalityCodes": [
+        "20205"
+      ],
+      "shelterCount": 302,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.455025,
+        "lon": 137.921195,
+        "latSpan": 0.521703,
+        "lonSpan": 0.603031
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20205.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20206",
+      "label": "諏訪市",
+      "municipalityCodes": [
+        "20206"
+      ],
+      "shelterCount": 37,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.035155,
+        "lon": 138.116945,
+        "latSpan": 0.231153,
+        "lonSpan": 0.214721
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20206.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20207",
+      "label": "須坂市",
+      "municipalityCodes": [
+        "20207"
+      ],
+      "shelterCount": 95,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.612725,
+        "lon": 138.34942,
+        "latSpan": 0.195975,
+        "lonSpan": 0.239616
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20207.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20208",
+      "label": "小諸市",
+      "municipalityCodes": [
+        "20208"
+      ],
+      "shelterCount": 99,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.34497,
+        "lon": 138.435425,
+        "latSpan": 0.179296,
+        "lonSpan": 0.185549
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20208.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20209",
+      "label": "伊那市",
+      "municipalityCodes": [
+        "20209"
+      ],
+      "shelterCount": 163,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.772905,
+        "lon": 138.03057,
+        "latSpan": 0.525057,
+        "lonSpan": 0.535938
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20209.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20210",
+      "label": "駒ヶ根市",
+      "municipalityCodes": [
+        "20210"
+      ],
+      "shelterCount": 127,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.724425,
+        "lon": 137.932585,
+        "latSpan": 0.149461,
+        "lonSpan": 0.336453
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20210.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20211",
+      "label": "中野市",
+      "municipalityCodes": [
+        "20211"
+      ],
+      "shelterCount": 55,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.76723,
+        "lon": 138.34019,
+        "latSpan": 0.18694,
+        "lonSpan": 0.172198
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20211.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20212",
+      "label": "大町市",
+      "municipalityCodes": [
+        "20212"
+      ],
+      "shelterCount": 160,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.500785,
+        "lon": 137.77688,
+        "latSpan": 0.425893,
+        "lonSpan": 0.493454
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20212.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20213",
+      "label": "飯山市",
+      "municipalityCodes": [
+        "20213"
+      ],
+      "shelterCount": 69,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.91596,
+        "lon": 138.39716,
+        "latSpan": 0.290862,
+        "lonSpan": 0.31902
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20213.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20214",
+      "label": "茅野市",
+      "municipalityCodes": [
+        "20214"
+      ],
+      "shelterCount": 54,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.014525,
+        "lon": 138.24359,
+        "latSpan": 0.254605,
+        "lonSpan": 0.339144
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20214.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20215",
+      "label": "塩尻市",
+      "municipalityCodes": [
+        "20215"
+      ],
+      "shelterCount": 184,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.99331,
+        "lon": 137.918855,
+        "latSpan": 0.464048,
+        "lonSpan": 0.321087
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20215.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20217",
+      "label": "佐久市",
+      "municipalityCodes": [
+        "20217"
+      ],
+      "shelterCount": 191,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.212305,
+        "lon": 138.459485,
+        "latSpan": 0.269503,
+        "lonSpan": 0.460785
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20217.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20218",
+      "label": "千曲市",
+      "municipalityCodes": [
+        "20218"
+      ],
+      "shelterCount": 198,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.497655,
+        "lon": 138.11474,
+        "latSpan": 0.158925,
+        "lonSpan": 0.221286
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20218.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20219",
+      "label": "東御市",
+      "municipalityCodes": [
+        "20219"
+      ],
+      "shelterCount": 135,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.360355,
+        "lon": 138.375955,
+        "latSpan": 0.193401,
+        "lonSpan": 0.212589
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20219.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20220",
+      "label": "安曇野市",
+      "municipalityCodes": [
+        "20220"
+      ],
+      "shelterCount": 200,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.331355,
+        "lon": 137.846255,
+        "latSpan": 0.244387,
+        "lonSpan": 0.377637
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20220.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20303",
+      "label": "小海町",
+      "municipalityCodes": [
+        "20303"
+      ],
+      "shelterCount": 36,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.07222,
+        "lon": 138.4683,
+        "latSpan": 0.146042,
+        "lonSpan": 0.298792
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20303.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20304",
+      "label": "川上村",
+      "municipalityCodes": [
+        "20304"
+      ],
+      "shelterCount": 40,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.932045,
+        "lon": 138.611215,
+        "latSpan": 0.161733,
+        "lonSpan": 0.332683
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20304.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20305",
+      "label": "南牧村",
+      "municipalityCodes": [
+        "20305"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.97476,
+        "lon": 138.45901,
+        "latSpan": 0.204282,
+        "lonSpan": 0.258414
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20305.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20306",
+      "label": "南相木村",
+      "municipalityCodes": [
+        "20306"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.02353,
+        "lon": 138.589885,
+        "latSpan": 0.094848,
+        "lonSpan": 0.256893
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20306.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20307",
+      "label": "北相木村",
+      "municipalityCodes": [
+        "20307"
+      ],
+      "shelterCount": 14,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.06303,
+        "lon": 138.574485,
+        "latSpan": 0.09035,
+        "lonSpan": 0.181181
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20307.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20309",
+      "label": "佐久穂町",
+      "municipalityCodes": [
+        "20309"
+      ],
+      "shelterCount": 92,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.11322,
+        "lon": 138.483525,
+        "latSpan": 0.172848,
+        "lonSpan": 0.426491
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20309.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20321",
+      "label": "軽井沢町",
+      "municipalityCodes": [
+        "20321"
+      ],
+      "shelterCount": 76,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.35172,
+        "lon": 138.58237,
+        "latSpan": 0.188942,
+        "lonSpan": 0.194454
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20321.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20323",
+      "label": "御代田町",
+      "municipalityCodes": [
+        "20323"
+      ],
+      "shelterCount": 33,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.346835,
+        "lon": 138.520045,
+        "latSpan": 0.174447,
+        "lonSpan": 0.155363
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20323.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20324",
+      "label": "立科町",
+      "municipalityCodes": [
+        "20324"
+      ],
+      "shelterCount": 6,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.205355,
+        "lon": 138.2895,
+        "latSpan": 0.309413,
+        "lonSpan": 0.142376
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20324.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20349",
+      "label": "青木村",
+      "municipalityCodes": [
+        "20349"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.36002,
+        "lon": 138.10888,
+        "latSpan": 0.122616,
+        "lonSpan": 0.117884
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20349.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20350",
+      "label": "長和町",
+      "municipalityCodes": [
+        "20350"
+      ],
+      "shelterCount": 11,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.20088,
+        "lon": 138.209545,
+        "latSpan": 0.247,
+        "lonSpan": 0.233311
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20350.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20361",
+      "label": "下諏訪町",
+      "municipalityCodes": [
+        "20361"
+      ],
+      "shelterCount": 64,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.1083,
+        "lon": 138.12138,
+        "latSpan": 0.151268,
+        "lonSpan": 0.138086
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20361.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20362",
+      "label": "富士見町",
+      "municipalityCodes": [
+        "20362"
+      ],
+      "shelterCount": 75,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.873895,
+        "lon": 138.26463,
+        "latSpan": 0.240071,
+        "lonSpan": 0.248872
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20362.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20363",
+      "label": "原村",
+      "municipalityCodes": [
+        "20363"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.958005,
+        "lon": 138.274725,
+        "latSpan": 0.069199,
+        "lonSpan": 0.248911
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20363.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20382",
+      "label": "辰野町",
+      "municipalityCodes": [
+        "20382"
+      ],
+      "shelterCount": 97,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.98588,
+        "lon": 137.938115,
+        "latSpan": 0.201786,
+        "lonSpan": 0.282893
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20382.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20383",
+      "label": "箕輪町",
+      "municipalityCodes": [
+        "20383"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.92009,
+        "lon": 137.98874,
+        "latSpan": 0.110058,
+        "lonSpan": 0.264732
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20383.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20384",
+      "label": "飯島町",
+      "municipalityCodes": [
+        "20384"
+      ],
+      "shelterCount": 69,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.676,
+        "lon": 137.88971,
+        "latSpan": 0.10621,
+        "lonSpan": 0.229866
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20384.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20385",
+      "label": "南箕輪村",
+      "municipalityCodes": [
+        "20385"
+      ],
+      "shelterCount": 41,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.887745,
+        "lon": 137.920275,
+        "latSpan": 0.098241,
+        "lonSpan": 0.189969
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20385.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20386",
+      "label": "中川村",
+      "municipalityCodes": [
+        "20386"
+      ],
+      "shelterCount": 38,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.64137,
+        "lon": 137.96861,
+        "latSpan": 0.11466,
+        "lonSpan": 0.181272
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20386.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20388",
+      "label": "宮田村",
+      "municipalityCodes": [
+        "20388"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.777715,
+        "lon": 137.884295,
+        "latSpan": 0.078247,
+        "lonSpan": 0.207077
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20388.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20402",
+      "label": "松川町",
+      "municipalityCodes": [
+        "20402"
+      ],
+      "shelterCount": 32,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.600405,
+        "lon": 137.913035,
+        "latSpan": 0.135993,
+        "lonSpan": 0.273897
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20402.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20403",
+      "label": "高森町",
+      "municipalityCodes": [
+        "20403"
+      ],
+      "shelterCount": 4,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.572765,
+        "lon": 137.86434,
+        "latSpan": 0.111085,
+        "lonSpan": 0.138736
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20403.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20404",
+      "label": "阿南町",
+      "municipalityCodes": [
+        "20404"
+      ],
+      "shelterCount": 21,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.310225,
+        "lon": 137.759715,
+        "latSpan": 0.211523,
+        "lonSpan": 0.220311
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20404.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20407",
+      "label": "阿智村",
+      "municipalityCodes": [
+        "20407"
+      ],
+      "shelterCount": 22,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.44735,
+        "lon": 137.68185,
+        "latSpan": 0.277784,
+        "lonSpan": 0.23062
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20407.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20409",
+      "label": "平谷村",
+      "municipalityCodes": [
+        "20409"
+      ],
+      "shelterCount": 9,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.33251,
+        "lon": 137.631725,
+        "latSpan": 0.1755,
+        "lonSpan": 0.147459
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20409.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20410",
+      "label": "根羽村",
+      "municipalityCodes": [
+        "20410"
+      ],
+      "shelterCount": 0,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.258005,
+        "lon": 137.608125,
+        "latSpan": 0.153309,
+        "lonSpan": 0.161525
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20410.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20411",
+      "label": "下條村",
+      "municipalityCodes": [
+        "20411"
+      ],
+      "shelterCount": 35,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.38729,
+        "lon": 137.771615,
+        "latSpan": 0.10322,
+        "lonSpan": 0.119145
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20411.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20412",
+      "label": "売木村",
+      "municipalityCodes": [
+        "20412"
+      ],
+      "shelterCount": 0,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.267195,
+        "lon": 137.69572,
+        "latSpan": 0.102349,
+        "lonSpan": 0.096928
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20412.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20413",
+      "label": "天龍村",
+      "municipalityCodes": [
+        "20413"
+      ],
+      "shelterCount": 29,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.26024,
+        "lon": 137.81046,
+        "latSpan": 0.146042,
+        "lonSpan": 0.233012
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20413.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20414",
+      "label": "泰阜村",
+      "municipalityCodes": [
+        "20414"
+      ],
+      "shelterCount": 30,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.366925,
+        "lon": 137.86754,
+        "latSpan": 0.141037,
+        "lonSpan": 0.156156
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20414.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20415",
+      "label": "喬木村",
+      "municipalityCodes": [
+        "20415"
+      ],
+      "shelterCount": 44,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.47879,
+        "lon": 137.924885,
+        "latSpan": 0.134342,
+        "lonSpan": 0.163267
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20415.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20416",
+      "label": "豊丘村",
+      "municipalityCodes": [
+        "20416"
+      ],
+      "shelterCount": 48,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.533505,
+        "lon": 137.945465,
+        "latSpan": 0.120237,
+        "lonSpan": 0.175227
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20416.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20417",
+      "label": "大鹿村",
+      "municipalityCodes": [
+        "20417"
+      ],
+      "shelterCount": 10,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.579075,
+        "lon": 138.07785,
+        "latSpan": 0.323609,
+        "lonSpan": 0.225602
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20417.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20422",
+      "label": "上松町",
+      "municipalityCodes": [
+        "20422"
+      ],
+      "shelterCount": 68,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.76415,
+        "lon": 137.67007,
+        "latSpan": 0.151892,
+        "lonSpan": 0.360906
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20422.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20423",
+      "label": "南木曽町",
+      "municipalityCodes": [
+        "20423"
+      ],
+      "shelterCount": 52,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.59991,
+        "lon": 137.619495,
+        "latSpan": 0.235898,
+        "lonSpan": 0.286195
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20423.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20425",
+      "label": "木祖村",
+      "municipalityCodes": [
+        "20425"
+      ],
+      "shelterCount": 39,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.99577,
+        "lon": 137.75574,
+        "latSpan": 0.236028,
+        "lonSpan": 0.154804
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20425.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20429",
+      "label": "王滝村",
+      "municipalityCodes": [
+        "20429"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.80711,
+        "lon": 137.474885,
+        "latSpan": 0.255788,
+        "lonSpan": 0.390871
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20429.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20430",
+      "label": "大桑村",
+      "municipalityCodes": [
+        "20430"
+      ],
+      "shelterCount": 19,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.6962,
+        "lon": 137.651175,
+        "latSpan": 0.216606,
+        "lonSpan": 0.430625
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20430.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20432",
+      "label": "木曽町",
+      "municipalityCodes": [
+        "20432"
+      ],
+      "shelterCount": 128,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 35.90818,
+        "lon": 137.65223,
+        "latSpan": 0.308334,
+        "lonSpan": 0.457756
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20432.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20446",
+      "label": "麻績村",
+      "municipalityCodes": [
+        "20446"
+      ],
+      "shelterCount": 30,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.4574,
+        "lon": 138.03208,
+        "latSpan": 0.097474,
+        "lonSpan": 0.142896
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20446.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20448",
+      "label": "生坂村",
+      "municipalityCodes": [
+        "20448"
+      ],
+      "shelterCount": 38,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.435375,
+        "lon": 137.941225,
+        "latSpan": 0.140413,
+        "lonSpan": 0.093327
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20448.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20450",
+      "label": "山形村",
+      "municipalityCodes": [
+        "20450"
+      ],
+      "shelterCount": 13,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.1623,
+        "lon": 137.855935,
+        "latSpan": 0.073008,
+        "lonSpan": 0.117325
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20450.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20451",
+      "label": "朝日村",
+      "municipalityCodes": [
+        "20451"
+      ],
+      "shelterCount": 24,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.10206,
+        "lon": 137.826845,
+        "latSpan": 0.122252,
+        "lonSpan": 0.187733
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20451.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20452",
+      "label": "筑北村",
+      "municipalityCodes": [
+        "20452"
+      ],
+      "shelterCount": 31,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.42129,
+        "lon": 138.041075,
+        "latSpan": 0.138918,
+        "lonSpan": 0.209183
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20452.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20481",
+      "label": "池田町",
+      "municipalityCodes": [
+        "20481"
+      ],
+      "shelterCount": 54,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.41969,
+        "lon": 137.90316,
+        "latSpan": 0.144794,
+        "lonSpan": 0.088036
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20481.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20482",
+      "label": "松川村",
+      "municipalityCodes": [
+        "20482"
+      ],
+      "shelterCount": 38,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.415965,
+        "lon": 137.814385,
+        "latSpan": 0.095563,
+        "lonSpan": 0.158587
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20482.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20485",
+      "label": "白馬村",
+      "municipalityCodes": [
+        "20485"
+      ],
+      "shelterCount": 26,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.690895,
+        "lon": 137.846065,
+        "latSpan": 0.199667,
+        "lonSpan": 0.248235
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20485.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20486",
+      "label": "小谷村",
+      "municipalityCodes": [
+        "20486"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.82526,
+        "lon": 137.89885,
+        "latSpan": 0.246116,
+        "lonSpan": 0.3484
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20486.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20521",
+      "label": "坂城町",
+      "municipalityCodes": [
+        "20521"
+      ],
+      "shelterCount": 50,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.4581,
+        "lon": 138.18956,
+        "latSpan": 0.111488,
+        "lonSpan": 0.158444
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20521.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20541",
+      "label": "小布施町",
+      "municipalityCodes": [
+        "20541"
+      ],
+      "shelterCount": 22,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.7035,
+        "lon": 138.31475,
+        "latSpan": 0.055744,
+        "lonSpan": 0.087126
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20541.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20543",
+      "label": "高山村",
+      "municipalityCodes": [
+        "20543"
+      ],
+      "shelterCount": 17,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.65698,
+        "lon": 138.432955,
+        "latSpan": 0.122018,
+        "lonSpan": 0.263809
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20543.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20561",
+      "label": "山ノ内町",
+      "municipalityCodes": [
+        "20561"
+      ],
+      "shelterCount": 40,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.74508,
+        "lon": 138.51273,
+        "latSpan": 0.204906,
+        "lonSpan": 0.33631
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20561.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20562",
+      "label": "木島平村",
+      "municipalityCodes": [
+        "20562"
+      ],
+      "shelterCount": 43,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.844225,
+        "lon": 138.470425,
+        "latSpan": 0.131703,
+        "lonSpan": 0.224263
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20562.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20563",
+      "label": "野沢温泉村",
+      "municipalityCodes": [
+        "20563"
+      ],
+      "shelterCount": 25,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.93332,
+        "lon": 138.46911,
+        "latSpan": 0.133666,
+        "lonSpan": 0.130624
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20563.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20583",
+      "label": "信濃町",
+      "municipalityCodes": [
+        "20583"
+      ],
+      "shelterCount": 19,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.809235,
+        "lon": 138.184785,
+        "latSpan": 0.160433,
+        "lonSpan": 0.248599
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20583.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20588",
+      "label": "小川村",
+      "municipalityCodes": [
+        "20588"
+      ],
+      "shelterCount": 50,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.6337,
+        "lon": 137.959695,
+        "latSpan": 0.101192,
+        "lonSpan": 0.138801
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20588.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20590",
+      "label": "飯綱町",
+      "municipalityCodes": [
+        "20590"
+      ],
+      "shelterCount": 25,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.77288,
+        "lon": 138.219055,
+        "latSpan": 0.16601,
+        "lonSpan": 0.221533
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20590.svg"
+      ],
+      "districtSvgStatus": "available"
+    },
+    {
+      "id": "20602",
+      "label": "栄村",
+      "municipalityCodes": [
+        "20602"
+      ],
+      "shelterCount": 37,
+      "teamActivityCount": 0,
+      "dataStatus": "partial",
+      "viewport": {
+        "lat": 36.87659,
+        "lon": 138.588455,
+        "latSpan": 0.397306,
+        "lonSpan": 0.279435
+      },
+      "hasDistrictPolygons": true,
+      "districtSvgUrls": [
+        "/data/nagano/districts-svg/20602.svg"
+      ],
+      "districtSvgStatus": "available"
+    }
+  ]
+}

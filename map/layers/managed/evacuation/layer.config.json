@@ -1,0 +1,32 @@
+{
+  "id": "layer-evacuation",
+  "title": "L2 避難所",
+  "href": "/map/layers/portable/evacuation/evacuationLayer.svg#summary=/map/data/qtct/evacuation/summary.json&data=/map/data/qtct/evacuation/detail-index.json&layer=evacuation",
+  "class": "poi clickable",
+  "visibility": "visible",
+  "opacity": "1",
+  "order": 30,
+  "layerPackage": "/map/layers/portable/evacuation/layer.package.json",
+  "bundle": {
+    "release": true
+  },
+  "ui": {
+    "catalog": true,
+    "group": "防災情報",
+    "symbol": "避",
+    "icon": "/map/icons/shelter-open.svg",
+    "accent": "#12603F",
+    "kind": "poi",
+    "note": "避難所・緊急避難場所",
+    "messages": {
+      "toHost": [
+        "runtime:dataStatus"
+      ],
+      "fromHost": []
+    }
+  },
+  "data": {
+    "kind": "qtct-static",
+    "qtctLayer": "evacuation"
+  }
+}
