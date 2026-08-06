@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8"></meta>
+<title>地理院の　日本の主な山岳一覧コンテンツからCSVを構築する</title>
+</head>
+<script>
+// 地理院の　日本の主な山岳一覧コンテンツからCSVを構築する～
+// https://www.gsi.go.jp/kihonjohochousa/kihonjohochousa41140.html
+// 2025/05/20 上のページが消滅し、2025/4版というcsvデータができたのでそちらを単にDLすることにする
+// https://www.gsi.go.jp/kihonjohochousa/kihonjohochousa41139.html
+// の
+// https://www.gsi.go.jp/KOKUJYOHO/MOUNTAIN/1003zan20250401.csv
+//
+// Programmed by Satoru Takagi
+// 
+// License: (MPL v2)
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at https://mozilla.org/MPL/2.0/.
+//
+
+var srcContent = "https://www.gsi.go.jp/KOKUJYOHO/MOUNTAIN/1003zan20250401.csv";
+var corsPxy ="";
+
+onload=async function(){
+	if (!corsPxy){
+		corsPxy = (new URL(location.href.replace("#","?"))).searchParams.get("proxy");
+	}
+	if (!corsPxy){
+		corsPxy ="";
+	}
+	var srcURL;
+	if (!corsPxy && window.opener?.opener?.svgMap){
+		console.log("use svgmap cors proxy func");
+		srcURL = window.opener.opener.svgMap.getCORSURL(srcContent);
+	} else {
+		srcURL = corsPxy+srcContent
+	}
+	var res = await fetch(srcURL);
+	var txt = await res.text();
+	printCsv(txt);
+}
+
+var csvContent=null;
+function printCsv(csvTxt){
+	mtbl.value=csvTxt;
+	csvContent = csvTxt;
+}
+
+function getCsvData(){
+	return new Promise( async function(okCallback, ngCallback) {
+		while (!csvContent ){
+			await new Promise(s => setTimeout(s, 1000));
+		}
+		okCallback(csvContent);
+	});
+}
+
+
+
+function downloadCsv(){
+	var blob = new Blob([csvContent],{type:"text/plain"});
+	
+	var element = document.createElement('a');
+	element.download = 'japanMountains.csv';
+	element.href = URL.createObjectURL(blob);
+	element.click();
+	URL.revokeObjectURL(element.href);
+}
+
+</script>
+<body>
+<h3><a href="https://www.gsi.go.jp/" target="_blank">地理院</a>の<a href="https://www.gsi.go.jp/kihonjohochousa/kihonjohochousa41139.html" target="_blank">日本の主な山岳標高（１００３山）</a>からCSVデータを構築</h3>
+<input type="button" value="download CSV" onclick="downloadCsv()"></input>
+<textarea style="width:100%; height:500px" id="mtbl"></textarea>
+</body>
+</html>

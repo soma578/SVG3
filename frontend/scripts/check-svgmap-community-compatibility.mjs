@@ -86,6 +86,19 @@ const enabled = catalog.entries
   .map((entry) => entry.title)
 assert.deepEqual(new Set(config.include), new Set(enabled), 'include must exactly match supported/limited entries')
 
+// このスナップショットで実体欠落が既知なのは、上流Containerが存在しない
+// controllerを参照しているstarlinkUnofficialGSだけ。Gitの部分取り込みに戻ると
+// Vercelだけ数十件が「非対応」になるため、クリーンcloneの資産欠落をここで止める。
+const incompatibleTitles = catalog.entries
+  .filter((entry) => entry.status === 'incompatible')
+  .map((entry) => entry.title)
+  .sort()
+assert.deepEqual(
+  incompatibleTitles,
+  ['starlinkUnofficialGS'],
+  'the deployed SVGMap App Layers snapshot must not lose upstream layer assets',
+)
+
 const eStatController = fs.readFileSync(
   path.join(projectRoot, 'svgMapAppLayers/appLayers/eStatPopulation/adminAreaMap2_withGIS.html'),
   'utf8',

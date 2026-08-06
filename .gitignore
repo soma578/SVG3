@@ -145,28 +145,10 @@ docs/legacy/*
 frontend/.next/
 .next/
 
-# svgMapAppLayers は上流の配布物。以前は .gitmodules の無い gitlink だけが
-# 登録されており、クローン先で取得できずビルドが落ちていた。
-# 実際に標準搭載するレイヤーが参照する最小ディレクトリだけを通常ファイルとして
-# 取り込み、残りの上流配布物は追跡しない。
-/svgMapAppLayers/*
-!/svgMapAppLayers/LICENSE
-!/svgMapAppLayers/README.md
-!/svgMapAppLayers/UPSTREAM.json
-!/svgMapAppLayers/Container.svg
-!/svgMapAppLayers/basemaps/
-!/svgMapAppLayers/commonLib/
-!/svgMapAppLayers/geoCoders/
-/svgMapAppLayers/geoCoders/*
-!/svgMapAppLayers/geoCoders/geohashCoder/
-!/svgMapAppLayers/appLayers/
-/svgMapAppLayers/appLayers/*
-!/svgMapAppLayers/appLayers/eStatPopulation/
-!/svgMapAppLayers/appLayers/moj/
-!/svgMapAppLayers/appLayers/okayamaUniversity/
-!/svgMapAppLayers/appLayers/jma/
-!/svgMapAppLayers/appLayers/usgsEq/
-!/svgMapAppLayers/appLayers/bosaiKakenJSHIS/
+# SVGMapコミュニティ資産は、クリーンclone/Vercelでもローカルと同じ互換性判定と
+# GUI追加ができるよう、上流スナップショット全体を通常ファイルとして収録する。
+# ルートの *.zip 除外より後で、上流レイヤー自身が必要とするZIPだけを戻す。
+!/svgMapAppLayers/**/*.zip
 
 # 全国detailシャードは map:generate の成果物。114MB あり恒久追跡しない。
 # 正規のランタイム形式はこれだが、リポジトリには入れず生成で作る。

@@ -466,6 +466,7 @@ export const GENERATED_SVGMAP_APP_LAYER_TARGETS = Object.freeze([
       "/svgmap/svgmapjs.git",
       "/iamakulov/unescape-js",
       "/amx-project/kuwanauchi",
+      "/svgmap/svgmapAppLayers",
       "/graphhopper/graphhopper",
       "/mapbox/simplestyle-spec",
       "/svgmap/svgmapjs/issues/5",

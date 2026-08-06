@@ -1,0 +1,804 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>PointRegTools</title>
+<meta charset="UTF-8">
+</head>
+
+<style>
+/* https://proengineer.internous.co.jp/content/columnfeature/6492 */
+#genericAuthoringToolModeDiv input[type=radio] {
+display: none; /* ラジオボタンを非表示にする */
+}
+#genericAuthoringToolModeDiv input[type="radio"]:checked + label {
+background: #2189EE;/* マウス選択時の背景色を指定する */
+color: #ffffff; /* マウス選択時のフォント色を指定する */
+}
+
+#genericAuthoringToolModeDiv label:hover {
+background-color: #C2CDF9; /* マウスオーバー時の背景色を指定する */
+}
+
+#genericAuthoringToolModeDiv label {
+display: block; /* ブロックレベル要素化する */
+float: left; /* 要素の左寄せ・回り込を指定する */
+margin: 2px; /* ボックス外側の余白を指定する */
+width: auto; /* ボックスの横幅を指定する */
+height: 20px; /* ボックスの高さを指定する */
+padding-left: 2px; /* ボックス内左側の余白を指定する */
+padding-right: 2px; /* ボックス内御右側の余白を指定する */
+color: #202090; /* フォントの色を指定 */
+text-align: center; /* テキストのセンタリングを指定する */
+line-height: 20px; /* 行の高さを指定する */
+cursor: pointer; /* マウスカーソルの形（リンクカーソル）を指定する */
+border: 2px solid #006DD9;/* ボックスの境界線を実線で指定する */
+border-radius: 5px; /* 角丸を指定する */
+font-size: 14px;
+}
+</style>
+
+<style>
+/* タブのCSS */
+/* https://bagelee.com/design/css/create_tabs_using_only_css/ */
+/*タブ切り替え全体のスタイル*/
+.tabs {
+  margin-top: 5px;
+  padding-bottom: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 380px;
+  margin: 0 auto;}
+
+/*タブのスタイル*/
+.tab_item {
+  width: calc(100%/2);
+  height: 20px;
+  border-bottom: 3px solid #5ab4bd;
+  background-color: #d9d9d9;
+  line-height: 20px;
+  font-size: 13px;
+  text-align: center;
+  color: #565656;
+  display: block;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+.tab_item:hover {
+  opacity: 0.75;
+}
+
+/*ラジオボタンを全て消す*/
+input[name="tab_item"] {
+  display: none;
+}
+
+/*タブ切り替えの中身のスタイル*/
+.tab_content {
+  display: none;
+  padding: 5px 5px 0;
+  clear: both;
+  overflow: hidden;
+}
+
+
+/*選択されているタブのコンテンツのみを表示*/
+#all:checked ~ #all_content,
+#stareEndTab:checked ~ #stareEndTab_content,
+#detourTab:checked ~ #detourTab_content {
+  display: block;
+}
+
+/*選択されているタブのスタイルを変える*/
+.tabs input:checked + .tab_item {
+  background-color: #5ab4bd;
+  color: #fff;
+}
+
+#metaEditor {
+  display: none;
+}
+</style>
+
+<style>
+/* 明滅アニメーションの定義 */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+/* テキストに明滅アニメーションを適用 */
+.blinking-text {
+  animation: fadeInOut 0.75s infinite; /* 3秒で1サイクル、無限ループ */
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/gh/svgmap/svgmapjs@latest/svgMapLayerLib.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+<script>
+// graphhopperでルート探索を行うためのsvgMapLayerApp
+//
+// Programmed by Satoru Takagi
+// 
+// License: (MPL v2)
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at https://mozilla.org/MPL/2.0/.
+//
+// 2018.01.12 : GraphHopperを実装してみた(on CesiumとかOSSテストサーバ)
+// 2023.09.08 : POST Queryに変更し、ポリゴンで迂回領域を指定する機能：
+// 2025.06.25 : 経路の経由点表示機能追加
+
+// Note:
+// 迂回経路生成
+// ドキュメントは：
+// https://github.com/graphhopper/graphhopper/blob/master/docs/web/api-doc.md
+// と
+// https://github.com/graphhopper/graphhopper/blob/master/docs/core/custom-models.md
+// でドキュメントになっている。
+// 他の参考情報(古いと思う):// https://www.graphhopper.com/blog/2020/05/31/examples-for-customizable-routing/
+
+
+onload=async function(){
+	if ( !RountingService && svgImageProps.hash.indexOf("graphhopperurl")>0){
+		RountingService = (parseHash(svgImageProps.hash))["graphhopperurl"];
+		console.log("Set graphhopper RountingService endpoint by hash : ", RountingService);
+	}
+	setTimeout(testLibs,10);
+	setTimeout(initAuthoringUI,10);
+	setTimeout(addListener,10);
+	reqJsonTemplate = await ( await fetch("ghQueryTemplate.json")).json();
+	routingResultGroup = svgImage.getElementById("routingResultGroup");
+	// console.log("onLoad airPortAuthringToolsFrame: template:",reqJsonTemplate);
+}
+
+var reqJsonTemplate;
+var routingResultGroup;
+var routingResultData;
+
+let wayPointShow = false;
+
+var RountingService = ""; // ⇒ SET YOUR GRAPHHOPPER API ENDPOINT URL
+// var RountingService3 = "{{GRAPHHOPPER API ENDPOINT}}?point=[lat1],[lon1]&point=[lat2],[lon2]&points_encoded=false&instructions=true&debug=true&profile=car"; // profile: Please note that currently only for car, small_truck, scooter, bike and foot the custom routing support is deployed.  https://www.graphhopper.com/blog/2020/05/31/examples-for-customizable-routing/  The requested profile 'bike' does not exist. Available profiles: [car]
+
+let closing=false;
+
+function addListener(){
+	window.addEventListener('openFrame',function(e) {
+		// console.log("Open routing Iframe");
+	});
+	window.addEventListener('closeFrame',function(e) {
+		// console.log("Close routing Iframe");
+		closing = true;
+	});
+
+	window.addEventListener('appearFrame',function(e) {
+		// console.log("Appear routing Iframe");
+	});
+	window.addEventListener('hideFrame',function(e) {
+		// console.log("Hide routing Iframe");
+	});
+}
+
+
+function testLibs(){
+	console.log("testSVGMapFrameworkLibs::");
+	console.log("This:",this);
+	console.log("layerID:",layerID,"\nsvgImage",svgImage,"\nsvgImageProps:",svgImageProps);
+	console.log("is svgMap:",svgMap);
+	console.log("is svgMapGIStool:",svgMapGIStool);
+	console.log("is svgMapAuthoringTool:",svgMapAuthoringTool);
+}
+
+var authoringToolProps1,authoringToolProps2,detourPolygonTool;
+function initAuthoringUI(sel){
+	try{
+		svgMapAuthoringTool.clearTools();
+	}catch(e){}
+	// console.log("initAuthoringUI: sel:",sel);
+	if ( !sel || sel=="stareEndTab"){
+		authoringToolProps1 = svgMapAuthoringTool.initPOIregistTool(document.getElementById("poiTools1"),layerID,"startP","syl5","start","ttt",doRoutingUiCb,"Hello1");
+		authoringToolProps2 = svgMapAuthoringTool.initPOIregistTool(document.getElementById("poiTools2"),layerID,"endP","syl6","goal","uuu");
+		setPosUI("endP","poiTools1");
+		setPosUI("startP","poiTools2");
+		doRoutingUiCb();
+	} else if( sel=="detourTab"){
+	
+		detourPolygonTool = svgMapAuthoringTool.initGenericTool(document.getElementById("polygonTool"),layerID,polyToolsCB,"PARAM_GEN",{withBufferedTools:true,shapeStyle:{stroke:"orange",fill:"yellow",opacity:"0.5"}});
+	}
+}
+
+function setPosUI(poiId,uiId){
+	const pos = getPos(poiId);
+	//console.log(pos);
+	if ( pos ){
+		const ts=document.getElementById(uiId).children;
+		for ( const ce of ts){
+			if (ce.getAttribute("type")=="text"){
+					ce.setAttribute("value",`${pos.lat.toFixed(6)},${pos.lng.toFixed(6)}`);
+				break;
+			}
+		}
+	}
+}
+
+function polyToolsCB(stat,param){
+	// console.log("called polyToolsCB:",stat,param);
+}
+
+function changeMode(){
+	doRoutingUiCb("-","-");
+}
+
+function getPos(poiId){
+	var poiElem = svgImage.getElementById(poiId);
+	if ( poiElem ){
+		poiPos = svgMap.getPoiPos(poiElem);
+		poiPos = svgMap.SVG2Geo(poiPos.x, poiPos.y,svgImageProps.CRS);
+		return poiPos;
+	} else {
+		return null;
+	}
+}
+
+async function doRoutingUiCb(stat,param){
+	// console.log("doRoutingUiCb: stat:",stat,"  param:",param);
+	if ( closing || stat=="Cancel" ){return};
+	const endPos = getPos("endP");
+	const startPos = getPos("startP");
+	// console.log("cbFunc,initPOIregistTool:",stat,param,startPos,endPos);
+	
+	if ( endPos && startPos ){
+		removeAllRoutingPath();
+		removeAllMarkers();
+		if ( routingChecked()== -1 ){
+			var geojsonGeom = getGreatCircleRoute( startPos.lat, startPos.lng, endPos.lat, endPos.lng, 90 );
+			var length = getGreatCircleRouteDistance( startPos.lat, startPos.lng, endPos.lat, endPos.lng );
+			console.log("Greate Circle Route Points:",geojsonGeom,layerID);
+			svgMapGIStool.drawGeoJson( geojsonGeom , layerID, "#FF0000", 2, null, "syl13" ,null, null, routingResultGroup); // layerIDは環境が設定したこの文書の対応するsvg文書のID
+			svgMap.refreshScreen();
+			document.getElementById("messageDiv").innerHTML=`Distance: ${floatFormat(length,3)} Km`;
+		} else {
+			document.getElementById("messageDiv").innerHTML=`<span class="blinking-text">ルート計算中</span>`;
+//			getGeoJsonFromXHR(RountingService3,startPos.lat, startPos.lng, endPos.lat, endPos.lng);
+			var detourFts = await getDetourFeatures();
+			doRoutingAndRenderMap([ startPos.lng,startPos.lat], [endPos.lng, endPos.lat], detourFts);
+		}
+	}
+}
+
+
+async function doRoutingAndRenderMap(start,end,detourFts){
+	// console.log("doRoutingAndRenderMap:",{start,end,detourFts});
+	var reqObj = structuredClone(reqJsonTemplate);
+	
+	reqObj.points = [start,end];
+	
+	if ( detourFts && detourFts.length>0  ){
+		var detourMultiPolygon = getMultiPolygon(detourFts);
+		reqObj.custom_model.areas.features[0].geometry=detourMultiPolygon;
+	} else {
+		delete reqObj["custom_model"];
+		reqObj["ch.disable"] = false;
+	}
+	
+	
+	var response = await fetch(RountingService,{
+		method: 'post',
+		headers: {
+			'Content-Type': 'application/json' // JSON形式のデータのヘッダー
+		},
+		body: JSON.stringify(reqObj)
+	});
+	
+	var responseText = await response.text();
+	var jso = JSON.parse(responseText);
+	// console.log(jso);
+	if ( jso.paths){
+		drawRoutingResult({readyState:4,status:200,responseText}); // 昔の方式の関数への入力のために適当に作ってます・・
+	} else {
+		let msg="";
+		if ( jso.message){
+			msg= jso.message;
+		}
+		document.getElementById("messageDiv").innerHTML=`<span style="color:red">ルート計算失敗 ${msg}</span>`;
+		setTimeout(function(){
+			document.getElementById("messageDiv").innerHTML="";
+		},3000);
+	}
+}
+
+function getMultiPolygon(fts){
+	var ans = {
+		type:"MultiPolygon",
+	}
+	var crd = [];
+	for ( var ft of fts){
+		if ( ft.type=="Polygon"){
+			crd.push( ft.coordinates);
+		} else if ( ft.type="MultiPolygon"){
+			for ( var polyCrd of ft.coordinates ){
+				crd.push(polyCrd);
+			}
+		}
+	}
+	ans.coordinates=crd;
+	return ans;
+}
+
+
+function getDetourFeatures(){
+	return new Promise(function(okCallback, ngCallback) {
+		svgMap.captureGISgeometries(function(retFts){
+			var layerFts = retFts[layerID];
+			var ans = [];
+			for ( var ft of  layerFts){
+				var ftSrcId = ft.src.getAttribute("id");
+				if (!ftSrcId){ftSrcId=""};
+//				console.log(ft.src.parentElement, ft.src , ftSrcId);
+//				console.log( ftSrcId);
+				if ( ft.src.parentElement.getAttribute("id")=="routingResultGroup" || ftSrcId=="startP" || ftSrcId=="endP" || ftSrcId.startsWith("midP")  ){
+				} else if ( ft.type == "Polygon" || ft.type == "MultiPolygon" ){
+					ans.push(ft);
+				}
+			}
+//			console.log(layerFts, ans);
+			okCallback(ans);
+		})
+	});
+}
+
+
+
+function routingChecked() {
+	if ( document.getElementById("Radio1") && document.getElementById("Radio1").checked ){
+		return ( -1 );
+	} else {
+		return ( 3 );
+	}
+}
+
+function removeAllPath(){
+	var p = svgImage.getElementsByTagName("path");
+	// console.log("removeAllPath:",p);
+	if ( p && p.length >0 ){
+		for ( var i = p.length-1 ; i >= 0 ; i-- ){
+//			console.log("remove i:",i);
+			p[i].parentNode.removeChild(p[i]);
+		}
+	}
+}
+
+function removeAllRoutingPath(){
+	var p = routingResultGroup.getElementsByTagName("path");
+	// console.log("removeAllRoutingPath:",p);
+	if ( p && p.length >0 ){
+		for ( var i = p.length-1 ; i >= 0 ; i-- ){
+//			console.log("remove i:",i);
+			p[i].parentNode.removeChild(p[i]);
+		}
+	}
+	clearWaypoints();
+}
+
+function removeAllMarkers(){
+// use要素で、idが付いていないものを全部削除することにする・・
+	var p = svgImage.getElementsByTagName("use");
+//	console.log("removeAllMarkers:",p);
+	if ( p && p.length >0 ){
+		for ( var i = p.length-1 ; i >= 0 ; i-- ){
+//			console.log("remove p[i]:",p[i]);
+			if ( ! p[i].getAttribute("id") ){
+				p[i].parentNode.removeChild(p[i]);
+			}
+		}
+	}
+}
+
+// POIのプロパティを表示するパネルをカスタムにするか、デフォルトのものにするかを切り替えるテスト
+var panelMode = 0;
+function changePoiPanel(){
+	if ( panelMode == 0 ){
+//		console.log("assign customPOIinfoUI");
+		svgMap.setShowPoiProperty( showCustomModalPoiInfo, layerID);
+		panelMode = 1;
+	} else {
+//		console.log("del customPOIinfoUI");
+		panelMode = 0;
+		svgMap.setShowPoiProperty( null, layerID);
+	}
+}
+
+// カスタムのPOIプロパティ表示パネル
+function showCustomModalPoiInfo(target){
+//	console.log("call showCustomModalPoiInfo",target);
+	svgMap.setCustomModal("Target Info:"+target.getAttribute("content"),"CLOSE",testModalCB,"testParam");
+}
+
+function testModalCB( index ,param ){
+//	console.log("index:",index,"  param:",param);
+}
+
+// 大圏コースポイント計算(地球を球体と仮定した場合の・・)
+
+// based on http://www.movable-type.co.uk/scripts/latlong.html
+
+var Deg2Rad = Math.PI / 180.0 ;
+function getGreatCircleRoute(lat1,lon1,lat2,lon2,part){
+	var latR1 = lat1 * Deg2Rad;
+	var latR2 = lat2 * Deg2Rad;
+	var lonR1 = lon1 * Deg2Rad;
+	var lonR2 = lon2 * Deg2Rad;
+	var dLon = (lon2-lon1) * Deg2Rad;
+	
+	var dR = Math.acos( Math.sin(latR1) * Math.sin(latR2) + Math.cos(latR1) * Math.cos(latR2) * Math.cos(dLon) );
+	
+	var ans = [];
+	
+	for ( var i = 0 ; i <= part ; i++ ){
+		var f = i / part;
+		var a = Math.sin((1-f)*dR)/Math.sin(dR);
+		var b = Math.sin(f*dR)/Math.sin(dR);
+		var x = a * Math.cos( latR1 ) * Math.cos( lonR1 ) + b * Math.cos( latR2 ) * Math.cos( lonR2 );
+		var y = a * Math.cos( latR1 ) * Math.sin( lonR1 ) + b * Math.cos( latR2 ) * Math.sin( lonR2 );
+		var z = a * Math.sin( latR1 ) + b * Math.sin( latR2 );
+		var lati = Math.atan2(z, Math.sqrt(x*x + y*y)) / Deg2Rad;
+		var loni = Math.atan2(y, x) / Deg2Rad;
+		ans.push([loni , lati]);
+	}
+	
+	var geojsonGeom={};
+	geojsonGeom.type = "LineString";
+	geojsonGeom.coordinates = ans;
+	return ( [geojsonGeom] );
+	
+}
+
+
+
+function getGreatCircleRouteDistance(Lat1d,Lng1d,Lat2d,Lng2d){
+	var Lat1 = Lat1d * Deg2Rad;
+	var Lat2 = Lat2d * Deg2Rad;
+	var Lng1 = Lng1d * Deg2Rad;
+	var Lng2 = Lng2d * Deg2Rad;
+	var R = 6371; // Earth's R in Km
+//	console.log(Lat1,Lng1,Lat2,Lng2,Math.sin(Lat1) * Math.sin(Lat2) + Math.cos(Lat1)* Math.cos(Lat2)*Math.cos(Lng1-Lng2));
+	var ans = R * Math.acos( Math.sin(Lat1) * Math.sin(Lat2) + Math.cos(Lat1)* Math.cos(Lat2)*Math.cos(Lng1-Lng2) );
+	return ( ans );
+}
+
+// pathに含まれる[lat1],[lon1],[lat2],[lon2]文字列をそれぞれ設定した値に置き換えてgetリクエストを出し、WGS84のgeoJsonが返却されることを想定、返却されたgeoJsonを描画する。
+function getGeoJsonFromXHR( path , Lat1d,Lng1d,Lat2d,Lng2d ){
+	path = path.replace("[lat1]",Lat1d);
+	path = path.replace("[lat2]",Lat2d);
+	path = path.replace("[lon1]",Lng1d);
+	path = path.replace("[lon2]",Lng2d);
+//	console.log("path:",path);
+	var httpObj = new XMLHttpRequest();
+	if ( httpObj ) {
+		document.getElementById("messageDiv").innerHTML="<b> <<<< Calculating on Server.... >>>> </b>";
+		httpObj.onreadystatechange = function(){ drawRoutingResult( this ) } ;
+		httpObj.open("GET", path , true );
+		httpObj.send(null);
+	}
+}
+
+// GraphHopperのJsonを変換 必要はほとんどなかった^^;
+function convGhJson(ghj){
+//	console.log("is graphHopper json");
+	var gj ;
+	if ( ghj.paths ){
+		gj = ghj.paths[0].points;
+		gj.meters = ghj.paths[0].distance;
+		gj.seconds = ghj.paths[0].time/1000;
+	} else {
+		gj = new Object();
+		gj.message =  ghj.message;
+	}
+	return ( gj );
+}
+
+function getGhWaypoints(ghj){
+	const ans = {
+		type:"FeatureCollection",
+		features:[]
+	};
+//	console.log(ghj);
+	if ( !ghj.paths[0] ){return}
+	var linePoints = ghj.paths[0].points.coordinates;
+	let totalDistance = 0, totalTime =0;
+	for (const inst of ghj.paths[0].instructions){
+//		const poi = getPointFromRouteByDistanceSimple(linePoints,totalDistance); // ちょっと長距離だと精度が厳しいので・・
+		const poi = getPointFromRouteByDistanceTurf(linePoints,totalDistance); // ちゃんとしたライブラリを使うことにします
+		var ft = {
+			type: "Feature",
+			geometry: {
+				type: "Point",
+				coordinates: poi,
+			},
+			properties: {
+				text: inst.text,
+				time:Math.floor(10*totalTime/60000)/10,
+				note:""
+			}
+		}
+		ans.features.push(ft);
+		totalDistance += inst.distance;
+		totalTime += inst.time;
+	}
+	return ans;
+}
+
+function drawRoutingResult( httpRes ){
+//	console.log("drawRoutingResult");
+	if (( httpRes.readyState == 4 ) ){
+		if ( httpRes.status == 403 || httpRes.status == 404 || httpRes.status == 500 || httpRes.status == 503 ){
+			console.log( "File get failed");
+			return;
+		}
+//		console.log("xhrRes:",httpRes.responseText, " state:",httpRes.readyState, "  res:",httpRes);
+		var jst = httpRes.responseText;
+		routingResultData = JSON.parse(jst);
+		
+//		console.log("res JSON:", routingResultData);
+		let routeGeoJson;
+		// とりあえずGraphHopperのresponseを描画させてみる
+		if ( routingResultData.hints ){
+			routeGeoJson = convGhJson(routingResultData);
+		}
+		
+		svgMapGIStool.drawGeoJson( routeGeoJson , layerID, "#FF0000", 2, null, "syl13" ,null, null, routingResultGroup,["text","time","note"]); // layerIDは環境が設定したこの文書の対応するsvg文書のID
+		if ( wayPointShow ){
+			drawWaypoints();
+		}
+		svgMap.refreshScreen();
+		var dmessage ="";
+		if ( routeGeoJson.meters ){
+			dmessage = floatFormat(Number(routeGeoJson.meters)/1000,3)+"Km ";
+		}
+		if ( routeGeoJson.seconds ){
+			dmessage += "Estimated time:"+floatFormat(Number(routeGeoJson.seconds)/60,2)+"minutes";
+		}
+		if ( routeGeoJson.message ){
+			dmessage += "ERROR: " + routeGeoJson.message;
+		}
+		document.getElementById("messageDiv").innerHTML=`Distance ${dmessage}`;
+	}
+}
+
+function floatFormat( number, n ) {
+	var _pow = Math.pow( 10 , n ) ;
+
+	return Math.round( number * _pow ) / _pow ;
+}
+
+function clearSearch(){
+	routingResultData = null;
+	var sp = svgImage.getElementById("startP");
+	if ( sp ){
+		sp.parentNode.removeChild(sp);
+	}
+	var ep = svgImage.getElementById("endP");
+	if ( ep ){
+		ep.parentNode.removeChild(ep);
+	}
+	removeAllRoutingPath();
+	removeAllMarkers();
+	var inputs = document.getElementsByTagName("input");
+	for ( var i = 0 ; i < inputs.length ; i++ ){
+		if ( (inputs[i].parentNode.id == "poiTools1" || inputs[i].parentNode.id == "poiTools2" ) && inputs[i].getAttribute("type")=="text"){
+			inputs[i].value="---,---";
+		}
+	}
+	document.getElementById("messageDiv").innerHTML="Distance ---";
+	svgMap.refreshScreen();
+}
+
+
+window.changeTabMode = function(event){
+//	console.log("changeTabMode:",event.target.id);
+	initAuthoringUI(event.target.id);
+}
+
+/**
+ * ルート情報と距離から地図上のポイント（緯度経度）を算出します。
+ * 各セグメントは直線として扱います。
+ *
+ * @param {Array<Object>} routePoints - ルートを構成する緯度経度ポイントの配列。
+ * 例: [{lat: 35.681236, lng: 139.767125}, {lat: 35.685, lng: 139.770}, ...]
+ * @param {number} targetDistance - 算出したいポイントのルート開始地点からの距離 (メートル)。
+ * @returns {Object|null} 算出された緯度経度ポイント ({lat: number, lng: number})。
+ * 指定された距離がルートの範囲外の場合は null を返します。
+ */
+function getPointFromRouteByDistanceSimple(routePoints, targetDistance) {
+	if (!routePoints || routePoints.length < 2 || targetDistance < 0) {
+		console.warn("getPointFromRouteByDistanceSimple: 無効な入力です。");
+		return null;
+	}
+
+	let currentDistance = 0;
+
+	for (let i = 0; i < routePoints.length - 1; i++) {
+		const p1 = routePoints[i];
+		const p2 = routePoints[i + 1];
+
+		// 2点間の直線距離を計算 (ヒュベニの公式の簡易版、あるいは近似計算)
+		// ここでは、緯度・経度の差をメートルに変換する簡単な方法を使用します。
+		// より正確な距離計算が必要な場合は、Haversine式やVincenty式などを利用してください。
+		const R = 6378137; // 地球の平均半径 (メートル)
+		const dLat = (p2[1] - p1[1]) * Math.PI / 180;
+		const dLon = (p2[0] - p1[0]) * Math.PI / 180;
+		const a =
+		Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+		Math.cos(p1[1] * Math.PI / 180) * Math.cos(p2[1] * Math.PI / 180) *
+		Math.sin(dLon / 2) * Math.sin(dLon / 2);
+		const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+		const segmentLength = R * c; // セグメントの長さをメートルで取得
+
+		if (currentDistance + segmentLength >= targetDistance) {
+			// 目的の距離がこのセグメント内にある
+			const distanceInSegment = targetDistance - currentDistance;
+			const ratio = distanceInSegment / segmentLength;
+
+			const lat = p1[1] + (p2[1] - p1[1]) * ratio;
+			const lng = p1[0] + (p2[0] - p1[0]) * ratio;
+
+			return [ lng,lat];
+		}
+
+		currentDistance += segmentLength;
+	}
+
+	// 目的の距離がルートの終点を超えている場合
+	console.warn(`getPointFromRouteByDistanceSimple: 指定された距離 (${targetDistance}m) がルートの全長 (${currentDistance}m) を超えています。`);
+	return null;
+}
+
+/**
+ * turf.js を使用して、ルート情報と距離から地図上のポイント（緯度経度）を算出します。
+ *
+ * @param {Array<Object>} routePoints - ルートを構成する緯度経度ポイントの配列。
+ * 例: [[139.767125,35.681236], [139.770,35.685], ...]
+ * @param {number} targetDistance - 算出したいポイントのルート開始地点からの距離 (メートル)。
+ * @returns {Object|null} 算出された緯度経度ポイント ([number, number])。
+ * 指定された距離がルートの範囲外の場合は null を返します。
+ */
+function getPointFromRouteByDistanceTurf(routePoints, targetDistance) {
+	if (!window.turf) {
+		console.error("turf.js がロードされていません。");
+		return null;
+	}
+	if (!routePoints || routePoints.length < 2 || targetDistance < 0) {
+		console.warn("getPointFromRouteByDistanceTurf: 無効な入力です。");
+		return null;
+	}
+
+	// turf.js の LineString 形式に変換
+	const lineCoordinates = routePoints.map(p => [p[0], p[1]]);
+	const line = turf.lineString(lineCoordinates);
+
+	// turf.along を使用して、指定された距離のポイントを取得
+	// turf.along は距離をキロメートルで受け取るため、メートルから変換
+	const point = turf.along(line, targetDistance / 1000, { units: 'kilometers' });
+
+	if (point && point.geometry && point.geometry.coordinates) {
+		return [
+			point.geometry.coordinates[0],
+			point.geometry.coordinates[1]
+		];
+	}
+
+	// 目的の距離がルートの終点を超えている場合など
+	console.warn(`getPointFromRouteByDistanceTurf: 指定された距離 (${targetDistance}m) に対応するポイントが見つかりませんでした。`);
+	return null;
+}
+
+function drawWaypoints(){
+	if ( !routingResultData || !routingResultData.hints){return}
+	let wayPointsGeoJson = getGhWaypoints(routingResultData);
+	svgMapGIStool.drawGeoJson( wayPointsGeoJson , layerID, "#FF0000", 2, null, "wpp" ,null, null, routingResultGroup,["text","time","note"]);
+	showWayPointList(wayPointsGeoJson);
+}
+
+function removeChildren(ele){
+	while( ele.firstChild ){
+		ele.removeChild( ele.firstChild );
+	}
+}
+
+function showWayPointList(wpgj){
+	removeChildren(wayPointsTable);
+	wayPointsTable.insertAdjacentHTML("beforeend",`<option selected>ガイド, 時間　（項目選択で中心に表示）</option>`);
+	let stxt = "スタート:";
+	for ( var ft of wpgj.features){
+		wayPointsTable.insertAdjacentHTML("beforeend",`<option value="${ft.geometry.coordinates[0]},${ft.geometry.coordinates[1]}">${stxt}${ft.properties.text}, ${ft.properties.time}分</option>`);
+		stxt="";
+	}
+	wayPointsTable.style.visibility="visible";
+}
+
+function showCenter(event){
+	const crds = event.target.value.split(",");
+//	console.log("showCenter:",crds);
+	svgMap.setGeoCenter(Number(crds[1]),Number(crds[0]));
+}
+
+function clearWaypoints(){
+	wayPointsTable.style.visibility="hidden";
+	const p = routingResultGroup.getElementsByTagName("use");
+//	console.log("removeAllRoutingPoints:",p);
+	if ( p && p.length >0 ){
+		for ( var i = p.length-1 ; i >= 0 ; i-- ){
+//			console.log("remove i:",i);
+			p[i].parentNode.removeChild(p[i]);
+		}
+	}
+}
+
+function switchWayPoints(event){
+	if( event.target.value=="経由点表示" ){
+		wayPointShow = true;
+		drawWaypoints();
+		event.target.value="経由点非表示"
+	} else {
+		wayPointShow = false;
+		clearWaypoints();
+		event.target.value="経由点表示"
+	}
+	svgMap.refreshScreen();
+}
+
+function parseHash(hash){
+	if ( !hash.startsWith("#")){return null}
+	const ah = hash.substring(1).split("&");
+	const ans = {};
+	ah.forEach(function(kv){
+		const kva = kv.split("=");
+		ans[kva[0].trim()]=kva[1].trim();
+	});
+	return ans;
+}
+
+</script>
+<body>
+<h4>経路探索・大圏ルート計算レイヤー</h4>
+  <form name="form1" action="" autocomplete="off" >
+    <input id="Radio4" name="RadioGroup1" type="radio" checked onchange="changeMode(event)"/>
+      <label for="Radio4">経路探索</label>　　
+    <input id="Radio1" name="RadioGroup1" type="radio"  onchange="changeMode(event)"/>
+      <label for="Radio1">大圏ルート計算</label><br/>
+  </form>
+
+	<div class="tabs" style="width:95%">
+		<input id="stareEndTab" type="radio" name="tab_item" onchange="changeTabMode(event)" checked>
+		<label class="tab_item" for="stareEndTab">起点・終点</label>
+		<input id="detourTab" type="radio" name="tab_item" onchange="changeTabMode(event)" >
+		<label class="tab_item" for="detourTab">迂回領域</label>
+
+		<div class="tab_content" id="stareEndTab_content">
+			<span style="color:red">START</span><div id="poiTools1"></div>
+			<span style="color:green">GOAL</span><div id="poiTools2"></div>
+			
+			<div style="font-size:13px;color:blue" id="messageDiv" ></div>
+
+			<input type="button" value="消去" onClick="clearSearch()"></input> <input type="button" value="経由点表示" onclick="switchWayPoints(event)"></input>
+			<select  id="wayPointsTable" style="font-size:10px;width:90%;height:100px;overflow-y:auto;visibility: hidden;" size="10" onchange="showCenter(event)"></select>
+		</div>
+		
+		<div class="tab_content" id="detourTab_content">
+			<span style="font-size:11px;color:red">POINT、POLYLINEは無視されます</span>
+			<div id="polygonTool"></div>
+		</div>
+	</div>
+<div style="font-size:11px">　Note: 経路探索に<a href="https://github.com/graphhopper/graphhopper" target="_blank">GraphHopper</a>を使用しています</div>
+
+
+</body>
+</html>

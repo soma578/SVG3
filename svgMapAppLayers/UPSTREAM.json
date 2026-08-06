@@ -1,11 +1,11 @@
 {
-  "note": "上流配布物の部分取り込み。以前は .gitmodules の無い gitlink が登録されており、クローン先で取得できずビルドが落ちていた。",
+  "note": "上流配布物の完全スナップショット。クリーンclone/Vercelでもローカルと同じレイヤー互換性判定・GUI追加・controller依存解決を行うため、部分取り込みにはしない。",
+  "source": "https://github.com/svgmap/svgmapAppLayers",
+  "snapshotMode": "vendored-full-tree",
   "vendoredPaths": [
-    "Container.svg",
-    "basemaps/",
-    "appLayers/eStatPopulation/"
+    "./"
   ],
-  "reason": "Container.svg が参照するのはこの2つだけで、依存も各ディレクトリ内に閉じている。残りは取り込まない。",
+  "reason": "Container.svgの全レイヤーをGUIから追加可能にするには、controller、commonLib、相対画像、データファイルを含む上流ツリー全体がデプロイ先に必要。",
   "referencedBy": [
     "map/layers/managed/basemap/layer.config.json",
     "map/layers/external/svgmap-app-layers",
