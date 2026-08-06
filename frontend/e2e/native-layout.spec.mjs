@@ -161,3 +161,25 @@ test('幅が狭いだけのデスクトップをタッチ端末向けUIへ拡大
   expect(sizes.rowHeight).toBeLessThanOrEqual(50)
   expect(sizes.toggleWidth).toBe(38)
 })
+
+test('スマホ幅でもレイヤー一覧を過度に拡大しない', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  await page.goto(MAP_URL)
+  await expect(page.locator('#loading')).toBeHidden()
+  await page.locator('#layer-button').click()
+
+  const sizes = await page.evaluate(() => {
+    const row = document.querySelector('#layer-list .layer-row').getBoundingClientRect()
+    const toggle = document.querySelector('#layer-list .switch').getBoundingClientRect()
+    const title = document.querySelector('#layer-list .layer-copy strong')
+    return {
+      rowHeight: Math.round(row.height),
+      toggleWidth: Math.round(toggle.width),
+      titleFontSize: getComputedStyle(title).fontSize,
+    }
+  })
+
+  expect(sizes.rowHeight).toBeLessThanOrEqual(54)
+  expect(sizes.toggleWidth).toBe(42)
+  expect(sizes.titleFontSize).toBe('14px')
+})
