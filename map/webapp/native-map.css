@@ -1088,7 +1088,12 @@ button.layer-health:focus-visible {
 .loading[hidden] {
   display: none;
 }
-@media (max-width: 820px) {
+/*
+ * Use the touch layout on actual touch devices. Width alone made narrow
+ * desktop/preview viewports (including Vercel previews) look like an enlarged
+ * phone UI. Very narrow windows still get the compact layout for usability.
+ */
+@media (max-width: 820px) and (pointer: coarse), (max-width: 560px) {
   .data-status-bar,
   .alert-stack {
     top: calc(124px + env(safe-area-inset-top));
@@ -1321,7 +1326,7 @@ body.panel-open .map-controls {
   border-color: transparent;
   box-shadow: none;
 }
-@media (max-width: 820px) {
+@media (max-width: 820px) and (pointer: coarse), (max-width: 560px) {
   .brand,
   .top-actions {
     top: 10px;
@@ -1526,7 +1531,7 @@ body.panel-open .map-controls {
     top: 82px;
   }
 }
-@media (max-width: 820px) {
+@media (max-width: 820px) and (pointer: coarse), (max-width: 560px) {
   .brand {
     display: none;
   }
@@ -1564,7 +1569,7 @@ input {
   touch-action: manipulation;
 }
 
-@media (max-width: 820px) {
+@media (max-width: 820px) and (pointer: coarse), (max-width: 560px) {
   .search-box {
     top: calc(10px + env(safe-area-inset-top));
     left: calc(10px + env(safe-area-inset-left));

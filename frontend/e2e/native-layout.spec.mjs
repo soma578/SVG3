@@ -140,3 +140,24 @@ test('データ状態レールはモバイルの地域選択UIと重ならない
   })
   expect(boxes.statusTop).toBeGreaterThanOrEqual(boxes.selectorsBottom + 10)
 })
+
+test('幅が狭いだけのデスクトップをタッチ端末向けUIへ拡大しない', async ({ page }) => {
+  await page.setViewportSize({ width: 768, height: 800 })
+  await page.goto(MAP_URL)
+  await expect(page.locator('#loading')).toBeHidden()
+  await page.locator('#layer-button').click()
+
+  const sizes = await page.evaluate(() => {
+    const row = document.querySelector('#layer-list .layer-row').getBoundingClientRect()
+    const toggle = document.querySelector('#layer-list .switch').getBoundingClientRect()
+    return {
+      coarsePointer: matchMedia('(pointer: coarse)').matches,
+      rowHeight: Math.round(row.height),
+      toggleWidth: Math.round(toggle.width),
+    }
+  })
+
+  expect(sizes.coarsePointer).toBe(false)
+  expect(sizes.rowHeight).toBeLessThan(64)
+  expect(sizes.toggleWidth).toBe(42)
+})
