@@ -100,7 +100,9 @@
         "href": "/map/publishers/team-activity-csv/admin.html",
         "label": "CSV管理"
       },
-      "controllerUi": null,
+      "controllerUi": {
+        "label": "CSV追加"
+      },
       "userToggle": true,
       "messages": {
         "toHost": [
@@ -155,50 +157,6 @@
       "alertFeed": null,
       "health": null,
       "dataSource": null,
-      "disabled": false,
-      "requiresController": false,
-      "experimental": false,
-      "community": null
-    },
-    {
-      "id": "layer-flood-warning",
-      "label": "洪水・気象警報",
-      "visible": false,
-      "source": "managed/flood-warning",
-      "order": 65,
-      "group": "防災情報",
-      "note": "気象庁の市区町村単位の気象警報・注意報（観測所水位ではありません）",
-      "kind": "poi",
-      "className": "poi clickable",
-      "symbol": "警",
-      "icon": "",
-      "accent": "#C62828",
-      "toggleKey": "layer-flood-warning",
-      "mounts": [
-        "layer-flood-warning"
-      ],
-      "visibilityStrategy": "native",
-      "search": null,
-      "manage": null,
-      "controllerUi": null,
-      "userToggle": true,
-      "messages": {
-        "toHost": [
-          "runtime:dataStatus"
-        ],
-        "fromHost": []
-      },
-      "alertFeed": null,
-      "health": null,
-      "dataSource": {
-        "ownership": "external",
-        "authority": {
-          "name": "気象庁",
-          "url": "https://www.jma.go.jp/bosai/warning/"
-        },
-        "delivery": "user-action-direct",
-        "runtimeFetch": true
-      },
       "disabled": false,
       "requiresController": false,
       "experimental": false,

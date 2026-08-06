@@ -1,6 +1,16 @@
 import { makeQtctDocument } from '../../layers/portable/representative-pins/qtctBuilder.mjs'
 import { encodeDensityPointDocument } from '../../layers/portable/representative-pins/densityPointFormat.js'
 
+const encodeBase64 = (bytes) => {
+  if (typeof Buffer !== 'undefined') return Buffer.from(bytes).toString('base64')
+  let binary = ''
+  const chunkSize = 0x8000
+  for (let offset = 0; offset < bytes.length; offset += chunkSize) {
+    binary += String.fromCharCode(...bytes.subarray(offset, offset + chunkSize))
+  }
+  return btoa(binary)
+}
+
 export const parseCsv = (text) => {
   const rows = []
   let row = []
@@ -161,7 +171,7 @@ export const buildCsvQtctArtifacts = ({ csvText, regions, config }) => {
       layerId,
       records,
       bounds: summary.bounds,
-      encodeBase64: (bytes) => Buffer.from(bytes).toString('base64'),
+      encodeBase64,
     }))}\n`)
     for (const region of regions) {
       files.set(`data/qtct/${layerId}/${region.id}/detail.json`, `${JSON.stringify(makeQtctDocument({

@@ -4,23 +4,159 @@
   <meta charset="UTF-8">
   <title>Team Activity Portable Layer</title>
   <script src="../svgmap-slawa-client/svgMapLayerLib.js"></script>
+  <style>
+    body { margin: 0; padding: 8px; font: 13px/1.45 system-ui, sans-serif; color: #172033; }
+    .csv-manager { display: grid; gap: 7px; padding: 9px; border: 1px solid #c8d4e7; border-radius: 8px; background: #f7faff; }
+    .csv-manager strong { color: #245db5; }
+    .actions { display: flex; flex-wrap: wrap; gap: 6px; }
+    button, .file-button { padding: 5px 9px; border: 1px solid #9db0cc; border-radius: 6px; background: white; cursor: pointer; }
+    input[type=file] { position: absolute; inline-size: 1px; block-size: 1px; opacity: 0; }
+    #csv-status[data-error=true] { color: #b42318; white-space: pre-line; }
+    details { border-top: 1px solid #d7e0ee; padding-top: 6px; }
+    summary { cursor: pointer; font-weight: 700; }
+    .table-wrap { max-height: 150px; overflow: auto; margin-top: 6px; background: white; }
+    table { width: 100%; border-collapse: collapse; font-size: 11px; }
+    th, td { padding: 4px; border: 1px solid #d7e0ee; text-align: left; white-space: nowrap; }
+    th { position: sticky; top: 0; background: #eaf1fb; }
+    #current-csv-error { color: #b42318; }
+  </style>
 </head>
 <body>
+<section class="csv-manager" aria-label="チーム活動CSV管理">
+  <strong>チーム活動CSV</strong>
+  <span>CSVをこのレイヤーへ追加します。既存の活動データは残ります。</span>
+  <div class="actions">
+    <label class="file-button" for="team-csv-file">CSVを追加</label>
+    <input id="team-csv-file" type="file" accept=".csv,text/csv">
+    <button id="team-csv-template" type="button">ひな形</button>
+    <button id="team-csv-clear" type="button">追加分を消去</button>
+  </div>
+  <output id="csv-status">追加CSVなし</output>
+  <details id="current-csv-panel" open>
+    <summary>配信中のCSV <span id="current-csv-count"></span></summary>
+    <span id="current-csv-error">読み込み中…</span>
+    <div class="table-wrap">
+      <table id="current-csv-table" hidden>
+        <thead><tr><th>ID</th><th>名称</th><th>地域</th><th>状態</th><th>緯度</th><th>経度</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="actions"><button id="current-csv-download" type="button" disabled>現在のCSVを保存</button></div>
+  </details>
+</section>
 <script type="module">
 import { initRepresentativePinsLayer } from '../representative-pins/representativePinsCore.js';
 import { renderTeamActivityDetail } from './teamActivityDetail.js';
+import {
+  TEAM_ACTIVITY_CSV_CHANNEL, TEAM_ACTIVITY_CSV_STORAGE_KEY, TEAM_ACTIVITY_CSV_TEMPLATE,
+  buildTeamActivityCsvDocuments, parseTeamActivityCsv,
+} from './teamActivityCsv.js';
 
 let started = false;
 const start = () => {
   if (started) return;
   started = true;
-  initRepresentativePinsLayer({
+  const runtime = initRepresentativePinsLayer({
     mode: 'portable',
     renderFeatureDetail: renderTeamActivityDetail,
   });
+  const status = document.getElementById('csv-status');
+  const hash = String(window.svgImageProps?.hash || window.svgImageProps?.Path?.split('#')?.[1] || '');
+  const sourceCsvUrl = new URLSearchParams(hash.replace(/^#/, '')).get('sourceCsv') || '';
+  let currentCsvText = '';
+  const channel = typeof BroadcastChannel === 'function' ? new BroadcastChannel(TEAM_ACTIVITY_CSV_CHANNEL) : null;
+  const readSavedCsv = () => {
+    try { return localStorage.getItem(TEAM_ACTIVITY_CSV_STORAGE_KEY) || ''; }
+    catch { return ''; }
+  };
+  const saveCsv = (value) => {
+    try {
+      if (value) localStorage.setItem(TEAM_ACTIVITY_CSV_STORAGE_KEY, value);
+      else localStorage.removeItem(TEAM_ACTIVITY_CSV_STORAGE_KEY);
+    } catch { /* opaque-origin controller: the live overlay still works for this session */ }
+  };
+  const downloadCsv = (text, filename) => {
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(new Blob([`\uFEFF${text}`], { type: 'text/csv' }));
+    link.download = filename;
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(link.href), 0);
+  };
+  const loadCurrentCsv = async () => {
+    const error = document.getElementById('current-csv-error');
+    if (!sourceCsvUrl) {
+      error.textContent = '配信元CSVはこの配置では設定されていません。';
+      return;
+    }
+    try {
+      const response = await fetch(sourceCsvUrl, { cache: 'no-store' });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      currentCsvText = await response.text();
+      const parsed = parseTeamActivityCsv(currentCsvText);
+      if (parsed.errors.length) throw new Error(parsed.errors[0]);
+      const body = document.querySelector('#current-csv-table tbody');
+      body.replaceChildren();
+      for (const record of parsed.records) {
+        const row = document.createElement('tr');
+        for (const value of [
+          record.sourceId, record.title, record.regionId, record.status, record.lat, record.lon,
+        ]) {
+          const cell = document.createElement('td');
+          cell.textContent = String(value ?? '');
+          row.appendChild(cell);
+        }
+        body.appendChild(row);
+      }
+      document.getElementById('current-csv-table').hidden = false;
+      document.getElementById('current-csv-count').textContent = `（${parsed.records.length}件）`;
+      document.getElementById('current-csv-download').disabled = false;
+      error.textContent = '';
+    } catch (loadError) {
+      error.textContent = `現在のCSVを読み込めません: ${loadError.message}`;
+    }
+  };
+  const applyCsv = (csvText, { persist = true } = {}) => {
+    const { records, errors } = parseTeamActivityCsv(csvText);
+    if (errors.length) {
+      status.dataset.error = 'true';
+      status.textContent = errors.slice(0, 8).join('\n');
+      return false;
+    }
+    runtime.setOverlayDocuments(buildTeamActivityCsvDocuments(records));
+    if (persist) saveCsv(csvText);
+    status.dataset.error = 'false';
+    status.textContent = `${records.length}件を追加中`;
+    channel?.postMessage({ type: 'replace', records });
+    return true;
+  };
+  document.getElementById('team-csv-file').addEventListener('change', async (event) => {
+    const file = event.target.files?.[0];
+    if (file) applyCsv(await file.text());
+    event.target.value = '';
+  });
+  document.getElementById('team-csv-clear').addEventListener('click', () => {
+    saveCsv('');
+    runtime.clearOverlay();
+    channel?.postMessage({ type: 'clear' });
+    status.dataset.error = 'false';
+    status.textContent = '追加CSVなし';
+  });
+  document.getElementById('team-csv-template').addEventListener('click', () => {
+    downloadCsv(TEAM_ACTIVITY_CSV_TEMPLATE, 'team-activity-template.csv');
+  });
+  document.getElementById('current-csv-download').addEventListener('click', () => {
+    if (currentCsvText) downloadCsv(currentCsvText, 'team-activity-current.csv');
+  });
+  void loadCurrentCsv();
+  const saved = readSavedCsv();
+  if (saved) applyCsv(saved, { persist: false });
 };
 window.addEventListener('layerWebAppReady', start, { once: true });
-if (window.svgMap && window.svgImage) queueMicrotask(start);
+const bootWhenReady = (attempt = 0) => {
+  if (window.svgMap && window.svgImage) start();
+  else if (attempt < 100) setTimeout(() => bootWhenReady(attempt + 1), 50);
+};
+queueMicrotask(bootWhenReady);
 </script>
 </body>
 </html>

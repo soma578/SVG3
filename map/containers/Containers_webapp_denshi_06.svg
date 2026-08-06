@@ -16,16 +16,12 @@
              title="L2 避難所" class="poi clickable" visibility="visible" opacity="1"/>
 
   <animation id="layer-team-activity-pins" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/team-activity/teamActivityLayer.svg#summary=/map/data/qtct/teamActivity/summary.json&amp;data=/map/data/qtct/teamActivity/detail-index.json&amp;districtSvgUrlTemplate=/data/{recordRegionId}/districts-svg/{code}.svg&amp;layer=teamActivity"
+             xlink:href="/map/layers/portable/team-activity/teamActivityLayer.svg#summary=/map/data/qtct/teamActivity/summary.json&amp;data=/map/data/qtct/teamActivity/detail-index.json&amp;sourceCsv=/map/layers/managed/team-activity-pins/data.csv&amp;districtSvgUrlTemplate=/data/{recordRegionId}/districts-svg/{code}.svg&amp;layer=teamActivity"
              title="L3 チーム活動ピン" class="poi clickable" visibility="hidden" opacity="1"/>
 
   <animation id="layer-team-activity" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
              xlink:href="/map/layers/portable/team-activity/teamActivityAreaLayer.svg#data=/map/data/qtct/teamActivity/detail-index.json&amp;districtSvgUrlTemplate=/data/{recordRegionId}/districts-svg/{code}.svg&amp;layer=teamActivity"
              title="L3 チーム活動エリア" class="vectorEtcData" visibility="hidden" opacity="0.9"/>
-
-  <animation id="layer-flood-warning" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/flood-warning/floodWarningLayer.svg"
-             title="洪水・気象警報" class="poi clickable" visibility="hidden" opacity="1"/>
 
   <animation id="layer-river-level" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
              xlink:href="/map/layers/portable/river-level/riverLevelLayer.svg#summary=/map/data/qtct/riverLevel/summary.json&amp;data=/map/data/qtct/riverLevel/yamagata/detail.json&amp;layer=riverLevel&amp;detailByRegion=/map/data/qtct/riverLevel/{recordRegionId}/detail.json"

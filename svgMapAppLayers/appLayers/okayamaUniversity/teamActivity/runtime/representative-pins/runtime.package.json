@@ -1,0 +1,20 @@
+{
+  "id": "representative-pins",
+  "version": "1.2.2",
+  "type": "svgmap-runtime-package",
+  "exports": [
+    "mapMessages.js",
+    "densityPointFormat.js",
+    "DENSITY_POINTS_FORMAT.md",
+    "observationFreshness.js",
+    "pinLayerProfiles.js",
+    "propertyModal.js",
+    "qtctBuilder.mjs",
+    "qtctFeatureEngine.js",
+    "representativePinsCore.js",
+    "representativePinsPortable.html",
+    "representativePinsPortable.svg",
+    "runtimeCache.js"
+  ],
+  "dependencies": []
+}

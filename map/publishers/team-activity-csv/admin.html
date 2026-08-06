@@ -101,12 +101,13 @@
       </label>
       <button id="writeButton" class="primary" type="button" disabled>mapへ書き出す</button>
       <button id="zipButton" type="button" disabled>ZIPを保存</button>
+      <button id="templateButton" type="button">ひな形を保存</button>
       <label class="publishControl">
         <input id="published" type="checkbox" checked>
         公開
       </label>
     </div>
-    <div id="status" class="status">CSVを選択してください。</div>
+    <div id="status" class="status">現在配信中のCSVを読み込んでいます。</div>
     <div class="summary">
       <span>有効レコード <strong id="recordCount">0</strong></span>
       <span>エラー <strong id="errorCount">0</strong></span>
@@ -124,10 +125,12 @@
   <script type="module">
     import { buildCsvQtctArtifacts } from '../shared/csvQtctPipeline.mjs';
     import { createZipArchive } from '../shared/zipArchive.mjs';
+    import { TEAM_ACTIVITY_CSV_TEMPLATE } from '../../layers/portable/team-activity/teamActivityCsv.js';
 
     const csvFile = document.getElementById('csvFile');
     const writeButton = document.getElementById('writeButton');
     const zipButton = document.getElementById('zipButton');
+    const templateButton = document.getElementById('templateButton');
     const published = document.getElementById('published');
     const status = document.getElementById('status');
     const preview = document.getElementById('preview');
@@ -148,6 +151,15 @@
     const setStatus = (message, tone = '') => {
       status.textContent = message;
       status.className = `status ${tone}`.trim();
+    };
+
+    const downloadText = (text, filename, type = 'text/csv') => {
+      const url = URL.createObjectURL(new Blob([`\uFEFF${text}`], { type }));
+      const anchor = document.createElement('a');
+      anchor.href = url;
+      anchor.download = filename;
+      anchor.click();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
     };
 
     const render = () => {
@@ -198,6 +210,10 @@
       publisherConfig = loadedPublisherConfig;
       regions = index.regions || [];
       layerConfig = await fetch(publisherConfig.layerConfig).then((result) => result.json());
+      const sourceResponse = await fetch(publisherConfig.source, { cache: 'no-store' });
+      if (!sourceResponse.ok) throw new Error(`現在のCSV: HTTP ${sourceResponse.status}`);
+      csvText = await sourceResponse.text();
+      artifacts = buildCsvQtctArtifacts({ csvText, regions, config: layerConfig });
       const publicationResponse = await fetch(publisherConfig.publication, { cache: 'no-store' });
       if (publicationResponse.ok) {
         const publication = await publicationResponse.json();
@@ -207,6 +223,10 @@
         setStatus('このブラウザはローカルmap書き出しに対応していません。', 'error');
       }
       csvFile.disabled = false;
+      render();
+      if (artifacts.errors.length === 0) {
+        setStatus(`現在配信中のCSVを表示しています（${artifacts.records.length}件）。`, 'success');
+      }
     } catch (error) {
       setStatus(`初期化に失敗しました: ${error.message}`, 'error');
     }
@@ -217,6 +237,10 @@
       csvText = await file.text();
       artifacts = buildCsvQtctArtifacts({ csvText, regions, config: layerConfig });
       render();
+    });
+
+    templateButton.addEventListener('click', () => {
+      downloadText(TEAM_ACTIVITY_CSV_TEMPLATE, 'team-activity-template.csv');
     });
 
     writeButton.addEventListener('click', async () => {

@@ -1,7 +1,7 @@
 {
   "id": "layer-team-activity-pins",
   "title": "L3 チーム活動ピン",
-  "href": "/map/layers/portable/team-activity/teamActivityLayer.svg#summary=/map/data/qtct/teamActivity/summary.json&data=/map/data/qtct/teamActivity/detail-index.json&districtSvgUrlTemplate={districtBaseUrlPattern}/districts-svg/{code}.svg&layer=teamActivity",
+  "href": "/map/layers/portable/team-activity/teamActivityLayer.svg#summary=/map/data/qtct/teamActivity/summary.json&data=/map/data/qtct/teamActivity/detail-index.json&sourceCsv=/map/layers/managed/team-activity-pins/data.csv&districtSvgUrlTemplate={districtBaseUrlPattern}/districts-svg/{code}.svg&layer=teamActivity",
   "class": "poi clickable",
   "visibility": "hidden",
   "opacity": "1",
@@ -19,6 +19,9 @@
     "kind": "poi",
     "note": "チーム活動の地点と地区境界",
     "toggleKey": "teamActivity",
+    "controllerUi": {
+      "label": "CSV追加"
+    },
     "manage": {
       "href": "/map/publishers/team-activity-csv/admin.html",
       "label": "CSV管理"

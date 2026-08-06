@@ -1,5 +1,6 @@
 {
   "id": "layer-flood-warning",
+  "published": false,
   "title": "洪水・気象警報",
   "href": "/map/layers/portable/flood-warning/floodWarningLayer.svg",
   "class": "poi clickable",

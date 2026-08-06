@@ -10,6 +10,11 @@
 <body>
 <script type="module">
 import { fetchWithRuntimeCache } from '../representative-pins/runtimeCache.js';
+import {
+  TEAM_ACTIVITY_CSV_CHANNEL,
+  TEAM_ACTIVITY_CSV_STORAGE_KEY,
+  parseTeamActivityCsv,
+} from './teamActivityCsv.js';
 
 window.hiddenOnLayerLoad = () => {};
 
@@ -27,7 +32,10 @@ const state = {
   dataUrl: '',
   districtSvgUrlTemplate: '',
   records: [],
+  baseRecords: [],
+  overlayRecords: [],
   districtAreas: [],
+  loadedDistrictKeys: new Set(),
   loaded: false,
   signature: '',
 };
@@ -112,6 +120,53 @@ const districtSvgUrl = (code, regionId) => {
     return template.replaceAll('{recordRegionId}', regionId).replace('{code}', code);
   }
   return template.replace('{code}', code);
+};
+
+const loadDistrictAreas = async (records) => {
+  const districtTargets = new Map();
+  for (const record of records) {
+    const regionId = String(record.regionId || '');
+    const code = String(record.municipalityCode || '');
+    const key = districtKeyOf(regionId, code);
+    if (!regionId || !code || state.loadedDistrictKeys.has(key)) continue;
+    districtTargets.set(key, { regionId, code });
+  }
+  const documents = await Promise.all([...districtTargets].map(async ([districtKey, target]) => {
+    const url = districtSvgUrl(target.code, target.regionId);
+    if (!url) return null;
+    try {
+      const { data: text } = await fetchWithRuntimeCache(url, `teamActivity:area:district:${districtKey}`, {
+        responseType: 'text',
+      });
+      return { districtKey, target, document: new DOMParser().parseFromString(text, 'image/svg+xml') };
+    } catch (error) {
+      console.warn('[teamActivityAreaLayer] district unavailable', { districtKey, url, error });
+      return null;
+    } finally {
+      state.loadedDistrictKeys.add(districtKey);
+    }
+  }));
+  state.districtAreas.push(...documents.filter(Boolean).flatMap(({ districtKey, target, document }) =>
+    Array.from(document.querySelectorAll('path')).map((path, index) => {
+      const d = path.getAttribute('d') || '';
+      const localKey = path.getAttribute('data-key-code') || path.getAttribute('id') || `${target.code}:${index}`;
+      return {
+        key: `${districtKey}:${localKey}`, districtKey, municipalityCode: target.code,
+        regionId: target.regionId,
+        name: path.getAttribute('data-name') || path.querySelector('title')?.textContent || '',
+        d, points: parsePoly(d),
+      };
+    }).filter((area) => area.points.length >= 3)
+  ));
+};
+
+const applyOverlayRecords = async (records) => {
+  state.overlayRecords = Array.isArray(records) ? records : [];
+  state.records = [...state.baseRecords, ...state.overlayRecords];
+  await loadDistrictAreas(state.overlayRecords);
+  state.signature = '';
+  draw();
+  window.svgMap?.refreshScreen?.();
 };
 
 /**
@@ -209,45 +264,11 @@ const start = async () => {
     return;
   }
   try {
-    state.records = await loadRecords();
+    state.baseRecords = await loadRecords();
+    state.records = [...state.baseRecords];
     // 活動が実際にある (県, 市区町村) の組だけ地区SVGを引く。
     // 県をまたいだ活動が CSV に増えても、その県の地区がそのまま対象になる。
-    const districtTargets = new Map();
-    for (const record of state.records) {
-      const regionId = String(record.regionId || '');
-      const code = String(record.municipalityCode || '');
-      if (!regionId || !code) continue;
-      districtTargets.set(districtKeyOf(regionId, code), { regionId, code });
-    }
-    const districtDocuments = await Promise.all([...districtTargets].map(async ([districtKey, target]) => {
-      const url = districtSvgUrl(target.code, target.regionId);
-      if (!url) return null;
-      try {
-        const { data: text } = await fetchWithRuntimeCache(url, `teamActivity:area:district:${districtKey}`, {
-          responseType: 'text',
-        });
-        return { districtKey, target, document: new DOMParser().parseFromString(text, 'image/svg+xml') };
-      } catch (error) {
-        // 1つの県の地区が引けなくても、他県のポリゴンまで道連れにしない。
-        console.warn('[teamActivityAreaLayer] district unavailable', { districtKey, url, error });
-        return null;
-      }
-    }));
-    state.districtAreas = districtDocuments.filter(Boolean).flatMap(({ districtKey, target, document }) =>
-      Array.from(document.querySelectorAll('path')).map((path, index) => {
-        const d = path.getAttribute('d') || '';
-        const localKey = path.getAttribute('data-key-code') || path.getAttribute('id') || `${target.code}:${index}`;
-        return {
-          key: `${districtKey}:${localKey}`,
-          districtKey,
-          municipalityCode: target.code,
-          regionId: target.regionId,
-          name: path.getAttribute('data-name') || path.querySelector('title')?.textContent || '',
-          d,
-          points: parsePoly(d),
-        };
-      }).filter((area) => area.points.length >= 3)
-    );
+    await loadDistrictAreas(state.records);
     state.loaded = true;
     window.preRenderFunction = draw;
     draw();
@@ -257,13 +278,29 @@ const start = async () => {
       districtAreas: state.districtAreas.length,
       matchedDistricts: groupMatchedDistricts().size,
     });
+    const channel = typeof BroadcastChannel === 'function' ? new BroadcastChannel(TEAM_ACTIVITY_CSV_CHANNEL) : null;
+    channel?.addEventListener('message', (event) => {
+      if (event.data?.type === 'replace') void applyOverlayRecords(event.data.records);
+      if (event.data?.type === 'clear') void applyOverlayRecords([]);
+    });
+    try {
+      const saved = localStorage.getItem(TEAM_ACTIVITY_CSV_STORAGE_KEY);
+      if (saved) {
+        const parsed = parseTeamActivityCsv(saved);
+        if (!parsed.errors.length) await applyOverlayRecords(parsed.records);
+      }
+    } catch { /* opaque-origin controller cannot persist; BroadcastChannel still provides live updates */ }
   } catch (error) {
     console.error('[teamActivityAreaLayer] load failed', error);
   }
 };
 
 window.addEventListener('layerWebAppReady', start, { once: true });
-if (window.svgMap && window.svgImage) queueMicrotask(start);
+const bootWhenReady = (attempt = 0) => {
+  if (window.svgMap && window.svgImage) start();
+  else if (attempt < 100) setTimeout(() => bootWhenReady(attempt + 1), 50);
+};
+queueMicrotask(bootWhenReady);
 </script>
 </body>
 </html>
