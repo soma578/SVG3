@@ -158,8 +158,8 @@ test('幅が狭いだけのデスクトップをタッチ端末向けUIへ拡大
   })
 
   expect(sizes.coarsePointer).toBe(false)
-  expect(sizes.rowHeight).toBeLessThanOrEqual(50)
-  expect(sizes.toggleWidth).toBe(38)
+  expect(sizes.rowHeight).toBeLessThanOrEqual(46)
+  expect(sizes.toggleWidth).toBe(36)
 })
 
 test('スマホ幅でもレイヤー一覧を過度に拡大しない', async ({ page }) => {
@@ -179,7 +179,7 @@ test('スマホ幅でもレイヤー一覧を過度に拡大しない', async ({
     }
   })
 
-  expect(sizes.rowHeight).toBeLessThanOrEqual(54)
-  expect(sizes.toggleWidth).toBe(42)
-  expect(sizes.titleFontSize).toBe('14px')
+  expect(sizes.rowHeight).toBeLessThanOrEqual(50)
+  expect(sizes.toggleWidth).toBe(38)
+  expect(sizes.titleFontSize).toBe('13px')
 })

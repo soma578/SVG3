@@ -1702,54 +1702,54 @@ input {
   .field select,
   .field.municipality select,
   .search-input {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .app-menu {
-    width: 248px;
+    width: 220px;
   }
 
   .app-menu-title {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .app-menu-item {
-    grid-template-columns: 30px minmax(0, 1fr);
-    min-height: 40px;
+    grid-template-columns: 28px minmax(0, 1fr);
+    min-height: 36px;
     padding: 4px 7px;
   }
 
   .app-menu-icon {
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
   }
 
   .app-menu-label strong {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .app-menu-label small {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .layer-panel {
-    width: 360px;
+    width: 340px;
   }
 
   body.panel-open .map-controls {
-    right: calc(360px + 28px);
+    right: calc(340px + 28px);
   }
 
   .panel-header {
-    padding: 12px 14px 10px;
+    padding: 10px 12px 8px;
   }
 
   .panel-header p {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .panel-header h1 {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .panel-add,
@@ -1758,7 +1758,7 @@ input {
   }
 
   .panel-add {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .panel-close {
@@ -1771,34 +1771,34 @@ input {
   }
 
   .layer-group-label {
-    padding: 11px 0 4px;
-    font-size: 12px;
+    padding: 9px 0 3px;
+    font-size: 11px;
   }
 
   .layer-row {
-    grid-template-columns: 30px minmax(0, 1fr) auto;
-    gap: 9px;
-    min-height: 50px;
+    grid-template-columns: 28px minmax(0, 1fr) auto;
+    gap: 8px;
+    min-height: 46px;
   }
 
   .layer-symbol {
-    width: 26px;
-    height: 26px;
-    font-size: 12px;
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
   }
 
   .layer-symbol img {
-    width: 21px;
-    height: 21px;
+    width: 19px;
+    height: 19px;
   }
 
   .layer-copy strong {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .layer-copy small,
   .layer-meta {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .layer-manage {
@@ -1807,17 +1807,17 @@ input {
   }
 
   .switch {
-    width: 38px;
-    height: 22px;
+    width: 36px;
+    height: 21px;
   }
 
   .switch span::after {
-    width: 14px;
-    height: 14px;
+    width: 13px;
+    height: 13px;
   }
 
   .switch input:checked + span::after {
-    transform: translateX(16px);
+    transform: translateX(15px);
   }
 }
 
@@ -1847,7 +1847,7 @@ input {
   .layer-row {
     grid-template-columns: 30px minmax(0, 1fr) auto;
     gap: 9px;
-    min-height: 54px;
+    min-height: 50px;
   }
 
   .layer-symbol {
@@ -1862,27 +1862,27 @@ input {
   }
 
   .layer-copy strong {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .layer-copy small,
   .layer-meta {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .switch {
-    flex-basis: 42px;
-    width: 42px;
-    height: 24px;
+    flex-basis: 38px;
+    width: 38px;
+    height: 22px;
   }
 
   .switch span::after {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
   }
 
   .switch input:checked + span::after {
-    transform: translateX(18px);
+    transform: translateX(16px);
   }
 }
 
