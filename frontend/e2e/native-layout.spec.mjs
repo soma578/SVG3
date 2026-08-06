@@ -158,6 +158,6 @@ test('幅が狭いだけのデスクトップをタッチ端末向けUIへ拡大
   })
 
   expect(sizes.coarsePointer).toBe(false)
-  expect(sizes.rowHeight).toBeLessThan(64)
-  expect(sizes.toggleWidth).toBe(42)
+  expect(sizes.rowHeight).toBeLessThanOrEqual(50)
+  expect(sizes.toggleWidth).toBe(38)
 })

@@ -1697,6 +1697,130 @@ input {
   }
 }
 
+/* Compact desktop controls. Keep the larger targets for touch devices. */
+@media (min-width: 561px) and (pointer: fine) {
+  .field select,
+  .field.municipality select,
+  .search-input {
+    font-size: 14px;
+  }
+
+  .app-menu {
+    width: 248px;
+  }
+
+  .app-menu-title {
+    font-size: 12px;
+  }
+
+  .app-menu-item {
+    grid-template-columns: 30px minmax(0, 1fr);
+    min-height: 40px;
+    padding: 4px 7px;
+  }
+
+  .app-menu-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .app-menu-label strong {
+    font-size: 14px;
+  }
+
+  .app-menu-label small {
+    font-size: 12px;
+  }
+
+  .layer-panel {
+    width: 360px;
+  }
+
+  body.panel-open .map-controls {
+    right: calc(360px + 28px);
+  }
+
+  .panel-header {
+    padding: 12px 14px 10px;
+  }
+
+  .panel-header p {
+    font-size: 12px;
+  }
+
+  .panel-header h1 {
+    font-size: 16px;
+  }
+
+  .panel-add,
+  .panel-close {
+    height: 30px;
+  }
+
+  .panel-add {
+    font-size: 13px;
+  }
+
+  .panel-close {
+    width: 30px;
+    font-size: 21px;
+  }
+
+  .layer-list {
+    padding: 4px 14px 10px;
+  }
+
+  .layer-group-label {
+    padding: 11px 0 4px;
+    font-size: 12px;
+  }
+
+  .layer-row {
+    grid-template-columns: 30px minmax(0, 1fr) auto;
+    gap: 9px;
+    min-height: 50px;
+  }
+
+  .layer-symbol {
+    width: 26px;
+    height: 26px;
+    font-size: 12px;
+  }
+
+  .layer-symbol img {
+    width: 21px;
+    height: 21px;
+  }
+
+  .layer-copy strong {
+    font-size: 14px;
+  }
+
+  .layer-copy small,
+  .layer-meta {
+    font-size: 12px;
+  }
+
+  .layer-manage {
+    min-height: 24px;
+    font-size: 12px;
+  }
+
+  .switch {
+    width: 38px;
+    height: 22px;
+  }
+
+  .switch span::after {
+    width: 14px;
+    height: 14px;
+  }
+
+  .switch input:checked + span::after {
+    transform: translateX(16px);
+  }
+}
+
 /* オフライン保存UI。状態は必ず実キャッシュの検証結果を出す。 */
 .offline-storage {
   margin: 0 16px 12px;
