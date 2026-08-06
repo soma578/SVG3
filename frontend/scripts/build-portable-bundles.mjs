@@ -410,7 +410,7 @@ document.querySelector('#layer-visible').addEventListener('change',(event)=>{
 `
 
 const buildBundle = (mount) => {
-  const { config, packageDir, pkg, qtctLayer } = mount
+  const { config, configPath, packageDir, pkg, qtctLayer } = mount
   const distribution = packageDistribution(pkg)
   const description = config.ui?.note || pkg.description || `${config.title || pkg.title}を表示するSVGMapレイヤー`
   const nativeIsolated = pkg.runtime?.lawaModes?.includes('isolated') === true
@@ -483,8 +483,27 @@ const buildBundle = (mount) => {
   })}\n`)
 
   const animationDefinitions = bundleAnimationDefinitions(pkg, config)
+  const needsSourceCsv = animationDefinitions.some((animation) => animation.dataParams.includes('sourceCsv'))
   const needsDistricts = animationDefinitions.some((animation) => animation.dataParams.includes('districtSvgUrlTemplate'))
   const districtSvgUrlTemplate = '../../../data/districts/{code}.svg'
+  let sourceCsvFromLayer = ''
+  if (needsSourceCsv) {
+    const managedLayerDir = path.dirname(configPath)
+    const configuredSource = config.build?.source
+    if (!configuredSource) throw new Error(`${pkg.id}: sourceCsv requires build.source in ${configPath}`)
+    const sourceCsvPath = path.resolve(managedLayerDir, configuredSource)
+    assertInside(managedLayerDir, sourceCsvPath, `${pkg.id} sourceCsv`)
+    if (!fs.existsSync(sourceCsvPath)) throw new Error(`${pkg.id}: source CSV not found: ${sourceCsvPath}`)
+    sourceCsvFromLayer = 'current.csv'
+    copyFile(sourceCsvPath, path.join(
+      bundleRoot,
+      'map',
+      'layers',
+      'portable',
+      path.relative(portableRoot, packageDir),
+      sourceCsvFromLayer,
+    ))
+  }
   if (needsDistricts) {
     const municipalityCodes = [...new Set(
       collectQtctRecords(detailData.tree)
@@ -517,6 +536,7 @@ const buildBundle = (mount) => {
       summary: summaryFromLayer,
       detail: dataFromLayer,
       regionId: options.region,
+      ...(sourceCsvFromLayer ? { sourceCsv: sourceCsvFromLayer } : {}),
     },
   }
   delete bundledPackage.adminEntrypoint
@@ -527,6 +547,7 @@ const buildBundle = (mount) => {
     data: dataFromLayer,
     layer: qtctLayer,
     districtSvgUrlTemplate,
+    sourceCsv: sourceCsvFromLayer,
   }
   const animations = animationDefinitions.map((definition) => {
     const layerRelative = toPosix(path.join('map', 'layers', 'portable', packageRelative, definition.entrypoint))

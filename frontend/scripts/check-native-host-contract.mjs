@@ -169,11 +169,15 @@ assert.ok(nativeShell.includes('MAP_MESSAGES.mapSetUiInsets'))
 assert.ok(host.includes("--shell-right-inset"))
 for (const navigationId of [
   'app-menu-button',
-  'menu-import-layer',
-  'menu-import-artifact',
   'team-activity-publisher-link',
 ]) {
   assert.ok(nativeShellHtml.includes(`id="${navigationId}"`), `native navigation is missing ${navigationId}`)
+}
+for (const removedImportNavigationId of ['menu-import-layer', 'menu-import-artifact']) {
+  assert.ok(
+    !nativeShellHtml.includes(`id="${removedImportNavigationId}"`),
+    `host-only variant must not expose ${removedImportNavigationId}`,
+  )
 }
 assert.ok(nativeShellHtml.includes('href="./native-map.css"'), 'native shell must load its external stylesheet')
 assert.ok(nativeShellHtml.includes('src="./native-map.js"'), 'native shell must load its external module')
@@ -306,7 +310,7 @@ assert.ok(
 )
 // capability 宣言が無いと current-map の policy gate が握り潰す。
 const catalog = JSON.parse(fs.readFileSync(path.join(projectRoot, 'map/layers/catalog.json'), 'utf8'))
-const dataStatusEmitters = ['layer-evacuation', 'layer-team-activity-pins', 'layer-flood-warning', 'layer-japan-river-webcams', 'layer-hazard']
+const dataStatusEmitters = ['layer-evacuation', 'layer-team-activity-pins', 'layer-japan-river-webcams', 'layer-hazard']
 for (const layerId of dataStatusEmitters) {
   const layer = (catalog.layers || []).find((entry) => entry.id === layerId)
   assert.ok(layer, `catalog is missing ${layerId}`)
