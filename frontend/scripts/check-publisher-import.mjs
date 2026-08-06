@@ -14,10 +14,16 @@ const mapRoot = path.join(projectRoot, 'map')
 const config = JSON.parse(fs.readFileSync(path.join(mapRoot, 'publishers', 'team-activity-csv', 'publisher.config.json'), 'utf8'))
 const layerConfig = JSON.parse(fs.readFileSync(path.join(mapRoot, config.layerConfig.slice('/map/'.length)), 'utf8'))
 const regions = JSON.parse(fs.readFileSync(path.join(mapRoot, 'regions', 'index.json'), 'utf8')).regions || []
+const districtIndexes = new Map(regions.flatMap((region) => {
+  const indexPath = path.join(mapRoot, 'data', 'districts', region.id, 'district-index.json')
+  return fs.existsSync(indexPath)
+    ? [[region.id, JSON.parse(fs.readFileSync(indexPath, 'utf8'))]]
+    : []
+}))
 const sourceRelative = config.source.slice('/map/'.length)
 const publicationRelative = config.publication.slice('/map/'.length)
 const csvText = fs.readFileSync(path.join(mapRoot, sourceRelative), 'utf8')
-const artifacts = buildCsvQtctArtifacts({ csvText, regions, config: layerConfig })
+const artifacts = buildCsvQtctArtifacts({ csvText, regions, config: layerConfig, districtIndexes })
 if (artifacts.errors.length > 0) throw new Error(artifacts.errors.join(' / '))
 
 const buildArchive = (mutate = false) => {

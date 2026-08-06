@@ -234,10 +234,18 @@ const collectPublishedRecordsByRegion = (layer) => {
     console.warn(`[representative-qtct] publisher source missing for "${layer.id}"`)
     return byRegion
   }
+  const regions = JSON.parse(fs.readFileSync(path.join(projectRoot, 'map/regions/index.json'), 'utf8')).regions
+  const districtIndexes = new Map(regions.flatMap((region) => {
+    const indexPath = path.join(projectRoot, 'map', 'data', 'districts', region.id, 'district-index.json')
+    return fs.existsSync(indexPath)
+      ? [[region.id, JSON.parse(fs.readFileSync(indexPath, 'utf8'))]]
+      : []
+  }))
   const artifacts = buildCsvQtctArtifacts({
     csvText: fs.readFileSync(csvPath, 'utf8'),
-    regions: JSON.parse(fs.readFileSync(path.join(projectRoot, 'map/regions/index.json'), 'utf8')).regions,
+    regions,
     config: JSON.parse(fs.readFileSync(layerConfigPath, 'utf8')),
+    districtIndexes,
   })
   if (artifacts.errors?.length > 0) {
     throw new Error(`${layer.id}: publisher pipeline failed: ${artifacts.errors.join(', ')}`)

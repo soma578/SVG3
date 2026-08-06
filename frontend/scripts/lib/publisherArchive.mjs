@@ -57,6 +57,12 @@ export const validatePublisherArchive = ({ archivePath, projectRoot }) => {
   const layerConfigRelative = mapRelative(config.layerConfig, 'publisher layerConfig')
   const layerConfig = JSON.parse(fs.readFileSync(resolveMapTarget(mapRoot, layerConfigRelative, 'layerConfig'), 'utf8'))
   const regions = JSON.parse(fs.readFileSync(path.join(mapRoot, 'regions', 'index.json'), 'utf8')).regions || []
+  const districtIndexes = new Map(regions.flatMap((region) => {
+    const indexPath = path.join(mapRoot, 'data', 'districts', region.id, 'district-index.json')
+    return fs.existsSync(indexPath)
+      ? [[region.id, JSON.parse(fs.readFileSync(indexPath, 'utf8'))]]
+      : []
+  }))
 
   const sourceBytes = files.get(sourceRelative)
   const publicationBytes = files.get(publicationRelative)
@@ -69,7 +75,7 @@ export const validatePublisherArchive = ({ archivePath, projectRoot }) => {
     throw new Error(`${publicationRelative}: published/updatedAt is invalid`)
   }
 
-  const artifacts = buildCsvQtctArtifacts({ csvText, regions, config: layerConfig })
+  const artifacts = buildCsvQtctArtifacts({ csvText, regions, config: layerConfig, districtIndexes })
   if (artifacts.errors.length > 0) throw new Error(`CSV validation failed: ${artifacts.errors.join(' / ')}`)
   const expected = new Map(artifacts.files)
   expected.set(sourceRelative, csvText)

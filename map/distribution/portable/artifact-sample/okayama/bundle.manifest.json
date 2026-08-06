@@ -22,7 +22,7 @@
     },
     "publishedAt": "2026-07-21T00:00:00+09:00"
   },
-  "contentDigest": "sha256-0ca487074401ea74db75f491a6f1ef7a3f0975c39062b4f0dae72e98e3cd90e8",
+  "contentDigest": "sha256-f1ba58b6e18739abe0559264c5f9d90f81b6c53407ae6c1689a855a20a90c02a",
   "portability": {
     "pathIndependent": true,
     "crossOrigin": false,
@@ -38,7 +38,7 @@
         "id": "representative-pins",
         "version": "1.2.2",
         "manifest": "representative-pins/runtime.package.json",
-        "integrity": "sha256-dea37d0ce1257a369822c143ba89480a4a44b3a4e6fe65194db4503274c0b8b6"
+        "integrity": "sha256-4badbc0397df39c7b01036c79b6632dadc5d755709c461d2b2163edb1bf5d345"
       },
       {
         "id": "svgmap-slawa-client",
@@ -63,7 +63,7 @@
     {
       "path": "layer.manifest.json",
       "bytes": 11630,
-      "sha256": "5f2d909cc5a29585ee35041662b46fb5e72cdc514640edbbdbe39aa45411764a"
+      "sha256": "c5ee6e49acbea156a599ca7540e89db193ad6dc4cc2b98063dd7b2b6cbd73798"
     },
     {
       "path": "map/icons/app/icon-192.png",
@@ -268,7 +268,7 @@
     {
       "path": "map/layers/portable/artifact-sample/layer.package.json",
       "bytes": 2428,
-      "sha256": "c2fbf725406656d97c4a05706ae6b1c2d3f3e922f01116181cc5b5af367ef946"
+      "sha256": "ef3dff6b1f9844b6a6fcbd72cf1a601b5fbdf3759ca8a91d82a3493ca25b99ea"
     },
     {
       "path": "map/layers/portable/representative-pins/DENSITY_POINTS_FORMAT.md",
@@ -302,8 +302,8 @@
     },
     {
       "path": "map/layers/portable/representative-pins/qtctBuilder.mjs",
-      "bytes": 8303,
-      "sha256": "cf8fb14ba4217a4151d6230006300773471c8d805081d478a7ed005bc5e8766c"
+      "bytes": 8765,
+      "sha256": "635d2d3649b93057945661b544bd85fea07a3ae507adefbb9b92ef912329f677"
     },
     {
       "path": "map/layers/portable/representative-pins/qtctFeatureEngine.js",
