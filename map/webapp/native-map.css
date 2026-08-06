@@ -1,4 +1,6 @@
 :root {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   color-scheme: light;
   font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", system-ui, sans-serif;
   color: #182226;

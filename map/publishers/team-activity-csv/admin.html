@@ -10,6 +10,8 @@
       font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
       color: #172033;
       background: #f3f5f7;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
     }
     * { box-sizing: border-box; }
     body { margin: 0; min-height: 100vh; }
@@ -71,6 +73,40 @@
     .status.success { border-left-color: #12603f; color: #0f5132; }
     .summary { display: flex; gap: 24px; margin: 12px 0; font-size: 14px; }
     .summary strong { font-size: 20px; }
+    .activityEditor {
+      margin: 16px 0;
+      padding: 14px;
+      border: 1px solid #d7dde4;
+      border-radius: 10px;
+      background: #fff;
+    }
+    .activityEditor h2 { margin: 0 0 10px; font-size: 15px; }
+    .activityGrid {
+      display: grid;
+      grid-template-columns: minmax(150px, 1.3fr) minmax(120px, .8fr) minmax(150px, 1fr) minmax(210px, 1.5fr) minmax(100px, .7fr);
+      gap: 10px;
+      align-items: end;
+    }
+    .activityField { display: grid; gap: 5px; min-width: 0; color: #46515d; font-size: 12px; font-weight: 700; }
+    .activityField input,
+    .activityField select {
+      width: 100%;
+      min-width: 0;
+      height: 36px;
+      padding: 6px 9px;
+      border: 1px solid #aeb8c4;
+      border-radius: 6px;
+      background: #fff;
+      color: #172033;
+      font: inherit;
+      font-size: 14px;
+      line-height: 1.3;
+    }
+    .activityField input:focus,
+    .activityField select:focus { border-color: #176a63; outline: 2px solid #cce9e5; outline-offset: 1px; }
+    .activitySummaryField { grid-column: 1 / 5; }
+    #addActivityButton { grid-column: 5; width: 100%; }
+    .internalSelect { display: none; }
     .tableWrap { overflow: auto; border: 1px solid #d7dde4; background: #fff; }
     table { width: 100%; border-collapse: collapse; font-size: 13px; }
     th, td { padding: 8px 10px; border-bottom: 1px solid #e5e9ee; text-align: left; white-space: nowrap; }
@@ -82,6 +118,14 @@
       main { padding: 14px; }
       .toolbar { align-items: stretch; flex-direction: column; }
       .publishControl { margin-left: 0; }
+      .activityGrid { grid-template-columns: 1fr 1fr; }
+      .activitySummaryField { grid-column: 1 / -1; }
+      #addActivityButton { grid-column: 1 / -1; }
+    }
+    @media (max-width: 430px) {
+      .activityGrid { grid-template-columns: 1fr; }
+      .activitySummaryField,
+      #addActivityButton { grid-column: 1; }
     }
   </style>
 </head>
@@ -107,13 +151,26 @@
         公開
       </label>
     </div>
-    <section class="summary" aria-labelledby="entryTitle">
+    <section class="activityEditor" aria-labelledby="entryTitle">
       <h2 id="entryTitle">活動を追加</h2>
-      <label>名称 <input id="activityTitle" type="text" placeholder="給水支援チーム"></label>
-      <label>都道府県 <select id="prefectureSelect"><option value="">選択してください</option></select></label>
-      <label>市区町村 <select id="municipalitySelect" disabled><option value="">選択してください</option></select></label>
-      <label>地区境界 <select id="districtSelect" disabled><option value="">選択してください</option></select></label>
-      <label>状態
+      <div class="activityGrid">
+      <label class="activityField">名称 <input id="activityTitle" type="text" placeholder="給水支援チーム"></label>
+      <label class="activityField">都道府県
+        <input id="prefectureQuery" type="search" list="prefectureOptions" placeholder="入力して検索" autocomplete="off">
+        <datalist id="prefectureOptions"></datalist>
+        <select id="prefectureSelect" class="internalSelect" aria-hidden="true"><option value="">選択してください</option></select>
+      </label>
+      <label class="activityField">市区町村
+        <input id="municipalityQuery" type="search" list="municipalityOptions" placeholder="入力して検索" autocomplete="off" disabled>
+        <datalist id="municipalityOptions"></datalist>
+        <select id="municipalitySelect" class="internalSelect" aria-hidden="true" disabled><option value="">選択してください</option></select>
+      </label>
+      <label class="activityField">地区境界
+        <input id="districtQuery" type="search" list="districtOptions" placeholder="町名・丁目で検索" autocomplete="off" disabled>
+        <datalist id="districtOptions"></datalist>
+        <select id="districtSelect" class="internalSelect" aria-hidden="true" disabled><option value="">選択してください</option></select>
+      </label>
+      <label class="activityField">状態
         <select id="activityStatus">
           <option value="active">活動中</option>
           <option value="standby">待機</option>
@@ -122,8 +179,9 @@
           <option value="needs_attention">要対応</option>
         </select>
       </label>
-      <label>概要 <input id="activitySummary" type="text" placeholder="活動内容"></label>
+      <label class="activityField activitySummaryField">概要 <input id="activitySummary" type="text" placeholder="活動内容"></label>
       <button id="addActivityButton" type="button" disabled>この地区へ追加</button>
+      </div>
     </section>
     <div id="status" class="status">現在配信中のCSVを読み込んでいます。</div>
     <div class="summary">
@@ -164,6 +222,12 @@
     const errorCount = document.getElementById('errorCount');
     const backLink = document.getElementById('backLink');
     const activityTitle = document.getElementById('activityTitle');
+    const prefectureQuery = document.getElementById('prefectureQuery');
+    const municipalityQuery = document.getElementById('municipalityQuery');
+    const districtQuery = document.getElementById('districtQuery');
+    const prefectureOptions = document.getElementById('prefectureOptions');
+    const municipalityOptions = document.getElementById('municipalityOptions');
+    const districtOptions = document.getElementById('districtOptions');
     const prefectureSelect = document.getElementById('prefectureSelect');
     const municipalitySelect = document.getElementById('municipalitySelect');
     const districtSelect = document.getElementById('districtSelect');
@@ -251,10 +315,37 @@
       render();
     };
 
-    const replaceOptions = (select, entries, placeholder) => {
+    const replaceOptions = (select, entries, placeholder, datalist = null) => {
       select.replaceChildren(new Option(placeholder, ''));
       for (const entry of entries) select.append(new Option(entry.label, entry.value));
       select.disabled = entries.length === 0;
+      if (datalist) {
+        datalist.replaceChildren(...entries.map((entry) => {
+          const option = document.createElement('option');
+          option.value = entry.label;
+          return option;
+        }));
+      }
+    };
+
+    const matchQuery = (query, select) => {
+      const needle = normalizeName(query.value);
+      if (!needle) return '';
+      const options = [...select.options].filter((option) => option.value);
+      const exact = options.find((option) => normalizeName(option.textContent) === needle);
+      const partial = options.filter((option) => normalizeName(option.textContent).includes(needle));
+      return exact?.value || (partial.length === 1 ? partial[0].value : '');
+    };
+
+    const bindQuery = (query, select, onMatch) => {
+      const apply = () => {
+        const value = matchQuery(query, select);
+        if (!value || value === select.value) return;
+        select.value = value;
+        onMatch();
+      };
+      query.addEventListener('input', apply);
+      query.addEventListener('change', apply);
     };
 
     const refreshMunicipalities = async () => {
@@ -266,8 +357,12 @@
         }
       }
       replaceOptions(municipalitySelect, [...byCode].map(([value, label]) => ({ value, label }))
-        .sort((a, b) => a.label.localeCompare(b.label, 'ja')), '市区町村を選択');
-      replaceOptions(districtSelect, [], '地区境界を選択');
+        .sort((a, b) => a.label.localeCompare(b.label, 'ja')), '市区町村を選択', municipalityOptions);
+      municipalityQuery.disabled = municipalitySelect.disabled;
+      municipalityQuery.value = '';
+      districtQuery.value = '';
+      replaceOptions(districtSelect, [], '地区境界を選択', districtOptions);
+      districtQuery.disabled = true;
       addActivityButton.disabled = true;
     };
 
@@ -277,7 +372,9 @@
         .filter((district) => district.municipalityCode === municipalitySelect.value)
         .map((district) => ({ value: district.key, label: district.name }))
         .sort((a, b) => a.label.localeCompare(b.label, 'ja'));
-      replaceOptions(districtSelect, entries, '地区境界を選択');
+      replaceOptions(districtSelect, entries, '地区境界を選択', districtOptions);
+      districtQuery.disabled = districtSelect.disabled;
+      districtQuery.value = '';
       addActivityButton.disabled = true;
     };
 
@@ -310,7 +407,8 @@
       const [index, loadedPublisherConfig] = await Promise.all([response.json(), publisherResponse.json()]);
       publisherConfig = loadedPublisherConfig;
       regions = index.regions || [];
-      for (const region of regions) prefectureSelect.append(new Option(region.label, region.id));
+      const regionEntries = regions.map((region) => ({ value: region.id, label: region.label }));
+      replaceOptions(prefectureSelect, regionEntries, '都道府県を選択', prefectureOptions);
       layerConfig = await fetch(publisherConfig.layerConfig).then((result) => result.json());
       const sourceResponse = await fetch(publisherConfig.source, { cache: 'no-store' });
       if (!sourceResponse.ok) throw new Error(`現在のCSV: HTTP ${sourceResponse.status}`);
@@ -346,6 +444,13 @@
     });
     municipalitySelect.addEventListener('change', refreshDistricts);
     districtSelect.addEventListener('change', () => {
+      addActivityButton.disabled = !districtSelect.value || !activityTitle.value.trim();
+    });
+    bindQuery(prefectureQuery, prefectureSelect, () => {
+      void refreshMunicipalities().catch((error) => setStatus(`地区索引の読込みに失敗しました: ${error.message}`, 'error'));
+    });
+    bindQuery(municipalityQuery, municipalitySelect, refreshDistricts);
+    bindQuery(districtQuery, districtSelect, () => {
       addActivityButton.disabled = !districtSelect.value || !activityTitle.value.trim();
     });
     activityTitle.addEventListener('input', () => {
