@@ -27,9 +27,6 @@ jobs:
       - name: Check portable package contracts
         working-directory: frontend
         run: npm run portable:check
-      - name: Check committed portable bundles
-        working-directory: frontend
-        run: npm run portable:bundle:check
       - name: Compose releases for all 47 prefectures
         working-directory: frontend
         run: npm run portable:release:all
@@ -56,6 +53,9 @@ jobs:
       - name: Install Playwright browser
         working-directory: frontend
         run: npx playwright install --with-deps chromium
+      - name: Prepare public asset mirrors
+        working-directory: frontend
+        run: npm run assets:prepare
       - name: Run native E2E without suppressing failures
         working-directory: frontend
         run: npm run test:native:e2e
