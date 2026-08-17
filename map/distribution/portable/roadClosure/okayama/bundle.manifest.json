@@ -8,6 +8,7 @@
   "title": "道路通行情報",
   "description": "検証用スナップショット（公式ライブ情報ではありません）",
   "regionId": "okayama",
+  "listed": false,
   "entrypoint": "map/layers/portable/road-closure/roadClosureLayer.svg#summary=..%2F..%2F..%2Fdata%2Fqtct%2FroadClosure%2Fokayama%2Fsummary.json&data=..%2F..%2F..%2Fdata%2Fqtct%2FroadClosure%2Fokayama%2Fdetail.json&layer=roadClosure",
   "entrypoints": {
     "layer-road-closure": "map/layers/portable/road-closure/roadClosureLayer.svg#summary=..%2F..%2F..%2Fdata%2Fqtct%2FroadClosure%2Fokayama%2Fsummary.json&data=..%2F..%2F..%2Fdata%2Fqtct%2FroadClosure%2Fokayama%2Fdetail.json&layer=roadClosure"

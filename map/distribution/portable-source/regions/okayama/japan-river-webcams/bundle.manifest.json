@@ -8,6 +8,7 @@
   "title": "全国河川監視カメラ",
   "description": "国土交通省 川の防災情報（2026年4月28日取得の固定台帳・暫定表示）",
   "regionId": "okayama",
+  "listed": false,
   "entrypoint": "map/layers/portable/japan-river-webcams/webcamLayer.svg#summary=..%2F..%2F..%2Fdata%2Fqtct%2FjapanRiverWebcam%2Fokayama%2Fsummary.json&data=..%2F..%2F..%2Fdata%2Fqtct%2FjapanRiverWebcam%2Fokayama%2Fdetail.json&layer=japanRiverWebcam",
   "entrypoints": {
     "layer-japan-river-webcams": "map/layers/portable/japan-river-webcams/webcamLayer.svg#summary=..%2F..%2F..%2Fdata%2Fqtct%2FjapanRiverWebcam%2Fokayama%2Fsummary.json&data=..%2F..%2F..%2Fdata%2Fqtct%2FjapanRiverWebcam%2Fokayama%2Fdetail.json&layer=japanRiverWebcam"

@@ -194,6 +194,39 @@ test('native map rejects an unsigned external artifact index', async ({ page }) 
   await expect(page.locator('#layer-import-artifact option')).toHaveCount(0)
 })
 
+test('native map accepts a local SVG from the import drop area', async ({ page }) => {
+  await page.goto('/map/webapp/native-map.html?regionId=okayama&municipalityId=okayama-kita', {
+    waitUntil: 'domcontentloaded',
+  })
+  await page.locator('#layer-import-button').click()
+  await expect(page.locator('#layer-import-drop')).toBeVisible()
+  await page.locator('#layer-import-file').setInputFiles({
+    name: 'local-e2e.svg',
+    mimeType: 'image/svg+xml',
+    buffer: Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"/>'),
+  })
+  await expect(page.locator('#layer-import-kind')).toHaveValue('layer')
+  await expect(page.locator('#layer-import-file-name')).toHaveText('local-e2e.svg')
+  await page.locator('#layer-import-drop').evaluate((element) => {
+    const transfer = new DataTransfer()
+    transfer.items.add(new File(
+      ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"/>'],
+      'dropped-e2e.svg',
+      { type: 'image/svg+xml' },
+    ))
+    element.dispatchEvent(new DragEvent('drop', {
+      bubbles: true,
+      cancelable: true,
+      dataTransfer: transfer,
+    }))
+  })
+  await expect(page.locator('#layer-import-file-name')).toHaveText('dropped-e2e.svg')
+  await expect(page.locator('#layer-import-submit')).toHaveText('追加')
+  await page.locator('#layer-import-submit').click()
+  await expect(page.locator('#layer-import-status')).toContainText('1件を追加しました')
+  await expect(page.locator('[data-layer^="layer-imported-"]').filter({ hasText: 'dropped-e2e' })).toHaveCount(1)
+})
+
 test('native map runs a trusted signed external artifact through S-LaWA', async ({ page }) => {
   await page.goto('/map/webapp/native-map.html?regionId=okayama&municipalityId=okayama-kita', {
     waitUntil: 'domcontentloaded',
@@ -286,6 +319,11 @@ test('portable artifact index exposes the verified release fixtures', async ({ r
     'roadClosure',
     'teamActivity',
   ])
+  expect(index.artifacts.filter(({ listed }) => listed !== false).map(({ packageId }) => packageId)).toEqual([
+    'artifact-sample',
+    'evacuation',
+    'teamActivity',
+  ])
   for (const artifact of index.artifacts) {
     expect(artifact.regionId).toBe('okayama')
     expect(artifact.description).toEqual(expect.any(String))
@@ -320,7 +358,7 @@ test('native map imports and opens an unmounted verified artifact', async ({ pag
   await expect(page.locator('[data-layer="layer-road-closure"]')).toHaveCount(0)
   await page.locator('#layer-import-button').click()
   await expect(page.locator('#layer-import-kind')).toHaveValue('artifact')
-  await expect(page.locator('#layer-import-artifact option')).toHaveCount(6)
+  await expect(page.locator('#layer-import-artifact option')).toHaveCount(3)
   await page.locator('#layer-import-artifact').selectOption('artifact-sample:okayama')
   await expect(page.locator('#artifact-publisher')).toHaveText('SVG3')
   await expect(page.locator('#artifact-license')).toContainText('利用条件未設定 (NOASSERTION)')

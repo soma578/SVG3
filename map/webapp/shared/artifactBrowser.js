@@ -80,7 +80,8 @@ export const createArtifactBrowser = ({ state, elements, fetchJson }) => {
   const applyIndex = (index, indexUrl, external) => {
     validateArtifactIndex(index, { requireSignature: external });
     state.artifacts = index.artifacts.filter((artifact) => (
-      !external || artifact.portability?.lawaModes?.isolated === 'native-supported'
+      artifact.listed !== false
+      && (!external || artifact.portability?.lawaModes?.isolated === 'native-supported')
     ));
     state.artifactIndexUrl = indexUrl;
     state.artifactIndexExternal = external;

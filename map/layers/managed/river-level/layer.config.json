@@ -9,7 +9,8 @@
   "order": 65,
   "layerPackage": "/map/layers/portable/river-level/layer.package.json",
   "bundle": {
-    "release": true
+    "release": true,
+    "listed": false
   },
   "ui": {
     "catalog": false,

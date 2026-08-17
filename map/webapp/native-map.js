@@ -60,7 +60,9 @@ const elements = {
   artifactDescription: document.getElementById('artifact-description'),
   artifactActionHelp: document.getElementById('artifact-action-help'),
   importUrl: document.getElementById('layer-import-url'),
+  importDrop: document.getElementById('layer-import-drop'),
   importFile: document.getElementById('layer-import-file'),
+  importFileName: document.getElementById('layer-import-file-name'),
   importTitle: document.getElementById('layer-import-title'),
   importSubmit: document.getElementById('layer-import-submit'),
   importStatus: document.getElementById('layer-import-status'),
@@ -891,6 +893,26 @@ const loadSignedArtifactIndex = artifactBrowser.loadSigned;
 
 void renderCommunityCompatibility();
 
+let droppedLayerFile = null;
+
+const isSupportedLayerFile = (file) => (
+  Boolean(file)
+  && (/\.(?:svg|html?|htm)$/i.test(file.name) || ['image/svg+xml', 'text/html'].includes(file.type))
+);
+
+const selectLocalLayerFile = (file, { dropped = false } = {}) => {
+  if (!isSupportedLayerFile(file)) {
+    throw new Error('SVGまたはHTMLファイルを選択してください');
+  }
+  droppedLayerFile = dropped ? file : null;
+  elements.importKind.value = 'layer';
+  setImportKindFields();
+  elements.importTitle.value = file.name.replace(/\.(?:svg|html?|htm)$/i, '');
+  elements.importFileName.textContent = file.name;
+  elements.importDrop.classList.add('selected');
+  setImportStatus(`${file.name}を選択しました。「追加」を押してください`);
+};
+
 const setImportKindFields = () => {
   const kind = elements.importKind.value;
   const artifact = kind === 'artifact' || kind === 'signed-index';
@@ -905,8 +927,6 @@ const setImportKindFields = () => {
   elements.artifactActionHelp.hidden = true;
   elements.importUrl.hidden = artifact;
   elements.importTitle.hidden = !singleLayer;
-  elements.importFile.hidden = !singleLayer;
-  if (!singleLayer) elements.importFile.value = '';
   elements.importUrl.placeholder = singleLayer
     ? 'https://example.jp/layer.svg または下でファイル選択'
     : 'https://example.jp/Container.svg';
@@ -970,7 +990,7 @@ const importExternalLayers = async () => {
     return { additions, message: `${additions.length}件を追加しました` };
   }
   const rawUrl = elements.importUrl.value.trim();
-  const localFile = elements.importFile.files?.[0] || null;
+  const localFile = droppedLayerFile || elements.importFile.files?.[0] || null;
   if (kind === 'layer') {
     if (localFile) {
       const additions = addImportedLayers([
@@ -1084,6 +1104,41 @@ elements.importButton?.addEventListener('click', () => {
   setImportFormOpen(elements.importForm.hidden);
 });
 elements.importKind.addEventListener('change', setImportKindFields);
+elements.importFile.addEventListener('change', () => {
+  const file = elements.importFile.files?.[0];
+  if (!file) return;
+  try {
+    selectLocalLayerFile(file);
+  } catch (error) {
+    elements.importFile.value = '';
+    setImportStatus(error.message, true);
+  }
+});
+for (const eventName of ['dragenter', 'dragover']) {
+  elements.importDrop.addEventListener(eventName, (event) => {
+    event.preventDefault();
+    if (event.dataTransfer) event.dataTransfer.dropEffect = 'copy';
+    elements.importDrop.classList.add('dragover');
+  });
+}
+for (const eventName of ['dragleave', 'drop']) {
+  elements.importDrop.addEventListener(eventName, () => {
+    elements.importDrop.classList.remove('dragover');
+  });
+}
+elements.importDrop.addEventListener('drop', (event) => {
+  event.preventDefault();
+  const files = [...(event.dataTransfer?.files || [])];
+  if (files.length !== 1) {
+    setImportStatus('追加するSVGまたはHTMLファイルを1つだけドロップしてください', true);
+    return;
+  }
+  try {
+    selectLocalLayerFile(files[0], { dropped: true });
+  } catch (error) {
+    setImportStatus(error.message, true);
+  }
+});
 elements.communityCatalogSearch.addEventListener('input', renderCommunityCompatibilityList);
 elements.importArtifact.addEventListener('change', renderArtifactMetadata);
 elements.importIndexLoad.addEventListener('click', async () => {
@@ -1108,6 +1163,9 @@ elements.importForm.addEventListener('submit', async (event) => {
     setImportStatus(result.message);
     elements.importUrl.value = '';
     elements.importFile.value = '';
+    droppedLayerFile = null;
+    elements.importFileName.textContent = '';
+    elements.importDrop.classList.remove('selected');
     elements.importTitle.value = '';
   } catch (error) {
     console.error('[native-map] layer import failed', error);

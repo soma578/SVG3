@@ -157,8 +157,16 @@
         </dl>
         <p id="artifact-description" class="artifact-description" hidden></p>
         <p id="artifact-action-help" class="artifact-action-help" hidden>この地図で表示すると現在の地図へ追加します。ZIPには単体ビューア、Container、データ、利用案内が含まれます。</p>
+        <div class="layer-import-local-heading">手元のレイヤー</div>
+        <label id="layer-import-drop" class="layer-import-drop">
+          <input id="layer-import-file" type="file" accept=".svg,.html,.htm,image/svg+xml,text/html">
+          <span class="layer-import-drop-copy">
+            <strong>SVG / HTMLをここにドロップ</strong>
+            <small>またはクリックしてファイルを選択</small>
+          </span>
+          <span id="layer-import-file-name" class="layer-import-file-name"></span>
+        </label>
         <input id="layer-import-url" class="layer-import-url" type="text" inputmode="url" autocomplete="url" placeholder="https://example.jp/Container.svg" hidden>
-        <input id="layer-import-file" class="layer-import-file" type="file" accept=".svg,.html,.htm,image/svg+xml,text/html" hidden>
         <input id="layer-import-title" class="layer-import-title" type="text" autocomplete="off" placeholder="レイヤー名" hidden>
         <div class="layer-import-actions">
           <a id="layer-download" class="layer-download" href="#" download hidden>ZIPで保存</a>

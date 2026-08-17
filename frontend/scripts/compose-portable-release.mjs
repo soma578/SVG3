@@ -103,6 +103,7 @@ const writeArtifactIndex = () => {
         title: manifest.title,
         description: manifest.description,
         regionId: manifest.regionId,
+        listed: manifest.listed !== false,
         // 索引からの相対位置。zip・manifest・fixtureの解決に使う。
         // 絶対パスにするとartifactIndexの検証(assertRelativePath)で弾かれる。
         path: `${manifest.packageId}/${manifest.regionId}`,

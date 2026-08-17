@@ -8,6 +8,7 @@
   "title": "河川水位",
   "description": "河川水位と危険段階（現在は配信adapter接続待ち）",
   "regionId": "okayama",
+  "listed": false,
   "entrypoint": "map/layers/portable/river-level/riverLevelLayer.svg#summary=..%2F..%2F..%2Fdata%2Fqtct%2FriverLevel%2Fokayama%2Fsummary.json&data=..%2F..%2F..%2Fdata%2Fqtct%2FriverLevel%2Fokayama%2Fdetail.json&layer=riverLevel",
   "entrypoints": {
     "layer-river-level": "map/layers/portable/river-level/riverLevelLayer.svg#summary=..%2F..%2F..%2Fdata%2Fqtct%2FriverLevel%2Fokayama%2Fsummary.json&data=..%2F..%2F..%2Fdata%2Fqtct%2FriverLevel%2Fokayama%2Fdetail.json&layer=riverLevel"

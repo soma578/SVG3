@@ -63,6 +63,9 @@ export const validateArtifactIndex = (index, { requireSignature = false, now = D
     if (artifact.description !== undefined && typeof artifact.description !== 'string') {
       throw new Error(`${label}の説明が不正です`);
     }
+    if (artifact.listed !== undefined && typeof artifact.listed !== 'boolean') {
+      throw new Error(`${label}の掲載状態が不正です`);
+    }
     assertRelativePath(artifact.path, `${label} path`);
     assertRelativePath(artifact.entrypoints?.container, `${label} Container`);
     if (artifact.archive !== undefined) {

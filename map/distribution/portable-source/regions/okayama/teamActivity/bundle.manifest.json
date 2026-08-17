@@ -9,6 +9,7 @@
   "title": "チーム活動ピン",
   "description": "チーム活動の地点と地区境界",
   "regionId": "okayama",
+  "listed": true,
   "entrypoint": "map/layers/portable/team-activity/teamActivityLayer.svg#summary=..%2F..%2F..%2Fdata%2Fqtct%2FteamActivity%2Fokayama%2Fsummary.json&data=..%2F..%2F..%2Fdata%2Fqtct%2FteamActivity%2Fokayama%2Fdetail.json&sourceCsv=current.csv&layer=teamActivity",
   "entrypoints": {
     "layer-team-activity-pins": "map/layers/portable/team-activity/teamActivityLayer.svg#summary=..%2F..%2F..%2Fdata%2Fqtct%2FteamActivity%2Fokayama%2Fsummary.json&data=..%2F..%2F..%2Fdata%2Fqtct%2FteamActivity%2Fokayama%2Fdetail.json&sourceCsv=current.csv&layer=teamActivity",

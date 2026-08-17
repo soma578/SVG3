@@ -7,6 +7,7 @@
       "title": "配布レイヤーサンプル",
       "description": "配布レイヤーサンプルを表示するSVGMapレイヤー",
       "regionId": "okayama",
+      "listed": true,
       "path": "artifact-sample/okayama",
       "contentDigest": "sha256-d8f7b04d918d719988e389f02664b2875de2c97ed574aebd51fc75cd1fea201d",
       "entrypoints": {
@@ -55,7 +56,7 @@
         },
         "publishedAt": "2026-07-21T00:00:00+09:00"
       },
-      "manifestSha256": "af24777bbb1a80111c0dc88cef51ad501a50c6d9dae73cdbb3ed2fef222b1ee7",
+      "manifestSha256": "6965cd50bd843cff039bba1ff7110fca30357f1d6f268a2543a3f8eb07e499d8",
       "fileCount": 169,
       "bytes": 2602849,
       "archive": {
@@ -67,8 +68,8 @@
       "standaloneArchive": {
         "path": "bundle.zip",
         "fileName": "artifact-sample-okayama-standalone.zip",
-        "bytes": 1668917,
-        "sha256": "699f19363fd26a1c9d9415b0116858116cde1b91752e20cdfc73869393a13e62"
+        "bytes": 1668926,
+        "sha256": "e78546d6d36d51c205b4c8fd5785a55f026e59297c8a8dcdd68393e876b8c08f"
       }
     },
     {
@@ -77,6 +78,7 @@
       "title": "L2 避難所",
       "description": "避難所・緊急避難場所",
       "regionId": "okayama",
+      "listed": true,
       "path": "evacuation/okayama",
       "contentDigest": "sha256-815024f37e72772bbc43fe698b324bf8a21349821b0b2df4116a5a3cfe61b619",
       "entrypoints": {
@@ -125,7 +127,7 @@
         },
         "publishedAt": "2026-07-21T00:00:00+09:00"
       },
-      "manifestSha256": "b6c90f537cb0707eac5eede354bdc1f14e87debc1fb3b49778a44512ca894f5b",
+      "manifestSha256": "64bf9d8245cec2ff0b8d7cb508653d34a8bd5170d60f8ca91c2add82a8ac1505",
       "fileCount": 170,
       "bytes": 6075095,
       "archive": {
@@ -137,8 +139,8 @@
       "standaloneArchive": {
         "path": "bundle.zip",
         "fileName": "evacuation-okayama-standalone.zip",
-        "bytes": 1914366,
-        "sha256": "7b9288aeb8cb32149c7ad3b0c3e5d8d62615e240c3d4c673e74314fff2a06354"
+        "bytes": 1914376,
+        "sha256": "76169b8d650bf0cb4ee6212fdd8a1c2cb978a79101a7b86a34f2173495914b7d"
       }
     },
     {
@@ -147,6 +149,7 @@
       "title": "全国河川監視カメラ",
       "description": "国土交通省 川の防災情報（2026年4月28日取得の固定台帳・暫定表示）",
       "regionId": "okayama",
+      "listed": false,
       "path": "japan-river-webcams/okayama",
       "contentDigest": "sha256-50426ff4933c2acf4c9a14b7094989fbe0d3b066ec1a0b90cae0d545fa874f8d",
       "entrypoints": {
@@ -195,7 +198,7 @@
         },
         "publishedAt": "2026-07-21T00:00:00+09:00"
       },
-      "manifestSha256": "5b62eba75f7d614626ac898fa087e8fcba146ba16ef3e8d54dd3c8ce94eb1503",
+      "manifestSha256": "2098b98a8161fd2f89ab1ffd2d1a1eb1bbad602f96b9600d2a6524e0f456a04b",
       "fileCount": 171,
       "bytes": 3212942,
       "archive": {
@@ -207,8 +210,8 @@
       "standaloneArchive": {
         "path": "bundle.zip",
         "fileName": "japan-river-webcams-okayama-standalone.zip",
-        "bytes": 1708418,
-        "sha256": "7af0c0684e868af4e4cce2b110ba2741aa8f1b5290b2dc8b520a7e5e284f6823"
+        "bytes": 1708428,
+        "sha256": "43076abb8554e3bca85d5ec0a3701475caabf314183d28a41afe3ac7a67880e9"
       }
     },
     {
@@ -217,6 +220,7 @@
       "title": "河川水位",
       "description": "河川水位と危険段階（現在は配信adapter接続待ち）",
       "regionId": "okayama",
+      "listed": false,
       "path": "riverLevel/okayama",
       "contentDigest": "sha256-f6fa0309aca64c483dd202d5f8073ddde6b7193e64ba268506c6667f78515682",
       "entrypoints": {
@@ -265,7 +269,7 @@
         },
         "publishedAt": "2026-07-21T00:00:00+09:00"
       },
-      "manifestSha256": "a7bb1a610cafce22dd11b8a5746a207c2647582337307f2aaa344ac78c039e89",
+      "manifestSha256": "29c349e193b74271159a0c11b8743eafb2e08b7d3e11c77fca0402210e75faad",
       "fileCount": 170,
       "bytes": 2624850,
       "archive": {
@@ -277,8 +281,8 @@
       "standaloneArchive": {
         "path": "bundle.zip",
         "fileName": "riverLevel-okayama-standalone.zip",
-        "bytes": 1670563,
-        "sha256": "b2deea302650fbc6eab777cb8c5165c3b3dc07a54e5cfa2f5bf9a9f8912d5218"
+        "bytes": 1670569,
+        "sha256": "7bc7b3933b5f9a5394d51437e0704fedb7cac12aa9917720cce092e74fd7bd63"
       }
     },
     {
@@ -287,6 +291,7 @@
       "title": "道路通行情報",
       "description": "検証用スナップショット（公式ライブ情報ではありません）",
       "regionId": "okayama",
+      "listed": false,
       "path": "roadClosure/okayama",
       "contentDigest": "sha256-f5bc1018194df196d14f1d8f67299a35313835e0e40a87820b947bc22a355a56",
       "entrypoints": {
@@ -335,7 +340,7 @@
         },
         "publishedAt": "2026-07-21T00:00:00+09:00"
       },
-      "manifestSha256": "eb67bb9f20ae8fbeb9efcaa66e1e0c8e6897e6b78a77295574f2fe3a191c82a1",
+      "manifestSha256": "94c9e24b59618f1e0abf723d63ac4f20cdcc007e4f83334c67e61865b0f07ad0",
       "fileCount": 170,
       "bytes": 2618350,
       "archive": {
@@ -347,8 +352,8 @@
       "standaloneArchive": {
         "path": "bundle.zip",
         "fileName": "roadClosure-okayama-standalone.zip",
-        "bytes": 1670215,
-        "sha256": "04dcefb3a41f7a2fb95972a05514028aafe6a2ed0227e64ca5057f81213912b7"
+        "bytes": 1670221,
+        "sha256": "f3acc13d1d855175e23025666a25e557420cdb09d13af869f7648baf4b60e2ed"
       }
     },
     {
@@ -357,6 +362,7 @@
       "title": "チーム活動ピン",
       "description": "チーム活動の地点と地区境界",
       "regionId": "okayama",
+      "listed": true,
       "path": "teamActivity/okayama",
       "contentDigest": "sha256-b3d8e47be91ca20a41027decf776fcba35ba6feacbf3f4362c2a0f6d3206f13d",
       "entrypoints": {
@@ -405,7 +411,7 @@
         },
         "publishedAt": "2026-07-21T00:00:00+09:00"
       },
-      "manifestSha256": "51f74486112b0477f674f8b1e87f100efc357bda8b1929b4d1757292837e236a",
+      "manifestSha256": "1c5eb0d28165d7c98565096f537fab6337dcbc6df9a07f13a32fde33f1e205c5",
       "fileCount": 177,
       "bytes": 4101903,
       "archive": {
@@ -417,8 +423,8 @@
       "standaloneArchive": {
         "path": "bundle.zip",
         "fileName": "teamActivity-okayama-standalone.zip",
-        "bytes": 2000945,
-        "sha256": "8ac50d6710395ea5fa0851000a6493e32b208db6d1de48a316a59f499d30c830"
+        "bytes": 2000956,
+        "sha256": "dbd0a2333b4c1650f0909d870f5fb7fdf33b1148c670a76eefe6593e9f4fb761"
       }
     }
   ]

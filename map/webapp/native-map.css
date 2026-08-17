@@ -554,14 +554,12 @@ select {
 .layer-import-index-actions,
 .layer-import-artifact,
 .layer-import-artifact-meta,
-.layer-import-file,
 .layer-import-title,
 .layer-import-actions,
 .layer-import-status {
   grid-column: 1 / -1;
 }
 .layer-import-title[hidden],
-.layer-import-file[hidden],
 .layer-import-url[hidden],
 .layer-import-index-url[hidden],
 .layer-import-index-actions[hidden],
@@ -612,6 +610,66 @@ select {
 .artifact-description[hidden],
 .artifact-action-help[hidden] {
   display: none;
+}
+.layer-import-local-heading {
+  grid-column: 1 / -1;
+  margin-top: 4px;
+  color: #526160;
+  font-size: 12px;
+  font-weight: 800;
+}
+.layer-import-drop {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 64px;
+  padding: 10px 12px;
+  border: 2px dashed #9fb9b6;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #31504d;
+  cursor: pointer;
+  transition: border-color 120ms ease, background 120ms ease;
+}
+.layer-import-drop:hover,
+.layer-import-drop.dragover {
+  border-color: #177269;
+  background: #e7f4f2;
+}
+.layer-import-drop.selected {
+  border-style: solid;
+  border-color: #177269;
+}
+.layer-import-drop input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+.layer-import-drop-copy {
+  display: grid;
+  gap: 2px;
+}
+.layer-import-drop-copy strong {
+  font-size: 14px;
+}
+.layer-import-drop-copy small {
+  color: #647371;
+  font-size: 12px;
+}
+.layer-import-file-name {
+  min-width: 0;
+  margin-left: auto;
+  color: #135f58;
+  font-size: 12px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
 }
 .layer-import-actions {
   display: flex;

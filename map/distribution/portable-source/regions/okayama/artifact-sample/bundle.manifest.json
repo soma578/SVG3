@@ -5,6 +5,7 @@
   "title": "配布レイヤーサンプル",
   "description": "配布レイヤーサンプルを表示するSVGMapレイヤー",
   "regionId": "okayama",
+  "listed": true,
   "entrypoint": "map/layers/portable/artifact-sample/artifactSampleLayer.svg#summary=data%2Fsummary.json&data=data%2Fdetail.json&layer=artifactSample",
   "fixture": "viewer.html",
   "isolatedProtocolFixture": "viewer-isolated.html",

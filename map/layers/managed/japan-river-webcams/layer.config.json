@@ -10,6 +10,7 @@
   "layerPackage": "/map/layers/portable/japan-river-webcams/layer.package.json",
   "bundle": {
     "release": true,
+    "listed": false,
     "summaryMaxDepth": 12
   },
   "ui": {

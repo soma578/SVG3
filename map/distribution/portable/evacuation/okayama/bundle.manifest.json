@@ -8,6 +8,7 @@
   "title": "L2 避難所",
   "description": "避難所・緊急避難場所",
   "regionId": "okayama",
+  "listed": true,
   "entrypoint": "map/layers/portable/evacuation/evacuationLayer.svg#summary=..%2F..%2F..%2Fdata%2Fqtct%2Fevacuation%2Fokayama%2Fsummary.json&data=..%2F..%2F..%2Fdata%2Fqtct%2Fevacuation%2Fokayama%2Fdetail.json&layer=evacuation",
   "entrypoints": {
     "layer-evacuation": "map/layers/portable/evacuation/evacuationLayer.svg#summary=..%2F..%2F..%2Fdata%2Fqtct%2Fevacuation%2Fokayama%2Fsummary.json&data=..%2F..%2F..%2Fdata%2Fqtct%2Fevacuation%2Fokayama%2Fdetail.json&layer=evacuation"

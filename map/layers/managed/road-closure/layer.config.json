@@ -9,7 +9,8 @@
   "order": 67,
   "layerPackage": "/map/layers/portable/road-closure/layer.package.json",
   "bundle": {
-    "release": true
+    "release": true,
+    "listed": false
   },
   "ui": {
     "catalog": false,
