@@ -1,6 +1,9 @@
 {
   "updatedAt": "2026-04-28",
   "source": "https://www.river.go.jp/kawabou/file/files/map/pref/prefarea.json",
+  "registryStatus": "fixed-provisional-snapshot",
+  "automaticRefresh": false,
+  "note": "許可確認まで自動取得を停止し、2026年4月28日取得の台帳を固定利用",
   "cameras": [
     {
       "id": "japan-river-webcam-221811053",

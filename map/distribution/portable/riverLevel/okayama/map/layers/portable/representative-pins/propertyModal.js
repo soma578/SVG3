@@ -235,9 +235,10 @@ const findModalCloseButton = (root) => {
   return null;
 };
 
-// 従来の270x400は地図上で読みづらかったため、デスクトップの基準寸法を1.5倍にする。
-// 狭い画面では従来どおりviewport幅に収める。
-export const showPropertyModal = (html, { width = 405 } = {}) => {
+// 基準幅はアプリの他のUIに合わせる。候補一覧(#ticker)が最大320px、レイヤー
+// 固有UIが399pxで、プロパティだけ405pxだと地図を必要以上に隠す。中身は
+// 見出しと数項目なので300で足りる。狭い画面では従来どおりviewport幅に収める。
+export const showPropertyModal = (html, { width = 300 } = {}) => {
   if (!window.svgMap?.showModal) return null;
 
   const info = window.svgMap.showModal(`${PROPERTY_STYLES}${html}`, width, 600);
@@ -275,7 +276,7 @@ export const showPropertyModal = (html, { width = 405 } = {}) => {
     overflowX: 'hidden',
     overflowY: 'auto',
     background: '#ffffff',
-    borderRadius: '13px',
+    borderRadius: '12px',
   });
 
   setStyles(host, {

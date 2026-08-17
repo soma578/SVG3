@@ -1,0 +1,1353 @@
+{
+  "schemaVersion": 1,
+  "source": "prefectures.geojson",
+  "method": "shared-boundary-vertices@0.001deg + adjacency.config.json strait links",
+  "cellDegrees": 0.001,
+  "edgeCount": 89,
+  "neighbors": {
+    "hokkaido": [
+      {
+        "id": "aomori",
+        "label": "青森県",
+        "prefCode": "02",
+        "relation": "strait",
+        "sharedBoundaryCells": 0,
+        "via": "津軽海峡"
+      }
+    ],
+    "aomori": [
+      {
+        "id": "akita",
+        "label": "秋田県",
+        "prefCode": "05",
+        "relation": "land",
+        "sharedBoundaryCells": 621
+      },
+      {
+        "id": "iwate",
+        "label": "岩手県",
+        "prefCode": "03",
+        "relation": "land",
+        "sharedBoundaryCells": 355
+      },
+      {
+        "id": "hokkaido",
+        "label": "北海道",
+        "prefCode": "01",
+        "relation": "strait",
+        "sharedBoundaryCells": 0,
+        "via": "津軽海峡"
+      }
+    ],
+    "iwate": [
+      {
+        "id": "akita",
+        "label": "秋田県",
+        "prefCode": "05",
+        "relation": "land",
+        "sharedBoundaryCells": 802
+      },
+      {
+        "id": "miyagi",
+        "label": "宮城県",
+        "prefCode": "04",
+        "relation": "land",
+        "sharedBoundaryCells": 566
+      },
+      {
+        "id": "aomori",
+        "label": "青森県",
+        "prefCode": "02",
+        "relation": "land",
+        "sharedBoundaryCells": 355
+      }
+    ],
+    "miyagi": [
+      {
+        "id": "yamagata",
+        "label": "山形県",
+        "prefCode": "06",
+        "relation": "land",
+        "sharedBoundaryCells": 598
+      },
+      {
+        "id": "iwate",
+        "label": "岩手県",
+        "prefCode": "03",
+        "relation": "land",
+        "sharedBoundaryCells": 566
+      },
+      {
+        "id": "fukushima",
+        "label": "福島県",
+        "prefCode": "07",
+        "relation": "land",
+        "sharedBoundaryCells": 371
+      },
+      {
+        "id": "akita",
+        "label": "秋田県",
+        "prefCode": "05",
+        "relation": "land",
+        "sharedBoundaryCells": 112
+      }
+    ],
+    "akita": [
+      {
+        "id": "iwate",
+        "label": "岩手県",
+        "prefCode": "03",
+        "relation": "land",
+        "sharedBoundaryCells": 802
+      },
+      {
+        "id": "aomori",
+        "label": "青森県",
+        "prefCode": "02",
+        "relation": "land",
+        "sharedBoundaryCells": 621
+      },
+      {
+        "id": "yamagata",
+        "label": "山形県",
+        "prefCode": "06",
+        "relation": "land",
+        "sharedBoundaryCells": 317
+      },
+      {
+        "id": "miyagi",
+        "label": "宮城県",
+        "prefCode": "04",
+        "relation": "land",
+        "sharedBoundaryCells": 112
+      }
+    ],
+    "yamagata": [
+      {
+        "id": "miyagi",
+        "label": "宮城県",
+        "prefCode": "04",
+        "relation": "land",
+        "sharedBoundaryCells": 598
+      },
+      {
+        "id": "niigata",
+        "label": "新潟県",
+        "prefCode": "15",
+        "relation": "land",
+        "sharedBoundaryCells": 475
+      },
+      {
+        "id": "fukushima",
+        "label": "福島県",
+        "prefCode": "07",
+        "relation": "land",
+        "sharedBoundaryCells": 341
+      },
+      {
+        "id": "akita",
+        "label": "秋田県",
+        "prefCode": "05",
+        "relation": "land",
+        "sharedBoundaryCells": 317
+      }
+    ],
+    "fukushima": [
+      {
+        "id": "niigata",
+        "label": "新潟県",
+        "prefCode": "15",
+        "relation": "land",
+        "sharedBoundaryCells": 605
+      },
+      {
+        "id": "tochigi",
+        "label": "栃木県",
+        "prefCode": "09",
+        "relation": "land",
+        "sharedBoundaryCells": 426
+      },
+      {
+        "id": "miyagi",
+        "label": "宮城県",
+        "prefCode": "04",
+        "relation": "land",
+        "sharedBoundaryCells": 371
+      },
+      {
+        "id": "yamagata",
+        "label": "山形県",
+        "prefCode": "06",
+        "relation": "land",
+        "sharedBoundaryCells": 341
+      },
+      {
+        "id": "ibaraki",
+        "label": "茨城県",
+        "prefCode": "08",
+        "relation": "land",
+        "sharedBoundaryCells": 279
+      },
+      {
+        "id": "gunma",
+        "label": "群馬県",
+        "prefCode": "10",
+        "relation": "land",
+        "sharedBoundaryCells": 74
+      }
+    ],
+    "ibaraki": [
+      {
+        "id": "chiba",
+        "label": "千葉県",
+        "prefCode": "12",
+        "relation": "land",
+        "sharedBoundaryCells": 597
+      },
+      {
+        "id": "tochigi",
+        "label": "栃木県",
+        "prefCode": "09",
+        "relation": "land",
+        "sharedBoundaryCells": 523
+      },
+      {
+        "id": "fukushima",
+        "label": "福島県",
+        "prefCode": "07",
+        "relation": "land",
+        "sharedBoundaryCells": 279
+      },
+      {
+        "id": "saitama",
+        "label": "埼玉県",
+        "prefCode": "11",
+        "relation": "land",
+        "sharedBoundaryCells": 95
+      }
+    ],
+    "tochigi": [
+      {
+        "id": "gunma",
+        "label": "群馬県",
+        "prefCode": "10",
+        "relation": "land",
+        "sharedBoundaryCells": 557
+      },
+      {
+        "id": "ibaraki",
+        "label": "茨城県",
+        "prefCode": "08",
+        "relation": "land",
+        "sharedBoundaryCells": 523
+      },
+      {
+        "id": "fukushima",
+        "label": "福島県",
+        "prefCode": "07",
+        "relation": "land",
+        "sharedBoundaryCells": 426
+      },
+      {
+        "id": "saitama",
+        "label": "埼玉県",
+        "prefCode": "11",
+        "relation": "land",
+        "sharedBoundaryCells": 27
+      }
+    ],
+    "gunma": [
+      {
+        "id": "nagano",
+        "label": "長野県",
+        "prefCode": "20",
+        "relation": "land",
+        "sharedBoundaryCells": 620
+      },
+      {
+        "id": "tochigi",
+        "label": "栃木県",
+        "prefCode": "09",
+        "relation": "land",
+        "sharedBoundaryCells": 557
+      },
+      {
+        "id": "saitama",
+        "label": "埼玉県",
+        "prefCode": "11",
+        "relation": "land",
+        "sharedBoundaryCells": 544
+      },
+      {
+        "id": "niigata",
+        "label": "新潟県",
+        "prefCode": "15",
+        "relation": "land",
+        "sharedBoundaryCells": 322
+      },
+      {
+        "id": "fukushima",
+        "label": "福島県",
+        "prefCode": "07",
+        "relation": "land",
+        "sharedBoundaryCells": 74
+      }
+    ],
+    "saitama": [
+      {
+        "id": "tokyo",
+        "label": "東京都",
+        "prefCode": "13",
+        "relation": "land",
+        "sharedBoundaryCells": 590
+      },
+      {
+        "id": "gunma",
+        "label": "群馬県",
+        "prefCode": "10",
+        "relation": "land",
+        "sharedBoundaryCells": 544
+      },
+      {
+        "id": "chiba",
+        "label": "千葉県",
+        "prefCode": "12",
+        "relation": "land",
+        "sharedBoundaryCells": 200
+      },
+      {
+        "id": "yamanashi",
+        "label": "山梨県",
+        "prefCode": "19",
+        "relation": "land",
+        "sharedBoundaryCells": 120
+      },
+      {
+        "id": "ibaraki",
+        "label": "茨城県",
+        "prefCode": "08",
+        "relation": "land",
+        "sharedBoundaryCells": 95
+      },
+      {
+        "id": "nagano",
+        "label": "長野県",
+        "prefCode": "20",
+        "relation": "land",
+        "sharedBoundaryCells": 32
+      },
+      {
+        "id": "tochigi",
+        "label": "栃木県",
+        "prefCode": "09",
+        "relation": "land",
+        "sharedBoundaryCells": 27
+      }
+    ],
+    "chiba": [
+      {
+        "id": "ibaraki",
+        "label": "茨城県",
+        "prefCode": "08",
+        "relation": "land",
+        "sharedBoundaryCells": 597
+      },
+      {
+        "id": "saitama",
+        "label": "埼玉県",
+        "prefCode": "11",
+        "relation": "land",
+        "sharedBoundaryCells": 200
+      },
+      {
+        "id": "tokyo",
+        "label": "東京都",
+        "prefCode": "13",
+        "relation": "land",
+        "sharedBoundaryCells": 95
+      }
+    ],
+    "tokyo": [
+      {
+        "id": "saitama",
+        "label": "埼玉県",
+        "prefCode": "11",
+        "relation": "land",
+        "sharedBoundaryCells": 590
+      },
+      {
+        "id": "kanagawa",
+        "label": "神奈川県",
+        "prefCode": "14",
+        "relation": "land",
+        "sharedBoundaryCells": 499
+      },
+      {
+        "id": "yamanashi",
+        "label": "山梨県",
+        "prefCode": "19",
+        "relation": "land",
+        "sharedBoundaryCells": 112
+      },
+      {
+        "id": "chiba",
+        "label": "千葉県",
+        "prefCode": "12",
+        "relation": "land",
+        "sharedBoundaryCells": 95
+      }
+    ],
+    "kanagawa": [
+      {
+        "id": "tokyo",
+        "label": "東京都",
+        "prefCode": "13",
+        "relation": "land",
+        "sharedBoundaryCells": 499
+      },
+      {
+        "id": "shizuoka",
+        "label": "静岡県",
+        "prefCode": "22",
+        "relation": "land",
+        "sharedBoundaryCells": 180
+      },
+      {
+        "id": "yamanashi",
+        "label": "山梨県",
+        "prefCode": "19",
+        "relation": "land",
+        "sharedBoundaryCells": 168
+      }
+    ],
+    "niigata": [
+      {
+        "id": "nagano",
+        "label": "長野県",
+        "prefCode": "20",
+        "relation": "land",
+        "sharedBoundaryCells": 618
+      },
+      {
+        "id": "fukushima",
+        "label": "福島県",
+        "prefCode": "07",
+        "relation": "land",
+        "sharedBoundaryCells": 605
+      },
+      {
+        "id": "yamagata",
+        "label": "山形県",
+        "prefCode": "06",
+        "relation": "land",
+        "sharedBoundaryCells": 475
+      },
+      {
+        "id": "gunma",
+        "label": "群馬県",
+        "prefCode": "10",
+        "relation": "land",
+        "sharedBoundaryCells": 322
+      },
+      {
+        "id": "toyama",
+        "label": "富山県",
+        "prefCode": "16",
+        "relation": "land",
+        "sharedBoundaryCells": 93
+      }
+    ],
+    "toyama": [
+      {
+        "id": "gifu",
+        "label": "岐阜県",
+        "prefCode": "21",
+        "relation": "land",
+        "sharedBoundaryCells": 463
+      },
+      {
+        "id": "ishikawa",
+        "label": "石川県",
+        "prefCode": "17",
+        "relation": "land",
+        "sharedBoundaryCells": 385
+      },
+      {
+        "id": "nagano",
+        "label": "長野県",
+        "prefCode": "20",
+        "relation": "land",
+        "sharedBoundaryCells": 190
+      },
+      {
+        "id": "niigata",
+        "label": "新潟県",
+        "prefCode": "15",
+        "relation": "land",
+        "sharedBoundaryCells": 93
+      }
+    ],
+    "ishikawa": [
+      {
+        "id": "toyama",
+        "label": "富山県",
+        "prefCode": "16",
+        "relation": "land",
+        "sharedBoundaryCells": 385
+      },
+      {
+        "id": "fukui",
+        "label": "福井県",
+        "prefCode": "18",
+        "relation": "land",
+        "sharedBoundaryCells": 240
+      },
+      {
+        "id": "gifu",
+        "label": "岐阜県",
+        "prefCode": "21",
+        "relation": "land",
+        "sharedBoundaryCells": 129
+      }
+    ],
+    "fukui": [
+      {
+        "id": "gifu",
+        "label": "岐阜県",
+        "prefCode": "21",
+        "relation": "land",
+        "sharedBoundaryCells": 404
+      },
+      {
+        "id": "shiga",
+        "label": "滋賀県",
+        "prefCode": "25",
+        "relation": "land",
+        "sharedBoundaryCells": 396
+      },
+      {
+        "id": "ishikawa",
+        "label": "石川県",
+        "prefCode": "17",
+        "relation": "land",
+        "sharedBoundaryCells": 240
+      },
+      {
+        "id": "kyoto",
+        "label": "京都府",
+        "prefCode": "26",
+        "relation": "land",
+        "sharedBoundaryCells": 184
+      }
+    ],
+    "yamanashi": [
+      {
+        "id": "shizuoka",
+        "label": "静岡県",
+        "prefCode": "22",
+        "relation": "land",
+        "sharedBoundaryCells": 487
+      },
+      {
+        "id": "nagano",
+        "label": "長野県",
+        "prefCode": "20",
+        "relation": "land",
+        "sharedBoundaryCells": 392
+      },
+      {
+        "id": "kanagawa",
+        "label": "神奈川県",
+        "prefCode": "14",
+        "relation": "land",
+        "sharedBoundaryCells": 168
+      },
+      {
+        "id": "saitama",
+        "label": "埼玉県",
+        "prefCode": "11",
+        "relation": "land",
+        "sharedBoundaryCells": 120
+      },
+      {
+        "id": "tokyo",
+        "label": "東京都",
+        "prefCode": "13",
+        "relation": "land",
+        "sharedBoundaryCells": 112
+      }
+    ],
+    "nagano": [
+      {
+        "id": "gifu",
+        "label": "岐阜県",
+        "prefCode": "21",
+        "relation": "land",
+        "sharedBoundaryCells": 666
+      },
+      {
+        "id": "gunma",
+        "label": "群馬県",
+        "prefCode": "10",
+        "relation": "land",
+        "sharedBoundaryCells": 620
+      },
+      {
+        "id": "niigata",
+        "label": "新潟県",
+        "prefCode": "15",
+        "relation": "land",
+        "sharedBoundaryCells": 618
+      },
+      {
+        "id": "yamanashi",
+        "label": "山梨県",
+        "prefCode": "19",
+        "relation": "land",
+        "sharedBoundaryCells": 392
+      },
+      {
+        "id": "shizuoka",
+        "label": "静岡県",
+        "prefCode": "22",
+        "relation": "land",
+        "sharedBoundaryCells": 326
+      },
+      {
+        "id": "toyama",
+        "label": "富山県",
+        "prefCode": "16",
+        "relation": "land",
+        "sharedBoundaryCells": 190
+      },
+      {
+        "id": "aichi",
+        "label": "愛知県",
+        "prefCode": "23",
+        "relation": "land",
+        "sharedBoundaryCells": 153
+      },
+      {
+        "id": "saitama",
+        "label": "埼玉県",
+        "prefCode": "11",
+        "relation": "land",
+        "sharedBoundaryCells": 32
+      }
+    ],
+    "gifu": [
+      {
+        "id": "nagano",
+        "label": "長野県",
+        "prefCode": "20",
+        "relation": "land",
+        "sharedBoundaryCells": 666
+      },
+      {
+        "id": "aichi",
+        "label": "愛知県",
+        "prefCode": "23",
+        "relation": "land",
+        "sharedBoundaryCells": 578
+      },
+      {
+        "id": "toyama",
+        "label": "富山県",
+        "prefCode": "16",
+        "relation": "land",
+        "sharedBoundaryCells": 463
+      },
+      {
+        "id": "fukui",
+        "label": "福井県",
+        "prefCode": "18",
+        "relation": "land",
+        "sharedBoundaryCells": 404
+      },
+      {
+        "id": "shiga",
+        "label": "滋賀県",
+        "prefCode": "25",
+        "relation": "land",
+        "sharedBoundaryCells": 265
+      },
+      {
+        "id": "mie",
+        "label": "三重県",
+        "prefCode": "24",
+        "relation": "land",
+        "sharedBoundaryCells": 189
+      },
+      {
+        "id": "ishikawa",
+        "label": "石川県",
+        "prefCode": "17",
+        "relation": "land",
+        "sharedBoundaryCells": 129
+      }
+    ],
+    "shizuoka": [
+      {
+        "id": "yamanashi",
+        "label": "山梨県",
+        "prefCode": "19",
+        "relation": "land",
+        "sharedBoundaryCells": 487
+      },
+      {
+        "id": "aichi",
+        "label": "愛知県",
+        "prefCode": "23",
+        "relation": "land",
+        "sharedBoundaryCells": 343
+      },
+      {
+        "id": "nagano",
+        "label": "長野県",
+        "prefCode": "20",
+        "relation": "land",
+        "sharedBoundaryCells": 326
+      },
+      {
+        "id": "kanagawa",
+        "label": "神奈川県",
+        "prefCode": "14",
+        "relation": "land",
+        "sharedBoundaryCells": 180
+      }
+    ],
+    "aichi": [
+      {
+        "id": "gifu",
+        "label": "岐阜県",
+        "prefCode": "21",
+        "relation": "land",
+        "sharedBoundaryCells": 578
+      },
+      {
+        "id": "shizuoka",
+        "label": "静岡県",
+        "prefCode": "22",
+        "relation": "land",
+        "sharedBoundaryCells": 343
+      },
+      {
+        "id": "nagano",
+        "label": "長野県",
+        "prefCode": "20",
+        "relation": "land",
+        "sharedBoundaryCells": 153
+      },
+      {
+        "id": "mie",
+        "label": "三重県",
+        "prefCode": "24",
+        "relation": "land",
+        "sharedBoundaryCells": 62
+      }
+    ],
+    "mie": [
+      {
+        "id": "nara",
+        "label": "奈良県",
+        "prefCode": "29",
+        "relation": "land",
+        "sharedBoundaryCells": 607
+      },
+      {
+        "id": "wakayama",
+        "label": "和歌山県",
+        "prefCode": "30",
+        "relation": "land",
+        "sharedBoundaryCells": 412
+      },
+      {
+        "id": "shiga",
+        "label": "滋賀県",
+        "prefCode": "25",
+        "relation": "land",
+        "sharedBoundaryCells": 337
+      },
+      {
+        "id": "gifu",
+        "label": "岐阜県",
+        "prefCode": "21",
+        "relation": "land",
+        "sharedBoundaryCells": 189
+      },
+      {
+        "id": "aichi",
+        "label": "愛知県",
+        "prefCode": "23",
+        "relation": "land",
+        "sharedBoundaryCells": 62
+      },
+      {
+        "id": "kyoto",
+        "label": "京都府",
+        "prefCode": "26",
+        "relation": "land",
+        "sharedBoundaryCells": 30
+      }
+    ],
+    "shiga": [
+      {
+        "id": "fukui",
+        "label": "福井県",
+        "prefCode": "18",
+        "relation": "land",
+        "sharedBoundaryCells": 396
+      },
+      {
+        "id": "kyoto",
+        "label": "京都府",
+        "prefCode": "26",
+        "relation": "land",
+        "sharedBoundaryCells": 374
+      },
+      {
+        "id": "mie",
+        "label": "三重県",
+        "prefCode": "24",
+        "relation": "land",
+        "sharedBoundaryCells": 337
+      },
+      {
+        "id": "gifu",
+        "label": "岐阜県",
+        "prefCode": "21",
+        "relation": "land",
+        "sharedBoundaryCells": 265
+      }
+    ],
+    "kyoto": [
+      {
+        "id": "hyogo",
+        "label": "兵庫県",
+        "prefCode": "28",
+        "relation": "land",
+        "sharedBoundaryCells": 540
+      },
+      {
+        "id": "shiga",
+        "label": "滋賀県",
+        "prefCode": "25",
+        "relation": "land",
+        "sharedBoundaryCells": 374
+      },
+      {
+        "id": "osaka",
+        "label": "大阪府",
+        "prefCode": "27",
+        "relation": "land",
+        "sharedBoundaryCells": 312
+      },
+      {
+        "id": "fukui",
+        "label": "福井県",
+        "prefCode": "18",
+        "relation": "land",
+        "sharedBoundaryCells": 184
+      },
+      {
+        "id": "nara",
+        "label": "奈良県",
+        "prefCode": "29",
+        "relation": "land",
+        "sharedBoundaryCells": 177
+      },
+      {
+        "id": "mie",
+        "label": "三重県",
+        "prefCode": "24",
+        "relation": "land",
+        "sharedBoundaryCells": 30
+      }
+    ],
+    "osaka": [
+      {
+        "id": "kyoto",
+        "label": "京都府",
+        "prefCode": "26",
+        "relation": "land",
+        "sharedBoundaryCells": 312
+      },
+      {
+        "id": "hyogo",
+        "label": "兵庫県",
+        "prefCode": "28",
+        "relation": "land",
+        "sharedBoundaryCells": 288
+      },
+      {
+        "id": "wakayama",
+        "label": "和歌山県",
+        "prefCode": "30",
+        "relation": "land",
+        "sharedBoundaryCells": 284
+      },
+      {
+        "id": "nara",
+        "label": "奈良県",
+        "prefCode": "29",
+        "relation": "land",
+        "sharedBoundaryCells": 238
+      }
+    ],
+    "hyogo": [
+      {
+        "id": "kyoto",
+        "label": "京都府",
+        "prefCode": "26",
+        "relation": "land",
+        "sharedBoundaryCells": 540
+      },
+      {
+        "id": "okayama",
+        "label": "岡山県",
+        "prefCode": "33",
+        "relation": "land",
+        "sharedBoundaryCells": 301
+      },
+      {
+        "id": "osaka",
+        "label": "大阪府",
+        "prefCode": "27",
+        "relation": "land",
+        "sharedBoundaryCells": 288
+      },
+      {
+        "id": "tottori",
+        "label": "鳥取県",
+        "prefCode": "31",
+        "relation": "land",
+        "sharedBoundaryCells": 184
+      }
+    ],
+    "nara": [
+      {
+        "id": "mie",
+        "label": "三重県",
+        "prefCode": "24",
+        "relation": "land",
+        "sharedBoundaryCells": 607
+      },
+      {
+        "id": "wakayama",
+        "label": "和歌山県",
+        "prefCode": "30",
+        "relation": "land",
+        "sharedBoundaryCells": 593
+      },
+      {
+        "id": "osaka",
+        "label": "大阪府",
+        "prefCode": "27",
+        "relation": "land",
+        "sharedBoundaryCells": 238
+      },
+      {
+        "id": "kyoto",
+        "label": "京都府",
+        "prefCode": "26",
+        "relation": "land",
+        "sharedBoundaryCells": 177
+      }
+    ],
+    "wakayama": [
+      {
+        "id": "nara",
+        "label": "奈良県",
+        "prefCode": "29",
+        "relation": "land",
+        "sharedBoundaryCells": 593
+      },
+      {
+        "id": "mie",
+        "label": "三重県",
+        "prefCode": "24",
+        "relation": "land",
+        "sharedBoundaryCells": 412
+      },
+      {
+        "id": "osaka",
+        "label": "大阪府",
+        "prefCode": "27",
+        "relation": "land",
+        "sharedBoundaryCells": 284
+      }
+    ],
+    "tottori": [
+      {
+        "id": "okayama",
+        "label": "岡山県",
+        "prefCode": "33",
+        "relation": "land",
+        "sharedBoundaryCells": 665
+      },
+      {
+        "id": "shimane",
+        "label": "島根県",
+        "prefCode": "32",
+        "relation": "land",
+        "sharedBoundaryCells": 231
+      },
+      {
+        "id": "hyogo",
+        "label": "兵庫県",
+        "prefCode": "28",
+        "relation": "land",
+        "sharedBoundaryCells": 184
+      },
+      {
+        "id": "hiroshima",
+        "label": "広島県",
+        "prefCode": "34",
+        "relation": "land",
+        "sharedBoundaryCells": 54
+      }
+    ],
+    "shimane": [
+      {
+        "id": "hiroshima",
+        "label": "広島県",
+        "prefCode": "34",
+        "relation": "land",
+        "sharedBoundaryCells": 671
+      },
+      {
+        "id": "yamaguchi",
+        "label": "山口県",
+        "prefCode": "35",
+        "relation": "land",
+        "sharedBoundaryCells": 430
+      },
+      {
+        "id": "tottori",
+        "label": "鳥取県",
+        "prefCode": "31",
+        "relation": "land",
+        "sharedBoundaryCells": 231
+      }
+    ],
+    "okayama": [
+      {
+        "id": "tottori",
+        "label": "鳥取県",
+        "prefCode": "31",
+        "relation": "land",
+        "sharedBoundaryCells": 665
+      },
+      {
+        "id": "hyogo",
+        "label": "兵庫県",
+        "prefCode": "28",
+        "relation": "land",
+        "sharedBoundaryCells": 301
+      },
+      {
+        "id": "hiroshima",
+        "label": "広島県",
+        "prefCode": "34",
+        "relation": "land",
+        "sharedBoundaryCells": 294
+      },
+      {
+        "id": "kagawa",
+        "label": "香川県",
+        "prefCode": "37",
+        "relation": "land",
+        "sharedBoundaryCells": 10
+      }
+    ],
+    "hiroshima": [
+      {
+        "id": "shimane",
+        "label": "島根県",
+        "prefCode": "32",
+        "relation": "land",
+        "sharedBoundaryCells": 671
+      },
+      {
+        "id": "okayama",
+        "label": "岡山県",
+        "prefCode": "33",
+        "relation": "land",
+        "sharedBoundaryCells": 294
+      },
+      {
+        "id": "yamaguchi",
+        "label": "山口県",
+        "prefCode": "35",
+        "relation": "land",
+        "sharedBoundaryCells": 242
+      },
+      {
+        "id": "tottori",
+        "label": "鳥取県",
+        "prefCode": "31",
+        "relation": "land",
+        "sharedBoundaryCells": 54
+      }
+    ],
+    "yamaguchi": [
+      {
+        "id": "shimane",
+        "label": "島根県",
+        "prefCode": "32",
+        "relation": "land",
+        "sharedBoundaryCells": 430
+      },
+      {
+        "id": "hiroshima",
+        "label": "広島県",
+        "prefCode": "34",
+        "relation": "land",
+        "sharedBoundaryCells": 242
+      }
+    ],
+    "tokushima": [
+      {
+        "id": "kochi",
+        "label": "高知県",
+        "prefCode": "39",
+        "relation": "land",
+        "sharedBoundaryCells": 384
+      },
+      {
+        "id": "kagawa",
+        "label": "香川県",
+        "prefCode": "37",
+        "relation": "land",
+        "sharedBoundaryCells": 378
+      },
+      {
+        "id": "ehime",
+        "label": "愛媛県",
+        "prefCode": "38",
+        "relation": "land",
+        "sharedBoundaryCells": 81
+      }
+    ],
+    "kagawa": [
+      {
+        "id": "tokushima",
+        "label": "徳島県",
+        "prefCode": "36",
+        "relation": "land",
+        "sharedBoundaryCells": 378
+      },
+      {
+        "id": "ehime",
+        "label": "愛媛県",
+        "prefCode": "38",
+        "relation": "land",
+        "sharedBoundaryCells": 27
+      },
+      {
+        "id": "okayama",
+        "label": "岡山県",
+        "prefCode": "33",
+        "relation": "land",
+        "sharedBoundaryCells": 10
+      }
+    ],
+    "ehime": [
+      {
+        "id": "kochi",
+        "label": "高知県",
+        "prefCode": "39",
+        "relation": "land",
+        "sharedBoundaryCells": 794
+      },
+      {
+        "id": "tokushima",
+        "label": "徳島県",
+        "prefCode": "36",
+        "relation": "land",
+        "sharedBoundaryCells": 81
+      },
+      {
+        "id": "kagawa",
+        "label": "香川県",
+        "prefCode": "37",
+        "relation": "land",
+        "sharedBoundaryCells": 27
+      }
+    ],
+    "kochi": [
+      {
+        "id": "ehime",
+        "label": "愛媛県",
+        "prefCode": "38",
+        "relation": "land",
+        "sharedBoundaryCells": 794
+      },
+      {
+        "id": "tokushima",
+        "label": "徳島県",
+        "prefCode": "36",
+        "relation": "land",
+        "sharedBoundaryCells": 384
+      }
+    ],
+    "fukuoka": [
+      {
+        "id": "saga",
+        "label": "佐賀県",
+        "prefCode": "41",
+        "relation": "land",
+        "sharedBoundaryCells": 549
+      },
+      {
+        "id": "oita",
+        "label": "大分県",
+        "prefCode": "44",
+        "relation": "land",
+        "sharedBoundaryCells": 397
+      },
+      {
+        "id": "kumamoto",
+        "label": "熊本県",
+        "prefCode": "43",
+        "relation": "land",
+        "sharedBoundaryCells": 237
+      }
+    ],
+    "saga": [
+      {
+        "id": "fukuoka",
+        "label": "福岡県",
+        "prefCode": "40",
+        "relation": "land",
+        "sharedBoundaryCells": 549
+      },
+      {
+        "id": "nagasaki",
+        "label": "長崎県",
+        "prefCode": "42",
+        "relation": "land",
+        "sharedBoundaryCells": 298
+      }
+    ],
+    "nagasaki": [
+      {
+        "id": "saga",
+        "label": "佐賀県",
+        "prefCode": "41",
+        "relation": "land",
+        "sharedBoundaryCells": 298
+      }
+    ],
+    "kumamoto": [
+      {
+        "id": "miyazaki",
+        "label": "宮崎県",
+        "prefCode": "45",
+        "relation": "land",
+        "sharedBoundaryCells": 631
+      },
+      {
+        "id": "oita",
+        "label": "大分県",
+        "prefCode": "44",
+        "relation": "land",
+        "sharedBoundaryCells": 409
+      },
+      {
+        "id": "fukuoka",
+        "label": "福岡県",
+        "prefCode": "40",
+        "relation": "land",
+        "sharedBoundaryCells": 237
+      },
+      {
+        "id": "kagoshima",
+        "label": "鹿児島県",
+        "prefCode": "46",
+        "relation": "land",
+        "sharedBoundaryCells": 173
+      }
+    ],
+    "oita": [
+      {
+        "id": "kumamoto",
+        "label": "熊本県",
+        "prefCode": "43",
+        "relation": "land",
+        "sharedBoundaryCells": 409
+      },
+      {
+        "id": "fukuoka",
+        "label": "福岡県",
+        "prefCode": "40",
+        "relation": "land",
+        "sharedBoundaryCells": 397
+      },
+      {
+        "id": "miyazaki",
+        "label": "宮崎県",
+        "prefCode": "45",
+        "relation": "land",
+        "sharedBoundaryCells": 290
+      }
+    ],
+    "miyazaki": [
+      {
+        "id": "kumamoto",
+        "label": "熊本県",
+        "prefCode": "43",
+        "relation": "land",
+        "sharedBoundaryCells": 631
+      },
+      {
+        "id": "kagoshima",
+        "label": "鹿児島県",
+        "prefCode": "46",
+        "relation": "land",
+        "sharedBoundaryCells": 447
+      },
+      {
+        "id": "oita",
+        "label": "大分県",
+        "prefCode": "44",
+        "relation": "land",
+        "sharedBoundaryCells": 290
+      }
+    ],
+    "kagoshima": [
+      {
+        "id": "miyazaki",
+        "label": "宮崎県",
+        "prefCode": "45",
+        "relation": "land",
+        "sharedBoundaryCells": 447
+      },
+      {
+        "id": "kumamoto",
+        "label": "熊本県",
+        "prefCode": "43",
+        "relation": "land",
+        "sharedBoundaryCells": 173
+      },
+      {
+        "id": "okinawa",
+        "label": "沖縄県",
+        "prefCode": "47",
+        "relation": "strait",
+        "sharedBoundaryCells": 0,
+        "via": "南西諸島"
+      }
+    ],
+    "okinawa": [
+      {
+        "id": "kagoshima",
+        "label": "鹿児島県",
+        "prefCode": "46",
+        "relation": "strait",
+        "sharedBoundaryCells": 0,
+        "via": "南西諸島"
+      }
+    ]
+  }
+}

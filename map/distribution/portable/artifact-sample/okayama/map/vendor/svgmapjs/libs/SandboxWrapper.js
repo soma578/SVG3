@@ -546,8 +546,12 @@ export class SandboxWrapper {
 				continue;
 			}
 			const requestedCooldown = Number(button.getAttribute('data-slawa-cooldown-ms'));
-			const cooldownMs = Math.min(300000, Math.max(10000, Number.isFinite(requestedCooldown) ? requestedCooldown : 10000));
-			let cooldownUntil = 0;
+			const cooldownMs = Math.min(300000, Math.max(30000, Number.isFinite(requestedCooldown) ? requestedCooldown : 30000));
+			let cooldownUntil = Date.now() + cooldownMs;
+			button.disabled = true;
+			window.setTimeout(() => {
+				button.disabled = false;
+			}, cooldownMs);
 			button.addEventListener('click', () => {
 				const now = Date.now();
 				if (now < cooldownUntil) return;
@@ -562,10 +566,13 @@ export class SandboxWrapper {
 				}, cooldownMs);
 			});
 			image.addEventListener('load', () => {
-				if (status) status.textContent = '最新画像';
+				if (status) status.textContent = `画像取得：${new Intl.DateTimeFormat('ja-JP', {
+					year: 'numeric', month: 'numeric', day: 'numeric',
+					hour: '2-digit', minute: '2-digit', second: '2-digit',
+				}).format(new Date())}`;
 			});
 			image.addEventListener('error', () => {
-				if (status) status.textContent = '画像を取得できません';
+				if (status) status.textContent = '画像を取得できません。公式ページで確認してください';
 			});
 		}
 	}

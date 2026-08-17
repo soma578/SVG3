@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>河川水位 - SVGMapレイヤー</title>
+<style>
+body{max-width:760px;margin:0 auto;padding:32px 20px;color:#182226;background:#fff;font:16px/1.75 system-ui,sans-serif}
+h1{margin:0 0 8px;font-size:28px}h2{margin:28px 0 8px;font-size:20px}
+.summary{padding:16px;border-left:4px solid #177269;background:#f1f7f6}
+dt{font-weight:700}dd{margin:0 0 8px}code{padding:2px 5px;background:#eef2f2;border-radius:3px}
+</style>
+</head>
+<body>
+<h1>河川水位</h1>
+<p class="summary">河川水位と危険段階（現在は配信adapter接続待ち）</p>
+<dl>
+<dt>パッケージ</dt><dd>riverLevel / okayama</dd>
+<dt>発行者</dt><dd>SVG3</dd>
+<dt>バージョン</dt><dd>1.0.0</dd>
+<dt>ライセンス</dt><dd>利用条件未設定 (NOASSERTION)</dd>
+</dl>
+<h2>内容</h2>
+<p><code>viewer.html</code> は単体確認用、<code>Container.svg</code> はSVGMapへ読み込む入口です。<code>viewer-isolated.html</code> と <code>Container.isolated.svg</code> はS-LaWA確認用です。</p>
+<h2>確認方法</h2>
+<p>ZIPを展開し、このフォルダーをHTTPサーバーで公開して <code>viewer.html</code> を開きます。ブラウザーの制約があるため、ファイルを直接開かずHTTP経由で確認してください。</p>
+<h2>別のSVGMapへ組み込む</h2>
+<p>フォルダー構成を保ったまま配置し、<code>Container.svg</code> 内の <code>&lt;animation&gt;</code> 宣言を組み込み先Containerへ追加してください。相対パスの基準が変わる場合は <code>xlink:href</code> を配置先に合わせて調整します。</p>
+</body>
+</html>

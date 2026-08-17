@@ -127,6 +127,22 @@ for (const file of containerFiles) {
     }
   }
 
+  // XMLコメント内の "--" は不正。パースは最初のエラーで止まるので、
+  // 「レイヤーが1つしか出ない」という遠い症状になる前にここで落とす。
+  for (const [, body] of svg.matchAll(/<!--([\s\S]*?)-->/g)) {
+    if (body.includes('--')) errors.push(`${file}: XML comment contains "--": ${body.trim()}`)
+  }
+
+  // controller は「そのレイヤーSVG」からの相対で書かれている。Container基準で
+  // 解決すると404になり、controllerが起動しないままタイルを取りに行かない
+  // レイヤーになる（画面上は静かに白紙）。実体の存在まで確かめる。
+  for (const [, controller] of svg.matchAll(/data-controller="([^"]+)"/g)) {
+    const target = controller.replaceAll('&amp;', '&').split('#')[0]
+    if (!isCheckablePath(target)) continue
+    if (!refCache.has(target)) refCache.set(target, fileExists(target))
+    if (!refCache.get(target)) errors.push(`${file}: missing controller: ${target}`)
+  }
+
   // 2./3. referenced files exist
   for (const [, href] of svg.matchAll(/xlink:href="([^"]+)"/g)) {
     const decoded = href.replaceAll('&amp;', '&')

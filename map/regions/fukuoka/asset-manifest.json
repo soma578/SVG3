@@ -13,7 +13,11 @@
     "/map/containers/Containers_webapp_denshi_40.svg",
     "/map/layers/hazard/40/fukuoka.svg",
     "/map/layers/offline-basemap/fukuoka.svg",
+    "/map/layers/offline-basemap/kumamoto.svg",
+    "/map/layers/offline-basemap/oita.svg",
+    "/map/layers/offline-basemap/saga.svg",
     "/map/regions/fukuoka/municipalities.json",
+    "/map/regions/fukuoka/neighbor-catalog.json",
     "/map/regions/fukuoka/runtime-config.json"
   ],
   "dataShards": [

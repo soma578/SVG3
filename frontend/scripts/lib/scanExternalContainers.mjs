@@ -101,13 +101,24 @@ const rebaseHref = (href, publicBase) => {
   return `${normalizePublicBase(publicBase)}/${relative}${hash}`
 }
 
-const rebaseController = (controller, publicBase) => {
+/**
+ * controller は Container ではなく「そのレイヤーSVG」からの相対で書かれている。
+ * 例: NOAA 可視光 は ./appLayers/noaa_nowCOAST/wmsMercator.svg を指し、その中の
+ * data-controller="noaa.html" は appLayers/noaa_nowCOAST/noaa.html を意味する。
+ * Container基準で解決すると /map/svgMapAppLayers/noaa.html となり404になり、
+ * controllerが起動しないままタイルを1枚も取りに行かないレイヤーになる。
+ */
+const rebaseController = (controller, publicBase, layerHref) => {
   if (!controller) return controller
   const [base, hash = ''] = String(controller).split('#')
   if (!base || !isRelativeHref(base)) return controller
   const cleanBase = path.posix.normalize(base.replaceAll('\\', '/')).replace(/^(\.\.\/)+/, '')
   const relative = cleanBase.replace(/^\.\//, '')
-  return `${normalizePublicBase(publicBase)}/${relative}${hash ? `#${hash}` : ''}`
+  const layerBase = String(layerHref || '').split('#')[0].replace(/^\.\//, '')
+  const layerDir = layerBase.includes('/') ? layerBase.slice(0, layerBase.lastIndexOf('/')) : ''
+  const resolved = path.posix.normalize(layerDir ? `${layerDir}/${relative}` : relative)
+    .replace(/^(\.\.\/)+/, '')
+  return `${normalizePublicBase(publicBase)}/${resolved}${hash ? `#${hash}` : ''}`
 }
 
 const sanitizeExternalAttrs = (attrs, config) => {
@@ -116,7 +127,11 @@ const sanitizeExternalAttrs = (attrs, config) => {
   delete next['data-controller-src-type']
   delete next['data-script']
   if (next['data-controller']) {
-    next['data-controller'] = rebaseController(next['data-controller'], config.publicBase)
+    next['data-controller'] = rebaseController(
+      next['data-controller'],
+      config.publicBase,
+      config.layerHref,
+    )
   }
   if (!next['data-lawa-mode']) {
     next['data-lawa-mode'] = config.trusted === true ? 'tight' : 'isolated'
@@ -194,8 +209,13 @@ export const scanExternalContainers = (projectRoot) => {
         const nextAttrs = sanitizeExternalAttrs({
           ...attrs,
           id: layerId,
-          'xlink:href': compatibilityEntry?.adapterHref
-            || rebaseHref(attrs['xlink:href'], config.publicBase),
+          // 共有ベースSVGの複製は「実行時にGUIから追加する」ときだけ要る。
+          // Container解析時に載るmountでは、上流と同じく同じファイルを
+          // ハッシュ違いで並べても衝突しない（実測で確認）。複製を指すと
+          // 上流の周辺資産との位置関係が変わるため、ここでは上流を使う。
+          'xlink:href': (compatibilityEntry?.adapterHref && !compatibilityEntry?.sharedBaseSvg)
+            ? compatibilityEntry.adapterHref
+            : rebaseHref(attrs['xlink:href'], config.publicBase),
           ...(compatibilityEntry?.controllerHref ? {
             'data-controller': compatibilityEntry.controllerHref,
           } : {}),
@@ -203,7 +223,7 @@ export const scanExternalContainers = (projectRoot) => {
             'data-lawa-mode': compatibilityEntry.runtime,
           } : {}),
           ...(compatibilityEntry?.placement || {}),
-        }, { ...config, id })
+        }, { ...config, id, layerHref: attrs['xlink:href'] })
         const detectedRequiresController = detectController(attrs, containerPath)
         if ((config.forceDefaultVisibility === true || !nextAttrs.visibility) && config.defaultVisibility) {
           nextAttrs.visibility = String(config.defaultVisibility)
@@ -217,18 +237,27 @@ export const scanExternalContainers = (projectRoot) => {
             requiresController: detectedRequiresController,
             ...(config.ui || {}),
             ...findLayerUi(attrs, config),
+            // controller が appearOnLayerLoad を宣言しているレイヤーは、
+            // controller が動いて初めてタイルを取りに行く（baseURL=none 等）。
+            // ホストは controllerUi を持つレイヤーにだけ appearOnLayerLoad を渡すので、
+            // ここで宣言しないと hiddenOnLayerLoad になり、静かに白紙のままになる。
+            ...(/exec=appearOnLayerLoad/.test(String(attrs['data-controller'] || ''))
+              ? { controllerUi: { label: '設定' } }
+              : {}),
             ...(compatibilityEntry ? {
               community: {
                 publisher: compatibility?.source?.publisher || '',
                 license: compatibility?.source?.license || null,
-                status: compatibilityEntry.status,
-                category: compatibilityEntry.category,
+                // 互換性の等級ではなく取得元を示す。
+                status: 'bundled',
                 runtime: compatibilityEntry.runtime,
                 delivery: compatibilityEntry.delivery,
                 offline: compatibilityEntry.offline,
                 externalDependencies: compatibilityEntry.externalDependencies || [],
                 verifiedAt: compatibilityEntry.verifiedAt,
-                reason: compatibilityEntry.reason,
+                reason: compatibilityEntry.note,
+                ...(compatibilityEntry.renderIssue
+                  ? { renderIssue: compatibilityEntry.renderIssue } : {}),
               },
             } : {}),
           },

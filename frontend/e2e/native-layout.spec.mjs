@@ -66,8 +66,11 @@ test('デスクトップではPOI詳細が全幅へ膨らまない', async ({ pa
 
   const modal = await openModal(frame)
   expect(modal, 'モーダルが開かない').not.toBeNull()
-  expect(modal.width).toBeLessThanOrEqual(440)
-  expect(modal.width).toBeGreaterThanOrEqual(380)
+  // 基準幅は300。候補一覧(320px)やレイヤー固有UI(399px)と並べて、地図を
+  // 必要以上に隠さない大きさにしてある。全幅へ膨らまないことと、
+  // 読めないほど細らないことの両方を見る。
+  expect(modal.width).toBeLessThanOrEqual(360)
+  expect(modal.width).toBeGreaterThanOrEqual(240)
 })
 
 test('縦が短いデスクトップでもPOI詳細が全幅へ膨らまない', async ({ page }) => {
@@ -81,7 +84,7 @@ test('縦が短いデスクトップでもPOI詳細が全幅へ膨らまない',
   const modal = await openModal(frame)
   expect(modal).not.toBeNull()
   expect(modal.viewportHeight, '縦が短い状態で検証していること').toBeLessThan(768)
-  expect(modal.width, 'デスクトップ幅なら全幅にしない').toBeLessThanOrEqual(440)
+  expect(modal.width, 'デスクトップ幅なら全幅にしない').toBeLessThanOrEqual(360)
 })
 
 test('狭い画面ではPOI詳細を画面幅に合わせる', async ({ page }) => {

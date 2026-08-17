@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 1,
+  "regionId": "kanagawa",
+  "label": "神奈川県",
+  "group": "周辺地域",
+  "neighbors": [
+    {
+      "id": "tokyo",
+      "label": "東京都",
+      "prefCode": "13",
+      "relation": "land"
+    },
+    {
+      "id": "shizuoka",
+      "label": "静岡県",
+      "prefCode": "22",
+      "relation": "land"
+    },
+    {
+      "id": "yamanashi",
+      "label": "山梨県",
+      "prefCode": "19",
+      "relation": "land"
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer-offline-basemap--near-tokyo",
+      "label": "東京都 背景",
+      "href": "/map/layers/offline-basemap/{regionId}.svg",
+      "visible": false,
+      "source": "managed/offline-basemap",
+      "order": 900,
+      "group": "周辺地域",
+      "note": "東京都の県境・海岸線・地名（通信なしでも見える）",
+      "kind": "vector",
+      "className": "offline-fallback",
+      "symbol": "背",
+      "icon": "",
+      "accent": "#8c9aa3",
+      "toggleKey": "layer-offline-basemap--near-tokyo",
+      "mounts": [
+        "layer-offline-basemap--near-tokyo"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "tokyo",
+        "label": "東京都",
+        "prefCode": "13",
+        "relation": "land"
+      }
+    },
+    {
+      "id": "layer-hazard--near-tokyo",
+      "label": "東京都 ハザード",
+      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey={layerId}",
+      "visible": false,
+      "source": "managed/hazard",
+      "order": 901,
+      "group": "周辺地域",
+      "note": "東京都の洪水・土砂災害ハザードを越境して重ねる",
+      "kind": "vector",
+      "className": "vectorEtcData",
+      "symbol": "災",
+      "icon": "",
+      "accent": "#AD3F31",
+      "toggleKey": "layer-hazard--near-tokyo",
+      "mounts": [
+        "layer-hazard--near-tokyo"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "種類"
+      },
+      "userToggle": true,
+      "messages": {
+        "toHost": [
+          "runtime:dataStatus",
+          "runtime:layerReady",
+          "runtime:layerStateChanged"
+        ],
+        "fromHost": [
+          "map:layerVisibilityChanged",
+          "map:setMunicipalityFilter",
+          "map:setLayerState"
+        ]
+      },
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "tokyo",
+        "label": "東京都",
+        "prefCode": "13",
+        "relation": "land"
+      }
+    },
+    {
+      "id": "layer-offline-basemap--near-shizuoka",
+      "label": "静岡県 背景",
+      "href": "/map/layers/offline-basemap/{regionId}.svg",
+      "visible": false,
+      "source": "managed/offline-basemap",
+      "order": 902,
+      "group": "周辺地域",
+      "note": "静岡県の県境・海岸線・地名（通信なしでも見える）",
+      "kind": "vector",
+      "className": "offline-fallback",
+      "symbol": "背",
+      "icon": "",
+      "accent": "#8c9aa3",
+      "toggleKey": "layer-offline-basemap--near-shizuoka",
+      "mounts": [
+        "layer-offline-basemap--near-shizuoka"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "shizuoka",
+        "label": "静岡県",
+        "prefCode": "22",
+        "relation": "land"
+      }
+    },
+    {
+      "id": "layer-hazard--near-shizuoka",
+      "label": "静岡県 ハザード",
+      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey={layerId}",
+      "visible": false,
+      "source": "managed/hazard",
+      "order": 903,
+      "group": "周辺地域",
+      "note": "静岡県の洪水・土砂災害ハザードを越境して重ねる",
+      "kind": "vector",
+      "className": "vectorEtcData",
+      "symbol": "災",
+      "icon": "",
+      "accent": "#AD3F31",
+      "toggleKey": "layer-hazard--near-shizuoka",
+      "mounts": [
+        "layer-hazard--near-shizuoka"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "種類"
+      },
+      "userToggle": true,
+      "messages": {
+        "toHost": [
+          "runtime:dataStatus",
+          "runtime:layerReady",
+          "runtime:layerStateChanged"
+        ],
+        "fromHost": [
+          "map:layerVisibilityChanged",
+          "map:setMunicipalityFilter",
+          "map:setLayerState"
+        ]
+      },
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "shizuoka",
+        "label": "静岡県",
+        "prefCode": "22",
+        "relation": "land"
+      }
+    },
+    {
+      "id": "layer-offline-basemap--near-yamanashi",
+      "label": "山梨県 背景",
+      "href": "/map/layers/offline-basemap/{regionId}.svg",
+      "visible": false,
+      "source": "managed/offline-basemap",
+      "order": 904,
+      "group": "周辺地域",
+      "note": "山梨県の県境・海岸線・地名（通信なしでも見える）",
+      "kind": "vector",
+      "className": "offline-fallback",
+      "symbol": "背",
+      "icon": "",
+      "accent": "#8c9aa3",
+      "toggleKey": "layer-offline-basemap--near-yamanashi",
+      "mounts": [
+        "layer-offline-basemap--near-yamanashi"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "yamanashi",
+        "label": "山梨県",
+        "prefCode": "19",
+        "relation": "land"
+      }
+    },
+    {
+      "id": "layer-hazard--near-yamanashi",
+      "label": "山梨県 ハザード",
+      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey={layerId}",
+      "visible": false,
+      "source": "managed/hazard",
+      "order": 905,
+      "group": "周辺地域",
+      "note": "山梨県の洪水・土砂災害ハザードを越境して重ねる",
+      "kind": "vector",
+      "className": "vectorEtcData",
+      "symbol": "災",
+      "icon": "",
+      "accent": "#AD3F31",
+      "toggleKey": "layer-hazard--near-yamanashi",
+      "mounts": [
+        "layer-hazard--near-yamanashi"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "種類"
+      },
+      "userToggle": true,
+      "messages": {
+        "toHost": [
+          "runtime:dataStatus",
+          "runtime:layerReady",
+          "runtime:layerStateChanged"
+        ],
+        "fromHost": [
+          "map:layerVisibilityChanged",
+          "map:setMunicipalityFilter",
+          "map:setLayerState"
+        ]
+      },
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "yamanashi",
+        "label": "山梨県",
+        "prefCode": "19",
+        "relation": "land"
+      }
+    }
+  ]
+}

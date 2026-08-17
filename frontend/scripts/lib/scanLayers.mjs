@@ -16,8 +16,13 @@
  *   id          animation id (必須, 例 "layer-evacuation")
  *   title       レイヤー名 (必須 — SVGMapではレイヤー識別子として振る舞う)
  *   href        xlink:href (必須)。トークン {regionId} {prefCode} {prefCodeNum}
- *               {districtBaseUrl} を使える。
+ *               {districtBaseUrl} {layerId} を使える。
+ *               {layerId} はその mount の animation id に展開される。周辺地域mountは
+ *               同じレイヤーを別の県で二重に載せるため、controller が自分宛の
+ *               メッセージを見分けられるよう mount ごとに違う値になる。
  *               リテラル {code} 等の未知トークンはそのまま残す (hazard の svgUrlTemplate 用)
+ *   crossRegion 周辺地域として隣接県ぶんを追加mountできるレイヤーの宣言 (任意)
+ *               { label, note } — note の {label} は隣接県名に展開される
  *   class       レイヤー特性 (省略時 "vectorEtcData")
  *   visibility  初期表示 (省略時 "visible")
  *   opacity     透明度 (省略時 "1")
@@ -191,6 +196,9 @@ export const scanAllLayers = (projectRoot) => [
 export const expandTokens = (href, {
   regionId,
   prefCode,
+  // その mount の animation id。同じレイヤーを複数の県ぶん載せるとき、
+  // controller が自分宛のホストメッセージだけを受けるための識別子になる。
+  layerId = '',
   districtBaseUrl = `/data/${regionId}`,
   // 記録ごとに県が変わるレイヤー向け。{recordRegionId} はここでは解決せず、
   // クライアントが「その記録の県」で埋める。コンテナの県で固定してはいけない。
@@ -198,10 +206,19 @@ export const expandTokens = (href, {
 }) =>
   href
     .replaceAll('{districtBaseUrlPattern}', districtBaseUrlPattern)
+    .replaceAll('{layerId}', layerId)
     .replaceAll('{regionId}', regionId)
     .replaceAll('{prefCode}', prefCode)
     .replaceAll('{prefCodeNum}', String(Number(prefCode)))
     .replaceAll('{districtBaseUrl}', districtBaseUrl)
+
+// 周辺地域mountのid規約。<baseLayerId>--near-<regionId>。
+// コンテナ生成・SWの資産収集・契約チェックが同じ規約を参照する。
+export const NEIGHBOR_MOUNT_MARKER = '--near-'
+
+export const neighborMountId = (layerId, regionId) => `${layerId}${NEIGHBOR_MOUNT_MARKER}${regionId}`
+
+export const isNeighborMountId = (id) => String(id || '').includes(NEIGHBOR_MOUNT_MARKER)
 
 export const xmlEscapeAttr = (value) =>
   String(value).replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;')

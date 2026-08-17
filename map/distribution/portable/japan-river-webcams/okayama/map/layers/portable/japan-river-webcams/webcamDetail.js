@@ -32,9 +32,10 @@ const allowedPageUrl = (value) => {
   }
 };
 
-export const renderWebcamDetail = (feature) => {
+export const renderWebcamDetail = (feature, { imageEnabled = false } = {}) => {
   const imageUrl = allowedImageUrl(feature.imageUrl);
   const pageUrl = allowedPageUrl(feature.pageUrl);
+  const showImage = Boolean(imageUrl && imageEnabled);
   return `
   <article class="svg3-property svg3-property-evacuation svg3-property-webcam-compact">
     <header class="svg3-property-header">
@@ -59,10 +60,14 @@ export const renderWebcamDetail = (feature) => {
         <dt>提供元</dt>
         <dd>${escapeHtml(feature.provider || '')}</dd>
       </div>
+      <div class="svg3-property-row">
+        <dt>出典</dt>
+        <dd>国土交通省「川の防災情報」</dd>
+      </div>
       <div class="svg3-property-row svg3-property-media-row">
         <dt>カメラ画像</dt>
         <dd data-slawa-media>
-          ${imageUrl ? `
+          ${showImage ? `
             <figure class="svg3-property-media">
               <img
                 data-webcam-image
@@ -76,10 +81,12 @@ export const renderWebcamDetail = (feature) => {
                 referrerpolicy="no-referrer"
               >
             </figure>
-            <small class="svg3-property-media-status" data-webcam-status data-slawa-media-status>最新画像</small>
-          ` : ''}
+            <small class="svg3-property-media-status" data-webcam-status data-slawa-media-status>画像を取得中</small>
+            <small class="svg3-property-media-status" data-webcam-captured-at>撮影時刻：確認できません</small>
+            <small class="svg3-property-media-status">第三者配信元から利用者操作時に直接取得します</small>
+          ` : imageUrl ? '<small class="svg3-property-media-status" data-webcam-status>画像表示は停止中です。公式ページで確認してください</small>' : ''}
           <div class="svg3-property-actions">
-            ${imageUrl ? '<button type="button" data-webcam-refresh data-slawa-action="refresh-image" data-slawa-cooldown-ms="10000">更新</button>' : ''}
+            ${showImage ? '<button type="button" data-webcam-refresh data-slawa-action="refresh-image" data-slawa-cooldown-ms="30000">画像を更新</button>' : ''}
             ${pageUrl
               ? `<a class="svg3-property-link" href="${escapeHtml(pageUrl)}" target="_blank" rel="noopener noreferrer">公式ページ</a>`
               : '<span class="svg3-property-link-missing" data-webcam-page-missing>公式URLを取得できません</span>'}

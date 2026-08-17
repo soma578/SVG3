@@ -130,6 +130,11 @@
         </div>
         <div class="panel-header-actions">
           <span id="layer-count" class="layer-count">0 / 0</span>
+          <!-- 他組織のContainerや手元のSVGを、ビルドし直さずにこの地図へ重ねる入口。
+               これが無いと外部レイヤーの追加がリポジトリへのコミット経由に限られる。 -->
+          <button id="layer-import-button" class="panel-action" type="button"
+                  aria-expanded="false" aria-controls="layer-import-form"
+                  aria-label="レイヤーを追加" title="レイヤーを追加">＋</button>
           <button id="panel-close" class="panel-close" type="button" aria-label="レイヤーパネルを閉じる" title="閉じる">×</button>
         </div>
       </header>
@@ -164,9 +169,9 @@
       <details id="community-compatibility" class="community-compatibility">
         <summary>
           <span>SVGMapコミュニティ</span>
-          <small id="community-compatibility-summary">互換性一覧を読み込み中</small>
+          <small id="community-compatibility-summary">レイヤー一覧を読み込み中</small>
         </summary>
-        <p>本家svgmapAppLayersの同梱資産を検索し、現在の地図へ個別に追加できます。</p>
+        <p>本家svgmapAppLayersの同梱資産を、本家Containerと同じ並び順で検索し、現在の地図へ個別に追加できます。</p>
         <div class="community-catalog-tools">
           <input id="community-catalog-search" type="search" autocomplete="off" placeholder="レイヤー名・通信先を検索" aria-label="SVGMapコミュニティレイヤーを検索">
           <span id="community-catalog-status" role="status"></span>

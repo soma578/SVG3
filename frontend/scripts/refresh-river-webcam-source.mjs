@@ -123,8 +123,6 @@ const fetchRiverJson = async (relativePath) => {
   const response = await fetchUpstream(url, {
     headers: {
       Accept: 'application/json,text/plain,*/*',
-      Referer: 'https://www.river.go.jp/',
-      'User-Agent': 'Mozilla/5.0',
     },
   })
   if (!response.ok) throw new Error(`${response.status} ${url}`)
@@ -262,8 +260,6 @@ const enrichCameraMetadata = async (camera) => {
     const response = await fetchUpstream(camera.metadataUrl, {
       headers: {
         Accept: 'application/json,text/plain,*/*',
-        Referer: 'https://www.river.go.jp/',
-        'User-Agent': 'Mozilla/5.0',
       },
     })
     if (!response.ok) return camera

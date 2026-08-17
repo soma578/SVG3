@@ -6,13 +6,21 @@
   "visibility": "visible",
   "opacity": "1",
   "order": 5,
+  "crossRegion": {
+    "label": "背景",
+    "note": "{label}の県境・海岸線・地名（通信なしでも見える）"
+  },
   "ui": {
-    "catalog": false,
-    "userToggle": false,
+    "catalog": true,
+    "userToggle": true,
     "group": "背景",
     "symbol": "背",
     "accent": "#8c9aa3",
     "kind": "vector",
-    "note": "オンライン背景の下に常時待機する軽量背景（県境・海岸線・地名）"
+    "note": "通信が切れても見える軽量背景（全国輪郭・県境・海岸線・地名）",
+    "mounts": [
+      "layer-offline-basemap-japan",
+      "layer-offline-basemap"
+    ]
   }
 }

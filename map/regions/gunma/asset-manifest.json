@@ -12,8 +12,14 @@
   "assets": [
     "/map/containers/Containers_webapp_denshi_10.svg",
     "/map/layers/hazard/10/gunma.svg",
+    "/map/layers/offline-basemap/fukushima.svg",
     "/map/layers/offline-basemap/gunma.svg",
+    "/map/layers/offline-basemap/nagano.svg",
+    "/map/layers/offline-basemap/niigata.svg",
+    "/map/layers/offline-basemap/saitama.svg",
+    "/map/layers/offline-basemap/tochigi.svg",
     "/map/regions/gunma/municipalities.json",
+    "/map/regions/gunma/neighbor-catalog.json",
     "/map/regions/gunma/runtime-config.json"
   ],
   "dataShards": [

@@ -10,42 +10,69 @@
 import { initRepresentativePinsLayer } from '../representative-pins/representativePinsCore.js';
 import { renderWebcamDetail } from './webcamDetail.js';
 
+const RUNTIME_POLICY_URL = './webcam-runtime-policy.json';
+const MINIMUM_REFRESH_COOLDOWN_MS = 30_000;
+
+const loadRuntimePolicy = async () => {
+  try {
+    const url = new URL(RUNTIME_POLICY_URL, window.location.href);
+    url.searchParams.set('_', String(Date.now()));
+    const response = await fetch(url, { cache: 'no-store', credentials: 'same-origin' });
+    if (!response.ok) return null;
+    return response.json();
+  } catch {
+    return null;
+  }
+};
+
+const formatAcquiredAt = (date) => new Intl.DateTimeFormat('ja-JP', {
+  year: 'numeric', month: 'numeric', day: 'numeric',
+  hour: '2-digit', minute: '2-digit', second: '2-digit',
+}).format(date);
+
 const bindImageRefresh = (modal) => {
   const image = modal?.querySelector?.('[data-webcam-image]');
   const button = modal?.querySelector?.('[data-webcam-refresh]');
   const status = modal?.querySelector?.('[data-webcam-status]');
   if (!image || !button) return;
-  image.addEventListener('error', () => {
-    image.closest('figure')?.setAttribute('hidden', '');
-    if (status) status.textContent = '画像を取得できません';
-  });
-  image.addEventListener('load', () => {
-    image.closest('figure')?.removeAttribute('hidden');
-    if (status) status.textContent = '最新画像';
-  });
-  let cooldownUntil = 0;
-  button.addEventListener('click', () => {
+  const cooldownMs = MINIMUM_REFRESH_COOLDOWN_MS;
+  let cooldownUntil = Date.now() + cooldownMs;
+
+  const requestImage = () => {
     const now = Date.now();
     if (now < cooldownUntil) return;
     const source = image.getAttribute('data-source');
     if (!source) return;
-    cooldownUntil = now + 10_000;
+    cooldownUntil = now + cooldownMs;
     button.disabled = true;
     image.src = `${source}${source.includes('?') ? '&' : '?'}t=${now}`;
-    if (status) {
-      status.textContent = `更新 ${new Date().toLocaleTimeString('ja-JP', {
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-      })}`;
-    }
     window.setTimeout(() => {
       button.disabled = false;
-    }, 10_000);
+    }, cooldownMs);
+  };
+
+  image.addEventListener('error', () => {
+    image.closest('figure')?.setAttribute('hidden', '');
+    if (status) status.textContent = '画像を取得できません。公式ページで確認してください';
   });
+  image.addEventListener('load', () => {
+    image.closest('figure')?.removeAttribute('hidden');
+    if (status) status.textContent = `画像取得：${formatAcquiredAt(new Date())}`;
+  });
+  button.addEventListener('click', requestImage);
+  button.disabled = true;
+  window.setTimeout(() => {
+    button.disabled = false;
+  }, cooldownMs);
 };
 
-renderWebcamDetail.afterShow = (_feature, modal) => bindImageRefresh(modal);
+const renderWebcamDetailWithPolicy = async (feature) => {
+  const policy = await loadRuntimePolicy();
+  return renderWebcamDetail(feature, {
+    imageEnabled: policy?.riverWebcamImages?.enabled === true,
+  });
+};
+renderWebcamDetailWithPolicy.afterShow = (_feature, modal) => bindImageRefresh(modal);
 
 let started = false;
 const start = () => {
@@ -53,7 +80,7 @@ const start = () => {
   started = true;
   initRepresentativePinsLayer({
     mode: 'portable',
-    renderFeatureDetail: renderWebcamDetail,
+    renderFeatureDetail: renderWebcamDetailWithPolicy,
   });
 };
 window.addEventListener('layerWebAppReady', start, { once: true });

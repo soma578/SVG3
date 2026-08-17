@@ -10,7 +10,7 @@ import {
 } from './shared/nativeLayerImporter.js';
 import { fetchVerifiedArtifactContainer } from './shared/artifactIndex.js';
 import { createArtifactBrowser } from './shared/artifactBrowser.js';
-import { loadLayerCatalog } from './shared/layerCatalog.js';
+import { loadLayerCatalog, neighborCatalogUrl } from './shared/layerCatalog.js';
 import { createLayerAlertPoller } from './shared/layerAlertPoller.js';
 import {
   loadLayerHealthData,
@@ -710,7 +710,12 @@ const renderLayers = layerPanel.renderLayers;
 const renderPresets = layerPanel.renderPresets;
 
 const loadLayers = async (containerUrl) => {
-  const catalog = await loadLayerCatalog({ containerUrl });
+  // 周辺地域レイヤーは現在の地域の隣接県ぶんだけカタログへ加わる。
+  // 県境で情報が切れないよう、利用者が必要な隣だけを表示できるようにする。
+  const catalog = await loadLayerCatalog({
+    containerUrl,
+    supplementUrl: neighborCatalogUrl(state.regionId),
+  });
   const catalogLayers = catalog.layers;
   state.presets = catalog.presets;
   state.layers = [...catalogLayers, ...state.importedLayers];
@@ -738,35 +743,43 @@ const communityEntryHref = (entry) => {
   return new URL(raw, new URL('/map/svgMapAppLayers/Container.svg', location.href)).href;
 };
 
+// 本家Containerに載っているレイヤーは本家と同じ経路で動く。等級を付けて
+// 並べ替えると、使えるレイヤーが一覧の下へ沈む。本家と同じ並び順で出し、
+// 判断材料（通信先・設定の要否・実体の有無）だけを添える。
 const renderCommunityCompatibilityList = () => {
-  const labels = {
-    supported: '検証済み',
-    limited: 'オンライン限定',
-    unverified: '未検証',
-    incompatible: '非対応',
-    'requires-config': '要設定',
-    'requires-proxy': '要プロキシ',
-  };
   const catalog = state.communityCatalog;
   if (!catalog) return;
   const query = elements.communityCatalogSearch.value.trim().toLocaleLowerCase('ja');
   const entries = (catalog.entries || []).filter((entry) => (
-    !query || [entry.title, entry.reason, ...(entry.externalDependencies || [])]
+    !query || [entry.title, entry.note, ...(entry.externalDependencies || [])]
       .join(' ')
       .toLocaleLowerCase('ja')
       .includes(query)
   ));
-  const installed = new Set(state.importedLayers.map((layer) => layer.attrs?.['xlink:href']));
+  // SVGMapはレイヤー文書をファイル単位で持つ。同じSVGをハッシュ違いで指す
+  // レイヤーを二重に載せると、2枚目は文書が作られないまま removeChild で
+  // 落ちて地図が壊れる。だからハッシュを外したベースURLで見分ける。
+  const baseOf = (href) => {
+    try { return new URL(String(href || ''), location.href).href.split('#')[0]; } catch { return ''; }
+  };
+  const installed = new Set(state.importedLayers.map((layer) => baseOf(layer.attrs?.['xlink:href'])));
   const mountedTitles = new Set(state.layers
     .filter((layer) => layer.community)
     .map((layer) => layer.title));
+  // 同じSVGが別名で標準搭載されていることがある（例: 国土地理院 淡色地図＝
+  // DenshiKokudo:淡色）。二重に載せるとSVGMapが同じ文書を取り合って壊れるので、
+  // 名前ではなくURLで既搭載を見分ける。
+  const mountedHrefs = new Set(state.layers
+    .map((layer) => layer.href || layer.attrs?.['xlink:href'] || '')
+    .filter((href) => href && !href.includes('{'))
+    .map(baseOf)
+    .filter(Boolean));
   elements.communityCompatibilityList.replaceChildren();
-  const rank = { supported: 0, limited: 1, 'requires-proxy': 2, 'requires-config': 3, incompatible: 4, unverified: 5 };
-  for (const entry of [...entries].sort((a, b) => (
-    (rank[a.status] ?? 9) - (rank[b.status] ?? 9) || a.sourceIndex - b.sourceIndex
-  ))) {
+  // 本家Containerの並び順のまま出す。
+  for (const entry of [...entries].sort((a, b) => a.sourceIndex - b.sourceIndex)) {
+    const needsConfiguration = Boolean(entry.configuration?.fields?.length);
     const row = document.createElement('li');
-    row.dataset.status = entry.status;
+    row.dataset.available = String(entry.available !== false);
     const heading = document.createElement('span');
     heading.className = 'community-entry-heading';
     const title = document.createElement('strong');
@@ -774,14 +787,24 @@ const renderCommunityCompatibilityList = () => {
     const actions = document.createElement('span');
     actions.className = 'community-entry-actions';
     const badge = document.createElement('small');
-    badge.textContent = labels[entry.status] || entry.status;
+    // 等級ではなく、利用者の操作に関わる事実だけを出す。
+    badge.textContent = entry.available === false
+      ? '実体なし'
+      : needsConfiguration
+        ? '要設定'
+        : entry.offline
+          ? 'オフライン可'
+          : '要通信';
     const add = document.createElement('button');
     add.type = 'button';
     add.className = 'community-entry-add';
-    const isInstalled = installed.has(communityEntryHref(entry)) || mountedTitles.has(entry.title);
-    const blocked = entry.status === 'incompatible';
+    const entryBase = baseOf(communityEntryHref(entry));
+    const isInstalled = installed.has(entryBase)
+      || mountedHrefs.has(entryBase)
+      || mountedTitles.has(entry.title);
+    const blocked = entry.available === false;
     add.disabled = isInstalled || blocked;
-    add.textContent = isInstalled ? '搭載済み' : blocked ? '非対応' : entry.status === 'requires-config' ? '設定して追加' : '追加';
+    add.textContent = isInstalled ? '搭載済み' : blocked ? '追加できません' : needsConfiguration ? '設定して追加' : '追加';
     add.setAttribute('aria-label', `${entry.title}を現在の地図へ追加`);
     add.addEventListener('click', () => {
       add.disabled = true;
@@ -802,10 +825,13 @@ const renderCommunityCompatibilityList = () => {
     });
     actions.append(badge, add);
     heading.append(title, actions);
-    const reason = document.createElement('p');
-    const dependencies = (entry.externalDependencies || []).join(', ');
-    reason.textContent = `区分${entry.category} · ${entry.reason}${dependencies ? ` · ${dependencies}` : ''}`;
-    row.append(heading, reason);
+    const description = document.createElement('p');
+    const facts = [
+      entry.available === false ? entry.unavailableReason : entry.note,
+      entry.verifiedAt ? `動作確認 ${entry.verifiedAt}` : '',
+    ].filter(Boolean);
+    description.textContent = facts.join(' · ');
+    row.append(heading, description);
     for (const field of entry.configuration?.fields || []) {
       const label = document.createElement('label');
       label.className = 'community-entry-config';
@@ -849,10 +875,10 @@ const renderCommunityCompatibility = async () => {
     }
     const counts = catalog.counts || {};
     elements.communityCompatibilitySummary.textContent =
-      `検証${counts.supported || 0}・制限${counts.limited || 0}／${catalog.entries?.length || 0}件`;
+      `${counts.available ?? catalog.entries?.length ?? 0}/${counts.total ?? catalog.entries?.length ?? 0}件`;
     renderCommunityCompatibilityList();
   } catch (error) {
-    elements.communityCompatibilitySummary.textContent = '互換性一覧を取得できません';
+    elements.communityCompatibilitySummary.textContent = 'レイヤー一覧を取得できません';
     console.warn('[native-map] community compatibility unavailable', error);
   }
 };

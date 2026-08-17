@@ -474,8 +474,8 @@ for (const { configPath, dir, config } of configs) {
       if (!Array.isArray(policy.allowedHosts) || policy.allowedHosts.length === 0) {
         errors.push(`${configPath}: imagePolicy.allowedHosts is required`)
       }
-      if (!Number.isFinite(Number(policy.refreshCooldownSeconds)) || Number(policy.refreshCooldownSeconds) < 10) {
-        errors.push(`${configPath}: imagePolicy.refreshCooldownSeconds must be >= 10`)
+      if (!Number.isFinite(Number(policy.refreshCooldownSeconds)) || Number(policy.refreshCooldownSeconds) < 30) {
+        errors.push(`${configPath}: imagePolicy.refreshCooldownSeconds must be >= 30`)
       }
       if (config.build.summaryShardDepth != null) {
         const depth = Number(config.build.summaryShardDepth)

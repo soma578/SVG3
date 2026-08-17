@@ -12,8 +12,13 @@
   "assets": [
     "/map/containers/Containers_webapp_denshi_22.svg",
     "/map/layers/hazard/22/shizuoka.svg",
+    "/map/layers/offline-basemap/aichi.svg",
+    "/map/layers/offline-basemap/kanagawa.svg",
+    "/map/layers/offline-basemap/nagano.svg",
     "/map/layers/offline-basemap/shizuoka.svg",
+    "/map/layers/offline-basemap/yamanashi.svg",
     "/map/regions/shizuoka/municipalities.json",
+    "/map/regions/shizuoka/neighbor-catalog.json",
     "/map/regions/shizuoka/runtime-config.json"
   ],
   "dataShards": [

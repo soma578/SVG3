@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "kind": "portable-regional-component",
+  "packageId": "riverLevel",
+  "regionId": "okayama",
+  "sharedVersion": "0f6ac8416197",
+  "files": [
+    "Container.isolated.svg",
+    "Container.svg",
+    "README.html",
+    "bundle.manifest.json",
+    "layer.manifest.json",
+    "map/data/qtct/riverLevel/okayama/detail.json",
+    "map/data/qtct/riverLevel/okayama/summary.json",
+    "map/layers/portable/river-level/layer.package.json"
+  ]
+}

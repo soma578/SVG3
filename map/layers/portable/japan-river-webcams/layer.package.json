@@ -24,7 +24,8 @@
     { "id": "svgmap-slawa-client", "version": "1.0.0", "manifest": "../svgmap-slawa-client/runtime.package.json" }
   ],
   "shared": [
-    "webcamDetail.js"
+    "webcamDetail.js",
+    "webcam-runtime-policy.json"
   ],
   "data": {
     "kind": "qtct",

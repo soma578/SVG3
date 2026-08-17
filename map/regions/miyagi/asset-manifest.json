@@ -12,8 +12,13 @@
   "assets": [
     "/map/containers/Containers_webapp_denshi_04.svg",
     "/map/layers/hazard/4/miyagi.svg",
+    "/map/layers/offline-basemap/akita.svg",
+    "/map/layers/offline-basemap/fukushima.svg",
+    "/map/layers/offline-basemap/iwate.svg",
     "/map/layers/offline-basemap/miyagi.svg",
+    "/map/layers/offline-basemap/yamagata.svg",
     "/map/regions/miyagi/municipalities.json",
+    "/map/regions/miyagi/neighbor-catalog.json",
     "/map/regions/miyagi/runtime-config.json"
   ],
   "dataShards": [

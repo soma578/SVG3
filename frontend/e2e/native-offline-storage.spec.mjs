@@ -199,10 +199,18 @@ test('8. オフラインで軽量背景が表示される', async ({ page, conte
     const response = await fetch('/map/layers/offline-basemap/okayama.svg')
     if (!response.ok) return null
     const text = await response.text()
-    return { ok: true, hasLand: text.includes('land-own'), hasPlaces: text.includes('class="place"') }
+    // 塗りはCSSクラスではなく表示属性で持つ。クラス指定だとSVGMapが
+    // レイヤー内部の<style>を適用せず、地名テキストだけの白紙になる。
+    return {
+      ok: true,
+      hasLand: /<path fill="#f7f4ea"/.test(text),
+      hasPlaces: /<text[^>]*>/.test(text),
+      usesStyleBlock: text.includes('<style>'),
+    }
   })
   expect(served?.ok).toBe(true)
-  expect(served.hasLand).toBe(true)
+  expect(served.hasLand, '陸地が塗り指定つきで入っていること').toBe(true)
+  expect(served.usesStyleBlock, 'CSSクラス指定に戻っていないこと').toBe(false)
   expect(served.hasPlaces).toBe(true)
 })
 

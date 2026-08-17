@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "riverWebcamImages": {
+    "enabled": true,
+    "status": "provisional-user-action-direct",
+    "refreshCooldownSeconds": 30
+  }
+}

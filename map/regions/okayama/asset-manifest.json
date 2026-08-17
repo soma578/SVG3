@@ -12,8 +12,13 @@
   "assets": [
     "/map/containers/Containers_webapp_denshi_33.svg",
     "/map/layers/hazard/33/okayama.svg",
+    "/map/layers/offline-basemap/hiroshima.svg",
+    "/map/layers/offline-basemap/hyogo.svg",
+    "/map/layers/offline-basemap/kagawa.svg",
     "/map/layers/offline-basemap/okayama.svg",
+    "/map/layers/offline-basemap/tottori.svg",
     "/map/regions/okayama/municipalities.json",
+    "/map/regions/okayama/neighbor-catalog.json",
     "/map/regions/okayama/runtime-config.json"
   ],
   "dataShards": [

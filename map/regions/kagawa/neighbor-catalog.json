@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 1,
+  "regionId": "kagawa",
+  "label": "香川県",
+  "group": "周辺地域",
+  "neighbors": [
+    {
+      "id": "tokushima",
+      "label": "徳島県",
+      "prefCode": "36",
+      "relation": "land"
+    },
+    {
+      "id": "ehime",
+      "label": "愛媛県",
+      "prefCode": "38",
+      "relation": "land"
+    },
+    {
+      "id": "okayama",
+      "label": "岡山県",
+      "prefCode": "33",
+      "relation": "land"
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer-offline-basemap--near-tokushima",
+      "label": "徳島県 背景",
+      "href": "/map/layers/offline-basemap/{regionId}.svg",
+      "visible": false,
+      "source": "managed/offline-basemap",
+      "order": 900,
+      "group": "周辺地域",
+      "note": "徳島県の県境・海岸線・地名（通信なしでも見える）",
+      "kind": "vector",
+      "className": "offline-fallback",
+      "symbol": "背",
+      "icon": "",
+      "accent": "#8c9aa3",
+      "toggleKey": "layer-offline-basemap--near-tokushima",
+      "mounts": [
+        "layer-offline-basemap--near-tokushima"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "tokushima",
+        "label": "徳島県",
+        "prefCode": "36",
+        "relation": "land"
+      }
+    },
+    {
+      "id": "layer-hazard--near-tokushima",
+      "label": "徳島県 ハザード",
+      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey={layerId}",
+      "visible": false,
+      "source": "managed/hazard",
+      "order": 901,
+      "group": "周辺地域",
+      "note": "徳島県の洪水・土砂災害ハザードを越境して重ねる",
+      "kind": "vector",
+      "className": "vectorEtcData",
+      "symbol": "災",
+      "icon": "",
+      "accent": "#AD3F31",
+      "toggleKey": "layer-hazard--near-tokushima",
+      "mounts": [
+        "layer-hazard--near-tokushima"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "種類"
+      },
+      "userToggle": true,
+      "messages": {
+        "toHost": [
+          "runtime:dataStatus",
+          "runtime:layerReady",
+          "runtime:layerStateChanged"
+        ],
+        "fromHost": [
+          "map:layerVisibilityChanged",
+          "map:setMunicipalityFilter",
+          "map:setLayerState"
+        ]
+      },
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "tokushima",
+        "label": "徳島県",
+        "prefCode": "36",
+        "relation": "land"
+      }
+    },
+    {
+      "id": "layer-offline-basemap--near-ehime",
+      "label": "愛媛県 背景",
+      "href": "/map/layers/offline-basemap/{regionId}.svg",
+      "visible": false,
+      "source": "managed/offline-basemap",
+      "order": 902,
+      "group": "周辺地域",
+      "note": "愛媛県の県境・海岸線・地名（通信なしでも見える）",
+      "kind": "vector",
+      "className": "offline-fallback",
+      "symbol": "背",
+      "icon": "",
+      "accent": "#8c9aa3",
+      "toggleKey": "layer-offline-basemap--near-ehime",
+      "mounts": [
+        "layer-offline-basemap--near-ehime"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "ehime",
+        "label": "愛媛県",
+        "prefCode": "38",
+        "relation": "land"
+      }
+    },
+    {
+      "id": "layer-hazard--near-ehime",
+      "label": "愛媛県 ハザード",
+      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey={layerId}",
+      "visible": false,
+      "source": "managed/hazard",
+      "order": 903,
+      "group": "周辺地域",
+      "note": "愛媛県の洪水・土砂災害ハザードを越境して重ねる",
+      "kind": "vector",
+      "className": "vectorEtcData",
+      "symbol": "災",
+      "icon": "",
+      "accent": "#AD3F31",
+      "toggleKey": "layer-hazard--near-ehime",
+      "mounts": [
+        "layer-hazard--near-ehime"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "種類"
+      },
+      "userToggle": true,
+      "messages": {
+        "toHost": [
+          "runtime:dataStatus",
+          "runtime:layerReady",
+          "runtime:layerStateChanged"
+        ],
+        "fromHost": [
+          "map:layerVisibilityChanged",
+          "map:setMunicipalityFilter",
+          "map:setLayerState"
+        ]
+      },
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "ehime",
+        "label": "愛媛県",
+        "prefCode": "38",
+        "relation": "land"
+      }
+    },
+    {
+      "id": "layer-offline-basemap--near-okayama",
+      "label": "岡山県 背景",
+      "href": "/map/layers/offline-basemap/{regionId}.svg",
+      "visible": false,
+      "source": "managed/offline-basemap",
+      "order": 904,
+      "group": "周辺地域",
+      "note": "岡山県の県境・海岸線・地名（通信なしでも見える）",
+      "kind": "vector",
+      "className": "offline-fallback",
+      "symbol": "背",
+      "icon": "",
+      "accent": "#8c9aa3",
+      "toggleKey": "layer-offline-basemap--near-okayama",
+      "mounts": [
+        "layer-offline-basemap--near-okayama"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "okayama",
+        "label": "岡山県",
+        "prefCode": "33",
+        "relation": "land"
+      }
+    },
+    {
+      "id": "layer-hazard--near-okayama",
+      "label": "岡山県 ハザード",
+      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey={layerId}",
+      "visible": false,
+      "source": "managed/hazard",
+      "order": 905,
+      "group": "周辺地域",
+      "note": "岡山県の洪水・土砂災害ハザードを越境して重ねる",
+      "kind": "vector",
+      "className": "vectorEtcData",
+      "symbol": "災",
+      "icon": "",
+      "accent": "#AD3F31",
+      "toggleKey": "layer-hazard--near-okayama",
+      "mounts": [
+        "layer-hazard--near-okayama"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "種類"
+      },
+      "userToggle": true,
+      "messages": {
+        "toHost": [
+          "runtime:dataStatus",
+          "runtime:layerReady",
+          "runtime:layerStateChanged"
+        ],
+        "fromHost": [
+          "map:layerVisibilityChanged",
+          "map:setMunicipalityFilter",
+          "map:setLayerState"
+        ]
+      },
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "okayama",
+        "label": "岡山県",
+        "prefCode": "33",
+        "relation": "land"
+      }
+    }
+  ]
+}

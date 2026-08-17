@@ -215,11 +215,24 @@ const webcamDetailRenderer = fs.readFileSync(webcamDetailRendererPath, 'utf8')
 for (const contract of ['loading="lazy"', 'referrerpolicy="no-referrer"', 'fetchpriority="low"']) {
   if (!webcamDetailRenderer.includes(contract)) errors.push(`webcam detail is missing ${contract}`)
 }
+if (!webcamDetailRenderer.includes('imageEnabled = false') || !webcamDetailRenderer.includes('imageUrl && imageEnabled')) {
+  errors.push('webcam image renderer must fail closed until the detail controller checks its feature flag')
+}
 for (const host of ['cam.river.go.jp', 'www.river.go.jp']) {
   if (!webcamDetailRenderer.includes(host)) errors.push(`webcam detail allowlist is missing ${host}`)
 }
-if (!webcamController.includes('cooldownUntil = now + 10_000')) {
-  errors.push('webcam manual refresh must enforce a 10 second cooldown')
+if (!webcamController.includes('MINIMUM_REFRESH_COOLDOWN_MS = 30_000')) {
+  errors.push('webcam manual refresh must enforce a minimum 30 second cooldown')
+}
+if (!webcamController.includes("imageEnabled: policy?.riverWebcamImages?.enabled === true")) {
+  errors.push('webcam image retrieval must be rendered behind the runtime feature flag')
+}
+if (!webcamController.includes("cache: 'no-store'")) errors.push('webcam feature flag must be read without cache')
+if (!webcamDetailRenderer.includes('第三者配信元から利用者操作時に直接取得します')) {
+  errors.push('webcam detail must disclose direct third-party retrieval')
+}
+if (!webcamDetailRenderer.includes('撮影時刻：確認できません')) {
+  errors.push('webcam detail must disclose when capture time is unavailable')
 }
 if (/setInterval\s*\(/.test(webcamController)) errors.push('webcam controller must not auto-refresh images')
 if (webcamController.includes('/map/media-cache/') || webcamDetailRenderer.includes('/map/media-cache/')) {

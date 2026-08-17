@@ -1,12 +1,16 @@
 {
   "id": "layer-hazard",
   "title": "L4 ハザード",
-  "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey=layer-hazard",
+  "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey={layerId}",
   "class": "vectorEtcData",
   "visibility": "visible",
   "opacity": "0.7",
   "order": 80,
   "layerPackage": "/map/layers/portable/hazard/layer.package.json",
+  "crossRegion": {
+    "label": "ハザード",
+    "note": "{label}の洪水・土砂災害ハザードを越境して重ねる"
+  },
   "ui": {
     "catalog": true,
     "group": "防災情報",

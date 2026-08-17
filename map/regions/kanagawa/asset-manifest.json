@@ -13,7 +13,11 @@
     "/map/containers/Containers_webapp_denshi_14.svg",
     "/map/layers/hazard/14/kanagawa.svg",
     "/map/layers/offline-basemap/kanagawa.svg",
+    "/map/layers/offline-basemap/shizuoka.svg",
+    "/map/layers/offline-basemap/tokyo.svg",
+    "/map/layers/offline-basemap/yamanashi.svg",
     "/map/regions/kanagawa/municipalities.json",
+    "/map/regions/kanagawa/neighbor-catalog.json",
     "/map/regions/kanagawa/runtime-config.json"
   ],
   "dataShards": [

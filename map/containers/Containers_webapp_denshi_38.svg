@@ -3,9 +3,29 @@
      viewBox="12243.4 -4605.6 3205.3 2251.0">
   <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
 
+  <!-- 保存した県の外へ動かしても白紙にしないための全国輪郭。県単位のオフライン背景(order 5)の下に敷く -->
+  <animation id="layer-offline-basemap-japan" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
+             xlink:href="/map/layers/overview/japan.svg"
+             title="オフライン背景 全国" class="offline-fallback" visibility="visible" opacity="1"/>
+
   <animation id="layer-offline-basemap" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
              xlink:href="/map/layers/offline-basemap/ehime.svg"
              title="オフライン背景" class="offline-fallback" visibility="visible" opacity="1"/>
+
+  <!-- 周辺地域mount: 高知県の背景 -->
+  <animation id="layer-offline-basemap--near-kochi" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
+             xlink:href="/map/layers/offline-basemap/kochi.svg"
+             title="高知県 背景" class="offline-fallback" visibility="hidden" opacity="1"/>
+
+  <!-- 周辺地域mount: 徳島県の背景 -->
+  <animation id="layer-offline-basemap--near-tokushima" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
+             xlink:href="/map/layers/offline-basemap/tokushima.svg"
+             title="徳島県 背景" class="offline-fallback" visibility="hidden" opacity="1"/>
+
+  <!-- 周辺地域mount: 香川県の背景 -->
+  <animation id="layer-offline-basemap--near-kagawa" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
+             xlink:href="/map/layers/offline-basemap/kagawa.svg"
+             title="香川県 背景" class="offline-fallback" visibility="hidden" opacity="1"/>
 
   <animation id="layer-basemap" x="-30000" y="-30000" width="60000" height="60000"
              xlink:href="/map/svgMapAppLayers/basemaps/dynamicDenshiKokudo2016.svg#map=pale"
@@ -39,6 +59,21 @@
              xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/38/ehime.svg&amp;svgUrlTemplate=/map/layers/hazard/38/districts/{code}.svg&amp;layerKey=layer-hazard"
              title="L4 ハザード" class="vectorEtcData" visibility="visible" opacity="0.7"/>
 
+  <!-- 周辺地域mount: 高知県のハザード -->
+  <animation id="layer-hazard--near-kochi" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
+             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/39/kochi.svg&amp;svgUrlTemplate=/map/layers/hazard/39/districts/{code}.svg&amp;layerKey=layer-hazard--near-kochi"
+             title="高知県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
+
+  <!-- 周辺地域mount: 徳島県のハザード -->
+  <animation id="layer-hazard--near-tokushima" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
+             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/36/tokushima.svg&amp;svgUrlTemplate=/map/layers/hazard/36/districts/{code}.svg&amp;layerKey=layer-hazard--near-tokushima"
+             title="徳島県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
+
+  <!-- 周辺地域mount: 香川県のハザード -->
+  <animation id="layer-hazard--near-kagawa" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
+             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/37/kagawa.svg&amp;svgUrlTemplate=/map/layers/hazard/37/districts/{code}.svg&amp;layerKey=layer-hazard--near-kagawa"
+             title="香川県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
+
   <animation id="layer-current-location" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
              xlink:href="/map/layers/portable/current-location/currentLocationLayer.svg"
              title="現在地" class="vectorEtcData" visibility="visible" opacity="1"/>
@@ -55,9 +90,17 @@
              xlink:href="/map/layers/external/svgmap-app-layers/adapters/geohash-coder.svg"
              title="geohashCoder" class="geoCoder" visibility="hidden" opacity="1" data-external-source="svgmap-app-layers" data-lawa-mode="isolated"/>
 
+  <animation id="layer-external-svgmap-app-layers-41-41" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/msil/dynamicWebTile.svg#globe&amp;baseURL=none&amp;zmax=11"
+             title="衛星画像(海しる)" class="MARINE" visibility="hidden" opacity="0.4" data-controller="/map/svgMapAppLayers/appLayers/msil/msil_jma.html#exec=appearOnLayerLoad&amp;requiredWidth=400" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
   <animation id="layer-external-svgmap-app-layers-did-h27-51" x="-30000" y="-30000" width="60000" height="60000"
              xlink:href="/map/layers/external/svgmap-app-layers/adapters/gsi-did2015.svg#map=did2015"
              title="人口集中地区(DID)H27(総務省統計局/地理院地図)" class="GOV_LAYERS" visibility="hidden" opacity="0.6" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
+  <animation id="layer-external-svgmap-app-layers-pf-52" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/bosaiKakenNankai/dynamic_WMS_general.svg#server=null"
+             title="防災科研　南海トラフ広域地震防災研究PF" class="ハザードマップ" visibility="hidden" opacity="0.8" data-controller="/map/svgMapAppLayers/appLayers/bosaiKakenNankai/nankaiBosaiController.html#exec=appearOnLayerLoad&amp;requiredWidth=400&amp;cat=12" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
 
   <animation id="layer-external-svgmap-app-layers-j-shis-500-53" x="-30000" y="-30000" width="60000" height="60000"
              xlink:href="/map/layers/external/svgmap-app-layers/adapters/jshis-500.svg#server=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2Fmapcache%2FA%2Fwmts%3Flayer%3DA-V8-MAP-AVR-TTL_MTTL-A0500_SI2%26style%3Ddefault%26tilematrixset%3DWGS84%26Service%3DWMTS%26Request%3DGetTile%26Version%3D1.0.0%26Format%3Dimage%252Fpng%26TileMatrix%3D%5B%5Blevel%5D%5D%26TileCol%3D%5B%5Bx%5D%5D%26TileRow%3D%5B%5By%5D%5D&amp;comment=出典%3A防災科研J-SHIS&amp;link=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2F&amp;legend=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2FJSHIS2%2FIMAGE%2Fetc%2FP-Y2020-SI.png"
@@ -67,9 +110,113 @@
              xlink:href="/map/layers/external/svgmap-app-layers/adapters/jshis-active-fault.svg#server=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2Fmapcache%2FP-Y2020%2Fwmts%3Flayer%3DP-Y2020-MAP-AVR-TTL_MTTL-T30_I55_PD2%26style%3Ddefault%26tilematrixset%3DWGS84%26Service%3DWMTS%26Request%3DGetTile%26Version%3D1.0.0%26Format%3Dimage%252Fpng%26TileMatrix%3D%5B%5Blevel%5D%5D%26TileCol%3D%5B%5Bx%5D%5D%26TileRow%3D%5B%5By%5D%5D&amp;comment=出典%3A防災科研J-SHIS&amp;link=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2F&amp;legend=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2FJSHIS2%2FIMAGE%2Fetc%2FP-Y2020-PD.png"
              title="防災科研_J_SHIS_確率論的地震動予測地図2020_主要活断層帯" class="ハザードマップ" visibility="hidden" opacity="0.7" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
 
+  <animation id="layer-external-svgmap-app-layers-j-shis-55" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/bosaiKakenJSHIS/dynamic_WMS_general.svg#server=https://www.j-shis.bosai.go.jp/map/wms/landslide?SERVICE=WMS&amp;VERSION=1.3.0&amp;REQUEST=GetMap&amp;FORMAT=image%2Fpng&amp;TRANSPARENT=true&amp;layers=L-V3-ALL&amp;transparent=true&amp;format=image%2Fpng&amp;TILED=true&amp;CRS=EPSG%3A900913&amp;STYLES=&amp;MAP_RESOLUTION=112.5"
+             title="防災科研_J_SHIS_地すべり地形" class="ハザードマップ" visibility="hidden" opacity="0.7" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
+  <animation id="layer-external-svgmap-app-layers-j-this-57" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/bosaiKakenJTHIS/dynamicWebTile.svg#globe&amp;baseURL=none&amp;zmax=11"
+             title="防災科研_津波_J_THIS" class="ハザードマップ" visibility="hidden" opacity="0.7" data-controller="/map/svgMapAppLayers/appLayers/bosaiKakenJTHIS/J_THIS.html#exec=appearOnLayerLoad&amp;requiredWidth=400" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
+  <animation id="layer-external-svgmap-app-layers-71-71" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&amp;baseURL=https://disaportal.gsi.go.jp/data/raster/03_hightide_l2_shinsuishin&amp;zmax=17"
+             title="高潮浸水想定区域(想定最大規模)" class="国交省ハザードマップ batch" visibility="hidden" opacity="0.75" data-controller="/map/svgMapAppLayers/appLayers/mlitHazard/mlitHazardNotice.html#legend=hanrei/highTide%2epng" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
+  <animation id="layer-external-svgmap-app-layers-72-72" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&amp;baseURL=https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin&amp;zmax=17"
+             title="浸水想定区域(想定最大規模)" class="国交省ハザードマップ batch" visibility="hidden" opacity="0.75" data-controller="/map/svgMapAppLayers/appLayers/mlitHazard/mlitHazardNotice.html#legend=hanrei/shinsuishin%2epng" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
+  <animation id="layer-external-svgmap-app-layers-73-73" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&amp;baseURL=https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend&amp;zmax=17"
+             title="浸水想定区域(計画規模)" class="国交省ハザードマップ batch" visibility="hidden" opacity="0.75" data-controller="/map/svgMapAppLayers/appLayers/mlitHazard/mlitHazardNotice.html#legend=hanrei/shinsuishinKeikaku%2epng" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
+  <animation id="layer-external-svgmap-app-layers-74-74" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&amp;baseURL=https://disaportaldata.gsi.go.jp/raster/04_tsunami_oldlegend&amp;zmax=14"
+             title="津波浸水想定区域(旧)" class="国交省ハザードマップ" visibility="hidden" opacity="0.75" data-controller="/map/svgMapAppLayers/appLayers/mlitHazard/mlitHazardNotice.html#legend=hanrei/tsunami%2epng" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
+  <animation id="layer-external-svgmap-app-layers-75-75" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&amp;baseURL=https://disaportaldata.gsi.go.jp/raster/08_03_ekijoka_zenkoku&amp;zmax=14"
+             title="地形区分に基づく液状化の発生傾向図" class="国交省ハザードマップ" visibility="hidden" opacity="0.75" data-controller="/map/svgMapAppLayers/appLayers/mlitHazard/mlitHazardNotice.html#legend=hanrei/hanrei_eki%2epng" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
+  <animation id="layer-external-svgmap-app-layers-76-76" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&amp;baseURL=https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend&amp;zmax=14"
+             title="津波浸水想定(最大規模)" class="国交省ハザードマップ" visibility="hidden" opacity="0.75" data-controller="/map/svgMapAppLayers/appLayers/mlitHazard/mlitHazardNotice.html#legend=hanrei/hanrei_tsunamiNew%2epng" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
+  <animation id="layer-external-svgmap-app-layers-77-77" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&amp;baseURL=https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki&amp;zmax=16"
+             title="急傾斜警戒区域" class="国交省ハザードマップ" visibility="hidden" opacity="0.75" data-controller="/map/svgMapAppLayers/appLayers/mlitHazard/mlitHazardNotice.html" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
+  <animation id="layer-external-svgmap-app-layers-78-78" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&amp;baseURL=https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki&amp;zmax=16"
+             title="土石流警戒区域" class="国交省ハザードマップ" visibility="hidden" opacity="0.75" data-controller="/map/svgMapAppLayers/appLayers/mlitHazard/mlitHazardNotice.html" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
+  <animation id="layer-external-svgmap-app-layers-79-79" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&amp;baseURL=https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki&amp;zmax=16"
+             title="地すべり警戒区域" class="国交省ハザードマップ" visibility="hidden" opacity="0.75" data-controller="/map/svgMapAppLayers/appLayers/mlitHazard/mlitHazardNotice.html" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
+  <animation id="layer-external-svgmap-app-layers-80-80" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&amp;baseURL=https://disaportaldata.gsi.go.jp/raster/05_dosekiryukikenkeiryu&amp;zmax=16"
+             title="土石流危険渓流" class="国交省ハザードマップ" visibility="hidden" opacity="0.75" data-controller="/map/svgMapAppLayers/appLayers/mlitHazard/mlitHazardNotice.html" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
+  <animation id="layer-external-svgmap-app-layers-81-81" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&amp;baseURL=https://disaportaldata.gsi.go.jp/raster/05_kyukeisyachihoukai&amp;zmax=16"
+             title="急傾斜地崩壊危険個所" class="国交省ハザードマップ" visibility="hidden" opacity="0.75" data-controller="/map/svgMapAppLayers/appLayers/mlitHazard/mlitHazardNotice.html" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
+  <animation id="layer-external-svgmap-app-layers-82-82" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&amp;baseURL=https://disaportaldata.gsi.go.jp/raster/05_jisuberikikenkasyo&amp;zmax=16"
+             title="地すべり危険個所" class="国交省ハザードマップ" visibility="hidden" opacity="0.75" data-controller="/map/svgMapAppLayers/appLayers/mlitHazard/mlitHazardNotice.html" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
+  <animation id="layer-external-svgmap-app-layers-83-83" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&amp;baseURL=https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo&amp;zmax=16"
+             title="雪崩危険個所" class="国交省ハザードマップ" visibility="hidden" opacity="0.75" data-controller="/map/svgMapAppLayers/appLayers/mlitHazard/mlitHazardNotice.html" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
+  <animation id="layer-external-svgmap-app-layers-84-84" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&amp;baseURL=https://disaportaldata.gsi.go.jp/raster/10_kansui&amp;zmax=14"
+             title="道路冠水想定個所" class="国交省ハザードマップ" visibility="hidden" opacity="0.75" data-controller="/map/svgMapAppLayers/appLayers/mlitHazard/mlitHazardNotice.html" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
+  <animation id="layer-external-svgmap-app-layers-85-85" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&amp;baseURL=https://disaportaldata.gsi.go.jp/raster/10_jizentuukoukiseikukan&amp;zmax=12"
+             title="事前通行規制区間" class="国交省ハザードマップ" visibility="hidden" opacity="0.75" data-controller="/map/svgMapAppLayers/appLayers/mlitHazard/mlitHazardNotice.html" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
+  <animation id="layer-external-svgmap-app-layers-86-86" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&amp;baseURL=https://disaportaldata.gsi.go.jp/raster/10_kinkyuuyusou&amp;zmax=14"
+             title="緊急輸送道路" class="国交省ハザードマップ" visibility="hidden" opacity="0.75" data-controller="/map/svgMapAppLayers/appLayers/mlitHazard/mlitHazardNotice.html" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
   <animation id="layer-external-svgmap-app-layers-usgs-89" x="-30000" y="-30000" width="60000" height="60000"
              xlink:href="/map/layers/external/svgmap-app-layers/adapters/usgs-earthquakes.svg"
              title="全球地震情報(USGS)" class="地震・火山 clickable" visibility="hidden" opacity="0.7" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
+  <animation id="layer-external-svgmap-app-layers-noaa-94" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/noaa_nowCOAST/wmsMercator.svg#global_sea_surface_temperature"
+             title="NOAA 海水温" class="気象" visibility="hidden" opacity="0.6" data-controller="/map/svgMapAppLayers/appLayers/noaa_nowCOAST/noaa.html#exec=appearOnLayerLoad" data-cross-origin-proxy-required="true" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
+  <animation id="layer-external-svgmap-app-layers-noaa-95" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/noaa_nowCOAST/wmsMercator.svg#ldn_lightning_strike_density"
+             title="NOAA 雷" class="気象" visibility="hidden" opacity="0.6" data-controller="/map/svgMapAppLayers/appLayers/noaa_nowCOAST/noaa.html#exec=appearOnLayerLoad" data-cross-origin-proxy-required="true" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
+  <animation id="layer-external-svgmap-app-layers-noaa-96" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/noaa_nowCOAST/wmsMercator.svg#global_water_vapor_imagery_mosaic"
+             title="NOAA 湿度" class="気象" visibility="hidden" opacity="0.6" data-controller="/map/svgMapAppLayers/appLayers/noaa_nowCOAST/noaa.html#exec=appearOnLayerLoad" data-cross-origin-proxy-required="true" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
+  <animation id="layer-external-svgmap-app-layers-noaa-97" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/noaa_nowCOAST/wmsMercator.svg#global_longwave_imagery_mosaic"
+             title="NOAA 赤外線" class="気象" visibility="hidden" opacity="0.6" data-controller="/map/svgMapAppLayers/appLayers/noaa_nowCOAST/noaa.html#exec=appearOnLayerLoad" data-cross-origin-proxy-required="true" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
+  <animation id="layer-external-svgmap-app-layers-noaa-98" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/noaa_nowCOAST/wmsMercator.svg#global_visible_imagery_mosaic"
+             title="NOAA 可視光" class="気象" visibility="hidden" opacity="0.6" data-controller="/map/svgMapAppLayers/appLayers/noaa_nowCOAST/noaa.html#exec=appearOnLayerLoad" data-cross-origin-proxy-required="true" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
+  <animation id="layer-external-svgmap-app-layers-gpv-msm-99" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/niiDigitalArchives2011/dynamicWebTile.svg#globe&amp;baseURL=none&amp;zmax=11"
+             title="GPV降雨情報(MSM)" class="気象" visibility="hidden" opacity="0.4" data-controller="/map/svgMapAppLayers/appLayers/niiDigitalArchives2011/gpv_msm_rain.html#exec=appearOnLayerLoad&amp;requiredWidth=400" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
+  <animation id="layer-external-svgmap-app-layers-jaxa-107" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/jaxaGSMaP/dynamicWebTile.svg#globe&amp;baseURL=none&amp;zmax=11"
+             title="JAXA 衛星全球降水マップ" class="気象" visibility="hidden" opacity="0.65" data-controller="/map/svgMapAppLayers/appLayers/jaxaGSMaP/GEMaP.html#exec=appearOnLayerLoad&amp;requiredWidth=400&amp;cat=GSMaP_NOW&amp;autoupdate&amp;noforecast" data-cross-origin-proxy-required="true" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
+
+  <animation id="layer-external-svgmap-app-layers-jaxa-108" x="-30000" y="-30000" width="60000" height="60000"
+             xlink:href="/map/svgMapAppLayers/appLayers/jaxaGSMaP/dynamicWebTile.svg#globe&amp;baseURL=none&amp;zmax=11"
+             title="JAXA 衛星全球降水マップ(風向矢印)" class="気象" visibility="hidden" opacity="0.65" data-controller="/map/svgMapAppLayers/appLayers/jaxaGSMaP/GEMaP.html#exec=appearOnLayerLoad&amp;requiredWidth=400&amp;cat=NEXRA:ss_uv10m_img&amp;autoupdate&amp;noforecast" data-external-source="svgmap-app-layers" data-lawa-mode="tight"/>
 
   <animation id="layer-external-svgmap-app-layers-jma-110" x="-30000" y="-30000" width="60000" height="60000"
              xlink:href="/map/layers/external/svgmap-app-layers/adapters/jma-rain-now.svg"

@@ -97,6 +97,41 @@ UI用の `catalog.json` を生成する。
 `visibilityStrategy: "controller"` は、SVGMapの通常表示切替でレイヤーを破棄したくない場合に使う。
 現在はハザードがこれに該当する。
 
+## 周辺地域（県境をまたぐ重ね合わせ）
+
+災害時の状況把握は行政界で止まらない。県単位のレイヤーは、隣接県ぶんを
+追加でmountできる。宣言は `layer.config.json` の `crossRegion` だけ。
+
+```json
+{
+  "id": "layer-hazard",
+  "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&layerKey={layerId}",
+  "crossRegion": {
+    "label": "ハザード",
+    "note": "{label}の洪水・土砂災害ハザードを越境して重ねる"
+  }
+}
+```
+
+- 隣接関係は `map/regions/adjacency.json`。`prefectures.geojson` の共有境界頂点から
+  `npm run regions:adjacency` で生成する。海で隔てられた組（北海道-青森、
+  鹿児島-沖縄）だけ `map/regions/adjacency.config.json` で宣言する
+- `containers:generate` が、各地域のContainerへ隣接県ぶんの `<animation>` を
+  非表示で追加し、`map/regions/<id>/neighbor-catalog.json` を出す
+- mount idは `<baseLayerId>--near-<regionId>`。`{layerId}` トークンがその id へ
+  展開されるので、同じレイヤーを複数の県ぶん載せてもcontrollerがホストの
+  メッセージを取り違えない
+- 周辺地域mountは常に遅延読み込み（`visibilityStrategy: "native"`）。ONにされた
+  時だけSVGMapがレイヤーを読む。隣接は最大8県あり、起動時に全部立ち上げない
+- 検索索引・警報ポーリング・鮮度表示・管理画面は本体mountが1つだけ持つ
+- オフライン保存は隣接県の背景SVG（約100KB）まで。ハザードは1県3-7MBあるので
+  先読みしない
+- 全国スコープのQTCTレイヤー（避難所・河川カメラなど）は元から県境を越えて
+  描画されるため、`crossRegion` は不要
+
+`npm run regions:check` が、隣接の対称性・生成物のドリフト・Containerとカタログの
+一致を検証する。
+
 ## CSV publisher
 
 チーム活動CSVは、ReactやAPIに依存しない静的publisherで管理する。
@@ -221,33 +256,14 @@ npm run containers:check
 - catalogの `search` URLが存在する
 - `visibilityStrategy` が既知値である
 
-## External source update policy
+## River webcam provisional policy
 
-閲覧者のブラウザから参照元サイトへ直接アクセスさせない。
-外部データは管理側の単一ジョブで取得し、`/map/data` や `/map/media-cache` に
-静的配布物として出す。
+河川監視カメラ台帳は、利用条件の確認が完了するまで2026年4月28日取得の
+固定スナップショットを使用する。定期・定常的な上流取得は行わず、更新workflowは
+`workflow_dispatch` による運用者承認時だけ実行できる。
 
-特に画像やライブ情報は閲覧者数に比例してアクセスが増えやすい。
-Webカメラは次の契約を必須にする。
-
-```json
-{
-  "build": {
-    "kind": "webcam-qtct",
-    "updatePolicy": {
-      "clientExternalFetch": false,
-      "cacheCommand": "npm run webcams:cache",
-      "minIntervalMinutes": 10,
-      "concurrency": 1
-    }
-  }
-}
-```
-
-`webcams:cache` は参照元へ1本ずつ、間隔を空けて取得し、
-`/map/media-cache/webcams/...` に保存する。
-レイヤー詳細ではキャッシュ画像だけを表示する。キャッシュが無い場合は画像を出さず、
-公式ページリンクだけを表示する。
-
-限定運用時の結果は `map/media-cache/webcams/manifest.json` で確認する。
-通常runtimeはユーザー操作時に公式画像を直接取得し、全件キャッシュを前提にしない。
+画像は一覧表示や事前取得では読み込まない。利用者が詳細を開いたときだけ、
+runtime feature flagを確認した後に公式配信元からブラウザで直接取得する。
+自動更新、prefetch、バックグラウンド取得、自サーバーへの保存・再配信は禁止する。
+手動更新には30秒以上のcooldownを設け、出典、公式ページ、取得時刻、撮影時刻が
+確認できない場合の注意を表示する。feature flagを取得できない場合はfail closedとする。

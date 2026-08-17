@@ -1,0 +1,23 @@
+{
+  "id": "svgmap-slawa-client",
+  "version": "1.0.0",
+  "type": "svgmap-runtime-package",
+  "upstream": {
+    "repository": "https://github.com/svgmap/svgmapjs.git",
+    "commit": "bfba98638040bc290ba43f9167fd00939fd0eca6",
+    "license": "MPL-2.0"
+  },
+  "localChanges": [
+    "Use package-relative imports instead of a latest-version CDN URL",
+    "Assign and mirror data-slawa-id on initial SVG elements before DOM diff observation"
+  ],
+  "exports": [
+    "svgMapLayerLib.js",
+    "svgMapSandboxLayerLib.js",
+    "InterWindowMessaging.js",
+    "libs/TransformLib.js",
+    "libs/UtilFuncs.js",
+    "libs/SvgMapElementType.js"
+  ],
+  "dependencies": []
+}

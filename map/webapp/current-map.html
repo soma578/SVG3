@@ -190,6 +190,7 @@
     import { MAP_MESSAGES } from './shared/mapMessages.js';
     import { isAuthorizedHostCommand } from './shared/messagePolicy.js';
     import { catalogLayerForKey } from './shared/layerMessagePolicy.js';
+    import { neighborCatalogUrl } from './shared/layerCatalog.js';
     import { createLayerControllerBus } from './shared/layerControllerBus.js';
     import { fetchWithRuntimeCache } from './shared/runtimeCache.js';
 
@@ -232,6 +233,10 @@
       config: null,
       layerCatalog: null,
     };
+    // ズームアウトの下限。SVGMap自体は下限を持たず、実測では数段のホイール操作で
+    // 183,864度四方まで到達し、そこで内部の変換が飽和してズームイン・アウトの
+    // どちらも効かなくなる（地図が白紙のまま戻せない）。世界全体で止める。
+    const MAX_VIEW_LAT_SPAN = 180;
     const INTERACTION_MODES = new Set([
       'select-prefecture',
       'select-municipality',
@@ -427,6 +432,23 @@
         runtimeState.layerCatalog = { version: 1, layers: [] };
         console.warn('[current-map] layer catalog fallback', error);
       }
+      // 周辺地域レイヤーは県ごとに違うため別ファイルにある。メッセージ配送は
+      // カタログ経由なので、ここで併合しないと隣県のcontrollerへ何も届かない。
+      const supplementUrl = neighborCatalogUrl(runtimeState.regionId);
+      if (supplementUrl) {
+        try {
+          const response = await fetch(supplementUrl);
+          const supplement = response.ok ? await response.json() : null;
+          if (Array.isArray(supplement?.layers)) {
+            runtimeState.layerCatalog = {
+              ...runtimeState.layerCatalog,
+              layers: [...(runtimeState.layerCatalog.layers || []), ...supplement.layers],
+            };
+          }
+        } catch (error) {
+          console.info('[current-map] neighbor catalog unavailable', error);
+        }
+      }
       return runtimeState.layerCatalog;
     };
 
@@ -546,7 +568,20 @@
     };
 
     let initialViewTimer = null;
+    // 初期視野の再適用中に地図が別の理由で動いたら、そこで打ち切る。
+    // 打ち切らないと、検索での他県ジャンプや利用者のパンを初期視野へ巻き戻す。
+    let applyingInitialView = false;
+    let initialViewAbandoned = false;
+    document.addEventListener('zoomPanMap', () => {
+      if (applyingInitialView) return;
+      initialViewAbandoned = true;
+      if (initialViewTimer) {
+        window.clearTimeout(initialViewTimer);
+        initialViewTimer = null;
+      }
+    });
     const setInitialView = (attempt = 0) => {
+      if (initialViewAbandoned) return;
       try {
         const vp = runtimeState.requestedViewport
           || runtimeState.config?.initialViewport
@@ -555,6 +590,7 @@
         const centerLon = Number(vp.lon);
         const latSpan = Number(vp.latSpan);
         const lonSpan = Number(vp.lonSpan);
+        applyingInitialView = true;
         svgMap.setGeoViewPort?.(
           centerLat - latSpan / 2, centerLon - lonSpan / 2,
           latSpan, lonSpan,
@@ -566,14 +602,21 @@
         window.setTimeout(() => {
           svgMap.refreshScreen?.();
           const applied = svgMap.getGeoViewBox?.();
+          // SVGMapは要求した矩形をキャンバスの縦横比へ合わせ、片方の軸だけ広げる。
+          // 広がった軸を要求値と直接比べると永久に不一致になり、初期視野の
+          // 再適用が走り続けて、その間のパンや検索移動を巻き戻していた。
+          // 一致判定は中心と「広げられていない側の倍率」で行う。
+          const scale = applied
+            ? Math.min(Number(applied.width) / lonSpan, Number(applied.height) / latSpan)
+            : NaN;
           const closeEnough = applied
             && Math.abs(Number(applied.cx) - centerLon) <= lonSpan * 0.05
             && Math.abs(Number(applied.cy) - centerLat) <= latSpan * 0.05
-            && Math.abs(Number(applied.width) - lonSpan) <= lonSpan * 0.1
-            && Math.abs(Number(applied.height) - latSpan) <= latSpan * 0.1;
+            && Number.isFinite(scale) && scale >= 0.9 && scale <= 1.1;
+          applyingInitialView = false;
           // runtime追加レイヤーがあるとContainerのblob読込み完了前の初回設定が
           // 黙って無視される。実際のviewBoxを確認し、初期化中だけ再試行する。
-          if (!closeEnough && attempt < 6) {
+          if (!closeEnough && !initialViewAbandoned && attempt < 6) {
             if (initialViewTimer) window.clearTimeout(initialViewTimer);
             initialViewTimer = window.setTimeout(() => {
               initialViewTimer = null;
@@ -582,8 +625,9 @@
           }
         }, 80);
       } catch (error) {
+        applyingInitialView = false;
         console.warn('[current-map] initial view failed', error);
-        if (attempt < 6) {
+        if (!initialViewAbandoned && attempt < 6) {
           if (initialViewTimer) window.clearTimeout(initialViewTimer);
           initialViewTimer = window.setTimeout(() => {
             initialViewTimer = null;
@@ -932,10 +976,15 @@
         const latSpan = Number(vp?.latSpan);
         const lonSpan = Number(vp?.lonSpan);
         if (Number.isFinite(centerLat) && Number.isFinite(centerLon) && latSpan > 0 && lonSpan > 0) {
+          // 世界より広い指定は受け付けない。SVGMapの変換が飽和すると、
+          // その後はズームイン・アウトのどちらも効かなくなる。
+          const shrink = Math.min(1, MAX_VIEW_LAT_SPAN / latSpan);
+          const boundedLatSpan = latSpan * shrink;
+          const boundedLonSpan = lonSpan * shrink;
           try {
             svgMap.setGeoViewPort?.(
-              centerLat - latSpan / 2, centerLon - lonSpan / 2,
-              latSpan, lonSpan,
+              centerLat - boundedLatSpan / 2, centerLon - boundedLonSpan / 2,
+              boundedLatSpan, boundedLonSpan,
               false,
             );
             window.setTimeout(() => svgMap.refreshScreen?.(), 50);
@@ -1138,30 +1187,55 @@
       const svgMapModule = await import('/map/vendor/svgmapjs/SVGMapLv0.1_r18module.js');
       svgMap = svgMapModule.svgMap;
       window.svgMap = svgMap;
-      // 本家と同じ getCORSURL 経路を維持しつつ、サーバー側の固定許可リストを
-      // 通過した外部HTMLだけを取得する。任意URLを中継するオープンプロキシにはしない。
-      let communityProxyTargets = [];
+      // 本家 CorsProxy と同じ扱いにする。外部オリジンのHTTPSは、カタログに
+      // 載っているかどうかに関わらず中継へ回す。許可リストで振り分けると、
+      // 実行時に追加したレイヤーだけ直接fetchになり、CORS未対応の配信元で落ちる。
+      // 中継してよい「かたち」の制限はサーバ側(communityProxyPolicy)が持つ。
+      let communityProxyAvailable = false;
       try {
         const response = await fetch('/api/svgmap-proxy');
-        const config = response.ok ? await response.json() : null;
-        communityProxyTargets = Array.isArray(config?.targets) ? config.targets : [];
+        communityProxyAvailable = response.ok;
       } catch (error) {
-        console.info('[current-map] restricted community proxy unavailable', error);
+        console.info('[current-map] community proxy unavailable', error);
       }
       const communityProxyUrl = (target) => {
         const resolved = new URL(target, location.href);
-        const allowed = communityProxyTargets.some((rule) => (
-          resolved.protocol === 'https:'
-          && resolved.hostname === rule.hostname
-          && rule.pathnamePrefixes?.some((prefix) => resolved.pathname.startsWith(prefix))
-        ));
-        return allowed
-          ? `/api/svgmap-proxy?url=${encodeURIComponent(resolved.href)}`
-          : resolved.href;
+        if (resolved.origin === location.origin) return resolved.href;
+        if (resolved.protocol !== 'https:') return resolved.href;
+        return `/api/svgmap-proxy?url=${encodeURIComponent(resolved.href)}`;
       };
-      if (communityProxyTargets.length > 0) {
+      if (communityProxyAvailable) {
         svgMap.setProxyURLFactory?.(undefined, undefined, undefined, communityProxyUrl, false);
       }
+      let clampingZoom = false;
+      let clampTimer = null;
+      // zoomPanMap の最中に setGeoViewPort を呼ぶと SVGMap のズーム処理へ
+      // 再入し、表示範囲が壊れる（幅0になる）。イベントが片付いてから直す。
+      const clampZoomOut = () => {
+        if (clampingZoom || clampTimer) return;
+        clampTimer = window.setTimeout(() => {
+          clampTimer = null;
+          const view = svgMap?.getGeoViewBox?.();
+          const height = Number(view?.height);
+          const width = Number(view?.width);
+          if (!Number.isFinite(height) || !Number.isFinite(width)
+            || height <= MAX_VIEW_LAT_SPAN || width <= 0) return;
+          const lonSpan = width * (MAX_VIEW_LAT_SPAN / height);
+          clampingZoom = true;
+          try {
+            svgMap.setGeoViewPort?.(
+              Number(view.cy) - MAX_VIEW_LAT_SPAN / 2,
+              Number(view.cx) - lonSpan / 2,
+              MAX_VIEW_LAT_SPAN,
+              lonSpan,
+              false,
+            );
+          } finally {
+            window.setTimeout(() => { clampingZoom = false; }, 0);
+          }
+        }, 0);
+      };
+      document.addEventListener('zoomPanMap', clampZoomOut);
       document.addEventListener('zoomPanMap', notifyViewportChanged);
       // 中心視点のヒットテストを止める。
       // 有効なままだと SVGMap が再描画のたびに画面中心で候補一覧を出し直すので、

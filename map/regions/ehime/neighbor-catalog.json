@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 1,
+  "regionId": "ehime",
+  "label": "愛媛県",
+  "group": "周辺地域",
+  "neighbors": [
+    {
+      "id": "kochi",
+      "label": "高知県",
+      "prefCode": "39",
+      "relation": "land"
+    },
+    {
+      "id": "tokushima",
+      "label": "徳島県",
+      "prefCode": "36",
+      "relation": "land"
+    },
+    {
+      "id": "kagawa",
+      "label": "香川県",
+      "prefCode": "37",
+      "relation": "land"
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer-offline-basemap--near-kochi",
+      "label": "高知県 背景",
+      "href": "/map/layers/offline-basemap/{regionId}.svg",
+      "visible": false,
+      "source": "managed/offline-basemap",
+      "order": 900,
+      "group": "周辺地域",
+      "note": "高知県の県境・海岸線・地名（通信なしでも見える）",
+      "kind": "vector",
+      "className": "offline-fallback",
+      "symbol": "背",
+      "icon": "",
+      "accent": "#8c9aa3",
+      "toggleKey": "layer-offline-basemap--near-kochi",
+      "mounts": [
+        "layer-offline-basemap--near-kochi"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "kochi",
+        "label": "高知県",
+        "prefCode": "39",
+        "relation": "land"
+      }
+    },
+    {
+      "id": "layer-hazard--near-kochi",
+      "label": "高知県 ハザード",
+      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey={layerId}",
+      "visible": false,
+      "source": "managed/hazard",
+      "order": 901,
+      "group": "周辺地域",
+      "note": "高知県の洪水・土砂災害ハザードを越境して重ねる",
+      "kind": "vector",
+      "className": "vectorEtcData",
+      "symbol": "災",
+      "icon": "",
+      "accent": "#AD3F31",
+      "toggleKey": "layer-hazard--near-kochi",
+      "mounts": [
+        "layer-hazard--near-kochi"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "種類"
+      },
+      "userToggle": true,
+      "messages": {
+        "toHost": [
+          "runtime:dataStatus",
+          "runtime:layerReady",
+          "runtime:layerStateChanged"
+        ],
+        "fromHost": [
+          "map:layerVisibilityChanged",
+          "map:setMunicipalityFilter",
+          "map:setLayerState"
+        ]
+      },
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "kochi",
+        "label": "高知県",
+        "prefCode": "39",
+        "relation": "land"
+      }
+    },
+    {
+      "id": "layer-offline-basemap--near-tokushima",
+      "label": "徳島県 背景",
+      "href": "/map/layers/offline-basemap/{regionId}.svg",
+      "visible": false,
+      "source": "managed/offline-basemap",
+      "order": 902,
+      "group": "周辺地域",
+      "note": "徳島県の県境・海岸線・地名（通信なしでも見える）",
+      "kind": "vector",
+      "className": "offline-fallback",
+      "symbol": "背",
+      "icon": "",
+      "accent": "#8c9aa3",
+      "toggleKey": "layer-offline-basemap--near-tokushima",
+      "mounts": [
+        "layer-offline-basemap--near-tokushima"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "tokushima",
+        "label": "徳島県",
+        "prefCode": "36",
+        "relation": "land"
+      }
+    },
+    {
+      "id": "layer-hazard--near-tokushima",
+      "label": "徳島県 ハザード",
+      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey={layerId}",
+      "visible": false,
+      "source": "managed/hazard",
+      "order": 903,
+      "group": "周辺地域",
+      "note": "徳島県の洪水・土砂災害ハザードを越境して重ねる",
+      "kind": "vector",
+      "className": "vectorEtcData",
+      "symbol": "災",
+      "icon": "",
+      "accent": "#AD3F31",
+      "toggleKey": "layer-hazard--near-tokushima",
+      "mounts": [
+        "layer-hazard--near-tokushima"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "種類"
+      },
+      "userToggle": true,
+      "messages": {
+        "toHost": [
+          "runtime:dataStatus",
+          "runtime:layerReady",
+          "runtime:layerStateChanged"
+        ],
+        "fromHost": [
+          "map:layerVisibilityChanged",
+          "map:setMunicipalityFilter",
+          "map:setLayerState"
+        ]
+      },
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "tokushima",
+        "label": "徳島県",
+        "prefCode": "36",
+        "relation": "land"
+      }
+    },
+    {
+      "id": "layer-offline-basemap--near-kagawa",
+      "label": "香川県 背景",
+      "href": "/map/layers/offline-basemap/{regionId}.svg",
+      "visible": false,
+      "source": "managed/offline-basemap",
+      "order": 904,
+      "group": "周辺地域",
+      "note": "香川県の県境・海岸線・地名（通信なしでも見える）",
+      "kind": "vector",
+      "className": "offline-fallback",
+      "symbol": "背",
+      "icon": "",
+      "accent": "#8c9aa3",
+      "toggleKey": "layer-offline-basemap--near-kagawa",
+      "mounts": [
+        "layer-offline-basemap--near-kagawa"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "kagawa",
+        "label": "香川県",
+        "prefCode": "37",
+        "relation": "land"
+      }
+    },
+    {
+      "id": "layer-hazard--near-kagawa",
+      "label": "香川県 ハザード",
+      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey={layerId}",
+      "visible": false,
+      "source": "managed/hazard",
+      "order": 905,
+      "group": "周辺地域",
+      "note": "香川県の洪水・土砂災害ハザードを越境して重ねる",
+      "kind": "vector",
+      "className": "vectorEtcData",
+      "symbol": "災",
+      "icon": "",
+      "accent": "#AD3F31",
+      "toggleKey": "layer-hazard--near-kagawa",
+      "mounts": [
+        "layer-hazard--near-kagawa"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "種類"
+      },
+      "userToggle": true,
+      "messages": {
+        "toHost": [
+          "runtime:dataStatus",
+          "runtime:layerReady",
+          "runtime:layerStateChanged"
+        ],
+        "fromHost": [
+          "map:layerVisibilityChanged",
+          "map:setMunicipalityFilter",
+          "map:setLayerState"
+        ]
+      },
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "kagawa",
+        "label": "香川県",
+        "prefCode": "37",
+        "relation": "land"
+      }
+    }
+  ]
+}

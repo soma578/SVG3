@@ -12,8 +12,10 @@
   "assets": [
     "/map/containers/Containers_webapp_denshi_01.svg",
     "/map/layers/hazard/1/hokkaido.svg",
+    "/map/layers/offline-basemap/aomori.svg",
     "/map/layers/offline-basemap/hokkaido.svg",
     "/map/regions/hokkaido/municipalities.json",
+    "/map/regions/hokkaido/neighbor-catalog.json",
     "/map/regions/hokkaido/runtime-config.json"
   ],
   "dataShards": [

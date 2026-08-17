@@ -12,8 +12,12 @@
   "assets": [
     "/map/containers/Containers_webapp_denshi_30.svg",
     "/map/layers/hazard/30/wakayama.svg",
+    "/map/layers/offline-basemap/mie.svg",
+    "/map/layers/offline-basemap/nara.svg",
+    "/map/layers/offline-basemap/osaka.svg",
     "/map/layers/offline-basemap/wakayama.svg",
     "/map/regions/wakayama/municipalities.json",
+    "/map/regions/wakayama/neighbor-catalog.json",
     "/map/regions/wakayama/runtime-config.json"
   ],
   "dataShards": [

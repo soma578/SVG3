@@ -13,15 +13,17 @@ const config = JSON.parse(fs.readFileSync(
 ))
 const policy = config.dataSource?.refreshPolicy || {}
 
-assert.equal(config.dataSource?.delivery, 'scheduled-snapshot')
+assert.equal(config.dataSource?.delivery, 'static-snapshot')
 assert.equal(config.dataSource?.runtimeFetch, false)
-assert.ok(policy.minimumIntervalMinutes >= 20 * 24 * 60, 'automatic webcam discovery must run at most every 20 days')
+assert.ok(policy.minimumIntervalMinutes >= 20 * 24 * 60, 'operator-approved refresh must remain rate limited')
 assert.ok(policy.requestDelayMs >= 500, 'upstream requests must be spaced by at least 500ms')
 assert.ok(policy.maxConcurrency <= 2, 'upstream concurrency must remain bounded')
 assert.ok(policy.minimumCoverageRatio >= 0.9, 'partial snapshots must be rejected')
 assert.equal(policy.retainLastGood, true)
 
 const refresh = fs.readFileSync(path.join(scriptDir, 'refresh-river-webcam-source.mjs'), 'utf8')
+assert.ok(!refresh.includes("'User-Agent': 'Mozilla/5.0'"), 'refresh must not impersonate a browser User-Agent')
+assert.ok(!refresh.includes("Referer: 'https://www.river.go.jp/'"), 'refresh must not send a browser-like Referer')
 for (const contract of [
   "process.argv.includes('--if-due')",
   "process.argv.includes('--refresh-metadata')",
@@ -31,6 +33,13 @@ for (const contract of [
 ]) {
   assert.ok(refresh.includes(contract), `refresh script is missing contract: ${contract}`)
 }
+
+assert.ok(
+  !fs.existsSync(path.join(scriptDir, 'cache-webcam-images.mjs')),
+  'webcam images must not have a server-side caching command',
+)
+const packageJson = JSON.parse(fs.readFileSync(path.join(frontendRoot, 'package.json'), 'utf8'))
+assert.equal(packageJson.scripts?.['webcams:cache'], undefined, 'webcams:cache command must remain removed')
 
 const releaseBuilder = fs.readFileSync(path.join(scriptDir, 'build-webcam-release.mjs'), 'utf8')
 for (const step of [
@@ -47,9 +56,9 @@ const workflow = fs.readFileSync(
   path.join(projectRoot, '.github/workflows/refresh-river-webcams.yml'),
   'utf8',
 )
-assert.ok(/^\s*schedule\s*:/m.test(workflow), 'webcam registry refresh must run automatically')
-assert.ok(workflow.includes("cron: '17 2 1 * *'"), 'automatic webcam registry refresh must remain monthly')
-assert.ok(workflow.includes('workflow_dispatch:'), 'webcam registry refresh must also allow operator recovery')
+assert.ok(!/^\s*schedule\s*:/m.test(workflow), 'webcam registry refresh must not run automatically')
+assert.ok(!workflow.includes('cron:'), 'webcam registry refresh must not contain a cron schedule')
+assert.ok(workflow.includes('workflow_dispatch:'), 'webcam registry refresh may only allow operator-approved manual recovery')
 assert.ok(workflow.includes('npm run webcams:release'), 'webcam workflow must build the validated release')
 assert.ok(workflow.includes('actions/upload-artifact@v4'), 'webcam workflow must retain a deployable artifact')
 
@@ -76,4 +85,4 @@ for (const host of ['river.go.jp', 'river.or.jp', 'webcams:release', 'refresh-ri
 const healthCheck = fs.readFileSync(path.join(scriptDir, 'check-source-health.mjs'), 'utf8')
 assert.ok(healthCheck.includes('--fail-on-stale'), 'check-source-health must support --fail-on-stale')
 
-console.log('[check-webcam-automation] OK: monthly differential refresh and release pipeline are enforced')
+console.log('[check-webcam-automation] OK: registry is fixed and upstream refresh is manual-only')

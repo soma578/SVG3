@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 1,
+  "regionId": "chiba",
+  "label": "千葉県",
+  "group": "周辺地域",
+  "neighbors": [
+    {
+      "id": "ibaraki",
+      "label": "茨城県",
+      "prefCode": "08",
+      "relation": "land"
+    },
+    {
+      "id": "saitama",
+      "label": "埼玉県",
+      "prefCode": "11",
+      "relation": "land"
+    },
+    {
+      "id": "tokyo",
+      "label": "東京都",
+      "prefCode": "13",
+      "relation": "land"
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer-offline-basemap--near-ibaraki",
+      "label": "茨城県 背景",
+      "href": "/map/layers/offline-basemap/{regionId}.svg",
+      "visible": false,
+      "source": "managed/offline-basemap",
+      "order": 900,
+      "group": "周辺地域",
+      "note": "茨城県の県境・海岸線・地名（通信なしでも見える）",
+      "kind": "vector",
+      "className": "offline-fallback",
+      "symbol": "背",
+      "icon": "",
+      "accent": "#8c9aa3",
+      "toggleKey": "layer-offline-basemap--near-ibaraki",
+      "mounts": [
+        "layer-offline-basemap--near-ibaraki"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "ibaraki",
+        "label": "茨城県",
+        "prefCode": "08",
+        "relation": "land"
+      }
+    },
+    {
+      "id": "layer-hazard--near-ibaraki",
+      "label": "茨城県 ハザード",
+      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey={layerId}",
+      "visible": false,
+      "source": "managed/hazard",
+      "order": 901,
+      "group": "周辺地域",
+      "note": "茨城県の洪水・土砂災害ハザードを越境して重ねる",
+      "kind": "vector",
+      "className": "vectorEtcData",
+      "symbol": "災",
+      "icon": "",
+      "accent": "#AD3F31",
+      "toggleKey": "layer-hazard--near-ibaraki",
+      "mounts": [
+        "layer-hazard--near-ibaraki"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "種類"
+      },
+      "userToggle": true,
+      "messages": {
+        "toHost": [
+          "runtime:dataStatus",
+          "runtime:layerReady",
+          "runtime:layerStateChanged"
+        ],
+        "fromHost": [
+          "map:layerVisibilityChanged",
+          "map:setMunicipalityFilter",
+          "map:setLayerState"
+        ]
+      },
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "ibaraki",
+        "label": "茨城県",
+        "prefCode": "08",
+        "relation": "land"
+      }
+    },
+    {
+      "id": "layer-offline-basemap--near-saitama",
+      "label": "埼玉県 背景",
+      "href": "/map/layers/offline-basemap/{regionId}.svg",
+      "visible": false,
+      "source": "managed/offline-basemap",
+      "order": 902,
+      "group": "周辺地域",
+      "note": "埼玉県の県境・海岸線・地名（通信なしでも見える）",
+      "kind": "vector",
+      "className": "offline-fallback",
+      "symbol": "背",
+      "icon": "",
+      "accent": "#8c9aa3",
+      "toggleKey": "layer-offline-basemap--near-saitama",
+      "mounts": [
+        "layer-offline-basemap--near-saitama"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "saitama",
+        "label": "埼玉県",
+        "prefCode": "11",
+        "relation": "land"
+      }
+    },
+    {
+      "id": "layer-hazard--near-saitama",
+      "label": "埼玉県 ハザード",
+      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey={layerId}",
+      "visible": false,
+      "source": "managed/hazard",
+      "order": 903,
+      "group": "周辺地域",
+      "note": "埼玉県の洪水・土砂災害ハザードを越境して重ねる",
+      "kind": "vector",
+      "className": "vectorEtcData",
+      "symbol": "災",
+      "icon": "",
+      "accent": "#AD3F31",
+      "toggleKey": "layer-hazard--near-saitama",
+      "mounts": [
+        "layer-hazard--near-saitama"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "種類"
+      },
+      "userToggle": true,
+      "messages": {
+        "toHost": [
+          "runtime:dataStatus",
+          "runtime:layerReady",
+          "runtime:layerStateChanged"
+        ],
+        "fromHost": [
+          "map:layerVisibilityChanged",
+          "map:setMunicipalityFilter",
+          "map:setLayerState"
+        ]
+      },
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "saitama",
+        "label": "埼玉県",
+        "prefCode": "11",
+        "relation": "land"
+      }
+    },
+    {
+      "id": "layer-offline-basemap--near-tokyo",
+      "label": "東京都 背景",
+      "href": "/map/layers/offline-basemap/{regionId}.svg",
+      "visible": false,
+      "source": "managed/offline-basemap",
+      "order": 904,
+      "group": "周辺地域",
+      "note": "東京都の県境・海岸線・地名（通信なしでも見える）",
+      "kind": "vector",
+      "className": "offline-fallback",
+      "symbol": "背",
+      "icon": "",
+      "accent": "#8c9aa3",
+      "toggleKey": "layer-offline-basemap--near-tokyo",
+      "mounts": [
+        "layer-offline-basemap--near-tokyo"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "tokyo",
+        "label": "東京都",
+        "prefCode": "13",
+        "relation": "land"
+      }
+    },
+    {
+      "id": "layer-hazard--near-tokyo",
+      "label": "東京都 ハザード",
+      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey={layerId}",
+      "visible": false,
+      "source": "managed/hazard",
+      "order": 905,
+      "group": "周辺地域",
+      "note": "東京都の洪水・土砂災害ハザードを越境して重ねる",
+      "kind": "vector",
+      "className": "vectorEtcData",
+      "symbol": "災",
+      "icon": "",
+      "accent": "#AD3F31",
+      "toggleKey": "layer-hazard--near-tokyo",
+      "mounts": [
+        "layer-hazard--near-tokyo"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "種類"
+      },
+      "userToggle": true,
+      "messages": {
+        "toHost": [
+          "runtime:dataStatus",
+          "runtime:layerReady",
+          "runtime:layerStateChanged"
+        ],
+        "fromHost": [
+          "map:layerVisibilityChanged",
+          "map:setMunicipalityFilter",
+          "map:setLayerState"
+        ]
+      },
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "tokyo",
+        "label": "東京都",
+        "prefCode": "13",
+        "relation": "land"
+      }
+    }
+  ]
+}

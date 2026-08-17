@@ -471,6 +471,27 @@ select {
   border-color: #177269;
   background: #e7f4f2;
 }
+/* レイヤー追加の入口。閉じるボタンと同じ大きさで並べる。 */
+.panel-action {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #475569;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+.panel-action:hover,
+.panel-action[aria-expanded="true"] {
+  background: #eef2f7;
+  color: #0f172a;
+}
+
 .panel-close {
   display: inline-grid;
   place-items: center;
@@ -839,7 +860,9 @@ button.layer-health:focus-visible {
   font: 800 12px/1 inherit;
   cursor: pointer;
 }
-.layer-community-badge[data-status="limited"] {
+/* 取得元の区別だけを色分けする。互換性の等級では色を変えない。 */
+.layer-community-badge[data-status="unverified"],
+.layer-community-badge[data-status="local"] {
   border-color: #dfc486;
   background: #fff7e5;
   color: #805817;

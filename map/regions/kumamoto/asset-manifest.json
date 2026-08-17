@@ -12,8 +12,13 @@
   "assets": [
     "/map/containers/Containers_webapp_denshi_43.svg",
     "/map/layers/hazard/43/kumamoto.svg",
+    "/map/layers/offline-basemap/fukuoka.svg",
+    "/map/layers/offline-basemap/kagoshima.svg",
     "/map/layers/offline-basemap/kumamoto.svg",
+    "/map/layers/offline-basemap/miyazaki.svg",
+    "/map/layers/offline-basemap/oita.svg",
     "/map/regions/kumamoto/municipalities.json",
+    "/map/regions/kumamoto/neighbor-catalog.json",
     "/map/regions/kumamoto/runtime-config.json"
   ],
   "dataShards": [

@@ -13,7 +13,9 @@
     "/map/containers/Containers_webapp_denshi_42.svg",
     "/map/layers/hazard/42/nagasaki.svg",
     "/map/layers/offline-basemap/nagasaki.svg",
+    "/map/layers/offline-basemap/saga.svg",
     "/map/regions/nagasaki/municipalities.json",
+    "/map/regions/nagasaki/neighbor-catalog.json",
     "/map/regions/nagasaki/runtime-config.json"
   ],
   "dataShards": [

@@ -7,5 +7,5 @@
   "visibility": "visible",
   "opacity": "1",
   "order": 20,
-  "comment": "layer-base-area: 市区町村境界 (overview/pref) — 地区境界SVGではない"
+  "comment": "layer-base-area: 市区町村境界 (overview/pref) — 地区境界SVGではない。地域選択画面が市区町村を塗り分けるための素材で、地図へ重ねる用途ではない"
 }

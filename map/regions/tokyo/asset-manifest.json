@@ -12,8 +12,13 @@
   "assets": [
     "/map/containers/Containers_webapp_denshi_13.svg",
     "/map/layers/hazard/13/tokyo.svg",
+    "/map/layers/offline-basemap/chiba.svg",
+    "/map/layers/offline-basemap/kanagawa.svg",
+    "/map/layers/offline-basemap/saitama.svg",
     "/map/layers/offline-basemap/tokyo.svg",
+    "/map/layers/offline-basemap/yamanashi.svg",
     "/map/regions/tokyo/municipalities.json",
+    "/map/regions/tokyo/neighbor-catalog.json",
     "/map/regions/tokyo/runtime-config.json"
   ],
   "dataShards": [

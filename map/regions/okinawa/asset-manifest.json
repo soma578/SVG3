@@ -12,8 +12,10 @@
   "assets": [
     "/map/containers/Containers_webapp_denshi_47.svg",
     "/map/layers/hazard/47/okinawa.svg",
+    "/map/layers/offline-basemap/kagoshima.svg",
     "/map/layers/offline-basemap/okinawa.svg",
     "/map/regions/okinawa/municipalities.json",
+    "/map/regions/okinawa/neighbor-catalog.json",
     "/map/regions/okinawa/runtime-config.json"
   ],
   "dataShards": [

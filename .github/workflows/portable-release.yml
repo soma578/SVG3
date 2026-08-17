@@ -1,0 +1,61 @@
+name: Portable release and native E2E
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  portable-release:
+    name: Portable release (47 prefectures)
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Install frontend tooling
+        working-directory: frontend
+        run: npm ci
+      - name: Check portable package contracts
+        working-directory: frontend
+        run: npm run portable:check
+      - name: Check committed portable bundles
+        working-directory: frontend
+        run: npm run portable:bundle:check
+      - name: Compose releases for all 47 prefectures
+        working-directory: frontend
+        run: npm run portable:release:all
+      - name: Verify composed SHA-256, archives, versions, and coverage
+        working-directory: frontend
+        run: |
+          npm run portable:release:check
+          npm run portable:bundle:check
+
+  native-e2e:
+    name: Native E2E
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Install frontend tooling
+        working-directory: frontend
+        run: npm ci
+      - name: Install Playwright browser
+        working-directory: frontend
+        run: npx playwright install --with-deps chromium
+      - name: Run native E2E without suppressing failures
+        working-directory: frontend
+        run: npm run test:native:e2e

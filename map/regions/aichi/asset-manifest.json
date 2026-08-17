@@ -13,7 +13,12 @@
     "/map/containers/Containers_webapp_denshi_23.svg",
     "/map/layers/hazard/23/aichi.svg",
     "/map/layers/offline-basemap/aichi.svg",
+    "/map/layers/offline-basemap/gifu.svg",
+    "/map/layers/offline-basemap/mie.svg",
+    "/map/layers/offline-basemap/nagano.svg",
+    "/map/layers/offline-basemap/shizuoka.svg",
     "/map/regions/aichi/municipalities.json",
+    "/map/regions/aichi/neighbor-catalog.json",
     "/map/regions/aichi/runtime-config.json"
   ],
   "dataShards": [

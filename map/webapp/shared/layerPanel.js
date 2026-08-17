@@ -26,15 +26,13 @@ export const layerAccent = (layer) => {
   return layerKind(layer) === 'external' ? '#8A5B25' : '#43565C';
 };
 
+// レイヤーの良し悪しではなく「どこから来たか」を示す。同梱のコミュニティ資産は
+// 本家と同じ経路で動くので、互換性の等級は付けない。
 const COMMUNITY_STATUS_LABELS = {
-  supported: '検証済み',
-  limited: 'オンライン限定',
-  unverified: '未検証',
-  incompatible: '非対応',
-  'requires-config': '要設定',
-  'requires-proxy': '要プロキシ',
+  bundled: '同梱',
   signed: '署名済み',
   local: 'ローカル',
+  unverified: 'URL追加',
 };
 
 const createCommunityDetail = (layer, documentRef) => {
@@ -46,13 +44,13 @@ const createCommunityDetail = (layer, documentRef) => {
   const rows = [
     ['発行者', community.publisher || '不明'],
     ['ライセンス', community.license?.spdx || community.license?.name || '未確認'],
-    ['互換性', `${community.category || '—'} / ${COMMUNITY_STATUS_LABELS[community.status] || community.status || '未確認'}`],
+    ['取得元', COMMUNITY_STATUS_LABELS[community.status] || community.status || '—'],
     ['実行', community.runtime === 'isolated' ? '分離実行' : community.runtime || '—'],
     ['オフライン', community.offline ? '対応' : '非対応'],
     ['外部通信先', (community.externalDependencies || []).join(', ') || 'なし'],
-    ['確認日', community.verifiedAt || '未確認'],
+    ['動作確認日', community.verifiedAt || '—'],
     ['備考', community.reason || ''],
-    ...(community.status === 'limited' ? [[
+    ...((community.externalDependencies || []).length > 0 ? [[
       '表示できない時',
       '外部サービスの停止、CORS制限、または通信遮断の可能性があります。ほかのレイヤーはそのまま利用できます',
     ]] : []),

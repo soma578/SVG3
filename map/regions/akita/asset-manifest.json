@@ -13,7 +13,12 @@
     "/map/containers/Containers_webapp_denshi_05.svg",
     "/map/layers/hazard/5/akita.svg",
     "/map/layers/offline-basemap/akita.svg",
+    "/map/layers/offline-basemap/aomori.svg",
+    "/map/layers/offline-basemap/iwate.svg",
+    "/map/layers/offline-basemap/miyagi.svg",
+    "/map/layers/offline-basemap/yamagata.svg",
     "/map/regions/akita/municipalities.json",
+    "/map/regions/akita/neighbor-catalog.json",
     "/map/regions/akita/runtime-config.json"
   ],
   "dataShards": [

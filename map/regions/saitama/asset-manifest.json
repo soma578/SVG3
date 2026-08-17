@@ -12,8 +12,16 @@
   "assets": [
     "/map/containers/Containers_webapp_denshi_11.svg",
     "/map/layers/hazard/11/saitama.svg",
+    "/map/layers/offline-basemap/chiba.svg",
+    "/map/layers/offline-basemap/gunma.svg",
+    "/map/layers/offline-basemap/ibaraki.svg",
+    "/map/layers/offline-basemap/nagano.svg",
     "/map/layers/offline-basemap/saitama.svg",
+    "/map/layers/offline-basemap/tochigi.svg",
+    "/map/layers/offline-basemap/tokyo.svg",
+    "/map/layers/offline-basemap/yamanashi.svg",
     "/map/regions/saitama/municipalities.json",
+    "/map/regions/saitama/neighbor-catalog.json",
     "/map/regions/saitama/runtime-config.json"
   ],
   "dataShards": [

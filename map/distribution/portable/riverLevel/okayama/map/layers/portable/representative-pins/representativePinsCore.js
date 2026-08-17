@@ -1237,7 +1237,7 @@ export const initRepresentativePinsLayer = ({
     if (!feature) return;
     if (mode === 'portable' && window.svgMap?.showModal) {
       const html = typeof renderFeatureDetail === 'function'
-        ? renderFeatureDetail(feature)
+        ? await renderFeatureDetail(feature)
         : renderPortableFeatureHtml(feature);
       const modal = showPropertyModal(html);
       if (typeof renderFeatureDetail?.afterShow === 'function') {

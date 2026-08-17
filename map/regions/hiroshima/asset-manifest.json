@@ -13,7 +13,12 @@
     "/map/containers/Containers_webapp_denshi_34.svg",
     "/map/layers/hazard/34/hiroshima.svg",
     "/map/layers/offline-basemap/hiroshima.svg",
+    "/map/layers/offline-basemap/okayama.svg",
+    "/map/layers/offline-basemap/shimane.svg",
+    "/map/layers/offline-basemap/tottori.svg",
+    "/map/layers/offline-basemap/yamaguchi.svg",
     "/map/regions/hiroshima/municipalities.json",
+    "/map/regions/hiroshima/neighbor-catalog.json",
     "/map/regions/hiroshima/runtime-config.json"
   ],
   "dataShards": [

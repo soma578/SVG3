@@ -92,94 +92,101 @@ const externalHosts = (text) => [...new Set(
   [...String(text || '').matchAll(/https?:\/\/([^/"'\s<]+)/g)].map((match) => match[1]),
 )].filter((host) => !['www.w3.org', 'purl.org', 'mozilla.org', 'opengis.org'].includes(host))
 
+
+
+
+
+
+
+
+
+// 実行モードと配信状況は、コードではなくデータで持つ。既定は isolated。
+// tight は同一オリジン権限で動かす判断なので、必ず理由と確認日を添える。
+// 「どれをtightにするか」を人が毎回判断しないよう、載っているのに描かない
+// レイヤーは community-layers:smoke が実測で見つける。
+const runtimeOverridesPath = path.join(externalRoot, 'runtime-overrides.json')
+const runtimeOverrides = JSON.parse(fs.readFileSync(runtimeOverridesPath, 'utf8'))
+const RUNTIME_BY_TITLE = new Map(Object.entries(runtimeOverrides.runtime || {}))
+const RETIRED_SOURCE_TITLES = new Map(Object.entries(runtimeOverrides.retiredSources || {}))
+
 const overrides = new Map([
   ['geohashCoder', {
-    status: 'supported',
-    category: 'B',
+    verifiedAt: '2026-08-04',
     delivery: 'adapter',
     offline: true,
     externalDependencies: [],
     adapterHref: '/map/layers/external/svgmap-app-layers/adapters/geohash-coder.svg',
-    reason: 'controllerと依存ライブラリを同一オリジンへ固定したアダプターで動作確認済み',
+    note: 'controllerと依存ライブラリを同一オリジンへ固定したアダプターで動作確認済み',
   }],
   ['人口集中地区(DID)H27(総務省統計局/地理院地図)', {
-    status: 'supported',
-    category: 'B',
-    delivery: 'adapter',
+    verifiedAt: '2026-08-04',
     runtime: 'tight',
+    delivery: 'adapter',
     offline: false,
     adapterHref: '/map/layers/external/svgmap-app-layers/adapters/gsi-did2015.svg#map=did2015',
     externalDependencies: ['cyberjapandata.gsi.go.jp'],
-    reason: '上流の動的SVGを固有URLのルートレイヤーとして直接起動し、DIDタイルの取得まで動作確認済み',
+    note: '上流の動的SVGを固有URLのルートレイヤーとして直接起動し、DIDタイルの取得まで動作確認済み',
   }],
   ['DenshiKokudo:orthoPhoto', {
-    status: 'limited',
-    category: 'C',
-    delivery: 'online-only',
+    verifiedAt: '2026-08-04',
     runtime: 'tight',
+    delivery: 'online-only',
     offline: false,
     adapterHref: '/map/layers/external/svgmap-app-layers/adapters/gsi-ortho.svg#map=ort',
     externalDependencies: ['cyberjapandata.gsi.go.jp'],
-    reason: '上流の動的SVGを固有URLのルートレイヤーとして直接起動し、地理院写真タイルの取得まで動作確認済み',
+    note: '上流の動的SVGを固有URLのルートレイヤーとして直接起動し、地理院写真タイルの取得まで動作確認済み',
   }],
   ['OpenStreetMap(Global)', {
-    status: 'limited',
-    category: 'C',
-    delivery: 'online-only',
+    verifiedAt: '2026-08-04',
     runtime: 'tight',
+    delivery: 'online-only',
     offline: false,
     adapterHref: '/map/layers/external/svgmap-app-layers/adapters/osm-global.svg',
     placement: { x: -30000, y: -30000, width: 60000, height: 60000 },
     externalDependencies: ['tile.openstreetmap.org'],
-    reason: '旧controller依存を除いた固有の動的SVGへ配置し、HTTPSのOSM公式タイル取得まで動作確認済み',
+    note: '旧controller依存を除いた固有の動的SVGへ配置し、HTTPSのOSM公式タイル取得まで動作確認済み',
   }],
   ['雨雲の動き（軽量版）(JMA)', {
-    status: 'limited',
-    category: 'C',
-    delivery: 'online-only',
+    verifiedAt: '2026-08-04',
     runtime: 'tight',
+    delivery: 'online-only',
     offline: false,
     adapterHref: '/map/layers/external/svgmap-app-layers/adapters/jma-rain-now.svg',
     externalDependencies: ['www.jma.go.jp'],
-    reason: 'controllerのSVGMapライブラリを同一オリジンへ固定し、気象庁の時刻JSONと降水タイル取得まで動作確認済み',
+    note: 'controllerのSVGMapライブラリを同一オリジンへ固定し、気象庁の時刻JSONと降水タイル取得まで動作確認済み',
   }],
   ['全球地震情報(USGS)', {
-    status: 'limited',
-    category: 'C',
-    delivery: 'online-only',
+    verifiedAt: '2026-08-04',
     runtime: 'tight',
+    delivery: 'online-only',
     offline: false,
     adapterHref: '/map/layers/external/svgmap-app-layers/adapters/usgs-earthquakes.svg',
     externalDependencies: ['earthquake.usgs.gov'],
-    reason: 'controllerとSVGMapライブラリを同一オリジンへ固定し、USGS GeoJSONの取得と震源図形生成まで動作確認済み',
+    note: 'controllerとSVGMapライブラリを同一オリジンへ固定し、USGS GeoJSONの取得と震源図形生成まで動作確認済み',
   }],
   ['防災科研_J_SHIS_確率論的地震動予測地図2020_主要活断層帯', {
-    status: 'limited',
-    category: 'C',
-    delivery: 'online-only',
+    verifiedAt: '2026-08-04',
     runtime: 'tight',
+    delivery: 'online-only',
     offline: false,
     adapterHref: '/map/layers/external/svgmap-app-layers/adapters/jshis-active-fault.svg#server=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2Fmapcache%2FP-Y2020%2Fwmts%3Flayer%3DP-Y2020-MAP-AVR-TTL_MTTL-T30_I55_PD2%26style%3Ddefault%26tilematrixset%3DWGS84%26Service%3DWMTS%26Request%3DGetTile%26Version%3D1.0.0%26Format%3Dimage%252Fpng%26TileMatrix%3D%5B%5Blevel%5D%5D%26TileCol%3D%5B%5Bx%5D%5D%26TileRow%3D%5B%5By%5D%5D&comment=出典%3A防災科研J-SHIS&link=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2F&legend=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2FJSHIS2%2FIMAGE%2Fetc%2FP-Y2020-PD.png',
     externalDependencies: ['www.j-shis.bosai.go.jp'],
-    reason: '共通SVGを固有URL化し、同梱controllerと外部WMTSタイルの取得まで動作確認済み',
+    note: '共通SVGを固有URL化し、同梱controllerと外部WMTSタイルの取得まで動作確認済み',
   }],
   ['防災科研_J_SHIS_長期間平均ハザード(再現期間500年)', {
-    status: 'limited',
-    category: 'C',
-    delivery: 'online-only',
+    verifiedAt: '2026-08-04',
     runtime: 'tight',
+    delivery: 'online-only',
     offline: false,
     adapterHref: '/map/layers/external/svgmap-app-layers/adapters/jshis-500.svg#server=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2Fmapcache%2FA%2Fwmts%3Flayer%3DA-V8-MAP-AVR-TTL_MTTL-A0500_SI2%26style%3Ddefault%26tilematrixset%3DWGS84%26Service%3DWMTS%26Request%3DGetTile%26Version%3D1.0.0%26Format%3Dimage%252Fpng%26TileMatrix%3D%5B%5Blevel%5D%5D%26TileCol%3D%5B%5Bx%5D%5D%26TileRow%3D%5B%5By%5D%5D&comment=出典%3A防災科研J-SHIS&link=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2F&legend=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2FJSHIS2%2FIMAGE%2Fetc%2FP-Y2020-SI.png',
     externalDependencies: ['www.j-shis.bosai.go.jp'],
-    reason: '同梱済み旧式controllerをtight実行し、外部WMTSタイルの取得まで動作確認済み',
+    note: '同梱済み旧式controllerをtight実行し、外部WMTSタイルの取得まで動作確認済み',
   }],
   ['経路検索(graphhopper)', {
-    status: 'requires-config',
-    category: 'C',
     delivery: 'configuration-required',
     offline: false,
     externalDependencies: [],
-    reason: '本家と同様にGraphHopper APIエンドポイントの設定が必要',
+    note: '本家と同様にGraphHopper APIエンドポイントの設定が必要',
     configuration: {
       fields: [{
         name: 'graphhopperurl',
@@ -193,6 +200,19 @@ const overrides = new Map([
   }],
 ])
 
+// 47地域のContainerへ標準搭載しているレイヤーが、上流と同じSVGを使っている
+// ことがある（例: 国土地理院 淡色地図 = basemaps/dynamicDenshiKokudo2016.svg）。
+// そのベースは「すでに載っている」ものとして扱う。
+const managedRoot = path.join(projectRoot, 'map/layers/managed')
+const mountedBases = new Set()
+for (const entry of fs.existsSync(managedRoot) ? fs.readdirSync(managedRoot) : []) {
+  const configPath = path.join(managedRoot, entry, 'layer.config.json')
+  if (!fs.existsSync(configPath)) continue
+  const config = JSON.parse(fs.readFileSync(configPath, 'utf8'))
+  const href = String(config.href || '').split('#')[0]
+  if (href.startsWith('/map/svgMapAppLayers/')) mountedBases.add(href)
+}
+
 const source = fs.readFileSync(containerPath, 'utf8')
 // 本家Containerでコメントアウトされたレイヤーは「利用可能な資産」に含めない。
 const animations = [...stripXmlComments(source).matchAll(/<animation\b[^>]*\/?>/gs)]
@@ -201,6 +221,13 @@ for (const match of animations) {
   const href = attrsFor(match[0])['xlink:href'] || ''
   const base = href.split('#')[0]
   baseCounts.set(base, (baseCounts.get(base) || 0) + 1)
+}
+
+// 上流ツリー内の相対hrefを、配信されるURLへ直す。
+const publicUrlFor = (href) => {
+  const base = String(href || '').split('#')[0].replace(/^\.\//, '')
+  if (!base || /^[a-z][a-z0-9+.-]*:/i.test(base)) return ''
+  return `/map/svgMapAppLayers/${base}`
 }
 
 const entries = animations.map((match, index) => {
@@ -223,57 +250,77 @@ const entries = animations.map((match, index) => {
   const missingController = Boolean(controllerPath && !fs.existsSync(controllerPath))
   const hosts = externalHosts(`${match[0]}\n${body}\n${controllerBody}`)
   const proxyRequired = attrs['data-cross-origin-proxy-required'] === 'true'
-  const hashShared = href.includes('#') && (baseCounts.get(href.split('#')[0]) || 0) > 1
-  let category = 'A'
-  let reason = '同一オリジン内の資産だけで構成される候補（未検証）'
-  if (!exists || missingController || href.includes('{SET YOUR')) {
-    category = 'D'
-    reason = !exists
-      ? '参照するレイヤ本体が配布物に存在しない'
-      : missingController
-        ? '参照するcontrollerが配布物に存在しない'
-        : '必須接続先が未設定'
-  } else if (proxyRequired || hosts.length > 0) {
-    category = 'C'
-    reason = '外部API・CDN・CORSまたはプロキシ依存を含むため未検証'
-  } else if (controller || hashShared) {
-    category = 'B'
-    reason = hashShared
-      ? '同一SVGのハッシュ違い、または相対controller資産の互換確認が必要'
-      : '相対controller・画像・スクリプトのrebase確認が必要'
-  }
   const override = overrides.get(title) || {}
+
+  // ここでレイヤーに優劣を付けない。本家Containerに載っているものは本家と同じ
+  // 経路（同じviewer・同じContainer・同じ相対解決・同じproxy factory）で動く。
+  // 記録するのは「配布物に実体があるか」という事実だけで、それ以外は
+  // 通信先・controller有無・オフライン可否といった判断材料として出す。
+  // 「接続先の設定が要る」ことは利用不可ではない。UIが入力を受けてhrefへ埋める。
+  const available = exists && !missingController
+  const unavailableReason = available
+    ? ''
+    : !exists
+      ? '参照するレイヤ本体が配布物に存在しない'
+      : '参照するcontrollerが配布物に存在しない'
+  // 同じSVGをハッシュ違いで使い回すレイヤー（上流Containerに13組・65件）は、
+  // 2枚目以降を実行時に追加しても SVGMap が文書を作れず地図に出ない。
+  // SVGMapはレイヤー文書をファイル単位で持つためで、クエリを足して
+  // URLだけ分ける方法は効かない（実測で確認）。ファイル自体を固有パスへ
+  // 複製し、相対参照を上流の絶対URLへ貼り直す。
+  const sharedBase = baseCounts.get(href.split('#')[0]) > 1
+    || mountedBases.has(publicUrlFor(href))
+  const externalDependencies = override.externalDependencies || hosts
+  const note = override.note || (
+    externalDependencies.length > 0 || proxyRequired
+      ? `外部配信元と通信するレイヤー（${externalDependencies.join(', ') || 'プロキシ経由'}）`
+      : '同一オリジンの資産だけで構成されるレイヤー'
+  )
+
   return {
     sourceIndex: index + 1,
     title,
     href,
-    status: override.status || (category === 'D' ? 'incompatible' : 'unverified'),
-    category: override.category || category,
-    delivery: override.delivery || 'not-enabled',
-    runtime: override.runtime || 'isolated',
-    offline: override.offline ?? false,
+    available,
+    ...(available ? {} : { unavailableReason }),
+    // Containerへ標準搭載するmountの実行モード。既定は分離実行のままにする。
+    // 一律tightにすると、分離実行で足りているレイヤーまで同一オリジン権限で動く。
+    runtime: override.runtime || RUNTIME_BY_TITLE.get(title)?.mode || 'isolated',
+    ...(!override.runtime && RUNTIME_BY_TITLE.has(title)
+      ? { runtimeReason: RUNTIME_BY_TITLE.get(title).reason }
+      : {}),
+    delivery: override.delivery || 'bundled',
+    offline: override.offline ?? (externalDependencies.length === 0 && !proxyRequired),
     controller: Boolean(controller),
-    externalDependencies: override.externalDependencies || hosts,
-    verifiedAt: ['supported', 'limited'].includes(override.status) ? '2026-08-04' : null,
-    reason: override.reason || reason,
+    externalDependencies,
+    // 実際に読み込みまで確認した日。無くても利用は妨げない。
+    verifiedAt: override.verifiedAt || RUNTIME_BY_TITLE.get(title)?.verifiedAt || null,
+    ...(RETIRED_SOURCE_TITLES.has(title)
+      ? { renderIssue: RETIRED_SOURCE_TITLES.get(title), sourceRetired: true }
+      : {}),
+    note,
     animation: {
       ...catalogAnimationAttrs(attrs),
       title,
       'xlink:href': href,
     },
     ...(override.adapterHref ? { adapterHref: override.adapterHref } : {}),
+    ...(sharedBase && !override.adapterHref ? { sharedBaseSvg: true, sharedBaseSource: href } : {}),
     ...(override.controllerHref ? { controllerHref: override.controllerHref } : {}),
     ...(override.placement ? { placement: override.placement } : {}),
     ...(override.configuration ? { configuration: override.configuration } : {}),
   }
 })
 
-const counts = entries.reduce((result, entry) => {
-  result[entry.status] = (result[entry.status] || 0) + 1
-  return result
-}, {})
+const counts = {
+  total: entries.length,
+  available: entries.filter((entry) => entry.available).length,
+  unavailable: entries.filter((entry) => !entry.available).length,
+  externalNetwork: entries.filter((entry) => entry.externalDependencies.length > 0).length,
+  selfContained: entries.filter((entry) => entry.offline).length,
+}
 const output = {
-  schemaVersion: 1,
+  schemaVersion: 2,
   source: {
     name: 'SVGMap App Layers',
     container: '/map/svgMapAppLayers/Container.svg',
@@ -287,6 +334,60 @@ const output = {
 
 fs.mkdirSync(path.dirname(outputPath), { recursive: true })
 fs.mkdirSync(adapterRoot, { recursive: true })
+
+// ---- 共有ベースSVGのアダプタ生成 -------------------------------------------
+// 同じSVGをハッシュ違いで使い回すレイヤーは、2枚目以降を実行時に追加しても
+// SVGMapが文書を作れず、地図に出ないまま removeChild で落ちる。文書はファイル
+// 単位で持たれるため、レイヤーごとに固有パスの複製を用意する。
+// 複製は別ディレクトリに置くので、相対参照は上流の絶対URLへ貼り直す。
+const SHARED_ADAPTER_DIR = 'shared'
+fs.mkdirSync(adapterPath(SHARED_ADAPTER_DIR), { recursive: true })
+
+const RELATIVE_REF = /(\s(?:data-controller|xlink:href|href|src)\s*=\s*")([^"]+)(")/g
+const isRelative = (value) => Boolean(value)
+  && !/^(?:[a-z][a-z0-9+.-]*:|\/|#|data:)/i.test(value)
+
+const rebaseRelativeRefs = (svg, upstreamDir) => {
+  let remaining = 0
+  const rebased = svg.replace(RELATIVE_REF, (all, head, value, tail) => {
+    if (!isRelative(value)) return all
+    return `${head}/map/svgMapAppLayers/${upstreamDir}/${value.replace(/^\.\//, '')}${tail}`
+  })
+  // 属性以外（インラインJS内の文字列など）に相対参照が残っていたら複製できない。
+  // 気付かないまま壊れたレイヤーを配るより、対象から外す。
+  for (const [, value] of rebased.matchAll(/["'](\.{1,2}\/[^"']{1,80})["']/g)) {
+    if (value) remaining += 1
+  }
+  return { rebased, remaining }
+}
+
+const sharedAdapters = new Map()
+for (const entry of entries) {
+  if (!entry.sharedBaseSvg) continue
+  const sourcePath = localPathFor(entry.sharedBaseSource)
+  if (!sourcePath || !fs.existsSync(sourcePath)) continue
+  const relative = path.relative(upstreamRoot, sourcePath).split(path.sep)
+  const upstreamDir = relative.slice(0, -1).join('/')
+  const { rebased, remaining } = rebaseRelativeRefs(fs.readFileSync(sourcePath, 'utf8'), upstreamDir)
+  if (remaining > 0) continue
+  const slug = `${relative.join('-').replace(/\.svg$/, '').toLowerCase()
+    .replace(/[^a-z0-9-]+/g, '-')}-${entry.sourceIndex}.svg`
+  fs.writeFileSync(adapterPath(`${SHARED_ADAPTER_DIR}/${slug}`), rebased)
+  const hash = entry.href.includes('#') ? `#${entry.href.split('#').slice(1).join('#')}` : ''
+  sharedAdapters.set(entry.sourceIndex, {
+    href: `/map/layers/external/svgmap-app-layers/adapters/${SHARED_ADAPTER_DIR}/${slug}${hash}`,
+  })
+}
+for (const entry of entries) {
+  const adapter = sharedAdapters.get(entry.sourceIndex)
+  if (!adapter || entry.adapterHref) continue
+  entry.adapterHref = adapter.href
+}
+console.log(
+  `[svgmap-community] shared-base adapters: ${sharedAdapters.size}`
+  + ` / ${entries.filter((entry) => entry.sharedBaseSvg).length} shared entries`,
+)
+
 // SVGMap r18はルートレイヤーの旧式<script>を起動する。薄いSVGの内側に
 // 入れると内側の onload/onzoom が起動しないため、上流SVGを固有パスへ複製する。
 const gsiDynamicSvg = readUpstream('basemaps', 'dynamicDenshiKokudo2016.svg')

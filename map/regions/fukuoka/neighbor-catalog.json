@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 1,
+  "regionId": "fukuoka",
+  "label": "福岡県",
+  "group": "周辺地域",
+  "neighbors": [
+    {
+      "id": "saga",
+      "label": "佐賀県",
+      "prefCode": "41",
+      "relation": "land"
+    },
+    {
+      "id": "oita",
+      "label": "大分県",
+      "prefCode": "44",
+      "relation": "land"
+    },
+    {
+      "id": "kumamoto",
+      "label": "熊本県",
+      "prefCode": "43",
+      "relation": "land"
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer-offline-basemap--near-saga",
+      "label": "佐賀県 背景",
+      "href": "/map/layers/offline-basemap/{regionId}.svg",
+      "visible": false,
+      "source": "managed/offline-basemap",
+      "order": 900,
+      "group": "周辺地域",
+      "note": "佐賀県の県境・海岸線・地名（通信なしでも見える）",
+      "kind": "vector",
+      "className": "offline-fallback",
+      "symbol": "背",
+      "icon": "",
+      "accent": "#8c9aa3",
+      "toggleKey": "layer-offline-basemap--near-saga",
+      "mounts": [
+        "layer-offline-basemap--near-saga"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "saga",
+        "label": "佐賀県",
+        "prefCode": "41",
+        "relation": "land"
+      }
+    },
+    {
+      "id": "layer-hazard--near-saga",
+      "label": "佐賀県 ハザード",
+      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey={layerId}",
+      "visible": false,
+      "source": "managed/hazard",
+      "order": 901,
+      "group": "周辺地域",
+      "note": "佐賀県の洪水・土砂災害ハザードを越境して重ねる",
+      "kind": "vector",
+      "className": "vectorEtcData",
+      "symbol": "災",
+      "icon": "",
+      "accent": "#AD3F31",
+      "toggleKey": "layer-hazard--near-saga",
+      "mounts": [
+        "layer-hazard--near-saga"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "種類"
+      },
+      "userToggle": true,
+      "messages": {
+        "toHost": [
+          "runtime:dataStatus",
+          "runtime:layerReady",
+          "runtime:layerStateChanged"
+        ],
+        "fromHost": [
+          "map:layerVisibilityChanged",
+          "map:setMunicipalityFilter",
+          "map:setLayerState"
+        ]
+      },
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "saga",
+        "label": "佐賀県",
+        "prefCode": "41",
+        "relation": "land"
+      }
+    },
+    {
+      "id": "layer-offline-basemap--near-oita",
+      "label": "大分県 背景",
+      "href": "/map/layers/offline-basemap/{regionId}.svg",
+      "visible": false,
+      "source": "managed/offline-basemap",
+      "order": 902,
+      "group": "周辺地域",
+      "note": "大分県の県境・海岸線・地名（通信なしでも見える）",
+      "kind": "vector",
+      "className": "offline-fallback",
+      "symbol": "背",
+      "icon": "",
+      "accent": "#8c9aa3",
+      "toggleKey": "layer-offline-basemap--near-oita",
+      "mounts": [
+        "layer-offline-basemap--near-oita"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "oita",
+        "label": "大分県",
+        "prefCode": "44",
+        "relation": "land"
+      }
+    },
+    {
+      "id": "layer-hazard--near-oita",
+      "label": "大分県 ハザード",
+      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey={layerId}",
+      "visible": false,
+      "source": "managed/hazard",
+      "order": 903,
+      "group": "周辺地域",
+      "note": "大分県の洪水・土砂災害ハザードを越境して重ねる",
+      "kind": "vector",
+      "className": "vectorEtcData",
+      "symbol": "災",
+      "icon": "",
+      "accent": "#AD3F31",
+      "toggleKey": "layer-hazard--near-oita",
+      "mounts": [
+        "layer-hazard--near-oita"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "種類"
+      },
+      "userToggle": true,
+      "messages": {
+        "toHost": [
+          "runtime:dataStatus",
+          "runtime:layerReady",
+          "runtime:layerStateChanged"
+        ],
+        "fromHost": [
+          "map:layerVisibilityChanged",
+          "map:setMunicipalityFilter",
+          "map:setLayerState"
+        ]
+      },
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "oita",
+        "label": "大分県",
+        "prefCode": "44",
+        "relation": "land"
+      }
+    },
+    {
+      "id": "layer-offline-basemap--near-kumamoto",
+      "label": "熊本県 背景",
+      "href": "/map/layers/offline-basemap/{regionId}.svg",
+      "visible": false,
+      "source": "managed/offline-basemap",
+      "order": 904,
+      "group": "周辺地域",
+      "note": "熊本県の県境・海岸線・地名（通信なしでも見える）",
+      "kind": "vector",
+      "className": "offline-fallback",
+      "symbol": "背",
+      "icon": "",
+      "accent": "#8c9aa3",
+      "toggleKey": "layer-offline-basemap--near-kumamoto",
+      "mounts": [
+        "layer-offline-basemap--near-kumamoto"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "kumamoto",
+        "label": "熊本県",
+        "prefCode": "43",
+        "relation": "land"
+      }
+    },
+    {
+      "id": "layer-hazard--near-kumamoto",
+      "label": "熊本県 ハザード",
+      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey={layerId}",
+      "visible": false,
+      "source": "managed/hazard",
+      "order": 905,
+      "group": "周辺地域",
+      "note": "熊本県の洪水・土砂災害ハザードを越境して重ねる",
+      "kind": "vector",
+      "className": "vectorEtcData",
+      "symbol": "災",
+      "icon": "",
+      "accent": "#AD3F31",
+      "toggleKey": "layer-hazard--near-kumamoto",
+      "mounts": [
+        "layer-hazard--near-kumamoto"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "種類"
+      },
+      "userToggle": true,
+      "messages": {
+        "toHost": [
+          "runtime:dataStatus",
+          "runtime:layerReady",
+          "runtime:layerStateChanged"
+        ],
+        "fromHost": [
+          "map:layerVisibilityChanged",
+          "map:setMunicipalityFilter",
+          "map:setLayerState"
+        ]
+      },
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "kumamoto",
+        "label": "熊本県",
+        "prefCode": "43",
+        "relation": "land"
+      }
+    }
+  ]
+}

@@ -49,8 +49,28 @@ test('公式サイト以外のURLはリンクにしない', () => {
 })
 
 test('カメラ画像も公式配信元のURLだけを使う', () => {
-  const allowed = renderWebcamDetail({ title: 'あり', imageUrl: 'https://cam.river.go.jp/x.jpg' })
-  assert.match(allowed, /<img[^>]+src="https:\/\/cam\.river\.go\.jp\/x\.jpg"/)
-  const denied = renderWebcamDetail({ title: 'なし', imageUrl: 'https://example.com/x.jpg' })
+  const allowed = renderWebcamDetail(
+    { title: 'あり', imageUrl: 'https://cam.river.go.jp/x.jpg' },
+    { imageEnabled: true },
+  )
+  assert.match(allowed, /data-source="https:\/\/cam\.river\.go\.jp\/x\.jpg"/)
+  assert.match(allowed, /<img[^>]+[\s\S]*src="https:\/\/cam\.river\.go\.jp\/x\.jpg"/)
+  const disabled = renderWebcamDetail({ title: '停止', imageUrl: 'https://cam.river.go.jp/x.jpg' })
+  assert.doesNotMatch(disabled, /<img[^>]+src=/, 'feature flag確認前に画像を取得している')
+  const denied = renderWebcamDetail(
+    { title: 'なし', imageUrl: 'https://example.com/x.jpg' },
+    { imageEnabled: true },
+  )
   assert.doesNotMatch(denied, /example\.com/)
+})
+
+test('暫定表示の出典・取得条件・撮影時刻不明を明示する', () => {
+  const html = renderWebcamDetail({
+    title: '注意表示', imageUrl: 'https://cam.river.go.jp/x.jpg', pageUrl: OFFICIAL,
+  }, { imageEnabled: true })
+  assert.match(html, /国土交通省「川の防災情報」/)
+  assert.match(html, /第三者配信元から利用者操作時に直接取得します/)
+  assert.match(html, /撮影時刻：確認できません/)
+  assert.match(html, /data-slawa-cooldown-ms="30000"/)
+  assert.match(html, /公式ページ/)
 })

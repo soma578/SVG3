@@ -34,10 +34,14 @@ for (const layer of catalog.layers) {
 const catalogBranch = layerCatalog.indexOf('if (Array.isArray(catalog?.layers))')
 const fallbackFetch = layerCatalog.indexOf('const response = await fetchImpl(containerUrl)', catalogBranch)
 assert.ok(catalogBranch >= 0 && fallbackFetch > catalogBranch, 'Container fetch must be catalog fallback only')
-assert.ok(
-  !layerCatalog.includes('Promise.all'),
-  'native shell must not fetch catalog and Container in parallel',
-)
+// カタログと周辺地域カタログは小さいJSONなので同時取得してよい。
+// Container は重いフォールバックなので、並列取得へ混ぜてはいけない。
+for (const [, block] of layerCatalog.matchAll(/Promise\.all\(\[([\s\S]*?)\]\)/g)) {
+  assert.ok(
+    !block.includes('containerUrl'),
+    'native shell must not fetch catalog and Container in parallel',
+  )
+}
 assert.ok(nativeShell.includes("from './shared/layerCatalog.js'"), 'native shell must use the catalog module')
 
 const catalogResult = await loadLayerCatalog({

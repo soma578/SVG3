@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "kind": "portable-regional-component",
+  "packageId": "artifact-sample",
+  "regionId": "okayama",
+  "sharedVersion": "70983bcca558",
+  "files": [
+    "Container.isolated.svg",
+    "Container.svg",
+    "README.html",
+    "bundle.manifest.json",
+    "layer.manifest.json",
+    "map/layers/portable/artifact-sample/layer.package.json"
+  ]
+}

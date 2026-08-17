@@ -8,6 +8,7 @@
   "snapshotUpdatedAt": "2026-04-28T00:00:00.000Z",
   "staleAfterAt": "2026-04-30T00:00:00.000Z",
   "recordCount": 11344,
-  "nextScheduledAt": "2026-04-29T00:00:00.000Z",
+  "nextScheduledAt": null,
+  "refreshMode": "manual-only-pending-permission",
   "lastError": null
 }

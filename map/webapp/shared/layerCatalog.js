@@ -24,23 +24,39 @@ export const parseContainerLayers = (source, parseXml = (text) => (
     .filter((layer) => !/detail|base-area/.test(layer.id));
 };
 
+// 周辺地域レイヤーは県ごとに違うので、全国共通の catalog.json ではなく
+// /map/regions/<id>/neighbor-catalog.json に分かれている。取得できなくても
+// 本体のカタログだけで地図は成立させる（隣県が出ないだけにする）。
+export const neighborCatalogUrl = (regionId) => (
+  regionId ? `/map/regions/${encodeURIComponent(regionId)}/neighbor-catalog.json` : ''
+);
+
 export const loadLayerCatalog = async ({
   containerUrl,
   catalogUrl = '/map/layers/catalog.json',
+  supplementUrl = '',
   fetchImpl = fetch,
   parseXml,
 }) => {
-  const catalog = await fetchImpl(catalogUrl)
+  const fetchJson = (url) => fetchImpl(url)
     .then((response) => (response.ok ? response.json() : null))
     .catch(() => null);
+  const [catalog, supplement] = await Promise.all([
+    fetchJson(catalogUrl),
+    supplementUrl ? fetchJson(supplementUrl) : Promise.resolve(null),
+  ]);
   if (Array.isArray(catalog?.layers)) {
-    const layers = catalog.layers
+    const layers = [
+      ...catalog.layers,
+      ...(Array.isArray(supplement?.layers) ? supplement.layers : []),
+    ]
       .filter((layer) => layer.userToggle !== false)
       .map(normalizeCatalogLayer);
     return {
       source: 'catalog',
       layers,
       presets: Array.isArray(catalog.presets) ? catalog.presets : [],
+      neighbors: Array.isArray(supplement?.neighbors) ? supplement.neighbors : [],
     };
   }
 
@@ -50,5 +66,6 @@ export const loadLayerCatalog = async ({
     source: 'container-fallback',
     layers: parseContainerLayers(await response.text(), parseXml),
     presets: [],
+    neighbors: [],
   };
 };

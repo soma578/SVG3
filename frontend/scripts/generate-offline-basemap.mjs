@@ -175,21 +175,13 @@ for (const region of regionList) {
      viewBox="${viewBox.join(' ')}"
      data-title="オフライン背景 ${escapeXml(label)}">
   <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
-  <defs>
-    <style>
-      .sea { fill: #cfe0ea; }
-      .land-near { fill: #f2efe6; stroke: #c9c2b0; stroke-width: 0.6; }
-      .land-own { fill: #f7f4ea; stroke: #8c9aa3; stroke-width: 1.4; }
-      .place { fill: #4a5560; font-size: 7px; font-family: sans-serif; text-anchor: middle; }
-    </style>
-  </defs>
-  <rect class="sea" x="${viewBox[0]}" y="${viewBox[1]}" width="${viewBox[2]}" height="${viewBox[3]}" />
-  <g class="neighbours">
-${neighbours.map((feature) => `    <path class="land-near" d="${pathData(feature.rings, NEIGHBOUR_TOLERANCE)}" />`).join('\n')}
+  <rect fill="#cfe0ea" x="${viewBox[0]}" y="${viewBox[1]}" width="${viewBox[2]}" height="${viewBox[3]}" />
+  <g fill="#f2efe6" stroke="#c9c2b0" stroke-width="0.6">
+${neighbours.map((feature) => `    <path d="${pathData(feature.rings, NEIGHBOUR_TOLERANCE)}" />`).join('\n')}
   </g>
-  <path class="land-own" d="${pathData(own.rings, SIMPLIFY_TOLERANCE)}" />
-  <g class="places">
-${labels.map((entry) => `    <text class="place" transform="ref(svg,${toX(entry.lon)},${toY(entry.lat)})" x="0" y="0">${escapeXml(entry.label)}</text>`).join('\n')}
+  <path fill="#f7f4ea" stroke="#8c9aa3" stroke-width="1.4" d="${pathData(own.rings, SIMPLIFY_TOLERANCE)}" />
+  <g fill="#4a5560" font-size="7" font-family="sans-serif" text-anchor="middle">
+${labels.map((entry) => `    <text transform="ref(svg,${toX(entry.lon)},${toY(entry.lat)})" x="0" y="0">${escapeXml(entry.label)}</text>`).join('\n')}
   </g>
 </svg>
 `

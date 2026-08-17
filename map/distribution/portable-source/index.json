@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 2,
+  "kind": "portable-components",
+  "note": "これは配布物ではなく正本。共通部(_shared)と県別部(regions)に分けて重複を持たない。利用者へ渡す自己完結ZIPは compose-portable-release.mjs が組み立てる。",
+  "referenceRegion": "okayama",
+  "buildableRegions": [
+    "hokkaido",
+    "aomori",
+    "iwate",
+    "miyagi",
+    "akita",
+    "yamagata",
+    "fukushima",
+    "ibaraki",
+    "tochigi",
+    "gunma",
+    "saitama",
+    "chiba",
+    "tokyo",
+    "kanagawa",
+    "niigata",
+    "toyama",
+    "ishikawa",
+    "fukui",
+    "yamanashi",
+    "nagano",
+    "gifu",
+    "shizuoka",
+    "aichi",
+    "mie",
+    "shiga",
+    "kyoto",
+    "osaka",
+    "hyogo",
+    "nara",
+    "wakayama",
+    "tottori",
+    "shimane",
+    "okayama",
+    "hiroshima",
+    "yamaguchi",
+    "tokushima",
+    "kagawa",
+    "ehime",
+    "kochi",
+    "fukuoka",
+    "saga",
+    "nagasaki",
+    "kumamoto",
+    "oita",
+    "miyazaki",
+    "kagoshima",
+    "okinawa"
+  ],
+  "publishedRegions": {
+    "artifact-sample": [
+      "okayama"
+    ],
+    "evacuation": [
+      "okayama"
+    ],
+    "japan-river-webcams": [
+      "okayama"
+    ],
+    "riverLevel": [
+      "okayama"
+    ],
+    "roadClosure": [
+      "okayama"
+    ],
+    "teamActivity": [
+      "okayama"
+    ]
+  },
+  "packageTypes": {
+    "evacuation": "regional-mount",
+    "japan-river-webcams": "regional-mount",
+    "riverLevel": "regional-mount",
+    "roadClosure": "regional-mount",
+    "teamActivity": "regional-mount",
+    "artifact-sample": "standalone-release"
+  },
+  "sharedVersion": {
+    "artifact-sample": "70983bcca558",
+    "evacuation": "9a059f59892d",
+    "japan-river-webcams": "d3525fa34949",
+    "riverLevel": "0f6ac8416197",
+    "roadClosure": "445f7e34b5f0",
+    "teamActivity": "239b07715ba0"
+  }
+}

@@ -12,8 +12,11 @@
   "assets": [
     "/map/containers/Containers_webapp_denshi_41.svg",
     "/map/layers/hazard/41/saga.svg",
+    "/map/layers/offline-basemap/fukuoka.svg",
+    "/map/layers/offline-basemap/nagasaki.svg",
     "/map/layers/offline-basemap/saga.svg",
     "/map/regions/saga/municipalities.json",
+    "/map/regions/saga/neighbor-catalog.json",
     "/map/regions/saga/runtime-config.json"
   ],
   "dataShards": [

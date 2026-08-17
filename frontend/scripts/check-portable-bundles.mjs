@@ -196,6 +196,8 @@ for (const manifestPath of manifests.sort()) {
     if (summary.summaryOnly !== true) fail(`${label}: regional summary must declare summaryOnly=true`)
     if (!Number.isInteger(summary.summaryMaxDepth) || summary.summaryMaxDepth < 1 || summary.summaryMaxDepth > 12) {
       fail(`${label}: invalid summaryMaxDepth`)
+    } else if (summary.total === 0) {
+      if (summary.tree !== null) fail(`${label}: empty regional summary tree must be null`)
     } else {
       validateCompactSummaryNode(summary.tree, label, summary.summaryMaxDepth)
     }

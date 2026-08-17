@@ -174,7 +174,10 @@ export const importBundledCommunityLayer = (entry, {
   configuration = {},
 } = {}) => {
   if (!entry?.animation?.['xlink:href']) throw new Error('コミュニティレイヤー定義が不完全です');
-  if (entry.status === 'incompatible') throw new Error('現在の構成では追加できません');
+  // 追加できないのは配布物に実体が無いときだけ。互換性の等級では止めない。
+  if (entry.available === false) {
+    throw new Error(entry.unavailableReason || '配布物にレイヤーの実体がありません');
+  }
 
   const resolvedContainer = new URL(containerUrl, location.href);
   if (resolvedContainer.origin !== location.origin || resolvedContainer.pathname !== '/map/svgMapAppLayers/Container.svg') {
@@ -234,14 +237,14 @@ export const importBundledCommunityLayer = (entry, {
     community: {
       publisher: 'SVGMap community',
       license: { name: 'Mozilla Public License 2.0', spdx: 'MPL-2.0' },
-      status: entry.status || 'unverified',
-      category: entry.category || '—',
+      // status は「どこから来たか」だけを表す。互換性の等級ではない。
+      status: 'bundled',
       runtime: 'tight',
-      delivery: entry.delivery || 'bundled-community',
+      delivery: entry.delivery || 'bundled',
       offline: Boolean(entry.offline),
       externalDependencies: entry.externalDependencies || [],
       verifiedAt: entry.verifiedAt || null,
-      reason: entry.reason || '管理者が同梱したSVGMapコミュニティ資産',
+      reason: entry.note || '管理者が同梱したSVGMapコミュニティ資産',
     },
     sourceUrl,
     attrs,

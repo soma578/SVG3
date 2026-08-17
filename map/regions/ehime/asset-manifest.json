@@ -13,7 +13,11 @@
     "/map/containers/Containers_webapp_denshi_38.svg",
     "/map/layers/hazard/38/ehime.svg",
     "/map/layers/offline-basemap/ehime.svg",
+    "/map/layers/offline-basemap/kagawa.svg",
+    "/map/layers/offline-basemap/kochi.svg",
+    "/map/layers/offline-basemap/tokushima.svg",
     "/map/regions/ehime/municipalities.json",
+    "/map/regions/ehime/neighbor-catalog.json",
     "/map/regions/ehime/runtime-config.json"
   ],
   "dataShards": [

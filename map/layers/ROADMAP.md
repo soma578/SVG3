@@ -103,31 +103,15 @@
 - `symbol/color/statusColors` が指定された場合は動的SVGマーカーを生成する
 - 生成ページは基本色を受け取り、生成configに `ui.pinProfile` を出力する
 
-## P4: Webカメラcache manifest UI（履歴・runtimeでは不採用）
+## P4: Webカメラ暫定運用（固定台帳・利用者操作時のみ）
 
-現状の問題:
-
-- キャッシュジョブは作ったが、運用状態が見えない
-
-対策:
-
-- `/map/media-cache/webcams/manifest.json` を管理画面で表示
-- fetched/skipped/failed/updatedAt/TTL を見える化
-- 失敗率が高い場合は警告する
-
-成功条件:
-
-- 管理者が外部取得状態を確認できる
-- 閲覧者ブラウザから外部画像を取得しない契約が維持される
-
-実装状態:
-
-- `webcams:cache` が `summary` 付きmanifestを出力する
-- 管理用manifestは `map/media-cache/webcams/manifest.json` に詳細を保持する
-- public側manifestは外部元画像URLとエラー詳細を除いたサニタイズ版にする
-- 旧Next.js管理画面は撤去済み。限定キャッシュ運用時はmanifestを直接監査する
-- P11で全件キャッシュを通常runtimeから外し、ユーザー操作時の公式画像直接取得へ変更した
-- cache commandは検証・限定運用用に残すが、既定で `--region` が必須で全国取得を拒否する
+- 台帳の定期取得は停止し、固定スナップショットとして扱う
+- ブラウザ偽装ヘッダーを使わない
+- 一覧表示、prefetch、自動更新では画像を取得しない
+- 自サーバーへの画像保存・再配信機能を持たない
+- 詳細を開いたときだけfeature flag確認後に公式画像を直接取得する
+- 手動更新は30秒以上、取得失敗時は公式ページへ誘導する
+- 出典、画像取得時刻、撮影時刻不明、第三者配信元からの取得を表示する
 
 ## P5: 外部レイヤー取り込みの安全化（完了）
 

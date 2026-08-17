@@ -1,9 +1,8 @@
 name: Refresh river webcam data
 
 on:
-  schedule:
-    # 台帳の新設・廃止反映用。毎月1日 02:17 UTC (11:17 JST)
-    - cron: '17 2 1 * *'
+  # 非公開仕様相当のJSONを定期収集しない。許可確認後に運用を再検討する。
+  # 現在は運用者が承認した検証・復旧時だけ手動実行できる。
   workflow_dispatch:
     inputs:
       refresh_metadata:
@@ -12,9 +11,7 @@ on:
         type: boolean
         default: false
 
-# 更新結果をリポジトリへ書き戻すため write が要る。
-# 月に1回、一覧の差分だけを取り込む。全カメラの個別メタデータ更新は
-# workflow_dispatch で refresh_metadata=true を指定した場合に限る。
+# 手動更新結果をリポジトリへ書き戻すため write が要る。
 permissions:
   contents: write
 

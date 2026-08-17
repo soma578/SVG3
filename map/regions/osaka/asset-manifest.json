@@ -12,8 +12,13 @@
   "assets": [
     "/map/containers/Containers_webapp_denshi_27.svg",
     "/map/layers/hazard/27/osaka.svg",
+    "/map/layers/offline-basemap/hyogo.svg",
+    "/map/layers/offline-basemap/kyoto.svg",
+    "/map/layers/offline-basemap/nara.svg",
     "/map/layers/offline-basemap/osaka.svg",
+    "/map/layers/offline-basemap/wakayama.svg",
     "/map/regions/osaka/municipalities.json",
+    "/map/regions/osaka/neighbor-catalog.json",
     "/map/regions/osaka/runtime-config.json"
   ],
   "dataShards": [

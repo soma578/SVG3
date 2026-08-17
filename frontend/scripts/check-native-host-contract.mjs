@@ -153,7 +153,9 @@ assert.ok(Math.abs(parsedMapState.viewport.lat - 34.65) < 0.000001)
 assert.ok(Math.abs(parsedMapState.viewport.lon - 133.92) < 0.000001)
 assert.ok(host.includes('MAP_MESSAGES.runtimeLayerReady'))
 assert.ok(host.includes('MAP_MESSAGES.mapSetMunicipalityFilter'))
-assert.ok(hazardConfig.href.includes('layerKey=layer-hazard'))
+// mount ごとに違う layerKey を持つ。周辺地域mountで同じレイヤーを隣接県ぶん
+// 載せたとき、ホストのメッセージが取り違えられないようにするための宣言。
+assert.ok(hazardConfig.href.includes('layerKey={layerId}'))
 assert.ok(hazard.includes('MAP_MESSAGES.runtimeLayerReady'))
 assert.ok(hazard.includes('MAP_MESSAGES.runtimeLayerStateChanged'))
 assert.ok(hazard.includes('MAP_MESSAGES.mapSetLayerState'))
@@ -406,9 +408,14 @@ const communityLayers = (catalog.layers || []).filter((layer) => (
 ))
 assert.equal(communityLayers.length, externalImport.include.length)
 for (const layer of communityLayers) {
+  // 標準搭載するレイヤーは実際に読み込みまで確認したものに限る。等級ではなく
+  // 「確認した日付があるか」で判定する。GUIからの追加はこの制約を受けない。
+  assert.equal(layer.community?.status, 'bundled', `standard community layer must be bundled: ${layer.id}`)
+  // 標準搭載するなら「描画を確認した日」か「まだ確認できていない理由」の
+  // どちらかを必ず持たせる。黙って出ないレイヤーを並べない。
   assert.ok(
-    ['supported', 'limited'].includes(layer.community?.status),
-    `standard community layer must be verified or explicitly limited: ${layer.id}`,
+    layer.community?.verifiedAt || layer.community?.renderIssue,
+    `standard community layer must record a check date or a known issue: ${layer.id}`,
   )
 }
 

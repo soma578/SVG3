@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "note": "レイヤーごとの実行モードと配信状況。既定は isolated（サンドボックス）。ここに書くのは実測で必要と分かったものだけで、勘で足さない。community-layers:smoke が「載っているのに描かない」レイヤーを検出する。",
+  "runtime": {
+    "GPV降雨情報(MSM)": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": null
+    },
+    "JAXA 衛星全球降水マップ": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": "2026-08-08"
+    },
+    "JAXA 衛星全球降水マップ(風向矢印)": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": "2026-08-08"
+    },
+    "NOAA 可視光": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": "2026-08-08"
+    },
+    "NOAA 海水温": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": "2026-08-08"
+    },
+    "NOAA 湿度": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": "2026-08-08"
+    },
+    "NOAA 赤外線": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": "2026-08-08"
+    },
+    "NOAA 雷": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": "2026-08-08"
+    },
+    "事前通行規制区間": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": "2026-08-08"
+    },
+    "土石流危険渓流": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": "2026-08-08"
+    },
+    "土石流警戒区域": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": "2026-08-08"
+    },
+    "地すべり危険個所": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": "2026-08-08"
+    },
+    "地すべり警戒区域": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": "2026-08-08"
+    },
+    "地形区分に基づく液状化の発生傾向図": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": "2026-08-08"
+    },
+    "急傾斜地崩壊危険個所": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": "2026-08-08"
+    },
+    "急傾斜警戒区域": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": "2026-08-08"
+    },
+    "津波浸水想定(最大規模)": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": "2026-08-08"
+    },
+    "津波浸水想定区域(旧)": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": "2026-08-08"
+    },
+    "浸水想定区域(想定最大規模)": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": "2026-08-08"
+    },
+    "浸水想定区域(計画規模)": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": "2026-08-08"
+    },
+    "緊急輸送道路": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": "2026-08-08"
+    },
+    "衛星画像(海しる)": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": "2026-08-08"
+    },
+    "道路冠水想定個所": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": "2026-08-08"
+    },
+    "防災科研_J_SHIS_地すべり地形": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": "2026-08-08"
+    },
+    "防災科研_津波_J_THIS": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": "2026-08-08"
+    },
+    "防災科研　南海トラフ広域地震防災研究PF": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": null
+    },
+    "雪崩危険個所": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": "2026-08-08"
+    },
+    "高潮浸水想定区域(想定最大規模)": {
+      "mode": "tight",
+      "reason": "isolatedの仮想iframeがレイヤーの旧式onload/onzoomやSVGMap注入グローバルを潰すため描画できない",
+      "verifiedAt": "2026-08-08"
+    }
+  },
+  "retiredSources": {
+    "防災科研　南海トラフ広域地震防災研究PF": "旧WMSエンドポイントが配信終了（404）",
+    "GPV降雨情報(MSM)": "2011年東日本大震災向けアーカイブ。現在時刻を要求するとblank.pngへ転送される"
+  }
+}

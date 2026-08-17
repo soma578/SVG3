@@ -13,7 +13,14 @@
     "/map/containers/Containers_webapp_denshi_07.svg",
     "/map/layers/hazard/7/fukushima.svg",
     "/map/layers/offline-basemap/fukushima.svg",
+    "/map/layers/offline-basemap/gunma.svg",
+    "/map/layers/offline-basemap/ibaraki.svg",
+    "/map/layers/offline-basemap/miyagi.svg",
+    "/map/layers/offline-basemap/niigata.svg",
+    "/map/layers/offline-basemap/tochigi.svg",
+    "/map/layers/offline-basemap/yamagata.svg",
     "/map/regions/fukushima/municipalities.json",
+    "/map/regions/fukushima/neighbor-catalog.json",
     "/map/regions/fukushima/runtime-config.json"
   ],
   "dataShards": [

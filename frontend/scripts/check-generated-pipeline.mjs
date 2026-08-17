@@ -16,6 +16,7 @@ const requiredPipelineSteps = {
     'generate:representative-qtct',
     'layers:check',
     'layers:build',
+    'regions:adjacency',
     'containers:generate',
   ],
   'map:verify': [
@@ -25,6 +26,7 @@ const requiredPipelineSteps = {
     'runtime-import:check',
     'native-startup:check',
     'native-data:check',
+    'regions:check',
   ],
   'map:release': [
     'portable:bundle',
@@ -62,9 +64,9 @@ if (!String(npmScripts['architecture:check'] || '').includes('npm run storage:ch
 
 const sourceOnlyGenerators = [
   'scripts/generate-layer-assets.mjs',
+  'scripts/generate-region-adjacency.mjs',
   'scripts/generate-representative-qtct.mjs',
   'scripts/generate-denshi-containers.mjs',
-  'scripts/cache-webcam-images.mjs',
 ]
 
 for (const relativePath of sourceOnlyGenerators) {

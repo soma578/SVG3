@@ -53,6 +53,40 @@ Remaining review:
 - Legacy unpublished detail mounts still exist and should be removed only after
   confirming that no distributed bundle references them.
 
+### P0: Do not stop information at the prefecture boundary
+
+Status: implemented for prefecture-scoped layers.
+
+Disaster response crosses administrative borders. Two different mechanisms cover
+this, and they should not be confused:
+
+- Nationwide QTCT layers (`evacuation`, `japanRiverWebcam`, `teamActivity`,
+  `riverLevel`, `roadClosure`) already carry a `regionId: "all"` summary or shard
+  index. Panning across a border loads the neighbouring shard. No per-region
+  configuration is involved.
+- Prefecture-scoped layers (`hazard`, `offline-basemap`) are pinned to one
+  prefecture by construction. These declare `crossRegion` in their
+  `layer.config.json`, and `containers:generate` mounts the adjacent
+  prefectures' copies into every region's Container, hidden by default.
+
+Adjacency is derived from `prefectures.geojson`, not hand-maintained:
+`regions:adjacency` writes `map/regions/adjacency.json` from shared boundary
+vertices, with sea crossings declared in `map/regions/adjacency.config.json`.
+`regions:check` fails the build if the generated graph drifts from the source
+data, if adjacency is asymmetric, or if a declared neighbour mount is missing
+from a Container.
+
+Constraints that must hold:
+
+- neighbour mounts stay `visibilityStrategy: native` so a region with eight
+  neighbours does not start eight extra controllers
+- `{layerId}` expands to the mount id, so one controller cannot receive host
+  messages meant for another prefecture's copy of the same layer
+- search indexes, alert polling, freshness and management links belong to the
+  primary mount only
+- offline caching takes the neighbour background SVGs (~100KB) but not
+  neighbour hazard SVGs (3-7MB each)
+
 ### P1: Make Next optional
 
 Status: implemented for local runtime.

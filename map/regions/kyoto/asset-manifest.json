@@ -12,8 +12,15 @@
   "assets": [
     "/map/containers/Containers_webapp_denshi_26.svg",
     "/map/layers/hazard/26/kyoto.svg",
+    "/map/layers/offline-basemap/fukui.svg",
+    "/map/layers/offline-basemap/hyogo.svg",
     "/map/layers/offline-basemap/kyoto.svg",
+    "/map/layers/offline-basemap/mie.svg",
+    "/map/layers/offline-basemap/nara.svg",
+    "/map/layers/offline-basemap/osaka.svg",
+    "/map/layers/offline-basemap/shiga.svg",
     "/map/regions/kyoto/municipalities.json",
+    "/map/regions/kyoto/neighbor-catalog.json",
     "/map/regions/kyoto/runtime-config.json"
   ],
   "dataShards": [

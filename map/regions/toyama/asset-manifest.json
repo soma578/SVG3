@@ -12,8 +12,13 @@
   "assets": [
     "/map/containers/Containers_webapp_denshi_16.svg",
     "/map/layers/hazard/16/toyama.svg",
+    "/map/layers/offline-basemap/gifu.svg",
+    "/map/layers/offline-basemap/ishikawa.svg",
+    "/map/layers/offline-basemap/nagano.svg",
+    "/map/layers/offline-basemap/niigata.svg",
     "/map/layers/offline-basemap/toyama.svg",
     "/map/regions/toyama/municipalities.json",
+    "/map/regions/toyama/neighbor-catalog.json",
     "/map/regions/toyama/runtime-config.json"
   ],
   "dataShards": [

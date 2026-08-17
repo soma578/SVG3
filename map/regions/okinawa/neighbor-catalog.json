@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "regionId": "okinawa",
+  "label": "沖縄県",
+  "group": "周辺地域",
+  "neighbors": [
+    {
+      "id": "kagoshima",
+      "label": "鹿児島県",
+      "prefCode": "46",
+      "relation": "strait",
+      "via": "南西諸島"
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer-offline-basemap--near-kagoshima",
+      "label": "鹿児島県 背景",
+      "href": "/map/layers/offline-basemap/{regionId}.svg",
+      "visible": false,
+      "source": "managed/offline-basemap",
+      "order": 900,
+      "group": "周辺地域",
+      "note": "鹿児島県の県境・海岸線・地名（通信なしでも見える）",
+      "kind": "vector",
+      "className": "offline-fallback",
+      "symbol": "背",
+      "icon": "",
+      "accent": "#8c9aa3",
+      "toggleKey": "layer-offline-basemap--near-kagoshima",
+      "mounts": [
+        "layer-offline-basemap--near-kagoshima"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "kagoshima",
+        "label": "鹿児島県",
+        "prefCode": "46",
+        "relation": "strait",
+        "via": "南西諸島"
+      }
+    },
+    {
+      "id": "layer-hazard--near-kagoshima",
+      "label": "鹿児島県 ハザード",
+      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey={layerId}",
+      "visible": false,
+      "source": "managed/hazard",
+      "order": 901,
+      "group": "周辺地域",
+      "note": "鹿児島県の洪水・土砂災害ハザードを越境して重ねる",
+      "kind": "vector",
+      "className": "vectorEtcData",
+      "symbol": "災",
+      "icon": "",
+      "accent": "#AD3F31",
+      "toggleKey": "layer-hazard--near-kagoshima",
+      "mounts": [
+        "layer-hazard--near-kagoshima"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "種類"
+      },
+      "userToggle": true,
+      "messages": {
+        "toHost": [
+          "runtime:dataStatus",
+          "runtime:layerReady",
+          "runtime:layerStateChanged"
+        ],
+        "fromHost": [
+          "map:layerVisibilityChanged",
+          "map:setMunicipalityFilter",
+          "map:setLayerState"
+        ]
+      },
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null,
+      "neighborRegion": {
+        "id": "kagoshima",
+        "label": "鹿児島県",
+        "prefCode": "46",
+        "relation": "strait",
+        "via": "南西諸島"
+      }
+    }
+  ]
+}

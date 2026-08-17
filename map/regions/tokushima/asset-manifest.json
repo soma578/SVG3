@@ -12,8 +12,12 @@
   "assets": [
     "/map/containers/Containers_webapp_denshi_36.svg",
     "/map/layers/hazard/36/tokushima.svg",
+    "/map/layers/offline-basemap/ehime.svg",
+    "/map/layers/offline-basemap/kagawa.svg",
+    "/map/layers/offline-basemap/kochi.svg",
     "/map/layers/offline-basemap/tokushima.svg",
     "/map/regions/tokushima/municipalities.json",
+    "/map/regions/tokushima/neighbor-catalog.json",
     "/map/regions/tokushima/runtime-config.json"
   ],
   "dataShards": [

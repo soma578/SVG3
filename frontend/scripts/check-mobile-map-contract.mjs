@@ -34,7 +34,15 @@ assert.ok(host.includes('max-height: calc(100dvh - 142px'))
 assert.ok(host.includes('#layerSpecificUIbody'))
 
 assert.ok(propertyModal.includes('hostView.visualViewport?.width'))
-assert.ok(propertyModal.includes('Math.min(viewportWidth, viewportHeight) <= 767'))
+// 「狭いか」は幅だけで決める。Math.min(幅,高さ) で見ていたころは、横に広くても
+// 縦が短いだけでスマホ扱いになり、デスクトップでプロパティが全幅へ膨らんでいた。
+// 閾値はアプリ他所のブレークポイント(820px)に合わせる。
+assert.ok(propertyModal.includes('const NARROW_WIDTH = 820'))
+assert.ok(propertyModal.includes('viewportWidth <= NARROW_WIDTH'))
+assert.ok(!/Math\.min\(viewportWidth, viewportHeight\)\s*<=/.test(propertyModal))
+// 地図を隠しすぎないよう、基準幅はレイヤー固有UI(399px)より狭く保つ。
+const propertyWidth = Number(propertyModal.match(/width = (\d+) \} = \{\}/)?.[1])
+assert.ok(propertyWidth > 0 && propertyWidth <= 360, `property modal base width is too wide: ${propertyWidth}`)
 assert.ok(propertyModal.includes("isLandscapeMobile ? 68 : 124"))
 assert.ok(propertyModal.includes('Math.max(240, viewportWidth - 20)'))
 assert.ok(propertyModal.includes("width: isMobile ? '44px' : '32px'"))

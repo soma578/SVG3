@@ -12,8 +12,12 @@
   "assets": [
     "/map/containers/Containers_webapp_denshi_32.svg",
     "/map/layers/hazard/32/shimane.svg",
+    "/map/layers/offline-basemap/hiroshima.svg",
     "/map/layers/offline-basemap/shimane.svg",
+    "/map/layers/offline-basemap/tottori.svg",
+    "/map/layers/offline-basemap/yamaguchi.svg",
     "/map/regions/shimane/municipalities.json",
+    "/map/regions/shimane/neighbor-catalog.json",
     "/map/regions/shimane/runtime-config.json"
   ],
   "dataShards": [

@@ -1,0 +1,17 @@
+{
+  "id": "layer-offline-basemap-japan",
+  "title": "オフライン背景 全国",
+  "href": "/map/layers/overview/japan.svg",
+  "class": "offline-fallback",
+  "visibility": "visible",
+  "opacity": "1",
+  "order": 4,
+  "comment": "保存した県の外へ動かしても白紙にしないための全国輪郭。県単位のオフライン背景(order 5)の下に敷く",
+  "ui": {
+    "catalog": false,
+    "userToggle": false,
+    "group": "背景",
+    "kind": "vector",
+    "note": "全国の都道府県輪郭（オフライン背景の一部）"
+  }
+}

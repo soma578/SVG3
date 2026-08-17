@@ -1,6 +1,7 @@
 {
   "id": "layer-flood-warning",
   "published": false,
+  "comment": "この派生版では非公開。有効化する場合は運用判断を経ること（気象庁へ実行時に直接取得しに行くレイヤー）",
   "title": "洪水・気象警報",
   "href": "/map/layers/portable/flood-warning/floodWarningLayer.svg",
   "class": "poi clickable",
@@ -16,14 +17,26 @@
     "accent": "#C62828",
     "kind": "poi",
     "note": "気象庁の市区町村単位の気象警報・注意報（観測所水位ではありません）",
-    "messages": { "toHost": ["runtime:dataStatus"], "fromHost": [] }
+    "messages": {
+      "toHost": [
+        "runtime:dataStatus"
+      ],
+      "fromHost": []
+    }
   },
   "dataSource": {
     "ownership": "external",
-    "authority": { "name": "気象庁", "url": "https://www.jma.go.jp/bosai/warning/" },
+    "authority": {
+      "name": "気象庁",
+      "url": "https://www.jma.go.jp/bosai/warning/"
+    },
     "delivery": "user-action-direct",
     "runtimeFetch": true,
-    "snapshot": { "timestampField": "reportDatetime" },
-    "freshness": { "staleAfterMinutes": 180 }
+    "snapshot": {
+      "timestampField": "reportDatetime"
+    },
+    "freshness": {
+      "staleAfterMinutes": 180
+    }
   }
 }

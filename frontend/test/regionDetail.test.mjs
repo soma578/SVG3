@@ -63,6 +63,15 @@ test('label は全国インデックスのものを使う', () => {
   assert.equal(document.label, '避難所')
 })
 
+test('記録がない県も空の有効なdetail文書になる', () => {
+  const mapRoot = fixture([[record('a', 'okayama', 133.9, 34.6)]])
+  const document = regionDetailDocument({
+    mapRoot, layerId: 'evacuation', regionId: 'hokkaido', label: '避難所',
+  })
+  assert.equal(document.total, 0)
+  assert.equal(document.tree, null)
+})
+
 test('シャードが欠けていたら黙って少ない結果を返さない', () => {
   // 欠けたまま出すと、避難所が丸ごと消えたバンドルを配ってしまう。
   const mapRoot = fixture([[record('a', 'okayama', 133.9, 34.6)]])

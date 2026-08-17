@@ -7,22 +7,8 @@
       "title": "配布レイヤーサンプル",
       "description": "配布レイヤーサンプルを表示するSVGMapレイヤー",
       "regionId": "okayama",
-      "distribution": {
-        "packageVersion": "1.0.0",
-        "publisher": {
-          "id": "svg3",
-          "name": "SVG3"
-        },
-        "license": {
-          "spdx": "NOASSERTION",
-          "name": "利用条件未設定",
-          "status": "unresolved",
-          "redistributable": false
-        },
-        "publishedAt": "2026-07-21T00:00:00+09:00"
-      },
-      "contentDigest": "sha256-f00fa5f4dc7477807af77752cbd0bacdfa26cfe6fc64e5ca8aba4b08c4ed2c67",
       "path": "artifact-sample/okayama",
+      "contentDigest": "sha256-d8f7b04d918d719988e389f02664b2875de2c97ed574aebd51fc75cd1fea201d",
       "entrypoints": {
         "tight": "viewer.html",
         "container": "Container.svg",
@@ -44,7 +30,7 @@
             "id": "representative-pins",
             "version": "1.2.2",
             "manifest": "representative-pins/runtime.package.json",
-            "integrity": "sha256-ed71b8552207a9722829946d2cbfa8758a6556b73adfa9e7ea9041c6f49cba11"
+            "integrity": "sha256-b33ad7afb358ef701b191bf89904ce508f1ae9860a254224145f5928a9735005"
           },
           {
             "id": "svgmap-slawa-client",
@@ -55,20 +41,34 @@
         ],
         "limitations": []
       },
+      "distribution": {
+        "packageVersion": "1.0.0",
+        "publisher": {
+          "id": "svg3",
+          "name": "SVG3"
+        },
+        "license": {
+          "spdx": "NOASSERTION",
+          "name": "利用条件未設定",
+          "status": "unresolved",
+          "redistributable": false
+        },
+        "publishedAt": "2026-07-21T00:00:00+09:00"
+      },
+      "manifestSha256": "af24777bbb1a80111c0dc88cef51ad501a50c6d9dae73cdbb3ed2fef222b1ee7",
       "fileCount": 169,
-      "bytes": 2602357,
-      "manifestSha256": "3c20b15f58eb0bac72e54fe8ddf5f3cfa527c4eeeee5357c1ee4176c212d5d12",
+      "bytes": 2602849,
       "archive": {
         "path": "layer.zip",
         "fileName": "artifact-sample-okayama-layer.zip",
-        "bytes": 1270396,
-        "sha256": "d155234088f256f611bf85e78a477844ab2e27462546ff5d12599fae65585f0d"
+        "bytes": 1270516,
+        "sha256": "37ef8b876be6da8c5b30757f7c5f5d1c1e4316722551d5f4571236c7e886efe2"
       },
       "standaloneArchive": {
         "path": "bundle.zip",
         "fileName": "artifact-sample-okayama-standalone.zip",
-        "bytes": 1668652,
-        "sha256": "16812f3eb69e20fc1f4fc54df878b2feea3ff603512216df6ceac0025c29044f"
+        "bytes": 1668917,
+        "sha256": "699f19363fd26a1c9d9415b0116858116cde1b91752e20cdfc73869393a13e62"
       }
     },
     {
@@ -77,22 +77,8 @@
       "title": "L2 避難所",
       "description": "避難所・緊急避難場所",
       "regionId": "okayama",
-      "distribution": {
-        "packageVersion": "1.0.0",
-        "publisher": {
-          "id": "svg3",
-          "name": "SVG3"
-        },
-        "license": {
-          "spdx": "NOASSERTION",
-          "name": "利用条件未設定",
-          "status": "unresolved",
-          "redistributable": false
-        },
-        "publishedAt": "2026-07-21T00:00:00+09:00"
-      },
-      "contentDigest": "sha256-ebc6e7a2786bfeb7bdc85fcf403211084993a25f3f9d6b0b1df8375069068f4e",
       "path": "evacuation/okayama",
+      "contentDigest": "sha256-815024f37e72772bbc43fe698b324bf8a21349821b0b2df4116a5a3cfe61b619",
       "entrypoints": {
         "tight": "viewer.html",
         "container": "Container.svg",
@@ -114,7 +100,7 @@
             "id": "representative-pins",
             "version": "1.2.2",
             "manifest": "representative-pins/runtime.package.json",
-            "integrity": "sha256-ed71b8552207a9722829946d2cbfa8758a6556b73adfa9e7ea9041c6f49cba11"
+            "integrity": "sha256-b33ad7afb358ef701b191bf89904ce508f1ae9860a254224145f5928a9735005"
           },
           {
             "id": "svgmap-slawa-client",
@@ -125,44 +111,44 @@
         ],
         "limitations": []
       },
+      "distribution": {
+        "packageVersion": "1.0.0",
+        "publisher": {
+          "id": "svg3",
+          "name": "SVG3"
+        },
+        "license": {
+          "spdx": "NOASSERTION",
+          "name": "利用条件未設定",
+          "status": "unresolved",
+          "redistributable": false
+        },
+        "publishedAt": "2026-07-21T00:00:00+09:00"
+      },
+      "manifestSha256": "b6c90f537cb0707eac5eede354bdc1f14e87debc1fb3b49778a44512ca894f5b",
       "fileCount": 170,
-      "bytes": 6074603,
-      "manifestSha256": "b2470822ebbd817fa977d39d9f111b3dd2cb472e8a0dc99144ce0cc7d1719182",
+      "bytes": 6075095,
       "archive": {
         "path": "layer.zip",
         "fileName": "evacuation-okayama-layer.zip",
-        "bytes": 1516897,
-        "sha256": "85f61514a63918cf11e6d87992197033f6e3d7b7e616ccaad92af2f11e516e28"
+        "bytes": 1517025,
+        "sha256": "7f4820525427cce12f37709c0473dc0cfab6014f1c22aa20e36f54c5badca7e4"
       },
       "standaloneArchive": {
         "path": "bundle.zip",
         "fileName": "evacuation-okayama-standalone.zip",
-        "bytes": 1914090,
-        "sha256": "cee307b55c31a1f57b8c49f6108b32157e0611f5ab1b3902e8aee9bef985ca35"
+        "bytes": 1914366,
+        "sha256": "7b9288aeb8cb32149c7ad3b0c3e5d8d62615e240c3d4c673e74314fff2a06354"
       }
     },
     {
       "packageId": "japan-river-webcams",
       "layerId": "layer-japan-river-webcams",
       "title": "全国河川監視カメラ",
-      "description": "国土交通省 川の防災情報の河川監視カメラ",
+      "description": "国土交通省 川の防災情報（2026年4月28日取得の固定台帳・暫定表示）",
       "regionId": "okayama",
-      "distribution": {
-        "packageVersion": "1.0.0",
-        "publisher": {
-          "id": "svg3",
-          "name": "SVG3"
-        },
-        "license": {
-          "spdx": "NOASSERTION",
-          "name": "利用条件未設定",
-          "status": "unresolved",
-          "redistributable": false
-        },
-        "publishedAt": "2026-07-21T00:00:00+09:00"
-      },
-      "contentDigest": "sha256-60b936ae8bf793326643c608e70423bbbf879abfc7315d700342baddf0ad19f6",
       "path": "japan-river-webcams/okayama",
+      "contentDigest": "sha256-50426ff4933c2acf4c9a14b7094989fbe0d3b066ec1a0b90cae0d545fa874f8d",
       "entrypoints": {
         "tight": "viewer.html",
         "container": "Container.svg",
@@ -184,7 +170,7 @@
             "id": "representative-pins",
             "version": "1.2.2",
             "manifest": "representative-pins/runtime.package.json",
-            "integrity": "sha256-ed71b8552207a9722829946d2cbfa8758a6556b73adfa9e7ea9041c6f49cba11"
+            "integrity": "sha256-b33ad7afb358ef701b191bf89904ce508f1ae9860a254224145f5928a9735005"
           },
           {
             "id": "svgmap-slawa-client",
@@ -195,20 +181,34 @@
         ],
         "limitations": []
       },
-      "fileCount": 170,
-      "bytes": 3210381,
-      "manifestSha256": "a3079b92e219412a24ad65494f0ea0c2642a7286e3e04567e855e6725415cec5",
+      "distribution": {
+        "packageVersion": "1.0.0",
+        "publisher": {
+          "id": "svg3",
+          "name": "SVG3"
+        },
+        "license": {
+          "spdx": "NOASSERTION",
+          "name": "利用条件未設定",
+          "status": "unresolved",
+          "redistributable": false
+        },
+        "publishedAt": "2026-07-21T00:00:00+09:00"
+      },
+      "manifestSha256": "5b62eba75f7d614626ac898fa087e8fcba146ba16ef3e8d54dd3c8ce94eb1503",
+      "fileCount": 171,
+      "bytes": 3212942,
       "archive": {
         "path": "layer.zip",
         "fileName": "japan-river-webcams-okayama-layer.zip",
-        "bytes": 1307547,
-        "sha256": "bbf542cc313e47e21813266b421c8ab0002c9be34afc09dde62e6ba0163ad5c2"
+        "bytes": 1308800,
+        "sha256": "4d2b1ed58f719502a0e5e8981c972f57231a36f5bea2dbc3a982f06a8461e790"
       },
       "standaloneArchive": {
         "path": "bundle.zip",
         "fileName": "japan-river-webcams-okayama-standalone.zip",
-        "bytes": 1706842,
-        "sha256": "35d8ffc531f8cab6e2d7f46ebd2de4d07979d079fcb6ea78cddbbc2e4a2e49c8"
+        "bytes": 1708418,
+        "sha256": "7af0c0684e868af4e4cce2b110ba2741aa8f1b5290b2dc8b520a7e5e284f6823"
       }
     },
     {
@@ -217,22 +217,8 @@
       "title": "河川水位",
       "description": "河川水位と危険段階（現在は配信adapter接続待ち）",
       "regionId": "okayama",
-      "distribution": {
-        "packageVersion": "1.0.0",
-        "publisher": {
-          "id": "svg3",
-          "name": "SVG3"
-        },
-        "license": {
-          "spdx": "NOASSERTION",
-          "name": "利用条件未設定",
-          "status": "unresolved",
-          "redistributable": false
-        },
-        "publishedAt": "2026-07-21T00:00:00+09:00"
-      },
-      "contentDigest": "sha256-b7b4554c7691cc1ec85250d4abc45903d6afcebed492ccd3d7d7b123a8be2616",
       "path": "riverLevel/okayama",
+      "contentDigest": "sha256-f6fa0309aca64c483dd202d5f8073ddde6b7193e64ba268506c6667f78515682",
       "entrypoints": {
         "tight": "viewer.html",
         "container": "Container.svg",
@@ -254,7 +240,7 @@
             "id": "representative-pins",
             "version": "1.2.2",
             "manifest": "representative-pins/runtime.package.json",
-            "integrity": "sha256-ed71b8552207a9722829946d2cbfa8758a6556b73adfa9e7ea9041c6f49cba11"
+            "integrity": "sha256-b33ad7afb358ef701b191bf89904ce508f1ae9860a254224145f5928a9735005"
           },
           {
             "id": "svgmap-slawa-client",
@@ -265,20 +251,34 @@
         ],
         "limitations": []
       },
+      "distribution": {
+        "packageVersion": "1.0.0",
+        "publisher": {
+          "id": "svg3",
+          "name": "SVG3"
+        },
+        "license": {
+          "spdx": "NOASSERTION",
+          "name": "利用条件未設定",
+          "status": "unresolved",
+          "redistributable": false
+        },
+        "publishedAt": "2026-07-21T00:00:00+09:00"
+      },
+      "manifestSha256": "a7bb1a610cafce22dd11b8a5746a207c2647582337307f2aaa344ac78c039e89",
       "fileCount": 170,
-      "bytes": 2624358,
-      "manifestSha256": "e1a90dd4b4e0fab153b87be0e28cc066c968a17b986f39d901fb0efbfb7e9734",
+      "bytes": 2624850,
       "archive": {
         "path": "layer.zip",
         "fileName": "riverLevel-okayama-layer.zip",
-        "bytes": 1272975,
-        "sha256": "792d970d888cfb2ccec0096b6efe335e6ecd72ceffb005dfa461d57613d7ded3"
+        "bytes": 1273101,
+        "sha256": "f3a6af0dc497e376774da86544b6ad4444d329c40e240dd5233de24354068b17"
       },
       "standaloneArchive": {
         "path": "bundle.zip",
         "fileName": "riverLevel-okayama-standalone.zip",
-        "bytes": 1670292,
-        "sha256": "47199a07df861a4b8943865b9ab0ec1735c6327439856047d2d0e211893746e4"
+        "bytes": 1670563,
+        "sha256": "b2deea302650fbc6eab777cb8c5165c3b3dc07a54e5cfa2f5bf9a9f8912d5218"
       }
     },
     {
@@ -287,22 +287,8 @@
       "title": "道路通行情報",
       "description": "検証用スナップショット（公式ライブ情報ではありません）",
       "regionId": "okayama",
-      "distribution": {
-        "packageVersion": "1.0.0",
-        "publisher": {
-          "id": "svg3",
-          "name": "SVG3"
-        },
-        "license": {
-          "spdx": "NOASSERTION",
-          "name": "利用条件未設定",
-          "status": "unresolved",
-          "redistributable": false
-        },
-        "publishedAt": "2026-07-21T00:00:00+09:00"
-      },
-      "contentDigest": "sha256-ae5472d64e6701e1c01d9445ee711b6251cd2d681b1127e2faddcb25932050d6",
       "path": "roadClosure/okayama",
+      "contentDigest": "sha256-f5bc1018194df196d14f1d8f67299a35313835e0e40a87820b947bc22a355a56",
       "entrypoints": {
         "tight": "viewer.html",
         "container": "Container.svg",
@@ -324,7 +310,7 @@
             "id": "representative-pins",
             "version": "1.2.2",
             "manifest": "representative-pins/runtime.package.json",
-            "integrity": "sha256-ed71b8552207a9722829946d2cbfa8758a6556b73adfa9e7ea9041c6f49cba11"
+            "integrity": "sha256-b33ad7afb358ef701b191bf89904ce508f1ae9860a254224145f5928a9735005"
           },
           {
             "id": "svgmap-slawa-client",
@@ -335,20 +321,34 @@
         ],
         "limitations": []
       },
+      "distribution": {
+        "packageVersion": "1.0.0",
+        "publisher": {
+          "id": "svg3",
+          "name": "SVG3"
+        },
+        "license": {
+          "spdx": "NOASSERTION",
+          "name": "利用条件未設定",
+          "status": "unresolved",
+          "redistributable": false
+        },
+        "publishedAt": "2026-07-21T00:00:00+09:00"
+      },
+      "manifestSha256": "eb67bb9f20ae8fbeb9efcaa66e1e0c8e6897e6b78a77295574f2fe3a191c82a1",
       "fileCount": 170,
-      "bytes": 2617858,
-      "manifestSha256": "702a866d46b19183e3abfae30e812760274785ea95254a453a5c2f082dae3c1c",
+      "bytes": 2618350,
       "archive": {
         "path": "layer.zip",
         "fileName": "roadClosure-okayama-layer.zip",
-        "bytes": 1272341,
-        "sha256": "1072d4703e9c2a5535e8cc53c38f6f6627e00cf9cda0a8697bd7f0f95cba1f31"
+        "bytes": 1272468,
+        "sha256": "66749b989ba4a47ba0f166aed518394472cafcc130491c963d711de8e9377ad4"
       },
       "standaloneArchive": {
         "path": "bundle.zip",
         "fileName": "roadClosure-okayama-standalone.zip",
-        "bytes": 1669935,
-        "sha256": "55e5176db534fd488a5d57184ab710b40c6d45542fc1c461cc8d0431dba5ff33"
+        "bytes": 1670215,
+        "sha256": "04dcefb3a41f7a2fb95972a05514028aafe6a2ed0227e64ca5057f81213912b7"
       }
     },
     {
@@ -357,6 +357,40 @@
       "title": "チーム活動ピン",
       "description": "チーム活動の地点と地区境界",
       "regionId": "okayama",
+      "path": "teamActivity/okayama",
+      "contentDigest": "sha256-b3d8e47be91ca20a41027decf776fcba35ba6feacbf3f4362c2a0f6d3206f13d",
+      "entrypoints": {
+        "tight": "viewer.html",
+        "container": "Container.svg",
+        "isolated": "viewer-isolated.html",
+        "isolatedContainer": "Container.isolated.svg"
+      },
+      "portability": {
+        "pathIndependent": true,
+        "crossOrigin": false,
+        "lawaModes": {
+          "tight": "supported",
+          "isolated": "native-supported"
+        },
+        "protocolFixtures": {
+          "isolated": "native-slawa"
+        },
+        "runtimeDependencies": [
+          {
+            "id": "representative-pins",
+            "version": "1.2.2",
+            "manifest": "representative-pins/runtime.package.json",
+            "integrity": "sha256-b33ad7afb358ef701b191bf89904ce508f1ae9860a254224145f5928a9735005"
+          },
+          {
+            "id": "svgmap-slawa-client",
+            "version": "1.0.0",
+            "manifest": "svgmap-slawa-client/runtime.package.json",
+            "integrity": "sha256-39cde050c45eaa37807b4d54cc2a8965f2eb2fba55ef97a3b1bc1fbe8911961c"
+          }
+        ],
+        "limitations": []
+      },
       "distribution": {
         "packageVersion": "1.2.0",
         "publisher": {
@@ -371,54 +405,20 @@
         },
         "publishedAt": "2026-07-21T00:00:00+09:00"
       },
-      "contentDigest": "sha256-661a9082dacb48aac22b5c0f2adc48f3c571212c1b3a8f9697027251903560e6",
-      "path": "teamActivity/okayama",
-      "entrypoints": {
-        "tight": "viewer.html",
-        "container": "Container.svg",
-        "isolated": "viewer-isolated.html",
-        "isolatedContainer": "Container.isolated.svg"
-      },
-      "portability": {
-        "pathIndependent": true,
-        "crossOrigin": false,
-        "lawaModes": {
-          "tight": "supported",
-          "isolated": "native-supported"
-        },
-        "protocolFixtures": {
-          "isolated": "native-slawa"
-        },
-        "runtimeDependencies": [
-          {
-            "id": "representative-pins",
-            "version": "1.2.2",
-            "manifest": "representative-pins/runtime.package.json",
-            "integrity": "sha256-ed71b8552207a9722829946d2cbfa8758a6556b73adfa9e7ea9041c6f49cba11"
-          },
-          {
-            "id": "svgmap-slawa-client",
-            "version": "1.0.0",
-            "manifest": "svgmap-slawa-client/runtime.package.json",
-            "integrity": "sha256-39cde050c45eaa37807b4d54cc2a8965f2eb2fba55ef97a3b1bc1fbe8911961c"
-          }
-        ],
-        "limitations": []
-      },
+      "manifestSha256": "51f74486112b0477f674f8b1e87f100efc357bda8b1929b4d1757292837e236a",
       "fileCount": 177,
-      "bytes": 4101411,
-      "manifestSha256": "440f18b5c9012ee25ddbaf09be0d906014f1fa82bd9149ecfcc84bfae696fcc6",
+      "bytes": 4101903,
       "archive": {
         "path": "layer.zip",
         "fileName": "teamActivity-okayama-layer.zip",
-        "bytes": 1602623,
-        "sha256": "9ba25ff8f418238f050821ef834e76984fcbfd6be46c569f47dd9078e6fbb8b8"
+        "bytes": 1602747,
+        "sha256": "9c1a997f1732d54c004f525e43be373d910212cf1883da0c0a8839d7cc1832d5"
       },
       "standaloneArchive": {
         "path": "bundle.zip",
         "fileName": "teamActivity-okayama-standalone.zip",
-        "bytes": 2000676,
-        "sha256": "dea38569db901cb66038819bc95aee6addb47014e26edb2abac87785c0e74754"
+        "bytes": 2000945,
+        "sha256": "8ac50d6710395ea5fa0851000a6493e32b208db6d1de48a316a59f499d30c830"
       }
     }
   ]

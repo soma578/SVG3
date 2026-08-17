@@ -12,13 +12,28 @@ const projectRoot = path.resolve(frontendRoot, '..')
 const mapRoot = path.join(projectRoot, 'map')
 const portableRoot = path.join(mapRoot, 'layers', 'portable')
 const managedRoot = path.join(mapRoot, 'layers', 'managed')
-const outputRoot = path.join(mapRoot, 'distribution', 'portable')
+// 生成は一度まるごと組み立ててから、共通部と県別部へ分ける。
+// 同じviewer/vendor/iconsを県の数だけ保存しても意味がないため、正本は分離形式で持つ。
+// 利用者へ渡す自己完結物は compose-portable-release.mjs が組み立て直す。
+const stageRoot = path.join(mapRoot, 'distribution', '.stage')
+const componentsRoot = path.join(mapRoot, 'distribution', 'portable-source')
+const sharedRoot = path.join(componentsRoot, '_shared')
+const regionsRoot = path.join(componentsRoot, 'regions')
+const outputRoot = stageRoot
+
+const allRegionIds = () => {
+  const index = JSON.parse(fs.readFileSync(path.join(mapRoot, 'regions', 'index.json'), 'utf8'))
+  return (index.regions || []).map((region) => String(region.id)).filter(Boolean)
+}
 
 const parseArgs = (argv) => {
-  const options = { region: 'okayama', layers: [] }
+  const options = { region: 'okayama', layers: [], allRegions: false }
   for (let index = 0; index < argv.length; index += 1) {
     const arg = argv[index]
-    if (arg === '--region') options.region = argv[index + 1] || options.region
+    // 配布物は「岡山だけ」ではなく、どの県でも作れる。まとめて作る入口を用意する。
+    // 47県ぶんを常時リポジトリへ置くと約2GBになるので、既定は単一県のままにする。
+    if (arg === '--all-regions') options.allRegions = true
+    else if (arg === '--region') options.region = argv[index + 1] || options.region
     else if (arg.startsWith('--region=')) options.region = arg.slice('--region='.length)
     else if (arg === '--layer') options.layers.push(argv[index + 1] || '')
     else if (arg.startsWith('--layer=')) options.layers.push(arg.slice('--layer='.length))
@@ -329,7 +344,7 @@ const compactRepresentative = (feature) => feature ? {
   count: feature.count,
 } : null
 
-const compactQtctNode = (node, maxDepth) => ({
+const compactQtctNode = (node, maxDepth) => node ? ({
   id: node.id,
   depth: node.depth,
   bounds: node.bounds,
@@ -338,7 +353,7 @@ const compactQtctNode = (node, maxDepth) => ({
   ...(node.children?.length && node.depth < maxDepth
     ? { children: node.children.map((child) => compactQtctNode(child, maxDepth)) }
     : {}),
-})
+}) : null
 
 const collectQtctRecords = (node, records = []) => {
   if (Array.isArray(node?.records)) records.push(...node.records)
@@ -463,9 +478,6 @@ const buildBundle = (mount) => {
       regionId: options.region,
       label: config.title || qtctLayer,
     })
-    if (detailData.total === 0) {
-      throw new Error(`${pkg.id}: national detail shards contain no ${qtctLayer} record for ${options.region}`)
-    }
     writeText(path.join(bundleRoot, detailRelative), `${JSON.stringify(detailData)}\n`)
   } else {
     const detailSource = path.join(mapRoot, 'data', 'qtct', qtctLayer, options.region, 'detail.json')
@@ -824,11 +836,151 @@ const writeArtifactIndex = () => {
   }
   walk(outputRoot)
   artifacts.sort((a, b) => a.packageId.localeCompare(b.packageId) || a.regionId.localeCompare(b.regionId))
-  writeText(path.join(outputRoot, 'index.json'), `${JSON.stringify({ schemaVersion: 1, artifacts }, null, 2)}\n`)
+  // どの県が生成済みで、どの県が生成できるかを索引に載せる。
+  // 「岡山しか無い」のと「岡山しか作れない」のは別物なので、そこを取り違えない。
+  const buildable = allRegionIds()
+  const coverage = {}
+  for (const artifact of artifacts) {
+    (coverage[artifact.packageId] ||= []).push(artifact.regionId)
+  }
+  writeText(path.join(outputRoot, 'index.json'), `${JSON.stringify({
+    schemaVersion: 1,
+    buildableRegions: buildable,
+    coverage,
+    note: '未生成の県は npm run portable:bundle -- --region <id> または --all-regions で作れる。'
+      + '47県×全パッケージを常時同梱すると約2GBになるため、既定では生成済みのぶんだけを置く。',
+    artifacts,
+  }, null, 2)}\n`)
   console.log(`[portable-bundle] indexed ${artifacts.length} artifact(s)`)
 }
 
 fs.mkdirSync(outputRoot, { recursive: true })
+
+// 県ごとに中身が変わるもの。それ以外は47県で同一なので共通部へ寄せる。
+// Container / README は県名やデータ参照を埋め込むため県別。
+// viewer.html は Container を参照するだけなので共通で足りる。
+const isRegionalPath = (relative) => (
+  relative.startsWith('map/data/')
+  || relative === 'bundle.manifest.json'
+  || relative === 'layer.manifest.json'
+  || relative === 'Container.svg'
+  || relative === 'Container.isolated.svg'
+  || relative === 'README.html'
+  || /^map\/layers\/portable\/[^/]+\/layer\.package\.json$/.test(relative)
+)
+
+const listFiles = (root) => {
+  const out = []
+  const walk = (dir) => {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const target = path.join(dir, entry.name)
+      if (entry.isDirectory()) walk(target)
+      else out.push(toPosix(path.relative(root, target)))
+    }
+  }
+  if (fs.existsSync(root)) walk(root)
+  return out.sort()
+}
+
+const digestOfTree = (root, files) => {
+  const hash = crypto.createHash('sha256')
+  for (const relative of files) {
+    hash.update(relative)
+    hash.update(fs.readFileSync(path.join(root, relative)))
+  }
+  return hash.digest('hex').slice(0, 12)
+}
+
+/**
+ * 組み上がった自己完結ツリーを、共通部と県別部へ分ける。
+ * 共通部は最初の県で書き、以降の県では「同一であること」を確かめる。
+ * 県依存のファイルが増えたら、ここで気付けるようにする（黙って共通部が
+ * 上書きされると、別の県のデータが混ざった配布物ができてしまう）。
+ */
+const splitIntoComponents = (packageId, regionId) => {
+  const built = path.join(stageRoot, packageId, regionId)
+  const sharedTarget = path.join(sharedRoot, packageId)
+  const regionTarget = path.join(regionsRoot, regionId, packageId)
+  fs.rmSync(regionTarget, { recursive: true, force: true })
+  const conflicts = []
+  for (const relative of listFiles(built)) {
+    // zip は配布時に組み立てる成果物。正本には持たない。
+    if (relative.endsWith('.zip')) continue
+    const source = path.join(built, relative)
+    if (isRegionalPath(relative)) {
+      copyFile(source, path.join(regionTarget, relative))
+      continue
+    }
+    const destination = path.join(sharedTarget, relative)
+    if (fs.existsSync(destination)) {
+      if (sha256(destination) !== sha256(source)) conflicts.push(relative)
+      continue
+    }
+    copyFile(source, destination)
+  }
+  if (conflicts.length > 0) {
+    throw new Error(
+      `${packageId}: これらは県ごとに内容が変わるので共通部にできない: ${conflicts.join(', ')}`
+      + ' — isRegionalPath に追加すること',
+    )
+  }
+  // shared.json 自身を版の計算に含めると、書くたびに版が変わって
+  // 県ごとに違う値になる（先に作った県の配布物が組めなくなる）。
+  const sharedFiles = listFiles(sharedTarget).filter((file) => file !== 'shared.json')
+  const sharedVersion = digestOfTree(sharedTarget, sharedFiles)
+  writeText(path.join(regionTarget, 'component.json'), `${JSON.stringify({
+    schemaVersion: 1,
+    kind: 'portable-regional-component',
+    packageId,
+    regionId,
+    // compose時に共通部と突き合わせる。版がずれた組み合わせを配らないため。
+    sharedVersion,
+    files: listFiles(regionTarget).filter((file) => file !== 'component.json'),
+  }, null, 2)}\n`)
+  writeText(path.join(sharedTarget, 'shared.json'), `${JSON.stringify({
+    schemaVersion: 1,
+    kind: 'portable-shared-component',
+    packageId,
+    sharedVersion,
+    files: sharedFiles,
+  }, null, 2)}\n`)
+  return sharedVersion
+}
+
+const writeComponentIndex = (packageTypes) => {
+  const buildableRegions = allRegionIds()
+  const publishedRegions = {}
+  if (fs.existsSync(regionsRoot)) {
+    for (const regionId of fs.readdirSync(regionsRoot).sort()) {
+      for (const packageId of fs.readdirSync(path.join(regionsRoot, regionId)).sort()) {
+        (publishedRegions[packageId] ||= []).push(regionId)
+      }
+    }
+  }
+  const sharedVersion = {}
+  if (fs.existsSync(sharedRoot)) {
+    for (const packageId of fs.readdirSync(sharedRoot).sort()) {
+      const sharedFile = path.join(sharedRoot, packageId, 'shared.json')
+      if (fs.existsSync(sharedFile)) sharedVersion[packageId] = readJson(sharedFile).sharedVersion
+    }
+  }
+  writeText(path.join(componentsRoot, 'index.json'), `${JSON.stringify({
+    schemaVersion: 2,
+    kind: 'portable-components',
+    note: 'これは配布物ではなく正本。共通部(_shared)と県別部(regions)に分けて重複を持たない。'
+      + '利用者へ渡す自己完結ZIPは compose-portable-release.mjs が組み立てる。',
+    referenceRegion: 'okayama',
+    buildableRegions,
+    publishedRegions,
+    packageTypes,
+    sharedVersion,
+  }, null, 2)}\n`)
+  console.log(
+    `[portable-bundle] components: ${Object.keys(sharedVersion).length} shared,`
+    + ` ${Object.values(publishedRegions).reduce((sum, list) => sum + list.length, 0)} regional`,
+  )
+}
+
 const mounts = loadMounts().filter((mount) => (
   options.layers.length === 0 || options.layers.some((id) => [mount.pkg.id, mount.qtctLayer, mount.config.id].includes(id))
 ))
@@ -836,7 +988,26 @@ const releases = loadStandaloneReleases().filter(({ pkg }) => (
   options.layers.length === 0 || options.layers.includes(pkg.id) || options.layers.includes(pkg.release.layerId)
 ))
 if (mounts.length === 0 && releases.length === 0) throw new Error('no matching portable artifacts')
-for (const mount of mounts) buildBundle(mount)
-for (const release of releases) buildStandaloneBundle(release)
-writeArtifactIndex()
-console.log(`[portable-bundle] built ${mounts.length + releases.length} regional bundle(s) in ${outputRoot}`)
+const regions = options.allRegions ? allRegionIds() : [options.region]
+const packageTypes = {}
+let built = 0
+for (const regionId of regions) {
+  options.region = regionId
+  for (const mount of mounts) {
+    buildBundle(mount)
+    packageTypes[mount.pkg.id] = 'regional-mount'
+    splitIntoComponents(mount.pkg.id, regionId)
+    built += 1
+  }
+  for (const release of releases) {
+    buildStandaloneBundle(release)
+    packageTypes[release.pkg.id] = 'standalone-release'
+    splitIntoComponents(release.pkg.id, regionId)
+    built += 1
+  }
+}
+fs.rmSync(stageRoot, { recursive: true, force: true })
+writeComponentIndex(packageTypes)
+console.log(
+  `[portable-bundle] built ${built} component set(s) for ${regions.length} region(s) in ${componentsRoot}`,
+)

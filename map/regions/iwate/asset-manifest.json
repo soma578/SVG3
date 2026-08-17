@@ -12,8 +12,12 @@
   "assets": [
     "/map/containers/Containers_webapp_denshi_03.svg",
     "/map/layers/hazard/3/iwate.svg",
+    "/map/layers/offline-basemap/akita.svg",
+    "/map/layers/offline-basemap/aomori.svg",
     "/map/layers/offline-basemap/iwate.svg",
+    "/map/layers/offline-basemap/miyagi.svg",
     "/map/regions/iwate/municipalities.json",
+    "/map/regions/iwate/neighbor-catalog.json",
     "/map/regions/iwate/runtime-config.json"
   ],
   "dataShards": [

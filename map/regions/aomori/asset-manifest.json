@@ -12,8 +12,12 @@
   "assets": [
     "/map/containers/Containers_webapp_denshi_02.svg",
     "/map/layers/hazard/2/aomori.svg",
+    "/map/layers/offline-basemap/akita.svg",
     "/map/layers/offline-basemap/aomori.svg",
+    "/map/layers/offline-basemap/hokkaido.svg",
+    "/map/layers/offline-basemap/iwate.svg",
     "/map/regions/aomori/municipalities.json",
+    "/map/regions/aomori/neighbor-catalog.json",
     "/map/regions/aomori/runtime-config.json"
   ],
   "dataShards": [

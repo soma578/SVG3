@@ -26,19 +26,33 @@ const mapFrame = async (page) => {
 
 const rowFor = (page, text) => page.locator('#layer-list .layer-row').filter({ hasText: text }).first()
 
-test('本家のコミュニティ資産148件を、利用状態ごとに公開する', async ({ page }) => {
+test('本家のコミュニティ資産148件を、本家と同じ並びでそのまま公開する', async ({ page }) => {
   await openPanel(page)
-  await expect(page.locator('#community-compatibility-summary')).toHaveText('検証2・制限6／148件')
+  // 互換性の等級で序列を付けない。追加できないのは配布物に実体が無い1件だけ。
+  await expect(page.locator('#community-compatibility-summary')).toHaveText('147/148件')
   await page.locator('#community-compatibility summary').click()
   await expect(page.locator('#community-compatibility-list li')).toHaveCount(148)
-  await expect(page.locator('#community-compatibility-list li[data-status="incompatible"]')).toContainText('starlinkUnofficialGS')
-  await expect(page.locator('#community-compatibility-list li[data-status="requires-config"]')).toContainText('経路検索(graphhopper)')
+  await expect(page.locator('#community-compatibility-list li[data-available="false"]')).toHaveCount(1)
+  await expect(page.locator('#community-compatibility-list li[data-available="false"]')).toContainText('starlinkUnofficialGS')
   await expect(page.locator('#community-compatibility-list')).not.toContainText('保存済み複数CSVデータ表示')
 
+  // 本家Containerの並び順であること（等級順に並べ替えない）。
+  const order = await page.locator('#community-compatibility-list li strong').allTextContents()
+  expect(order[0]).toBe('sentinel2_2018_WMTS')
+  // 押せないのは「もう載っている」ものと「配布物に実体が無い」ものだけ。
+  // 互換性の等級では止めない。内訳は
+  //   標準搭載36件
+  //   配布物に実体が無い1件 (starlinkUnofficialGS)
+  const disabled = page.locator('#community-compatibility-list .community-entry-add:disabled')
+  // 標準搭載36件＋配布物に実体が無い1件。互換性の等級では止めない。
+  await expect(disabled).toHaveCount(37)
+
+  // 標準搭載しているコミュニティレイヤー。旧式スクリプト型はGUIからの実行時
+  // 追加では描画できないため、Containerへ非表示で載せている（既定は全部OFF）。
   const rows = page.locator('#layer-list .layer-row[data-kind="external"]')
-  await expect(rows).toHaveCount(8)
-  await expect(rowFor(page, 'geohashCoder')).toContainText('検証済み')
-  await expect(rowFor(page, 'J_SHIS')).toContainText('オンライン限定')
+  await expect(rows).toHaveCount(36)
+  await expect(rowFor(page, 'geohashCoder')).toContainText('同梱')
+  await expect(rowFor(page, 'J_SHIS')).toContainText('同梱')
 
   await rowFor(page, 'J_SHIS').locator('.layer-community-badge').click()
   await expect(rowFor(page, 'J_SHIS').locator('.layer-community-detail')).toContainText('www.j-shis.bosai.go.jp')
@@ -48,33 +62,30 @@ test('本家のコミュニティ資産148件を、利用状態ごとに公開�
 test('本家カタログを検索し、未搭載レイヤーをGUIから追加して描画する', async ({ page, context }) => {
   const requests = []
   context.on('request', (request) => requests.push(request.url()))
-  await context.route('https://cyberjapandata.gsi.go.jp/**', (route) => route.fulfill({
-    status: 200,
-    contentType: 'image/png',
-    body: Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=', 'base64'),
-  }))
-
+  // 追加対象は、標準搭載レイヤーとベースSVGを共有しないものにする。
+  // SVGMapはレイヤー文書をファイル単位で持つため、既に載っているSVGを
+  // ハッシュ違いで二重に載せることはできない（UI側も搭載済みとして止める）。
   await openPanel(page)
   await page.locator('#community-compatibility summary').click()
-  await page.locator('#community-catalog-search').fill('DenshiKokudo:relief')
+  await page.locator('#community-catalog-search').fill('登記所備付地図データ(RawData)')
   await expect(page.locator('#community-compatibility-list li')).toHaveCount(1)
   await page.locator('#community-compatibility-list .community-entry-add').click()
 
-  const row = rowFor(page, 'DenshiKokudo:relief')
+  const row = rowFor(page, '登記所備付地図データ')
   await expect(row).toBeVisible()
-  await expect(row).toContainText('未検証')
+  await expect(row).toContainText('同梱')
   const frame = await mapFrame(page)
-  await expect.poll(() => requests.some((url) => url.includes('/xyz/relief/'))).toBe(true)
   await expect.poll(() => frame.evaluate(() => {
     const root = window.svgMap.getSvgImages().root
     const layer = [...root.querySelectorAll('animation')]
-      .find((node) => node.getAttribute('title') === 'DenshiKokudo:relief')
+      .find((node) => node.getAttribute('title') === '登記所備付地図データ(RawData)')
     return {
       source: layer?.getAttribute('data-external-source'),
       runtime: layer?.getAttribute('data-lawa-mode'),
       loaded: Boolean(window.svgMap.getSvgImages()[layer?.getAttribute('iid')]),
     }
   })).toEqual({ source: 'bundled-community', runtime: 'tight', loaded: true })
+
 })
 
 test('GraphHopper接続先をGUIで設定して本家のハッシュ契約へ渡す', async ({ page }) => {
@@ -96,7 +107,7 @@ test('GraphHopper接続先をGUIで設定して本家のハッシュ契約へ渡
   })).toContain('graphhopperurl=https%3A%2F%2Frouting.example%2Fapi%2F1%2Froute')
 })
 
-test('SVGMap getCORSURLは固定許可リスト型プロキシへ接続される', async ({ page }) => {
+test('SVGMap getCORSURLは本家と同じく外部HTTPSを中継へ回す', async ({ page }) => {
   await openPanel(page)
   const frame = await mapFrame(page)
   const proxyUrl = await frame.evaluate(() => window.svgMap.getCORSURL(
@@ -112,12 +123,20 @@ test('SVGMap getCORSURLは固定許可リスト型プロキシへ接続される
     'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson',
   )
 
-  const rejection = await page.evaluate(async () => {
-    const response = await fetch('/api/svgmap-proxy?url=https%3A%2F%2Fexample.com%2Fsecret')
-    return { status: response.status, body: await response.text() }
-  })
-  expect(rejection.status).toBe(403)
-  expect(rejection.body).toContain('許可されていません')
+  // ホスト名の許可リストは持たない（本家CorsProxyと同じ扱い）。代わりに
+  // 中継してよい「かたち」を制限する。内部ネットワークや独自ポートは通さない。
+  for (const target of [
+    'http%3A%2F%2Fexample.com%2Fplain',
+    'https%3A%2F%2F127.0.0.1%2Finternal',
+    'https%3A%2F%2Fuser%3Apass%40example.com%2F',
+    'https%3A%2F%2Fexample.com%3A8443%2F',
+  ]) {
+    const rejection = await page.evaluate(async (url) => {
+      const response = await fetch(`/api/svgmap-proxy?url=${url}`)
+      return { status: response.status, body: await response.text() }
+    }, target)
+    expect(rejection.status, target).toBe(403)
+  }
 })
 
 test('controller・固有URLアダプター・オンラインレイヤを同時に重ねられる', async ({ page, context }) => {

@@ -2,8 +2,42 @@
   "version": 1,
   "layers": [
     {
+      "id": "layer-offline-basemap",
+      "label": "オフライン背景",
+      "href": "/map/layers/offline-basemap/{regionId}.svg",
+      "visible": true,
+      "source": "managed/offline-basemap",
+      "order": 5,
+      "group": "背景",
+      "note": "通信が切れても見える軽量背景（全国輪郭・県境・海岸線・地名）",
+      "kind": "vector",
+      "className": "offline-fallback",
+      "symbol": "背",
+      "icon": "",
+      "accent": "#8c9aa3",
+      "toggleKey": "layer-offline-basemap",
+      "mounts": [
+        "layer-offline-basemap-japan",
+        "layer-offline-basemap"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": null
+    },
+    {
       "id": "layer-basemap",
       "label": "国土地理院 淡色地図",
+      "href": "/map/svgMapAppLayers/basemaps/dynamicDenshiKokudo2016.svg#map=pale",
       "visible": true,
       "source": "managed/basemap",
       "order": 10,
@@ -35,6 +69,7 @@
     {
       "id": "layer-evacuation",
       "label": "L2 避難所",
+      "href": "/map/layers/portable/evacuation/evacuationLayer.svg#summary=/map/data/qtct/evacuation/summary.json&data=/map/data/qtct/evacuation/detail-index.json&layer=evacuation",
       "visible": true,
       "source": "managed/evacuation",
       "order": 30,
@@ -75,6 +110,7 @@
     {
       "id": "layer-team-activity-pins",
       "label": "L3 チーム活動ピン",
+      "href": "/map/layers/portable/team-activity/teamActivityLayer.svg#summary=/map/data/qtct/teamActivity/summary.json&data=/map/data/qtct/teamActivity/detail-index.json&sourceCsv=/map/layers/managed/team-activity-pins/data.csv&districtSvgUrlTemplate={districtBaseUrlPattern}/districts-svg/{code}.svg&layer=teamActivity",
       "visible": false,
       "source": "managed/team-activity-pins",
       "order": 50,
@@ -127,6 +163,7 @@
     {
       "id": "layer-team-activity",
       "label": "L3 チーム活動エリア",
+      "href": "/map/layers/portable/team-activity/teamActivityAreaLayer.svg#data=/map/data/qtct/teamActivity/detail-index.json&districtSvgUrlTemplate={districtBaseUrlPattern}/districts-svg/{code}.svg&layer=teamActivity",
       "visible": false,
       "source": "managed/team-activity",
       "order": 60,
@@ -163,11 +200,12 @@
     {
       "id": "layer-japan-river-webcams",
       "label": "全国河川監視カメラ",
+      "href": "/map/layers/portable/japan-river-webcams/webcamLayer.svg#summary=/map/data/qtct/japanRiverWebcam/summary.json&data=/map/data/qtct/japanRiverWebcam/detail-index.json&layer=japanRiverWebcam&detailByRegion=/map/data/qtct/japanRiverWebcam/{recordRegionId}/detail.json",
       "visible": false,
       "source": "managed/japan-river-webcams",
       "order": 66,
       "group": "河川確認",
-      "note": "国土交通省 川の防災情報の河川監視カメラ",
+      "note": "国土交通省 川の防災情報（2026年4月28日取得の固定台帳・暫定表示）",
       "kind": "poi",
       "className": "poi clickable",
       "symbol": "カ",
@@ -200,7 +238,7 @@
           "name": "国土交通省 川の防災情報",
           "url": "https://www.river.go.jp/"
         },
-        "delivery": "scheduled-snapshot",
+        "delivery": "static-snapshot",
         "runtimeFetch": false
       },
       "disabled": false,
@@ -211,6 +249,7 @@
     {
       "id": "layer-hazard",
       "label": "L4 ハザード",
+      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey={layerId}",
       "visible": true,
       "source": "managed/hazard",
       "order": 80,
@@ -255,6 +294,7 @@
     {
       "id": "layer-current-location",
       "label": "現在地",
+      "href": "/map/layers/portable/current-location/currentLocationLayer.svg",
       "visible": true,
       "source": "managed/current-location",
       "order": 900,
@@ -291,6 +331,7 @@
     {
       "id": "layer-external-svgmap-app-layers-denshikokudo-orthophoto-2",
       "label": "DenshiKokudo:orthoPhoto",
+      "href": "/map/layers/external/svgmap-app-layers/adapters/gsi-ortho.svg#map=ort",
       "visible": false,
       "source": "external/svgmap-app-layers",
       "order": 1001,
@@ -323,8 +364,7 @@
           "name": "Mozilla Public License 2.0",
           "spdx": "MPL-2.0"
         },
-        "status": "limited",
-        "category": "C",
+        "status": "bundled",
         "runtime": "tight",
         "delivery": "online-only",
         "offline": false,
@@ -338,6 +378,7 @@
     {
       "id": "layer-external-svgmap-app-layers-openstreetmap-global-7",
       "label": "OpenStreetMap(Global)",
+      "href": "/map/layers/external/svgmap-app-layers/adapters/osm-global.svg",
       "visible": false,
       "source": "external/svgmap-app-layers",
       "order": 1006,
@@ -370,8 +411,7 @@
           "name": "Mozilla Public License 2.0",
           "spdx": "MPL-2.0"
         },
-        "status": "limited",
-        "category": "C",
+        "status": "bundled",
         "runtime": "tight",
         "delivery": "online-only",
         "offline": false,
@@ -385,6 +425,7 @@
     {
       "id": "layer-external-svgmap-app-layers-geohashcoder-13",
       "label": "geohashCoder",
+      "href": "/map/layers/external/svgmap-app-layers/adapters/geohash-coder.svg",
       "visible": false,
       "source": "external/svgmap-app-layers",
       "order": 1012,
@@ -417,8 +458,7 @@
           "name": "Mozilla Public License 2.0",
           "spdx": "MPL-2.0"
         },
-        "status": "supported",
-        "category": "B",
+        "status": "bundled",
         "runtime": "isolated",
         "delivery": "adapter",
         "offline": true,
@@ -428,8 +468,64 @@
       }
     },
     {
+      "id": "layer-external-svgmap-app-layers-41-41",
+      "label": "衛星画像(海しる)",
+      "href": "/map/svgMapAppLayers/appLayers/msil/dynamicWebTile.svg#globe&baseURL=none&zmax=11",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1040,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "MARINE",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-41-41",
+      "mounts": [
+        "layer-external-svgmap-app-layers-41-41"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "設定"
+      },
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "maps.gsi.go.jp",
+          "server.name.jp",
+          "cyberjapandata.gsi.go.jp",
+          "cdn.jsdelivr.net",
+          "www.data.jma.go.jp",
+          "www.msil.go.jp",
+          "www.jma.go.jp"
+        ],
+        "verifiedAt": "2026-08-08",
+        "reason": "外部配信元と通信するレイヤー（maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, cdn.jsdelivr.net, www.data.jma.go.jp, www.msil.go.jp, www.jma.go.jp）"
+      }
+    },
+    {
       "id": "layer-external-svgmap-app-layers-did-h27-51",
       "label": "人口集中地区(DID)H27(総務省統計局/地理院地図)",
+      "href": "/map/layers/external/svgmap-app-layers/adapters/gsi-did2015.svg#map=did2015",
       "visible": false,
       "source": "external/svgmap-app-layers",
       "order": 1050,
@@ -462,8 +558,7 @@
           "name": "Mozilla Public License 2.0",
           "spdx": "MPL-2.0"
         },
-        "status": "supported",
-        "category": "B",
+        "status": "bundled",
         "runtime": "tight",
         "delivery": "adapter",
         "offline": false,
@@ -475,8 +570,64 @@
       }
     },
     {
+      "id": "layer-external-svgmap-app-layers-pf-52",
+      "label": "防災科研　南海トラフ広域地震防災研究PF",
+      "href": "/map/svgMapAppLayers/appLayers/bosaiKakenNankai/dynamic_WMS_general.svg#server=null",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1051,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "ハザードマップ",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-pf-52",
+      "mounts": [
+        "layer-external-svgmap-app-layers-pf-52"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "設定"
+      },
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "gbank.gsj.jp",
+          "cdn.jsdelivr.net",
+          "catalog.nankai-bosai.jp",
+          "www.data.jma.go.jp",
+          "www.msil.go.jp",
+          "nankai-bosai.jp"
+        ],
+        "verifiedAt": null,
+        "reason": "外部配信元と通信するレイヤー（gbank.gsj.jp, cdn.jsdelivr.net, catalog.nankai-bosai.jp, www.data.jma.go.jp, www.msil.go.jp, nankai-bosai.jp）",
+        "renderIssue": "旧WMSエンドポイントが配信終了（404）"
+      }
+    },
+    {
       "id": "layer-external-svgmap-app-layers-j-shis-500-53",
       "label": "防災科研_J_SHIS_長期間平均ハザード(再現期間500年)",
+      "href": "/map/layers/external/svgmap-app-layers/adapters/jshis-500.svg#server=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2Fmapcache%2FA%2Fwmts%3Flayer%3DA-V8-MAP-AVR-TTL_MTTL-A0500_SI2%26style%3Ddefault%26tilematrixset%3DWGS84%26Service%3DWMTS%26Request%3DGetTile%26Version%3D1.0.0%26Format%3Dimage%252Fpng%26TileMatrix%3D%5B%5Blevel%5D%5D%26TileCol%3D%5B%5Bx%5D%5D%26TileRow%3D%5B%5By%5D%5D&comment=出典%3A防災科研J-SHIS&link=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2F&legend=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2FJSHIS2%2FIMAGE%2Fetc%2FP-Y2020-SI.png",
       "visible": false,
       "source": "external/svgmap-app-layers",
       "order": 1052,
@@ -509,8 +660,7 @@
           "name": "Mozilla Public License 2.0",
           "spdx": "MPL-2.0"
         },
-        "status": "limited",
-        "category": "C",
+        "status": "bundled",
         "runtime": "tight",
         "delivery": "online-only",
         "offline": false,
@@ -524,6 +674,7 @@
     {
       "id": "layer-external-svgmap-app-layers-j-shis-2020-54",
       "label": "防災科研_J_SHIS_確率論的地震動予測地図2020_主要活断層帯",
+      "href": "/map/layers/external/svgmap-app-layers/adapters/jshis-active-fault.svg#server=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2Fmapcache%2FP-Y2020%2Fwmts%3Flayer%3DP-Y2020-MAP-AVR-TTL_MTTL-T30_I55_PD2%26style%3Ddefault%26tilematrixset%3DWGS84%26Service%3DWMTS%26Request%3DGetTile%26Version%3D1.0.0%26Format%3Dimage%252Fpng%26TileMatrix%3D%5B%5Blevel%5D%5D%26TileCol%3D%5B%5Bx%5D%5D%26TileRow%3D%5B%5By%5D%5D&comment=出典%3A防災科研J-SHIS&link=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2F&legend=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2FJSHIS2%2FIMAGE%2Fetc%2FP-Y2020-PD.png",
       "visible": false,
       "source": "external/svgmap-app-layers",
       "order": 1053,
@@ -556,8 +707,7 @@
           "name": "Mozilla Public License 2.0",
           "spdx": "MPL-2.0"
         },
-        "status": "limited",
-        "category": "C",
+        "status": "bundled",
         "runtime": "tight",
         "delivery": "online-only",
         "offline": false,
@@ -569,8 +719,925 @@
       }
     },
     {
+      "id": "layer-external-svgmap-app-layers-j-shis-55",
+      "label": "防災科研_J_SHIS_地すべり地形",
+      "href": "/map/svgMapAppLayers/appLayers/bosaiKakenJSHIS/dynamic_WMS_general.svg#server=https://www.j-shis.bosai.go.jp/map/wms/landslide?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&FORMAT=image%2Fpng&TRANSPARENT=true&layers=L-V3-ALL&transparent=true&format=image%2Fpng&TILED=true&CRS=EPSG%3A900913&STYLES=&MAP_RESOLUTION=112.5",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1054,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "ハザードマップ",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-j-shis-55",
+      "mounts": [
+        "layer-external-svgmap-app-layers-j-shis-55"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": false,
+      "requiresController": false,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "www.j-shis.bosai.go.jp",
+          "gbank.gsj.jp"
+        ],
+        "verifiedAt": "2026-08-08",
+        "reason": "外部配信元と通信するレイヤー（www.j-shis.bosai.go.jp, gbank.gsj.jp）"
+      }
+    },
+    {
+      "id": "layer-external-svgmap-app-layers-j-this-57",
+      "label": "防災科研_津波_J_THIS",
+      "href": "/map/svgMapAppLayers/appLayers/bosaiKakenJTHIS/dynamicWebTile.svg#globe&baseURL=none&zmax=11",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1056,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "ハザードマップ",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-j-this-57",
+      "mounts": [
+        "layer-external-svgmap-app-layers-j-this-57"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "設定"
+      },
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "maps.gsi.go.jp",
+          "server.name.jp",
+          "cyberjapandata.gsi.go.jp",
+          "cdn.jsdelivr.net",
+          "www.j-this.bosai.go.jp"
+        ],
+        "verifiedAt": "2026-08-08",
+        "reason": "外部配信元と通信するレイヤー（maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, cdn.jsdelivr.net, www.j-this.bosai.go.jp）"
+      }
+    },
+    {
+      "id": "layer-external-svgmap-app-layers-71-71",
+      "label": "高潮浸水想定区域(想定最大規模)",
+      "href": "/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportal.gsi.go.jp/data/raster/03_hightide_l2_shinsuishin&zmax=17",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1070,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "国交省ハザードマップ batch",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-71-71",
+      "mounts": [
+        "layer-external-svgmap-app-layers-71-71"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "disaportal.gsi.go.jp",
+          "maps.gsi.go.jp",
+          "server.name.jp",
+          "cyberjapandata.gsi.go.jp"
+        ],
+        "verifiedAt": "2026-08-08",
+        "reason": "外部配信元と通信するレイヤー（disaportal.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp）"
+      }
+    },
+    {
+      "id": "layer-external-svgmap-app-layers-72-72",
+      "label": "浸水想定区域(想定最大規模)",
+      "href": "/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin&zmax=17",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1071,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "国交省ハザードマップ batch",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-72-72",
+      "mounts": [
+        "layer-external-svgmap-app-layers-72-72"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "disaportaldata.gsi.go.jp",
+          "maps.gsi.go.jp",
+          "server.name.jp",
+          "cyberjapandata.gsi.go.jp",
+          "disaportal.gsi.go.jp"
+        ],
+        "verifiedAt": "2026-08-08",
+        "reason": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）"
+      }
+    },
+    {
+      "id": "layer-external-svgmap-app-layers-73-73",
+      "label": "浸水想定区域(計画規模)",
+      "href": "/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend&zmax=17",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1072,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "国交省ハザードマップ batch",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-73-73",
+      "mounts": [
+        "layer-external-svgmap-app-layers-73-73"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "disaportaldata.gsi.go.jp",
+          "maps.gsi.go.jp",
+          "server.name.jp",
+          "cyberjapandata.gsi.go.jp",
+          "disaportal.gsi.go.jp"
+        ],
+        "verifiedAt": "2026-08-08",
+        "reason": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）"
+      }
+    },
+    {
+      "id": "layer-external-svgmap-app-layers-74-74",
+      "label": "津波浸水想定区域(旧)",
+      "href": "/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/04_tsunami_oldlegend&zmax=14",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1073,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "国交省ハザードマップ",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-74-74",
+      "mounts": [
+        "layer-external-svgmap-app-layers-74-74"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "disaportaldata.gsi.go.jp",
+          "maps.gsi.go.jp",
+          "server.name.jp",
+          "cyberjapandata.gsi.go.jp",
+          "disaportal.gsi.go.jp"
+        ],
+        "verifiedAt": "2026-08-08",
+        "reason": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）"
+      }
+    },
+    {
+      "id": "layer-external-svgmap-app-layers-75-75",
+      "label": "地形区分に基づく液状化の発生傾向図",
+      "href": "/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/08_03_ekijoka_zenkoku&zmax=14",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1074,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "国交省ハザードマップ",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-75-75",
+      "mounts": [
+        "layer-external-svgmap-app-layers-75-75"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "disaportaldata.gsi.go.jp",
+          "maps.gsi.go.jp",
+          "server.name.jp",
+          "cyberjapandata.gsi.go.jp",
+          "disaportal.gsi.go.jp"
+        ],
+        "verifiedAt": "2026-08-08",
+        "reason": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）"
+      }
+    },
+    {
+      "id": "layer-external-svgmap-app-layers-76-76",
+      "label": "津波浸水想定(最大規模)",
+      "href": "/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend&zmax=14",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1075,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "国交省ハザードマップ",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-76-76",
+      "mounts": [
+        "layer-external-svgmap-app-layers-76-76"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "disaportaldata.gsi.go.jp",
+          "maps.gsi.go.jp",
+          "server.name.jp",
+          "cyberjapandata.gsi.go.jp",
+          "disaportal.gsi.go.jp"
+        ],
+        "verifiedAt": "2026-08-08",
+        "reason": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）"
+      }
+    },
+    {
+      "id": "layer-external-svgmap-app-layers-77-77",
+      "label": "急傾斜警戒区域",
+      "href": "/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki&zmax=16",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1076,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "国交省ハザードマップ",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-77-77",
+      "mounts": [
+        "layer-external-svgmap-app-layers-77-77"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "disaportaldata.gsi.go.jp",
+          "maps.gsi.go.jp",
+          "server.name.jp",
+          "cyberjapandata.gsi.go.jp",
+          "disaportal.gsi.go.jp"
+        ],
+        "verifiedAt": "2026-08-08",
+        "reason": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）"
+      }
+    },
+    {
+      "id": "layer-external-svgmap-app-layers-78-78",
+      "label": "土石流警戒区域",
+      "href": "/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki&zmax=16",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1077,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "国交省ハザードマップ",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-78-78",
+      "mounts": [
+        "layer-external-svgmap-app-layers-78-78"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "disaportaldata.gsi.go.jp",
+          "maps.gsi.go.jp",
+          "server.name.jp",
+          "cyberjapandata.gsi.go.jp",
+          "disaportal.gsi.go.jp"
+        ],
+        "verifiedAt": "2026-08-08",
+        "reason": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）"
+      }
+    },
+    {
+      "id": "layer-external-svgmap-app-layers-79-79",
+      "label": "地すべり警戒区域",
+      "href": "/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki&zmax=16",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1078,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "国交省ハザードマップ",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-79-79",
+      "mounts": [
+        "layer-external-svgmap-app-layers-79-79"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "disaportaldata.gsi.go.jp",
+          "maps.gsi.go.jp",
+          "server.name.jp",
+          "cyberjapandata.gsi.go.jp",
+          "disaportal.gsi.go.jp"
+        ],
+        "verifiedAt": "2026-08-08",
+        "reason": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）"
+      }
+    },
+    {
+      "id": "layer-external-svgmap-app-layers-80-80",
+      "label": "土石流危険渓流",
+      "href": "/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_dosekiryukikenkeiryu&zmax=16",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1079,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "国交省ハザードマップ",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-80-80",
+      "mounts": [
+        "layer-external-svgmap-app-layers-80-80"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "disaportaldata.gsi.go.jp",
+          "maps.gsi.go.jp",
+          "server.name.jp",
+          "cyberjapandata.gsi.go.jp",
+          "disaportal.gsi.go.jp"
+        ],
+        "verifiedAt": "2026-08-08",
+        "reason": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）"
+      }
+    },
+    {
+      "id": "layer-external-svgmap-app-layers-81-81",
+      "label": "急傾斜地崩壊危険個所",
+      "href": "/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_kyukeisyachihoukai&zmax=16",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1080,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "国交省ハザードマップ",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-81-81",
+      "mounts": [
+        "layer-external-svgmap-app-layers-81-81"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "disaportaldata.gsi.go.jp",
+          "maps.gsi.go.jp",
+          "server.name.jp",
+          "cyberjapandata.gsi.go.jp",
+          "disaportal.gsi.go.jp"
+        ],
+        "verifiedAt": "2026-08-08",
+        "reason": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）"
+      }
+    },
+    {
+      "id": "layer-external-svgmap-app-layers-82-82",
+      "label": "地すべり危険個所",
+      "href": "/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_jisuberikikenkasyo&zmax=16",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1081,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "国交省ハザードマップ",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-82-82",
+      "mounts": [
+        "layer-external-svgmap-app-layers-82-82"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "disaportaldata.gsi.go.jp",
+          "maps.gsi.go.jp",
+          "server.name.jp",
+          "cyberjapandata.gsi.go.jp",
+          "disaportal.gsi.go.jp"
+        ],
+        "verifiedAt": "2026-08-08",
+        "reason": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）"
+      }
+    },
+    {
+      "id": "layer-external-svgmap-app-layers-83-83",
+      "label": "雪崩危険個所",
+      "href": "/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo&zmax=16",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1082,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "国交省ハザードマップ",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-83-83",
+      "mounts": [
+        "layer-external-svgmap-app-layers-83-83"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "disaportaldata.gsi.go.jp",
+          "maps.gsi.go.jp",
+          "server.name.jp",
+          "cyberjapandata.gsi.go.jp",
+          "disaportal.gsi.go.jp"
+        ],
+        "verifiedAt": "2026-08-08",
+        "reason": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）"
+      }
+    },
+    {
+      "id": "layer-external-svgmap-app-layers-84-84",
+      "label": "道路冠水想定個所",
+      "href": "/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_kansui&zmax=14",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1083,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "国交省ハザードマップ",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-84-84",
+      "mounts": [
+        "layer-external-svgmap-app-layers-84-84"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "disaportaldata.gsi.go.jp",
+          "maps.gsi.go.jp",
+          "server.name.jp",
+          "cyberjapandata.gsi.go.jp",
+          "disaportal.gsi.go.jp"
+        ],
+        "verifiedAt": "2026-08-08",
+        "reason": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）"
+      }
+    },
+    {
+      "id": "layer-external-svgmap-app-layers-85-85",
+      "label": "事前通行規制区間",
+      "href": "/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_jizentuukoukiseikukan&zmax=12",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1084,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "国交省ハザードマップ",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-85-85",
+      "mounts": [
+        "layer-external-svgmap-app-layers-85-85"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "disaportaldata.gsi.go.jp",
+          "maps.gsi.go.jp",
+          "server.name.jp",
+          "cyberjapandata.gsi.go.jp",
+          "disaportal.gsi.go.jp"
+        ],
+        "verifiedAt": "2026-08-08",
+        "reason": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）"
+      }
+    },
+    {
+      "id": "layer-external-svgmap-app-layers-86-86",
+      "label": "緊急輸送道路",
+      "href": "/map/svgMapAppLayers/appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_kinkyuuyusou&zmax=14",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1085,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "国交省ハザードマップ",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-86-86",
+      "mounts": [
+        "layer-external-svgmap-app-layers-86-86"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": null,
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "disaportaldata.gsi.go.jp",
+          "maps.gsi.go.jp",
+          "server.name.jp",
+          "cyberjapandata.gsi.go.jp",
+          "disaportal.gsi.go.jp"
+        ],
+        "verifiedAt": "2026-08-08",
+        "reason": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）"
+      }
+    },
+    {
       "id": "layer-external-svgmap-app-layers-usgs-89",
       "label": "全球地震情報(USGS)",
+      "href": "/map/layers/external/svgmap-app-layers/adapters/usgs-earthquakes.svg",
       "visible": false,
       "source": "external/svgmap-app-layers",
       "order": 1088,
@@ -603,8 +1670,7 @@
           "name": "Mozilla Public License 2.0",
           "spdx": "MPL-2.0"
         },
-        "status": "limited",
-        "category": "C",
+        "status": "bundled",
         "runtime": "tight",
         "delivery": "online-only",
         "offline": false,
@@ -616,8 +1682,421 @@
       }
     },
     {
+      "id": "layer-external-svgmap-app-layers-noaa-94",
+      "label": "NOAA 海水温",
+      "href": "/map/svgMapAppLayers/appLayers/noaa_nowCOAST/wmsMercator.svg#global_sea_surface_temperature",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1093,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "気象",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-noaa-94",
+      "mounts": [
+        "layer-external-svgmap-app-layers-noaa-94"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "設定"
+      },
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "nowcoast.noaa.gov",
+          "cdn.jsdelivr.net"
+        ],
+        "verifiedAt": "2026-08-08",
+        "reason": "外部配信元と通信するレイヤー（nowcoast.noaa.gov, cdn.jsdelivr.net）"
+      }
+    },
+    {
+      "id": "layer-external-svgmap-app-layers-noaa-95",
+      "label": "NOAA 雷",
+      "href": "/map/svgMapAppLayers/appLayers/noaa_nowCOAST/wmsMercator.svg#ldn_lightning_strike_density",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1094,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "気象",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-noaa-95",
+      "mounts": [
+        "layer-external-svgmap-app-layers-noaa-95"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "設定"
+      },
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "nowcoast.noaa.gov",
+          "cdn.jsdelivr.net"
+        ],
+        "verifiedAt": "2026-08-08",
+        "reason": "外部配信元と通信するレイヤー（nowcoast.noaa.gov, cdn.jsdelivr.net）"
+      }
+    },
+    {
+      "id": "layer-external-svgmap-app-layers-noaa-96",
+      "label": "NOAA 湿度",
+      "href": "/map/svgMapAppLayers/appLayers/noaa_nowCOAST/wmsMercator.svg#global_water_vapor_imagery_mosaic",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1095,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "気象",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-noaa-96",
+      "mounts": [
+        "layer-external-svgmap-app-layers-noaa-96"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "設定"
+      },
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "nowcoast.noaa.gov",
+          "cdn.jsdelivr.net"
+        ],
+        "verifiedAt": "2026-08-08",
+        "reason": "外部配信元と通信するレイヤー（nowcoast.noaa.gov, cdn.jsdelivr.net）"
+      }
+    },
+    {
+      "id": "layer-external-svgmap-app-layers-noaa-97",
+      "label": "NOAA 赤外線",
+      "href": "/map/svgMapAppLayers/appLayers/noaa_nowCOAST/wmsMercator.svg#global_longwave_imagery_mosaic",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1096,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "気象",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-noaa-97",
+      "mounts": [
+        "layer-external-svgmap-app-layers-noaa-97"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "設定"
+      },
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "nowcoast.noaa.gov",
+          "cdn.jsdelivr.net"
+        ],
+        "verifiedAt": "2026-08-08",
+        "reason": "外部配信元と通信するレイヤー（nowcoast.noaa.gov, cdn.jsdelivr.net）"
+      }
+    },
+    {
+      "id": "layer-external-svgmap-app-layers-noaa-98",
+      "label": "NOAA 可視光",
+      "href": "/map/svgMapAppLayers/appLayers/noaa_nowCOAST/wmsMercator.svg#global_visible_imagery_mosaic",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1097,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "気象",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-noaa-98",
+      "mounts": [
+        "layer-external-svgmap-app-layers-noaa-98"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "設定"
+      },
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "nowcoast.noaa.gov",
+          "cdn.jsdelivr.net"
+        ],
+        "verifiedAt": "2026-08-08",
+        "reason": "外部配信元と通信するレイヤー（nowcoast.noaa.gov, cdn.jsdelivr.net）"
+      }
+    },
+    {
+      "id": "layer-external-svgmap-app-layers-gpv-msm-99",
+      "label": "GPV降雨情報(MSM)",
+      "href": "/map/svgMapAppLayers/appLayers/niiDigitalArchives2011/dynamicWebTile.svg#globe&baseURL=none&zmax=11",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1098,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "気象",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-gpv-msm-99",
+      "mounts": [
+        "layer-external-svgmap-app-layers-gpv-msm-99"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "設定"
+      },
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "maps.gsi.go.jp",
+          "server.name.jp",
+          "cyberjapandata.gsi.go.jp",
+          "cdn.jsdelivr.net",
+          "agora.ex.nii.ac.jp"
+        ],
+        "verifiedAt": null,
+        "reason": "外部配信元と通信するレイヤー（maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, cdn.jsdelivr.net, agora.ex.nii.ac.jp）",
+        "renderIssue": "2011年東日本大震災向けアーカイブ。現在時刻を要求するとblank.pngへ転送される"
+      }
+    },
+    {
+      "id": "layer-external-svgmap-app-layers-jaxa-107",
+      "label": "JAXA 衛星全球降水マップ",
+      "href": "/map/svgMapAppLayers/appLayers/jaxaGSMaP/dynamicWebTile.svg#globe&baseURL=none&zmax=11",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1106,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "気象",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-jaxa-107",
+      "mounts": [
+        "layer-external-svgmap-app-layers-jaxa-107"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "設定"
+      },
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "maps.gsi.go.jp",
+          "server.name.jp",
+          "cyberjapandata.gsi.go.jp",
+          "cdn.jsdelivr.net",
+          "sharaku.eorc.jaxa.jp",
+          "www.eorc.jaxa.jp"
+        ],
+        "verifiedAt": "2026-08-08",
+        "reason": "外部配信元と通信するレイヤー（maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, cdn.jsdelivr.net, sharaku.eorc.jaxa.jp, www.eorc.jaxa.jp）"
+      }
+    },
+    {
+      "id": "layer-external-svgmap-app-layers-jaxa-108",
+      "label": "JAXA 衛星全球降水マップ(風向矢印)",
+      "href": "/map/svgMapAppLayers/appLayers/jaxaGSMaP/dynamicWebTile.svg#globe&baseURL=none&zmax=11",
+      "visible": false,
+      "source": "external/svgmap-app-layers",
+      "order": 1107,
+      "group": "SVGMapコミュニティ",
+      "note": "SVGMap App Layers由来",
+      "kind": "external",
+      "className": "気象",
+      "symbol": "コ",
+      "icon": "",
+      "accent": "#72519A",
+      "toggleKey": "layer-external-svgmap-app-layers-jaxa-108",
+      "mounts": [
+        "layer-external-svgmap-app-layers-jaxa-108"
+      ],
+      "visibilityStrategy": "native",
+      "search": null,
+      "manage": null,
+      "controllerUi": {
+        "label": "設定"
+      },
+      "userToggle": true,
+      "messages": null,
+      "alertFeed": null,
+      "health": null,
+      "dataSource": null,
+      "disabled": true,
+      "requiresController": true,
+      "experimental": false,
+      "community": {
+        "publisher": "SVGMap community",
+        "license": {
+          "name": "Mozilla Public License 2.0",
+          "spdx": "MPL-2.0"
+        },
+        "status": "bundled",
+        "runtime": "tight",
+        "delivery": "bundled",
+        "offline": false,
+        "externalDependencies": [
+          "maps.gsi.go.jp",
+          "server.name.jp",
+          "cyberjapandata.gsi.go.jp",
+          "cdn.jsdelivr.net",
+          "sharaku.eorc.jaxa.jp",
+          "www.eorc.jaxa.jp"
+        ],
+        "verifiedAt": "2026-08-08",
+        "reason": "外部配信元と通信するレイヤー（maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, cdn.jsdelivr.net, sharaku.eorc.jaxa.jp, www.eorc.jaxa.jp）"
+      }
+    },
+    {
       "id": "layer-external-svgmap-app-layers-jma-110",
       "label": "雨雲の動き（軽量版）(JMA)",
+      "href": "/map/layers/external/svgmap-app-layers/adapters/jma-rain-now.svg",
       "visible": false,
       "source": "external/svgmap-app-layers",
       "order": 1109,
@@ -650,8 +2129,7 @@
           "name": "Mozilla Public License 2.0",
           "spdx": "MPL-2.0"
         },
-        "status": "limited",
-        "category": "C",
+        "status": "bundled",
         "runtime": "tight",
         "delivery": "online-only",
         "offline": false,

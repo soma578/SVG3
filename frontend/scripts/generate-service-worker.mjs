@@ -18,6 +18,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import { intersectsQtctBounds } from '../../map/layers/portable/representative-pins/qtctFeatureEngine.js'
+import { isNeighborMountId } from './lib/scanLayers.mjs'
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url))
 const frontendRoot = path.resolve(scriptDir, '..')
@@ -47,6 +48,9 @@ const SHELL_FILES = [
   { file: 'regions/index.json', url: '/map/regions/index.json' },
   { file: 'regions/municipalities-index.json', url: '/map/regions/municipalities-index.json' },
   { file: 'webapp/manifest.webmanifest', url: '/manifest.webmanifest' },
+  // 保存した県の外へ動かしても白紙にしないための全国輪郭。地域単位ではなく
+  // シェル側に置く（どの県を保存していなくても必ず持っている状態にする）。
+  { file: 'layers/overview/japan.svg', url: '/map/layers/overview/japan.svg' },
 ]
 
 // 生成の材料であって配信物ではないもの。
@@ -192,21 +196,33 @@ const regionAssetsFor = (regionId, runtimeConfig) => {
   const municipalities = path.join(mapRoot, 'regions', regionId, 'municipalities.json')
   if (fs.existsSync(municipalities)) assets.add(`/map/regions/${regionId}/municipalities.json`)
 
+  const neighborCatalog = path.join(mapRoot, 'regions', regionId, 'neighbor-catalog.json')
+  if (fs.existsSync(neighborCatalog)) assets.add(`/map/regions/${regionId}/neighbor-catalog.json`)
+
   const containerFile = path.join(projectRoot, containerUrl.replace(/^\//, ''))
   if (fs.existsSync(containerFile)) {
     const xml = fs.readFileSync(containerFile, 'utf8')
-    for (const match of xml.matchAll(/xlink:href="([^"]+)"/g)) {
-      const href = match[1].split('#')[0]
-      if (!href.startsWith('/')) continue
-      // 地域固有の静的資産のみ。レイヤーコードは shell 側で持つ。
-      if (href.startsWith('/map/layers/hazard/')) assets.add(href)
-      // オフライン時に白地にしないための軽量背景。
-      if (href.startsWith('/map/layers/offline-basemap/')) assets.add(href)
-    }
-    // ハザードは県全体SVGのみ保存する。市区町村別まで入れると数百MBになる。
-    for (const match of xml.matchAll(/prefSvgUrl=([^&"]+)/g)) {
-      const href = decodeURIComponent(match[1])
-      if (href.startsWith('/map/layers/hazard/')) assets.add(href)
+    for (const tag of xml.matchAll(/<animation\b[^>]*>/g)) {
+      const attrs = tag[0]
+      const id = attrs.match(/\bid="([^"]+)"/)?.[1] || ''
+      // 周辺地域mountは隣接県ぶんの資産を指す。背景SVGは100KB程度なので
+      // 県境を越えた地図を切らさないために保存するが、ハザードは1県3-7MBあり、
+      // 隣接8県ぶん先読みすると1地域で数十MBになる。必要になった時に取りに行く。
+      const neighborMount = isNeighborMountId(id)
+      for (const match of attrs.matchAll(/xlink:href="([^"]+)"/g)) {
+        const href = match[1].split('#')[0]
+        if (!href.startsWith('/')) continue
+        // 地域固有の静的資産のみ。レイヤーコードは shell 側で持つ。
+        if (!neighborMount && href.startsWith('/map/layers/hazard/')) assets.add(href)
+        // オフライン時に白地にしないための軽量背景。
+        if (href.startsWith('/map/layers/offline-basemap/')) assets.add(href)
+      }
+      if (neighborMount) continue
+      // ハザードは県全体SVGのみ保存する。市区町村別まで入れると数百MBになる。
+      for (const match of attrs.matchAll(/prefSvgUrl=([^&"]+)/g)) {
+        const href = decodeURIComponent(match[1].replaceAll('&amp;', '&'))
+        if (href.startsWith('/map/layers/hazard/')) assets.add(href)
+      }
     }
   }
   return [...assets].sort()

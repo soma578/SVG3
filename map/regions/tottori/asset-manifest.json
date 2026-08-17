@@ -12,8 +12,13 @@
   "assets": [
     "/map/containers/Containers_webapp_denshi_31.svg",
     "/map/layers/hazard/31/tottori.svg",
+    "/map/layers/offline-basemap/hiroshima.svg",
+    "/map/layers/offline-basemap/hyogo.svg",
+    "/map/layers/offline-basemap/okayama.svg",
+    "/map/layers/offline-basemap/shimane.svg",
     "/map/layers/offline-basemap/tottori.svg",
     "/map/regions/tottori/municipalities.json",
+    "/map/regions/tottori/neighbor-catalog.json",
     "/map/regions/tottori/runtime-config.json"
   ],
   "dataShards": [

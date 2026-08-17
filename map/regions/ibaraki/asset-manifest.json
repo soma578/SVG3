@@ -12,8 +12,13 @@
   "assets": [
     "/map/containers/Containers_webapp_denshi_08.svg",
     "/map/layers/hazard/8/ibaraki.svg",
+    "/map/layers/offline-basemap/chiba.svg",
+    "/map/layers/offline-basemap/fukushima.svg",
     "/map/layers/offline-basemap/ibaraki.svg",
+    "/map/layers/offline-basemap/saitama.svg",
+    "/map/layers/offline-basemap/tochigi.svg",
     "/map/regions/ibaraki/municipalities.json",
+    "/map/regions/ibaraki/neighbor-catalog.json",
     "/map/regions/ibaraki/runtime-config.json"
   ],
   "dataShards": [

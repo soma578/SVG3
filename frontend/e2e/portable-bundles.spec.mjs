@@ -305,7 +305,7 @@ test('portable artifact index exposes the verified release fixtures', async ({ r
       fileName: `${artifact.packageId}-okayama-standalone.zip`,
     })
     expect(artifact.distribution).toMatchObject({
-      packageVersion: '1.0.0',
+      packageVersion: artifact.packageId === 'teamActivity' ? '1.2.0' : '1.0.0',
       publisher: { id: 'svg3', name: 'SVG3' },
       license: { spdx: 'NOASSERTION', name: '利用条件未設定' },
       publishedAt: '2026-07-21T00:00:00+09:00',
@@ -612,13 +612,17 @@ test('japan-river-webcams runs through native cross-origin S-LaWA with controlle
   await page.mouse.click(point.x, point.y)
   await expect(page.locator('#modalDiv')).toBeVisible({ timeout: 10_000 })
   await expect.poll(() => page.evaluate(() => window.__webcamModalSource || '')).toContain('data-slawa-action="refresh-image"')
+  await expect.poll(() => page.evaluate(() => window.__webcamModalSource || '')).toContain('data-slawa-cooldown-ms="30000"')
   await expect.poll(() => mediaRequests.length).toBeGreaterThan(0)
   const requestsBeforeRefresh = mediaRequests.length
+  expect(await page.evaluate(() => window.__webcamModalContent
+    ?.querySelector?.('[data-slawa-action="refresh-image"]')
+    ?.disabled)).toBe(true)
   await page.evaluate(() => window.__webcamModalContent
     ?.querySelector?.('[data-slawa-action="refresh-image"]')
     ?.click())
-  await expect.poll(() => mediaRequests.length).toBeGreaterThan(requestsBeforeRefresh)
-  expect(mediaRequests.at(-1)).toContain('_svgmapRefresh=')
+  await page.waitForTimeout(500)
+  expect(mediaRequests).toHaveLength(requestsBeforeRefresh)
 })
 
 test('evacuation runs through native cross-origin S-LaWA with deferred detail loading', async ({ page }) => {

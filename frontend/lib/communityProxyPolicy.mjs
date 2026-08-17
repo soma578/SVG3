@@ -58,10 +58,15 @@ export const validateCommunityProxyUrl = (value) => {
     throw new Error('転送先は認証情報や独自ポートを含まないHTTPS URLに限ります')
   }
   if (net.isIP(url.hostname)) throw new Error('IPアドレスを転送先には指定できません')
-  const target = TARGETS.find((candidate) => candidate.hostname === url.hostname)
-  if (!target || !target.pathnamePrefixes.some((prefix) => url.pathname.startsWith(prefix))) {
-    throw new Error('このホストまたはパスはコミュニティプロキシで許可されていません')
-  }
+  // ホスト名の固定許可リストは持たない。本家のCorsProxyは任意の外部URLを中継し、
+  // レイヤーはその前提で書かれている。許可リストで塞ぐと、実行時に追加した
+  // コミュニティレイヤーだけが本家と違う経路になり、CORS未対応の配信元で落ちる。
+  //
+  // 代わりに、中継してよい「かたち」だけを制限する:
+  //   HTTPS のみ / 認証情報・独自ポート禁止 / IPリテラル禁止 /
+  //   公開DNSで解決できること(assertPublicDns) / 許可した Content-Type のみ /
+  //   4MB上限 / GET・HEADのみ / リダイレクト先も同じ検査を通す。
+  // 内部ネットワークへは到達できず、任意のバイト列を運ぶ経路にもならない。
   return url
 }
 
@@ -133,6 +138,9 @@ const fetchCommunityProxyResponse = async (requestUrl, method = 'GET', fetchImpl
   const timeout = setTimeout(() => abort.abort(), timeoutMs)
   try {
     let upstream
+    // 配信元が瞬間的に502を返すことがある（NOAA nowCOASTで実測）。タイル1枚の
+    // 失敗で地図に穴が空くため、短い間隔で一度だけ引き直す。長く粘らせない。
+    let retriedOnBadGateway = false
     for (let redirects = 0; redirects <= 3; redirects += 1) {
       upstream = await fetchImpl(target, {
         method,
@@ -145,6 +153,12 @@ const fetchCommunityProxyResponse = async (requestUrl, method = 'GET', fetchImpl
           'User-Agent': 'Mozilla/5.0 (compatible; SVGMap-Community-Proxy/1.0)',
         },
       })
+      if (!retriedOnBadGateway && [502, 503, 504].includes(upstream.status)) {
+        retriedOnBadGateway = true
+        redirects -= 1
+        await new Promise((resolve) => { setTimeout(resolve, 300) })
+        continue
+      }
       if (![301, 302, 303, 307, 308].includes(upstream.status)) break
       const location = upstream.headers.get('location')
       if (!location || redirects === 3) return new Response('Upstream redirect rejected', { status: 502 })
