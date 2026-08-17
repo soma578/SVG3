@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import test from 'node:test'
 
 import { renderWebcamDetail } from '../../map/layers/portable/japan-river-webcams/webcamDetail.js'
+import { PIN_LAYER_PROFILES } from '../../map/layers/portable/representative-pins/pinLayerProfiles.js'
 
 const OFFICIAL = 'https://www.river.go.jp/kawabou/pc/tm?itmkndCd=200&scamId=108449032'
 
@@ -68,7 +69,8 @@ test('暫定表示の出典・取得条件・撮影時刻不明を明示する',
   const html = renderWebcamDetail({
     title: '注意表示', imageUrl: 'https://cam.river.go.jp/x.jpg', pageUrl: OFFICIAL,
   }, { imageEnabled: true })
-  assert.match(html, /国土交通省「川の防災情報」/)
+  assert.equal(PIN_LAYER_PROFILES.japanRiverWebcam.attribution.label, '国土交通省「川の防災情報」')
+  assert.equal(PIN_LAYER_PROFILES.japanRiverWebcam.attribution.url, 'https://www.river.go.jp/')
   assert.match(html, /第三者配信元から利用者操作時に直接取得します/)
   assert.match(html, /撮影時刻：確認できません/)
   assert.match(html, /data-slawa-cooldown-ms="30000"/)

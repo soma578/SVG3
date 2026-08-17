@@ -22,7 +22,10 @@ const mapFrame = async (page) => {
 /** POI 詳細モーダルを開いて実寸を返す。 */
 const openModal = (frame) => frame.evaluate(async () => {
   const modal = await import('/map/layers/portable/representative-pins/propertyModal.js')
-  const info = modal.showPropertyModal('<h1>河川監視カメラ</h1><p>テスト</p>')
+  const info = modal.showPropertyModal(
+    '<article class="svg3-property"><h1>河川監視カメラ</h1><p>テスト</p></article>',
+    { attribution: { label: '国土交通省「川の防災情報」', url: 'https://www.river.go.jp/' } },
+  )
   const host = info?.getRootNode?.()?.host
   if (!host) return null
   const rect = host.getBoundingClientRect()
@@ -31,6 +34,8 @@ const openModal = (frame) => frame.evaluate(async () => {
     left: Math.round(rect.left),
     viewportWidth: Math.round(window.visualViewport?.width || window.innerWidth),
     viewportHeight: Math.round(window.visualViewport?.height || window.innerHeight),
+    attribution: info.querySelector('.svg3-property-attribution')?.textContent?.trim() || '',
+    attributionHref: info.querySelector('.svg3-property-attribution a')?.href || '',
   }
 })
 
@@ -66,11 +71,14 @@ test('デスクトップではPOI詳細が全幅へ膨らまない', async ({ pa
 
   const modal = await openModal(frame)
   expect(modal, 'モーダルが開かない').not.toBeNull()
-  // 基準幅は300。候補一覧(320px)やレイヤー固有UI(399px)と並べて、地図を
+  // 基準幅は260。候補一覧(320px)やレイヤー固有UI(399px)と並べて、地図を
   // 必要以上に隠さない大きさにしてある。全幅へ膨らまないことと、
   // 読めないほど細らないことの両方を見る。
-  expect(modal.width).toBeLessThanOrEqual(360)
+  expect(modal.width).toBeLessThanOrEqual(280)
   expect(modal.width).toBeGreaterThanOrEqual(240)
+  expect(modal.attribution).toContain('出典')
+  expect(modal.attribution).toContain('川の防災情報')
+  expect(modal.attributionHref).toBe('https://www.river.go.jp/')
 })
 
 test('縦が短いデスクトップでもPOI詳細が全幅へ膨らまない', async ({ page }) => {
@@ -84,7 +92,7 @@ test('縦が短いデスクトップでもPOI詳細が全幅へ膨らまない',
   const modal = await openModal(frame)
   expect(modal).not.toBeNull()
   expect(modal.viewportHeight, '縦が短い状態で検証していること').toBeLessThan(768)
-  expect(modal.width, 'デスクトップ幅なら全幅にしない').toBeLessThanOrEqual(360)
+  expect(modal.width, 'デスクトップ幅なら全幅にしない').toBeLessThanOrEqual(280)
 })
 
 test('狭い画面ではPOI詳細を画面幅に合わせる', async ({ page }) => {

@@ -29,8 +29,8 @@ const rowFor = (page, text) => page.locator('#layer-list .layer-row').filter({ h
 test('本家のコミュニティ資産148件を、本家と同じ並びでそのまま公開する', async ({ page }) => {
   await openPanel(page)
   // 互換性の等級で序列を付けない。追加できないのは配布物に実体が無い1件だけ。
-  await expect(page.locator('#community-compatibility-summary')).toHaveText('147/148件')
   await page.locator('#community-compatibility summary').click()
+  await expect(page.locator('#community-compatibility-summary')).toHaveText('147/148件')
   await expect(page.locator('#community-compatibility-list li')).toHaveCount(148)
   await expect(page.locator('#community-compatibility-list li[data-available="false"]')).toHaveCount(1)
   await expect(page.locator('#community-compatibility-list li[data-available="false"]')).toContainText('starlinkUnofficialGS')

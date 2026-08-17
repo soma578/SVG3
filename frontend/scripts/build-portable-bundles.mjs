@@ -113,6 +113,16 @@ const writeText = (filePath, text) => {
   fs.writeFileSync(filePath, text, 'utf8')
 }
 
+const copyPortableIcons = (destination) => {
+  const iconSource = path.join(mapRoot, 'icons')
+  fs.cpSync(iconSource, destination, {
+    recursive: true,
+    // Runtime code references current-location-pin.svg. Retain the legacy PNG
+    // in the source tree without paying its 929 KiB cost in every bundle.
+    filter: (source) => path.relative(iconSource, source) !== 'current-location-pin.png',
+  })
+}
+
 const writeBundleArchive = (bundleRoot, packageId, regionId, modifiedAt) => {
   const bytes = createPortableBundleArchive(bundleRoot, {
     rootName: `${packageId}-${regionId}`,
@@ -458,8 +468,7 @@ const buildBundle = (mount) => {
     }
   })
 
-  const iconSource = path.join(mapRoot, 'icons')
-  fs.cpSync(iconSource, path.join(bundleRoot, 'map', 'icons'), { recursive: true })
+  copyPortableIcons(path.join(bundleRoot, 'map', 'icons'))
   fs.cpSync(path.join(mapRoot, 'vendor', 'svgmapjs'), path.join(bundleRoot, 'map', 'vendor', 'svgmapjs'), {
     recursive: true,
     filter: (source) => !source.endsWith(':Zone.Identifier') && path.basename(source) !== '.git',
@@ -672,7 +681,7 @@ const buildStandaloneBundle = ({ packageDir, pkg }) => {
     const source = fs.readFileSync(bundledProfiles, 'utf8')
     writeText(bundledProfiles, source.replaceAll("'/map/icons/", "'../../../icons/"))
   }
-  fs.cpSync(path.join(mapRoot, 'icons'), path.join(bundleRoot, 'map', 'icons'), { recursive: true })
+  copyPortableIcons(path.join(bundleRoot, 'map', 'icons'))
   const bundledDependencyLock = dependencyLock.map((dependency) => {
     const manifestPath = path.join(bundleRoot, 'map', 'layers', 'portable', dependency.manifest)
     return {
@@ -894,6 +903,8 @@ const digestOfTree = (root, files) => {
   return hash.digest('hex').slice(0, 12)
 }
 
+const initializedSharedPackages = new Set()
+
 /**
  * 組み上がった自己完結ツリーを、共通部と県別部へ分ける。
  * 共通部は最初の県で書き、以降の県では「同一であること」を確かめる。
@@ -904,6 +915,13 @@ const splitIntoComponents = (packageId, regionId) => {
   const built = path.join(stageRoot, packageId, regionId)
   const sharedTarget = path.join(sharedRoot, packageId)
   const regionTarget = path.join(regionsRoot, regionId, packageId)
+  // A rebuild must also remove files that disappeared from the source tree.
+  // Only reset once per package: subsequent regions verify that their shared
+  // files are byte-identical to the first region built in this run.
+  if (!initializedSharedPackages.has(packageId)) {
+    fs.rmSync(sharedTarget, { recursive: true, force: true })
+    initializedSharedPackages.add(packageId)
+  }
   fs.rmSync(regionTarget, { recursive: true, force: true })
   const conflicts = []
   for (const relative of listFiles(built)) {

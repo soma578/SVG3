@@ -56,6 +56,9 @@ const SHELL_FILES = [
 // 生成の材料であって配信物ではないもの。
 const SHELL_EXCLUDED_URLS = new Set([
   '/map/webapp/sw.body.js',
+  // The application uses the SVG pin. Keep the legacy raster source in the
+  // repository, but do not make every offline install download its 929 KiB.
+  '/map/icons/current-location-pin.png',
 ])
 
 const walk = (root, extensions) => {
