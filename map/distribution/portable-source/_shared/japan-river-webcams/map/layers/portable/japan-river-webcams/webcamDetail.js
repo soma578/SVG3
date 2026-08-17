@@ -60,10 +60,6 @@ export const renderWebcamDetail = (feature, { imageEnabled = false } = {}) => {
         <dt>提供元</dt>
         <dd>${escapeHtml(feature.provider || '')}</dd>
       </div>
-      <div class="svg3-property-row">
-        <dt>出典</dt>
-        <dd>国土交通省「川の防災情報」</dd>
-      </div>
       <div class="svg3-property-row svg3-property-media-row">
         <dt>カメラ画像</dt>
         <dd data-slawa-media>

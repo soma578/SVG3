@@ -29,7 +29,7 @@
     },
     "publishedAt": "2026-07-21T00:00:00+09:00"
   },
-  "contentDigest": "sha256-815024f37e72772bbc43fe698b324bf8a21349821b0b2df4116a5a3cfe61b619",
+  "contentDigest": "sha256-4b9f1b0eafa42e3ff11375becdcc55dbffc761ad4a3deb7839dd66da6c7188cc",
   "portability": {
     "pathIndependent": true,
     "crossOrigin": false,
@@ -45,7 +45,7 @@
         "id": "representative-pins",
         "version": "1.2.2",
         "manifest": "representative-pins/runtime.package.json",
-        "integrity": "sha256-b33ad7afb358ef701b191bf89904ce508f1ae9860a254224145f5928a9735005"
+        "integrity": "sha256-fb61dd7724f2e308c04a2141f866a762cbf5cdc2afb52d37aa395e2a5a89f0b0"
       },
       {
         "id": "svgmap-slawa-client",
@@ -69,8 +69,8 @@
     },
     {
       "path": "layer.manifest.json",
-      "bytes": 11777,
-      "sha256": "fdf29f89ea1e0239d99498373a4ff66ea991eb282e0005388723a40ab98aecce"
+      "bytes": 11607,
+      "sha256": "eaa5a4f879e3b5f2894a905533f87f140674f1c6afa4e12fa6cdc29ae4a3495a"
     },
     {
       "path": "map/data/qtct/evacuation/okayama/detail.json",
@@ -91,11 +91,6 @@
       "path": "map/icons/app/icon-512.png",
       "bytes": 3506,
       "sha256": "055300105ee08d361ad295f0124de7e1ace64d771ce000415a01aefcf44ea105"
-    },
-    {
-      "path": "map/icons/current-location-pin.png",
-      "bytes": 928996,
-      "sha256": "d23972bef3b6d35eddc9c74b8cfe663c8dbfaf6007fd08451d73017d216fc4d7"
     },
     {
       "path": "map/icons/current-location-pin.svg",
@@ -280,7 +275,7 @@
     {
       "path": "map/layers/portable/evacuation/layer.package.json",
       "bytes": 2292,
-      "sha256": "bc76ca69eef99c3d73bd8503593fd86f8a5d2963d98b283feb94f69689ea9549"
+      "sha256": "b118ae78a56a845be496db4791ec66e0c977b7408249e4bb256a52cf01ea703d"
     },
     {
       "path": "map/layers/portable/representative-pins/DENSITY_POINTS_FORMAT.md",
@@ -304,13 +299,13 @@
     },
     {
       "path": "map/layers/portable/representative-pins/pinLayerProfiles.js",
-      "bytes": 9349,
-      "sha256": "3bcd6d187f691aad72df5d4db1019a0cd9a7da9817631387b2fc08f5ddd006d0"
+      "bytes": 9871,
+      "sha256": "b5e840060bf63bccd3f07410fcee455352bd147ca10670cc91c7ee28a8d3a056"
     },
     {
       "path": "map/layers/portable/representative-pins/propertyModal.js",
-      "bytes": 9762,
-      "sha256": "401f9f8fd36819a83f11aace3f841c80ffa6ca1d419ce5fa9b4a1a2aaf64a913"
+      "bytes": 11035,
+      "sha256": "051d9b605ec4f8277577895770dc2ff480ad328625e25cc7f0ec906a17b075ee"
     },
     {
       "path": "map/layers/portable/representative-pins/qtctBuilder.mjs",
@@ -324,8 +319,8 @@
     },
     {
       "path": "map/layers/portable/representative-pins/representativePinsCore.js",
-      "bytes": 58872,
-      "sha256": "9b1e02cf0093ba15b3be96bc3b0b900d6589b8f8a96bb2f5eecde0ecee589f79"
+      "bytes": 58912,
+      "sha256": "a74d8b584e7884419cdfe961a83758d15f8cb6e7064fd075dcc3fc6f8da0d3eb"
     },
     {
       "path": "map/layers/portable/representative-pins/representativePinsPortable.html",

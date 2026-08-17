@@ -30,6 +30,7 @@
 export const PIN_LAYER_PROFILES = {
   generic: {
     label: '汎用ピン',
+    attribution: { label: 'SVG3（配布データ）' },
     symbol: '点',
     color: '#2563eb',
     densityColor: '#2563eb',
@@ -52,6 +53,7 @@ export const PIN_LAYER_PROFILES = {
   },
   evacuation: {
     label: '避難所代表ピン',
+    attribution: { label: 'SVG3（避難所配布データ）' },
     symbol: '避',
     color: '#16865b',
     densityColor: '#ff6b00',
@@ -79,6 +81,7 @@ export const PIN_LAYER_PROFILES = {
   },
   teamActivity: {
     label: '活動情報代表ピン',
+    attribution: { label: 'SVG3チーム活動CSV' },
     symbol: '活',
     color: '#7c3aed',
     densityColor: '#d946ef',
@@ -117,6 +120,10 @@ export const PIN_LAYER_PROFILES = {
   },
   japanRiverWebcam: {
     label: '河川監視カメラ',
+    attribution: {
+      label: '国土交通省「川の防災情報」',
+      url: 'https://www.river.go.jp/',
+    },
     symbol: 'カ',
     color: '#1261a0',
     densityColor: '#00b8d9',
@@ -139,6 +146,10 @@ export const PIN_LAYER_PROFILES = {
   },
   riverLevel: {
     label: '河川水位',
+    attribution: {
+      label: '水防災オープンデータ提供サービス',
+      url: 'https://www.river.or.jp/koeki/opendata/index.html',
+    },
     symbol: '水',
     color: '#0369a1',
     densityColor: '#2563eb',
@@ -173,6 +184,7 @@ export const PIN_LAYER_PROFILES = {
   },
   roadClosure: {
     label: '道路通行情報',
+    attribution: { label: 'SVG3検証用スナップショット' },
     symbol: '道',
     color: '#b45309',
     densityColor: '#f2b705',

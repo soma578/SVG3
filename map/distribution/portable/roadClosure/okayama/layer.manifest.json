@@ -17,7 +17,7 @@
     },
     "publishedAt": "2026-07-21T00:00:00+09:00"
   },
-  "contentDigest": "sha256-a0ad0010d09c8afeb12943c37ea6112a5daa1d18f6a6402bd0bbb79365cc7a0c",
+  "contentDigest": "sha256-d012827d48d5a668b72fb1330a6ab5e24520e301dce6f9ceab14b96b1a42bb29",
   "files": [
     {
       "path": "Container.isolated.svg",
@@ -48,11 +48,6 @@
       "path": "map/icons/app/icon-512.png",
       "bytes": 3506,
       "sha256": "055300105ee08d361ad295f0124de7e1ace64d771ce000415a01aefcf44ea105"
-    },
-    {
-      "path": "map/icons/current-location-pin.png",
-      "bytes": 928996,
-      "sha256": "d23972bef3b6d35eddc9c74b8cfe663c8dbfaf6007fd08451d73017d216fc4d7"
     },
     {
       "path": "map/icons/current-location-pin.svg",
@@ -241,13 +236,13 @@
     },
     {
       "path": "map/layers/portable/representative-pins/pinLayerProfiles.js",
-      "bytes": 9349,
-      "sha256": "3bcd6d187f691aad72df5d4db1019a0cd9a7da9817631387b2fc08f5ddd006d0"
+      "bytes": 9871,
+      "sha256": "b5e840060bf63bccd3f07410fcee455352bd147ca10670cc91c7ee28a8d3a056"
     },
     {
       "path": "map/layers/portable/representative-pins/propertyModal.js",
-      "bytes": 9762,
-      "sha256": "401f9f8fd36819a83f11aace3f841c80ffa6ca1d419ce5fa9b4a1a2aaf64a913"
+      "bytes": 11035,
+      "sha256": "051d9b605ec4f8277577895770dc2ff480ad328625e25cc7f0ec906a17b075ee"
     },
     {
       "path": "map/layers/portable/representative-pins/qtctBuilder.mjs",
@@ -261,8 +256,8 @@
     },
     {
       "path": "map/layers/portable/representative-pins/representativePinsCore.js",
-      "bytes": 58872,
-      "sha256": "9b1e02cf0093ba15b3be96bc3b0b900d6589b8f8a96bb2f5eecde0ecee589f79"
+      "bytes": 58912,
+      "sha256": "a74d8b584e7884419cdfe961a83758d15f8cb6e7064fd075dcc3fc6f8da0d3eb"
     },
     {
       "path": "map/layers/portable/representative-pins/representativePinsPortable.html",
@@ -287,7 +282,7 @@
     {
       "path": "map/layers/portable/road-closure/layer.package.json",
       "bytes": 2269,
-      "sha256": "e56bafec10de7c2847871558f35f94eb65f3dbacfa646b385a68a0dbc0dd81ce"
+      "sha256": "5ecddb45a8950f8c2ab67e31d2a35fabbc238ac00859ed252180ef9db78d4053"
     },
     {
       "path": "map/layers/portable/road-closure/roadClosureDetail.js",

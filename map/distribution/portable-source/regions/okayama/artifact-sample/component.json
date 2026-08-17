@@ -3,7 +3,7 @@
   "kind": "portable-regional-component",
   "packageId": "artifact-sample",
   "regionId": "okayama",
-  "sharedVersion": "70983bcca558",
+  "sharedVersion": "1435d2fa16e4",
   "files": [
     "Container.isolated.svg",
     "Container.svg",

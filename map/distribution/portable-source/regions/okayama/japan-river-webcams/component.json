@@ -3,7 +3,7 @@
   "kind": "portable-regional-component",
   "packageId": "japan-river-webcams",
   "regionId": "okayama",
-  "sharedVersion": "d3525fa34949",
+  "sharedVersion": "0b9b0de2511e",
   "files": [
     "Container.isolated.svg",
     "Container.svg",

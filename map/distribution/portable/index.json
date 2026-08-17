@@ -9,7 +9,7 @@
       "regionId": "okayama",
       "listed": true,
       "path": "artifact-sample/okayama",
-      "contentDigest": "sha256-d8f7b04d918d719988e389f02664b2875de2c97ed574aebd51fc75cd1fea201d",
+      "contentDigest": "sha256-a19c5a77c36ea2fa2d0da4e4d47547d1d2bc778456b3291cbc2135be402a521c",
       "entrypoints": {
         "tight": "viewer.html",
         "container": "Container.svg",
@@ -31,7 +31,7 @@
             "id": "representative-pins",
             "version": "1.2.2",
             "manifest": "representative-pins/runtime.package.json",
-            "integrity": "sha256-b33ad7afb358ef701b191bf89904ce508f1ae9860a254224145f5928a9735005"
+            "integrity": "sha256-fb61dd7724f2e308c04a2141f866a762cbf5cdc2afb52d37aa395e2a5a89f0b0"
           },
           {
             "id": "svgmap-slawa-client",
@@ -56,20 +56,20 @@
         },
         "publishedAt": "2026-07-21T00:00:00+09:00"
       },
-      "manifestSha256": "6965cd50bd843cff039bba1ff7110fca30357f1d6f268a2543a3f8eb07e499d8",
-      "fileCount": 169,
-      "bytes": 2602849,
+      "manifestSha256": "b4b250e4770f1f2ad80ee2d53d9bc784eebb2979ee1bde94bb806fc421f318cc",
+      "fileCount": 168,
+      "bytes": 1675518,
       "archive": {
         "path": "layer.zip",
         "fileName": "artifact-sample-okayama-layer.zip",
-        "bytes": 1270516,
-        "sha256": "37ef8b876be6da8c5b30757f7c5f5d1c1e4316722551d5f4571236c7e886efe2"
+        "bytes": 353524,
+        "sha256": "3b971a6ee96419913cf19c5bf0ee5510946884b1ceec119da7c063400afc5c6d"
       },
       "standaloneArchive": {
         "path": "bundle.zip",
         "fileName": "artifact-sample-okayama-standalone.zip",
-        "bytes": 1668926,
-        "sha256": "e78546d6d36d51c205b4c8fd5785a55f026e59297c8a8dcdd68393e876b8c08f"
+        "bytes": 751895,
+        "sha256": "ea70e237c5ade5f455f55c4f41efb51460e4e816ddada3730c7dae881c8f3529"
       }
     },
     {
@@ -80,7 +80,7 @@
       "regionId": "okayama",
       "listed": true,
       "path": "evacuation/okayama",
-      "contentDigest": "sha256-815024f37e72772bbc43fe698b324bf8a21349821b0b2df4116a5a3cfe61b619",
+      "contentDigest": "sha256-4b9f1b0eafa42e3ff11375becdcc55dbffc761ad4a3deb7839dd66da6c7188cc",
       "entrypoints": {
         "tight": "viewer.html",
         "container": "Container.svg",
@@ -102,7 +102,7 @@
             "id": "representative-pins",
             "version": "1.2.2",
             "manifest": "representative-pins/runtime.package.json",
-            "integrity": "sha256-b33ad7afb358ef701b191bf89904ce508f1ae9860a254224145f5928a9735005"
+            "integrity": "sha256-fb61dd7724f2e308c04a2141f866a762cbf5cdc2afb52d37aa395e2a5a89f0b0"
           },
           {
             "id": "svgmap-slawa-client",
@@ -127,20 +127,20 @@
         },
         "publishedAt": "2026-07-21T00:00:00+09:00"
       },
-      "manifestSha256": "64bf9d8245cec2ff0b8d7cb508653d34a8bd5170d60f8ca91c2add82a8ac1505",
-      "fileCount": 170,
-      "bytes": 6075095,
+      "manifestSha256": "b97a2809e9d0ac0f9214b564739fb1cf3b01029db053a1b55bec564b9e4e36b1",
+      "fileCount": 169,
+      "bytes": 5147764,
       "archive": {
         "path": "layer.zip",
         "fileName": "evacuation-okayama-layer.zip",
-        "bytes": 1517025,
-        "sha256": "7f4820525427cce12f37709c0473dc0cfab6014f1c22aa20e36f54c5badca7e4"
+        "bytes": 600040,
+        "sha256": "a21a8171b043e8f60fc84a960879e0ba5667653b251accc6dc9a2c30ef8d606d"
       },
       "standaloneArchive": {
         "path": "bundle.zip",
         "fileName": "evacuation-okayama-standalone.zip",
-        "bytes": 1914376,
-        "sha256": "76169b8d650bf0cb4ee6212fdd8a1c2cb978a79101a7b86a34f2173495914b7d"
+        "bytes": 997350,
+        "sha256": "bf507992e8c657ca942d9d40d214bd3f82b85482b6c7343becd1e603db5d0195"
       }
     },
     {
@@ -151,7 +151,7 @@
       "regionId": "okayama",
       "listed": false,
       "path": "japan-river-webcams/okayama",
-      "contentDigest": "sha256-50426ff4933c2acf4c9a14b7094989fbe0d3b066ec1a0b90cae0d545fa874f8d",
+      "contentDigest": "sha256-ee5299866bc1e5346e9d2dc9af4555855764d100a3c1549076db9511e0cbaa94",
       "entrypoints": {
         "tight": "viewer.html",
         "container": "Container.svg",
@@ -173,7 +173,7 @@
             "id": "representative-pins",
             "version": "1.2.2",
             "manifest": "representative-pins/runtime.package.json",
-            "integrity": "sha256-b33ad7afb358ef701b191bf89904ce508f1ae9860a254224145f5928a9735005"
+            "integrity": "sha256-fb61dd7724f2e308c04a2141f866a762cbf5cdc2afb52d37aa395e2a5a89f0b0"
           },
           {
             "id": "svgmap-slawa-client",
@@ -198,20 +198,20 @@
         },
         "publishedAt": "2026-07-21T00:00:00+09:00"
       },
-      "manifestSha256": "2098b98a8161fd2f89ab1ffd2d1a1eb1bbad602f96b9600d2a6524e0f456a04b",
-      "fileCount": 171,
-      "bytes": 3212942,
+      "manifestSha256": "86915bfe56c60c9ad7a7a06a62b2beba4080f23df3b3c1191627253a4b93d786",
+      "fileCount": 170,
+      "bytes": 2285479,
       "archive": {
         "path": "layer.zip",
         "fileName": "japan-river-webcams-okayama-layer.zip",
-        "bytes": 1308800,
-        "sha256": "4d2b1ed58f719502a0e5e8981c972f57231a36f5bea2dbc3a982f06a8461e790"
+        "bytes": 391764,
+        "sha256": "e82ea80ac37ea74bfc44e36dcc769946bff415131cb7c419744cca0402b57ddd"
       },
       "standaloneArchive": {
         "path": "bundle.zip",
         "fileName": "japan-river-webcams-okayama-standalone.zip",
-        "bytes": 1708428,
-        "sha256": "43076abb8554e3bca85d5ec0a3701475caabf314183d28a41afe3ac7a67880e9"
+        "bytes": 791355,
+        "sha256": "96820403d60c37fd4868e952469f96055f5fcf98adc2a5d9bfb07160e5bfa299"
       }
     },
     {
@@ -222,7 +222,7 @@
       "regionId": "okayama",
       "listed": false,
       "path": "riverLevel/okayama",
-      "contentDigest": "sha256-f6fa0309aca64c483dd202d5f8073ddde6b7193e64ba268506c6667f78515682",
+      "contentDigest": "sha256-e1e741ed24f5395bb84b0400efc9aecf1e21283de630ee1c3406e0dc0e7a3520",
       "entrypoints": {
         "tight": "viewer.html",
         "container": "Container.svg",
@@ -244,7 +244,7 @@
             "id": "representative-pins",
             "version": "1.2.2",
             "manifest": "representative-pins/runtime.package.json",
-            "integrity": "sha256-b33ad7afb358ef701b191bf89904ce508f1ae9860a254224145f5928a9735005"
+            "integrity": "sha256-fb61dd7724f2e308c04a2141f866a762cbf5cdc2afb52d37aa395e2a5a89f0b0"
           },
           {
             "id": "svgmap-slawa-client",
@@ -269,20 +269,20 @@
         },
         "publishedAt": "2026-07-21T00:00:00+09:00"
       },
-      "manifestSha256": "29c349e193b74271159a0c11b8743eafb2e08b7d3e11c77fca0402210e75faad",
-      "fileCount": 170,
-      "bytes": 2624850,
+      "manifestSha256": "222fff768bbc3a97da85f8feeb59e23a6e14864d236b4692f0649fde765ec537",
+      "fileCount": 169,
+      "bytes": 1697519,
       "archive": {
         "path": "layer.zip",
         "fileName": "riverLevel-okayama-layer.zip",
-        "bytes": 1273101,
-        "sha256": "f3a6af0dc497e376774da86544b6ad4444d329c40e240dd5233de24354068b17"
+        "bytes": 356116,
+        "sha256": "bfd7249d897644335e3240328cb962450a725cccbdc94aaf5cb17c099ab90746"
       },
       "standaloneArchive": {
         "path": "bundle.zip",
         "fileName": "riverLevel-okayama-standalone.zip",
-        "bytes": 1670569,
-        "sha256": "7bc7b3933b5f9a5394d51437e0704fedb7cac12aa9917720cce092e74fd7bd63"
+        "bytes": 753550,
+        "sha256": "805af6f01f0aff16c60f00c267b4a37e5dae9c9cff3df58b6840d812a053d999"
       }
     },
     {
@@ -293,7 +293,7 @@
       "regionId": "okayama",
       "listed": false,
       "path": "roadClosure/okayama",
-      "contentDigest": "sha256-f5bc1018194df196d14f1d8f67299a35313835e0e40a87820b947bc22a355a56",
+      "contentDigest": "sha256-3ab58a936172ff1eb8008ce6239635f4fa5d1827b0c8b39ccb2211e7e85b5f21",
       "entrypoints": {
         "tight": "viewer.html",
         "container": "Container.svg",
@@ -315,7 +315,7 @@
             "id": "representative-pins",
             "version": "1.2.2",
             "manifest": "representative-pins/runtime.package.json",
-            "integrity": "sha256-b33ad7afb358ef701b191bf89904ce508f1ae9860a254224145f5928a9735005"
+            "integrity": "sha256-fb61dd7724f2e308c04a2141f866a762cbf5cdc2afb52d37aa395e2a5a89f0b0"
           },
           {
             "id": "svgmap-slawa-client",
@@ -340,20 +340,20 @@
         },
         "publishedAt": "2026-07-21T00:00:00+09:00"
       },
-      "manifestSha256": "94c9e24b59618f1e0abf723d63ac4f20cdcc007e4f83334c67e61865b0f07ad0",
-      "fileCount": 170,
-      "bytes": 2618350,
+      "manifestSha256": "4e6417ddea29f60d870f20174f12fb61f19fd06990276753f34374b7710498bd",
+      "fileCount": 169,
+      "bytes": 1691019,
       "archive": {
         "path": "layer.zip",
         "fileName": "roadClosure-okayama-layer.zip",
-        "bytes": 1272468,
-        "sha256": "66749b989ba4a47ba0f166aed518394472cafcc130491c963d711de8e9377ad4"
+        "bytes": 355484,
+        "sha256": "91d24d7db58cd0cd9008033f669cafcad5b3cff88c9a3152ec2455eb941badaa"
       },
       "standaloneArchive": {
         "path": "bundle.zip",
         "fileName": "roadClosure-okayama-standalone.zip",
-        "bytes": 1670221,
-        "sha256": "f3acc13d1d855175e23025666a25e557420cdb09d13af869f7648baf4b60e2ed"
+        "bytes": 753201,
+        "sha256": "011fa5ccaf89045df5735799f909586f3390803faaecac94eefd6b2d0157d96b"
       }
     },
     {
@@ -364,7 +364,7 @@
       "regionId": "okayama",
       "listed": true,
       "path": "teamActivity/okayama",
-      "contentDigest": "sha256-b3d8e47be91ca20a41027decf776fcba35ba6feacbf3f4362c2a0f6d3206f13d",
+      "contentDigest": "sha256-43f3b4d5870436a85f076c11585d6b8192e4c80252ae1c4ca1415d24cf821b73",
       "entrypoints": {
         "tight": "viewer.html",
         "container": "Container.svg",
@@ -386,7 +386,7 @@
             "id": "representative-pins",
             "version": "1.2.2",
             "manifest": "representative-pins/runtime.package.json",
-            "integrity": "sha256-b33ad7afb358ef701b191bf89904ce508f1ae9860a254224145f5928a9735005"
+            "integrity": "sha256-fb61dd7724f2e308c04a2141f866a762cbf5cdc2afb52d37aa395e2a5a89f0b0"
           },
           {
             "id": "svgmap-slawa-client",
@@ -411,20 +411,20 @@
         },
         "publishedAt": "2026-07-21T00:00:00+09:00"
       },
-      "manifestSha256": "1c5eb0d28165d7c98565096f537fab6337dcbc6df9a07f13a32fde33f1e205c5",
-      "fileCount": 177,
-      "bytes": 4101903,
+      "manifestSha256": "0e5fd9f07cc453927039b3b676d695b266dbc69b8c44f6b3430661d95043a6bb",
+      "fileCount": 176,
+      "bytes": 3174572,
       "archive": {
         "path": "layer.zip",
         "fileName": "teamActivity-okayama-layer.zip",
-        "bytes": 1602747,
-        "sha256": "9c1a997f1732d54c004f525e43be373d910212cf1883da0c0a8839d7cc1832d5"
+        "bytes": 685757,
+        "sha256": "3c2e6fef4b04c0f937d2e2a0296650c586f0df5beea6faede475557e78b46745"
       },
       "standaloneArchive": {
         "path": "bundle.zip",
         "fileName": "teamActivity-okayama-standalone.zip",
-        "bytes": 2000956,
-        "sha256": "dbd0a2333b4c1650f0909d870f5fb7fdf33b1148c670a76eefe6593e9f4fb761"
+        "bytes": 1083926,
+        "sha256": "ebec29903f97594a1caf4ee26d65808928ec2cac87ff1e5c9ed12b19206f74b9"
       }
     }
   ]

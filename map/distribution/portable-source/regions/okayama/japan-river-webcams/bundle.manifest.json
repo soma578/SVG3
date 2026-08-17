@@ -29,7 +29,7 @@
     },
     "publishedAt": "2026-07-21T00:00:00+09:00"
   },
-  "contentDigest": "sha256-50426ff4933c2acf4c9a14b7094989fbe0d3b066ec1a0b90cae0d545fa874f8d",
+  "contentDigest": "sha256-ee5299866bc1e5346e9d2dc9af4555855764d100a3c1549076db9511e0cbaa94",
   "portability": {
     "pathIndependent": true,
     "crossOrigin": false,
@@ -45,7 +45,7 @@
         "id": "representative-pins",
         "version": "1.2.2",
         "manifest": "representative-pins/runtime.package.json",
-        "integrity": "sha256-b33ad7afb358ef701b191bf89904ce508f1ae9860a254224145f5928a9735005"
+        "integrity": "sha256-fb61dd7724f2e308c04a2141f866a762cbf5cdc2afb52d37aa395e2a5a89f0b0"
       },
       {
         "id": "svgmap-slawa-client",
@@ -69,8 +69,8 @@
     },
     {
       "path": "layer.manifest.json",
-      "bytes": 12021,
-      "sha256": "86e0c156e6dfd0b3952e03026248611fb7571f7d84f638a8a2bd7e29e05db639"
+      "bytes": 11851,
+      "sha256": "58b441c24c84728934ab0b17163f9980b7a5ac18b7575c32fbbd3de54bb48ede"
     },
     {
       "path": "map/data/qtct/japanRiverWebcam/okayama/detail.json",
@@ -91,11 +91,6 @@
       "path": "map/icons/app/icon-512.png",
       "bytes": 3506,
       "sha256": "055300105ee08d361ad295f0124de7e1ace64d771ce000415a01aefcf44ea105"
-    },
-    {
-      "path": "map/icons/current-location-pin.png",
-      "bytes": 928996,
-      "sha256": "d23972bef3b6d35eddc9c74b8cfe663c8dbfaf6007fd08451d73017d216fc4d7"
     },
     {
       "path": "map/icons/current-location-pin.svg",
@@ -265,7 +260,7 @@
     {
       "path": "map/layers/portable/japan-river-webcams/layer.package.json",
       "bytes": 2197,
-      "sha256": "edaa511325b3c6e3bb0d8b652c0d3b46e8400fef7f212a7514adaf9d8bbdefb2"
+      "sha256": "8363cb3b6a6a96879792762565ce60c0d5955ba26e9eb382aff5c1e00574818d"
     },
     {
       "path": "map/layers/portable/japan-river-webcams/webcam-runtime-policy.json",
@@ -274,8 +269,8 @@
     },
     {
       "path": "map/layers/portable/japan-river-webcams/webcamDetail.js",
-      "bytes": 4134,
-      "sha256": "95484726c465b12ed46ba7ec25bac256792f87d2f0939f8a4e8add8f8bc6a462"
+      "bytes": 4002,
+      "sha256": "36c137f13af6f1c4b51d48ffc7786ac574536f9b5636cb29ada47a6d492e48ee"
     },
     {
       "path": "map/layers/portable/japan-river-webcams/webcamLayer.html",
@@ -309,13 +304,13 @@
     },
     {
       "path": "map/layers/portable/representative-pins/pinLayerProfiles.js",
-      "bytes": 9349,
-      "sha256": "3bcd6d187f691aad72df5d4db1019a0cd9a7da9817631387b2fc08f5ddd006d0"
+      "bytes": 9871,
+      "sha256": "b5e840060bf63bccd3f07410fcee455352bd147ca10670cc91c7ee28a8d3a056"
     },
     {
       "path": "map/layers/portable/representative-pins/propertyModal.js",
-      "bytes": 9762,
-      "sha256": "401f9f8fd36819a83f11aace3f841c80ffa6ca1d419ce5fa9b4a1a2aaf64a913"
+      "bytes": 11035,
+      "sha256": "051d9b605ec4f8277577895770dc2ff480ad328625e25cc7f0ec906a17b075ee"
     },
     {
       "path": "map/layers/portable/representative-pins/qtctBuilder.mjs",
@@ -329,8 +324,8 @@
     },
     {
       "path": "map/layers/portable/representative-pins/representativePinsCore.js",
-      "bytes": 58872,
-      "sha256": "9b1e02cf0093ba15b3be96bc3b0b900d6589b8f8a96bb2f5eecde0ecee589f79"
+      "bytes": 58912,
+      "sha256": "a74d8b584e7884419cdfe961a83758d15f8cb6e7064fd075dcc3fc6f8da0d3eb"
     },
     {
       "path": "map/layers/portable/representative-pins/representativePinsPortable.html",

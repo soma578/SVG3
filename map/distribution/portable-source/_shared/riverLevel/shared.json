@@ -2,11 +2,10 @@
   "schemaVersion": 1,
   "kind": "portable-shared-component",
   "packageId": "riverLevel",
-  "sharedVersion": "0f6ac8416197",
+  "sharedVersion": "9b316a36f76a",
   "files": [
     "map/icons/app/icon-192.png",
     "map/icons/app/icon-512.png",
-    "map/icons/current-location-pin.png",
     "map/icons/current-location-pin.svg",
     "map/icons/river-level-advisory.svg",
     "map/icons/river-level-danger.svg",

@@ -854,6 +854,11 @@ const renderCommunityCompatibilityList = () => {
 };
 
 const renderCommunityCompatibility = async () => {
+  if (state.communityCatalog) {
+    renderCommunityCompatibilityList();
+    return;
+  }
+  elements.communityCompatibilitySummary.textContent = 'レイヤー一覧を読み込み中';
   try {
     const catalog = await fetchJson('/map/layers/external/svgmap-app-layers/compatibility.json');
     state.communityCatalog = catalog;
@@ -890,8 +895,6 @@ const renderArtifactOptions = artifactBrowser.renderOptions;
 const renderArtifactMetadata = artifactBrowser.renderMetadata;
 const loadLocalArtifactIndex = artifactBrowser.loadLocal;
 const loadSignedArtifactIndex = artifactBrowser.loadSigned;
-
-void renderCommunityCompatibility();
 
 let droppedLayerFile = null;
 
@@ -1104,6 +1107,9 @@ elements.importButton?.addEventListener('click', () => {
   setImportFormOpen(elements.importForm.hidden);
 });
 elements.importKind.addEventListener('change', setImportKindFields);
+elements.communityCompatibility.addEventListener('toggle', () => {
+  if (elements.communityCompatibility.open) void renderCommunityCompatibility();
+});
 elements.importFile.addEventListener('change', () => {
   const file = elements.importFile.files?.[0];
   if (!file) return;

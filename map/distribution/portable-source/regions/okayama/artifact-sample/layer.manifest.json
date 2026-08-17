@@ -17,7 +17,7 @@
     },
     "publishedAt": "2026-07-21T00:00:00+09:00"
   },
-  "contentDigest": "sha256-e6b4cc5118ef514748e5711dcf12dd596a775fe18415ece0ce7d63007074632b",
+  "contentDigest": "sha256-09e6240c6370c37d4fca1c4e3769df8d098d10a5d15d0e3fdbd5cb487aa79cd4",
   "files": [
     {
       "path": "Container.isolated.svg",
@@ -38,11 +38,6 @@
       "path": "map/icons/app/icon-512.png",
       "bytes": 3506,
       "sha256": "055300105ee08d361ad295f0124de7e1ace64d771ce000415a01aefcf44ea105"
-    },
-    {
-      "path": "map/icons/current-location-pin.png",
-      "bytes": 928996,
-      "sha256": "d23972bef3b6d35eddc9c74b8cfe663c8dbfaf6007fd08451d73017d216fc4d7"
     },
     {
       "path": "map/icons/current-location-pin.svg",
@@ -232,7 +227,7 @@
     {
       "path": "map/layers/portable/artifact-sample/layer.package.json",
       "bytes": 2428,
-      "sha256": "be7ec3ff490f71731cc1c123ad68e9a29c73b621d1163e92249b34f4aa6c407e"
+      "sha256": "8950605ce520aeb5818af63a78e0fe4e52ed5b747f68a511501c961e2ff36f3d"
     },
     {
       "path": "map/layers/portable/representative-pins/DENSITY_POINTS_FORMAT.md",
@@ -256,13 +251,13 @@
     },
     {
       "path": "map/layers/portable/representative-pins/pinLayerProfiles.js",
-      "bytes": 9349,
-      "sha256": "3bcd6d187f691aad72df5d4db1019a0cd9a7da9817631387b2fc08f5ddd006d0"
+      "bytes": 9871,
+      "sha256": "b5e840060bf63bccd3f07410fcee455352bd147ca10670cc91c7ee28a8d3a056"
     },
     {
       "path": "map/layers/portable/representative-pins/propertyModal.js",
-      "bytes": 9762,
-      "sha256": "401f9f8fd36819a83f11aace3f841c80ffa6ca1d419ce5fa9b4a1a2aaf64a913"
+      "bytes": 11035,
+      "sha256": "051d9b605ec4f8277577895770dc2ff480ad328625e25cc7f0ec906a17b075ee"
     },
     {
       "path": "map/layers/portable/representative-pins/qtctBuilder.mjs",
@@ -276,8 +271,8 @@
     },
     {
       "path": "map/layers/portable/representative-pins/representativePinsCore.js",
-      "bytes": 58872,
-      "sha256": "9b1e02cf0093ba15b3be96bc3b0b900d6589b8f8a96bb2f5eecde0ecee589f79"
+      "bytes": 58912,
+      "sha256": "a74d8b584e7884419cdfe961a83758d15f8cb6e7064fd075dcc3fc6f8da0d3eb"
     },
     {
       "path": "map/layers/portable/representative-pins/representativePinsPortable.html",

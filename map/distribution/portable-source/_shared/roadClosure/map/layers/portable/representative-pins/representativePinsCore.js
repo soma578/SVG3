@@ -1239,7 +1239,7 @@ export const initRepresentativePinsLayer = ({
       const html = typeof renderFeatureDetail === 'function'
         ? await renderFeatureDetail(feature)
         : renderPortableFeatureHtml(feature);
-      const modal = showPropertyModal(html);
+      const modal = showPropertyModal(html, { attribution: profile().attribution });
       if (typeof renderFeatureDetail?.afterShow === 'function') {
         renderFeatureDetail.afterShow(feature, modal);
       }

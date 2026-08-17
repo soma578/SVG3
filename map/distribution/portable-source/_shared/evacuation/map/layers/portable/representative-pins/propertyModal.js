@@ -5,8 +5,8 @@ const PROPERTY_STYLES = `
       --property-accent-soft: #edf4fb;
       color: #172033;
       font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", system-ui, sans-serif;
-      font-size: 18px;
-      line-height: 1.5;
+      font-size: 15px;
+      line-height: 1.45;
     }
     .svg3-property-evacuation {
       --property-accent: #177245;
@@ -17,19 +17,19 @@ const PROPERTY_STYLES = `
       --property-accent-soft: #edf3ff;
     }
     .svg3-property-header {
-      padding: 21px 58px 20px 24px;
+      padding: 14px 46px 13px 17px;
       background: var(--property-accent);
       color: #ffffff;
     }
     .svg3-property-kind {
       margin: 0 0 6px;
       color: rgba(255, 255, 255, 0.76);
-      font-size: 18px;
+      font-size: 14px;
       font-weight: 700;
     }
     .svg3-property-title {
       margin: 0;
-      font-size: 22px;
+      font-size: 18px;
       font-weight: 700;
       line-height: 1.4;
       letter-spacing: 0;
@@ -43,7 +43,7 @@ const PROPERTY_STYLES = `
       border-radius: 999px;
       background: rgba(255, 255, 255, 0.15);
       color: #ffffff !important;
-      font-size: 18px;
+      font-size: 14px;
       font-weight: 700;
     }
     .svg3-property-dot {
@@ -58,23 +58,23 @@ const PROPERTY_STYLES = `
       grid-template-columns: minmax(0, 1fr);
       align-content: start;
       margin: 0;
-      padding: 12px 24px 14px;
+      padding: 7px 17px 9px;
       background: #ffffff;
     }
     .svg3-property-row {
       min-width: 0;
-      padding: 11px 0;
+      padding: 7px 0;
       border-bottom: 1px solid #edf1f2;
     }
     .svg3-property-row dt {
       color: var(--property-accent);
-      font-size: 18px;
+      font-size: 14px;
       font-weight: 700;
     }
     .svg3-property-row dd {
       margin: 2px 0 0;
       color: #253044;
-      font-size: 18px;
+      font-size: 15px;
       overflow-wrap: anywhere;
       white-space: pre-wrap;
     }
@@ -186,21 +186,38 @@ const PROPERTY_STYLES = `
     }
     .svg3-property-list li {
       min-width: 180px;
-      font-size: 18px;
+      font-size: 15px;
     }
     .svg3-property-list small {
       display: block;
       color: #64748b;
     }
+    .svg3-property-attribution {
+      margin: 0;
+      padding: 8px 17px 10px;
+      border-top: 1px solid #e6ebef;
+      background: #f7f9fa;
+      color: #607078;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+    .svg3-property-attribution strong {
+      margin-right: 0.45em;
+      color: #34454d;
+    }
+    .svg3-property-attribution a {
+      color: #245b88;
+      overflow-wrap: anywhere;
+    }
     @media (max-width: 640px) {
       .svg3-property {
-        font-size: 18px;
+        font-size: 15px;
       }
       .svg3-property-header {
         padding: 15px 58px 13px 16px;
       }
       .svg3-property-title {
-        font-size: 22px;
+        font-size: 18px;
       }
       .svg3-property-body {
         padding: 7px 16px 8px;
@@ -235,13 +252,40 @@ const findModalCloseButton = (root) => {
   return null;
 };
 
+const escapeHtml = (value) => String(value ?? '')
+  .replaceAll('&', '&amp;')
+  .replaceAll('<', '&lt;')
+  .replaceAll('>', '&gt;')
+  .replaceAll('"', '&quot;')
+  .replaceAll("'", '&#39;');
+
+const attributionMarkup = (attribution) => {
+  const label = String(attribution?.label || '').trim();
+  if (!label) return '';
+  let url = '';
+  try {
+    const parsed = new URL(String(attribution?.url || ''));
+    if (['http:', 'https:'].includes(parsed.protocol)) url = parsed.href;
+  } catch {
+    // A label without a link is still useful attribution.
+  }
+  const source = url
+    ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a>`
+    : escapeHtml(label);
+  return `<p class="svg3-property-attribution"><strong>出典</strong>${source}</p>`;
+};
+
 // 基準幅はアプリの他のUIに合わせる。候補一覧(#ticker)が最大320px、レイヤー
-// 固有UIが399pxで、プロパティだけ405pxだと地図を必要以上に隠す。中身は
-// 見出しと数項目なので300で足りる。狭い画面では従来どおりviewport幅に収める。
-export const showPropertyModal = (html, { width = 300 } = {}) => {
+// 固有UIが399pxで、プロパティだけが地図を覆わないよう、本文・余白を含めて
+// 従来のおよそ2/3の面積に抑える。狭い画面では従来どおりviewport幅に収める。
+export const showPropertyModal = (html, { width = 260, attribution = null } = {}) => {
   if (!window.svgMap?.showModal) return null;
 
-  const info = window.svgMap.showModal(`${PROPERTY_STYLES}${html}`, width, 600);
+  const info = window.svgMap.showModal(
+    `${PROPERTY_STYLES}${html}${attributionMarkup(attribution)}`,
+    width,
+    480,
+  );
   if (!info) return null;
 
   const root = info.getRootNode?.();

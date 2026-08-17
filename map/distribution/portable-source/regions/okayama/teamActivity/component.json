@@ -3,7 +3,7 @@
   "kind": "portable-regional-component",
   "packageId": "teamActivity",
   "regionId": "okayama",
-  "sharedVersion": "239b07715ba0",
+  "sharedVersion": "7f5397e54181",
   "files": [
     "Container.isolated.svg",
     "Container.svg",
