@@ -45,12 +45,20 @@ assert.ok(
 for (const dynamicPath of ['/map/data/', '/map/distribution/']) {
   assert.ok(sw.includes(dynamicPath), `generated sw.js lost the dynamic prefix ${dynamicPath}`)
 }
-// respondWith は shell と region の分岐でのみ呼ぶ。
+// respondWith は shell、community、region の分岐でのみ呼ぶ。
 const respondWithCount = (swBody.match(/event\.respondWith\(/g) || []).length
-assert.equal(respondWithCount, 2, 'sw.body.js must call respondWith only for shell and region')
+assert.equal(respondWithCount, 3, 'sw.body.js must call respondWith only for shell, community, and region')
 assert.ok(
   /if \(kind === 'shell'\)[\s\S]{0,200}event\.respondWith/.test(swBody),
   'shell requests must be served from the shell cache',
+)
+assert.ok(
+  /if \(kind === 'community'\)[\s\S]{0,200}event\.respondWith\(communityResponse/.test(swBody),
+  'community requests must use their network-first response path',
+)
+assert.ok(
+  /const communityResponse[\s\S]{0,500}await fetch\(request[\s\S]{0,500}cache\.match/.test(swBody),
+  'community requests must try the network before falling back to the shell cache',
 )
 assert.ok(
   /if \(kind === 'region'\)[\s\S]{0,200}event\.respondWith/.test(swBody),
@@ -81,7 +89,10 @@ for (const asset of shellAssets) {
     { root: mapRoot, dir: 'icons', urlBase: '/map/icons', extensions: ['.svg', '.png'] },
     { root: projectRoot, dir: 'svgMapAppLayers/basemaps', urlBase: '/map/svgMapAppLayers/basemaps', extensions: ['.svg'] },
   ]
-  const excluded = new Set(['/map/webapp/sw.body.js'])
+  const excluded = new Set([
+    '/map/webapp/sw.body.js',
+    '/map/icons/current-location-pin.png',
+  ])
   const onDisk = new Set()
   const walk = (root, urlBase, extensions) => {
     if (!fs.existsSync(root)) return
