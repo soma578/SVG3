@@ -11,6 +11,7 @@ import {
   warningKind,
   warningRecords,
 } from '../../map/layers/portable/flood-warning/jmaWarnings.js'
+import { JMA_WARNING_ATTRIBUTION } from '../../map/layers/portable/flood-warning/floodWarningLayer.js'
 
 const places = municipalityMap({
   municipalities: [
@@ -20,6 +21,13 @@ const places = municipalityMap({
     { id: 'hiroshima-naka', displayCode: '34101', label: '広島市中区', regionId: 'hiroshima', viewport: { lat: 34.39, lon: 132.45 } },
     { id: '99999', label: '座標なし', regionId: 'x', viewport: {} },
   ],
+})
+
+test('気象警報のプロパティは公式出典を持つ', () => {
+  assert.deepEqual(JMA_WARNING_ATTRIBUTION, {
+    label: '気象庁「気象警報・注意報」',
+    url: 'https://www.jma.go.jp/bosai/warning/',
+  })
 })
 
 const report = (areas, reportDatetime = '2026-08-04T10:00:00+09:00') => ({

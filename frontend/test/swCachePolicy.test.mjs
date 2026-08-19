@@ -58,10 +58,19 @@ test('起動に要る資産は shell に分類される', () => {
     '/map/layers/catalog.json',
     '/map/regions/index.json',
     '/map/icons/shelter-open.svg',
-    '/map/svgMapAppLayers/basemaps/dynamicDenshiKokudo2016.svg',
     '/manifest.webmanifest',
   ]) {
     assert.equal(classifyRequest({ pathname }), 'shell', pathname)
+  }
+})
+
+test('SVGMapコミュニティ資産は世代混在を避けるnetwork-first分類', () => {
+  for (const pathname of [
+    '/map/svgMapAppLayers/Container.svg',
+    '/map/svgMapAppLayers/appLayers/usgsEq/usgsEarthquake.html',
+    '/map/svgMapAppLayers/commonLib/csvMapper.js',
+  ]) {
+    assert.equal(classifyRequest({ pathname }), 'community', pathname)
   }
 })
 

@@ -9,6 +9,10 @@ const projectRoot = path.resolve(frontendRoot, '..')
 const externalRoot = path.join(projectRoot, 'map/layers/external/svgmap-app-layers')
 const config = JSON.parse(fs.readFileSync(path.join(externalRoot, 'import.config.json'), 'utf8'))
 const catalog = JSON.parse(fs.readFileSync(path.join(externalRoot, 'compatibility.json'), 'utf8'))
+const networkOverrides = JSON.parse(fs.readFileSync(
+  path.join(externalRoot, 'network-capability-overrides.json'),
+  'utf8',
+))
 const container = fs.readFileSync(path.resolve(externalRoot, config.container), 'utf8')
 const animations = [...container.replace(/<!--[\s\S]*?-->/g, '').matchAll(/<animation\b[^>]*\/?>/gs)]
 
@@ -24,16 +28,10 @@ for (const [index, entry] of catalog.entries.entries()) {
   assert.ok(entry.href)
   assert.equal(typeof entry.available, 'boolean', `${entry.title}: available is required`)
   assert.ok(allowedDelivery.has(entry.delivery), `${entry.title}: invalid delivery`)
-  // Container標準搭載mountの実行モード。分離実行を既定に保つ。
+  // 同梱スナップショットは本家global APIが見えるtight、実体欠落は実行しないisolated。
   assert.ok(['isolated', 'tight'].includes(entry.runtime), `${entry.title}: invalid runtime`)
-  // tight は同一オリジン権限で動かす判断なので、必ず理由か確認日を残す。
-  // 既定は isolated のままにし、黙って権限を広げない。
-  if (entry.runtime === 'tight') {
-    assert.ok(
-      entry.verifiedAt || entry.runtimeReason,
-      `${entry.title}: tight runtime requires a recorded check or reason`,
-    )
-  }
+  assert.equal(entry.runtime, entry.available ? 'tight' : 'isolated', `${entry.title}: trust boundary mismatch`)
+  if (entry.runtime === 'tight') assert.ok(entry.runtimeReason, `${entry.title}: tight runtime reason is required`)
   assert.ok(entry.note, `${entry.title}: note is required`)
   assert.equal('status' in entry, false, `${entry.title}: compatibility grading must not return`)
   assert.equal('category' in entry, false, `${entry.title}: compatibility grading must not return`)
@@ -70,6 +68,10 @@ for (const [index, entry] of catalog.entries.entries()) {
     assert.deepEqual(dangling, [], `${entry.title}: unresolved relative reference in the copy`)
   }
   if (entry.adapterHref) {
+    assert.ok(
+      ['document-identity', 'host-compatibility', 'dedicated'].includes(entry.adapterKind),
+      `${entry.title}: adapterKind is required`,
+    )
     assert.ok(entry.adapterHref.startsWith('/map/layers/external/'))
     const adapterHrefPath = entry.adapterHref.split('#')[0].split('?')[0]
     const adapterPath = path.join(projectRoot, adapterHrefPath.replace(/^\/map\//, 'map/'))
@@ -114,6 +116,22 @@ for (const title of config.include) {
   assert.ok(titles.has(title), `import.config.json include references an unavailable layer: ${title}`)
 }
 
+assert.equal(networkOverrides.schemaVersion, 1)
+for (const [title, profile] of Object.entries(networkOverrides.layers || {})) {
+  assert.ok(catalog.entries.some((entry) => entry.title === title), `${title}: capability references unknown layer`)
+  assert.ok(profile.requests?.length > 0, `${title}: capability request is required`)
+  for (const request of profile.requests) {
+    assert.match(request.hostname, /^[a-z0-9.-]+$/)
+    assert.ok(request.pathnamePrefix?.startsWith('/'))
+    assert.ok(request.methods?.every((method) => ['GET', 'HEAD'].includes(method)))
+    assert.ok(Number.isInteger(request.maxBytes) && request.maxBytes > 0)
+    assert.ok(request.contentTypes?.length > 0)
+    assert.ok(Number.isInteger(request.maxRedirects) && request.maxRedirects >= 0 && request.maxRedirects <= 5)
+    assert.ok(Number.isInteger(request.timeoutMs) && request.timeoutMs >= 1000 && request.timeoutMs <= 60000)
+    assert.ok(request.reason, `${title}: exceptional capability needs a reason`)
+  }
+}
+
 // このスナップショットで実体欠落が既知なのは、上流Containerが存在しない
 // controllerを参照しているstarlinkUnofficialGSだけ。Gitの部分取り込みに戻ると
 // Vercelだけ数十件が「非対応」になるため、クリーンcloneの資産欠落をここで止める。
@@ -150,6 +168,12 @@ assert.deepEqual(catalog.counts, {
   unavailable: catalog.entries.filter((entry) => !entry.available).length,
   externalNetwork: catalog.entries.filter((entry) => entry.externalDependencies.length > 0).length,
   selfContained: catalog.entries.filter((entry) => entry.offline).length,
+})
+assert.deepEqual(catalog.adapterCounts, {
+  none: catalog.entries.filter((entry) => !entry.adapterHref).length,
+  documentIdentity: catalog.entries.filter((entry) => entry.adapterKind === 'document-identity').length,
+  hostCompatibility: catalog.entries.filter((entry) => entry.adapterKind === 'host-compatibility').length,
+  dedicated: catalog.entries.filter((entry) => entry.adapterKind === 'dedicated').length,
 })
 const totals = catalog.counts
 console.log(`[community-compatibility] OK: ${catalog.entries.length} entries (${Object.entries(totals).map(([key, value]) => `${key}=${value}`).join(', ')})`)

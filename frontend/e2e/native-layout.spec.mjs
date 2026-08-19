@@ -71,11 +71,11 @@ test('デスクトップではPOI詳細が全幅へ膨らまない', async ({ pa
 
   const modal = await openModal(frame)
   expect(modal, 'モーダルが開かない').not.toBeNull()
-  // 基準幅は260。候補一覧(320px)やレイヤー固有UI(399px)と並べて、地図を
+  // 基準幅は270。候補一覧(320px)やレイヤー固有UI(399px)より小さく、地図を
   // 必要以上に隠さない大きさにしてある。全幅へ膨らまないことと、
   // 読めないほど細らないことの両方を見る。
   expect(modal.width).toBeLessThanOrEqual(280)
-  expect(modal.width).toBeGreaterThanOrEqual(240)
+  expect(modal.width).toBeGreaterThanOrEqual(260)
   expect(modal.attribution).toContain('出典')
   expect(modal.attribution).toContain('川の防災情報')
   expect(modal.attributionHref).toBe('https://www.river.go.jp/')

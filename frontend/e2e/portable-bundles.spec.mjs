@@ -205,7 +205,7 @@ test('native map accepts a local SVG from the import drop area', async ({ page }
     mimeType: 'image/svg+xml',
     buffer: Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"/>'),
   })
-  await expect(page.locator('#layer-import-kind')).toHaveValue('layer')
+  await expect(page.locator('#layer-import-kind')).toHaveValue('auto')
   await expect(page.locator('#layer-import-file-name')).toHaveText('local-e2e.svg')
   await page.locator('#layer-import-drop').evaluate((element) => {
     const transfer = new DataTransfer()

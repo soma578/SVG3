@@ -37,6 +37,10 @@ const requiredUpstreamAssets = [
   ['appLayers', 'usgsEq', 'covjsonParser.js'],
   ['appLayers', 'usgsEq', 'quake_center.png'],
   ['appLayers', 'usgsEq', 'mappin1.png'],
+  ['authoringLayers', 'local', 'csvLayer', 'csvXhr_r20.svg'],
+  ['authoringLayers', 'local', 'csvLayer', 'csvUI_r20.html'],
+  ['commonLib', 'QTCTrenderer.js'],
+  ['commonLib', 'csvMapper.js'],
   ['appLayers', 'bosaiKakenJSHIS', 'dynamicPCtile.svg'],
   ['appLayers', 'bosaiKakenJSHIS', 'dynamicPCtile.html'],
 ]
@@ -110,12 +114,17 @@ const RUNTIME_BY_TITLE = new Map(Object.entries(runtimeOverrides.runtime || {}))
 const RETIRED_SOURCE_TITLES = new Map(Object.entries(runtimeOverrides.retiredSources || {}))
 
 const overrides = new Map([
+  ['free hand authoring', {
+    interactionRequired: true,
+    note: '本家controller上で利用者が描画操作を行った後にSVG要素を生成する作図レイヤー',
+  }],
   ['geohashCoder', {
     verifiedAt: '2026-08-04',
     delivery: 'adapter',
     offline: true,
     externalDependencies: [],
     adapterHref: '/map/layers/external/svgmap-app-layers/adapters/geohash-coder.svg',
+    adapterKind: 'host-compatibility',
     note: 'controllerと依存ライブラリを同一オリジンへ固定したアダプターで動作確認済み',
   }],
   ['人口集中地区(DID)H27(総務省統計局/地理院地図)', {
@@ -124,6 +133,7 @@ const overrides = new Map([
     delivery: 'adapter',
     offline: false,
     adapterHref: '/map/layers/external/svgmap-app-layers/adapters/gsi-did2015.svg#map=did2015',
+    adapterKind: 'document-identity',
     externalDependencies: ['cyberjapandata.gsi.go.jp'],
     note: '上流の動的SVGを固有URLのルートレイヤーとして直接起動し、DIDタイルの取得まで動作確認済み',
   }],
@@ -133,6 +143,7 @@ const overrides = new Map([
     delivery: 'online-only',
     offline: false,
     adapterHref: '/map/layers/external/svgmap-app-layers/adapters/gsi-ortho.svg#map=ort',
+    adapterKind: 'document-identity',
     externalDependencies: ['cyberjapandata.gsi.go.jp'],
     note: '上流の動的SVGを固有URLのルートレイヤーとして直接起動し、地理院写真タイルの取得まで動作確認済み',
   }],
@@ -142,6 +153,7 @@ const overrides = new Map([
     delivery: 'online-only',
     offline: false,
     adapterHref: '/map/layers/external/svgmap-app-layers/adapters/osm-global.svg',
+    adapterKind: 'dedicated',
     placement: { x: -30000, y: -30000, width: 60000, height: 60000 },
     externalDependencies: ['tile.openstreetmap.org'],
     note: '旧controller依存を除いた固有の動的SVGへ配置し、HTTPSのOSM公式タイル取得まで動作確認済み',
@@ -152,6 +164,7 @@ const overrides = new Map([
     delivery: 'online-only',
     offline: false,
     adapterHref: '/map/layers/external/svgmap-app-layers/adapters/jma-rain-now.svg',
+    adapterKind: 'host-compatibility',
     externalDependencies: ['www.jma.go.jp'],
     note: 'controllerのSVGMapライブラリを同一オリジンへ固定し、気象庁の時刻JSONと降水タイル取得まで動作確認済み',
   }],
@@ -161,8 +174,15 @@ const overrides = new Map([
     delivery: 'online-only',
     offline: false,
     adapterHref: '/map/layers/external/svgmap-app-layers/adapters/usgs-earthquakes.svg',
+    adapterKind: 'host-compatibility',
     externalDependencies: ['earthquake.usgs.gov'],
     note: 'controllerとSVGMapライブラリを同一オリジンへ固定し、USGS GeoJSONの取得と震源図形生成まで動作確認済み',
+  }],
+  ['令和６年能登半島地震　道路復旧状況', {
+    verifiedAt: '2026-08-18',
+    delivery: 'online-only',
+    offline: false,
+    note: '本家path・controllerを変更せず、国交省GeoJSONに必要なnetwork capabilityで動作確認済み',
   }],
   ['防災科研_J_SHIS_確率論的地震動予測地図2020_主要活断層帯', {
     verifiedAt: '2026-08-04',
@@ -170,6 +190,7 @@ const overrides = new Map([
     delivery: 'online-only',
     offline: false,
     adapterHref: '/map/layers/external/svgmap-app-layers/adapters/jshis-active-fault.svg#server=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2Fmapcache%2FP-Y2020%2Fwmts%3Flayer%3DP-Y2020-MAP-AVR-TTL_MTTL-T30_I55_PD2%26style%3Ddefault%26tilematrixset%3DWGS84%26Service%3DWMTS%26Request%3DGetTile%26Version%3D1.0.0%26Format%3Dimage%252Fpng%26TileMatrix%3D%5B%5Blevel%5D%5D%26TileCol%3D%5B%5Bx%5D%5D%26TileRow%3D%5B%5By%5D%5D&comment=出典%3A防災科研J-SHIS&link=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2F&legend=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2FJSHIS2%2FIMAGE%2Fetc%2FP-Y2020-PD.png',
+    adapterKind: 'document-identity',
     externalDependencies: ['www.j-shis.bosai.go.jp'],
     note: '共通SVGを固有URL化し、同梱controllerと外部WMTSタイルの取得まで動作確認済み',
   }],
@@ -179,6 +200,7 @@ const overrides = new Map([
     delivery: 'online-only',
     offline: false,
     adapterHref: '/map/layers/external/svgmap-app-layers/adapters/jshis-500.svg#server=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2Fmapcache%2FA%2Fwmts%3Flayer%3DA-V8-MAP-AVR-TTL_MTTL-A0500_SI2%26style%3Ddefault%26tilematrixset%3DWGS84%26Service%3DWMTS%26Request%3DGetTile%26Version%3D1.0.0%26Format%3Dimage%252Fpng%26TileMatrix%3D%5B%5Blevel%5D%5D%26TileCol%3D%5B%5Bx%5D%5D%26TileRow%3D%5B%5By%5D%5D&comment=出典%3A防災科研J-SHIS&link=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2F&legend=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2FJSHIS2%2FIMAGE%2Fetc%2FP-Y2020-SI.png',
+    adapterKind: 'document-identity',
     externalDependencies: ['www.j-shis.bosai.go.jp'],
     note: '同梱済み旧式controllerをtight実行し、外部WMTSタイルの取得まで動作確認済み',
   }],
@@ -283,12 +305,14 @@ const entries = animations.map((match, index) => {
     href,
     available,
     ...(available ? {} : { unavailableReason }),
-    // Containerへ標準搭載するmountの実行モード。既定は分離実行のままにする。
-    // 一律tightにすると、分離実行で足りているレイヤーまで同一オリジン権限で動く。
-    runtime: override.runtime || RUNTIME_BY_TITLE.get(title)?.mode || 'isolated',
-    ...(!override.runtime && RUNTIME_BY_TITLE.has(title)
-      ? { runtimeReason: RUNTIME_BY_TITLE.get(title).reason }
-      : {}),
+    // 完全スナップショットとして同梱した上流コードは、本家controllerが期待する
+    // global APIを持つtight環境で動かす。未知URLのisolated境界とは分離する。
+    runtime: available ? 'tight' : 'isolated',
+    ...(available ? {
+      runtimeReason: override.runtimeReason
+        || RUNTIME_BY_TITLE.get(title)?.reason
+        || '固定スナップショットとして同梱したSVGMap App Layersの本家実行契約',
+    } : {}),
     delivery: override.delivery || 'bundled',
     offline: override.offline ?? (externalDependencies.length === 0 && !proxyRequired),
     controller: Boolean(controller),
@@ -305,10 +329,12 @@ const entries = animations.map((match, index) => {
       'xlink:href': href,
     },
     ...(override.adapterHref ? { adapterHref: override.adapterHref } : {}),
+    ...(override.adapterKind ? { adapterKind: override.adapterKind } : {}),
     ...(sharedBase && !override.adapterHref ? { sharedBaseSvg: true, sharedBaseSource: href } : {}),
     ...(override.controllerHref ? { controllerHref: override.controllerHref } : {}),
     ...(override.placement ? { placement: override.placement } : {}),
     ...(override.configuration ? { configuration: override.configuration } : {}),
+    ...(override.interactionRequired ? { interactionRequired: true } : {}),
   }
 })
 
@@ -370,9 +396,15 @@ for (const entry of entries) {
   const upstreamDir = relative.slice(0, -1).join('/')
   const { rebased, remaining } = rebaseRelativeRefs(fs.readFileSync(sourcePath, 'utf8'), upstreamDir)
   if (remaining > 0) continue
+  const adapterSvg = Number(entry.sourceIndex) === 88
+    ? rebased.replace(
+      '/map/svgMapAppLayers/authoringLayers/local/csvLayer/csvUI_r20.html#requiredWidth=420',
+      '/map/layers/external/svgmap-app-layers/adapters/usgs-earthquakes-all-week.html#requiredWidth=420&amp;requiredHeight=420',
+    )
+    : rebased
   const slug = `${relative.join('-').replace(/\.svg$/, '').toLowerCase()
     .replace(/[^a-z0-9-]+/g, '-')}-${entry.sourceIndex}.svg`
-  fs.writeFileSync(adapterPath(`${SHARED_ADAPTER_DIR}/${slug}`), rebased)
+  fs.writeFileSync(adapterPath(`${SHARED_ADAPTER_DIR}/${slug}`), adapterSvg)
   const hash = entry.href.includes('#') ? `#${entry.href.split('#').slice(1).join('#')}` : ''
   sharedAdapters.set(entry.sourceIndex, {
     href: `/map/layers/external/svgmap-app-layers/adapters/${SHARED_ADAPTER_DIR}/${slug}${hash}`,
@@ -382,6 +414,9 @@ for (const entry of entries) {
   const adapter = sharedAdapters.get(entry.sourceIndex)
   if (!adapter || entry.adapterHref) continue
   entry.adapterHref = adapter.href
+  entry.adapterKind = Number(entry.sourceIndex) === 88
+    ? 'host-compatibility'
+    : 'document-identity'
 }
 console.log(
   `[svgmap-community] shared-base adapters: ${sharedAdapters.size}`
@@ -425,8 +460,62 @@ const usgsSvg = readUpstream('appLayers', 'usgsEq', 'usgsEarthquake.svg')
   .replaceAll('xlink:href="mappin1.png"', 'xlink:href="/map/svgMapAppLayers/appLayers/usgsEq/mappin1.png"')
 const usgsController = localizeLayerLib(readUpstream('appLayers', 'usgsEq', 'usgsEarthquake.html'))
   .replace('src="usgsEarthquake.js"', 'src="/map/svgMapAppLayers/appLayers/usgsEq/usgsEarthquake.js"')
+const { rebased: usgsAllWeekSvg } = rebaseRelativeRefs(
+  readUpstream('authoringLayers', 'local', 'csvLayer', 'csvXhr_r20.svg'),
+  'authoringLayers/local/csvLayer',
+)
+const usgsAllWeekAdapterSvg = usgsAllWeekSvg.replace(
+  '/map/svgMapAppLayers/authoringLayers/local/csvLayer/csvUI_r20.html#requiredWidth=420',
+  '/map/layers/external/svgmap-app-layers/adapters/usgs-earthquakes-all-week.html#requiredWidth=420&amp;requiredHeight=420',
+)
+const usgsAllWeekAutoLoad = `
+<script type="module">
+import {
+  registerCommunityPropertyAdapter,
+  usgsEarthquakeProperty,
+} from '/map/webapp/shared/communityPropertyAdapter.js';
+
+window.addEventListener('load', async () => {
+  // SVGMap sizes the controller panel from requiredHeight, but leaves the
+  // iframe itself at the browser default (150px). Fill the host-owned panel
+  // so the upstream controller UI is not clipped below its heading.
+  if (window.frameElement) {
+    const panel = window.frameElement.parentElement?.parentElement;
+    const availableHeight = Math.max(180, Math.min(420, window.parent.innerHeight - 120));
+    if (panel) panel.style.height = availableHeight + 'px';
+    window.frameElement.style.width = '100%';
+    window.frameElement.style.height = '100%';
+    window.frameElement.style.border = '0';
+  }
+  csvMapper.setMessageDiv(document.getElementById('messageDiv'));
+  try {
+    const source = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.csv';
+    const response = await fetch(svgMap.getCORSURL(source));
+    if (!response.ok) throw new Error('USGS CSV: ' + response.status);
+    await csvMapper.initCsv(await response.text(), 1, 2, 0, 4, [3, 4, 5, 6]);
+    // The upstream image-metadata extension also registers a POI handler at
+    // load time. Register the host formatter after CSV initialization so it
+    // remains the final handler without changing the upstream controller.
+    registerCommunityPropertyAdapter({ transform: usgsEarthquakeProperty });
+    setTimeout(() => svgMap.refreshScreen(), 100);
+  } catch (error) {
+    document.getElementById('messageDiv').textContent = '取得できませんでした';
+    console.error('[usgs-all-week-adapter]', error);
+  }
+});
+</script>
+`
+const usgsAllWeekController = localizeLayerLib(
+  readUpstream('authoringLayers', 'local', 'csvLayer', 'csvUI_r20.html'),
+)
+  .replace('<head>', '<head>\n<base href="/map/svgMapAppLayers/authoringLayers/local/csvLayer/">')
+  .replace('src="QTCTrenderer.js"', 'src="/map/svgMapAppLayers/commonLib/QTCTrenderer.js"')
+  .replace('src="csvMapper.js"', 'src="/map/svgMapAppLayers/commonLib/csvMapper.js"')
+  .replace('</body>', `${usgsAllWeekAutoLoad}\n</body>`)
 fs.writeFileSync(adapterPath('usgs-earthquakes.svg'), usgsSvg)
+fs.writeFileSync(adapterPath('usgs-earthquakes-all-week.svg'), usgsAllWeekAdapterSvg)
 fs.writeFileSync(adapterPath('usgs-earthquakes.html'), usgsController)
+fs.writeFileSync(adapterPath('usgs-earthquakes-all-week.html'), usgsAllWeekController)
 
 const jshisSvg = readUpstream('appLayers', 'bosaiKakenJSHIS', 'dynamicPCtile.svg').replace(
   'dynamicPCtile.html#exec=appearOnLayerLoad',
@@ -438,5 +527,11 @@ fs.writeFileSync(
   adapterPath('jshis-controller.html'),
   localizeLayerLib(readUpstream('appLayers', 'bosaiKakenJSHIS', 'dynamicPCtile.html')),
 )
+output.adapterCounts = {
+  none: entries.filter((entry) => !entry.adapterHref).length,
+  documentIdentity: entries.filter((entry) => entry.adapterKind === 'document-identity').length,
+  hostCompatibility: entries.filter((entry) => entry.adapterKind === 'host-compatibility').length,
+  dedicated: entries.filter((entry) => entry.adapterKind === 'dedicated').length,
+}
 fs.writeFileSync(outputPath, `${JSON.stringify(output, null, 2)}\n`)
 console.log(`[svgmap-community] ${entries.length} layers: ${JSON.stringify(counts)}`)

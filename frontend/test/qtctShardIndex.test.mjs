@@ -63,7 +63,15 @@ test('個別ピンは従来より2段階早いzoom 11で表示する', () => {
   for (const profile of Object.values(PIN_LAYER_PROFILES)) {
     assert.equal(profile.individualZoom, 11)
     assert.equal(profile.densityMaxZoom, 11)
+    assert.ok(profile.attribution?.label, `${profile.label}: property attribution is required`)
   }
+})
+
+test('避難所プロパティは国土地理院の正本を出典にする', () => {
+  assert.deepEqual(PIN_LAYER_PROFILES.evacuation.attribution, {
+    label: '国土地理院「指定緊急避難場所・指定避難所データ」',
+    url: 'https://www.gsi.go.jp/bousaichiri/hinanbasho.html',
+  })
 })
 
 test('未取得シャードのスタブだけでピンを描ける', () => {

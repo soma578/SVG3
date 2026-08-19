@@ -34,7 +34,13 @@ assert.match(interWindowMessagingSource, /event\.source !== targetWin/)
 
 const { MAP_MESSAGES } = await importSource(messagesSource)
 assert.ok(messagesReExport.includes('../../layers/portable/representative-pins/mapMessages.js'))
-const { importBundledCommunityLayer, sanitizeRuntimeAnimation, importSingleLayer } = await importSource(importerSource)
+const {
+  findBundledCommunityEntry,
+  importBundledCommunityLayer,
+  loadImportedLayers,
+  sanitizeRuntimeAnimation,
+  importSingleLayer,
+} = await importSource(importerSource)
 const { isAuthorizedHostCommand } = await importSource(policySource.replace(
   "import { MAP_MESSAGES } from './mapMessages.js';",
   `const MAP_MESSAGES = ${JSON.stringify(MAP_MESSAGES)};`,
@@ -98,6 +104,20 @@ const direct = importSingleLayer({
 assert.equal(direct.attrs['data-lawa-mode'], 'isolated')
 assert.equal(direct.attrs['data-external-source'], 'runtime')
 
+const knownCommunityEntry = {
+  href: './appLayers/usgsEq/usgsEarthquake.svg',
+  adapterHref: '/map/layers/external/svgmap-app-layers/adapters/usgs-earthquakes.svg',
+}
+assert.equal(findBundledCommunityEntry(
+  [knownCommunityEntry],
+  'https://svgmap.github.io/svgmapAppLayers/appLayers/usgsEq/usgsEarthquake.svg',
+), knownCommunityEntry)
+assert.equal(findBundledCommunityEntry(
+  [knownCommunityEntry],
+  'https://portal.example/map/layers/external/svgmap-app-layers/adapters/usgs-earthquakes.svg',
+), knownCommunityEntry)
+assert.equal(findBundledCommunityEntry([knownCommunityEntry], 'https://layers.example/unknown.svg'), null)
+
 const bundled = importBundledCommunityLayer({
   sourceIndex: 1,
   title: 'Bundled layer',
@@ -118,6 +138,38 @@ assert.equal(bundled.attrs['xlink:href'], 'https://portal.example/map/svgMapAppL
 assert.equal(bundled.attrs['data-lawa-mode'], 'tight')
 assert.equal(bundled.attrs['data-external-source'], 'bundled-community')
 assert.deepEqual(bundled.controllerUi, { label: '設定' })
+
+const legacyCsv = importBundledCommunityLayer({
+  sourceIndex: 88,
+  title: '地震 ALL 過去1週間(USGS)',
+  animation: {
+    title: '地震 ALL 過去1週間(USGS)',
+    'xlink:href': './csv.svg#csvPath=https://earthquake.usgs.gov/all_week.csv&latCol=1&lngCol=2',
+  },
+  adapterHref: '/map/adapters/csv-88.svg#csvPath=https://earthquake.usgs.gov/all_week.csv&latCol=1&lngCol=2',
+})
+assert.equal(
+  legacyCsv.attrs['xlink:href'],
+  'https://portal.example/map/layers/external/svgmap-app-layers/adapters/usgs-earthquakes-all-week.svg',
+)
+
+const stored = new Map([['svg3.nativeImportedLayers.v1', JSON.stringify([{
+  ...legacyCsv,
+  id: 'layer-imported-usgs-all-week',
+  imported: true,
+  attrs: {
+    ...legacyCsv.attrs,
+    'xlink:href': 'https://portal.example/map/layers/external/svgmap-app-layers/adapters/shared/authoringlayers-local-csvlayer-csvxhr-r20-88.svg#csvPath=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.csv&latCol=1&lngCol=2',
+  },
+}])]])
+globalThis.localStorage = {
+  getItem: (key) => stored.get(key) ?? null,
+  setItem: (key, value) => stored.set(key, value),
+}
+assert.equal(
+  loadImportedLayers()[0].attrs['xlink:href'],
+  'https://portal.example/map/layers/external/svgmap-app-layers/adapters/usgs-earthquakes-all-week.svg',
+)
 
 const parentWindow = {}
 const isolatedLayerWindow = {}

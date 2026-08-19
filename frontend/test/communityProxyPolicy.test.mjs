@@ -3,10 +3,14 @@ import test from 'node:test'
 
 import {
   COMMUNITY_PROXY_MAX_BYTES,
+  communityProxyCapabilities,
   communityProxyTargets,
   fetchCommunityProxy,
+  matchCommunityProxyCapability,
   validateCommunityProxyUrl,
 } from '../lib/communityProxyPolicy.mjs'
+
+const publicDns = async () => [{ address: '93.184.216.34', family: 4 }]
 
 // TARGETS はもう通信の可否を決めない。同梱レイヤーがどこへ通信するかを
 // 利用者へ開示するための一覧として残す。
@@ -32,14 +36,13 @@ test('community proxy publishes its declared endpoints to the client', async () 
   const response = await fetchCommunityProxy('https://map.example/api/svgmap-proxy')
   assert.equal(response.status, 200)
   const config = await response.json()
-  assert.equal(config.schemaVersion, 1)
+  assert.equal(config.schemaVersion, 2)
   assert.deepEqual(config.targets, communityProxyTargets())
+  assert.deepEqual(config.capabilities, communityProxyCapabilities())
   assert.equal(response.headers.get('access-control-allow-origin'), '*')
 })
 
-test('community proxy relays any public HTTPS target, like the upstream CorsProxy', () => {
-  // 本家CorsProxyは任意の外部URLを中継する。ホスト名の許可リストで振り分けると、
-  // 実行時に追加したコミュニティレイヤーだけが本家と違う経路になる。
+test('community proxy validates URL shape separately from layer capability', () => {
   assert.equal(
     validateCommunityProxyUrl('https://dronebird.org/data/index.json').hostname,
     'dronebird.org',
@@ -52,6 +55,16 @@ test('community proxy relays any public HTTPS target, like the upstream CorsProx
     validateCommunityProxyUrl('https://www.google.com/search?q=maps').pathname,
     '/search',
   )
+})
+
+test('community proxy only matches endpoints declared by bundled layer capabilities', () => {
+  assert.equal(
+    matchCommunityProxyCapability('https://www.e-stat.go.jp/gis/statmap-search/data?code=33101')
+      ?.request.pathnamePrefix,
+    '/gis/statmap-search/data',
+  )
+  assert.equal(matchCommunityProxyCapability('https://example.com/arbitrary.json'), null)
+  assert.equal(matchCommunityProxyCapability('https://www.mlit.go.jp/unrelated/private.json'), null)
 })
 
 test('community proxy accepts the endpoints its own layers declare', () => {
@@ -95,9 +108,10 @@ test('community proxy retries a transient upstream 5xx once', async () => {
       : new Response(new Uint8Array([1, 2, 3]), { status: 200, headers: { 'content-type': 'image/png' } })
   }
   const response = await fetchCommunityProxy(
-    'https://host/api/svgmap-proxy?url=https%3A%2F%2Fnowcoast.noaa.gov%2Ftile.png',
+    'https://host/api/svgmap-proxy?url=https%3A%2F%2Fnowcoast.noaa.gov%2Fgeoserver%2Ftile.png',
     'GET',
     fetchImpl,
+    publicDns,
   )
   assert.equal(response.status, 200)
   assert.equal(calls.length, 2)
@@ -107,10 +121,47 @@ test('community proxy does not retry forever on a failing upstream', async () =>
   let calls = 0
   const fetchImpl = async () => { calls += 1; return new Response('bad gateway', { status: 502 }) }
   const response = await fetchCommunityProxy(
-    'https://host/api/svgmap-proxy?url=https%3A%2F%2Fnowcoast.noaa.gov%2Ftile.png',
+    'https://host/api/svgmap-proxy?url=https%3A%2F%2Fnowcoast.noaa.gov%2Fgeoserver%2Ftile.png',
     'GET',
     fetchImpl,
+    publicDns,
   )
   assert.equal(response.status, 502)
   assert.equal(calls, 2)
+})
+
+test('community proxy accepts the MLIT binary GeoJSON MIME type', async () => {
+  const body = new TextEncoder().encode('{"type":"FeatureCollection","features":[]}')
+  const response = await fetchCommunityProxy(
+    'https://host/api/svgmap-proxy?url=https%3A%2F%2Fwww.mlit.go.jp%2Froad%2Fr6noto%2Fmap%2Fjson%2Frecovery_point.geojson',
+    'GET',
+    async () => new Response(body, {
+      status: 200,
+      headers: { 'content-type': 'binary/octet-stream', 'content-length': String(body.byteLength) },
+    }),
+    publicDns,
+  )
+  assert.equal(response.status, 200)
+  assert.deepEqual(await response.json(), { type: 'FeatureCollection', features: [] })
+})
+
+test('community proxy only raises the size limit for the fixed Noto GeoJSON path', async () => {
+  const declaredLargeBody = async () => new Response('not read', {
+    status: 200,
+    headers: { 'content-type': 'application/octet-stream', 'content-length': String(12 * 1024 * 1024) },
+  })
+  const noto = await fetchCommunityProxy(
+    'https://host/api/svgmap-proxy?url=https%3A%2F%2Fwww.mlit.go.jp%2Froad%2Fr6noto%2Fmap%2Fjson%2FETC2.0_speed_data.geojson',
+    'GET',
+    declaredLargeBody,
+    publicDns,
+  )
+  const unrelated = await fetchCommunityProxy(
+    'https://host/api/svgmap-proxy?url=https%3A%2F%2Fwww.mlit.go.jp%2Froad%2Froadinfo%2Flarge.bin',
+    'GET',
+    declaredLargeBody,
+    publicDns,
+  )
+  assert.equal(noto.status, 200)
+  assert.equal(unrelated.status, 413)
 })

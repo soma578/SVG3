@@ -1600,3 +1600,1544 @@ export const GENERATED_SVGMAP_APP_LAYER_TARGETS = Object.freeze([
     ]
   }
 ])
+export const DEFAULT_SVGMAP_APP_LAYER_NETWORK_CAPABILITY = Object.freeze({
+  "methods": [
+    "GET",
+    "HEAD"
+  ],
+  "maxBytes": 4194304,
+  "contentTypes": [
+    "application/json",
+    "application/geo+json",
+    "application/octet-stream",
+    "application/xml",
+    "application/zip",
+    "application/x-zip-compressed",
+    "image/svg+xml",
+    "image/gif",
+    "image/jpeg",
+    "image/png",
+    "image/webp",
+    "text/csv",
+    "text/html",
+    "text/plain",
+    "text/xml"
+  ],
+  "maxRedirects": 3,
+  "timeoutMs": 12000
+})
+export const GENERATED_SVGMAP_APP_LAYER_CAPABILITIES = Object.freeze([
+  {
+    "sourceIndex": 1,
+    "title": "sentinel2_2018_WMTS",
+    "targetHostnames": [
+      "s2maps.eu",
+      "tiles.maps.eox.at",
+      "wiki.openstreetmap.org"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 2,
+    "title": "DenshiKokudo:orthoPhoto",
+    "targetHostnames": [
+      "cyberjapandata.gsi.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 3,
+    "title": "DenshiKokudo:淡色",
+    "targetHostnames": [
+      "cyberjapandata.gsi.go.jp",
+      "maps.gsi.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 4,
+    "title": "DenshiKokudo:relief",
+    "targetHostnames": [
+      "cyberjapandata.gsi.go.jp",
+      "maps.gsi.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 5,
+    "title": "DenshiKokudo",
+    "targetHostnames": [
+      "cyberjapandata.gsi.go.jp",
+      "maps.gsi.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 6,
+    "title": "OpenStreetMap Etc",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "operations.osmfoundation.org",
+      "tile.openstreetmap.jp",
+      "tile.openstreetmap.org",
+      "wiki.openstreetmap.org"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 7,
+    "title": "OpenStreetMap(Global)",
+    "targetHostnames": [
+      "tile.openstreetmap.org"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 8,
+    "title": "登記所備付地図データ(RawData)",
+    "targetHostnames": [
+      "github.com",
+      "www.moj.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 9,
+    "title": "e-stat街区レベル境界・人口データ",
+    "targetHostnames": [
+      "github.com",
+      "qiita.com",
+      "unpkg.com",
+      "www.e-stat.go.jp",
+      "www.stat.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 10,
+    "title": "Experimental GSI Vector Tile",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "cyberjapandata.gsi.go.jp",
+      "gist.github.com",
+      "github.com",
+      "maps.gsi.go.jp",
+      "stackoverflow.com",
+      "unpkg.com"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 11,
+    "title": "e-stat data reverse-geocoder",
+    "targetHostnames": [
+      "business.mapfan.com",
+      "cdn.jsdelivr.net",
+      "github.com",
+      "qiita.com",
+      "unpkg.com",
+      "www.e-stat.go.jp",
+      "www.pref.tottori.lg.jp",
+      "www.stat.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 12,
+    "title": "plus coder",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "support.google.com"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 13,
+    "title": "geohashCoder",
+    "targetHostnames": [],
+    "requests": []
+  },
+  {
+    "sourceIndex": 14,
+    "title": "UTMGridCoder",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "en.wikipedia.org",
+      "maps.gsi.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 15,
+    "title": "geolonia_GeoCoder",
+    "targetHostnames": [
+      "cdn.geolonia.com",
+      "cdn.jsdelivr.net",
+      "github.com"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 16,
+    "title": "CSIS_GeoCoder",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "geocode.csis.u-tokyo.ac.jp",
+      "t-sagara.github.io"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 17,
+    "title": "GSI_GeoCoder",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "maps.gsi.go.jp",
+      "mreversegeocoder.gsi.go.jp",
+      "msearch.gsi.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 18,
+    "title": "Street View",
+    "targetHostnames": [
+      "api.openstreetcam.org",
+      "cdn.jsdelivr.net",
+      "openstreetcam.org",
+      "www.google.com",
+      "www.instantstreetview.com",
+      "www.mapillary.com"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 19,
+    "title": "経路検索(graphhopper)",
+    "targetHostnames": [],
+    "requests": []
+  },
+  {
+    "sourceIndex": 20,
+    "title": "標高検索",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "cyberjapandata.gsi.go.jp",
+      "maps.gsi.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 21,
+    "title": "GeoidHeightCalculator",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "fgd.gsi.go.jp",
+      "www.gsi.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 22,
+    "title": "bitimageTracer",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "github.com"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 23,
+    "title": "Raster GIS",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "step-learn.com",
+      "webliker.info",
+      "write-remember.com",
+      "www.ogc.org",
+      "www.w3.og"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 24,
+    "title": "Vector GIS",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.ogc.org",
+      "www.w3.og"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 25,
+    "title": "Vector GIS Complex",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "cdnjs.cloudflare.com",
+      "norm-nois.com",
+      "www.ogc.org",
+      "www.w3.og"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 26,
+    "title": "KML(MyMaps)データ表示",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.google.com"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 27,
+    "title": "shape・GeoJSONファイル表示",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "github.com",
+      "qiita.com",
+      "unpkg.com"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 28,
+    "title": "任意XYZタイル表示",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "cyberjapandata.gsi.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 29,
+    "title": "free hand authoring",
+    "targetHostnames": [
+      "bagelee.com",
+      "cdn.jsdelivr.net",
+      "proengineer.internous.co.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 30,
+    "title": "vector authoring",
+    "targetHostnames": [
+      "bagelee.com",
+      "cdn.jsdelivr.net",
+      "proengineer.internous.co.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 31,
+    "title": "CSVデータ可視化",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "cdnjs.cloudflare.com"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 32,
+    "title": "bitimage2geoInfo",
+    "targetHostnames": [
+      "bagelee.com",
+      "cdn.jsdelivr.net"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 33,
+    "title": "JMA過去の災害記録(-2020年)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.jma.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 34,
+    "title": "JMA過去の災害記録(2021年)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.data.jma.go.jp",
+      "www.jma.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 35,
+    "title": "JMA過去の災害記録(2022年-)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.data.jma.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 36,
+    "title": "DRONEBIRD",
+    "targetHostnames": [
+      "api.github.com",
+      "apps.kontur.io",
+      "cdn.jsdelivr.net",
+      "github.com",
+      "raw.githubusercontent.com"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 37,
+    "title": "火災情報(NASA FIRMS)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "firms.modaps.eosdis.nasa.gov"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 38,
+    "title": "沿岸海域土地条件図:昭和63年以前",
+    "targetHostnames": [
+      "cyberjapandata.gsi.go.jp",
+      "maps.gsi.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 39,
+    "title": "沿岸海域土地条件図:平成元年以降",
+    "targetHostnames": [
+      "cyberjapandata.gsi.go.jp",
+      "maps.gsi.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 40,
+    "title": "dynamicOpenSeaMap seamark",
+    "targetHostnames": [
+      "t1.openseamap.org"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 41,
+    "title": "衛星画像(海しる)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "cyberjapandata.gsi.go.jp",
+      "maps.gsi.go.jp",
+      "server.name.jp",
+      "www.data.jma.go.jp",
+      "www.jma.go.jp",
+      "www.msil.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 42,
+    "title": "海底ケーブル(海しる)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.msil.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 43,
+    "title": "漁港(海しる)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.msil.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 44,
+    "title": "等深線(海しる)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.msil.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 45,
+    "title": "天気図４８時間予想(海しる)",
+    "targetHostnames": [
+      "www.msil.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 46,
+    "title": "天気図２４時間予想(海しる)",
+    "targetHostnames": [
+      "www.msil.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 47,
+    "title": "天気図現況(海しる)",
+    "targetHostnames": [
+      "www.msil.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 48,
+    "title": "starlinkUnofficialGS",
+    "targetHostnames": [],
+    "requests": []
+  },
+  {
+    "sourceIndex": 49,
+    "title": "Open Infrastructure Map",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "gist.github.com",
+      "openinframap.org",
+      "unpkg.com"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 50,
+    "title": "空間線量率(モニタリングポスト:原子力規制委員会)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.erms.nsr.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 51,
+    "title": "人口集中地区(DID)H27(総務省統計局/地理院地図)",
+    "targetHostnames": [
+      "cyberjapandata.gsi.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 52,
+    "title": "防災科研　南海トラフ広域地震防災研究PF",
+    "targetHostnames": [
+      "catalog.nankai-bosai.jp",
+      "cdn.jsdelivr.net",
+      "gbank.gsj.jp",
+      "www.data.jma.go.jp",
+      "www.msil.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 53,
+    "title": "防災科研_J_SHIS_長期間平均ハザード(再現期間500年)",
+    "targetHostnames": [
+      "www.j-shis.bosai.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 54,
+    "title": "防災科研_J_SHIS_確率論的地震動予測地図2020_主要活断層帯",
+    "targetHostnames": [
+      "www.j-shis.bosai.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 55,
+    "title": "防災科研_J_SHIS_地すべり地形",
+    "targetHostnames": [
+      "gbank.gsj.jp",
+      "www.j-shis.bosai.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 56,
+    "title": "防災科研_J_SHIS_震源断層",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "stackoverflow.com",
+      "www.j-shis.bosai.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 57,
+    "title": "防災科研_津波_J_THIS",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "cyberjapandata.gsi.go.jp",
+      "maps.gsi.go.jp",
+      "server.name.jp",
+      "www.j-this.bosai.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 58,
+    "title": "令和６年能登半島地震　道路復旧状況",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "cdnjs.cloudflare.com",
+      "www.mlit.go.jp"
+    ],
+    "requests": [
+      {
+        "hostname": "www.mlit.go.jp",
+        "pathnamePrefix": "/road/r6noto/map/",
+        "methods": [
+          "GET",
+          "HEAD"
+        ],
+        "maxBytes": 16777216,
+        "contentTypes": [
+          "text/html",
+          "application/json",
+          "application/geo+json",
+          "application/octet-stream",
+          "binary/octet-stream",
+          "application/zip",
+          "application/x-zip-compressed"
+        ],
+        "maxRedirects": 3,
+        "timeoutMs": 20000,
+        "reason": "本家controllerが国交省の約11.8MB・binary/octet-stream形式GeoJSONを取得する"
+      }
+    ]
+  },
+  {
+    "sourceIndex": 59,
+    "title": "緊急輸送道路R",
+    "targetHostnames": [
+      "developers.google.com",
+      "nlftp.mlit.go.jp",
+      "www.cbr.mlit.go.jp",
+      "www.cgr.mlit.go.jp",
+      "www.dc.ogb.go.jp",
+      "www.hrr.mlit.go.jp",
+      "www.kkr.mlit.go.jp",
+      "www.ktr.mlit.go.jp",
+      "www.mlit.go.jp",
+      "www.qsr.mlit.go.jp",
+      "www.skr.mlit.go.jp",
+      "www.thr.mlit.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 60,
+    "title": "国道事務所等",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.mlit.go.jp",
+      "www.road-info-prvs.mlit.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 61,
+    "title": "道の駅R",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.mlit.go.jp",
+      "www.road-info-prvs.mlit.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 62,
+    "title": "工事予定",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.mlit.go.jp",
+      "www.road-info-prvs.mlit.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 63,
+    "title": "高速道路事前通行規制区間",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.mlit.go.jp",
+      "www.road-info-prvs.mlit.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 64,
+    "title": "事前通行規制区間R",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.mlit.go.jp",
+      "www.road-info-prvs.mlit.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 65,
+    "title": "時間雨量",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.mlit.go.jp",
+      "www.road-info-prvs.mlit.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 66,
+    "title": "ライブカメラ",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.mlit.go.jp",
+      "www.road-info-prvs.mlit.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 67,
+    "title": "通行規制",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.mlit.go.jp",
+      "www.road-info-prvs.mlit.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 68,
+    "title": "地理院防災・災害データ：サブレイヤーあり",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "cdnjs.cloudflare.com",
+      "stackoverflow.com",
+      "www.gsi.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 69,
+    "title": "地理院タイル：サブレイヤーあり",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "maps.gsi.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 70,
+    "title": "重ねるハザードマップALL",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "disaportal.gsi.go.jp",
+      "stackoverflow.com"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 71,
+    "title": "高潮浸水想定区域(想定最大規模)",
+    "targetHostnames": [
+      "cyberjapandata.gsi.go.jp",
+      "disaportal.gsi.go.jp",
+      "maps.gsi.go.jp",
+      "server.name.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 72,
+    "title": "浸水想定区域(想定最大規模)",
+    "targetHostnames": [
+      "cyberjapandata.gsi.go.jp",
+      "disaportal.gsi.go.jp",
+      "disaportaldata.gsi.go.jp",
+      "maps.gsi.go.jp",
+      "server.name.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 73,
+    "title": "浸水想定区域(計画規模)",
+    "targetHostnames": [
+      "cyberjapandata.gsi.go.jp",
+      "disaportal.gsi.go.jp",
+      "disaportaldata.gsi.go.jp",
+      "maps.gsi.go.jp",
+      "server.name.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 74,
+    "title": "津波浸水想定区域(旧)",
+    "targetHostnames": [
+      "cyberjapandata.gsi.go.jp",
+      "disaportal.gsi.go.jp",
+      "disaportaldata.gsi.go.jp",
+      "maps.gsi.go.jp",
+      "server.name.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 75,
+    "title": "地形区分に基づく液状化の発生傾向図",
+    "targetHostnames": [
+      "cyberjapandata.gsi.go.jp",
+      "disaportal.gsi.go.jp",
+      "disaportaldata.gsi.go.jp",
+      "maps.gsi.go.jp",
+      "server.name.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 76,
+    "title": "津波浸水想定(最大規模)",
+    "targetHostnames": [
+      "cyberjapandata.gsi.go.jp",
+      "disaportal.gsi.go.jp",
+      "disaportaldata.gsi.go.jp",
+      "maps.gsi.go.jp",
+      "server.name.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 77,
+    "title": "急傾斜警戒区域",
+    "targetHostnames": [
+      "cyberjapandata.gsi.go.jp",
+      "disaportal.gsi.go.jp",
+      "disaportaldata.gsi.go.jp",
+      "maps.gsi.go.jp",
+      "server.name.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 78,
+    "title": "土石流警戒区域",
+    "targetHostnames": [
+      "cyberjapandata.gsi.go.jp",
+      "disaportal.gsi.go.jp",
+      "disaportaldata.gsi.go.jp",
+      "maps.gsi.go.jp",
+      "server.name.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 79,
+    "title": "地すべり警戒区域",
+    "targetHostnames": [
+      "cyberjapandata.gsi.go.jp",
+      "disaportal.gsi.go.jp",
+      "disaportaldata.gsi.go.jp",
+      "maps.gsi.go.jp",
+      "server.name.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 80,
+    "title": "土石流危険渓流",
+    "targetHostnames": [
+      "cyberjapandata.gsi.go.jp",
+      "disaportal.gsi.go.jp",
+      "disaportaldata.gsi.go.jp",
+      "maps.gsi.go.jp",
+      "server.name.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 81,
+    "title": "急傾斜地崩壊危険個所",
+    "targetHostnames": [
+      "cyberjapandata.gsi.go.jp",
+      "disaportal.gsi.go.jp",
+      "disaportaldata.gsi.go.jp",
+      "maps.gsi.go.jp",
+      "server.name.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 82,
+    "title": "地すべり危険個所",
+    "targetHostnames": [
+      "cyberjapandata.gsi.go.jp",
+      "disaportal.gsi.go.jp",
+      "disaportaldata.gsi.go.jp",
+      "maps.gsi.go.jp",
+      "server.name.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 83,
+    "title": "雪崩危険個所",
+    "targetHostnames": [
+      "cyberjapandata.gsi.go.jp",
+      "disaportal.gsi.go.jp",
+      "disaportaldata.gsi.go.jp",
+      "maps.gsi.go.jp",
+      "server.name.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 84,
+    "title": "道路冠水想定個所",
+    "targetHostnames": [
+      "cyberjapandata.gsi.go.jp",
+      "disaportal.gsi.go.jp",
+      "disaportaldata.gsi.go.jp",
+      "maps.gsi.go.jp",
+      "server.name.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 85,
+    "title": "事前通行規制区間",
+    "targetHostnames": [
+      "cyberjapandata.gsi.go.jp",
+      "disaportal.gsi.go.jp",
+      "disaportaldata.gsi.go.jp",
+      "maps.gsi.go.jp",
+      "server.name.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 86,
+    "title": "緊急輸送道路",
+    "targetHostnames": [
+      "cyberjapandata.gsi.go.jp",
+      "disaportal.gsi.go.jp",
+      "disaportaldata.gsi.go.jp",
+      "maps.gsi.go.jp",
+      "server.name.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 87,
+    "title": "名称未設定レイヤ 87",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "cdnjs.cloudflare.com",
+      "earthquake.usgs.gov"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 88,
+    "title": "地震 ALL 過去1週間(USGS)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "cdnjs.cloudflare.com",
+      "earthquake.usgs.gov"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 89,
+    "title": "全球地震情報(USGS)",
+    "targetHostnames": [
+      "earthquake.usgs.gov"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 90,
+    "title": "K-NET地震情報(防災科研)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.kyoshin.bosai.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 91,
+    "title": "津波情報(JMA)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.data.jma.go.jp",
+      "www.jma.go.jp",
+      "xml.kishou.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 92,
+    "title": "過去の地震データベース(JMA)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.data.jma.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 93,
+    "title": "地震情報(JMA)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.data.jma.go.jp",
+      "www.jma.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 94,
+    "title": "NOAA 海水温",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "nowcoast.noaa.gov"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 95,
+    "title": "NOAA 雷",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "nowcoast.noaa.gov"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 96,
+    "title": "NOAA 湿度",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "nowcoast.noaa.gov"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 97,
+    "title": "NOAA 赤外線",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "nowcoast.noaa.gov"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 98,
+    "title": "NOAA 可視光",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "nowcoast.noaa.gov"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 99,
+    "title": "GPV降雨情報(MSM)",
+    "targetHostnames": [
+      "agora.ex.nii.ac.jp",
+      "cdn.jsdelivr.net",
+      "cyberjapandata.gsi.go.jp",
+      "maps.gsi.go.jp",
+      "server.name.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 100,
+    "title": "GPV風情報 [Animated-α版]",
+    "targetHostnames": [
+      "agora.ex.nii.ac.jp",
+      "cdn.jsdelivr.net",
+      "github.com",
+      "ja.wikipedia.org"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 101,
+    "title": "GPV風情報",
+    "targetHostnames": [
+      "agora.ex.nii.ac.jp",
+      "cdn.jsdelivr.net",
+      "en.wikipedia.org",
+      "qiita.com"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 102,
+    "title": "気象警報",
+    "targetHostnames": [
+      "agora.ex.nii.ac.jp",
+      "cdn.jsdelivr.net",
+      "en.wikipedia.org",
+      "qiita.com",
+      "www.opengis.net"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 103,
+    "title": "JTWC 台風情報(Joint Typhoon Warning Center)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.metoc.navy.mil",
+      "www.petitmonte.com"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 104,
+    "title": "JTWC KML 台風情報",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.metoc.navy.mil"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 105,
+    "title": "yr.no:気温・雲被覆・降雨情報",
+    "targetHostnames": [
+      "beta.yr-maps.met.no",
+      "tiles.yr.no"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 106,
+    "title": "yr.no:風情報(Animated)",
+    "targetHostnames": [
+      "beta.yr-maps.met.no",
+      "cdn.jsdelivr.net",
+      "github.com",
+      "ja.wikipedia.org",
+      "www.met.no",
+      "www.yr.no"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 107,
+    "title": "JAXA 衛星全球降水マップ",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "cyberjapandata.gsi.go.jp",
+      "maps.gsi.go.jp",
+      "server.name.jp",
+      "sharaku.eorc.jaxa.jp",
+      "www.eorc.jaxa.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 108,
+    "title": "JAXA 衛星全球降水マップ(風向矢印)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "cyberjapandata.gsi.go.jp",
+      "maps.gsi.go.jp",
+      "server.name.jp",
+      "sharaku.eorc.jaxa.jp",
+      "www.eorc.jaxa.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 109,
+    "title": "今後の雨（軽量版）(JMA)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.data.jma.go.jp",
+      "www.jma.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 110,
+    "title": "雨雲の動き（軽量版）(JMA)",
+    "targetHostnames": [
+      "www.jma.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 111,
+    "title": "天気分布予報(JMA)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.data.jma.go.jp",
+      "www.jma.go.jp",
+      "www.msil.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 112,
+    "title": "早期注意情報(JMA)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.jma.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 113,
+    "title": "警報注意報(JMA)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "dmdata.jp",
+      "www.jma.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 114,
+    "title": "台風(JMA)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "math.stackexchange.com",
+      "www.data.jma.go.jp",
+      "www.jma.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 115,
+    "title": "降水短時間予報(JMA)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.data.jma.go.jp",
+      "www.jma.go.jp",
+      "www.msil.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 116,
+    "title": "大雨危険度(JMA)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.jma.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 117,
+    "title": "危険度分布-浸水害(JMA)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.data.jma.go.jp",
+      "www.jma.go.jp",
+      "www.msil.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 118,
+    "title": "危険度分布-土砂災害(JMA)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.data.jma.go.jp",
+      "www.jma.go.jp",
+      "www.msil.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 119,
+    "title": "危険度分布-洪水害(JMA)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "unpkg.com",
+      "www.data.jma.go.jp",
+      "www.jma.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 120,
+    "title": "国交省_川の防災情報_降雨レーダー",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.river.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 121,
+    "title": "ひまわり8号(気象衛星センター)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.data.jma.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 122,
+    "title": "ナウキャスト(降雨)(JMA)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.data.jma.go.jp",
+      "www.jma.go.jp",
+      "www.msil.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 123,
+    "title": "ナウキャスト(降雪)(JMA)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.data.jma.go.jp",
+      "www.jma.go.jp",
+      "www.msil.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 124,
+    "title": "ナウキャスト(落雷)(JMA)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.data.jma.go.jp",
+      "www.jma.go.jp",
+      "www.msil.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 125,
+    "title": "ナウキャスト(竜巻)(JMA)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.data.jma.go.jp",
+      "www.jma.go.jp",
+      "www.msil.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 126,
+    "title": "天気図",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.itsonlyamodel.us",
+      "www.jma.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 127,
+    "title": "気象庁_2021_VectorData",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "unpkg.com",
+      "www.data.jma.go.jp",
+      "www.jma.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 128,
+    "title": "気象庁_2021_火山",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.jma.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 129,
+    "title": "気象庁_2021_推計震度分布",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.jma.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 130,
+    "title": "気象庁_2021_ひまわり画像",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.data.jma.go.jp",
+      "www.jma.go.jp",
+      "www.msil.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 131,
+    "title": "気象庁_2021_TileImages",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.data.jma.go.jp",
+      "www.jma.go.jp",
+      "www.msil.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 132,
+    "title": "気象庁_2021_アメダス",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.jma.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 133,
+    "title": "河川形状",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.river.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 134,
+    "title": "水位観測所",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.river.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 135,
+    "title": "ダム",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.river.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 136,
+    "title": "警報のみ 水位計",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.river.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 137,
+    "title": "警報のみ 水位観測所",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.river.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 138,
+    "title": "警報のみ ダム",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.river.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 139,
+    "title": "道路(国土技術研究センター)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.jice.or.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 140,
+    "title": "河川(国土技術研究センター)",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.jice.or.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 141,
+    "title": "国交省川の防災情報",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.river.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 142,
+    "title": "警察庁_交通事故データ",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "cdn.sheetjs.com",
+      "www.npa.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 143,
+    "title": "厚労省 病院・診療所・薬局等",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "www.mhlw.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 144,
+    "title": "地理院 指定避難所",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "hinanmap.gsi.go.jp",
+      "www.gsi.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 145,
+    "title": "地理院 指定緊急避難場所",
+    "targetHostnames": [
+      "cdn.jsdelivr.net",
+      "hinanmap.gsi.go.jp",
+      "www.gsi.go.jp"
+    ],
+    "requests": []
+  },
+  {
+    "sourceIndex": 146,
+    "title": "岡山大学 チーム活動（CSV追加対応）",
+    "targetHostnames": [],
+    "requests": []
+  },
+  {
+    "sourceIndex": 147,
+    "title": "岡山大学 チーム活動エリア",
+    "targetHostnames": [],
+    "requests": []
+  },
+  {
+    "sourceIndex": 148,
+    "title": "岡山大学 避難所（QTCT・岡山）",
+    "targetHostnames": [],
+    "requests": []
+  }
+])
