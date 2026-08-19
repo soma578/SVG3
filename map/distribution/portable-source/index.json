@@ -81,11 +81,11 @@
     "artifact-sample": "standalone-release"
   },
   "sharedVersion": {
-    "artifact-sample": "1435d2fa16e4",
-    "evacuation": "cf9f9bf4bbe6",
-    "japan-river-webcams": "0b9b0de2511e",
-    "riverLevel": "9b316a36f76a",
-    "roadClosure": "c13aa38719a0",
-    "teamActivity": "7f5397e54181"
+    "artifact-sample": "fed8b343b5f2",
+    "evacuation": "e147b2789e2e",
+    "japan-river-webcams": "b38527bef7ec",
+    "riverLevel": "32a1d784638b",
+    "roadClosure": "28f1f019da25",
+    "teamActivity": "12b39385f614"
   }
 }

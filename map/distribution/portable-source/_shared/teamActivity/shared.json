@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "kind": "portable-shared-component",
   "packageId": "teamActivity",
-  "sharedVersion": "7f5397e54181",
+  "sharedVersion": "12b39385f614",
   "files": [
     "map/icons/app/icon-192.png",
     "map/icons/app/icon-512.png",

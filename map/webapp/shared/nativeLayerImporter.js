@@ -1,4 +1,5 @@
 const STORAGE_KEY = 'svg3.nativeImportedLayers.v1';
+const SVGMAP_APP_LAYERS_UPSTREAM_CONTAINER = 'https://svgmap.github.io/svgmapAppLayers/Container.svg';
 
 const SAFE_ATTRIBUTES = new Set([
   'id',
@@ -166,6 +167,33 @@ export const importSingleLayer = ({ url, title }) => {
   };
 };
 
+const comparableUrl = (value, baseUrl) => {
+  try {
+    const url = new URL(String(value || ''), baseUrl);
+    url.hash = '';
+    return url.href;
+  } catch {
+    return '';
+  }
+};
+
+// 利用者が本家のURLを貼った場合も、同梱済みの検証済みアダプターへ案内する。
+// WebAppレイヤーか単純SVGかを利用者に判断させないための対応表である。
+export const findBundledCommunityEntry = (entries, inputUrl, {
+  localContainerUrl = '/map/svgMapAppLayers/Container.svg',
+  upstreamContainerUrl = SVGMAP_APP_LAYERS_UPSTREAM_CONTAINER,
+} = {}) => {
+  const requested = comparableUrl(inputUrl, location.href);
+  if (!requested) return null;
+  const localContainer = new URL(localContainerUrl, location.href).href;
+  return (Array.isArray(entries) ? entries : []).find((entry) => {
+    const original = entry.href || entry.animation?.['xlink:href'] || '';
+    const local = entry.adapterHref || entry.animation?.['xlink:href'] || entry.href || '';
+    return requested === comparableUrl(original, upstreamContainerUrl)
+      || requested === comparableUrl(local, localContainer);
+  }) || null;
+};
+
 // 管理者が同梱したsvgmapAppLayersのカタログから、1レイヤーだけを現在の地図へ追加する。
 // 任意URLのインポートとは異なり、コードは既にこの配布物に含まれるため、本家と同じ
 // controller実行ができるtightモードを許可する。対象は固定の同一オリジン配下に限る。
@@ -193,8 +221,24 @@ export const importBundledCommunityLayer = (entry, {
   }
   Object.assign(attrs, entry.placement || {});
   attrs.id = id;
-  const configuredHref = new URL(entry.adapterHref || sourceAttrs['xlink:href'], sourceUrl);
-  for (const field of entry.configuration?.fields || []) {
+  // 旧AppLayersには #csvPath=https://... のように、生のURLをfragmentへ入れ、
+  // 自前で split("&") するレイヤーがある。URL.hrefへ一度通すと :// が
+  // percent-encodeされ、旧ローダーが相対パスと誤認するため、設定不要なら
+  // safeUrlが保持したfragment文字列をそのまま使う。
+  // The legacy USGS all-week CSV layer depends on an old isolated CSV
+  // controller that does not reliably repaint in the current runtime. Serve
+  // the same all-week/all-magnitude feed through the verified GeoJSON adapter.
+  const legacyUsgsAllWeek = Number(entry.sourceIndex) === 88
+    && title === '地震 ALL 過去1週間(USGS)';
+  const rawConfiguredHref = legacyUsgsAllWeek
+    ? '/map/layers/external/svgmap-app-layers/adapters/usgs-earthquakes-all-week.svg'
+    : (entry.adapterHref || sourceAttrs['xlink:href']);
+  let configuredHref = safeUrl(rawConfiguredHref, sourceUrl);
+  const configurationFields = entry.configuration?.fields || [];
+  const configuredHash = configurationFields.length > 0
+    ? new URLSearchParams(configuredHref.split('#')[1] || '')
+    : null;
+  for (const field of configurationFields) {
     const raw = String(configuration[field.name] || '').trim();
     if (!raw && field.required) throw new Error(`${field.label}を入力してください`);
     if (!raw) continue;
@@ -207,11 +251,12 @@ export const importBundledCommunityLayer = (entry, {
     if (!(field.protocols || ['https:']).includes(endpoint.protocol)) {
       throw new Error(`${field.label}はHTTPS URLを指定してください`);
     }
-    const hash = new URLSearchParams(configuredHref.hash.replace(/^#/, ''));
-    hash.set(field.name, endpoint.href);
-    configuredHref.hash = hash.toString();
+    configuredHash.set(field.name, endpoint.href);
   }
-  attrs['xlink:href'] = safeUrl(configuredHref.href, sourceUrl);
+  if (configuredHash) {
+    configuredHref = `${configuredHref.split('#')[0]}#${configuredHash.toString()}`;
+  }
+  attrs['xlink:href'] = configuredHref;
   attrs.title = title;
   attrs.class = attrs.class || 'vectorEtcData';
   attrs.visibility = 'visible';
@@ -289,13 +334,27 @@ const isStoredLayer = (layer) =>
 export const loadImportedLayers = () => {
   try {
     const value = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-    return Array.isArray(value)
+    const layers = Array.isArray(value)
       ? value.filter(isStoredLayer).map((layer) => ({
           ...layer,
           title: layer.title || layer.label,
           label: layer.label || layer.title,
         }))
       : [];
+    let migrated = false;
+    for (const layer of layers) {
+      const href = layer.attrs?.['xlink:href'] || '';
+      if (layer.title === '地震 ALL 過去1週間(USGS)' && href.includes('all_week.csv')) {
+        layer.attrs['xlink:href'] = new URL(
+          '/map/layers/external/svgmap-app-layers/adapters/usgs-earthquakes-all-week.svg',
+          location.href,
+        ).href;
+        if (layer.community) layer.community.runtime = 'tight';
+        migrated = true;
+      }
+    }
+    if (migrated) localStorage.setItem(STORAGE_KEY, JSON.stringify(layers));
+    return layers;
   } catch {
     return [];
   }

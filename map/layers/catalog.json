@@ -459,7 +459,7 @@
           "spdx": "MPL-2.0"
         },
         "status": "bundled",
-        "runtime": "isolated",
+        "runtime": "tight",
         "delivery": "adapter",
         "offline": true,
         "externalDependencies": [],

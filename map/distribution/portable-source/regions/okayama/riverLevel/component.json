@@ -3,7 +3,7 @@
   "kind": "portable-regional-component",
   "packageId": "riverLevel",
   "regionId": "okayama",
-  "sharedVersion": "9b316a36f76a",
+  "sharedVersion": "32a1d784638b",
   "files": [
     "Container.isolated.svg",
     "Container.svg",

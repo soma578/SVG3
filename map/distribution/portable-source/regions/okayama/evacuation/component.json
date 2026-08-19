@@ -3,7 +3,7 @@
   "kind": "portable-regional-component",
   "packageId": "evacuation",
   "regionId": "okayama",
-  "sharedVersion": "cf9f9bf4bbe6",
+  "sharedVersion": "e147b2789e2e",
   "files": [
     "Container.isolated.svg",
     "Container.svg",

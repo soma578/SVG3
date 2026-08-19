@@ -29,7 +29,7 @@
     },
     "publishedAt": "2026-07-21T00:00:00+09:00"
   },
-  "contentDigest": "sha256-ee5299866bc1e5346e9d2dc9af4555855764d100a3c1549076db9511e0cbaa94",
+  "contentDigest": "sha256-2ac1c2632ac1d2a11178e233242f049f1e2aedd109f48ff9fe912016942d4551",
   "portability": {
     "pathIndependent": true,
     "crossOrigin": false,
@@ -45,7 +45,7 @@
         "id": "representative-pins",
         "version": "1.2.2",
         "manifest": "representative-pins/runtime.package.json",
-        "integrity": "sha256-fb61dd7724f2e308c04a2141f866a762cbf5cdc2afb52d37aa395e2a5a89f0b0"
+        "integrity": "sha256-599c2591f8387bde92cbb68c6c242942dfd221b2f5dbcaa5723a326c9fc7aefb"
       },
       {
         "id": "svgmap-slawa-client",
@@ -70,7 +70,7 @@
     {
       "path": "layer.manifest.json",
       "bytes": 11851,
-      "sha256": "58b441c24c84728934ab0b17163f9980b7a5ac18b7575c32fbbd3de54bb48ede"
+      "sha256": "63bdac615e603f0d4f368310f505bedb0f2fecf8de96d31dd881c1e8a09ce17a"
     },
     {
       "path": "map/data/qtct/japanRiverWebcam/okayama/detail.json",
@@ -260,7 +260,7 @@
     {
       "path": "map/layers/portable/japan-river-webcams/layer.package.json",
       "bytes": 2197,
-      "sha256": "8363cb3b6a6a96879792762565ce60c0d5955ba26e9eb382aff5c1e00574818d"
+      "sha256": "bde66b39ef0ee672960cd6c3b8615d37e52a819417be7a75ce1c9e991cc04554"
     },
     {
       "path": "map/layers/portable/japan-river-webcams/webcam-runtime-policy.json",
@@ -304,13 +304,13 @@
     },
     {
       "path": "map/layers/portable/representative-pins/pinLayerProfiles.js",
-      "bytes": 9871,
-      "sha256": "b5e840060bf63bccd3f07410fcee455352bd147ca10670cc91c7ee28a8d3a056"
+      "bytes": 9984,
+      "sha256": "1bfd61965c152ab12f18f46836a90600c4732b6ef70ebe2c7407c2b7e3d6de29"
     },
     {
       "path": "map/layers/portable/representative-pins/propertyModal.js",
-      "bytes": 11035,
-      "sha256": "051d9b605ec4f8277577895770dc2ff480ad328625e25cc7f0ec906a17b075ee"
+      "bytes": 11038,
+      "sha256": "7fb62244cf6e30aedeadecdded09c674a02208bb2a038bbf8d94ae5c461fbdb2"
     },
     {
       "path": "map/layers/portable/representative-pins/qtctBuilder.mjs",

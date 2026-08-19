@@ -139,11 +139,10 @@
         </div>
       </header>
       <form id="layer-import-form" class="layer-import-form" hidden>
-        <select id="layer-import-kind" aria-label="インポート形式">
+        <select id="layer-import-kind" aria-label="追加方法">
           <option value="artifact">検証済みレイヤー</option>
           <option value="signed-index">署名済み配布一覧</option>
-          <option value="container">Container.svg</option>
-          <option value="layer">SVG / HTML</option>
+          <option value="auto">URL / ファイルから追加</option>
         </select>
         <input id="layer-import-index-url" class="layer-import-index-url" type="url" inputmode="url" autocomplete="url" placeholder="https://publisher.example/index.json" hidden>
         <div id="layer-import-index-actions" class="layer-import-index-actions" hidden>
@@ -161,12 +160,12 @@
         <label id="layer-import-drop" class="layer-import-drop">
           <input id="layer-import-file" type="file" accept=".svg,.html,.htm,image/svg+xml,text/html">
           <span class="layer-import-drop-copy">
-            <strong>SVG / HTMLをここにドロップ</strong>
+            <strong>レイヤーファイルをここにドロップ</strong>
             <small>またはクリックしてファイルを選択</small>
           </span>
           <span id="layer-import-file-name" class="layer-import-file-name"></span>
         </label>
-        <input id="layer-import-url" class="layer-import-url" type="text" inputmode="url" autocomplete="url" placeholder="https://example.jp/Container.svg" hidden>
+        <input id="layer-import-url" class="layer-import-url" type="text" inputmode="url" autocomplete="url" placeholder="レイヤーのURLを貼り付け" hidden>
         <input id="layer-import-title" class="layer-import-title" type="text" autocomplete="off" placeholder="レイヤー名" hidden>
         <div class="layer-import-actions">
           <a id="layer-download" class="layer-download" href="#" download hidden>ZIPで保存</a>

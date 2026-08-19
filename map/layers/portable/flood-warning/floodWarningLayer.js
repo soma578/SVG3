@@ -6,6 +6,10 @@ import { renderFloodWarningDetail } from './floodWarningDetail.js';
 
 export const JMA_WARNING_URL = 'https://www.jma.go.jp/bosai/warning/data/warning/map.json';
 export const MUNICIPALITY_INDEX_URL = '/map/regions/municipalities-index.json';
+export const JMA_WARNING_ATTRIBUTION = {
+  label: '気象庁「気象警報・注意報」',
+  url: 'https://www.jma.go.jp/bosai/warning/',
+};
 
 const XLINK_NS = 'http://www.w3.org/1999/xlink';
 const DRAW_GROUP_ID = 'flood-warning-points';
@@ -173,7 +177,9 @@ export const initFloodWarningLayer = () => {
   const showPoiProperty = (target) => {
     try {
       const feature = JSON.parse(target?.getAttribute?.('data-feature') || '{}');
-      showPropertyModal(renderFloodWarningDetail(feature));
+      showPropertyModal(renderFloodWarningDetail(feature), {
+        attribution: JMA_WARNING_ATTRIBUTION,
+      });
     } catch (error) {
       console.warn('[floodWarningLayer] feature parse failed', error);
     }

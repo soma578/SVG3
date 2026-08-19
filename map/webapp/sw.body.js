@@ -144,6 +144,21 @@ const shellResponse = async (request) => {
   return fetch(request);
 };
 
+const communityResponse = async (request) => {
+  const cache = await caches.open(SHELL_CACHE);
+  try {
+    // controller/SVG/依存JSは同じsnapshot世代を優先する。同じURLの古い内容を
+    // cache-firstで返さず、成功したnetwork応答だけ現在のshell版へ保存する。
+    const response = await fetch(request, { cache: 'no-cache' });
+    if (response.ok) await cache.put(request, response.clone());
+    return response;
+  } catch (error) {
+    const cached = await cache.match(request, { ignoreSearch: true });
+    if (cached) return cached;
+    throw error;
+  }
+};
+
 const regionResponse = async (request) => {
   const names = await caches.keys();
   for (const name of names) {
@@ -175,6 +190,10 @@ self.addEventListener('fetch', (event) => {
   // ここで肩代わりすると鮮度判定が壊れる。
   if (kind === 'shell') {
     event.respondWith(shellResponse(request));
+    return;
+  }
+  if (kind === 'community') {
+    event.respondWith(communityResponse(request));
     return;
   }
   if (kind === 'region') {

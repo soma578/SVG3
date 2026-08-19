@@ -28,11 +28,14 @@ Content-Typeも検査する。SVGMap controllerからは本家と同じ `svgMap.
 本家ContainerでXMLコメント内にあるanimationはカタログ対象外とする。カタログ各項目の
 `animation` は本家の配置・class・hrefを保持し、GUIから1件だけ追加するときにも使う。
 
-実行モード:
+実行モード（コードの検証状態ではなく、配布境界で分ける）:
 
-- 未検証URL・ローカル追加・通常のコミュニティ資産は `isolated` で分離する
-- 同梱済みでコードと実描画を確認した旧式レイヤだけ、互換性カタログで `tight` を個別許可する
-- `tight` は `supported` / `limited` 以外には指定できない
+- 完全スナップショットとして同梱した `svgMapAppLayers` は、固定同一originの `tight`
+- 利用者がURL・ファイルから追加する未知の資産は、引き続き `isolated`
+- `tight` は同梱ツリー外のURLへは昇格させない
+
+実行契約の正本は `compatibility-contract.json`。上流資産ツリーとSVGMap runtimeの
+SHA-256、相対path、controller globals、document identity、network、cache方針を一組で固定する。
 
 分類:
 
@@ -49,7 +52,7 @@ Content-Typeも検査する。SVGMap controllerからは本家と同じ `svgMap.
 | --- | --- | --- |
 | 単純なSVG | `publicBase` へrebaseして直接配置 | 静的ベクターレイヤー |
 | 同じSVGを異なるhashで使う、またはルートscriptが必要 | `adapters/` に固有URLのSVGを生成 | DID、地理院写真、OSM |
-| 相対controller・JS・画像がある | controllerを同一オリジンへ置き、参照を絶対URL化 | JMA、USGS、J-SHIS |
+| 相対controller・JS・画像がある | 原則 `/map/svgMapAppLayers/` の本家pathを維持 | 本家controller一般 |
 | Gitのsymlinkが配布時に空ファイル化する | symlink先の共通ライブラリ実体をadapterへ展開 | 国交省浸水想定 |
 | CORSを許可する外部API・タイル | 本体だけ同梱し、データはブラウザから直接取得 | JMA、USGS、地理院、OSM、J-SHIS |
 | CORSを許可しない、または認証が必要 | 権限と利用規約を確認した専用中継か、提供者側CORSが必要 | 未検証のまま標準搭載しない |
@@ -59,8 +62,14 @@ Content-Typeも検査する。SVGMap controllerからは本家と同じ `svgMap.
 `placement: { x, y, width, height }` でanimationの範囲を補正する。これはOSMのように
 レイヤーをONにしても文書自体がロードされない問題を防ぐための互換情報である。
 
-外部依存を持つレイヤーは `limited` / `online-only` とし、通信先への実リクエストと、
-SVG内の `image` / `use` 生成までE2Eで確認する。汎用オープンプロキシは置かない。
+外部通信は静的抽出したhost/pathと `network-capability-overrides.json` からレイヤー別profileを
+生成する。各profileが method / maxBytes / Content-Type / redirect / timeoutを持ち、profileに
+無いURLは中継しない。外部依存を持つレイヤーは、通信先への実リクエストとSVG内の
+`image` / `use` 生成までE2Eで確認する。汎用オープンプロキシは置かない。
+
+adapterは、(1) 本家pathそのまま、(2) host compatibility、(3) document identity shimで
+吸収できない場合の最後の手段とする。共有SVGを固有URL化する機械生成物は、上流forkではなく
+`document identity shim`として扱う。
 
 ## 更新
 

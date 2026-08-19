@@ -112,7 +112,7 @@ const PROPERTY_STYLES = `
     }
     .svg3-property-actions {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 7px;
       margin-top: 8px;
     }
@@ -185,7 +185,7 @@ const PROPERTY_STYLES = `
       list-style: none;
     }
     .svg3-property-list li {
-      min-width: 180px;
+      min-width: 0;
       font-size: 15px;
     }
     .svg3-property-list small {
@@ -276,9 +276,12 @@ const attributionMarkup = (attribution) => {
 };
 
 // 基準幅はアプリの他のUIに合わせる。候補一覧(#ticker)が最大320px、レイヤー
-// 固有UIが399pxで、プロパティだけが地図を覆わないよう、本文・余白を含めて
-// 従来のおよそ2/3の面積に抑える。狭い画面では従来どおりviewport幅に収める。
-export const showPropertyModal = (html, { width = 260, attribution = null } = {}) => {
+// 実機で180pxでは窮屈だったため、その1.5倍の270pxをデスクトップ基準にする。
+// 狭い画面では可読性・操作性のためviewport幅に収める。
+export const showPropertyModal = (
+  html,
+  { width = 270, attribution = { label: 'SVG3（配布データ）' } } = {},
+) => {
   if (!window.svgMap?.showModal) return null;
 
   const info = window.svgMap.showModal(

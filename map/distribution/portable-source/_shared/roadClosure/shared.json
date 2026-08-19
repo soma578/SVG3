@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "kind": "portable-shared-component",
   "packageId": "roadClosure",
-  "sharedVersion": "c13aa38719a0",
+  "sharedVersion": "28f1f019da25",
   "files": [
     "map/icons/app/icon-192.png",
     "map/icons/app/icon-512.png",

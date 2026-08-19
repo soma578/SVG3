@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "assetContract": {
+    "publicRoot": "/map/svgMapAppLayers/",
+    "sourceRoot": "svgMapAppLayers/",
+    "preserveRelativePaths": true,
+    "snapshotSha256": "fb98d1ed8932c61ad956672ea12e2b2eecd6df95f9d59ca53ea34501b5bcd061",
+    "fileCount": 868
+  },
+  "runtimeContract": {
+    "family": "SVGMap.js",
+    "coreRevision": "r18",
+    "layerUiRevision": "r6",
+    "files": [
+      "SVGMapLv0.1_r18module.js",
+      "SVGMapLv0.1_Class_r18module.js",
+      "SVGMapLv0.1_LayerUI_r6module.js",
+      "libs/LayerSpecificWebAppHandler.js",
+      "svgMapLayerLib.js"
+    ],
+    "sha256": "3242336c5b29ad6cb4bc21f9df679d54285a6dfa42e70ccb3a830d30fb76e10a"
+  },
+  "trustBoundary": {
+    "bundledCommunityRuntime": "tight",
+    "unknownUrlRuntime": "isolated"
+  },
+  "controllerContract": {
+    "globals": [
+      "svgMap",
+      "svgMapGIStool",
+      "svgMapAuthoringTool",
+      "layerID",
+      "svgImage",
+      "svgImageProps"
+    ],
+    "preserveControllerRelativeUrls": true
+  },
+  "networkContract": {
+    "api": "svgMap.getCORSURL()",
+    "policy": "generated-layer-capability",
+    "capabilityOverrides": "network-capability-overrides.json",
+    "denyUndeclaredTargets": true
+  },
+  "documentIdentityContract": {
+    "key": "absolute SVG document URL without fragment",
+    "sharedBaseStrategy": "generated identity shim"
+  },
+  "cacheContract": {
+    "pathPrefix": "/map/svgMapAppLayers/",
+    "strategy": "network-first-versioned-fallback",
+    "versionSource": "shell content SHA-256"
+  }
+}

@@ -23,7 +23,8 @@
       "title": "sentinel2_2018_WMTS",
       "href": "./basemaps/dynamicWMTS.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": false,
@@ -51,6 +52,7 @@
       "href": "./basemaps/dynamicDenshiKokudo2016.svg#map=ort",
       "available": true,
       "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "online-only",
       "offline": false,
       "controller": false,
@@ -69,14 +71,16 @@
         "visibility": "hidden",
         "xlink:href": "./basemaps/dynamicDenshiKokudo2016.svg#map=ort"
       },
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/gsi-ortho.svg#map=ort"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/gsi-ortho.svg#map=ort",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 3,
       "title": "DenshiKokudo:淡色",
       "href": "./basemaps/dynamicDenshiKokudo2016.svg#map=pale",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": false,
@@ -98,14 +102,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./basemaps/dynamicDenshiKokudo2016.svg#map=pale",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/basemaps-dynamicdenshikokudo2016-3.svg#map=pale"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/basemaps-dynamicdenshikokudo2016-3.svg#map=pale",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 4,
       "title": "DenshiKokudo:relief",
       "href": "./basemaps/dynamicDenshiKokudo2016.svg#map=relief",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": false,
@@ -127,14 +133,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./basemaps/dynamicDenshiKokudo2016.svg#map=relief",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/basemaps-dynamicdenshikokudo2016-4.svg#map=relief"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/basemaps-dynamicdenshikokudo2016-4.svg#map=relief",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 5,
       "title": "DenshiKokudo",
       "href": "./basemaps/dynamicDenshiKokudo2016.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": false,
@@ -156,14 +164,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./basemaps/dynamicDenshiKokudo2016.svg",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/basemaps-dynamicdenshikokudo2016-5.svg"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/basemaps-dynamicdenshikokudo2016-5.svg",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 6,
       "title": "OpenStreetMap Etc",
       "href": "./basemaps/osmTileProviders/osmtp.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -193,6 +203,7 @@
       "href": "./basemaps/dynamicOSM_r11.svg",
       "available": true,
       "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "online-only",
       "offline": false,
       "controller": true,
@@ -212,6 +223,7 @@
         "xlink:href": "./basemaps/dynamicOSM_r11.svg"
       },
       "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/osm-global.svg",
+      "adapterKind": "dedicated",
       "placement": {
         "x": -30000,
         "y": -30000,
@@ -224,7 +236,8 @@
       "title": "登記所備付地図データ(RawData)",
       "href": "./appLayers/moj/kuwanauchi.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -251,7 +264,8 @@
       "title": "e-stat街区レベル境界・人口データ",
       "href": "./appLayers/eStatPopulation/adminAreaMap2.svg#complexGisLayer=Vector GIS Complex&test=true",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -282,7 +296,8 @@
       "title": "Experimental GSI Vector Tile",
       "href": "./appLayers/gsiVmExp/gsiVmExp.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -313,7 +328,8 @@
       "title": "e-stat data reverse-geocoder",
       "href": "./geoCoders/eStatRevGeocoder/reverseGeoCoder.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -347,7 +363,8 @@
       "title": "plus coder",
       "href": "./geoCoders/plusCoder/plusCode.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -374,7 +391,8 @@
       "title": "geohashCoder",
       "href": "./geoCoders/geohashCoder/geohash.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "adapter",
       "offline": true,
       "controller": true,
@@ -392,14 +410,16 @@
         "opacity": "1",
         "xlink:href": "./geoCoders/geohashCoder/geohash.svg"
       },
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/geohash-coder.svg"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/geohash-coder.svg",
+      "adapterKind": "host-compatibility"
     },
     {
       "sourceIndex": 14,
       "title": "UTMGridCoder",
       "href": "./geoCoders/utmGridCoder/utmGridCoder.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -427,7 +447,8 @@
       "title": "geolonia_GeoCoder",
       "href": "./geoCoders/geoloniaGeocoder/geoloniaGeocoder.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -455,7 +476,8 @@
       "title": "CSIS_GeoCoder",
       "href": "./geoCoders/csisGeocoder/csisGeocode.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -483,7 +505,8 @@
       "title": "GSI_GeoCoder",
       "href": "./geoCoders/gsiGeocoder/gsiGeoCoder.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -512,7 +535,8 @@
       "title": "Street View",
       "href": "./appLayers/streetView/instantStreetView.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -543,7 +567,8 @@
       "title": "経路検索(graphhopper)",
       "href": "./geoProcessingLayers/routing/routingD.svg#graphhopperurl={SET YOUR GRAPHHOPPER API ENDPOINT URL}",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "configuration-required",
       "offline": false,
       "controller": true,
@@ -581,7 +606,8 @@
       "title": "標高検索",
       "href": "./geoProcessingLayers/gsiAltCoder/altCoder.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -609,7 +635,8 @@
       "title": "GeoidHeightCalculator",
       "href": "./geoProcessingLayers/gsiGeoidCoder/geoidCalc.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -637,7 +664,8 @@
       "title": "bitimageTracer",
       "href": "./geoProcessingLayers/bitimage2vector/img2vector.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -665,7 +693,8 @@
       "title": "Raster GIS",
       "href": "./geoProcessingLayers/rasterGisLayer/rasterGisLayer6.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -697,7 +726,8 @@
       "title": "Vector GIS",
       "href": "./geoProcessingLayers/vectorGisLayer/vectorGisLayer.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -725,7 +755,8 @@
       "title": "Vector GIS Complex",
       "href": "./geoProcessingLayers/vectorGisLayer/vectorGIS_Lv2.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -755,7 +786,8 @@
       "title": "KML(MyMaps)データ表示",
       "href": "./authoringLayers/local/kmlLoader/kmlLoader.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -783,7 +815,8 @@
       "title": "shape・GeoJSONファイル表示",
       "href": "./authoringLayers/local/vectorFileLoader/vectorFileLoader3.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -812,7 +845,8 @@
       "title": "任意XYZタイル表示",
       "href": "./authoringLayers/local/userXYZtile/userXYZtile.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -839,7 +873,8 @@
       "title": "free hand authoring",
       "href": "./authoringLayers/local/simpleRaster/simpleRaster.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -849,7 +884,7 @@
         "cdn.jsdelivr.net"
       ],
       "verifiedAt": null,
-      "note": "外部配信元と通信するレイヤー（proengineer.internous.co.jp, bagelee.com, cdn.jsdelivr.net）",
+      "note": "本家controller上で利用者が描画操作を行った後にSVG要素を生成する作図レイヤー",
       "animation": {
         "x": "-30000",
         "y": "-30000",
@@ -860,14 +895,16 @@
         "visibility": "hidden",
         "opacity": "0.6",
         "xlink:href": "./authoringLayers/local/simpleRaster/simpleRaster.svg"
-      }
+      },
+      "interactionRequired": true
     },
     {
       "sourceIndex": 30,
       "title": "vector authoring",
       "href": "./authoringLayers/local/simpleVector/simpleVector.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -895,7 +932,8 @@
       "title": "CSVデータ可視化",
       "href": "./authoringLayers/local/csvLayer/csvXhr_r20.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -918,14 +956,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./authoringLayers/local/csvLayer/csvXhr_r20.svg",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/authoringlayers-local-csvlayer-csvxhr-r20-31.svg"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/authoringlayers-local-csvlayer-csvxhr-r20-31.svg",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 32,
       "title": "bitimage2geoInfo",
       "href": "./authoringLayers/local/bitImage2geoInfo/bitimage2geo.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -952,7 +992,8 @@
       "title": "JMA過去の災害記録(-2020年)",
       "href": "./appLayers/jma/pastOldNowCast/jmaHrRain_r3.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -979,7 +1020,8 @@
       "title": "JMA過去の災害記録(2021年)",
       "href": "./appLayers/jma/pastDisaster/jma_bm_r2.svg#type=1&cat=0&autoupdate&zmax=10&zstep=2",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -1007,7 +1049,8 @@
       "title": "JMA過去の災害記録(2022年-)",
       "href": "./appLayers/jma/pastDisaster/pastLog2022.svg#layers=危険度分布-洪水害(JMA),危険度分布-浸水害(JMA),危険度分布-土砂災害(JMA),警報注意報(JMA),大雨危険度(JMA),雨雲の動き（軽量版）(JMA),今後の雨（軽量版）(JMA),台風(JMA)",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -1034,7 +1077,8 @@
       "title": "DRONEBIRD",
       "href": "./appLayers/droneBird/droneBird.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -1065,7 +1109,8 @@
       "title": "火災情報(NASA FIRMS)",
       "href": "./appLayers/nasa_FIRMS/firms.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -1092,7 +1137,8 @@
       "title": "沿岸海域土地条件図:昭和63年以前",
       "href": "./basemaps/dynamicDenshiKokudo2016.svg#map=ccm2",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": false,
@@ -1114,14 +1160,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./basemaps/dynamicDenshiKokudo2016.svg#map=ccm2",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/basemaps-dynamicdenshikokudo2016-38.svg#map=ccm2"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/basemaps-dynamicdenshikokudo2016-38.svg#map=ccm2",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 39,
       "title": "沿岸海域土地条件図:平成元年以降",
       "href": "./basemaps/dynamicDenshiKokudo2016.svg#map=ccm1",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": false,
@@ -1143,14 +1191,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./basemaps/dynamicDenshiKokudo2016.svg#map=ccm1",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/basemaps-dynamicdenshikokudo2016-39.svg#map=ccm1"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/basemaps-dynamicdenshikokudo2016-39.svg#map=ccm1",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 40,
       "title": "dynamicOpenSeaMap seamark",
       "href": "./appLayers/openSeaMap/dynamicOpenSeaMap.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": false,
@@ -1209,7 +1259,8 @@
       "title": "海底ケーブル(海しる)",
       "href": "./appLayers/msil/msilLayer.svg#layerName0=Infrastructure&layerName1=show:3",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -1233,14 +1284,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/msil/msilLayer.svg#layerName0=Infrastructure&layerName1=show:3",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-msil-msillayer-42.svg#layerName0=Infrastructure&layerName1=show:3"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-msil-msillayer-42.svg#layerName0=Infrastructure&layerName1=show:3",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 43,
       "title": "漁港(海しる)",
       "href": "./appLayers/msil/msilLayer.svg#layerName0=Maritime&layerName1=show:32",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -1264,14 +1317,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/msil/msilLayer.svg#layerName0=Maritime&layerName1=show:32",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-msil-msillayer-43.svg#layerName0=Maritime&layerName1=show:32"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-msil-msillayer-43.svg#layerName0=Maritime&layerName1=show:32",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 44,
       "title": "等深線(海しる)",
       "href": "./appLayers/msil/msilLayer.svg#layerName0=TopographyAndGeology&layerName1=show:1",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -1295,14 +1350,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/msil/msilLayer.svg#layerName0=TopographyAndGeology&layerName1=show:1",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-msil-msillayer-44.svg#layerName0=TopographyAndGeology&layerName1=show:1"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-msil-msillayer-44.svg#layerName0=TopographyAndGeology&layerName1=show:1",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 45,
       "title": "天気図４８時間予想(海しる)",
       "href": "./appLayers/msil/msilImageLayer.svg#layerName=WeatherImg10&time=false",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": false,
@@ -1325,14 +1382,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/msil/msilImageLayer.svg#layerName=WeatherImg10&time=false",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-msil-msilimagelayer-45.svg#layerName=WeatherImg10&time=false"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-msil-msilimagelayer-45.svg#layerName=WeatherImg10&time=false",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 46,
       "title": "天気図２４時間予想(海しる)",
       "href": "./appLayers/msil/msilImageLayer.svg#layerName=WeatherImg9&time=false",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": false,
@@ -1355,14 +1414,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/msil/msilImageLayer.svg#layerName=WeatherImg9&time=false",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-msil-msilimagelayer-46.svg#layerName=WeatherImg9&time=false"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-msil-msilimagelayer-46.svg#layerName=WeatherImg9&time=false",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 47,
       "title": "天気図現況(海しる)",
       "href": "./appLayers/msil/msilImageLayer.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": false,
@@ -1385,7 +1446,8 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/msil/msilImageLayer.svg",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-msil-msilimagelayer-47.svg"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-msil-msilimagelayer-47.svg",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 48,
@@ -1419,7 +1481,8 @@
       "title": "Open Infrastructure Map",
       "href": "./appLayers/openinframap/openinframap.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -1447,7 +1510,8 @@
       "title": "空間線量率(モニタリングポスト:原子力規制委員会)",
       "href": "./appLayers/genshiryokuKisei/doseRate.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -1476,6 +1540,7 @@
       "href": "./basemaps/dynamicDenshiKokudo2016.svg#map=did2015",
       "available": true,
       "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "adapter",
       "offline": false,
       "controller": false,
@@ -1495,7 +1560,8 @@
         "opacity": "0.6",
         "xlink:href": "./basemaps/dynamicDenshiKokudo2016.svg#map=did2015"
       },
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/gsi-did2015.svg#map=did2015"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/gsi-did2015.svg#map=did2015",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 52,
@@ -1538,6 +1604,7 @@
       "href": "./appLayers/bosaiKakenJSHIS/dynamicPCtile.svg#server=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2Fmapcache%2FA%2Fwmts%3Flayer%3DA-V8-MAP-AVR-TTL_MTTL-A0500_SI2%26style%3Ddefault%26tilematrixset%3DWGS84%26Service%3DWMTS%26Request%3DGetTile%26Version%3D1.0.0%26Format%3Dimage%252Fpng%26TileMatrix%3D%5B%5Blevel%5D%5D%26TileCol%3D%5B%5Bx%5D%5D%26TileRow%3D%5B%5By%5D%5D&comment=出典:防災科研J-SHIS&link=https://www.j-shis.bosai.go.jp/&legend=https://www.j-shis.bosai.go.jp/JSHIS2/IMAGE/etc/P-Y2020-SI.png",
       "available": true,
       "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "online-only",
       "offline": false,
       "controller": true,
@@ -1557,7 +1624,8 @@
         "opacity": "0.7",
         "xlink:href": "./appLayers/bosaiKakenJSHIS/dynamicPCtile.svg#server=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2Fmapcache%2FA%2Fwmts%3Flayer%3DA-V8-MAP-AVR-TTL_MTTL-A0500_SI2%26style%3Ddefault%26tilematrixset%3DWGS84%26Service%3DWMTS%26Request%3DGetTile%26Version%3D1.0.0%26Format%3Dimage%252Fpng%26TileMatrix%3D%5B%5Blevel%5D%5D%26TileCol%3D%5B%5Bx%5D%5D%26TileRow%3D%5B%5By%5D%5D&comment=出典:防災科研J-SHIS&link=https://www.j-shis.bosai.go.jp/&legend=https://www.j-shis.bosai.go.jp/JSHIS2/IMAGE/etc/P-Y2020-SI.png"
       },
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/jshis-500.svg#server=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2Fmapcache%2FA%2Fwmts%3Flayer%3DA-V8-MAP-AVR-TTL_MTTL-A0500_SI2%26style%3Ddefault%26tilematrixset%3DWGS84%26Service%3DWMTS%26Request%3DGetTile%26Version%3D1.0.0%26Format%3Dimage%252Fpng%26TileMatrix%3D%5B%5Blevel%5D%5D%26TileCol%3D%5B%5Bx%5D%5D%26TileRow%3D%5B%5By%5D%5D&comment=出典%3A防災科研J-SHIS&link=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2F&legend=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2FJSHIS2%2FIMAGE%2Fetc%2FP-Y2020-SI.png"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/jshis-500.svg#server=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2Fmapcache%2FA%2Fwmts%3Flayer%3DA-V8-MAP-AVR-TTL_MTTL-A0500_SI2%26style%3Ddefault%26tilematrixset%3DWGS84%26Service%3DWMTS%26Request%3DGetTile%26Version%3D1.0.0%26Format%3Dimage%252Fpng%26TileMatrix%3D%5B%5Blevel%5D%5D%26TileCol%3D%5B%5Bx%5D%5D%26TileRow%3D%5B%5By%5D%5D&comment=出典%3A防災科研J-SHIS&link=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2F&legend=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2FJSHIS2%2FIMAGE%2Fetc%2FP-Y2020-SI.png",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 54,
@@ -1565,6 +1633,7 @@
       "href": "./appLayers/bosaiKakenJSHIS/dynamicPCtile.svg#server=https://www.j-shis.bosai.go.jp/mapcache/P-Y2020/wmts?layer%3DP-Y2020-MAP-AVR-TTL_MTTL-T30_I55_PD2%26style%3Ddefault%26tilematrixset%3DWGS84%26Service%3DWMTS%26Request%3DGetTile%26Version%3D1.0.0%26Format%3Dimage%252Fpng%26TileMatrix%3D%5B%5Blevel%5D%5D%26TileCol%3D%5B%5Bx%5D%5D%26TileRow%3D%5B%5By%5D%5D&comment=出典:防災科研J-SHIS&link=https://www.j-shis.bosai.go.jp/&legend=https://www.j-shis.bosai.go.jp/JSHIS2/IMAGE/etc/P-Y2020-PD.png",
       "available": true,
       "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "online-only",
       "offline": false,
       "controller": true,
@@ -1584,7 +1653,8 @@
         "opacity": "0.7",
         "xlink:href": "./appLayers/bosaiKakenJSHIS/dynamicPCtile.svg#server=https://www.j-shis.bosai.go.jp/mapcache/P-Y2020/wmts?layer%3DP-Y2020-MAP-AVR-TTL_MTTL-T30_I55_PD2%26style%3Ddefault%26tilematrixset%3DWGS84%26Service%3DWMTS%26Request%3DGetTile%26Version%3D1.0.0%26Format%3Dimage%252Fpng%26TileMatrix%3D%5B%5Blevel%5D%5D%26TileCol%3D%5B%5Bx%5D%5D%26TileRow%3D%5B%5By%5D%5D&comment=出典:防災科研J-SHIS&link=https://www.j-shis.bosai.go.jp/&legend=https://www.j-shis.bosai.go.jp/JSHIS2/IMAGE/etc/P-Y2020-PD.png"
       },
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/jshis-active-fault.svg#server=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2Fmapcache%2FP-Y2020%2Fwmts%3Flayer%3DP-Y2020-MAP-AVR-TTL_MTTL-T30_I55_PD2%26style%3Ddefault%26tilematrixset%3DWGS84%26Service%3DWMTS%26Request%3DGetTile%26Version%3D1.0.0%26Format%3Dimage%252Fpng%26TileMatrix%3D%5B%5Blevel%5D%5D%26TileCol%3D%5B%5Bx%5D%5D%26TileRow%3D%5B%5By%5D%5D&comment=出典%3A防災科研J-SHIS&link=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2F&legend=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2FJSHIS2%2FIMAGE%2Fetc%2FP-Y2020-PD.png"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/jshis-active-fault.svg#server=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2Fmapcache%2FP-Y2020%2Fwmts%3Flayer%3DP-Y2020-MAP-AVR-TTL_MTTL-T30_I55_PD2%26style%3Ddefault%26tilematrixset%3DWGS84%26Service%3DWMTS%26Request%3DGetTile%26Version%3D1.0.0%26Format%3Dimage%252Fpng%26TileMatrix%3D%5B%5Blevel%5D%5D%26TileCol%3D%5B%5Bx%5D%5D%26TileRow%3D%5B%5By%5D%5D&comment=出典%3A防災科研J-SHIS&link=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2F&legend=https%3A%2F%2Fwww.j-shis.bosai.go.jp%2FJSHIS2%2FIMAGE%2Fetc%2FP-Y2020-PD.png",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 55,
@@ -1619,7 +1689,8 @@
       "title": "防災科研_J_SHIS_震源断層",
       "href": "./appLayers/bosaiKakenJSHIS/j_shis_geojson.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -1680,8 +1751,9 @@
       "title": "令和６年能登半島地震　道路復旧状況",
       "href": "./appLayers/mlitRoad/notoEQ2024/notoRoad.svg",
       "available": true,
-      "runtime": "isolated",
-      "delivery": "bundled",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
+      "delivery": "online-only",
       "offline": false,
       "controller": true,
       "externalDependencies": [
@@ -1689,8 +1761,8 @@
         "cdnjs.cloudflare.com",
         "www.mlit.go.jp"
       ],
-      "verifiedAt": null,
-      "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, cdnjs.cloudflare.com, www.mlit.go.jp）",
+      "verifiedAt": "2026-08-18",
+      "note": "本家path・controllerを変更せず、国交省GeoJSONに必要なnetwork capabilityで動作確認済み",
       "animation": {
         "x": "-30000",
         "y": "-30000",
@@ -1709,7 +1781,8 @@
       "title": "緊急輸送道路R",
       "href": "./appLayers/mlitRoad/doroBosai/kinkyuYuso.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -1747,7 +1820,8 @@
       "title": "国道事務所等",
       "href": "./appLayers/mlitRoad/jpAll2023.svg#layer=imusho",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -1772,14 +1846,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitRoad/jpAll2023.svg#layer=imusho",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlitroad-jpall2023-60.svg#layer=imusho"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlitroad-jpall2023-60.svg#layer=imusho",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 61,
       "title": "道の駅R",
       "href": "./appLayers/mlitRoad/jpAll2023.svg#layer=station",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -1804,14 +1880,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitRoad/jpAll2023.svg#layer=station",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlitroad-jpall2023-61.svg#layer=station"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlitroad-jpall2023-61.svg#layer=station",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 62,
       "title": "工事予定",
       "href": "./appLayers/mlitRoad/jpAll2023.svg#layer=kojiyotei",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -1836,14 +1914,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitRoad/jpAll2023.svg#layer=kojiyotei",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlitroad-jpall2023-62.svg#layer=kojiyotei"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlitroad-jpall2023-62.svg#layer=kojiyotei",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 63,
       "title": "高速道路事前通行規制区間",
       "href": "./appLayers/mlitRoad/jpAll2023.svg#layer=expressway",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -1868,14 +1948,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitRoad/jpAll2023.svg#layer=expressway",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlitroad-jpall2023-63.svg#layer=expressway"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlitroad-jpall2023-63.svg#layer=expressway",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 64,
       "title": "事前通行規制区間R",
       "href": "./appLayers/mlitRoad/jpAll2023.svg#layer=jizenkisei",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -1900,14 +1982,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitRoad/jpAll2023.svg#layer=jizenkisei",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlitroad-jpall2023-64.svg#layer=jizenkisei"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlitroad-jpall2023-64.svg#layer=jizenkisei",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 65,
       "title": "時間雨量",
       "href": "./appLayers/mlitRoad/jpAll2023.svg#layer=weather",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -1932,14 +2016,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitRoad/jpAll2023.svg#layer=weather",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlitroad-jpall2023-65.svg#layer=weather"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlitroad-jpall2023-65.svg#layer=weather",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 66,
       "title": "ライブカメラ",
       "href": "./appLayers/mlitRoad/jpAll2023.svg#layer=camera",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -1964,14 +2050,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitRoad/jpAll2023.svg#layer=camera",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlitroad-jpall2023-66.svg#layer=camera"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlitroad-jpall2023-66.svg#layer=camera",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 67,
       "title": "通行規制",
       "href": "./appLayers/mlitRoad/jpAll2023.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -1996,14 +2084,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitRoad/jpAll2023.svg",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlitroad-jpall2023-67.svg"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlitroad-jpall2023-67.svg",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 68,
       "title": "地理院防災・災害データ：サブレイヤーあり",
       "href": "./appLayers/gsiBosai/gsiBosai.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -2033,7 +2123,8 @@
       "title": "地理院タイル：サブレイヤーあり",
       "href": "./appLayers/gsiTiles/gsiTilesListLayer.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -2060,7 +2151,8 @@
       "title": "重ねるハザードマップALL",
       "href": "./appLayers/mlitHazard/mlitHazard.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -2115,7 +2207,8 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportal.gsi.go.jp/data/raster/03_hightide_l2_shinsuishin&zmax=17",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-71.svg#globe&baseURL=https://disaportal.gsi.go.jp/data/raster/03_hightide_l2_shinsuishin&zmax=17"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-71.svg#globe&baseURL=https://disaportal.gsi.go.jp/data/raster/03_hightide_l2_shinsuishin&zmax=17",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 72,
@@ -2150,7 +2243,8 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin&zmax=17",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-72.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin&zmax=17"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-72.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin&zmax=17",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 73,
@@ -2185,7 +2279,8 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend&zmax=17",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-73.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend&zmax=17"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-73.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend&zmax=17",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 74,
@@ -2220,7 +2315,8 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/04_tsunami_oldlegend&zmax=14",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-74.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/04_tsunami_oldlegend&zmax=14"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-74.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/04_tsunami_oldlegend&zmax=14",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 75,
@@ -2255,7 +2351,8 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/08_03_ekijoka_zenkoku&zmax=14",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-75.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/08_03_ekijoka_zenkoku&zmax=14"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-75.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/08_03_ekijoka_zenkoku&zmax=14",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 76,
@@ -2290,7 +2387,8 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend&zmax=14",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-76.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend&zmax=14"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-76.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend&zmax=14",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 77,
@@ -2325,7 +2423,8 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki&zmax=16",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-77.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki&zmax=16"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-77.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki&zmax=16",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 78,
@@ -2360,7 +2459,8 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki&zmax=16",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-78.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki&zmax=16"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-78.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki&zmax=16",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 79,
@@ -2395,7 +2495,8 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki&zmax=16",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-79.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki&zmax=16"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-79.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki&zmax=16",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 80,
@@ -2430,7 +2531,8 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_dosekiryukikenkeiryu&zmax=16",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-80.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_dosekiryukikenkeiryu&zmax=16"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-80.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_dosekiryukikenkeiryu&zmax=16",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 81,
@@ -2465,7 +2567,8 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_kyukeisyachihoukai&zmax=16",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-81.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_kyukeisyachihoukai&zmax=16"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-81.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_kyukeisyachihoukai&zmax=16",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 82,
@@ -2500,7 +2603,8 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_jisuberikikenkasyo&zmax=16",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-82.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_jisuberikikenkasyo&zmax=16"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-82.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_jisuberikikenkasyo&zmax=16",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 83,
@@ -2535,7 +2639,8 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo&zmax=16",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-83.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo&zmax=16"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-83.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo&zmax=16",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 84,
@@ -2570,7 +2675,8 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_kansui&zmax=14",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-84.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_kansui&zmax=14"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-84.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_kansui&zmax=14",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 85,
@@ -2605,7 +2711,8 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_jizentuukoukiseikukan&zmax=12",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-85.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_jizentuukoukiseikukan&zmax=12"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-85.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_jizentuukoukiseikukan&zmax=12",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 86,
@@ -2640,14 +2747,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_kinkyuuyusou&zmax=14",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-86.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_kinkyuuyusou&zmax=14"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-86.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_kinkyuuyusou&zmax=14",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 87,
       "title": "名称未設定レイヤ 87",
       "href": "./authoringLayers/local/csvLayer/csvXhr_r20.svg#csvPath=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_month.csv&latCol=1&lngCol=2&titleCol=0&variableIcon=4,3,4,5,6",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -2668,14 +2777,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./authoringLayers/local/csvLayer/csvXhr_r20.svg#csvPath=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_month.csv&latCol=1&lngCol=2&titleCol=0&variableIcon=4,3,4,5,6",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/authoringlayers-local-csvlayer-csvxhr-r20-87.svg#csvPath=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_month.csv&latCol=1&lngCol=2&titleCol=0&variableIcon=4,3,4,5,6"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/authoringlayers-local-csvlayer-csvxhr-r20-87.svg#csvPath=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_month.csv&latCol=1&lngCol=2&titleCol=0&variableIcon=4,3,4,5,6",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 88,
       "title": "地震 ALL 過去1週間(USGS)",
       "href": "./authoringLayers/local/csvLayer/csvXhr_r20.svg#csvPath=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.csv&latCol=1&lngCol=2&titleCol=0&variableIcon=4,3,4,5,6",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -2699,7 +2810,8 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./authoringLayers/local/csvLayer/csvXhr_r20.svg#csvPath=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.csv&latCol=1&lngCol=2&titleCol=0&variableIcon=4,3,4,5,6",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/authoringlayers-local-csvlayer-csvxhr-r20-88.svg#csvPath=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.csv&latCol=1&lngCol=2&titleCol=0&variableIcon=4,3,4,5,6"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/authoringlayers-local-csvlayer-csvxhr-r20-88.svg#csvPath=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.csv&latCol=1&lngCol=2&titleCol=0&variableIcon=4,3,4,5,6",
+      "adapterKind": "host-compatibility"
     },
     {
       "sourceIndex": 89,
@@ -2707,6 +2819,7 @@
       "href": "./appLayers/usgsEq/usgsEarthquake.svg",
       "available": true,
       "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "online-only",
       "offline": false,
       "controller": true,
@@ -2726,14 +2839,16 @@
         "opacity": "0.7",
         "xlink:href": "./appLayers/usgsEq/usgsEarthquake.svg"
       },
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/usgs-earthquakes.svg"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/usgs-earthquakes.svg",
+      "adapterKind": "host-compatibility"
     },
     {
       "sourceIndex": 90,
       "title": "K-NET地震情報(防災科研)",
       "href": "./appLayers/bosaiKakenKNET/K_NET.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -2761,7 +2876,8 @@
       "title": "津波情報(JMA)",
       "href": "./appLayers/jma/tsunami/tsunami.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -2790,7 +2906,8 @@
       "title": "過去の地震データベース(JMA)",
       "href": "./appLayers/jma/eq/quakeRecord.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -2817,7 +2934,8 @@
       "title": "地震情報(JMA)",
       "href": "./appLayers/jma/eq/quake.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -2871,7 +2989,8 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/noaa_nowCOAST/wmsMercator.svg#global_sea_surface_temperature",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-noaa-nowcoast-wmsmercator-94.svg#global_sea_surface_temperature"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-noaa-nowcoast-wmsmercator-94.svg#global_sea_surface_temperature",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 95,
@@ -2904,7 +3023,8 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/noaa_nowCOAST/wmsMercator.svg#ldn_lightning_strike_density",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-noaa-nowcoast-wmsmercator-95.svg#ldn_lightning_strike_density"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-noaa-nowcoast-wmsmercator-95.svg#ldn_lightning_strike_density",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 96,
@@ -2937,7 +3057,8 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/noaa_nowCOAST/wmsMercator.svg#global_water_vapor_imagery_mosaic",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-noaa-nowcoast-wmsmercator-96.svg#global_water_vapor_imagery_mosaic"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-noaa-nowcoast-wmsmercator-96.svg#global_water_vapor_imagery_mosaic",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 97,
@@ -2970,7 +3091,8 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/noaa_nowCOAST/wmsMercator.svg#global_longwave_imagery_mosaic",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-noaa-nowcoast-wmsmercator-97.svg#global_longwave_imagery_mosaic"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-noaa-nowcoast-wmsmercator-97.svg#global_longwave_imagery_mosaic",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 98,
@@ -3003,7 +3125,8 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/noaa_nowCOAST/wmsMercator.svg#global_visible_imagery_mosaic",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-noaa-nowcoast-wmsmercator-98.svg#global_visible_imagery_mosaic"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-noaa-nowcoast-wmsmercator-98.svg#global_visible_imagery_mosaic",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 99,
@@ -3044,7 +3167,8 @@
       "title": "GPV風情報 [Animated-α版]",
       "href": "./appLayers/windy/windy.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3074,7 +3198,8 @@
       "title": "GPV風情報",
       "href": "./appLayers/niiDigitalTyphoon/wind.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3104,7 +3229,8 @@
       "title": "気象警報",
       "href": "./appLayers/niiDigitalTyphoon/warning/warning.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3135,7 +3261,8 @@
       "title": "JTWC 台風情報(Joint Typhoon Warning Center)",
       "href": "./appLayers/niiDigitalTyphoon/jtwcN.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3164,7 +3291,8 @@
       "title": "JTWC KML 台風情報",
       "href": "./appLayers/niiDigitalTyphoon/jtwc_KML.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3191,7 +3319,8 @@
       "title": "yr.no:気温・雲被覆・降雨情報",
       "href": "./appLayers/yrNo/yrNoTiles.svg#noforecast",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3219,7 +3348,8 @@
       "title": "yr.no:風情報(Animated)",
       "href": "./appLayers/yrNo/windy/windyYrNo.svg#noforecast",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3280,7 +3410,8 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jaxaGSMaP/dynamicWebTile.svg#globe&baseURL=none&zmax=11",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jaxagsmap-dynamicwebtile-107.svg#globe&baseURL=none&zmax=11"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jaxagsmap-dynamicwebtile-107.svg#globe&baseURL=none&zmax=11",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 108,
@@ -3316,14 +3447,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jaxaGSMaP/dynamicWebTile.svg#globe&baseURL=none&zmax=11",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jaxagsmap-dynamicwebtile-108.svg#globe&baseURL=none&zmax=11"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jaxagsmap-dynamicwebtile-108.svg#globe&baseURL=none&zmax=11",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 109,
       "title": "今後の雨（軽量版）(JMA)",
       "href": "./appLayers/jma/jma_bm_tiny.svg#forecast=true",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3347,7 +3480,8 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jma/jma_bm_tiny.svg#forecast=true",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-tiny-109.svg#forecast=true"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-tiny-109.svg#forecast=true",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 110,
@@ -3355,6 +3489,7 @@
       "href": "./appLayers/jma/jma_bm_tiny.svg",
       "available": true,
       "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "online-only",
       "offline": false,
       "controller": true,
@@ -3374,14 +3509,16 @@
         "opacity": "0.65",
         "xlink:href": "./appLayers/jma/jma_bm_tiny.svg"
       },
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/jma-rain-now.svg"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/jma-rain-now.svg",
+      "adapterKind": "host-compatibility"
     },
     {
       "sourceIndex": 111,
       "title": "天気分布予報(JMA)",
       "href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=16&autoupdate",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3406,14 +3543,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=16&autoupdate",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-111.svg#type=1&cat=16&autoupdate"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-111.svg#type=1&cat=16&autoupdate",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 112,
       "title": "早期注意情報(JMA)",
       "href": "./appLayers/jma/warnings/probability.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3440,7 +3579,8 @@
       "title": "警報注意報(JMA)",
       "href": "./appLayers/jma/warnings/warnings.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3468,7 +3608,8 @@
       "title": "台風(JMA)",
       "href": "./appLayers/jma/jma_typhoon.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3497,7 +3638,8 @@
       "title": "降水短時間予報(JMA)",
       "href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=6&autoupdate",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3522,14 +3664,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=6&autoupdate",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-115.svg#type=1&cat=6&autoupdate"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-115.svg#type=1&cat=6&autoupdate",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 116,
       "title": "大雨危険度(JMA)",
       "href": "./appLayers/jma/kikendo/kikendo.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3556,7 +3700,8 @@
       "title": "危険度分布-浸水害(JMA)",
       "href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=4&autoupdate",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3581,14 +3726,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=4&autoupdate",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-117.svg#type=1&cat=4&autoupdate"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-117.svg#type=1&cat=4&autoupdate",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 118,
       "title": "危険度分布-土砂災害(JMA)",
       "href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=3&autoupdate",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3613,14 +3760,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=3&autoupdate",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-118.svg#type=1&cat=3&autoupdate"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-118.svg#type=1&cat=3&autoupdate",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 119,
       "title": "危険度分布-洪水害(JMA)",
       "href": "./appLayers/jma/jma_vm.svg#cat=2&autoupdate",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3645,14 +3794,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jma/jma_vm.svg#cat=2&autoupdate",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-vm-119.svg#cat=2&autoupdate"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-vm-119.svg#cat=2&autoupdate",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 120,
       "title": "国交省_川の防災情報_降雨レーダー",
       "href": "./appLayers/mlitRadar/radar.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3680,7 +3831,8 @@
       "title": "ひまわり8号(気象衛星センター)",
       "href": "./appLayers/jmaSatelliteCenter/himawari8.svg#content=12",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3706,7 +3858,8 @@
       "title": "ナウキャスト(降雨)(JMA)",
       "href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=0&autoupdate",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3731,14 +3884,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=0&autoupdate",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-122.svg#type=1&cat=0&autoupdate"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-122.svg#type=1&cat=0&autoupdate",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 123,
       "title": "ナウキャスト(降雪)(JMA)",
       "href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=10&autoupdate",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3763,14 +3918,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=10&autoupdate",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-123.svg#type=1&cat=10&autoupdate"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-123.svg#type=1&cat=10&autoupdate",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 124,
       "title": "ナウキャスト(落雷)(JMA)",
       "href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=1&autoupdate",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3795,14 +3952,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=1&autoupdate",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-124.svg#type=1&cat=1&autoupdate"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-124.svg#type=1&cat=1&autoupdate",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 125,
       "title": "ナウキャスト(竜巻)(JMA)",
       "href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=2&autoupdate",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3827,14 +3986,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=2&autoupdate",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-125.svg#type=1&cat=2&autoupdate"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-125.svg#type=1&cat=2&autoupdate",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 126,
       "title": "天気図",
       "href": "./appLayers/jma/tenkizu/tenkizu_r1.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3862,7 +4023,8 @@
       "title": "気象庁_2021_VectorData",
       "href": "./appLayers/jma/jma_vm.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3887,14 +4049,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jma/jma_vm.svg",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-vm-127.svg"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-vm-127.svg",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 128,
       "title": "気象庁_2021_火山",
       "href": "./appLayers/jma/jma_volcano.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3921,7 +4085,8 @@
       "title": "気象庁_2021_推計震度分布",
       "href": "./appLayers/jma/jma_EQ_suikei.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3948,7 +4113,8 @@
       "title": "気象庁_2021_ひまわり画像",
       "href": "./appLayers/jma/jma_bm_r2.svg#type=2&cat=0&autoupdate&zmax=11",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -3973,14 +4139,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jma/jma_bm_r2.svg#type=2&cat=0&autoupdate&zmax=11",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-130.svg#type=2&cat=0&autoupdate&zmax=11"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-130.svg#type=2&cat=0&autoupdate&zmax=11",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 131,
       "title": "気象庁_2021_TileImages",
       "href": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=0&autoupdate",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -4005,14 +4173,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=0&autoupdate",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-131.svg#type=1&cat=0&autoupdate"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-131.svg#type=1&cat=0&autoupdate",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 132,
       "title": "気象庁_2021_アメダス",
       "href": "./appLayers/jma/jma_amedas.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -4039,7 +4209,8 @@
       "title": "河川形状",
       "href": "./appLayers/mlitRiver/riverLineTile.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -4067,7 +4238,8 @@
       "title": "水位観測所",
       "href": "./appLayers/mlitRiver/stg.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -4095,7 +4267,8 @@
       "title": "ダム",
       "href": "./appLayers/mlitRiver/dam.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -4123,7 +4296,8 @@
       "title": "警報のみ 水位計",
       "href": "./appLayers/mlitRiver/overObs_swstg.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -4151,7 +4325,8 @@
       "title": "警報のみ 水位観測所",
       "href": "./appLayers/mlitRiver/overObs_stg.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -4178,7 +4353,8 @@
       "title": "警報のみ ダム",
       "href": "./appLayers/mlitRiver/overObs_dam.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -4206,7 +4382,8 @@
       "title": "道路(国土技術研究センター)",
       "href": "./appLayers/jice/CCTVcontainerB.svg#cat=road",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -4230,14 +4407,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jice/CCTVcontainerB.svg#cat=road",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jice-cctvcontainerb-139.svg#cat=road"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jice-cctvcontainerb-139.svg#cat=road",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 140,
       "title": "河川(国土技術研究センター)",
       "href": "./appLayers/jice/CCTVcontainerB.svg#cat=river",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -4261,14 +4440,16 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jice/CCTVcontainerB.svg#cat=river",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jice-cctvcontainerb-140.svg#cat=river"
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jice-cctvcontainerb-140.svg#cat=river",
+      "adapterKind": "document-identity"
     },
     {
       "sourceIndex": 141,
       "title": "国交省川の防災情報",
       "href": "./appLayers/mlitRiver/CCTV.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -4296,7 +4477,8 @@
       "title": "警察庁_交通事故データ",
       "href": "./appLayers/npaGoJp/ta.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -4324,7 +4506,8 @@
       "title": "厚労省 病院・診療所・薬局等",
       "href": "./appLayers/mhlw_IryouNet/IryouNetPoi.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -4352,7 +4535,8 @@
       "title": "地理院 指定避難所",
       "href": "./appLayers/gsiEvacuation/shelter.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -4381,7 +4565,8 @@
       "title": "地理院 指定緊急避難場所",
       "href": "./appLayers/gsiEvacuation/evacuationPlace.svg",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": false,
       "controller": true,
@@ -4410,7 +4595,8 @@
       "title": "岡山大学 チーム活動（CSV追加対応）",
       "href": "./appLayers/okayamaUniversity/teamActivity/teamActivityLayer.svg#summary=data/summary.json&data=data/detail.json&sourceCsv=current.csv&layer=teamActivity",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": true,
       "controller": true,
@@ -4434,7 +4620,8 @@
       "title": "岡山大学 チーム活動エリア",
       "href": "./appLayers/okayamaUniversity/teamActivity/teamActivityAreaLayer.svg#data=data/detail.json&districtSvgUrlTemplate=districts/{recordRegionId}/{code}.svg&layer=teamActivity",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": true,
       "controller": true,
@@ -4458,7 +4645,8 @@
       "title": "岡山大学 避難所（QTCT・岡山）",
       "href": "./appLayers/okayamaUniversity/evacuation/evacuationLayer.svg#summary=data/summary.json&data=data/detail.json&layer=evacuation",
       "available": true,
-      "runtime": "isolated",
+      "runtime": "tight",
+      "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
       "delivery": "bundled",
       "offline": true,
       "controller": true,
@@ -4477,5 +4665,11 @@
         "xlink:href": "./appLayers/okayamaUniversity/evacuation/evacuationLayer.svg#summary=data/summary.json&data=data/detail.json&layer=evacuation"
       }
     }
-  ]
+  ],
+  "adapterCounts": {
+    "none": 80,
+    "documentIdentity": 63,
+    "hostCompatibility": 4,
+    "dedicated": 1
+  }
 }

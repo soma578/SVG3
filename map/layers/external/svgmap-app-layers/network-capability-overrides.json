@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "layers": {
+    "令和６年能登半島地震　道路復旧状況": {
+      "requests": [
+        {
+          "hostname": "www.mlit.go.jp",
+          "pathnamePrefix": "/road/r6noto/map/",
+          "methods": ["GET", "HEAD"],
+          "maxBytes": 16777216,
+          "contentTypes": [
+            "text/html",
+            "application/json",
+            "application/geo+json",
+            "application/octet-stream",
+            "binary/octet-stream",
+            "application/zip",
+            "application/x-zip-compressed"
+          ],
+          "maxRedirects": 3,
+          "timeoutMs": 20000,
+          "reason": "本家controllerが国交省の約11.8MB・binary/octet-stream形式GeoJSONを取得する"
+        }
+      ]
+    }
+  }
+}

@@ -53,7 +53,10 @@ export const PIN_LAYER_PROFILES = {
   },
   evacuation: {
     label: '避難所代表ピン',
-    attribution: { label: 'SVG3（避難所配布データ）' },
+    attribution: {
+      label: '国土地理院「指定緊急避難場所・指定避難所データ」',
+      url: 'https://www.gsi.go.jp/bousaichiri/hinanbasho.html',
+    },
     symbol: '避',
     color: '#16865b',
     densityColor: '#ff6b00',

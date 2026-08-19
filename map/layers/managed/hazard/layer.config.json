@@ -33,6 +33,23 @@
         "map:setLayerState"
       ]
     },
-    "visibilityStrategy": "controller"
+    "visibilityStrategy": "controller",
+    "attributions": [
+      {
+        "kind": "flood",
+        "name": "洪水浸水想定区域 A31",
+        "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A31.html"
+      },
+      {
+        "kind": "tsunami",
+        "name": "津波浸水想定 A40",
+        "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A40.html"
+      },
+      {
+        "kind": "landslide",
+        "name": "土砂災害警戒区域 A33（2018年度版）",
+        "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A33-2018.html"
+      }
+    ]
   }
 }

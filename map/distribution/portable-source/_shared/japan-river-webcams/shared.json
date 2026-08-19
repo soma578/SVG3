@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "kind": "portable-shared-component",
   "packageId": "japan-river-webcams",
-  "sharedVersion": "0b9b0de2511e",
+  "sharedVersion": "b38527bef7ec",
   "files": [
     "map/icons/app/icon-192.png",
     "map/icons/app/icon-512.png",

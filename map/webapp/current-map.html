@@ -193,6 +193,10 @@
     import { neighborCatalogUrl } from './shared/layerCatalog.js';
     import { createLayerControllerBus } from './shared/layerControllerBus.js';
     import { fetchWithRuntimeCache } from './shared/runtimeCache.js';
+    import {
+      communityPropertyTransformForLayer,
+      registerCommunityPropertyAdapter,
+    } from './shared/communityPropertyAdapter.js';
 
     console.log('[current-map] VERSION native-v19');
 
@@ -510,16 +514,27 @@
       const hashPart = hashIndex >= 0 ? raw.slice(hashIndex + 1) : '';
       const layerUrl = new URL(pathPart, baseUrl);
       if (!hashPart) return layerUrl.href;
-      const params = new URLSearchParams(hashPart);
-      for (const [key, parameter] of params) {
-        if (/^(?:https?:|blob:|\/|\.\.?\/)/i.test(parameter) || parameter.includes('/')) {
-          const rebased = new URL(parameter, layerUrl).href
-            .replaceAll('%7B', '{')
-            .replaceAll('%7D', '}');
-          params.set(key, rebased);
+      // URLSearchParamsで組み直すと、旧AppLayersの
+      // #csvPath=https://... が https%3A%2F%2F... へ変わる。旧CSVローダーは
+      // decodeせず相対パスとして扱うため、値の表記を保持したまま相対URLだけを直す。
+      const params = hashPart.split('&').map((part) => {
+        const separator = part.indexOf('=');
+        if (separator < 0) return part;
+        const key = part.slice(0, separator);
+        const rawParameter = part.slice(separator + 1);
+        let parameter = rawParameter;
+        try { parameter = decodeURIComponent(rawParameter); } catch {}
+        if (!(/^(?:https?:|blob:|\/|\.\.?\/)/i.test(parameter) || parameter.includes('/'))) {
+          return part;
         }
-      }
-      return `${layerUrl.href}#${params}`;
+        // 絶対URLは元の綴りを保持する。相対URLだけ基準をlayerUrlへ合わせる。
+        if (/^(?:https?:|blob:)/i.test(parameter)) return `${key}=${parameter}`;
+        const rebased = new URL(parameter, layerUrl).href
+          .replaceAll('%7B', '{')
+          .replaceAll('%7D', '}');
+        return `${key}=${rebased}`;
+      });
+      return `${layerUrl.href}#${params.join('&')}`;
     };
 
     const appendRuntimeAnimation = (rootDoc, root, layer) => {
@@ -755,6 +770,94 @@
       return element.getAttribute('iid') || element.getAttribute('title') || animId;
     };
 
+    const installRuntimeCommunityPropertyAdapters = () => {
+      if (!svgMap?.setShowPoiProperty) return 0;
+      const root = svgMap.getSvgImages?.()?.root;
+      if (!root) return 0;
+      let installed = 0;
+      for (const layer of loadStoredRuntimeLayers()) {
+        const id = String(layer?.attrs?.id || '');
+        if (!id.startsWith('layer-imported-')) continue;
+        const animation = root.getElementById?.(id)
+          || root.querySelector?.(`[id="${id.replaceAll('"', '\\"')}"]`);
+        const layerId = animation?.getAttribute?.('iid');
+        if (!layerId) continue;
+        if (registerCommunityPropertyAdapter({
+          svgMap,
+          layerId,
+          transform: communityPropertyTransformForLayer(layer),
+        })) installed += 1;
+      }
+      return installed;
+    };
+
+    const scheduleRuntimeCommunityPropertyAdapters = () => {
+      // Root animationのiid確定と、上流controller側の独自handler登録の後にも
+      // 実行し、追加レイヤーのプロパティ表示だけをホスト共通形式へ統一する。
+      [0, 300, 900, 2200].forEach((delay) => window.setTimeout(
+        installRuntimeCommunityPropertyAdapters,
+        delay,
+      ));
+    };
+
+    const scheduleRuntimeControllerInitWatchdog = (frame) => {
+      if (frame.dataset.svg3InitWatchdogScheduled === 'true') return;
+      frame.dataset.svg3InitWatchdogScheduled = 'true';
+      window.setTimeout(() => {
+        try {
+          const iid = String(frame.id || '').replace(/^layerSpecificUIframe_/, '');
+          const root = svgMap?.getSvgImages?.()?.root;
+          const animation = [...(root?.querySelectorAll?.('animation') || [])]
+            .find((node) => node.getAttribute('iid') === iid);
+          // 管理レイヤーのcontrollerには介入せず、利用者が追加したレイヤーだけを
+          // 対象にする。上流UI自体は書き換えず、固着を説明するホスト通知を足す。
+          if (!String(animation?.id || '').startsWith('layer-imported-')) return;
+          const document_ = frame.contentDocument;
+          const body = document_?.body;
+          if (!body || !body.textContent?.includes('初期化中')) return;
+          if (body.querySelector('[data-svg3-init-warning]')) return;
+          const warning = document_.createElement('p');
+          warning.dataset.svg3InitWarning = 'true';
+          warning.setAttribute('role', 'status');
+          warning.style.cssText = 'margin:8px 0;padding:8px;border-radius:6px;background:#fff3cd;color:#664d03;font-size:12px';
+          warning.textContent = '初期化が完了していません。配信元の応答または、このレイヤー形式との互換性を確認してください。';
+          body.prepend(warning);
+          console.warn('[current-map] imported controller remained initializing', {
+            layerId: animation.id,
+            title: animation.getAttribute('title'),
+          });
+        } catch (error) {
+          // opaque-originの分離controllerはDOMを読めない。権限を広げてまで監視しない。
+          console.info('[current-map] controller initialization could not be inspected', error);
+        }
+      }, 15_000);
+    };
+
+    const bindRuntimeCommunityControllerFrames = () => {
+      const panel = document.getElementById('layerSpecificUI');
+      for (const frame of panel?.querySelectorAll?.('iframe') || []) {
+        if (frame.dataset.svg3PropertyAdapterBound === 'true') continue;
+        frame.dataset.svg3PropertyAdapterBound = 'true';
+        frame.addEventListener('load', () => {
+          scheduleRuntimeCommunityPropertyAdapters();
+          scheduleRuntimeControllerInitWatchdog(frame);
+        });
+        if (frame.contentDocument?.readyState === 'complete') {
+          scheduleRuntimeCommunityPropertyAdapters();
+          scheduleRuntimeControllerInitWatchdog(frame);
+        }
+      }
+    };
+
+    const runtimeCommunityControllerObserver = new MutationObserver(
+      bindRuntimeCommunityControllerFrames,
+    );
+    runtimeCommunityControllerObserver.observe(document.getElementById('layerSpecificUI'), {
+      childList: true,
+      subtree: true,
+    });
+    bindRuntimeCommunityControllerFrames();
+
     const importRuntimeLayers = (layers) => {
       const current = loadStoredRuntimeLayers();
       const merged = new Map(current.map((layer) => [layer?.attrs?.id, layer]));
@@ -888,6 +991,7 @@
       };
       const delivered = sendToLayerControllers(message, `visibility:${normalizedLayerKey}`, [normalizedLayerKey]);
       svgMap.refreshScreen?.();
+      scheduleRuntimeCommunityPropertyAdapters();
       scheduleLayerSpecificUiSync(`visibility:${normalizedLayerKey}`);
       console.log('[current-map] layer visibility changed', {
         layerKey: normalizedLayerKey,
@@ -1093,6 +1197,7 @@
             scheduleLayerSpecificUiGuard();
           }, delay));
           scheduleLayerSpecificUiGuard();
+          scheduleRuntimeCommunityPropertyAdapters();
         } catch (error) {
           console.warn('[current-map] layer-specific UI could not be opened', { layerId, error });
         }
@@ -1187,10 +1292,9 @@
       const svgMapModule = await import('/map/vendor/svgmapjs/SVGMapLv0.1_r18module.js');
       svgMap = svgMapModule.svgMap;
       window.svgMap = svgMap;
-      // 本家 CorsProxy と同じ扱いにする。外部オリジンのHTTPSは、カタログに
-      // 載っているかどうかに関わらず中継へ回す。許可リストで振り分けると、
-      // 実行時に追加したレイヤーだけ直接fetchになり、CORS未対応の配信元で落ちる。
-      // 中継してよい「かたち」の制限はサーバ側(communityProxyPolicy)が持つ。
+      // controllerから見えるAPIは本家と同じ getCORSURL のままにする。外部HTTPSを
+      // 中継URLへ変換し、実際に通すhost/path/method/size/MIMEはサーバ側の
+      // generated layer capabilityで判定する。未知URLはURL化されても中継されない。
       let communityProxyAvailable = false;
       try {
         const response = await fetch('/api/svgmap-proxy');
@@ -1243,6 +1347,7 @@
       // 候補一覧は「利用者がクリックした一点」に対してだけ出す。
       svgMap.setCenterHitTest?.(false);
       svgMap.initLoad();
+      scheduleRuntimeCommunityPropertyAdapters();
       init();
     })();
   </script>

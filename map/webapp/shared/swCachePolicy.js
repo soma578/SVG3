@@ -35,6 +35,7 @@ const DYNAMIC_PREFIXES = [
   '/map/data/',
   '/map/distribution/',
 ];
+const COMMUNITY_ASSET_PREFIX = '/map/svgMapAppLayers/';
 
 // 地域ごとに変わる静的資産。
 const REGION_PREFIXES = [
@@ -52,7 +53,6 @@ const SHELL_PREFIXES = [
   '/map/layers/dropins/',
   '/map/layers/external/',
   '/map/icons/',
-  '/map/svgMapAppLayers/',
   '/icons/',
 ];
 
@@ -99,6 +99,7 @@ const parseCacheName = (name) => {
  *   'shell'    … 版付きキャッシュから先に返す（オフライン起動の要）
  *   'region'   … 閲覧地域として保存済みなら返す
  *   'dynamic'  … 必ずネットワーク。SW は一切肩代わりしない
+ *   'community'… network-first。失敗時だけ同じshell版の保存物へ戻る
  *   'external' … 別オリジン。触らない
  *   'ignore'   … 対象外
  */
@@ -108,6 +109,7 @@ const classifyRequest = ({ pathname, sameOrigin = true, method = 'GET' } = {}) =
   if (typeof pathname !== 'string' || !pathname.startsWith('/')) return 'ignore';
   // 動的データの判定を最優先にする。ここを取り違えると鮮度バナーが死ぬ。
   if (startsWithAny(pathname, DYNAMIC_PREFIXES)) return 'dynamic';
+  if (pathname.startsWith(COMMUNITY_ASSET_PREFIX)) return 'community';
   if (SHELL_EXACT.includes(pathname)) return 'shell';
   // /map/regions/index.json は shell、/map/regions/<id>/... は地域。
   if (pathname.startsWith('/map/regions/')) {

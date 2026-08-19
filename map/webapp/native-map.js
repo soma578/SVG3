@@ -2,6 +2,7 @@ import { MAP_MESSAGES } from './shared/mapMessages.js';
 import { parseMapUrlState, serializeMapUrlState } from './shared/mapUrlState.js';
 import {
   importBundledCommunityLayer,
+  findBundledCommunityEntry,
   importContainerText,
   importLocalLayerFile,
   importSingleLayer,
@@ -908,7 +909,7 @@ const selectLocalLayerFile = (file, { dropped = false } = {}) => {
     throw new Error('SVGまたはHTMLファイルを選択してください');
   }
   droppedLayerFile = dropped ? file : null;
-  elements.importKind.value = 'layer';
+  elements.importKind.value = 'auto';
   setImportKindFields();
   elements.importTitle.value = file.name.replace(/\.(?:svg|html?|htm)$/i, '');
   elements.importFileName.textContent = file.name;
@@ -920,7 +921,7 @@ const setImportKindFields = () => {
   const kind = elements.importKind.value;
   const artifact = kind === 'artifact' || kind === 'signed-index';
   const signedIndex = kind === 'signed-index';
-  const singleLayer = kind === 'layer';
+  const automatic = kind === 'auto';
   elements.importArtifact.hidden = !artifact;
   elements.importIndexUrl.hidden = !signedIndex;
   elements.importIndexActions.hidden = !signedIndex;
@@ -929,10 +930,8 @@ const setImportKindFields = () => {
   elements.artifactDescription.hidden = true;
   elements.artifactActionHelp.hidden = true;
   elements.importUrl.hidden = artifact;
-  elements.importTitle.hidden = !singleLayer;
-  elements.importUrl.placeholder = singleLayer
-    ? 'https://example.jp/layer.svg または下でファイル選択'
-    : 'https://example.jp/Container.svg';
+  elements.importTitle.hidden = !automatic;
+  elements.importUrl.placeholder = 'レイヤーのURLを貼り付け（形式は自動判定）';
   elements.importSubmit.textContent = artifact ? 'この地図で表示' : '追加';
   elements.importSubmit.disabled = artifact && elements.importArtifact.options.length === 0;
   setImportStatus('');
@@ -994,24 +993,75 @@ const importExternalLayers = async () => {
   }
   const rawUrl = elements.importUrl.value.trim();
   const localFile = droppedLayerFile || elements.importFile.files?.[0] || null;
-  if (kind === 'layer') {
-    if (localFile) {
-      const additions = addImportedLayers([
-        importLocalLayerFile(localFile, elements.importTitle.value),
-      ]);
-      return { additions, message: `${additions.length}件を追加しました` };
-    }
-    if (!rawUrl) throw new Error('URLまたはSVG/HTMLファイルを指定してください');
+  if (localFile) {
     const additions = addImportedLayers([
-      importSingleLayer({ url: rawUrl, title: elements.importTitle.value }),
+      importLocalLayerFile(localFile, elements.importTitle.value),
     ]);
     return { additions, message: `${additions.length}件を追加しました` };
   }
-  if (!rawUrl) throw new Error('URLを入力してください');
+  if (!rawUrl) throw new Error('URLまたはレイヤーファイルを指定してください');
+
+  // 本家AppLayersのURLなら、関連HTML/JSの構成を利用者に意識させず、同梱済みの
+  // 検証済みアダプターへ切り替える。分離実行でcontrollerだけが出る状態を避ける。
+  if (!state.communityCatalog) await renderCommunityCompatibility();
+  const communityEntry = findBundledCommunityEntry(state.communityCatalog?.entries, rawUrl);
+  if (communityEntry) {
+    const requestedBase = new URL(rawUrl, location.href).href.split('#')[0];
+    const staleLayers = state.importedLayers.filter((layer) => {
+      try {
+        return new URL(layer.attrs?.['xlink:href'], location.href).href.split('#')[0] === requestedBase;
+      } catch {
+        return false;
+      }
+    });
+    for (const stale of staleLayers) removeImportedLayer(stale.id);
+
+    const mounted = state.importedLayers.find((layer) => (
+      new URL(layer.attrs?.['xlink:href'], location.href).href.split('#')[0]
+      === communityEntryHref(communityEntry).split('#')[0]
+    ));
+    if (mounted) {
+      if (!mounted.visible) toggleLayer(mounted.id, true);
+      return { additions: [], message: `${mounted.title}は追加済みです` };
+    }
+    const additions = addImportedLayers([importBundledCommunityLayer(communityEntry)]);
+    return {
+      additions,
+      message: `${communityEntry.title}を検証済み構成で追加しました`,
+    };
+  }
+
   const sourceUrl = new URL(rawUrl, location.href).href;
-  const response = await fetch(sourceUrl, { mode: 'cors' });
+  let response;
+  try {
+    response = await fetch(sourceUrl, { mode: 'cors' });
+  } catch {
+    // CORSで内容を事前判定できなくても、画像型SVGはブラウザが直接読める場合がある。
+    // その経路まで塞がず、安全な分離実行で試す。
+    const additions = addImportedLayers([
+      importSingleLayer({ url: sourceUrl, title: elements.importTitle.value }),
+    ]);
+    return { additions, message: `${additions.length}件を互換モードで追加しました` };
+  }
   if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
-  const layers = importContainerText(await response.text(), response.url || sourceUrl);
+  const text = await response.text();
+  const contentType = response.headers.get('content-type') || '';
+  const isHtml = /text\/html/i.test(contentType) || /\.html?(?:$|[?#])/i.test(response.url || sourceUrl);
+  if (isHtml) {
+    const additions = addImportedLayers([
+      importSingleLayer({ url: response.url || sourceUrl, title: elements.importTitle.value }),
+    ]);
+    return { additions, message: `${additions.length}件を追加しました` };
+  }
+  const documentXml = new DOMParser().parseFromString(text, 'image/svg+xml');
+  if (documentXml.querySelector('parsererror')) throw new Error('レイヤーをSVGとして解析できません');
+  const isContainer = documentXml.querySelectorAll('animation').length > 0;
+  const layers = isContainer
+    ? importContainerText(text, response.url || sourceUrl)
+    : [importSingleLayer({
+        url: response.url || sourceUrl,
+        title: elements.importTitle.value || documentXml.documentElement.getAttribute('title'),
+      })];
   if (layers.length > 200) throw new Error('一度に追加できるレイヤーは200件までです');
   const additions = addImportedLayers(layers);
   return { additions, message: `${additions.length}件を追加しました` };
@@ -1096,7 +1146,7 @@ document.addEventListener('keydown', (event) => {
 elements.appMenuButton.addEventListener('click', () => {
   setAppMenuOpen(elements.appMenu.hidden);
 });
-elements.menuImportLayer?.addEventListener('click', () => openImportFromMenu('layer'));
+elements.menuImportLayer?.addEventListener('click', () => openImportFromMenu('auto'));
 elements.menuImportArtifact?.addEventListener('click', () => openImportFromMenu('artifact'));
 elements.layerButton.addEventListener('click', () => {
   setAppMenuOpen(false);

@@ -45,6 +45,16 @@
     .hazard-option input { width: 18px; height: 18px; margin: 0; accent-color: #ad3f31; }
     .swatch { width: 12px; height: 12px; border-radius: 2px; }
     .hazard-option span:last-child { min-width: 0; font-size: 14px; font-weight: 700; line-height: 1.3; }
+    .hazard-sources {
+      margin: 12px 0 0;
+      padding-top: 9px;
+      border-top: 1px solid #e1e6eb;
+      color: #667085;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+    .hazard-sources strong { color: #344054; }
+    .hazard-sources a { color: #245b88; }
     .hazard-degraded {
     margin: 6px 10px 0;
     padding: 7px 9px;
@@ -85,6 +95,12 @@
     <span>土砂特別警戒</span>
   </label>
 </div>
+<p class="hazard-sources">
+  <strong>出典</strong><br>
+  洪水：<a href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A31.html" target="_blank" rel="noopener noreferrer">国土数値情報 A31</a><br>
+  津波：<a href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A40.html" target="_blank" rel="noopener noreferrer">国土数値情報 A40</a><br>
+  土砂：<a href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A33-2018.html" target="_blank" rel="noopener noreferrer">国土数値情報 A33（2018年度版）</a>
+</p>
 <script type="module">
 import { MAP_MESSAGES } from '../representative-pins/mapMessages.js';
 import { fetchWithRuntimeCache } from '../representative-pins/runtimeCache.js';

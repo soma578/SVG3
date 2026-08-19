@@ -23,7 +23,7 @@
     },
     "publishedAt": "2026-07-21T00:00:00+09:00"
   },
-  "contentDigest": "sha256-a19c5a77c36ea2fa2d0da4e4d47547d1d2bc778456b3291cbc2135be402a521c",
+  "contentDigest": "sha256-f458c549b822b7f93425578ea0f285e5d3f9c98cbbaf0116cb7e90608dbc0509",
   "portability": {
     "pathIndependent": true,
     "crossOrigin": false,
@@ -39,7 +39,7 @@
         "id": "representative-pins",
         "version": "1.2.2",
         "manifest": "representative-pins/runtime.package.json",
-        "integrity": "sha256-fb61dd7724f2e308c04a2141f866a762cbf5cdc2afb52d37aa395e2a5a89f0b0"
+        "integrity": "sha256-599c2591f8387bde92cbb68c6c242942dfd221b2f5dbcaa5723a326c9fc7aefb"
       },
       {
         "id": "svgmap-slawa-client",
@@ -64,7 +64,7 @@
     {
       "path": "layer.manifest.json",
       "bytes": 11460,
-      "sha256": "7c6559da2dc8c6a36676e57f030e17486fb4ce18dd7d506157308a79c632f843"
+      "sha256": "1af4bcb3733a505d2ccf13f46265999ffc88d842c19b5d62405c92435fdfef40"
     },
     {
       "path": "map/icons/app/icon-192.png",
@@ -264,7 +264,7 @@
     {
       "path": "map/layers/portable/artifact-sample/layer.package.json",
       "bytes": 2428,
-      "sha256": "8950605ce520aeb5818af63a78e0fe4e52ed5b747f68a511501c961e2ff36f3d"
+      "sha256": "1e94804faf540d1aebb7931b552266282c164b9f562ca0be1f4ee6b80e4bbd99"
     },
     {
       "path": "map/layers/portable/representative-pins/DENSITY_POINTS_FORMAT.md",
@@ -288,13 +288,13 @@
     },
     {
       "path": "map/layers/portable/representative-pins/pinLayerProfiles.js",
-      "bytes": 9871,
-      "sha256": "b5e840060bf63bccd3f07410fcee455352bd147ca10670cc91c7ee28a8d3a056"
+      "bytes": 9984,
+      "sha256": "1bfd61965c152ab12f18f46836a90600c4732b6ef70ebe2c7407c2b7e3d6de29"
     },
     {
       "path": "map/layers/portable/representative-pins/propertyModal.js",
-      "bytes": 11035,
-      "sha256": "051d9b605ec4f8277577895770dc2ff480ad328625e25cc7f0ec906a17b075ee"
+      "bytes": 11038,
+      "sha256": "7fb62244cf6e30aedeadecdded09c674a02208bb2a038bbf8d94ae5c461fbdb2"
     },
     {
       "path": "map/layers/portable/representative-pins/qtctBuilder.mjs",
