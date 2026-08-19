@@ -15,6 +15,9 @@ const option = (name, fallback = '') => {
 }
 const hasOption = (name) => process.argv.includes(name)
 const only = option('--only')
+const sourceIndexes = new Set(
+  option('--source-index').split(',').map((value) => value.trim()).filter(Boolean),
+)
 const limit = Math.max(0, Number(option('--limit', '0')) || 0)
 const merge = hasOption('--merge')
 const settleMs = Math.max(1000, Number(option('--wait-ms', '12000')) || 12000)
@@ -52,7 +55,12 @@ const waitForServer = async () => {
 const targetEntries = catalog.entries
   .filter((entry) => entry.available)
   .filter((entry) => !only || entry.title.includes(only))
+  .filter((entry) => sourceIndexes.size === 0 || sourceIndexes.has(String(entry.sourceIndex)))
   .slice(0, limit || undefined)
+
+const exactTextPattern = (value) => new RegExp(
+  `^${String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`,
+)
 
 const stageNames = [
   'svgLoad',
@@ -175,7 +183,7 @@ try {
       await page.locator('#community-compatibility summary').click()
       await page.locator('#community-catalog-search').fill(entry.title)
       const catalogEntry = page.locator('#community-compatibility-list li')
-        .filter({ has: page.locator('strong', { hasText: entry.title }) }).first()
+        .filter({ has: page.locator('strong', { hasText: exactTextPattern(entry.title) }) }).first()
       // 地図本体・背景地図の起動通信を対象レイヤーの依存通信へ混ぜない。
       requests.length = 0
       responses.length = 0
@@ -183,7 +191,7 @@ try {
       const addButton = catalogEntry.locator('.community-entry-add')
       if (await addButton.isDisabled()) {
         const mountedRow = page.locator('#layer-list .layer-row')
-          .filter({ has: page.locator('strong', { hasText: entry.title }) }).first()
+          .filter({ has: page.locator('strong', { hasText: exactTextPattern(entry.title) }) }).first()
         if (await mountedRow.count() === 0) {
           throw new Error('catalog entry is disabled but no mounted layer row exists')
         }

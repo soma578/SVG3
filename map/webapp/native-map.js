@@ -24,6 +24,7 @@ import {
 import { createLayerPanel } from './shared/layerPanel.js';
 import { createRegionSelector } from './shared/regionSelector.js';
 import { dataFreshnessView, normalizeDataStatus } from './shared/dataFreshness.js';
+import { deactivateVisibleSwitchPeers } from './shared/layerSwitchPolicy.js';
 import {
   cacheRegion,
   listCachedRegions,
@@ -372,29 +373,19 @@ const applyViewport = () => {
 const toggleLayer = (id, visible, { openController = false } = {}) => {
   const layer = state.layers.find((entry) => entry.id === id);
   const wasVisible = Boolean(layer?.visible);
-  let switchedPeer = false;
+  let switchedPeers = [];
   // SVGMap の `class="basemap switch"` は排他的な背景グループ。ランタイムだけに
   // 任せると、別背景を選んだ後もホスト側のチェック状態が以前のまま残る。
   // 同じ switch グループの状態もここで揃える。offline-fallback は別クラスなので
   // この排他制御には入らず、オンライン背景の下で常に表示されたままになる。
   if (layer && visible) {
-    const classTokens = new Set(String(layer.className || '').split(/\s+/).filter(Boolean));
-    if (classTokens.has('switch')) {
-      const groupTokens = [...classTokens].filter((token) => token !== 'switch');
-      for (const peer of state.layers) {
-        if (peer.id === id || !peer.visible) continue;
-        const peerTokens = new Set(String(peer.className || '').split(/\s+/).filter(Boolean));
-        if (!peerTokens.has('switch') || !groupTokens.some((token) => peerTokens.has(token))) continue;
-        peer.visible = false;
-        if (peer.attrs) peer.attrs.visibility = 'hidden';
-        state.visibleLayerIds?.delete(peer.id);
-        postToMap({
-          type: MAP_MESSAGES.mapSetLayerVisible,
-          layerKey: peer.toggleKey || peer.id,
-          visible: false,
-        });
-        switchedPeer = true;
-      }
+    switchedPeers = deactivateVisibleSwitchPeers(layer, state.layers, state.visibleLayerIds);
+    for (const peer of switchedPeers) {
+      postToMap({
+        type: MAP_MESSAGES.mapSetLayerVisible,
+        layerKey: peer.toggleKey || peer.id,
+        visible: false,
+      });
     }
   }
   if (layer) {
@@ -415,7 +406,7 @@ const toggleLayer = (id, visible, { openController = false } = {}) => {
   if (openController && visible && !wasVisible && layer?.controllerUi) {
     openLayerController(layer);
   }
-  if (switchedPeer) layerPanel.renderLayers();
+  if (switchedPeers.length > 0) layerPanel.renderLayers();
   else layerPanel.updateCount();
   scheduleUrlUpdate();
 };
@@ -790,14 +781,23 @@ const renderCommunityCompatibilityList = () => {
     const actions = document.createElement('span');
     actions.className = 'community-entry-actions';
     const badge = document.createElement('small');
-    // 等級ではなく、利用者の操作に関わる事実だけを出す。
+    const auditOutcome = entry.browserAudit?.outcome;
+    // 追加可否と実ブラウザ監査の観測結果を分けて表示する。
     badge.textContent = entry.available === false
       ? '実体なし'
-      : needsConfiguration
+      : auditOutcome === 'passed'
+        ? '完全動作確認済み'
+        : auditOutcome === 'requires-config' || needsConfiguration
         ? '要設定'
-        : entry.offline
-          ? 'オフライン可'
-          : '要通信';
+        : auditOutcome === 'source-retired'
+          ? '配信元終了'
+          : auditOutcome === 'interaction-required'
+            ? '操作が必要'
+            : ['not-rendered', 'rendered-without-network', 'rendered-with-network-error'].includes(auditOutcome)
+              ? '部分動作確認済み'
+              : auditOutcome === 'failed'
+                ? '互換性問題あり'
+                : '未検証';
     const add = document.createElement('button');
     add.type = 'button';
     add.className = 'community-entry-add';
@@ -831,7 +831,9 @@ const renderCommunityCompatibilityList = () => {
     const description = document.createElement('p');
     const facts = [
       entry.available === false ? entry.unavailableReason : entry.note,
-      entry.verifiedAt ? `動作確認 ${entry.verifiedAt}` : '',
+      entry.browserAudit
+        ? `実ブラウザ ${entry.browserAudit.stagesPassed}/${entry.browserAudit.stagesTotal} · ${entry.verifiedAt}`
+        : '',
     ].filter(Boolean);
     description.textContent = facts.join(' · ');
     row.append(heading, description);
@@ -946,12 +948,17 @@ const addImportedLayers = (layers) => {
   const knownHrefs = new Set(state.importedLayers.map((layer) => layer.attrs?.['xlink:href']));
   const additions = layers.filter((layer) => !knownHrefs.has(layer.attrs?.['xlink:href']));
   if (additions.length === 0) throw new Error('同じレイヤーは追加済みです');
+  if (!state.visibleLayerIds) state.visibleLayerIds = new Set();
+  const accepted = [];
+  for (const layer of additions) {
+    if (layer.visible) {
+      deactivateVisibleSwitchPeers(layer, [...state.layers, ...accepted], state.visibleLayerIds);
+      state.visibleLayerIds.add(layer.id);
+    }
+    accepted.push(layer);
+  }
   state.importedLayers.push(...additions);
   state.layers.push(...additions);
-  if (!state.visibleLayerIds) state.visibleLayerIds = new Set();
-  for (const layer of additions) {
-    if (layer.visible) state.visibleLayerIds.add(layer.id);
-  }
   saveImportedLayers(state.importedLayers);
   renderLayers();
   renderCommunityCompatibilityList();

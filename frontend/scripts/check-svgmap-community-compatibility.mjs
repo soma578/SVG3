@@ -9,6 +9,7 @@ const projectRoot = path.resolve(frontendRoot, '..')
 const externalRoot = path.join(projectRoot, 'map/layers/external/svgmap-app-layers')
 const config = JSON.parse(fs.readFileSync(path.join(externalRoot, 'import.config.json'), 'utf8'))
 const catalog = JSON.parse(fs.readFileSync(path.join(externalRoot, 'compatibility.json'), 'utf8'))
+const audit = JSON.parse(fs.readFileSync(path.join(externalRoot, 'compatibility-audit.json'), 'utf8'))
 const networkOverrides = JSON.parse(fs.readFileSync(
   path.join(externalRoot, 'network-capability-overrides.json'),
   'utf8',
@@ -18,6 +19,17 @@ const animations = [...container.replace(/<!--[\s\S]*?-->/g, '').matchAll(/<anim
 
 assert.equal(catalog.schemaVersion, 2)
 assert.equal(catalog.entries.length, animations.length, 'compatibility catalog must cover every upstream animation')
+assert.equal(audit.entries.length, catalog.entries.filter((entry) => entry.available).length)
+const allowedAuditOutcomes = new Set([
+  'passed',
+  'failed',
+  'requires-config',
+  'source-retired',
+  'interaction-required',
+  'not-rendered',
+  'rendered-without-network',
+  'rendered-with-network-error',
+])
 // 互換性の等級は持たない。本家Containerに載っているレイヤーは本家と同じ経路
 // （同じviewer・同じContainer・同じ相対解決・同じproxy factory）で動くため、
 // 記録するのは配布物に実体があるかどうかという事実だけにする。
@@ -35,6 +47,13 @@ for (const [index, entry] of catalog.entries.entries()) {
   assert.ok(entry.note, `${entry.title}: note is required`)
   assert.equal('status' in entry, false, `${entry.title}: compatibility grading must not return`)
   assert.equal('category' in entry, false, `${entry.title}: compatibility grading must not return`)
+  if (entry.available) {
+    assert.ok(entry.browserAudit, `${entry.title}: browser audit is required`)
+    assert.ok(allowedAuditOutcomes.has(entry.browserAudit.outcome), `${entry.title}: invalid audit outcome`)
+    assert.equal(entry.browserAudit.stagesTotal, 8)
+    assert.ok(Number.isInteger(entry.browserAudit.stageMask))
+    assert.equal(entry.verifiedAt, entry.browserAudit.testedAt.slice(0, 10))
+  }
   if (!entry.available) {
     assert.ok(entry.unavailableReason, `${entry.title}: unavailableReason is required`)
   }

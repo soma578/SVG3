@@ -1,0 +1,1360 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-19T09:03:20.728Z",
+  "environment": "production-like Playwright Chromium",
+  "stages": [
+    "svgLoad",
+    "documentRegistration",
+    "controllerStart",
+    "dependentAssetLoad",
+    "networkRequest",
+    "networkResponse",
+    "svgElementGeneration",
+    "renderedResult"
+  ],
+  "summary": {
+    "svgLoad": 146,
+    "documentRegistration": 146,
+    "controllerStart": 146,
+    "dependentAssetLoad": 147,
+    "networkRequest": 145,
+    "networkResponse": 141,
+    "svgElementGeneration": 143,
+    "renderedResult": 143
+  },
+  "outcomes": {
+    "passed": 135,
+    "failed": 0,
+    "requires-config": 1,
+    "source-retired": 2,
+    "interaction-required": 1,
+    "not-rendered": 2,
+    "rendered-without-network": 2,
+    "rendered-with-network-error": 4
+  },
+  "entries": [
+    {
+      "sourceIndex": 1,
+      "title": "sentinel2_2018_WMTS",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:46:57.003Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 2,
+      "title": "DenshiKokudo:orthoPhoto",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:47:02.418Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 3,
+      "title": "DenshiKokudo:淡色",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:47:07.607Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 4,
+      "title": "DenshiKokudo:relief",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:47:12.915Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 5,
+      "title": "DenshiKokudo",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:47:18.265Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 6,
+      "title": "OpenStreetMap Etc",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:47:23.672Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 7,
+      "title": "OpenStreetMap(Global)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:47:29.707Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 8,
+      "title": "登記所備付地図データ(RawData)",
+      "outcome": "rendered-without-network",
+      "testedAt": "2026-08-19T08:47:35.632Z",
+      "stagesPassed": 6,
+      "stagesTotal": 8,
+      "stageMask": 207
+    },
+    {
+      "sourceIndex": 9,
+      "title": "e-stat街区レベル境界・人口データ",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:47:47.708Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 10,
+      "title": "Experimental GSI Vector Tile",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:47:55.311Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 11,
+      "title": "e-stat data reverse-geocoder",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:48:01.018Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 12,
+      "title": "plus coder",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:48:08.119Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 13,
+      "title": "geohashCoder",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:48:13.899Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 14,
+      "title": "UTMGridCoder",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:48:19.282Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 15,
+      "title": "geolonia_GeoCoder",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:48:24.318Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 16,
+      "title": "CSIS_GeoCoder",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:48:29.744Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 17,
+      "title": "GSI_GeoCoder",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:48:36.806Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 18,
+      "title": "Street View",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:48:42.820Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 19,
+      "title": "経路検索(graphhopper)",
+      "outcome": "requires-config",
+      "testedAt": "2026-08-19T08:48:50.743Z",
+      "stagesPassed": 3,
+      "stagesTotal": 8,
+      "stageMask": 56
+    },
+    {
+      "sourceIndex": 20,
+      "title": "標高検索",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:49:08.049Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 21,
+      "title": "GeoidHeightCalculator",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:49:13.972Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 22,
+      "title": "bitimageTracer",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:49:19.239Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 23,
+      "title": "Raster GIS",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:49:26.505Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 24,
+      "title": "Vector GIS",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:49:31.743Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 25,
+      "title": "Vector GIS Complex",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:49:37.554Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 26,
+      "title": "KML(MyMaps)データ表示",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:49:44.996Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 27,
+      "title": "shape・GeoJSONファイル表示",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:49:51.447Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 28,
+      "title": "任意XYZタイル表示",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:49:59.566Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 29,
+      "title": "free hand authoring",
+      "outcome": "interaction-required",
+      "testedAt": "2026-08-19T08:50:05.656Z",
+      "stagesPassed": 6,
+      "stagesTotal": 8,
+      "stageMask": 63
+    },
+    {
+      "sourceIndex": 30,
+      "title": "vector authoring",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:50:13.858Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 31,
+      "title": "CSVデータ可視化",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:50:20.363Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 32,
+      "title": "bitimage2geoInfo",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:50:25.857Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 33,
+      "title": "JMA過去の災害記録(-2020年)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:50:33.364Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 34,
+      "title": "JMA過去の災害記録(2021年)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:50:39.079Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 35,
+      "title": "JMA過去の災害記録(2022年-)",
+      "outcome": "not-rendered",
+      "testedAt": "2026-08-19T08:50:43.570Z",
+      "stagesPassed": 6,
+      "stagesTotal": 8,
+      "stageMask": 63
+    },
+    {
+      "sourceIndex": 36,
+      "title": "DRONEBIRD",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:50:50.331Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 37,
+      "title": "火災情報(NASA FIRMS)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:50:55.922Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 38,
+      "title": "沿岸海域土地条件図:昭和63年以前",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:51:00.982Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 39,
+      "title": "沿岸海域土地条件図:平成元年以降",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:51:06.497Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 40,
+      "title": "dynamicOpenSeaMap seamark",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:51:11.767Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 41,
+      "title": "衛星画像(海しる)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:51:16.575Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 42,
+      "title": "海底ケーブル(海しる)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:51:21.730Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 43,
+      "title": "漁港(海しる)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:51:35.193Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 44,
+      "title": "等深線(海しる)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:51:50.453Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 45,
+      "title": "天気図４８時間予想(海しる)",
+      "outcome": "rendered-with-network-error",
+      "testedAt": "2026-08-19T08:52:02.856Z",
+      "stagesPassed": 7,
+      "stagesTotal": 8,
+      "stageMask": 223
+    },
+    {
+      "sourceIndex": 46,
+      "title": "天気図２４時間予想(海しる)",
+      "outcome": "rendered-with-network-error",
+      "testedAt": "2026-08-19T08:52:09.474Z",
+      "stagesPassed": 7,
+      "stagesTotal": 8,
+      "stageMask": 223
+    },
+    {
+      "sourceIndex": 47,
+      "title": "天気図現況(海しる)",
+      "outcome": "rendered-with-network-error",
+      "testedAt": "2026-08-19T08:52:15.736Z",
+      "stagesPassed": 7,
+      "stagesTotal": 8,
+      "stageMask": 223
+    },
+    {
+      "sourceIndex": 49,
+      "title": "Open Infrastructure Map",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:52:21.613Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 50,
+      "title": "空間線量率(モニタリングポスト:原子力規制委員会)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:52:29.979Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 51,
+      "title": "人口集中地区(DID)H27(総務省統計局/地理院地図)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:52:36.612Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 52,
+      "title": "防災科研　南海トラフ広域地震防災研究PF",
+      "outcome": "source-retired",
+      "testedAt": "2026-08-19T08:52:42.440Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 53,
+      "title": "防災科研_J_SHIS_長期間平均ハザード(再現期間500年)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:52:48.167Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 54,
+      "title": "防災科研_J_SHIS_確率論的地震動予測地図2020_主要活断層帯",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:52:53.907Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 55,
+      "title": "防災科研_J_SHIS_地すべり地形",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:53:00.064Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 56,
+      "title": "防災科研_J_SHIS_震源断層",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:53:05.699Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 57,
+      "title": "防災科研_津波_J_THIS",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:53:11.155Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 58,
+      "title": "令和６年能登半島地震　道路復旧状況",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:53:16.951Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 59,
+      "title": "緊急輸送道路R",
+      "outcome": "rendered-without-network",
+      "testedAt": "2026-08-19T08:53:25.174Z",
+      "stagesPassed": 6,
+      "stagesTotal": 8,
+      "stageMask": 207
+    },
+    {
+      "sourceIndex": 60,
+      "title": "国道事務所等",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:53:32.533Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 61,
+      "title": "道の駅R",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:53:38.096Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 62,
+      "title": "工事予定",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:53:46.051Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 63,
+      "title": "高速道路事前通行規制区間",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:53:54.064Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 64,
+      "title": "事前通行規制区間R",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:54:02.205Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 65,
+      "title": "時間雨量",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:54:08.068Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 66,
+      "title": "ライブカメラ",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:54:16.062Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 67,
+      "title": "通行規制",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:54:23.834Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 68,
+      "title": "地理院防災・災害データ：サブレイヤーあり",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:54:28.311Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 69,
+      "title": "地理院タイル：サブレイヤーあり",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:54:35.760Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 70,
+      "title": "重ねるハザードマップALL",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:54:40.797Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 71,
+      "title": "高潮浸水想定区域(想定最大規模)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:54:46.617Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 72,
+      "title": "浸水想定区域(想定最大規模)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:54:52.135Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 73,
+      "title": "浸水想定区域(計画規模)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:54:57.365Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 74,
+      "title": "津波浸水想定区域(旧)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:55:02.899Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 75,
+      "title": "地形区分に基づく液状化の発生傾向図",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:55:08.576Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 76,
+      "title": "津波浸水想定(最大規模)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:55:14.436Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 77,
+      "title": "急傾斜警戒区域",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:55:20.022Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 78,
+      "title": "土石流警戒区域",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:55:25.789Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 79,
+      "title": "地すべり警戒区域",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:55:30.704Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 80,
+      "title": "土石流危険渓流",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:55:38.860Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 81,
+      "title": "急傾斜地崩壊危険個所",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:55:43.293Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 82,
+      "title": "地すべり危険個所",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:55:48.922Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 83,
+      "title": "雪崩危険個所",
+      "outcome": "rendered-with-network-error",
+      "testedAt": "2026-08-19T08:55:54.077Z",
+      "stagesPassed": 7,
+      "stagesTotal": 8,
+      "stageMask": 223
+    },
+    {
+      "sourceIndex": 84,
+      "title": "道路冠水想定個所",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:55:59.470Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 85,
+      "title": "事前通行規制区間",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:56:05.217Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 86,
+      "title": "緊急輸送道路",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:56:10.723Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 87,
+      "title": "名称未設定レイヤ 87",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:56:15.925Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 88,
+      "title": "地震 ALL 過去1週間(USGS)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:56:23.508Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 89,
+      "title": "全球地震情報(USGS)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:56:29.996Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 90,
+      "title": "K-NET地震情報(防災科研)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:56:36.445Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 91,
+      "title": "津波情報(JMA)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:56:44.647Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 92,
+      "title": "過去の地震データベース(JMA)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:56:52.976Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 93,
+      "title": "地震情報(JMA)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:56:58.965Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 94,
+      "title": "NOAA 海水温",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:57:05.535Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 95,
+      "title": "NOAA 雷",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:57:11.258Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 96,
+      "title": "NOAA 湿度",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:57:16.436Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 97,
+      "title": "NOAA 赤外線",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:57:22.001Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 98,
+      "title": "NOAA 可視光",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:57:28.114Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 99,
+      "title": "GPV降雨情報(MSM)",
+      "outcome": "source-retired",
+      "testedAt": "2026-08-19T08:57:34.222Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 100,
+      "title": "GPV風情報 [Animated-α版]",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:57:41.582Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 101,
+      "title": "GPV風情報",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:57:50.443Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 102,
+      "title": "気象警報",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:58:01.039Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 103,
+      "title": "JTWC 台風情報(Joint Typhoon Warning Center)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:58:10.629Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 104,
+      "title": "JTWC KML 台風情報",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:58:19.930Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 105,
+      "title": "yr.no:気温・雲被覆・降雨情報",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:58:27.633Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 106,
+      "title": "yr.no:風情報(Animated)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:58:39.840Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 107,
+      "title": "JAXA 衛星全球降水マップ",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:58:47.292Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 108,
+      "title": "JAXA 衛星全球降水マップ(風向矢印)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:58:54.508Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 109,
+      "title": "今後の雨（軽量版）(JMA)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:59:00.448Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 110,
+      "title": "雨雲の動き（軽量版）(JMA)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:59:06.210Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 111,
+      "title": "天気分布予報(JMA)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:59:11.284Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 112,
+      "title": "早期注意情報(JMA)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:59:16.915Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 113,
+      "title": "警報注意報(JMA)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:59:24.530Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 114,
+      "title": "台風(JMA)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:59:30.157Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 115,
+      "title": "降水短時間予報(JMA)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:59:37.715Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 116,
+      "title": "大雨危険度(JMA)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:59:42.784Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 117,
+      "title": "危険度分布-浸水害(JMA)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:59:48.183Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 118,
+      "title": "危険度分布-土砂災害(JMA)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:59:53.497Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 119,
+      "title": "危険度分布-洪水害(JMA)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T08:59:58.707Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 120,
+      "title": "国交省_川の防災情報_降雨レーダー",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:00:04.540Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 121,
+      "title": "ひまわり8号(気象衛星センター)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:00:12.425Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 122,
+      "title": "ナウキャスト(降雨)(JMA)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:00:18.173Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 123,
+      "title": "ナウキャスト(降雪)(JMA)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:00:23.948Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 124,
+      "title": "ナウキャスト(落雷)(JMA)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:00:29.823Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 125,
+      "title": "ナウキャスト(竜巻)(JMA)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:00:35.451Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 126,
+      "title": "天気図",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:00:41.861Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 127,
+      "title": "気象庁_2021_VectorData",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:00:47.157Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 128,
+      "title": "気象庁_2021_火山",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:00:51.408Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 129,
+      "title": "気象庁_2021_推計震度分布",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:00:58.264Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 130,
+      "title": "気象庁_2021_ひまわり画像",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:01:03.296Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 131,
+      "title": "気象庁_2021_TileImages",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:01:08.476Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 132,
+      "title": "気象庁_2021_アメダス",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:01:14.296Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 133,
+      "title": "河川形状",
+      "outcome": "not-rendered",
+      "testedAt": "2026-08-19T09:01:21.946Z",
+      "stagesPassed": 6,
+      "stagesTotal": 8,
+      "stageMask": 63
+    },
+    {
+      "sourceIndex": 134,
+      "title": "水位観測所",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:01:34.013Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 135,
+      "title": "ダム",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:01:40.196Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 136,
+      "title": "警報のみ 水位計",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:01:47.987Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 137,
+      "title": "警報のみ 水位観測所",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:01:53.786Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 138,
+      "title": "警報のみ ダム",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:02:01.715Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 139,
+      "title": "道路(国土技術研究センター)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:02:09.201Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 140,
+      "title": "河川(国土技術研究センター)",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:02:15.048Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 141,
+      "title": "国交省川の防災情報",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:02:23.635Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 142,
+      "title": "警察庁_交通事故データ",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:02:30.060Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 143,
+      "title": "厚労省 病院・診療所・薬局等",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:02:39.067Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 144,
+      "title": "地理院 指定避難所",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:02:43.545Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 145,
+      "title": "地理院 指定緊急避難場所",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:02:51.943Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 146,
+      "title": "岡山大学 チーム活動（CSV追加対応）",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:02:59.567Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 147,
+      "title": "岡山大学 チーム活動エリア",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:03:05.119Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    },
+    {
+      "sourceIndex": 148,
+      "title": "岡山大学 避難所（QTCT・岡山）",
+      "outcome": "passed",
+      "testedAt": "2026-08-19T09:03:12.949Z",
+      "stagesPassed": 8,
+      "stagesTotal": 8,
+      "stageMask": 255
+    }
+  ]
+}

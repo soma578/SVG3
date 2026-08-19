@@ -9,8 +9,15 @@ const upstreamRoot = path.join(projectRoot, 'svgMapAppLayers')
 const containerPath = path.join(upstreamRoot, 'Container.svg')
 const externalRoot = path.join(projectRoot, 'map/layers/external/svgmap-app-layers')
 const outputPath = path.join(externalRoot, 'compatibility.json')
+const auditPath = path.join(externalRoot, 'compatibility-audit.json')
 const adapterRoot = path.join(externalRoot, 'adapters')
 const localLayerLib = '/map/vendor/svgmapjs/svgMapLayerLib.js'
+const browserAudit = fs.existsSync(auditPath)
+  ? JSON.parse(fs.readFileSync(auditPath, 'utf8'))
+  : { entries: [] }
+const AUDIT_BY_SOURCE_INDEX = new Map(
+  (browserAudit.entries || []).map((entry) => [entry.sourceIndex, entry]),
+)
 
 const upstreamPath = (...parts) => path.join(upstreamRoot, ...parts)
 const adapterPath = (name) => path.join(adapterRoot, name)
@@ -273,6 +280,7 @@ const entries = animations.map((match, index) => {
   const hosts = externalHosts(`${match[0]}\n${body}\n${controllerBody}`)
   const proxyRequired = attrs['data-cross-origin-proxy-required'] === 'true'
   const override = overrides.get(title) || {}
+  const audit = AUDIT_BY_SOURCE_INDEX.get(index + 1)
 
   // ここでレイヤーに優劣を付けない。本家Containerに載っているものは本家と同じ
   // 経路（同じviewer・同じContainer・同じ相対解決・同じproxy factory）で動く。
@@ -318,7 +326,17 @@ const entries = animations.map((match, index) => {
     controller: Boolean(controller),
     externalDependencies,
     // 実際に読み込みまで確認した日。無くても利用は妨げない。
-    verifiedAt: override.verifiedAt || RUNTIME_BY_TITLE.get(title)?.verifiedAt || null,
+    verifiedAt: audit?.testedAt?.slice(0, 10)
+      || override.verifiedAt
+      || RUNTIME_BY_TITLE.get(title)?.verifiedAt
+      || null,
+    ...(audit ? { browserAudit: {
+      outcome: audit.outcome,
+      testedAt: audit.testedAt,
+      stagesPassed: audit.stagesPassed,
+      stagesTotal: audit.stagesTotal,
+      stageMask: audit.stageMask,
+    } } : {}),
     ...(RETIRED_SOURCE_TITLES.has(title)
       ? { renderIssue: RETIRED_SOURCE_TITLES.get(title), sourceRetired: true }
       : {}),

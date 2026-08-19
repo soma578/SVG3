@@ -33,7 +33,14 @@
         "wiki.openstreetmap.org",
         "tiles.maps.eox.at"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:46:57.003Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（s2maps.eu, wiki.openstreetmap.org, tiles.maps.eox.at）",
       "animation": {
         "x": "-30000",
@@ -59,7 +66,14 @@
       "externalDependencies": [
         "cyberjapandata.gsi.go.jp"
       ],
-      "verifiedAt": "2026-08-04",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:47:02.418Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "上流の動的SVGを固有URLのルートレイヤーとして直接起動し、地理院写真タイルの取得まで動作確認済み",
       "animation": {
         "x": "-30000",
@@ -88,7 +102,14 @@
         "maps.gsi.go.jp",
         "cyberjapandata.gsi.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:47:07.607Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（maps.gsi.go.jp, cyberjapandata.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -119,7 +140,14 @@
         "maps.gsi.go.jp",
         "cyberjapandata.gsi.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:47:12.915Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（maps.gsi.go.jp, cyberjapandata.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -150,7 +178,14 @@
         "maps.gsi.go.jp",
         "cyberjapandata.gsi.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:47:18.265Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（maps.gsi.go.jp, cyberjapandata.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -184,7 +219,14 @@
         "tile.openstreetmap.jp",
         "tile.openstreetmap.org"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:47:23.672Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, operations.osmfoundation.org, wiki.openstreetmap.org, tile.openstreetmap.jp, tile.openstreetmap.org）",
       "animation": {
         "x": "-30000",
@@ -210,7 +252,14 @@
       "externalDependencies": [
         "tile.openstreetmap.org"
       ],
-      "verifiedAt": "2026-08-04",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:47:29.707Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "旧controller依存を除いた固有の動的SVGへ配置し、HTTPSのOSM公式タイル取得まで動作確認済み",
       "animation": {
         "x": "-300",
@@ -245,7 +294,14 @@
         "github.com",
         "www.moj.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "rendered-without-network",
+        "testedAt": "2026-08-19T08:47:35.632Z",
+        "stagesPassed": 6,
+        "stagesTotal": 8,
+        "stageMask": 207
+      },
       "note": "外部配信元と通信するレイヤー（github.com, www.moj.go.jp）",
       "animation": {
         "x": "-30000",
@@ -276,7 +332,14 @@
         "www.e-stat.go.jp",
         "www.stat.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:47:47.708Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（unpkg.com, github.com, qiita.com, www.e-stat.go.jp, www.stat.go.jp）",
       "animation": {
         "x": "-30000",
@@ -310,7 +373,14 @@
         "stackoverflow.com",
         "maps.gsi.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:47:55.311Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（gist.github.com, cdn.jsdelivr.net, unpkg.com, github.com, cyberjapandata.gsi.go.jp, stackoverflow.com, maps.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -343,7 +413,14 @@
         "www.pref.tottori.lg.jp",
         "business.mapfan.com"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:48:01.018Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, unpkg.com, github.com, qiita.com, www.e-stat.go.jp, www.stat.go.jp, www.pref.tottori.lg.jp, business.mapfan.com）",
       "animation": {
         "x": "-30000",
@@ -372,7 +449,14 @@
         "cdn.jsdelivr.net",
         "support.google.com"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:48:08.119Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, support.google.com）",
       "animation": {
         "x": "-30000",
@@ -397,7 +481,14 @@
       "offline": true,
       "controller": true,
       "externalDependencies": [],
-      "verifiedAt": "2026-08-04",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:48:13.899Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "controllerと依存ライブラリを同一オリジンへ固定したアダプターで動作確認済み",
       "animation": {
         "x": "-30000",
@@ -428,7 +519,14 @@
         "maps.gsi.go.jp",
         "en.wikipedia.org"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:48:19.282Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, maps.gsi.go.jp, en.wikipedia.org）",
       "animation": {
         "x": "-30000",
@@ -457,7 +555,14 @@
         "cdn.geolonia.com",
         "github.com"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:48:24.318Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, cdn.geolonia.com, github.com）",
       "animation": {
         "x": "-30000",
@@ -486,7 +591,14 @@
         "t-sagara.github.io",
         "geocode.csis.u-tokyo.ac.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:48:29.744Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, t-sagara.github.io, geocode.csis.u-tokyo.ac.jp）",
       "animation": {
         "x": "-30000",
@@ -516,7 +628,14 @@
         "msearch.gsi.go.jp",
         "mreversegeocoder.gsi.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:48:36.806Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, maps.gsi.go.jp, msearch.gsi.go.jp, mreversegeocoder.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -548,7 +667,14 @@
         "www.google.com",
         "www.mapillary.com"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:48:42.820Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.instantstreetview.com, api.openstreetcam.org, openstreetcam.org, www.google.com, www.mapillary.com）",
       "animation": {
         "x": "-30000",
@@ -573,7 +699,14 @@
       "offline": false,
       "controller": true,
       "externalDependencies": [],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "requires-config",
+        "testedAt": "2026-08-19T08:48:50.743Z",
+        "stagesPassed": 3,
+        "stagesTotal": 8,
+        "stageMask": 56
+      },
       "note": "本家と同様にGraphHopper APIエンドポイントの設定が必要",
       "animation": {
         "x": "-30000",
@@ -616,7 +749,14 @@
         "maps.gsi.go.jp",
         "cyberjapandata.gsi.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:49:08.049Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, maps.gsi.go.jp, cyberjapandata.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -645,7 +785,14 @@
         "fgd.gsi.go.jp",
         "www.gsi.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:49:13.972Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, fgd.gsi.go.jp, www.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -673,7 +820,14 @@
         "cdn.jsdelivr.net",
         "github.com"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:49:19.239Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, github.com）",
       "animation": {
         "x": "-30000",
@@ -706,7 +860,14 @@
         "write-remember.com",
         "step-learn.com"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:49:26.505Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（www.w3.og, www.ogc.org, cdn.jsdelivr.net, webliker.info, write-remember.com, step-learn.com）",
       "animation": {
         "x": "-30000",
@@ -736,7 +897,14 @@
         "www.ogc.org",
         "cdn.jsdelivr.net"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:49:31.743Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（www.w3.og, www.ogc.org, cdn.jsdelivr.net）",
       "animation": {
         "x": "-30000",
@@ -767,7 +935,14 @@
         "cdnjs.cloudflare.com",
         "norm-nois.com"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:49:37.554Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（www.w3.og, www.ogc.org, cdn.jsdelivr.net, cdnjs.cloudflare.com, norm-nois.com）",
       "animation": {
         "x": "-30000",
@@ -795,7 +970,14 @@
         "cdn.jsdelivr.net",
         "www.google.com"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:49:44.996Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.google.com）",
       "animation": {
         "x": "-30000",
@@ -826,7 +1008,14 @@
         "github.com",
         "qiita.com"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:49:51.447Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, unpkg.com, github.com, qiita.com）",
       "animation": {
         "x": "-30000",
@@ -854,7 +1043,14 @@
         "cdn.jsdelivr.net",
         "cyberjapandata.gsi.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:49:59.566Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, cyberjapandata.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -883,7 +1079,14 @@
         "bagelee.com",
         "cdn.jsdelivr.net"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "interaction-required",
+        "testedAt": "2026-08-19T08:50:05.656Z",
+        "stagesPassed": 6,
+        "stagesTotal": 8,
+        "stageMask": 63
+      },
       "note": "本家controller上で利用者が描画操作を行った後にSVG要素を生成する作図レイヤー",
       "animation": {
         "x": "-30000",
@@ -913,7 +1116,14 @@
         "bagelee.com",
         "cdn.jsdelivr.net"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:50:13.858Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（proengineer.internous.co.jp, bagelee.com, cdn.jsdelivr.net）",
       "animation": {
         "x": "-30000",
@@ -941,7 +1151,14 @@
         "cdn.jsdelivr.net",
         "cdnjs.cloudflare.com"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:50:20.363Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, cdnjs.cloudflare.com）",
       "animation": {
         "x": "-30000",
@@ -973,7 +1190,14 @@
         "bagelee.com",
         "cdn.jsdelivr.net"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:50:25.857Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（bagelee.com, cdn.jsdelivr.net）",
       "animation": {
         "x": "-30000",
@@ -1001,7 +1225,14 @@
         "cdn.jsdelivr.net",
         "www.jma.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:50:33.364Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.jma.go.jp）",
       "animation": {
         "x": "-30000",
@@ -1030,7 +1261,14 @@
         "www.jma.go.jp",
         "www.data.jma.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:50:39.079Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.jma.go.jp, www.data.jma.go.jp）",
       "animation": {
         "x": "-30000",
@@ -1058,7 +1296,14 @@
         "cdn.jsdelivr.net",
         "www.data.jma.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "not-rendered",
+        "testedAt": "2026-08-19T08:50:43.570Z",
+        "stagesPassed": 6,
+        "stagesTotal": 8,
+        "stageMask": 63
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.data.jma.go.jp）",
       "animation": {
         "x": "-30000",
@@ -1090,7 +1335,14 @@
         "dronebird.org",
         "github.com"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:50:50.331Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, api.github.com, raw.githubusercontent.com, apps.kontur.io, dronebird.org, github.com）",
       "animation": {
         "x": "-30000",
@@ -1118,7 +1370,14 @@
         "cdn.jsdelivr.net",
         "firms.modaps.eosdis.nasa.gov"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:50:55.922Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, firms.modaps.eosdis.nasa.gov）",
       "animation": {
         "x": "-30000",
@@ -1146,7 +1405,14 @@
         "maps.gsi.go.jp",
         "cyberjapandata.gsi.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:51:00.982Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（maps.gsi.go.jp, cyberjapandata.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -1177,7 +1443,14 @@
         "maps.gsi.go.jp",
         "cyberjapandata.gsi.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:51:06.497Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（maps.gsi.go.jp, cyberjapandata.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -1207,7 +1480,14 @@
       "externalDependencies": [
         "t1.openseamap.org"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:51:11.767Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（t1.openseamap.org）",
       "animation": {
         "x": "-30000",
@@ -1239,7 +1519,14 @@
         "www.msil.go.jp",
         "www.jma.go.jp"
       ],
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:51:16.575Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, cdn.jsdelivr.net, www.data.jma.go.jp, www.msil.go.jp, www.jma.go.jp）",
       "animation": {
         "x": "-30000",
@@ -1268,7 +1555,14 @@
         "www.msil.go.jp",
         "cdn.jsdelivr.net"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:51:21.730Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（www.msil.go.jp, cdn.jsdelivr.net）",
       "animation": {
         "x": "-30000",
@@ -1301,7 +1595,14 @@
         "www.msil.go.jp",
         "cdn.jsdelivr.net"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:51:35.193Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（www.msil.go.jp, cdn.jsdelivr.net）",
       "animation": {
         "x": "-30000",
@@ -1334,7 +1635,14 @@
         "www.msil.go.jp",
         "cdn.jsdelivr.net"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:51:50.453Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（www.msil.go.jp, cdn.jsdelivr.net）",
       "animation": {
         "x": "-30000",
@@ -1366,7 +1674,14 @@
       "externalDependencies": [
         "www.msil.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "rendered-with-network-error",
+        "testedAt": "2026-08-19T08:52:02.856Z",
+        "stagesPassed": 7,
+        "stagesTotal": 8,
+        "stageMask": 223
+      },
       "note": "外部配信元と通信するレイヤー（www.msil.go.jp）",
       "animation": {
         "x": "-30000",
@@ -1398,7 +1713,14 @@
       "externalDependencies": [
         "www.msil.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "rendered-with-network-error",
+        "testedAt": "2026-08-19T08:52:09.474Z",
+        "stagesPassed": 7,
+        "stagesTotal": 8,
+        "stageMask": 223
+      },
       "note": "外部配信元と通信するレイヤー（www.msil.go.jp）",
       "animation": {
         "x": "-30000",
@@ -1430,7 +1752,14 @@
       "externalDependencies": [
         "www.msil.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "rendered-with-network-error",
+        "testedAt": "2026-08-19T08:52:15.736Z",
+        "stagesPassed": 7,
+        "stagesTotal": 8,
+        "stageMask": 223
+      },
       "note": "外部配信元と通信するレイヤー（www.msil.go.jp）",
       "animation": {
         "x": "-30000",
@@ -1492,7 +1821,14 @@
         "unpkg.com",
         "openinframap.org"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:52:21.613Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, gist.github.com, unpkg.com, openinframap.org）",
       "animation": {
         "x": "-30000",
@@ -1520,7 +1856,14 @@
         "service.svgmap.org",
         "www.erms.nsr.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:52:29.979Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, service.svgmap.org, www.erms.nsr.go.jp）",
       "animation": {
         "x": "-30000",
@@ -1547,7 +1890,14 @@
       "externalDependencies": [
         "cyberjapandata.gsi.go.jp"
       ],
-      "verifiedAt": "2026-08-04",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:52:36.612Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "上流の動的SVGを固有URLのルートレイヤーとして直接起動し、DIDタイルの取得まで動作確認済み",
       "animation": {
         "x": "-30000",
@@ -1581,7 +1931,14 @@
         "www.msil.go.jp",
         "nankai-bosai.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "source-retired",
+        "testedAt": "2026-08-19T08:52:42.440Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "renderIssue": "旧WMSエンドポイントが配信終了（404）",
       "sourceRetired": true,
       "note": "外部配信元と通信するレイヤー（gbank.gsj.jp, cdn.jsdelivr.net, catalog.nankai-bosai.jp, www.data.jma.go.jp, www.msil.go.jp, nankai-bosai.jp）",
@@ -1611,7 +1968,14 @@
       "externalDependencies": [
         "www.j-shis.bosai.go.jp"
       ],
-      "verifiedAt": "2026-08-04",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:52:48.167Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "同梱済み旧式controllerをtight実行し、外部WMTSタイルの取得まで動作確認済み",
       "animation": {
         "x": "-30000",
@@ -1640,7 +2004,14 @@
       "externalDependencies": [
         "www.j-shis.bosai.go.jp"
       ],
-      "verifiedAt": "2026-08-04",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:52:53.907Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "共通SVGを固有URL化し、同梱controllerと外部WMTSタイルの取得まで動作確認済み",
       "animation": {
         "x": "-30000",
@@ -1670,7 +2041,14 @@
         "www.j-shis.bosai.go.jp",
         "gbank.gsj.jp"
       ],
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:53:00.064Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（www.j-shis.bosai.go.jp, gbank.gsj.jp）",
       "animation": {
         "x": "-30000",
@@ -1699,7 +2077,14 @@
         "www.j-shis.bosai.go.jp",
         "stackoverflow.com"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:53:05.699Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.j-shis.bosai.go.jp, stackoverflow.com）",
       "animation": {
         "x": "-30000",
@@ -1731,7 +2116,14 @@
         "cdn.jsdelivr.net",
         "www.j-this.bosai.go.jp"
       ],
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:53:11.155Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, cdn.jsdelivr.net, www.j-this.bosai.go.jp）",
       "animation": {
         "x": "-30000",
@@ -1761,7 +2153,14 @@
         "cdnjs.cloudflare.com",
         "www.mlit.go.jp"
       ],
-      "verifiedAt": "2026-08-18",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:53:16.951Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "本家path・controllerを変更せず、国交省GeoJSONに必要なnetwork capabilityで動作確認済み",
       "animation": {
         "x": "-30000",
@@ -1800,7 +2199,14 @@
         "nlftp.mlit.go.jp",
         "www.mlit.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "rendered-without-network",
+        "testedAt": "2026-08-19T08:53:25.174Z",
+        "stagesPassed": 6,
+        "stagesTotal": 8,
+        "stageMask": 207
+      },
       "note": "外部配信元と通信するレイヤー（www.thr.mlit.go.jp, www.ktr.mlit.go.jp, www.hrr.mlit.go.jp, www.cbr.mlit.go.jp, www.kkr.mlit.go.jp, www.cgr.mlit.go.jp, www.skr.mlit.go.jp, www.qsr.mlit.go.jp, www.dc.ogb.go.jp, developers.google.com, nlftp.mlit.go.jp, www.mlit.go.jp）",
       "animation": {
         "x": "-30000",
@@ -1830,7 +2236,14 @@
         "www.mlit.go.jp",
         "www.road-info-prvs.mlit.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:53:32.533Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.mlit.go.jp, www.road-info-prvs.mlit.go.jp）",
       "animation": {
         "x": "-30000",
@@ -1864,7 +2277,14 @@
         "www.mlit.go.jp",
         "www.road-info-prvs.mlit.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:53:38.096Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.mlit.go.jp, www.road-info-prvs.mlit.go.jp）",
       "animation": {
         "x": "-30000",
@@ -1898,7 +2318,14 @@
         "www.mlit.go.jp",
         "www.road-info-prvs.mlit.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:53:46.051Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.mlit.go.jp, www.road-info-prvs.mlit.go.jp）",
       "animation": {
         "x": "-30000",
@@ -1932,7 +2359,14 @@
         "www.mlit.go.jp",
         "www.road-info-prvs.mlit.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:53:54.064Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.mlit.go.jp, www.road-info-prvs.mlit.go.jp）",
       "animation": {
         "x": "-30000",
@@ -1966,7 +2400,14 @@
         "www.mlit.go.jp",
         "www.road-info-prvs.mlit.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:54:02.205Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.mlit.go.jp, www.road-info-prvs.mlit.go.jp）",
       "animation": {
         "x": "-30000",
@@ -2000,7 +2441,14 @@
         "www.mlit.go.jp",
         "www.road-info-prvs.mlit.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:54:08.068Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.mlit.go.jp, www.road-info-prvs.mlit.go.jp）",
       "animation": {
         "x": "-30000",
@@ -2034,7 +2482,14 @@
         "www.mlit.go.jp",
         "www.road-info-prvs.mlit.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:54:16.062Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.mlit.go.jp, www.road-info-prvs.mlit.go.jp）",
       "animation": {
         "x": "-30000",
@@ -2068,7 +2523,14 @@
         "www.mlit.go.jp",
         "www.road-info-prvs.mlit.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:54:23.834Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.mlit.go.jp, www.road-info-prvs.mlit.go.jp）",
       "animation": {
         "x": "-30000",
@@ -2103,7 +2565,14 @@
         "www.gsi.go.jp",
         "stackoverflow.com"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:54:28.311Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, cdnjs.cloudflare.com, www.gsi.go.jp, stackoverflow.com）",
       "animation": {
         "x": "-30000",
@@ -2132,7 +2601,14 @@
         "cdn.jsdelivr.net",
         "maps.gsi.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:54:35.760Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, maps.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -2161,7 +2637,14 @@
         "disaportal.gsi.go.jp",
         "stackoverflow.com"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:54:40.797Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, disaportal.gsi.go.jp, stackoverflow.com）",
       "animation": {
         "x": "-30000",
@@ -2191,7 +2674,14 @@
         "server.name.jp",
         "cyberjapandata.gsi.go.jp"
       ],
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:54:46.617Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（disaportal.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -2227,7 +2717,14 @@
         "cyberjapandata.gsi.go.jp",
         "disaportal.gsi.go.jp"
       ],
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:54:52.135Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -2263,7 +2760,14 @@
         "cyberjapandata.gsi.go.jp",
         "disaportal.gsi.go.jp"
       ],
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:54:57.365Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -2299,7 +2803,14 @@
         "cyberjapandata.gsi.go.jp",
         "disaportal.gsi.go.jp"
       ],
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:55:02.899Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -2335,7 +2846,14 @@
         "cyberjapandata.gsi.go.jp",
         "disaportal.gsi.go.jp"
       ],
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:55:08.576Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -2371,7 +2889,14 @@
         "cyberjapandata.gsi.go.jp",
         "disaportal.gsi.go.jp"
       ],
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:55:14.436Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -2407,7 +2932,14 @@
         "cyberjapandata.gsi.go.jp",
         "disaportal.gsi.go.jp"
       ],
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:55:20.022Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -2443,7 +2975,14 @@
         "cyberjapandata.gsi.go.jp",
         "disaportal.gsi.go.jp"
       ],
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:55:25.789Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -2479,7 +3018,14 @@
         "cyberjapandata.gsi.go.jp",
         "disaportal.gsi.go.jp"
       ],
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:55:30.704Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -2515,7 +3061,14 @@
         "cyberjapandata.gsi.go.jp",
         "disaportal.gsi.go.jp"
       ],
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:55:38.860Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -2551,7 +3104,14 @@
         "cyberjapandata.gsi.go.jp",
         "disaportal.gsi.go.jp"
       ],
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:55:43.293Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -2587,7 +3147,14 @@
         "cyberjapandata.gsi.go.jp",
         "disaportal.gsi.go.jp"
       ],
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:55:48.922Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -2623,7 +3190,14 @@
         "cyberjapandata.gsi.go.jp",
         "disaportal.gsi.go.jp"
       ],
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "rendered-with-network-error",
+        "testedAt": "2026-08-19T08:55:54.077Z",
+        "stagesPassed": 7,
+        "stagesTotal": 8,
+        "stageMask": 223
+      },
       "note": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -2659,7 +3233,14 @@
         "cyberjapandata.gsi.go.jp",
         "disaportal.gsi.go.jp"
       ],
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:55:59.470Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -2695,7 +3276,14 @@
         "cyberjapandata.gsi.go.jp",
         "disaportal.gsi.go.jp"
       ],
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:56:05.217Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -2731,7 +3319,14 @@
         "cyberjapandata.gsi.go.jp",
         "disaportal.gsi.go.jp"
       ],
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:56:10.723Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（disaportaldata.gsi.go.jp, maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, disaportal.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -2765,7 +3360,14 @@
         "cdn.jsdelivr.net",
         "cdnjs.cloudflare.com"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:56:15.925Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（earthquake.usgs.gov, cdn.jsdelivr.net, cdnjs.cloudflare.com）",
       "animation": {
         "x": "-30000",
@@ -2795,7 +3397,14 @@
         "cdn.jsdelivr.net",
         "cdnjs.cloudflare.com"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:56:23.508Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（earthquake.usgs.gov, cdn.jsdelivr.net, cdnjs.cloudflare.com）",
       "animation": {
         "x": "-30000",
@@ -2826,7 +3435,14 @@
       "externalDependencies": [
         "earthquake.usgs.gov"
       ],
-      "verifiedAt": "2026-08-04",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:56:29.996Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "controllerとSVGMapライブラリを同一オリジンへ固定し、USGS GeoJSONの取得と震源図形生成まで動作確認済み",
       "animation": {
         "x": "-30000",
@@ -2856,7 +3472,14 @@
         "cdn.jsdelivr.net",
         "www.kyoshin.bosai.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:56:36.445Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.kyoshin.bosai.go.jp）",
       "animation": {
         "x": "-30000",
@@ -2887,7 +3510,14 @@
         "www.data.jma.go.jp",
         "xml.kishou.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:56:44.647Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.jma.go.jp, www.data.jma.go.jp, xml.kishou.go.jp）",
       "animation": {
         "x": "-30000",
@@ -2915,7 +3545,14 @@
         "cdn.jsdelivr.net",
         "www.data.jma.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:56:52.976Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.data.jma.go.jp）",
       "animation": {
         "x": "-30000",
@@ -2944,7 +3581,14 @@
         "www.jma.go.jp",
         "www.data.jma.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:56:58.965Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.jma.go.jp, www.data.jma.go.jp）",
       "animation": {
         "x": "-30000",
@@ -2972,7 +3616,14 @@
         "nowcoast.noaa.gov",
         "cdn.jsdelivr.net"
       ],
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:57:05.535Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（nowcoast.noaa.gov, cdn.jsdelivr.net）",
       "animation": {
         "x": "-30000",
@@ -3006,7 +3657,14 @@
         "nowcoast.noaa.gov",
         "cdn.jsdelivr.net"
       ],
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:57:11.258Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（nowcoast.noaa.gov, cdn.jsdelivr.net）",
       "animation": {
         "x": "-30000",
@@ -3040,7 +3698,14 @@
         "nowcoast.noaa.gov",
         "cdn.jsdelivr.net"
       ],
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:57:16.436Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（nowcoast.noaa.gov, cdn.jsdelivr.net）",
       "animation": {
         "x": "-30000",
@@ -3074,7 +3739,14 @@
         "nowcoast.noaa.gov",
         "cdn.jsdelivr.net"
       ],
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:57:22.001Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（nowcoast.noaa.gov, cdn.jsdelivr.net）",
       "animation": {
         "x": "-30000",
@@ -3108,7 +3780,14 @@
         "nowcoast.noaa.gov",
         "cdn.jsdelivr.net"
       ],
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:57:28.114Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（nowcoast.noaa.gov, cdn.jsdelivr.net）",
       "animation": {
         "x": "-30000",
@@ -3145,7 +3824,14 @@
         "cdn.jsdelivr.net",
         "agora.ex.nii.ac.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "source-retired",
+        "testedAt": "2026-08-19T08:57:34.222Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "renderIssue": "2011年東日本大震災向けアーカイブ。現在時刻を要求するとblank.pngへ転送される",
       "sourceRetired": true,
       "note": "外部配信元と通信するレイヤー（maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, cdn.jsdelivr.net, agora.ex.nii.ac.jp）",
@@ -3178,7 +3864,14 @@
         "github.com",
         "ja.wikipedia.org"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:57:41.582Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, agora.ex.nii.ac.jp, github.com, ja.wikipedia.org）",
       "animation": {
         "x": "-30000",
@@ -3209,7 +3902,14 @@
         "qiita.com",
         "en.wikipedia.org"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:57:50.443Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, agora.ex.nii.ac.jp, qiita.com, en.wikipedia.org）",
       "animation": {
         "x": "-30000",
@@ -3241,7 +3941,14 @@
         "qiita.com",
         "en.wikipedia.org"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:58:01.039Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（www.opengis.net, cdn.jsdelivr.net, agora.ex.nii.ac.jp, qiita.com, en.wikipedia.org）",
       "animation": {
         "x": "-30000",
@@ -3271,7 +3978,14 @@
         "cdn.jsdelivr.net",
         "www.petitmonte.com"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:58:10.629Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（www.metoc.navy.mil, cdn.jsdelivr.net, www.petitmonte.com）",
       "animation": {
         "x": "-30000",
@@ -3300,7 +4014,14 @@
         "cdn.jsdelivr.net",
         "www.metoc.navy.mil"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:58:19.930Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.metoc.navy.mil）",
       "animation": {
         "x": "-30000",
@@ -3329,7 +4050,14 @@
         "tiles.yr.no",
         "yr.no"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:58:27.633Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（beta.yr-maps.met.no, tiles.yr.no, yr.no）",
       "animation": {
         "x": "-30000",
@@ -3361,7 +4089,14 @@
         "github.com",
         "ja.wikipedia.org"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:58:39.840Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.yr.no, www.met.no, beta.yr-maps.met.no, github.com, ja.wikipedia.org）",
       "animation": {
         "x": "-30000",
@@ -3393,7 +4128,14 @@
         "sharaku.eorc.jaxa.jp",
         "www.eorc.jaxa.jp"
       ],
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:58:47.292Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, cdn.jsdelivr.net, sharaku.eorc.jaxa.jp, www.eorc.jaxa.jp）",
       "animation": {
         "x": "-30000",
@@ -3431,7 +4173,14 @@
         "sharaku.eorc.jaxa.jp",
         "www.eorc.jaxa.jp"
       ],
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:58:54.508Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（maps.gsi.go.jp, server.name.jp, cyberjapandata.gsi.go.jp, cdn.jsdelivr.net, sharaku.eorc.jaxa.jp, www.eorc.jaxa.jp）",
       "animation": {
         "x": "-30000",
@@ -3465,7 +4214,14 @@
         "www.data.jma.go.jp",
         "www.jma.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:59:00.448Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.data.jma.go.jp, www.jma.go.jp）",
       "animation": {
         "x": "-30000",
@@ -3496,7 +4252,14 @@
       "externalDependencies": [
         "www.jma.go.jp"
       ],
-      "verifiedAt": "2026-08-04",
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:59:06.210Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "controllerのSVGMapライブラリを同一オリジンへ固定し、気象庁の時刻JSONと降水タイル取得まで動作確認済み",
       "animation": {
         "x": "-30000",
@@ -3528,7 +4291,14 @@
         "www.data.jma.go.jp",
         "www.msil.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:59:11.284Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.jma.go.jp, www.data.jma.go.jp, www.msil.go.jp）",
       "animation": {
         "x": "-30000",
@@ -3560,7 +4330,14 @@
         "cdn.jsdelivr.net",
         "www.jma.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:59:16.915Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.jma.go.jp）",
       "animation": {
         "x": "-30000",
@@ -3589,7 +4366,14 @@
         "dmdata.jp",
         "www.jma.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:59:24.530Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, dmdata.jp, www.jma.go.jp）",
       "animation": {
         "x": "-30000",
@@ -3619,7 +4403,14 @@
         "math.stackexchange.com",
         "www.data.jma.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:59:30.157Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.jma.go.jp, math.stackexchange.com, www.data.jma.go.jp）",
       "animation": {
         "x": "-30000",
@@ -3649,7 +4440,14 @@
         "www.data.jma.go.jp",
         "www.msil.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:59:37.715Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.jma.go.jp, www.data.jma.go.jp, www.msil.go.jp）",
       "animation": {
         "x": "-30000",
@@ -3681,7 +4479,14 @@
         "cdn.jsdelivr.net",
         "www.jma.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:59:42.784Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.jma.go.jp）",
       "animation": {
         "x": "-30000",
@@ -3711,7 +4516,14 @@
         "www.data.jma.go.jp",
         "www.msil.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:59:48.183Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.jma.go.jp, www.data.jma.go.jp, www.msil.go.jp）",
       "animation": {
         "x": "-30000",
@@ -3745,7 +4557,14 @@
         "www.data.jma.go.jp",
         "www.msil.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:59:53.497Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.jma.go.jp, www.data.jma.go.jp, www.msil.go.jp）",
       "animation": {
         "x": "-30000",
@@ -3779,7 +4598,14 @@
         "www.jma.go.jp",
         "www.data.jma.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T08:59:58.707Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, unpkg.com, www.jma.go.jp, www.data.jma.go.jp）",
       "animation": {
         "x": "-30000",
@@ -3811,7 +4637,14 @@
         "cdn.jsdelivr.net",
         "www.river.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:00:04.540Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.river.go.jp）",
       "animation": {
         "x": "-30000",
@@ -3840,7 +4673,14 @@
         "www.data.jma.go.jp",
         "cdn.jsdelivr.net"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:00:12.425Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（www.data.jma.go.jp, cdn.jsdelivr.net）",
       "animation": {
         "x": "-30000",
@@ -3869,7 +4709,14 @@
         "www.data.jma.go.jp",
         "www.msil.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:00:18.173Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.jma.go.jp, www.data.jma.go.jp, www.msil.go.jp）",
       "animation": {
         "x": "-30000",
@@ -3903,7 +4750,14 @@
         "www.data.jma.go.jp",
         "www.msil.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:00:23.948Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.jma.go.jp, www.data.jma.go.jp, www.msil.go.jp）",
       "animation": {
         "x": "-30000",
@@ -3937,7 +4791,14 @@
         "www.data.jma.go.jp",
         "www.msil.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:00:29.823Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.jma.go.jp, www.data.jma.go.jp, www.msil.go.jp）",
       "animation": {
         "x": "-30000",
@@ -3971,7 +4832,14 @@
         "www.data.jma.go.jp",
         "www.msil.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:00:35.451Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.jma.go.jp, www.data.jma.go.jp, www.msil.go.jp）",
       "animation": {
         "x": "-30000",
@@ -4004,7 +4872,14 @@
         "www.jma.go.jp",
         "cdn.jsdelivr.net"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:00:41.861Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（www.itsonlyamodel.us, www.jma.go.jp, cdn.jsdelivr.net）",
       "animation": {
         "x": "-30000",
@@ -4034,7 +4909,14 @@
         "www.jma.go.jp",
         "www.data.jma.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:00:47.157Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, unpkg.com, www.jma.go.jp, www.data.jma.go.jp）",
       "animation": {
         "x": "-30000",
@@ -4066,7 +4948,14 @@
         "cdn.jsdelivr.net",
         "www.jma.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:00:51.408Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.jma.go.jp）",
       "animation": {
         "x": "-30000",
@@ -4094,7 +4983,14 @@
         "cdn.jsdelivr.net",
         "www.jma.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:00:58.264Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.jma.go.jp）",
       "animation": {
         "x": "-30000",
@@ -4124,7 +5020,14 @@
         "www.data.jma.go.jp",
         "www.msil.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:01:03.296Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.jma.go.jp, www.data.jma.go.jp, www.msil.go.jp）",
       "animation": {
         "x": "-30000",
@@ -4158,7 +5061,14 @@
         "www.data.jma.go.jp",
         "www.msil.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:01:08.476Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.jma.go.jp, www.data.jma.go.jp, www.msil.go.jp）",
       "animation": {
         "x": "-30000",
@@ -4190,7 +5100,14 @@
         "cdn.jsdelivr.net",
         "www.jma.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:01:14.296Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.jma.go.jp）",
       "animation": {
         "x": "-30000",
@@ -4218,7 +5135,14 @@
         "cdn.jsdelivr.net",
         "www.river.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "not-rendered",
+        "testedAt": "2026-08-19T09:01:21.946Z",
+        "stagesPassed": 6,
+        "stagesTotal": 8,
+        "stageMask": 63
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.river.go.jp）",
       "animation": {
         "x": "-30000",
@@ -4247,7 +5171,14 @@
         "cdn.jsdelivr.net",
         "www.river.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:01:34.013Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.river.go.jp）",
       "animation": {
         "x": "-30000",
@@ -4276,7 +5207,14 @@
         "cdn.jsdelivr.net",
         "www.river.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:01:40.196Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.river.go.jp）",
       "animation": {
         "x": "-30000",
@@ -4305,7 +5243,14 @@
         "cdn.jsdelivr.net",
         "www.river.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:01:47.987Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.river.go.jp）",
       "animation": {
         "x": "-30000",
@@ -4334,7 +5279,14 @@
         "cdn.jsdelivr.net",
         "www.river.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:01:53.786Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.river.go.jp）",
       "animation": {
         "x": "-30000",
@@ -4362,7 +5314,14 @@
         "cdn.jsdelivr.net",
         "www.river.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:02:01.715Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.river.go.jp）",
       "animation": {
         "x": "-30000",
@@ -4391,7 +5350,14 @@
         "cdn.jsdelivr.net",
         "www.jice.or.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:02:09.201Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.jice.or.jp）",
       "animation": {
         "x": "-30000",
@@ -4424,7 +5390,14 @@
         "cdn.jsdelivr.net",
         "www.jice.or.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:02:15.048Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.jice.or.jp）",
       "animation": {
         "x": "-30000",
@@ -4457,7 +5430,14 @@
         "cdn.jsdelivr.net",
         "www.river.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:02:23.635Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.river.go.jp）",
       "animation": {
         "x": "-30000",
@@ -4487,7 +5467,14 @@
         "cdn.sheetjs.com",
         "www.npa.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:02:30.060Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, cdn.sheetjs.com, www.npa.go.jp）",
       "animation": {
         "x": "-30000",
@@ -4515,7 +5502,14 @@
         "cdn.jsdelivr.net",
         "www.mhlw.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:02:39.067Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, www.mhlw.go.jp）",
       "animation": {
         "x": "-30000",
@@ -4545,7 +5539,14 @@
         "hinanmap.gsi.go.jp",
         "www.gsi.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:02:43.545Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, hinanmap.gsi.go.jp, www.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -4575,7 +5576,14 @@
         "hinanmap.gsi.go.jp",
         "www.gsi.go.jp"
       ],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:02:51.943Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "外部配信元と通信するレイヤー（cdn.jsdelivr.net, hinanmap.gsi.go.jp, www.gsi.go.jp）",
       "animation": {
         "x": "-30000",
@@ -4601,7 +5609,14 @@
       "offline": true,
       "controller": true,
       "externalDependencies": [],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:02:59.567Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "同一オリジンの資産だけで構成されるレイヤー",
       "animation": {
         "x": "-30000",
@@ -4626,7 +5641,14 @@
       "offline": true,
       "controller": true,
       "externalDependencies": [],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:03:05.119Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "同一オリジンの資産だけで構成されるレイヤー",
       "animation": {
         "x": "-30000",
@@ -4651,7 +5673,14 @@
       "offline": true,
       "controller": true,
       "externalDependencies": [],
-      "verifiedAt": null,
+      "verifiedAt": "2026-08-19",
+      "browserAudit": {
+        "outcome": "passed",
+        "testedAt": "2026-08-19T09:03:12.949Z",
+        "stagesPassed": 8,
+        "stagesTotal": 8,
+        "stageMask": 255
+      },
       "note": "同一オリジンの資産だけで構成されるレイヤー",
       "animation": {
         "x": "-30000",
