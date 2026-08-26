@@ -239,7 +239,7 @@ export const importBundledCommunityLayer = (entry, {
     ? new URLSearchParams(configuredHref.split('#')[1] || '')
     : null;
   for (const field of configurationFields) {
-    const raw = String(configuration[field.name] || '').trim();
+    const raw = String(configuration[field.name] || field.defaultValue || '').trim();
     if (!raw && field.required) throw new Error(`${field.label}を入力してください`);
     if (!raw) continue;
     let endpoint;

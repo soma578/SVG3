@@ -2070,7 +2070,23 @@ export const GENERATED_SVGMAP_APP_LAYER_CAPABILITIES = Object.freeze([
     "targetHostnames": [
       "www.msil.go.jp"
     ],
-    "requests": []
+    "requests": [
+      {
+        "hostname": "www.msil.go.jp",
+        "pathnamePrefix": "/msilwebtoken/api/token/new",
+        "methods": [
+          "POST"
+        ],
+        "maxBytes": 1048576,
+        "contentTypes": [
+          "application/json",
+          "text/plain"
+        ],
+        "maxRedirects": 0,
+        "timeoutMs": 12000,
+        "reason": "本家controllerが海しる画像取得用の短期tokenを固定APIへPOSTする"
+      }
+    ]
   },
   {
     "sourceIndex": 46,
@@ -2078,7 +2094,23 @@ export const GENERATED_SVGMAP_APP_LAYER_CAPABILITIES = Object.freeze([
     "targetHostnames": [
       "www.msil.go.jp"
     ],
-    "requests": []
+    "requests": [
+      {
+        "hostname": "www.msil.go.jp",
+        "pathnamePrefix": "/msilwebtoken/api/token/new",
+        "methods": [
+          "POST"
+        ],
+        "maxBytes": 1048576,
+        "contentTypes": [
+          "application/json",
+          "text/plain"
+        ],
+        "maxRedirects": 0,
+        "timeoutMs": 12000,
+        "reason": "本家controllerが海しる画像取得用の短期tokenを固定APIへPOSTする"
+      }
+    ]
   },
   {
     "sourceIndex": 47,
@@ -2086,7 +2118,23 @@ export const GENERATED_SVGMAP_APP_LAYER_CAPABILITIES = Object.freeze([
     "targetHostnames": [
       "www.msil.go.jp"
     ],
-    "requests": []
+    "requests": [
+      {
+        "hostname": "www.msil.go.jp",
+        "pathnamePrefix": "/msilwebtoken/api/token/new",
+        "methods": [
+          "POST"
+        ],
+        "maxBytes": 1048576,
+        "contentTypes": [
+          "application/json",
+          "text/plain"
+        ],
+        "maxRedirects": 0,
+        "timeoutMs": 12000,
+        "reason": "本家controllerが海しる画像取得用の短期tokenを固定APIへPOSTする"
+      }
+    ]
   },
   {
     "sourceIndex": 48,

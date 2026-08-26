@@ -20,6 +20,17 @@ const animations = [...container.replace(/<!--[\s\S]*?-->/g, '').matchAll(/<anim
 assert.equal(catalog.schemaVersion, 2)
 assert.equal(catalog.entries.length, animations.length, 'compatibility catalog must cover every upstream animation')
 assert.equal(audit.entries.length, catalog.entries.filter((entry) => entry.available).length)
+const retiredEntries = catalog.entries.filter((entry) => entry.sourceRetired)
+assert.equal(catalog.counts.sourceRetired, retiredEntries.length)
+assert.deepEqual(
+  catalog.retiredSources,
+  retiredEntries.map((entry) => ({
+    sourceIndex: entry.sourceIndex,
+    title: entry.title,
+    reason: entry.renderIssue,
+  })),
+  'retired source summary must be generated from the catalog entries',
+)
 const allowedAuditOutcomes = new Set([
   'passed',
   'failed',
@@ -118,6 +129,9 @@ for (const [index, entry] of catalog.entries.entries()) {
     for (const field of entry.configuration.fields) {
       assert.ok(field.name && field.label)
       assert.deepEqual(field.protocols, ['https:'])
+      if (field.defaultValue) {
+        assert.equal(new URL(field.defaultValue).protocol, 'https:')
+      }
     }
   }
   if (entry.placement) {
@@ -142,7 +156,7 @@ for (const [title, profile] of Object.entries(networkOverrides.layers || {})) {
   for (const request of profile.requests) {
     assert.match(request.hostname, /^[a-z0-9.-]+$/)
     assert.ok(request.pathnamePrefix?.startsWith('/'))
-    assert.ok(request.methods?.every((method) => ['GET', 'HEAD'].includes(method)))
+    assert.ok(request.methods?.every((method) => ['GET', 'HEAD', 'POST'].includes(method)))
     assert.ok(Number.isInteger(request.maxBytes) && request.maxBytes > 0)
     assert.ok(request.contentTypes?.length > 0)
     assert.ok(Number.isInteger(request.maxRedirects) && request.maxRedirects >= 0 && request.maxRedirects <= 5)
@@ -187,6 +201,7 @@ assert.deepEqual(catalog.counts, {
   unavailable: catalog.entries.filter((entry) => !entry.available).length,
   externalNetwork: catalog.entries.filter((entry) => entry.externalDependencies.length > 0).length,
   selfContained: catalog.entries.filter((entry) => entry.offline).length,
+  sourceRetired: catalog.entries.filter((entry) => entry.sourceRetired).length,
 })
 assert.deepEqual(catalog.adapterCounts, {
   none: catalog.entries.filter((entry) => !entry.adapterHref).length,

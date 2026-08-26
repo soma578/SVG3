@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-19T09:03:20.728Z",
+  "generatedAt": "2026-08-26T05:26:27.287Z",
   "environment": "production-like Playwright Chromium",
   "stages": [
     "svgLoad",
@@ -13,24 +13,24 @@
     "renderedResult"
   ],
   "summary": {
-    "svgLoad": 146,
-    "documentRegistration": 146,
-    "controllerStart": 146,
+    "svgLoad": 147,
+    "documentRegistration": 147,
+    "controllerStart": 147,
     "dependentAssetLoad": 147,
-    "networkRequest": 145,
-    "networkResponse": 141,
-    "svgElementGeneration": 143,
-    "renderedResult": 143
+    "networkRequest": 144,
+    "networkResponse": 140,
+    "svgElementGeneration": 144,
+    "renderedResult": 144
   },
   "outcomes": {
-    "passed": 135,
+    "passed": 132,
     "failed": 0,
-    "requires-config": 1,
-    "source-retired": 2,
-    "interaction-required": 1,
+    "requires-config": 0,
+    "source-retired": 8,
+    "interaction-required": 2,
     "not-rendered": 2,
     "rendered-without-network": 2,
-    "rendered-with-network-error": 4
+    "rendered-with-network-error": 1
   },
   "entries": [
     {
@@ -198,11 +198,11 @@
     {
       "sourceIndex": 19,
       "title": "経路検索(graphhopper)",
-      "outcome": "requires-config",
-      "testedAt": "2026-08-19T08:48:50.743Z",
-      "stagesPassed": 3,
+      "outcome": "interaction-required",
+      "testedAt": "2026-08-26T05:26:03.778Z",
+      "stagesPassed": 6,
       "stagesTotal": 8,
-      "stageMask": 56
+      "stageMask": 207
     },
     {
       "sourceIndex": 20,
@@ -405,7 +405,7 @@
     {
       "sourceIndex": 42,
       "title": "海底ケーブル(海しる)",
-      "outcome": "passed",
+      "outcome": "source-retired",
       "testedAt": "2026-08-19T08:51:21.730Z",
       "stagesPassed": 8,
       "stagesTotal": 8,
@@ -414,7 +414,7 @@
     {
       "sourceIndex": 43,
       "title": "漁港(海しる)",
-      "outcome": "passed",
+      "outcome": "source-retired",
       "testedAt": "2026-08-19T08:51:35.193Z",
       "stagesPassed": 8,
       "stagesTotal": 8,
@@ -423,7 +423,7 @@
     {
       "sourceIndex": 44,
       "title": "等深線(海しる)",
-      "outcome": "passed",
+      "outcome": "source-retired",
       "testedAt": "2026-08-19T08:51:50.453Z",
       "stagesPassed": 8,
       "stagesTotal": 8,
@@ -432,8 +432,8 @@
     {
       "sourceIndex": 45,
       "title": "天気図４８時間予想(海しる)",
-      "outcome": "rendered-with-network-error",
-      "testedAt": "2026-08-19T08:52:02.856Z",
+      "outcome": "source-retired",
+      "testedAt": "2026-08-26T05:26:12.430Z",
       "stagesPassed": 7,
       "stagesTotal": 8,
       "stageMask": 223
@@ -441,8 +441,8 @@
     {
       "sourceIndex": 46,
       "title": "天気図２４時間予想(海しる)",
-      "outcome": "rendered-with-network-error",
-      "testedAt": "2026-08-19T08:52:09.474Z",
+      "outcome": "source-retired",
+      "testedAt": "2026-08-26T05:26:17.019Z",
       "stagesPassed": 7,
       "stagesTotal": 8,
       "stageMask": 223
@@ -450,8 +450,8 @@
     {
       "sourceIndex": 47,
       "title": "天気図現況(海しる)",
-      "outcome": "rendered-with-network-error",
-      "testedAt": "2026-08-19T08:52:15.736Z",
+      "outcome": "source-retired",
+      "testedAt": "2026-08-26T05:26:21.322Z",
       "stagesPassed": 7,
       "stagesTotal": 8,
       "stageMask": 223

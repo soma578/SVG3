@@ -161,7 +161,10 @@ try {
     const requests = []
     const responses = []
     const requestFailures = []
-    context.on('request', (request) => requests.push(request.url()))
+    context.on('request', (request) => requests.push({
+      url: request.url(),
+      method: request.method(),
+    }))
     context.on('response', (response) => responses.push({ url: response.url(), status: response.status() }))
     context.on('requestfailed', (request) => requestFailures.push({
       url: request.url(),
@@ -239,7 +242,7 @@ try {
       const sourceResponse = responses.find((response) => response.url.split('#')[0] === sourceUrl)
       // 背景地図や別の標準レイヤーの通信を混ぜず、静的解析で当該レイヤーに
       // 帰属したhost（proxyの場合はurl=の転送先）だけを段階判定へ使う。
-      const relevantExternalRequests = requests.filter((url) => isEntryNetworkRequest(url, entry))
+      const relevantExternalRequests = requests.filter(({ url }) => isEntryNetworkRequest(url, entry))
       const relevantExternalResponses = responses.filter((response) => (
         isEntryNetworkRequest(response.url, entry)
       ))
@@ -247,6 +250,7 @@ try {
         response.status >= 200 && response.status < 400
       ))
       const failedExternalResponses = relevantExternalResponses.filter((response) => response.status >= 400)
+      const failedExternalRequests = requestFailures.filter(({ url }) => isEntryNetworkRequest(url, entry))
       const localDependencyFailures = requestFailures.filter(({ url }) => {
         const parsed = new URL(url)
         const laterSucceeded = responses.some((response) => (
@@ -279,6 +283,13 @@ try {
         failedExternalResponses: failedExternalResponses.length,
         localDependencyFailures: localDependencyFailures.length,
         visibility: runtime?.visibility || null,
+      }
+      if (failedExternalResponses.length > 0 || failedExternalRequests.length > 0) {
+        result.networkDiagnostics = {
+          requests: relevantExternalRequests.slice(0, 25),
+          failedResponses: failedExternalResponses.slice(0, 25),
+          requestFailures: failedExternalRequests.slice(0, 25),
+        }
       }
       if (runtime?.controllerText?.includes('初期化中')) {
         result.failure = { stage: 'controllerStart', reason: 'controller remained initializing' }

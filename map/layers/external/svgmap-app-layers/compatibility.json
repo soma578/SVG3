@@ -14,9 +14,52 @@
     "total": 148,
     "available": 147,
     "unavailable": 1,
-    "externalNetwork": 142,
-    "selfContained": 4
+    "externalNetwork": 143,
+    "selfContained": 4,
+    "sourceRetired": 8
   },
+  "retiredSources": [
+    {
+      "sourceIndex": 42,
+      "title": "海底ケーブル(海しる)",
+      "reason": "旧token APIが海しる新ポータルへ転送され、controllerが必要なtoken JSONを返さない"
+    },
+    {
+      "sourceIndex": 43,
+      "title": "漁港(海しる)",
+      "reason": "旧token APIが海しる新ポータルへ転送され、controllerが必要なtoken JSONを返さない"
+    },
+    {
+      "sourceIndex": 44,
+      "title": "等深線(海しる)",
+      "reason": "旧token APIが海しる新ポータルへ転送され、controllerが必要なtoken JSONを返さない"
+    },
+    {
+      "sourceIndex": 45,
+      "title": "天気図４８時間予想(海しる)",
+      "reason": "旧token APIが海しる新ポータルへ転送され、controllerが必要なtoken JSONを返さない"
+    },
+    {
+      "sourceIndex": 46,
+      "title": "天気図２４時間予想(海しる)",
+      "reason": "旧token APIが海しる新ポータルへ転送され、controllerが必要なtoken JSONを返さない"
+    },
+    {
+      "sourceIndex": 47,
+      "title": "天気図現況(海しる)",
+      "reason": "旧token APIが海しる新ポータルへ転送され、controllerが必要なtoken JSONを返さない"
+    },
+    {
+      "sourceIndex": 52,
+      "title": "防災科研　南海トラフ広域地震防災研究PF",
+      "reason": "旧WMSエンドポイントが配信終了（404）"
+    },
+    {
+      "sourceIndex": 99,
+      "title": "GPV降雨情報(MSM)",
+      "reason": "2011年東日本大震災向けアーカイブ。現在時刻を要求するとblank.pngへ転送される"
+    }
+  ],
   "entries": [
     {
       "sourceIndex": 1,
@@ -695,19 +738,21 @@
       "available": true,
       "runtime": "tight",
       "runtimeReason": "固定スナップショットとして同梱したSVGMap App Layersの本家実行契約",
-      "delivery": "configuration-required",
+      "delivery": "online-only",
       "offline": false,
       "controller": true,
-      "externalDependencies": [],
-      "verifiedAt": "2026-08-19",
+      "externalDependencies": [
+        "service.svgmap.org"
+      ],
+      "verifiedAt": "2026-08-26",
       "browserAudit": {
-        "outcome": "requires-config",
-        "testedAt": "2026-08-19T08:48:50.743Z",
-        "stagesPassed": 3,
+        "outcome": "interaction-required",
+        "testedAt": "2026-08-26T05:26:03.778Z",
+        "stagesPassed": 6,
         "stagesTotal": 8,
-        "stageMask": 56
+        "stageMask": 207
       },
-      "note": "本家と同様にGraphHopper APIエンドポイントの設定が必要",
+      "note": "本家SVGMap Demoと同じGraphHopper endpointを既定値とし、始点・終点を指定すると経路を生成（endpointは差し替え可能）",
       "animation": {
         "x": "-30000",
         "y": "-30000",
@@ -729,10 +774,12 @@
             "protocols": [
               "https:"
             ],
-            "placeholder": "https://graphhopper.example/api/1/route"
+            "defaultValue": "https://service.svgmap.org/graphhopper/route",
+            "placeholder": "https://service.svgmap.org/graphhopper/route"
           }
         ]
-      }
+      },
+      "interactionRequired": true
     },
     {
       "sourceIndex": 20,
@@ -1557,12 +1604,14 @@
       ],
       "verifiedAt": "2026-08-19",
       "browserAudit": {
-        "outcome": "passed",
+        "outcome": "source-retired",
         "testedAt": "2026-08-19T08:51:21.730Z",
         "stagesPassed": 8,
         "stagesTotal": 8,
         "stageMask": 255
       },
+      "renderIssue": "旧token APIが海しる新ポータルへ転送され、controllerが必要なtoken JSONを返さない",
+      "sourceRetired": true,
       "note": "外部配信元と通信するレイヤー（www.msil.go.jp, cdn.jsdelivr.net）",
       "animation": {
         "x": "-30000",
@@ -1597,12 +1646,14 @@
       ],
       "verifiedAt": "2026-08-19",
       "browserAudit": {
-        "outcome": "passed",
+        "outcome": "source-retired",
         "testedAt": "2026-08-19T08:51:35.193Z",
         "stagesPassed": 8,
         "stagesTotal": 8,
         "stageMask": 255
       },
+      "renderIssue": "旧token APIが海しる新ポータルへ転送され、controllerが必要なtoken JSONを返さない",
+      "sourceRetired": true,
       "note": "外部配信元と通信するレイヤー（www.msil.go.jp, cdn.jsdelivr.net）",
       "animation": {
         "x": "-30000",
@@ -1637,12 +1688,14 @@
       ],
       "verifiedAt": "2026-08-19",
       "browserAudit": {
-        "outcome": "passed",
+        "outcome": "source-retired",
         "testedAt": "2026-08-19T08:51:50.453Z",
         "stagesPassed": 8,
         "stagesTotal": 8,
         "stageMask": 255
       },
+      "renderIssue": "旧token APIが海しる新ポータルへ転送され、controllerが必要なtoken JSONを返さない",
+      "sourceRetired": true,
       "note": "外部配信元と通信するレイヤー（www.msil.go.jp, cdn.jsdelivr.net）",
       "animation": {
         "x": "-30000",
@@ -1674,14 +1727,16 @@
       "externalDependencies": [
         "www.msil.go.jp"
       ],
-      "verifiedAt": "2026-08-19",
+      "verifiedAt": "2026-08-26",
       "browserAudit": {
-        "outcome": "rendered-with-network-error",
-        "testedAt": "2026-08-19T08:52:02.856Z",
+        "outcome": "source-retired",
+        "testedAt": "2026-08-26T05:26:12.430Z",
         "stagesPassed": 7,
         "stagesTotal": 8,
         "stageMask": 223
       },
+      "renderIssue": "旧token APIが海しる新ポータルへ転送され、controllerが必要なtoken JSONを返さない",
+      "sourceRetired": true,
       "note": "外部配信元と通信するレイヤー（www.msil.go.jp）",
       "animation": {
         "x": "-30000",
@@ -1713,14 +1768,16 @@
       "externalDependencies": [
         "www.msil.go.jp"
       ],
-      "verifiedAt": "2026-08-19",
+      "verifiedAt": "2026-08-26",
       "browserAudit": {
-        "outcome": "rendered-with-network-error",
-        "testedAt": "2026-08-19T08:52:09.474Z",
+        "outcome": "source-retired",
+        "testedAt": "2026-08-26T05:26:17.019Z",
         "stagesPassed": 7,
         "stagesTotal": 8,
         "stageMask": 223
       },
+      "renderIssue": "旧token APIが海しる新ポータルへ転送され、controllerが必要なtoken JSONを返さない",
+      "sourceRetired": true,
       "note": "外部配信元と通信するレイヤー（www.msil.go.jp）",
       "animation": {
         "x": "-30000",
@@ -1752,14 +1809,16 @@
       "externalDependencies": [
         "www.msil.go.jp"
       ],
-      "verifiedAt": "2026-08-19",
+      "verifiedAt": "2026-08-26",
       "browserAudit": {
-        "outcome": "rendered-with-network-error",
-        "testedAt": "2026-08-19T08:52:15.736Z",
+        "outcome": "source-retired",
+        "testedAt": "2026-08-26T05:26:21.322Z",
         "stagesPassed": 7,
         "stagesTotal": 8,
         "stageMask": 223
       },
+      "renderIssue": "旧token APIが海しる新ポータルへ転送され、controllerが必要なtoken JSONを返さない",
+      "sourceRetired": true,
       "note": "外部配信元と通信するレイヤー（www.msil.go.jp）",
       "animation": {
         "x": "-30000",

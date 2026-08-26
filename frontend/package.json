@@ -36,6 +36,7 @@
     "community-layers:check": "node scripts/check-svgmap-community-compatibility.mjs && node scripts/generate-svgmap-network-policy.mjs --check && node scripts/generate-svgmap-compatibility-contract.mjs --check",
     "community-layers:catalog": "node scripts/generate-svgmap-community-compatibility.mjs && node scripts/generate-svgmap-network-policy.mjs && node scripts/generate-svgmap-compatibility-contract.mjs",
     "community-layers:audit": "node scripts/audit-svgmap-community-layers.mjs",
+    "community-layers:audit:ab": "node scripts/audit-svgmap-upstream-ab.mjs",
     "community-layers:audit:promote": "node scripts/promote-svgmap-community-audit.mjs",
     "native-poi:check": "node scripts/check-native-poi-refresh.mjs",
     "native-data:check": "node scripts/check-native-data-budget.mjs",

@@ -153,6 +153,28 @@ assert.equal(
   'https://portal.example/map/layers/external/svgmap-app-layers/adapters/usgs-earthquakes-all-week.svg',
 )
 
+const configuredByDefault = importBundledCommunityLayer({
+  sourceIndex: 33,
+  title: '経路検索(graphhopper)',
+  animation: {
+    title: '経路検索(graphhopper)',
+    'xlink:href': './geoProcessingLayers/routing/routingD.svg#graphhopperurl={SET YOUR GRAPHHOPPER API ENDPOINT URL}',
+  },
+  configuration: {
+    fields: [{
+      name: 'graphhopperurl',
+      label: 'GraphHopper APIエンドポイント',
+      required: true,
+      protocols: ['https:'],
+      defaultValue: 'https://service.svgmap.org/graphhopper/route',
+    }],
+  },
+})
+assert.equal(
+  new URL(configuredByDefault.attrs['xlink:href']).hash,
+  '#graphhopperurl=https%3A%2F%2Fservice.svgmap.org%2Fgraphhopper%2Froute',
+)
+
 const stored = new Map([['svg3.nativeImportedLayers.v1', JSON.stringify([{
   ...legacyCsv,
   id: 'layer-imported-usgs-all-week',

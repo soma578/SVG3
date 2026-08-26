@@ -11,3 +11,7 @@ export async function GET(request: Request) {
 export async function HEAD(request: Request) {
   return fetchCommunityProxy(request.url, 'HEAD')
 }
+
+export async function POST(request: Request) {
+  return fetchCommunityProxy(request.url, 'POST')
+}

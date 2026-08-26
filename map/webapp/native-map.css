@@ -964,6 +964,30 @@ button.layer-health:focus-visible {
   color: #657277;
   font-size: 13px;
 }
+.community-retired {
+  margin: 0 12px 10px;
+  border: 1px solid #dfc9b7;
+  border-radius: 6px;
+  background: #fffaf5;
+}
+.community-retired > summary {
+  padding: 8px 10px;
+  color: #7a4d26;
+  font-size: 13px;
+}
+.community-retired > p {
+  margin: 0;
+  padding: 0 10px 8px;
+  color: #6f6258;
+  font-size: 12px;
+}
+.community-retired ul {
+  max-height: 220px;
+  border-top-color: #ead9ca;
+}
+.community-retired li { padding: 7px 10px; border-bottom-color: #f0e3d8; }
+.community-retired li strong { color: #5f4128; }
+.community-retired li p { margin: 2px 0 0; color: #75675d; font-size: 12px; }
 .community-catalog-tools {
   display: grid;
   gap: 5px;

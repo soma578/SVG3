@@ -86,6 +86,32 @@ test('community proxy accepts the endpoints its own layers declare', () => {
   )
 })
 
+test('community proxy permits POST only for the fixed MSIL token endpoint', async () => {
+  assert.equal(
+    matchCommunityProxyCapability(
+      'https://www.msil.go.jp/msilwebtoken/api/token/new',
+      'POST',
+    )?.request.pathnamePrefix,
+    '/msilwebtoken/api/token/new',
+  )
+  assert.equal(
+    matchCommunityProxyCapability('https://www.msil.go.jp/msilwebtoken/api/other', 'POST'),
+    null,
+  )
+  let observedMethod = ''
+  const response = await fetchCommunityProxy(
+    'https://host/api/svgmap-proxy?url=https%3A%2F%2Fwww.msil.go.jp%2Fmsilwebtoken%2Fapi%2Ftoken%2Fnew',
+    'POST',
+    async (_target, options) => {
+      observedMethod = options.method
+      return Response.json({ token: 'test-token' })
+    },
+    publicDns,
+  )
+  assert.equal(response.status, 200)
+  assert.equal(observedMethod, 'POST')
+})
+
 test('community proxy rejects open-proxy and SSRF-shaped targets', () => {
   for (const value of [
     'http://starlinkinsider.com/starlink-gateway-locations/',

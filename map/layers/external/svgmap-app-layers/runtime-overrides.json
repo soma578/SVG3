@@ -145,6 +145,12 @@
   },
   "retiredSources": {
     "防災科研　南海トラフ広域地震防災研究PF": "旧WMSエンドポイントが配信終了（404）",
-    "GPV降雨情報(MSM)": "2011年東日本大震災向けアーカイブ。現在時刻を要求するとblank.pngへ転送される"
+    "GPV降雨情報(MSM)": "2011年東日本大震災向けアーカイブ。現在時刻を要求するとblank.pngへ転送される",
+    "海底ケーブル(海しる)": "旧token APIが海しる新ポータルへ転送され、controllerが必要なtoken JSONを返さない",
+    "漁港(海しる)": "旧token APIが海しる新ポータルへ転送され、controllerが必要なtoken JSONを返さない",
+    "等深線(海しる)": "旧token APIが海しる新ポータルへ転送され、controllerが必要なtoken JSONを返さない",
+    "天気図４８時間予想(海しる)": "旧token APIが海しる新ポータルへ転送され、controllerが必要なtoken JSONを返さない",
+    "天気図２４時間予想(海しる)": "旧token APIが海しる新ポータルへ転送され、controllerが必要なtoken JSONを返さない",
+    "天気図現況(海しる)": "旧token APIが海しる新ポータルへ転送され、controllerが必要なtoken JSONを返さない"
   }
 }

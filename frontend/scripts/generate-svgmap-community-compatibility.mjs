@@ -212,10 +212,11 @@ const overrides = new Map([
     note: '同梱済み旧式controllerをtight実行し、外部WMTSタイルの取得まで動作確認済み',
   }],
   ['経路検索(graphhopper)', {
-    delivery: 'configuration-required',
+    delivery: 'online-only',
     offline: false,
-    externalDependencies: [],
-    note: '本家と同様にGraphHopper APIエンドポイントの設定が必要',
+    interactionRequired: true,
+    externalDependencies: ['service.svgmap.org'],
+    note: '本家SVGMap Demoと同じGraphHopper endpointを既定値とし、始点・終点を指定すると経路を生成（endpointは差し替え可能）',
     configuration: {
       fields: [{
         name: 'graphhopperurl',
@@ -223,7 +224,8 @@ const overrides = new Map([
         type: 'url',
         required: true,
         protocols: ['https:'],
-        placeholder: 'https://graphhopper.example/api/1/route',
+        defaultValue: 'https://service.svgmap.org/graphhopper/route',
+        placeholder: 'https://service.svgmap.org/graphhopper/route',
       }],
     },
   }],
@@ -362,7 +364,15 @@ const counts = {
   unavailable: entries.filter((entry) => !entry.available).length,
   externalNetwork: entries.filter((entry) => entry.externalDependencies.length > 0).length,
   selfContained: entries.filter((entry) => entry.offline).length,
+  sourceRetired: entries.filter((entry) => entry.sourceRetired).length,
 }
+const retiredSources = entries
+  .filter((entry) => entry.sourceRetired)
+  .map((entry) => ({
+    sourceIndex: entry.sourceIndex,
+    title: entry.title,
+    reason: entry.renderIssue,
+  }))
 const output = {
   schemaVersion: 2,
   source: {
@@ -373,6 +383,7 @@ const output = {
   },
   generatedAt: '2026-08-04',
   counts,
+  retiredSources,
   entries,
 }
 

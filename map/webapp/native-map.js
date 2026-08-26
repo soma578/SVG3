@@ -71,6 +71,8 @@ const elements = {
   communityCompatibility: document.getElementById('community-compatibility'),
   communityCompatibilitySummary: document.getElementById('community-compatibility-summary'),
   communityCompatibilityList: document.getElementById('community-compatibility-list'),
+  communityRetiredSummary: document.getElementById('community-retired-summary'),
+  communityRetiredList: document.getElementById('community-retired-list'),
   communityCatalogSearch: document.getElementById('community-catalog-search'),
   communityCatalogStatus: document.getElementById('community-catalog-status'),
   layerPresets: document.getElementById('layer-presets'),
@@ -771,7 +773,9 @@ const renderCommunityCompatibilityList = () => {
   elements.communityCompatibilityList.replaceChildren();
   // 本家Containerの並び順のまま出す。
   for (const entry of [...entries].sort((a, b) => a.sourceIndex - b.sourceIndex)) {
-    const needsConfiguration = Boolean(entry.configuration?.fields?.length);
+    const needsConfiguration = Boolean(entry.configuration?.fields?.some(
+      (field) => field.required && !field.defaultValue,
+    ));
     const row = document.createElement('li');
     row.dataset.available = String(entry.available !== false);
     const heading = document.createElement('span');
@@ -785,6 +789,8 @@ const renderCommunityCompatibilityList = () => {
     // 追加可否と実ブラウザ監査の観測結果を分けて表示する。
     badge.textContent = entry.available === false
       ? '実体なし'
+      : entry.sourceRetired
+        ? '配信元終了'
       : auditOutcome === 'passed'
         ? '完全動作確認済み'
         : auditOutcome === 'requires-config' || needsConfiguration
@@ -846,6 +852,7 @@ const renderCommunityCompatibilityList = () => {
       input.type = field.type || 'text';
       input.required = Boolean(field.required);
       input.placeholder = field.placeholder || '';
+      input.value = field.defaultValue || '';
       input.dataset.communityConfig = field.name;
       input.autocomplete = 'url';
       label.append(caption, input);
@@ -856,8 +863,24 @@ const renderCommunityCompatibilityList = () => {
   elements.communityCatalogStatus.textContent = query ? `${entries.length}件` : '';
 };
 
+const renderCommunityRetiredSources = () => {
+  const retired = state.communityCatalog?.retiredSources || [];
+  elements.communityRetiredSummary.textContent = `${retired.length}件`;
+  elements.communityRetiredList.replaceChildren();
+  for (const entry of retired) {
+    const row = document.createElement('li');
+    const title = document.createElement('strong');
+    title.textContent = entry.title;
+    const reason = document.createElement('p');
+    reason.textContent = entry.reason;
+    row.append(title, reason);
+    elements.communityRetiredList.append(row);
+  }
+};
+
 const renderCommunityCompatibility = async () => {
   if (state.communityCatalog) {
+    renderCommunityRetiredSources();
     renderCommunityCompatibilityList();
     return;
   }
@@ -886,6 +909,7 @@ const renderCommunityCompatibility = async () => {
     const counts = catalog.counts || {};
     elements.communityCompatibilitySummary.textContent =
       `${counts.available ?? catalog.entries?.length ?? 0}/${counts.total ?? catalog.entries?.length ?? 0}件`;
+    renderCommunityRetiredSources();
     renderCommunityCompatibilityList();
   } catch (error) {
     elements.communityCompatibilitySummary.textContent = 'レイヤー一覧を取得できません';

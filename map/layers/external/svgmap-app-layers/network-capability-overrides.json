@@ -22,6 +22,48 @@
           "reason": "本家controllerが国交省の約11.8MB・binary/octet-stream形式GeoJSONを取得する"
         }
       ]
+    },
+    "天気図４８時間予想(海しる)": {
+      "requests": [
+        {
+          "hostname": "www.msil.go.jp",
+          "pathnamePrefix": "/msilwebtoken/api/token/new",
+          "methods": ["POST"],
+          "maxBytes": 1048576,
+          "contentTypes": ["application/json", "text/plain"],
+          "maxRedirects": 0,
+          "timeoutMs": 12000,
+          "reason": "本家controllerが海しる画像取得用の短期tokenを固定APIへPOSTする"
+        }
+      ]
+    },
+    "天気図２４時間予想(海しる)": {
+      "requests": [
+        {
+          "hostname": "www.msil.go.jp",
+          "pathnamePrefix": "/msilwebtoken/api/token/new",
+          "methods": ["POST"],
+          "maxBytes": 1048576,
+          "contentTypes": ["application/json", "text/plain"],
+          "maxRedirects": 0,
+          "timeoutMs": 12000,
+          "reason": "本家controllerが海しる画像取得用の短期tokenを固定APIへPOSTする"
+        }
+      ]
+    },
+    "天気図現況(海しる)": {
+      "requests": [
+        {
+          "hostname": "www.msil.go.jp",
+          "pathnamePrefix": "/msilwebtoken/api/token/new",
+          "methods": ["POST"],
+          "maxBytes": 1048576,
+          "contentTypes": ["application/json", "text/plain"],
+          "maxRedirects": 0,
+          "timeoutMs": 12000,
+          "reason": "本家controllerが海しる画像取得用の短期tokenを固定APIへPOSTする"
+        }
+      ]
     }
   }
 }

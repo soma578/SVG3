@@ -9,6 +9,25 @@
 - `import.config.json`: `supported` / `limited` の許可リスト
 - `adapters/`: URL衝突回避や依存資産の同梱化に必要な薄い変換層
 
+## 配信元側の停止・旧API終了（8件）
+
+これはSVG3側の互換性失敗とは別枠である。対象と理由の正本は
+`runtime-overrides.json` の `retiredSources`、画面表示用一覧はそこから生成する
+`compatibility.json` の `retiredSources` とする。
+
+- 海底ケーブル(海しる)
+- 漁港(海しる)
+- 等深線(海しる)
+- 天気図４８時間予想(海しる)
+- 天気図２４時間予想(海しる)
+- 天気図現況(海しる)
+- 防災科研　南海トラフ広域地震防災研究PF
+- GPV降雨情報(MSM)
+
+海しる6件は2026-08-26に本家SVGMap Demoでも再確認した。旧token APIが新ポータルの
+HTMLへ転送され、上流controllerがJSONとして解析して停止するため、実データは生成されない。
+残る2件も、旧WMSの404および旧アーカイブのblank画像転送という配信元側の停止である。
+
 状態:
 
 - `supported`: 動作確認済み

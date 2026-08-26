@@ -128,8 +128,8 @@ const fetchCommunityProxyResponse = async (
   fetchImpl = fetch,
   lookupImpl = dns.lookup,
 ) => {
-  if (!['GET', 'HEAD'].includes(method)) {
-    return new Response('Method not allowed', { status: 405, headers: { Allow: 'GET, HEAD' } })
+  if (!['GET', 'HEAD', 'POST'].includes(method)) {
+    return new Response('Method not allowed', { status: 405, headers: { Allow: 'GET, HEAD, POST' } })
   }
   const incoming = new URL(requestUrl)
   const rawTarget = incoming.searchParams.get('url')
@@ -228,7 +228,7 @@ const fetchCommunityProxyResponse = async (
 }
 
 // isolated controllerはallow-same-originなしのopaque originで動く。
-// 認証情報を使わない固定許可リスト型GET/HEADだけをCORS公開する。
+// 認証情報を使わず、生成済みcapabilityが許可したmethodだけをCORS公開する。
 export const fetchCommunityProxy = async (
   requestUrl,
   method = 'GET',
