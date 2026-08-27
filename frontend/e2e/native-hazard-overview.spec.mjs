@@ -52,11 +52,12 @@ test('広域は軽量画像、詳細は市区町村SVGへ切り替える', async
       expect.stringContaining('/hazard-overview/national/tsunami.webp'),
     ]))
 
-  // 県域では当該県4画像へ差し替える。
+  // 県域では選択県固定にせず、画面と交差する県だけへ差し替える。
   await setGeoViewPort(frame, 33.9, 133.2, 1, 1.4)
   await expect
-    .poll(async () => (await hazardDocument(frame)).images.every((url) => url.includes('/hazard-overview/33/')))
+    .poll(async () => (await hazardDocument(frame)).images.some((url) => url.includes('/hazard-overview/33/')))
     .toBe(true)
+  expect((await hazardDocument(frame)).images.every((url) => !url.includes('/hazard-overview/national/'))).toBe(true)
 
   // 市区町村まで寄ったら、クリック可能な詳細ベクターへ戻す。
   await setGeoViewPort(frame, 34.62, 133.68, 0.16, 0.24)

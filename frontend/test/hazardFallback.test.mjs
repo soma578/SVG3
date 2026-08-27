@@ -4,6 +4,7 @@ import test from 'node:test'
 import {
   HAZARD_RETRY_MS,
   hazardDisplayPlan,
+  intersectingHazardRegions,
   shouldRetryFailure,
 } from '../../map/layers/portable/hazard/hazardFallback.js'
 
@@ -95,4 +96,17 @@ test('一定時間後は再試行して縮退したままにしない', () => {
   assert.equal(shouldRetryFailure(now - HAZARD_RETRY_MS, now), true)
   assert.equal(shouldRetryFailure(now - 1000, now), false)
   assert.equal(shouldRetryFailure(undefined, now), true)
+})
+
+test('県概略は選択県固定ではなく現在の画面と交差する県を選ぶ', () => {
+  const regions = {
+    '33': { bounds: { x: 13300, y: -3550, width: 150, height: 150 } },
+    '34': { bounds: { x: 13150, y: -3550, width: 170, height: 150 } },
+    '43': { bounds: { x: 12950, y: -3350, width: 170, height: 150 } },
+  }
+  assert.deepEqual(
+    intersectingHazardRegions(regions, { x: 131.9, y: 34.2, width: 2.2, height: 1.0 })
+      .map(({ prefCode }) => prefCode),
+    ['33', '34'],
+  )
 })

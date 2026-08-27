@@ -104,7 +104,7 @@
 <script type="module">
 import { MAP_MESSAGES } from '../representative-pins/mapMessages.js';
 import { fetchWithRuntimeCache } from '../representative-pins/runtimeCache.js';
-import { hazardDisplayPlan, shouldRetryFailure } from './hazardFallback.js';
+import { hazardDisplayPlan, intersectingHazardRegions, shouldRetryFailure } from './hazardFallback.js';
 
 (() => {
   window.hiddenOnLayerLoad = () => {};
@@ -309,53 +309,73 @@ import { hazardDisplayPlan, shouldRetryFailure } from './hazardFallback.js';
     return state.overviewPromise;
   };
 
-  const injectOverview = (entry, version) => {
+  const injectOverviews = (entries, version) => {
     const svg = window.svgImage;
-    if (!svg || !entry?.bounds || !entry?.types) return 0;
+    if (!svg || !Array.isArray(entries)) return 0;
     clearGroups();
     let imageCount = 0;
-    for (const [type, id] of Object.entries(HAZARD_GROUPS)) {
-      const image = entry.types[type];
-      const group = svg.getElementById?.(id);
-      if (!group || !image?.url) continue;
-      const node = svg.createElementNS('http://www.w3.org/2000/svg', 'image');
-      const href = `${image.url}${image.url.includes('?') ? '&' : '?'}v=${encodeURIComponent(String(version || '1').slice(0, 16))}`;
-      node.setAttribute('href', href);
-      node.setAttributeNS('http://www.w3.org/1999/xlink', 'href', href);
-      node.setAttribute('x', entry.bounds.x);
-      node.setAttribute('y', entry.bounds.y);
-      node.setAttribute('width', entry.bounds.width);
-      node.setAttribute('height', entry.bounds.height);
-      node.setAttribute('preserveAspectRatio', 'none');
-      node.setAttribute('pointer-events', 'none');
-      node.setAttribute('data-hazard-overview', type);
-      group.appendChild(node);
-      imageCount += 1;
+    for (const entry of entries) {
+      if (!entry?.bounds || !entry?.types) continue;
+      for (const [type, id] of Object.entries(HAZARD_GROUPS)) {
+        const image = entry.types[type];
+        const group = svg.getElementById?.(id);
+        if (!group || !image?.url) continue;
+        const node = svg.createElementNS('http://www.w3.org/2000/svg', 'image');
+        const href = `${image.url}${image.url.includes('?') ? '&' : '?'}v=${encodeURIComponent(String(version || '1').slice(0, 16))}`;
+        node.setAttribute('href', href);
+        node.setAttributeNS('http://www.w3.org/1999/xlink', 'href', href);
+        node.setAttribute('x', entry.bounds.x);
+        node.setAttribute('y', entry.bounds.y);
+        node.setAttribute('width', entry.bounds.width);
+        node.setAttribute('height', entry.bounds.height);
+        node.setAttribute('preserveAspectRatio', 'none');
+        node.setAttribute('pointer-events', 'none');
+        node.setAttribute('data-hazard-overview', type);
+        group.appendChild(node);
+        imageCount += 1;
+      }
     }
     state.pathCount = 0;
     return imageCount;
   };
 
-  const loadHazardOverview = async (key) => {
-    if (!key || state.loadedKey === key || state.loadingKey === key) return;
-    state.loadingKey = key;
+  const loadHazardOverview = async (requestKey) => {
+    if (!requestKey || state.loadingKey === requestKey) return;
+    state.loadingKey = requestKey;
     try {
       const index = await loadOverviewIndex();
-      if (state.loadingKey !== key) return;
-      const entry = key === 'national' ? index.national : index.regions[state.prefCode];
-      if (!entry) throw new Error(`hazard overview not found: ${key}`);
-      const imageCount = injectOverview(entry, index.sourceHash);
+      if (state.loadingKey !== requestKey) return;
+      let entries;
+      let resolvedKey;
+      if (requestKey === 'national') {
+        entries = [index.national];
+        resolvedKey = 'national';
+      } else {
+        const view = window.svgMap?.getGeoViewBox?.() || {};
+        const matches = intersectingHazardRegions(index.regions, view);
+        const selected = matches.length
+          ? matches
+          : [{ prefCode: state.prefCode, region: index.regions[state.prefCode] }];
+        entries = selected.map(({ region }) => region).filter(Boolean);
+        resolvedKey = `regional:${selected.map(({ prefCode }) => prefCode).join(',')}`;
+      }
+      if (!entries.length) throw new Error(`hazard overview not found: ${requestKey}`);
+      if (state.loadedKey === resolvedKey) {
+        state.loadingKey = '';
+        return;
+      }
+      const imageCount = injectOverviews(entries, index.sourceHash);
       state.loadingKey = '';
-      state.loadedKey = key;
-      if (key.startsWith('pref:')) state.prefLoaded = true;
+      state.loadedKey = resolvedKey;
+      if (resolvedKey.startsWith('regional:')) state.prefLoaded = true;
       applyVisibility();
-      emitHazardState(`loaded key=${key} images=${imageCount}`);
+      emitHazardState(`loaded key=${resolvedKey} images=${imageCount}`);
       scheduleNativeRefresh();
     } catch (error) {
-      if (state.loadingKey === key) state.loadingKey = '';
-      console.warn('[hazardLayer] overview failed', { key, error });
-      state.failedKeys.set(key, Date.now());
-      if (key.startsWith('pref:') && state.prefSvgUrl) {
+      if (state.loadingKey === requestKey) state.loadingKey = '';
+      console.warn('[hazardLayer] overview failed', { key: requestKey, error });
+      state.failedKeys.set(requestKey, Date.now());
+      if (requestKey === 'regional' && state.prefSvgUrl) {
         void loadHazardSvg('pref', state.prefSvgUrl);
       } else {
         clearGroups();
@@ -509,7 +529,7 @@ import { hazardDisplayPlan, shouldRetryFailure } from './hazardFallback.js';
 
     if (plan.mode === 'pref') {
       if (state.overviewIndexUrl && state.prefCode) {
-        void loadHazardOverview(`pref:${state.prefCode}`);
+        void loadHazardOverview('regional');
       } else {
         void loadHazardSvg('pref', state.prefSvgUrl);
       }

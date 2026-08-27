@@ -50,3 +50,28 @@ export const HAZARD_RETRY_MS = 30_000;
 
 export const shouldRetryFailure = (failedAt, now = Date.now()) =>
   !Number.isFinite(failedAt) || now - failedAt >= HAZARD_RETRY_MS;
+
+/**
+ * 現在の地理ビューと交差する都道府県概略を選ぶ。
+ * index の bounds は SVGMap 座標（経度*100、緯度*-100）、view は経緯度。
+ */
+export const intersectingHazardRegions = (regions = {}, view = {}) => {
+  const lon0 = Number(view.x);
+  const lat0 = Number(view.y);
+  const lon1 = lon0 + Number(view.width);
+  const lat1 = lat0 + Number(view.height);
+  if (![lon0, lat0, lon1, lat1].every(Number.isFinite)) return [];
+
+  return Object.entries(regions)
+    .filter(([, region]) => {
+      const bounds = region?.bounds || {};
+      const regionLon0 = Number(bounds.x) / 100;
+      const regionLon1 = (Number(bounds.x) + Number(bounds.width)) / 100;
+      const regionLat1 = -Number(bounds.y) / 100;
+      const regionLat0 = -(Number(bounds.y) + Number(bounds.height)) / 100;
+      if (![regionLon0, regionLon1, regionLat0, regionLat1].every(Number.isFinite)) return false;
+      return regionLon0 <= lon1 && regionLon1 >= lon0 && regionLat0 <= lat1 && regionLat1 >= lat0;
+    })
+    .sort(([left], [right]) => left.localeCompare(right))
+    .map(([prefCode, region]) => ({ prefCode, region }));
+};
