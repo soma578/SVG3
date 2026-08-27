@@ -61,27 +61,27 @@
              title="道路通行情報" class="poi clickable" visibility="hidden" opacity="1"/>
 
   <animation id="layer-hazard" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/4/miyagi.svg&amp;svgUrlTemplate=/map/layers/hazard/4/districts/{code}.svg&amp;layerKey=layer-hazard"
+             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/4/miyagi.svg&amp;svgUrlTemplate=/map/layers/hazard/4/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=04&amp;layerKey=layer-hazard"
              title="L4 ハザード" class="vectorEtcData" visibility="visible" opacity="0.7"/>
 
   <!-- 周辺地域mount: 山形県のハザード -->
   <animation id="layer-hazard--near-yamagata" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/6/yamagata.svg&amp;svgUrlTemplate=/map/layers/hazard/6/districts/{code}.svg&amp;layerKey=layer-hazard--near-yamagata"
+             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/6/yamagata.svg&amp;svgUrlTemplate=/map/layers/hazard/6/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=06&amp;layerKey=layer-hazard--near-yamagata"
              title="山形県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
 
   <!-- 周辺地域mount: 岩手県のハザード -->
   <animation id="layer-hazard--near-iwate" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/3/iwate.svg&amp;svgUrlTemplate=/map/layers/hazard/3/districts/{code}.svg&amp;layerKey=layer-hazard--near-iwate"
+             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/3/iwate.svg&amp;svgUrlTemplate=/map/layers/hazard/3/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=03&amp;layerKey=layer-hazard--near-iwate"
              title="岩手県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
 
   <!-- 周辺地域mount: 福島県のハザード -->
   <animation id="layer-hazard--near-fukushima" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/7/fukushima.svg&amp;svgUrlTemplate=/map/layers/hazard/7/districts/{code}.svg&amp;layerKey=layer-hazard--near-fukushima"
+             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/7/fukushima.svg&amp;svgUrlTemplate=/map/layers/hazard/7/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=07&amp;layerKey=layer-hazard--near-fukushima"
              title="福島県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
 
   <!-- 周辺地域mount: 秋田県のハザード -->
   <animation id="layer-hazard--near-akita" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/5/akita.svg&amp;svgUrlTemplate=/map/layers/hazard/5/districts/{code}.svg&amp;layerKey=layer-hazard--near-akita"
+             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/5/akita.svg&amp;svgUrlTemplate=/map/layers/hazard/5/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=05&amp;layerKey=layer-hazard--near-akita"
              title="秋田県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
 
   <animation id="layer-current-location" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"

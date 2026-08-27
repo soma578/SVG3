@@ -15,7 +15,7 @@ const VALID_LAWA_MODES = new Set(['tight', 'isolated'])
 const RUNTIME_PACKAGE_TYPE = 'svgmap-runtime-package'
 const VALID_DATA_PARAMS = new Set([
   'data', 'layer', 'summary', 'statusOverlay', 'profile', 'municipalityCodes', 'districtSvgUrlTemplate',
-  'prefSvgUrl', 'svgUrlTemplate', 'layerKey', 'sourceCsv',
+  'prefSvgUrl', 'svgUrlTemplate', 'overviewIndexUrl', 'prefCode', 'layerKey', 'sourceCsv',
 ])
 const UNSAFE_READY_FALLBACK = /document\.readyState\s*===\s*['"]complete['"][\s\S]{0,240}(?:queueMicrotask|addEventListener\(['"]load['"])/
 

@@ -112,12 +112,16 @@ import { hazardDisplayPlan, shouldRetryFailure } from './hazardFallback.js';
   // hash params:
   //   prefSvgUrl=/map/layers/hazard/{prefCode}/{regionId}.svg
   //   svgUrlTemplate=/map/layers/hazard/{prefCode}/districts/{code}.svg
+  //   overviewIndexUrl=/map/layers/hazard-overview/index.json
+  //   prefCode=33
   const parseHashParams = () => {
     const raw = String(window.svgImageProps?.hash || window.svgImageProps?.Path?.split('#')?.[1] || '');
     const params = new URLSearchParams(raw.replace(/^#/, ''));
     return {
       prefSvgUrl: params.get('prefSvgUrl') || '',
       svgUrlTemplate: params.get('svgUrlTemplate') || '',
+      overviewIndexUrl: params.get('overviewIndexUrl') || '',
+      prefCode: params.get('prefCode') || '',
       layerKey: params.get('layerKey') || 'layer-hazard',
     };
   };
@@ -127,6 +131,10 @@ import { hazardDisplayPlan, shouldRetryFailure } from './hazardFallback.js';
   const state = {
     prefSvgUrl: '',
     svgUrlTemplate: '',
+    overviewIndexUrl: '',
+    prefCode: '',
+    overviewIndex: null,
+    overviewPromise: null,
     layerKey: 'layer-hazard',
     currentCode: '',
     visible: true,
@@ -142,7 +150,7 @@ import { hazardDisplayPlan, shouldRetryFailure } from './hazardFallback.js';
   };
   let lastStatusSignature = '';
 
-  const MIN_VISIBLE_ZOOM = 10;
+  const PREF_OVERVIEW_ZOOM = 10;
   const MUNICIPALITY_ZOOM = 12;
 
   // ----------------------------------------------------------------
@@ -202,6 +210,8 @@ import { hazardDisplayPlan, shouldRetryFailure } from './hazardFallback.js';
         ? '市区町村'
         : state.mode === 'pref'
           ? '広域'
+          : state.mode === 'national'
+            ? '全国概略'
           : '縮尺外';
     }
     // 縮退中であることを黙って隠さない。粗い版を詳細版と誤認させないため。
@@ -276,6 +286,82 @@ import { hazardDisplayPlan, shouldRetryFailure } from './hazardFallback.js';
       const g = svg.getElementById?.(id);
       if (!g) continue;
       while (g.firstChild) g.removeChild(g.firstChild);
+    }
+  };
+
+  const primaryHazardLayer = () => state.layerKey === 'layer-hazard';
+
+  const loadOverviewIndex = async () => {
+    if (state.overviewIndex) return state.overviewIndex;
+    if (state.overviewPromise) return state.overviewPromise;
+    if (!state.overviewIndexUrl) throw new Error('overview index is not configured');
+    state.overviewPromise = fetch(state.overviewIndexUrl, { cache: 'default' })
+      .then(async (response) => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const index = await response.json();
+        if (index?.kind !== 'svg3-hazard-image-overviews' || !index.national || !index.regions) {
+          throw new Error('invalid hazard overview index');
+        }
+        state.overviewIndex = index;
+        return index;
+      })
+      .finally(() => { state.overviewPromise = null; });
+    return state.overviewPromise;
+  };
+
+  const injectOverview = (entry, version) => {
+    const svg = window.svgImage;
+    if (!svg || !entry?.bounds || !entry?.types) return 0;
+    clearGroups();
+    let imageCount = 0;
+    for (const [type, id] of Object.entries(HAZARD_GROUPS)) {
+      const image = entry.types[type];
+      const group = svg.getElementById?.(id);
+      if (!group || !image?.url) continue;
+      const node = svg.createElementNS('http://www.w3.org/2000/svg', 'image');
+      const href = `${image.url}${image.url.includes('?') ? '&' : '?'}v=${encodeURIComponent(String(version || '1').slice(0, 16))}`;
+      node.setAttribute('href', href);
+      node.setAttributeNS('http://www.w3.org/1999/xlink', 'href', href);
+      node.setAttribute('x', entry.bounds.x);
+      node.setAttribute('y', entry.bounds.y);
+      node.setAttribute('width', entry.bounds.width);
+      node.setAttribute('height', entry.bounds.height);
+      node.setAttribute('preserveAspectRatio', 'none');
+      node.setAttribute('pointer-events', 'none');
+      node.setAttribute('data-hazard-overview', type);
+      group.appendChild(node);
+      imageCount += 1;
+    }
+    state.pathCount = 0;
+    return imageCount;
+  };
+
+  const loadHazardOverview = async (key) => {
+    if (!key || state.loadedKey === key || state.loadingKey === key) return;
+    state.loadingKey = key;
+    try {
+      const index = await loadOverviewIndex();
+      if (state.loadingKey !== key) return;
+      const entry = key === 'national' ? index.national : index.regions[state.prefCode];
+      if (!entry) throw new Error(`hazard overview not found: ${key}`);
+      const imageCount = injectOverview(entry, index.sourceHash);
+      state.loadingKey = '';
+      state.loadedKey = key;
+      if (key.startsWith('pref:')) state.prefLoaded = true;
+      applyVisibility();
+      emitHazardState(`loaded key=${key} images=${imageCount}`);
+      scheduleNativeRefresh();
+    } catch (error) {
+      if (state.loadingKey === key) state.loadingKey = '';
+      console.warn('[hazardLayer] overview failed', { key, error });
+      state.failedKeys.set(key, Date.now());
+      if (key.startsWith('pref:') && state.prefSvgUrl) {
+        void loadHazardSvg('pref', state.prefSvgUrl);
+      } else {
+        clearGroups();
+        state.loadedKey = '';
+        emitDataStatus({ source: 'fallback', message: 'ハザード概略画像を取得できません', url: state.overviewIndexUrl });
+      }
     }
   };
 
@@ -356,7 +442,8 @@ import { hazardDisplayPlan, shouldRetryFailure } from './hazardFallback.js';
   };
 
   const modeForZoom = (zoom) => {
-    if (!state.visible || zoom < MIN_VISIBLE_ZOOM) return 'none';
+    if (!state.visible) return 'none';
+    if (zoom < PREF_OVERVIEW_ZOOM) return primaryHazardLayer() ? 'national' : 'none';
     if (!state.currentCode) return 'pref';
     return zoom >= MUNICIPALITY_ZOOM ? 'municipality' : 'pref';
   };
@@ -415,8 +502,17 @@ import { hazardDisplayPlan, shouldRetryFailure } from './hazardFallback.js';
     emitHazardState();
     if (plan.mode === 'none') return;
 
+    if (plan.mode === 'national') {
+      void loadHazardOverview('national');
+      return;
+    }
+
     if (plan.mode === 'pref') {
-      void loadHazardSvg('pref', state.prefSvgUrl);
+      if (state.overviewIndexUrl && state.prefCode) {
+        void loadHazardOverview(`pref:${state.prefCode}`);
+      } else {
+        void loadHazardSvg('pref', state.prefSvgUrl);
+      }
       return;
     }
 
@@ -480,15 +576,22 @@ import { hazardDisplayPlan, shouldRetryFailure } from './hazardFallback.js';
   const start = () => {
     if (started) return;
     started = true;
-    const { prefSvgUrl, svgUrlTemplate, layerKey } = parseHashParams();
+    const { prefSvgUrl, svgUrlTemplate, overviewIndexUrl, prefCode, layerKey } = parseHashParams();
     if (prefSvgUrl) state.prefSvgUrl = prefSvgUrl;
     if (svgUrlTemplate) state.svgUrlTemplate = svgUrlTemplate;
+    if (overviewIndexUrl) state.overviewIndexUrl = overviewIndexUrl;
+    if (prefCode) state.prefCode = prefCode.padStart(2, '0');
     if (layerKey) state.layerKey = layerKey;
     // 初期非表示を適用してから ready を通知する
     state.mode = modeForZoom(getZoomLevel());
     applyVisibility();
     emitHazardState('ready');
-    console.log('[hazardLayer] ready', { prefSvgUrl: state.prefSvgUrl, svgUrlTemplate: state.svgUrlTemplate });
+    console.log('[hazardLayer] ready', {
+      prefSvgUrl: state.prefSvgUrl,
+      svgUrlTemplate: state.svgUrlTemplate,
+      overviewIndexUrl: state.overviewIndexUrl,
+      prefCode: state.prefCode,
+    });
     draw();
     scheduleNativeRefresh();
     notifyHost(MAP_MESSAGES.runtimeLayerReady, { layerKey: state.layerKey });

@@ -76,42 +76,42 @@
              title="道路通行情報" class="poi clickable" visibility="hidden" opacity="1"/>
 
   <animation id="layer-hazard" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/21/gifu.svg&amp;svgUrlTemplate=/map/layers/hazard/21/districts/{code}.svg&amp;layerKey=layer-hazard"
+             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/21/gifu.svg&amp;svgUrlTemplate=/map/layers/hazard/21/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=21&amp;layerKey=layer-hazard"
              title="L4 ハザード" class="vectorEtcData" visibility="visible" opacity="0.7"/>
 
   <!-- 周辺地域mount: 長野県のハザード -->
   <animation id="layer-hazard--near-nagano" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/20/nagano.svg&amp;svgUrlTemplate=/map/layers/hazard/20/districts/{code}.svg&amp;layerKey=layer-hazard--near-nagano"
+             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/20/nagano.svg&amp;svgUrlTemplate=/map/layers/hazard/20/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=20&amp;layerKey=layer-hazard--near-nagano"
              title="長野県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
 
   <!-- 周辺地域mount: 愛知県のハザード -->
   <animation id="layer-hazard--near-aichi" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/23/aichi.svg&amp;svgUrlTemplate=/map/layers/hazard/23/districts/{code}.svg&amp;layerKey=layer-hazard--near-aichi"
+             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/23/aichi.svg&amp;svgUrlTemplate=/map/layers/hazard/23/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=23&amp;layerKey=layer-hazard--near-aichi"
              title="愛知県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
 
   <!-- 周辺地域mount: 富山県のハザード -->
   <animation id="layer-hazard--near-toyama" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/16/toyama.svg&amp;svgUrlTemplate=/map/layers/hazard/16/districts/{code}.svg&amp;layerKey=layer-hazard--near-toyama"
+             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/16/toyama.svg&amp;svgUrlTemplate=/map/layers/hazard/16/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=16&amp;layerKey=layer-hazard--near-toyama"
              title="富山県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
 
   <!-- 周辺地域mount: 福井県のハザード -->
   <animation id="layer-hazard--near-fukui" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/18/fukui.svg&amp;svgUrlTemplate=/map/layers/hazard/18/districts/{code}.svg&amp;layerKey=layer-hazard--near-fukui"
+             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/18/fukui.svg&amp;svgUrlTemplate=/map/layers/hazard/18/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=18&amp;layerKey=layer-hazard--near-fukui"
              title="福井県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
 
   <!-- 周辺地域mount: 滋賀県のハザード -->
   <animation id="layer-hazard--near-shiga" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/25/shiga.svg&amp;svgUrlTemplate=/map/layers/hazard/25/districts/{code}.svg&amp;layerKey=layer-hazard--near-shiga"
+             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/25/shiga.svg&amp;svgUrlTemplate=/map/layers/hazard/25/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=25&amp;layerKey=layer-hazard--near-shiga"
              title="滋賀県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
 
   <!-- 周辺地域mount: 三重県のハザード -->
   <animation id="layer-hazard--near-mie" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/24/mie.svg&amp;svgUrlTemplate=/map/layers/hazard/24/districts/{code}.svg&amp;layerKey=layer-hazard--near-mie"
+             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/24/mie.svg&amp;svgUrlTemplate=/map/layers/hazard/24/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=24&amp;layerKey=layer-hazard--near-mie"
              title="三重県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
 
   <!-- 周辺地域mount: 石川県のハザード -->
   <animation id="layer-hazard--near-ishikawa" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/17/ishikawa.svg&amp;svgUrlTemplate=/map/layers/hazard/17/districts/{code}.svg&amp;layerKey=layer-hazard--near-ishikawa"
+             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/17/ishikawa.svg&amp;svgUrlTemplate=/map/layers/hazard/17/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=17&amp;layerKey=layer-hazard--near-ishikawa"
              title="石川県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
 
   <animation id="layer-current-location" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"

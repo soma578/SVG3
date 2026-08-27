@@ -25,6 +25,10 @@ const frontendRoot = path.resolve(scriptDir, '..')
 const projectRoot = path.resolve(frontendRoot, '..')
 const mapRoot = path.join(projectRoot, 'map')
 const webappRoot = path.join(mapRoot, 'webapp')
+const hazardOverviewIndexPath = path.join(mapRoot, 'layers', 'hazard-overview', 'index.json')
+const hazardOverviewIndex = fs.existsSync(hazardOverviewIndexPath)
+  ? JSON.parse(fs.readFileSync(hazardOverviewIndexPath, 'utf8'))
+  : null
 
 // 起動に要る、地域に依らない資産。ディレクトリは実ファイルから列挙する
 // （「全 fetch を無差別に保存しない」ため、一覧は必ず明示的に決める）。
@@ -225,10 +229,26 @@ const regionAssetsFor = (regionId, runtimeConfig) => {
         if (href.startsWith('/map/layers/offline-basemap/')) assets.add(href)
       }
       if (neighborMount) continue
-      // ハザードは県全体SVGのみ保存する。市区町村別まで入れると数百MBになる。
-      for (const match of attrs.matchAll(/prefSvgUrl=([^&"]+)/g)) {
-        const href = decodeURIComponent(match[1].replaceAll('&amp;', '&'))
-        if (href.startsWith('/map/layers/hazard/')) assets.add(href)
+      // 広域ハザードは、巨大な県全体SVGではなく描画済み画像を保存する。
+      // 全国概略4枚 + 当該県4枚だけなので、SVGのpath展開も数MBの先読みも不要。
+      const overviewUrl = attrs.match(/overviewIndexUrl=([^&"]+)/)?.[1] || ''
+      const overviewPrefCode = attrs.match(/prefCode=([^&"]+)/)?.[1] || ''
+      const hasOverview = Boolean(overviewUrl && overviewPrefCode && hazardOverviewIndex)
+      if (hasOverview) {
+        const decodedOverviewUrl = decodeURIComponent(overviewUrl.replaceAll('&amp;', '&'))
+        if (decodedOverviewUrl.startsWith('/map/layers/hazard-overview/')) assets.add(decodedOverviewUrl)
+        for (const type of Object.values(hazardOverviewIndex.national?.types || {})) {
+          if (type.url?.startsWith('/map/layers/hazard-overview/')) assets.add(type.url)
+        }
+        for (const type of Object.values(hazardOverviewIndex.regions?.[overviewPrefCode]?.types || {})) {
+          if (type.url?.startsWith('/map/layers/hazard-overview/')) assets.add(type.url)
+        }
+      } else {
+        // 旧形式または画像索引が無い生成環境では、従来の県全体SVGをフォールバック保存。
+        for (const match of attrs.matchAll(/prefSvgUrl=([^&"]+)/g)) {
+          const href = decodeURIComponent(match[1].replaceAll('&amp;', '&'))
+          if (href.startsWith('/map/layers/hazard/')) assets.add(href)
+        }
       }
     }
   }

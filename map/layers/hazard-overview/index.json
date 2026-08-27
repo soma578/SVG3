@@ -1,0 +1,1596 @@
+{
+  "schemaVersion": 1,
+  "kind": "svg3-hazard-image-overviews",
+  "sourceHash": "c52ccc5dce9e2e13a0c31aa77edba4946ca9721c87c8fcccd4af987fed9d7158",
+  "generatedAt": "2026-08-27T06:27:39.072Z",
+  "format": "webp",
+  "rendering": {
+    "strategy": "screen-resolution-image-overview",
+    "nationalWidth": 2048,
+    "regionLongSide": 1536,
+    "regionPaddingRatio": 0.03
+  },
+  "national": {
+    "bounds": {
+      "x": 12243.4,
+      "y": -4605.6,
+      "width": 3205.3,
+      "height": 2251
+    },
+    "types": {
+      "flood": {
+        "url": "/map/layers/hazard-overview/national/flood.webp",
+        "bytes": 39570,
+        "sha256": "0392178bdf14bf58904535b3f794c7b73e42b4a58d70449eb6c5540aa3537f54"
+      },
+      "tsunami": {
+        "url": "/map/layers/hazard-overview/national/tsunami.webp",
+        "bytes": 31104,
+        "sha256": "f8d9140a969622dec320733fdd3520c04e9388f7523246f7cca6a8e4bf597a55"
+      },
+      "landslide-warning": {
+        "url": "/map/layers/hazard-overview/national/landslide-warning.webp",
+        "bytes": 127368,
+        "sha256": "2c29fe621543bfe89f0fa7eb79346592a8bf506d5fea77fb089cc6630f9f091a"
+      },
+      "landslide-special": {
+        "url": "/map/layers/hazard-overview/national/landslide-special.webp",
+        "bytes": 64536,
+        "sha256": "736ea5bed2f5aa53afd818e0f93fb433624e9ca8e5d694b2122568e807315c7b"
+      }
+    }
+  },
+  "regions": {
+    "10": {
+      "id": "gunma",
+      "prefCode": "10",
+      "label": "群馬県",
+      "bounds": {
+        "x": 13830.594539999998,
+        "y": -3714.98046,
+        "width": 145.51892,
+        "height": 125.56591999999999
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/10/flood.webp",
+          "bytes": 40564,
+          "sha256": "f8506fd0e70c18a1aa91f55e7416410da8ad3b40ebeef5cff2fd79106b37eac9"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/10/tsunami.webp",
+          "bytes": 126,
+          "sha256": "26d48963e896a59b7d12f94caff9128ff7cde69e9167fa017d4f3c46c45214e6"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/10/landslide-warning.webp",
+          "bytes": 163010,
+          "sha256": "bce586d5804611d4ba7171552e1eadb6e9f35dd2ae5433cd9e4af5949d1e27f6"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/10/landslide-special.webp",
+          "bytes": 74320,
+          "sha256": "5ea3d32ea0beafe41a0271c2ef7d2a83698f625e717ba194435730806e8844df"
+        }
+      }
+    },
+    "11": {
+      "id": "saitama",
+      "prefCode": "11",
+      "label": "埼玉県",
+      "bounds": {
+        "x": 13862.275239999999,
+        "y": -3637.20576,
+        "width": 136.62552000000002,
+        "height": 70.73452
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/11/flood.webp",
+          "bytes": 114372,
+          "sha256": "2b1ac89114aa620138de32a5cf6881477a46929241c339f29be850b9ffe7df3e"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/11/tsunami.webp",
+          "bytes": 92,
+          "sha256": "127066f29712369461ed84aafed59bd91e2c0f699a087bfd260646f3c4177bcf"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/11/landslide-warning.webp",
+          "bytes": 65750,
+          "sha256": "44502bb72c4d0b3388b40d3017398d77043b3c53540b2d90b3b83ce54cc196e4"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/11/landslide-special.webp",
+          "bytes": 34322,
+          "sha256": "297951c95fab16ed59469cab77da0f07f0d801b9a606413bb14d488dd5a01e3a"
+        }
+      }
+    },
+    "12": {
+      "id": "chiba",
+      "prefCode": "12",
+      "label": "千葉県",
+      "bounds": {
+        "x": 13965.28413,
+        "y": -3619.32287,
+        "width": 131.08274,
+        "height": 138.25474
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/12/flood.webp",
+          "bytes": 142596,
+          "sha256": "9af52d64455055ffbe2071c60149cb57844991fa8bafe2162a68635374990a2f"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/12/tsunami.webp",
+          "bytes": 106940,
+          "sha256": "5dac9ace333688edc0b73998d2d602c4f7f28e555960fb3f2aabf2957e3337b9"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/12/landslide-warning.webp",
+          "bytes": 86326,
+          "sha256": "b2c5c12972f90351a3ad904285be5eb7578b3374c5b35191bc64edaa49650a58"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/12/landslide-special.webp",
+          "bytes": 29136,
+          "sha256": "d63d00df0c96eaffb1630e2d9fa445b7ecf10d966553d8617f5e2abb5e7a0110"
+        }
+      }
+    },
+    "13": {
+      "id": "tokyo",
+      "prefCode": "13",
+      "label": "東京都",
+      "bounds": {
+        "x": 13843.85557,
+        "y": -3640.2734299999997,
+        "width": 1605.2438599999998,
+        "height": 1268.22986
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/13/flood.webp",
+          "bytes": 1898,
+          "sha256": "6de44085b0f382fd36d7a29bcaab741240da5ce85829195f0381cb54afe85707"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/13/tsunami.webp",
+          "bytes": 1578,
+          "sha256": "55bcd93efdef40996b46d85da8797004c43a7ce9b60bd9c5e307e4a567b64e4e"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/13/landslide-warning.webp",
+          "bytes": 3080,
+          "sha256": "8705edd966b1352827ce5bdb536e06e423267090b471252e5e662d81dab97500"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/13/landslide-special.webp",
+          "bytes": 2386,
+          "sha256": "97afa3fbb4286166a8c0decbc75349daa741f9a490f9ef12d87b5f97879aa2b2"
+        }
+      }
+    },
+    "14": {
+      "id": "kanagawa",
+      "prefCode": "14",
+      "label": "神奈川県",
+      "bounds": {
+        "x": 13883.516969999999,
+        "y": -3575.3500300000005,
+        "width": 108.12106000000001,
+        "height": 70.53906
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/14/flood.webp",
+          "bytes": 27830,
+          "sha256": "3ce974651234103bfb54786e61d8fb670de10114a8bb1e6992c084abccf2b04e"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/14/tsunami.webp",
+          "bytes": 75382,
+          "sha256": "8af038578d67c76f214b8b3bce9260bbc5ae3f06b7ad9402d66d7abd8f2c270e"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/14/landslide-warning.webp",
+          "bytes": 229432,
+          "sha256": "934cf657ca2fdec47e687d92add91fdeca536e181b1a690f5d991530eda1c573"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/14/landslide-special.webp",
+          "bytes": 15760,
+          "sha256": "d5c43d0df8c9dfdfc789cfb7079b278ccbcd01ff44308319eec9dde09387331d"
+        }
+      }
+    },
+    "15": {
+      "id": "niigata",
+      "prefCode": "15",
+      "label": "新潟県",
+      "bounds": {
+        "x": 13751.40324,
+        "y": -3867.4527599999997,
+        "width": 250.68152,
+        "height": 205.89151999999999
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/15/flood.webp",
+          "bytes": 96892,
+          "sha256": "888455a417b1160f67c50143423473254880e7cc77340df5502b42127537a686"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/15/tsunami.webp",
+          "bytes": 32952,
+          "sha256": "b34fd22b448ad68e1dbab051f328715400eee28d54aa4d6f20ff878d4da95b14"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/15/landslide-warning.webp",
+          "bytes": 141796,
+          "sha256": "d00e527870d9c4eac472d91b87fcc5728e112b9de85209f37e97b7038db99f63"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/15/landslide-special.webp",
+          "bytes": 44064,
+          "sha256": "0be4d0fa3bf079c93064eb95f5272a4deb6583deae3f99314757b4aaa891a6a0"
+        }
+      }
+    },
+    "16": {
+      "id": "toyama",
+      "prefCode": "16",
+      "label": "富山県",
+      "bounds": {
+        "x": 13668.56842,
+        "y": -3706.264579999999,
+        "width": 116.05516,
+        "height": 87.11316
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/16/flood.webp",
+          "bytes": 162928,
+          "sha256": "da83e1c97e390df7407855821afe90c5dd82cad046e2514a1444243cd55c1dec"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/16/tsunami.webp",
+          "bytes": 16848,
+          "sha256": "2c599c8c3e4cabb26677f72184c0c7e1040c54f1804a7c7a7309f5e874298070"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/16/landslide-warning.webp",
+          "bytes": 164746,
+          "sha256": "10bdb611847567d8196c3dd235838add8db34ac0f86e27c60e1b2b3762e28fbb"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/16/landslide-special.webp",
+          "bytes": 56158,
+          "sha256": "fff2fb3dc76f3cec48e9d9662f7c6af9987b56ed108eca44343cfb8f8db7f8f8"
+        }
+      }
+    },
+    "17": {
+      "id": "ishikawa",
+      "prefCode": "17",
+      "label": "石川県",
+      "bounds": {
+        "x": 13613.7217,
+        "y": -3796.1973,
+        "width": 133.0076,
+        "height": 200.13859999999997
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/17/flood.webp",
+          "bytes": 35202,
+          "sha256": "c35cdcaecb8ccaad8f06e17be3eabb8bc35df6ed6558592686cab8edc4eb55d3"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/17/tsunami.webp",
+          "bytes": 20362,
+          "sha256": "57a0859adad6db6b84365396ea7e339d3482bdd06638b41fdfc2978170c69b56"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/17/landslide-warning.webp",
+          "bytes": 66006,
+          "sha256": "1733c15c5d995ca5c74a3813238790b57d138272d167339c6d80df18b5d32a06"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/17/landslide-special.webp",
+          "bytes": 29538,
+          "sha256": "77cb3db6c1a4453487b66402c98ed2e4d14c5e2ac0c60d323b4c3259016d889b"
+        }
+      }
+    },
+    "18": {
+      "id": "fukui",
+      "prefCode": "18",
+      "label": "福井県",
+      "bounds": {
+        "x": 13535.48494,
+        "y": -3638.9810600000005,
+        "width": 157.20012,
+        "height": 114.06112000000002
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/18/flood.webp",
+          "bytes": 88876,
+          "sha256": "782e47a57f686e6aebfd86e50a56df7cafbf63458664364a17401d645bb8ca54"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/18/tsunami.webp",
+          "bytes": 1204,
+          "sha256": "7591a23466ad6c208a2e09aa7ac12f7e5f71a0a25ecedf7b5572c0712c46b5b2"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/18/landslide-warning.webp",
+          "bytes": 124124,
+          "sha256": "c4ed9e96d4692e38f5485909d9778911071829f4d609173cd52c90157f7e3e33"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/18/landslide-special.webp",
+          "bytes": 65066,
+          "sha256": "2b83c41ebc6ddead4bd2d4a245087ec9c6d192634fddfb2ae629ab384215fdac"
+        }
+      }
+    },
+    "19": {
+      "id": "yamanashi",
+      "prefCode": "19",
+      "label": "山梨県",
+      "bounds": {
+        "x": 13809.85228,
+        "y": -3605.3327200000003,
+        "width": 111.74943999999999,
+        "height": 96.65744000000001
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/19/flood.webp",
+          "bytes": 60066,
+          "sha256": "9f44631330a2e36fe2941fde09a6b3b0f248a95a1cbd96bcfb85f531b70a53a7"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/19/tsunami.webp",
+          "bytes": 126,
+          "sha256": "1112acdde4dbcd5f88baf996ac7f500c3e076c90d3c6a9a28c5e2f66955916da"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/19/landslide-warning.webp",
+          "bytes": 166940,
+          "sha256": "c55c1f3397939a8a5ec2ab176fff558c442b9a1e7cd9d8199601e74208d38275"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/19/landslide-special.webp",
+          "bytes": 92034,
+          "sha256": "983c0366eb3695fe67d639ce8a7a798f5884fc4366c977a56f0be590f727bb6d"
+        }
+      }
+    },
+    "20": {
+      "id": "nagano",
+      "prefCode": "20",
+      "label": "長野県",
+      "bounds": {
+        "x": 13721.65915,
+        "y": -3713.8378500000003,
+        "width": 163.0617,
+        "height": 204.7867
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/20/flood.webp",
+          "bytes": 68010,
+          "sha256": "f6645f6693f70c52b247f87fb03b7cbd08444b44fc3089eacf5d6a794649bea4"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/20/tsunami.webp",
+          "bytes": 120,
+          "sha256": "add025bd2fbffcbb511b8dd8f99749d7396fac4b56483c4527b82a1bcabcc61c"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/20/landslide-warning.webp",
+          "bytes": 279772,
+          "sha256": "9d69494ca681923fb0071c9c9b7d0c8de3e5a00258e095c0a78235ed4b242f10"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/20/landslide-special.webp",
+          "bytes": 132580,
+          "sha256": "2dff57a9e59a83fd35f4c198dd28c0eaa152863841ba1bb09f039a5ef13d7732"
+        }
+      }
+    },
+    "21": {
+      "id": "gifu",
+      "prefCode": "21",
+      "label": "岐阜県",
+      "bounds": {
+        "x": 13618.191480000001,
+        "y": -3655.93752,
+        "width": 156.54504,
+        "height": 151.99504000000002
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/21/flood.webp",
+          "bytes": 42436,
+          "sha256": "93aa56845ebe5813a49d0ba9e43cfc268591fa86030e64fe5c197798309c3db5"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/21/tsunami.webp",
+          "bytes": 2704,
+          "sha256": "4a9cb1ffce4f94456262a25a0bb14430a1ef742513703d2415c1d5db29eb4f76"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/21/landslide-warning.webp",
+          "bytes": 263152,
+          "sha256": "259c0b5ab9c870e694a5c5134dffeeaace15103a7637407b5e06c72b4a7b7016"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/21/landslide-special.webp",
+          "bytes": 165148,
+          "sha256": "a460b6ac9e42fe514770359d5b0b0a8d45181ae1e2d2b6121dffa5e42bf6d043"
+        }
+      }
+    },
+    "22": {
+      "id": "shizuoka",
+      "prefCode": "22",
+      "label": "静岡県",
+      "bounds": {
+        "x": 13737.003680000002,
+        "y": -3575.00332,
+        "width": 191.05864000000003,
+        "height": 128.03464
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/22/flood.webp",
+          "bytes": 82832,
+          "sha256": "3b4986114d47d07ebaf04977c2addb48966fea882130aa0a8894b0a713f586c9"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/22/tsunami.webp",
+          "bytes": 968,
+          "sha256": "6ca879d58b0319a5089598e782029859138efcd36adb42e9fbf3d36264b2c779"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/22/landslide-warning.webp",
+          "bytes": 153460,
+          "sha256": "0c088e368a278e070d73801bed1e23c011c11f7bb52c6b22a5c5eac24caa1f37"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/22/landslide-special.webp",
+          "bytes": 80530,
+          "sha256": "dd434367284561eb91a82b5b74e5dbc95dea4a97e86b4fbdb92003200d16e5cd"
+        }
+      }
+    },
+    "23": {
+      "id": "aichi",
+      "prefCode": "23",
+      "label": "愛知県",
+      "bounds": {
+        "x": 13658.301759999998,
+        "y": -3551.27824,
+        "width": 134.31047999999998,
+        "height": 102.25047999999998
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/23/flood.webp",
+          "bytes": 114,
+          "sha256": "3d26e4be84471b42d9c4270518bd35853f768aa5dc549aaca35f68277246302c"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/23/tsunami.webp",
+          "bytes": 120212,
+          "sha256": "01cf6d4405895d5c4f56d734f33f258ae3ac44b4db5ecabd4d906f3128ad694a"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/23/landslide-warning.webp",
+          "bytes": 114858,
+          "sha256": "b461a30b09b2f387f91635aac6346ab2db99662dfc42816f6abf436472f30593"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/23/landslide-special.webp",
+          "bytes": 65240,
+          "sha256": "9fd7479fbabcae2ad5d8ed2471071c2ae504bc56b2defc836afb53e3ffa95ef5"
+        }
+      }
+    },
+    "24": {
+      "id": "mie",
+      "prefCode": "24",
+      "label": "三重県",
+      "bounds": {
+        "x": 13575.41396,
+        "y": -3535.6580400000007,
+        "width": 133.25907999999998,
+        "height": 173.27607999999998
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/24/flood.webp",
+          "bytes": 61998,
+          "sha256": "1ce03a1f76d4d5c3541723c3c9f102c1046490ed13308bdb4ff2925e28cfd8bb"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/24/tsunami.webp",
+          "bytes": 3320,
+          "sha256": "5cb8a44b97e45003c9904732238a2a4e31882dd2e655fb7189fe4b6e7adc6478"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/24/landslide-warning.webp",
+          "bytes": 93588,
+          "sha256": "94ca3cce00d5604292df71823ed91e1b9936258670ccdbda4766ceab33533026"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/24/landslide-special.webp",
+          "bytes": 58922,
+          "sha256": "01ec4baf26a4acef1975b9e32c200da9403f4569431cda41fcb5985fca63d414"
+        }
+      }
+    },
+    "25": {
+      "id": "shiga",
+      "prefCode": "25",
+      "label": "滋賀県",
+      "bounds": {
+        "x": 13568.334490000001,
+        "y": -3578.41351,
+        "width": 85.20502,
+        "height": 107.39602
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/25/flood.webp",
+          "bytes": 187248,
+          "sha256": "594f2b28659eb410898009b4055818ad5f1550e5fda20b72adc13637883029b7"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/25/tsunami.webp",
+          "bytes": 120,
+          "sha256": "bdfde4e4156bd1373ecad243c8e32292bb367c0c1a14fcf814bc2b1d1e5fe0a5"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/25/landslide-warning.webp",
+          "bytes": 97314,
+          "sha256": "d1f4982dc70327649298e35a28890b1213f0eef68fa228815ed9bf6e8ffa10d9"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/25/landslide-special.webp",
+          "bytes": 30334,
+          "sha256": "9771536d9772b1274b7937f42a9da78e0852755014da31b9519cf59d9bc7f7ab"
+        }
+      }
+    },
+    "26": {
+      "id": "kyoto",
+      "prefCode": "26",
+      "label": "京都府",
+      "bounds": {
+        "x": 13476.49868,
+        "y": -3586.82332,
+        "width": 137.95263999999997,
+        "height": 125.15263999999999
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/26/flood.webp",
+          "bytes": 4146,
+          "sha256": "b95bf35455b514708631450180e1015e770c7f99639285b20f4cedbe04222f0b"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/26/tsunami.webp",
+          "bytes": 130,
+          "sha256": "ac87ba448bd1f8a3117a8a87263e57015a779921e5390ff676009598a2f1e79c"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/26/landslide-warning.webp",
+          "bytes": 180936,
+          "sha256": "de9bc3ce063e7213e4ceb450f7e95dcaff6ad3f715f024107dfbd0c97c42fe96"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/26/landslide-special.webp",
+          "bytes": 96484,
+          "sha256": "e068acf2216552856f793f538f99152f1f3247d9142800b69683874bc3074c7b"
+        }
+      }
+    },
+    "27": {
+      "id": "osaka",
+      "prefCode": "27",
+      "label": "大阪府",
+      "bounds": {
+        "x": 13501.56168,
+        "y": -3512.76432,
+        "width": 80.73564,
+        "height": 93.22064
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/27/flood.webp",
+          "bytes": 144058,
+          "sha256": "efdaac18caaf5b034239ea77642c8a4354f00fb691f92db27a2e35eace83bbd8"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/27/tsunami.webp",
+          "bytes": 76152,
+          "sha256": "d5d6da751fe645dbe121dc5aec53cb98cd49ffcbee00dc14e9527248d945189a"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/27/landslide-warning.webp",
+          "bytes": 125624,
+          "sha256": "d4113794b82ea445838dd39538a9bbb08a75a546ce8a72205c04d3b276dc4c49"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/27/landslide-special.webp",
+          "bytes": 72878,
+          "sha256": "827f540bc038103e800a6baf6bb6156bfd98e4c9fcfb4bca1cae09e50d31e528"
+        }
+      }
+    },
+    "28": {
+      "id": "hyogo",
+      "prefCode": "28",
+      "label": "兵庫県",
+      "bounds": {
+        "x": 13415.428110000003,
+        "y": -3577.327890000001,
+        "width": 141.27978,
+        "height": 171.57478
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/28/flood.webp",
+          "bytes": 33848,
+          "sha256": "06e2bfdc29aa21964c63bde7c749a4bb202f6a8a07733910138bfb04ec460bb4"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/28/tsunami.webp",
+          "bytes": 3210,
+          "sha256": "0662bd9ec195330194ee8a94d67ce93248c007fbe5406c990a64a5e95c183ca9"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/28/landslide-warning.webp",
+          "bytes": 249918,
+          "sha256": "afd945ebceaf03f2d909026c6fec7ecd625cbbe7a43ec0c6f7130a33f8e4d2de"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/28/landslide-special.webp",
+          "bytes": 38392,
+          "sha256": "9dce97f1c99e49d2f7bb483c88d1502cf339857be6a2048acfdebda37b3f08cd"
+        }
+      }
+    },
+    "29": {
+      "id": "nara",
+      "prefCode": "29",
+      "label": "奈良県",
+      "bounds": {
+        "x": 13545.902860000002,
+        "y": -3486.20114,
+        "width": 85.14228,
+        "height": 108.37228
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/29/flood.webp",
+          "bytes": 1148,
+          "sha256": "93cdd7bc5ca1ec0a582bfe3ac9731ca006306cf6facd35038b4bf2851cfaccce"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/29/tsunami.webp",
+          "bytes": 118,
+          "sha256": "3458a405d5298f8bed554531ced4bbab09333e0b7c806bd38d9979381842512f"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/29/landslide-warning.webp",
+          "bytes": 190578,
+          "sha256": "3fbd46e057cdf2fb4906f97b8389e8918e6742aa3d82dea0ad483e2cbfbd66f2"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/29/landslide-special.webp",
+          "bytes": 42948,
+          "sha256": "e6164b9ccd89bab84417bf5caeda65e8338232ab70fdaba2712306932ca06ccd"
+        }
+      }
+    },
+    "30": {
+      "id": "wakayama",
+      "prefCode": "30",
+      "label": "和歌山県",
+      "bounds": {
+        "x": 13491.562039999999,
+        "y": -3446.79096,
+        "width": 118.11791999999998,
+        "height": 111.67391999999998
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/30/flood.webp",
+          "bytes": 64578,
+          "sha256": "4058d707faeb5c3b9dee39be8a6bdd461fa980191424c2188ba80482cb56bfdd"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/30/tsunami.webp",
+          "bytes": 79218,
+          "sha256": "af1e423f26cd47a1826ea7b673c78038499b87c28e035dc6911194b2be7057a1"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/30/landslide-warning.webp",
+          "bytes": 206512,
+          "sha256": "8eb9a950e45c4d7ead585ace4dbc3ee007ab1d42b3b560d9cbc084734337385e"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/30/landslide-special.webp",
+          "bytes": 94604,
+          "sha256": "d42447d8b7e9dcbea0e363f4efe7a93e0a3b177d6eddacb7399a6eb04a1fa121"
+        }
+      }
+    },
+    "31": {
+      "id": "tottori",
+      "prefCode": "31",
+      "label": "鳥取県",
+      "bounds": {
+        "x": 13304.17234,
+        "y": -3570.8966600000003,
+        "width": 156.79731999999998,
+        "height": 74.56631999999999
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/31/flood.webp",
+          "bytes": 6332,
+          "sha256": "a967629a41037522f279f989ccf659efd5ab9396e0dc6776dd9c0c0a018d59ee"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/31/tsunami.webp",
+          "bytes": 9970,
+          "sha256": "a1e82616fe8fb014a4505c7245f3f658fe40c79669eb3865752f4f645263f1a9"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/31/landslide-warning.webp",
+          "bytes": 96770,
+          "sha256": "45fd50d1743ea4389e955db8fb6fdc348e6808e882aa4251ed7ae15ff46b538a"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/31/landslide-special.webp",
+          "bytes": 49588,
+          "sha256": "775e3a2f860ee5d1cb880d22edfb8299ae8a2b5f6bef15383b0d1ac71ed3a950"
+        }
+      }
+    },
+    "32": {
+      "id": "shimane",
+      "prefCode": "32",
+      "label": "島根県",
+      "bounds": {
+        "x": 13152.675470000002,
+        "y": -3738.41653,
+        "width": 200.03305999999998,
+        "height": 322.29406
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/32/flood.webp",
+          "bytes": 9428,
+          "sha256": "42b783eb93f7442ef1acf144c18e773d72aa9e232de700b617db6c8c0bc687dd"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/32/tsunami.webp",
+          "bytes": 5822,
+          "sha256": "6c5a2a93f1c533eba14e35417a0c537f4f603d301a319feb8c037e81c418d78f"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/32/landslide-warning.webp",
+          "bytes": 123460,
+          "sha256": "70f7bcab79e5f56b90a2b5c99d2d11613e702d61a458000b5b2779c05e51c426"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/32/landslide-special.webp",
+          "bytes": 3518,
+          "sha256": "b8df0d68b1c03c3c1ff3026525917a9f458934acc6be3fcfc6aae307553fc450"
+        }
+      }
+    },
+    "33": {
+      "id": "okayama",
+      "prefCode": "33",
+      "label": "岡山県",
+      "bounds": {
+        "x": 13317.95431,
+        "y": -3544.0286900000006,
+        "width": 132.10038,
+        "height": 122.93438
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/33/flood.webp",
+          "bytes": 90128,
+          "sha256": "0c1d928ac0f2ad23fb04c85a84be5aac8f3367e8dc42d5caaa6ebac3a8d9667f"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/33/tsunami.webp",
+          "bytes": 68144,
+          "sha256": "a2ddc438fe9619e9086077d062af743ad7652fa0cd38f6c4bf0570951f64a203"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/33/landslide-warning.webp",
+          "bytes": 269910,
+          "sha256": "38952365844b056c608aea349fbecd6215dcbeffc5a05efc8fb5ff50cd5a4902"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/33/landslide-special.webp",
+          "bytes": 18502,
+          "sha256": "1ac747a8a1967a62e9e0234d56e813d177672f1a312fa64ea4801735be97c3b3"
+        }
+      }
+    },
+    "34": {
+      "id": "hiroshima",
+      "prefCode": "34",
+      "label": "広島県",
+      "bounds": {
+        "x": 13194.042339999998,
+        "y": -3520.1706599999993,
+        "width": 162.62732,
+        "height": 126.33432
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/34/flood.webp",
+          "bytes": 54786,
+          "sha256": "4dc134041c75559b808d69d511d1817f6f9685c331e090d1fdcce7ceafc41c48"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/34/tsunami.webp",
+          "bytes": 1198,
+          "sha256": "d53dfa9ae5e8e3753359575a0f916f5a6e6abb4048bf22b769723564afef55d7"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/34/landslide-warning.webp",
+          "bytes": 279148,
+          "sha256": "0636174fbd6c4e125eeb19bd9e29e34a235b80539ebd5ac799a7ca654873a304"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/34/landslide-special.webp",
+          "bytes": 129180,
+          "sha256": "17ac3115d48abf0c1a48544644bbf7e8de7df5ec1a94db9e3903021898f248e6"
+        }
+      }
+    },
+    "35": {
+      "id": "yamaguchi",
+      "prefCode": "35",
+      "label": "山口県",
+      "bounds": {
+        "x": 13067.054820000001,
+        "y": -3490.31618,
+        "width": 192.60835999999998,
+        "height": 129.47536
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/35/flood.webp",
+          "bytes": 20358,
+          "sha256": "64d7bb6ee1d7675d66044667771337ee28a067c5add8507ba8887bd6536a4d61"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/35/tsunami.webp",
+          "bytes": 34232,
+          "sha256": "bf8bb0e7abe98cb035df388174882f88f996c809416455a6861605d4bc4d35cd"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/35/landslide-warning.webp",
+          "bytes": 219960,
+          "sha256": "d7916d9640f33af2d55c880ffae0dc9fe83198a1f654cc53348a9010b314f5dd"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/35/landslide-special.webp",
+          "bytes": 125072,
+          "sha256": "7f8b6f901d2115c88408af4fc9db4763f34bdc8644b0ca7338c21ae38892cc93"
+        }
+      }
+    },
+    "36": {
+      "id": "tokushima",
+      "prefCode": "36",
+      "label": "徳島県",
+      "bounds": {
+        "x": 13357.29311,
+        "y": -3433.9838899999995,
+        "width": 133.62678,
+        "height": 88.78078
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/36/flood.webp",
+          "bytes": 52900,
+          "sha256": "2a4052b8d8fabb3cd1de2c1b4de7c211197fce134835e823c9c3899a5744b172"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/36/tsunami.webp",
+          "bytes": 104,
+          "sha256": "82152bdf67d3c5c2316bead36e30d12679a0c7434a0350b849e822e336c02d41"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/36/landslide-warning.webp",
+          "bytes": 101766,
+          "sha256": "f7ab40586bb00172a29b8cc7a1801d2dda165be1fd12287725fb7ca49e669068"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/36/landslide-special.webp",
+          "bytes": 62384,
+          "sha256": "c36148b82503c2491c5376747d062593d38831694c240d0a59412015fc9a1040"
+        }
+      }
+    },
+    "37": {
+      "id": "kagawa",
+      "prefCode": "37",
+      "label": "香川県",
+      "bounds": {
+        "x": 13336.373609999999,
+        "y": -3464.7633899999996,
+        "width": 115.97778000000001,
+        "height": 71.81378000000001
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/37/flood.webp",
+          "bytes": 47204,
+          "sha256": "1e7ea0e47860d285d41a66d11d47318e96e6d0ceccd8690466a7e4bca121ffd3"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/37/tsunami.webp",
+          "bytes": 1730,
+          "sha256": "df560d62c0df49bd6b1e606c61387feb9f7c91becea36c1607edb8a3ac5618a9"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/37/landslide-warning.webp",
+          "bytes": 140822,
+          "sha256": "96ce147e5fcac711249e4144af325b264a0f97e3a57ebee95e049bd116c3666e"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/37/landslide-special.webp",
+          "bytes": 48458,
+          "sha256": "4472f7ec0c56a0f9d99c0ce9014881ab675758ad2e2d982ad9d7ac2f80705f91"
+        }
+      }
+    },
+    "38": {
+      "id": "ehime",
+      "prefCode": "38",
+      "label": "愛媛県",
+      "bounds": {
+        "x": 13191.15784,
+        "y": -3440.49816,
+        "width": 188.43832,
+        "height": 161.04232000000002
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/38/flood.webp",
+          "bytes": 23078,
+          "sha256": "c7d93da109e89bd899c9662164f0b590a7ffa6513201a4af009e6a808845f33f"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/38/tsunami.webp",
+          "bytes": 124,
+          "sha256": "9a7e3e298d3655e50428a7e0b5933866dd239dab4e5f146f66bffaeb7f52325e"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/38/landslide-warning.webp",
+          "bytes": 98562,
+          "sha256": "2c63455657ffa4163e4ef58b91ae1520d103dc4e32c3be72e4df77d854dfb472"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/38/landslide-special.webp",
+          "bytes": 27934,
+          "sha256": "721e9421cf0daa181437f052c2f83ebd2029fab08f6f9512b2fe54d181376634"
+        }
+      }
+    },
+    "39": {
+      "id": "kochi",
+      "prefCode": "39",
+      "label": "高知県",
+      "bounds": {
+        "x": 13237.189320000001,
+        "y": -3399.13768,
+        "width": 204.95736,
+        "height": 139.68736
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/39/flood.webp",
+          "bytes": 2954,
+          "sha256": "3467a70eacd05e4281871eb87629a2711bde5c6f14b4588409a77aba34233607"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/39/tsunami.webp",
+          "bytes": 108,
+          "sha256": "ca974722f88a5011dc764d4b289dc737b70ae046fd2d76f99b43cb2596298f97"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/39/landslide-warning.webp",
+          "bytes": 100796,
+          "sha256": "11a17a40d4a4575800c64d3ce8129f8240adadce8896145010f0e2e1e54fd68e"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/39/landslide-special.webp",
+          "bytes": 1498,
+          "sha256": "9c375c6e5c53052ff52e9f5c523cc3e258941266a277e3bdbf2e1046c4c54c29"
+        }
+      }
+    },
+    "40": {
+      "id": "fukuoka",
+      "prefCode": "40",
+      "label": "福岡県",
+      "bounds": {
+        "x": 12994.250479999999,
+        "y": -3434.0355200000004,
+        "width": 133.85703999999998,
+        "height": 143.08303999999998
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/40/flood.webp",
+          "bytes": 196384,
+          "sha256": "9fbeb9d9ff73b017343d1133138d34051ec8b319dc27d608cef22c49c7955f40"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/40/tsunami.webp",
+          "bytes": 11300,
+          "sha256": "52873af56c7b3181e22c0df4ff7ba3ecc78fb274939172f6882b0866ee694943"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/40/landslide-warning.webp",
+          "bytes": 200272,
+          "sha256": "fc185a0d7bdf1cc6f27c1170101c44305eb29a3b492bd2498dc1ab7d46f5823c"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/40/landslide-special.webp",
+          "bytes": 102868,
+          "sha256": "f03144d10ee8ececf4c1f2b972121d250a3ffeeb99d1177b6f79e436f523f3d1"
+        }
+      }
+    },
+    "41": {
+      "id": "saga",
+      "prefCode": "41",
+      "label": "佐賀県",
+      "bounds": {
+        "x": 12966.288490000003,
+        "y": -3369.4895100000003,
+        "width": 95.63002,
+        "height": 82.14402000000001
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/41/flood.webp",
+          "bytes": 139444,
+          "sha256": "ccef9dfd5b74e69ffc271aaaa250a008a45e71d90972f93986e352a82656d6cf"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/41/tsunami.webp",
+          "bytes": 62250,
+          "sha256": "3a6963d8232f7bd2189ffe405ba202efbe5523c35d1dfd5f56d115cc2fe9fecd"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/41/landslide-warning.webp",
+          "bytes": 175478,
+          "sha256": "c6dfa43e251cc9bb53e266991956b607b2d3cabf31f847baee57c595748d86fb"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/41/landslide-special.webp",
+          "bytes": 77660,
+          "sha256": "cf4cc232a1e61a1e003db40f5f3e81e9934ffe0527969a90414215682df65fcc"
+        }
+      }
+    },
+    "42": {
+      "id": "nagasaki",
+      "prefCode": "42",
+      "label": "長崎県",
+      "bounds": {
+        "x": 12820.912249999998,
+        "y": -3484.26575,
+        "width": 230.65149999999997,
+        "height": 299.0525
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/42/flood.webp",
+          "bytes": 5048,
+          "sha256": "01a87fe9a527595497c8c64cc57ac10ca18c8cd8606ab5484f6edf063a8370de"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/42/tsunami.webp",
+          "bytes": 898,
+          "sha256": "30ceb8bda388885f76621988c074a0a97aae94a6d887c5ec6ec4565c8da33b48"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/42/landslide-warning.webp",
+          "bytes": 50794,
+          "sha256": "e2dfca5fcc959b81ee5274cd9c7792c6503828fd877dc95272da6a70baff53d8"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/42/landslide-special.webp",
+          "bytes": 33352,
+          "sha256": "7cd53e8a5db4e62f2bc5c3d02ea02721cb547a4779dacaa7f4a68245aa39989c"
+        }
+      }
+    },
+    "43": {
+      "id": "kumamoto",
+      "prefCode": "43",
+      "label": "熊本県",
+      "bounds": {
+        "x": 12986.940669999998,
+        "y": -3328.91033,
+        "width": 155.40766,
+        "height": 128.81665999999998
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/43/flood.webp",
+          "bytes": 76378,
+          "sha256": "ed0d06113215de11ebf66e3c818828c1bcb27d000547d7f296121f7800d08913"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/43/tsunami.webp",
+          "bytes": 36850,
+          "sha256": "e6f63719607dc961b65072173f784d31b538adda2606aece94fd17e4df1c1eb4"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/43/landslide-warning.webp",
+          "bytes": 214064,
+          "sha256": "86d7a6e9385fdfe2434908e78ae6c2e712c59478df6a9eb02dfbcc8c02cbbb02"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/43/landslide-special.webp",
+          "bytes": 125002,
+          "sha256": "ae8c6bcd58223f40a60c62b835811ae869571a2cd9cf1bd7b1bc7d5872ffef3d"
+        }
+      }
+    },
+    "44": {
+      "id": "oita",
+      "prefCode": "44",
+      "label": "大分県",
+      "bounds": {
+        "x": 13073.393290000002,
+        "y": -3383.1037100000003,
+        "width": 144.22042000000002,
+        "height": 120.73842000000002
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/44/flood.webp",
+          "bytes": 17918,
+          "sha256": "fd37fa1f5c691efdc4560da8edacf873712e9fb8d1752591525419809957ca2c"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/44/tsunami.webp",
+          "bytes": 1580,
+          "sha256": "d2aaa4d6bd6cd85bf37339694f8762df9d8c91adbd78cebd8358f2b3ebf41170"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/44/landslide-warning.webp",
+          "bytes": 163104,
+          "sha256": "d7ede88a4aafc7302055f53fa649a3aacee366ba30714188b165a6767578785a"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/44/landslide-special.webp",
+          "bytes": 72030,
+          "sha256": "b351e162b2a197caea156828c2ad876b2a798b2a1258a115962e70275fe9236f"
+        }
+      }
+    },
+    "45": {
+      "id": "miyazaki",
+      "prefCode": "45",
+      "label": "宮崎県",
+      "bounds": {
+        "x": 13060.60319,
+        "y": -3293.6288099999997,
+        "width": 137.70262,
+        "height": 167.29662000000002
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/45/flood.webp",
+          "bytes": 40626,
+          "sha256": "ca3e1740e216674cf9986ae63873bc873161baee321d8e6e216aa19f29785851"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/45/tsunami.webp",
+          "bytes": 48432,
+          "sha256": "10038da0d3f5186619935f4cdce1bec69eb0677c24bcd740752525fcec36fe6f"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/45/landslide-warning.webp",
+          "bytes": 95928,
+          "sha256": "3f71d61acbf23876e09a7447793511d59563ac5c24d2c05f13c46c45ca1238be"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/45/landslide-special.webp",
+          "bytes": 56824,
+          "sha256": "c1dd9f4c5b90c2801f2672b6a0ab5decc34a9e301e91d0f8d5aa5db682eebb01"
+        }
+      }
+    },
+    "46": {
+      "id": "kagoshima",
+      "prefCode": "46",
+      "label": "鹿児島県",
+      "bounds": {
+        "x": 12818.386020000002,
+        "y": -3251.82698,
+        "width": 323.32196,
+        "height": 571.0919600000001
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/46/flood.webp",
+          "bytes": 1864,
+          "sha256": "b1f00ad0ccdb9592bc9384a68ee9019d943e5f099dab37142aac46102a90c1b0"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/46/tsunami.webp",
+          "bytes": 12720,
+          "sha256": "c979564e89f9b1aa16b1f3ff1cb4073980719ed30407e03a6b427284f4ddd6b5"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/46/landslide-warning.webp",
+          "bytes": 40954,
+          "sha256": "40a72060f56028cc64474f964da68b99016e13d7b7e7f4c6738d8e0d97c96fb5"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/46/landslide-special.webp",
+          "bytes": 17008,
+          "sha256": "5123cc09e77f5cec1ef468135fc01afd9ed80a7f27af38732684f2dee1befe32"
+        }
+      }
+    },
+    "47": {
+      "id": "okinawa",
+      "prefCode": "47",
+      "label": "沖縄県",
+      "bounds": {
+        "x": 12262.87683,
+        "y": -2819.0241699999997,
+        "width": 900.8293400000001,
+        "height": 444.95734000000004
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/47/flood.webp",
+          "bytes": 832,
+          "sha256": "3d628eaa2fb91eb37aeae26c71f70869b909d840a3ea19b442cdeb48944d210a"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/47/tsunami.webp",
+          "bytes": 88,
+          "sha256": "8e0407c40340fa893ae7c21370ac625e5fdf959ec984e7add6c231ff969baf5a"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/47/landslide-warning.webp",
+          "bytes": 2814,
+          "sha256": "87167133a245f5dd88073a0e54d3c8a18825e19f517e0b667bf3674a62d8248d"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/47/landslide-special.webp",
+          "bytes": 188,
+          "sha256": "7ed4c28665fb0e6fa790c6ebea41e202c72de04a3d0c52afc4801e039cd59136"
+        }
+      }
+    },
+    "01": {
+      "id": "hokkaido",
+      "prefCode": "01",
+      "label": "北海道",
+      "bounds": {
+        "x": 13899.458959999998,
+        "y": -4589.6590400000005,
+        "width": 1023.82008,
+        "height": 488.40308
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/01/flood.webp",
+          "bytes": 19688,
+          "sha256": "a3daa71875e5c3536a6221b5c7f7fc1142e36bfb5a5b1a9be133777b10416b7b"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/01/tsunami.webp",
+          "bytes": 27056,
+          "sha256": "ca6454028ba785c1122ca4646619d7fd4c1e6898eaf67b188abf2599eb9afa1c"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/01/landslide-warning.webp",
+          "bytes": 10660,
+          "sha256": "e9d228ebb9d9a431de157fc7b112b2c60e5a800f1343b7fb3b17693ac018d401"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/01/landslide-special.webp",
+          "bytes": 4116,
+          "sha256": "b53def3e203b2f291761e5c0ca10b4064bd47b6966744534820e374a0fa45f5e"
+        }
+      }
+    },
+    "02": {
+      "id": "aomori",
+      "prefCode": "02",
+      "label": "青森県",
+      "bounds": {
+        "x": 13975.20547,
+        "y": -4166.3635300000005,
+        "width": 203.89206,
+        "height": 155.35906
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/02/flood.webp",
+          "bytes": 114,
+          "sha256": "0ba21a99d60194f780dc23912d769f22d0a47114acd77a525e125ff63c573962"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/02/tsunami.webp",
+          "bytes": 69100,
+          "sha256": "4e13f59519c48a5c711c2ecadfa31d6c983f494c99753a90164142fd0a1231a7"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/02/landslide-warning.webp",
+          "bytes": 53170,
+          "sha256": "b94e1de6df0f0fdd891713e25db8a6daf341c541f5557a68057ec33bb726c96b"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/02/landslide-special.webp",
+          "bytes": 24274,
+          "sha256": "6b94766b03a91993a62a10d2b2c1fb45ff73ed028e718afdd73d852b056c9401"
+        }
+      }
+    },
+    "03": {
+      "id": "iwate",
+      "prefCode": "03",
+      "label": "岩手県",
+      "bounds": {
+        "x": 14054.90832,
+        "y": -4055.42868,
+        "width": 162.73836000000003,
+        "height": 191.07136
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/03/flood.webp",
+          "bytes": 1020,
+          "sha256": "4ce142f7df2fc8251fbafb9a1020d99f16355cbfa4494b622d3730abc76d5747"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/03/tsunami.webp",
+          "bytes": 39650,
+          "sha256": "d7f0ac844d13d716a9a3c84f5b30db7902680eb26cbed45728c4a6b9fd61301f"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/03/landslide-warning.webp",
+          "bytes": 114278,
+          "sha256": "3cdf21b1dc222368cd205db59b1a2192c9285ca76829736429351325f87aff62"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/03/landslide-special.webp",
+          "bytes": 43214,
+          "sha256": "90e594e1a260f39d731304a0c537133da36b25ce0fbe1b6c37853c8c7c424af9"
+        }
+      }
+    },
+    "04": {
+      "id": "miyagi",
+      "prefCode": "04",
+      "label": "宮城県",
+      "bounds": {
+        "x": 14018.00006,
+        "y": -3909.77594,
+        "width": 158.99788,
+        "height": 141.95088
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/04/flood.webp",
+          "bytes": 36550,
+          "sha256": "2e1a538a195f17f19c8cdf638bb68d64e9068e4d81d5ce2a74b9bded0deea89b"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/04/tsunami.webp",
+          "bytes": 108050,
+          "sha256": "678d01aafec641be5a6c4d94b9bb28cc0c0b49b85021271fb67e3bba62883826"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/04/landslide-warning.webp",
+          "bytes": 73506,
+          "sha256": "2c9ccf02c4d9f80316cff9cb03dfa6f6178be472ec12594857133dde5a7b5b38"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/04/landslide-special.webp",
+          "bytes": 28054,
+          "sha256": "f15a04cce1a594223a61e6de02b79adb9f17ccbafd9cf16a38b20e1519493696"
+        }
+      }
+    },
+    "05": {
+      "id": "akita",
+      "prefCode": "05",
+      "label": "秋田県",
+      "bounds": {
+        "x": 13959.11027,
+        "y": -4061.32073,
+        "width": 150.64646000000002,
+        "height": 184.21846
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/05/flood.webp",
+          "bytes": 84952,
+          "sha256": "75f4b5c4c3fbb91e6d878829b794b143a0619e31df93376a7ef39dd9be06f78d"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/05/tsunami.webp",
+          "bytes": 54888,
+          "sha256": "666ccc0650c29fb56943e57ad2a6fda7a734489f7f14e2cc2844563846b82530"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/05/landslide-warning.webp",
+          "bytes": 87556,
+          "sha256": "5ba0a97f13ec9585803fc6a77c098edf3418aa2c865bd5b8baba4907c3b75fce"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/05/landslide-special.webp",
+          "bytes": 30288,
+          "sha256": "f3188973f74513998262ff2011d3020af1cdaf87c0f95703cb232351b4937b83"
+        }
+      }
+    },
+    "06": {
+      "id": "yamagata",
+      "prefCode": "06",
+      "label": "山形県",
+      "bounds": {
+        "x": 13942.32184,
+        "y": -3930.57916,
+        "width": 132.04832,
+        "height": 166.92031999999998
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/06/flood.webp",
+          "bytes": 124202,
+          "sha256": "1589d43147b1d4b743eef63e8a0c764cb0c80ff70f83e1b359958abfb197b9c1"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/06/tsunami.webp",
+          "bytes": 10724,
+          "sha256": "c12be9db8a6b79c17de490e0eeb6d2782503bb2000d45bf481473c629760a6a7"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/06/landslide-warning.webp",
+          "bytes": 108736,
+          "sha256": "9d54d7f17950e55687e98a8cb69c4d438dd18fbe2df63776fc6ef6673e6a0b41"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/06/landslide-special.webp",
+          "bytes": 33422,
+          "sha256": "d58024fdbf3ab2fbdd353c344ac5662353cdd66a23c66360500e19f75783e22f"
+        }
+      }
+    },
+    "07": {
+      "id": "fukushima",
+      "prefCode": "07",
+      "label": "福島県",
+      "bounds": {
+        "x": 13905.54128,
+        "y": -3808.59872,
+        "width": 209.69343999999998,
+        "height": 140.40044
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/07/flood.webp",
+          "bytes": 40172,
+          "sha256": "d4e2b99768005e0364b8f13ca92ab7a89a20c9530454860867d3f5091438bd82"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/07/tsunami.webp",
+          "bytes": 27334,
+          "sha256": "cc0b3c20563bd53482c73d764a053186606f86b7032efac1ad8ed2230aaedad7"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/07/landslide-warning.webp",
+          "bytes": 74802,
+          "sha256": "0e6f4a8b6afe4e70ac2ccced875d06d2516cb87784312587ee7260f67c708049"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/07/landslide-special.webp",
+          "bytes": 28228,
+          "sha256": "c3652e3268a1f494f9849fbe6a82de80977729fb28246a447609606a2a29d8ad"
+        }
+      }
+    },
+    "08": {
+      "id": "ibaraki",
+      "prefCode": "08",
+      "label": "茨城県",
+      "bounds": {
+        "x": 13959.85155,
+        "y": -3703.44745,
+        "width": 134.2649,
+        "height": 138.4519
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/08/flood.webp",
+          "bytes": 15060,
+          "sha256": "85204f2b8f8d30ec4b2a2ab708e211ad05431bbfb3ead9619705597e95a65028"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/08/tsunami.webp",
+          "bytes": 38026,
+          "sha256": "e94e911c524160e5ebcc5e5082c85951d9424f4b60625f2446bbf66c7f2eb181"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/08/landslide-warning.webp",
+          "bytes": 89810,
+          "sha256": "4d2fd28672b42b2b000f54afbaf589393875c6091402340f87db87f17dc5154f"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/08/landslide-special.webp",
+          "bytes": 43258,
+          "sha256": "c083e2dc34dc1b723f770d192f5f0b8dfde036b610423e0c481f5ea6fdfc0241"
+        }
+      }
+    },
+    "09": {
+      "id": "tochigi",
+      "prefCode": "09",
+      "label": "栃木県",
+      "bounds": {
+        "x": 13924.460199999998,
+        "y": -3723.6947999999998,
+        "width": 112.95360000000001,
+        "height": 111.9236
+      },
+      "types": {
+        "flood": {
+          "url": "/map/layers/hazard-overview/09/flood.webp",
+          "bytes": 160032,
+          "sha256": "a45d00e731dceca157216b1b0d5b92dc783f245809e6758d9bb9f416aff47f16"
+        },
+        "tsunami": {
+          "url": "/map/layers/hazard-overview/09/tsunami.webp",
+          "bytes": 138,
+          "sha256": "c7a26845ad467ba15061c425a2598a1707e0e94d9210ce9731688407890efad6"
+        },
+        "landslide-warning": {
+          "url": "/map/layers/hazard-overview/09/landslide-warning.webp",
+          "bytes": 174900,
+          "sha256": "d8b6b7338a0848bf0651559834152e513098eaf424316319f264409f5954067d"
+        },
+        "landslide-special": {
+          "url": "/map/layers/hazard-overview/09/landslide-special.webp",
+          "bytes": 81662,
+          "sha256": "fff0857f873744bb4ae865e35d710627bb35beee7bc8425bc4f4bada5b645a71"
+        }
+      }
+    }
+  }
+}

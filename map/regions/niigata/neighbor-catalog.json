@@ -77,7 +77,7 @@
     {
       "id": "layer-hazard--near-nagano",
       "label": "長野県 ハザード",
-      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey={layerId}",
+      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&overviewIndexUrl=/map/layers/hazard-overview/index.json&prefCode={prefCode}&layerKey={layerId}",
       "visible": false,
       "source": "managed/hazard",
       "order": 901,
@@ -166,7 +166,7 @@
     {
       "id": "layer-hazard--near-fukushima",
       "label": "福島県 ハザード",
-      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey={layerId}",
+      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&overviewIndexUrl=/map/layers/hazard-overview/index.json&prefCode={prefCode}&layerKey={layerId}",
       "visible": false,
       "source": "managed/hazard",
       "order": 903,
@@ -255,7 +255,7 @@
     {
       "id": "layer-hazard--near-yamagata",
       "label": "山形県 ハザード",
-      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey={layerId}",
+      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&overviewIndexUrl=/map/layers/hazard-overview/index.json&prefCode={prefCode}&layerKey={layerId}",
       "visible": false,
       "source": "managed/hazard",
       "order": 905,
@@ -344,7 +344,7 @@
     {
       "id": "layer-hazard--near-gunma",
       "label": "群馬県 ハザード",
-      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey={layerId}",
+      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&overviewIndexUrl=/map/layers/hazard-overview/index.json&prefCode={prefCode}&layerKey={layerId}",
       "visible": false,
       "source": "managed/hazard",
       "order": 907,
@@ -433,7 +433,7 @@
     {
       "id": "layer-hazard--near-toyama",
       "label": "富山県 ハザード",
-      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey={layerId}",
+      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&overviewIndexUrl=/map/layers/hazard-overview/index.json&prefCode={prefCode}&layerKey={layerId}",
       "visible": false,
       "source": "managed/hazard",
       "order": 909,

@@ -74,6 +74,10 @@ test('県モードや縮尺外はそのまま', () => {
     hazardDisplayPlan({ requestedMode: 'none' }),
     { mode: 'none', degraded: false, notice: '' },
   )
+  assert.deepEqual(
+    hazardDisplayPlan({ requestedMode: 'national' }),
+    { mode: 'national', degraded: false, notice: '' },
+  )
 })
 
 test('Set でも配列でも失敗キーを受け取れる', () => {

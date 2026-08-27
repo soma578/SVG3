@@ -65,7 +65,7 @@
     {
       "id": "layer-hazard--near-ibaraki",
       "label": "茨城県 ハザード",
-      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey={layerId}",
+      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&overviewIndexUrl=/map/layers/hazard-overview/index.json&prefCode={prefCode}&layerKey={layerId}",
       "visible": false,
       "source": "managed/hazard",
       "order": 901,
@@ -154,7 +154,7 @@
     {
       "id": "layer-hazard--near-saitama",
       "label": "埼玉県 ハザード",
-      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey={layerId}",
+      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&overviewIndexUrl=/map/layers/hazard-overview/index.json&prefCode={prefCode}&layerKey={layerId}",
       "visible": false,
       "source": "managed/hazard",
       "order": 903,
@@ -243,7 +243,7 @@
     {
       "id": "layer-hazard--near-tokyo",
       "label": "東京都 ハザード",
-      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&layerKey={layerId}",
+      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&overviewIndexUrl=/map/layers/hazard-overview/index.json&prefCode={prefCode}&layerKey={layerId}",
       "visible": false,
       "source": "managed/hazard",
       "order": 905,

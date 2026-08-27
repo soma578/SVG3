@@ -80,6 +80,7 @@ test('地域ごとに変わる資産は region に分類される', () => {
     '/map/regions/okayama/runtime-config.json',
     '/map/regions/okayama/municipalities.json',
     '/map/layers/hazard/33/okayama.svg',
+    '/map/layers/hazard-overview/33/flood.webp',
     '/data/okayama/districts-svg/33101.svg',
   ]) {
     assert.equal(classifyRequest({ pathname }), 'region', pathname)

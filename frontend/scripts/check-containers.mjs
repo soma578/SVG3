@@ -46,7 +46,7 @@ const collectRefs = (href) => {
   if (base) refs.push(base)
   if (hash) {
     const params = new URLSearchParams(hash)
-    for (const key of ['summary', 'data', 'prefSvgUrl', 'svgUrlTemplate', 'statusOverlay']) {
+    for (const key of ['summary', 'data', 'prefSvgUrl', 'svgUrlTemplate', 'overviewIndexUrl', 'statusOverlay']) {
       const value = params.get(key)
       if (value) refs.push(value)
     }

@@ -56,22 +56,22 @@
              title="道路通行情報" class="poi clickable" visibility="hidden" opacity="1"/>
 
   <animation id="layer-hazard" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/37/kagawa.svg&amp;svgUrlTemplate=/map/layers/hazard/37/districts/{code}.svg&amp;layerKey=layer-hazard"
+             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/37/kagawa.svg&amp;svgUrlTemplate=/map/layers/hazard/37/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=37&amp;layerKey=layer-hazard"
              title="L4 ハザード" class="vectorEtcData" visibility="visible" opacity="0.7"/>
 
   <!-- 周辺地域mount: 徳島県のハザード -->
   <animation id="layer-hazard--near-tokushima" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/36/tokushima.svg&amp;svgUrlTemplate=/map/layers/hazard/36/districts/{code}.svg&amp;layerKey=layer-hazard--near-tokushima"
+             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/36/tokushima.svg&amp;svgUrlTemplate=/map/layers/hazard/36/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=36&amp;layerKey=layer-hazard--near-tokushima"
              title="徳島県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
 
   <!-- 周辺地域mount: 愛媛県のハザード -->
   <animation id="layer-hazard--near-ehime" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/38/ehime.svg&amp;svgUrlTemplate=/map/layers/hazard/38/districts/{code}.svg&amp;layerKey=layer-hazard--near-ehime"
+             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/38/ehime.svg&amp;svgUrlTemplate=/map/layers/hazard/38/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=38&amp;layerKey=layer-hazard--near-ehime"
              title="愛媛県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
 
   <!-- 周辺地域mount: 岡山県のハザード -->
   <animation id="layer-hazard--near-okayama" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/33/okayama.svg&amp;svgUrlTemplate=/map/layers/hazard/33/districts/{code}.svg&amp;layerKey=layer-hazard--near-okayama"
+             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/33/okayama.svg&amp;svgUrlTemplate=/map/layers/hazard/33/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=33&amp;layerKey=layer-hazard--near-okayama"
              title="岡山県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
 
   <animation id="layer-current-location" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"

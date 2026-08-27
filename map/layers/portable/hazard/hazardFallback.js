@@ -10,7 +10,7 @@
 /**
  * どのハザードを描くべきかを決める。
  *
- * @param {'none'|'pref'|'municipality'} requestedMode ズームから決まる本来のモード
+ * @param {'none'|'national'|'pref'|'municipality'} requestedMode ズームから決まる本来のモード
  * @param {Set<string>|Array<string>} failedKeys       取得に失敗したキー
  * @param {string} municipalityKey                     市区町村版のキー
  * @param {boolean} prefAvailable                      県全体版が使えるか
