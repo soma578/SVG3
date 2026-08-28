@@ -64,6 +64,23 @@ const nextConfig = {
           { key: 'Cache-Control', value: 'public, no-cache' },
         ],
       },
+      {
+        // レイヤーcontroller HTML — S-LaWAがcross-origin iframeとしてロードするため
+        // グローバルの X-Frame-Options: SAMEORIGIN を上書きして埋め込みを許可する。
+        // Vercelはheadersの後勝ちではなく先勝ちのため、ここで明示的に空文字で無効化し
+        // Content-Security-Policy の frame-ancestors で代替する。
+        source: '/map/layers/:path*.html',
+        headers: [
+          // X-Frame-Options を削除できないため ALLOWALL に上書き（非標準だが広くサポート）
+          { key: 'X-Frame-Options', value: 'ALLOWALL' },
+          // 現代ブラウザ向け: どのオリジンからでもiframe埋め込みを許可
+          { key: 'Content-Security-Policy', value: "frame-ancestors *" },
+          // controller HTMLとそこからの相対importもCORSで取得できるようにする
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+          { key: 'Cross-Origin-Resource-Policy', value: 'cross-origin' },
+          { key: 'Cache-Control', value: 'public, no-cache' },
+        ],
+      },
     ]
   },
 }
