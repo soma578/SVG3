@@ -55,6 +55,7 @@ export const fetchWithRuntimeCache = async (
     emitDataStatus,
     logLabel = 'runtimeCache',
     requestCache = 'default',
+    fetchImpl = globalThis.fetch?.bind(globalThis),
   } = {},
 ) => {
   const absoluteUrl = new URL(url, window.location.href).href;
@@ -81,7 +82,8 @@ export const fetchWithRuntimeCache = async (
 
   try {
     const startedAt = performance.now();
-    const response = await fetch(request);
+    if (typeof fetchImpl !== 'function') throw new Error('runtime fetch implementation is unavailable');
+    const response = await fetchImpl(request);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     // 本文は一度だけ読む。キャッシュへ入れるものと返すものを同じ文字列から作る。
     const text = await response.text();

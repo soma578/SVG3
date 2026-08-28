@@ -69,63 +69,12 @@
       }
     },
     {
-      "id": "layer-hazard--near-mie",
-      "label": "三重県 ハザード",
-      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&overviewIndexUrl=/map/layers/hazard-overview/index.json&prefCode={prefCode}&layerKey={layerId}",
-      "visible": false,
-      "source": "managed/hazard",
-      "order": 901,
-      "group": "周辺地域",
-      "note": "三重県の洪水・土砂災害ハザードを越境して重ねる",
-      "kind": "vector",
-      "className": "vectorEtcData",
-      "symbol": "災",
-      "icon": "",
-      "accent": "#AD3F31",
-      "toggleKey": "layer-hazard--near-mie",
-      "mounts": [
-        "layer-hazard--near-mie"
-      ],
-      "visibilityStrategy": "native",
-      "search": null,
-      "manage": null,
-      "controllerUi": {
-        "label": "種類"
-      },
-      "userToggle": true,
-      "messages": {
-        "toHost": [
-          "runtime:dataStatus",
-          "runtime:layerReady",
-          "runtime:layerStateChanged"
-        ],
-        "fromHost": [
-          "map:layerVisibilityChanged",
-          "map:setMunicipalityFilter",
-          "map:setLayerState"
-        ]
-      },
-      "alertFeed": null,
-      "health": null,
-      "dataSource": null,
-      "disabled": false,
-      "requiresController": false,
-      "experimental": false,
-      "community": null,
-      "neighborRegion": {
-        "id": "mie",
-        "label": "三重県",
-        "prefCode": "24",
-        "relation": "land"
-      }
-    },
-    {
       "id": "layer-offline-basemap--near-wakayama",
       "label": "和歌山県 背景",
       "href": "/map/layers/offline-basemap/{regionId}.svg",
       "visible": false,
       "source": "managed/offline-basemap",
-      "order": 902,
+      "order": 901,
       "group": "周辺地域",
       "note": "和歌山県の県境・海岸線・地名（通信なしでも見える）",
       "kind": "vector",
@@ -158,63 +107,12 @@
       }
     },
     {
-      "id": "layer-hazard--near-wakayama",
-      "label": "和歌山県 ハザード",
-      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&overviewIndexUrl=/map/layers/hazard-overview/index.json&prefCode={prefCode}&layerKey={layerId}",
-      "visible": false,
-      "source": "managed/hazard",
-      "order": 903,
-      "group": "周辺地域",
-      "note": "和歌山県の洪水・土砂災害ハザードを越境して重ねる",
-      "kind": "vector",
-      "className": "vectorEtcData",
-      "symbol": "災",
-      "icon": "",
-      "accent": "#AD3F31",
-      "toggleKey": "layer-hazard--near-wakayama",
-      "mounts": [
-        "layer-hazard--near-wakayama"
-      ],
-      "visibilityStrategy": "native",
-      "search": null,
-      "manage": null,
-      "controllerUi": {
-        "label": "種類"
-      },
-      "userToggle": true,
-      "messages": {
-        "toHost": [
-          "runtime:dataStatus",
-          "runtime:layerReady",
-          "runtime:layerStateChanged"
-        ],
-        "fromHost": [
-          "map:layerVisibilityChanged",
-          "map:setMunicipalityFilter",
-          "map:setLayerState"
-        ]
-      },
-      "alertFeed": null,
-      "health": null,
-      "dataSource": null,
-      "disabled": false,
-      "requiresController": false,
-      "experimental": false,
-      "community": null,
-      "neighborRegion": {
-        "id": "wakayama",
-        "label": "和歌山県",
-        "prefCode": "30",
-        "relation": "land"
-      }
-    },
-    {
       "id": "layer-offline-basemap--near-osaka",
       "label": "大阪府 背景",
       "href": "/map/layers/offline-basemap/{regionId}.svg",
       "visible": false,
       "source": "managed/offline-basemap",
-      "order": 904,
+      "order": 902,
       "group": "周辺地域",
       "note": "大阪府の県境・海岸線・地名（通信なしでも見える）",
       "kind": "vector",
@@ -247,63 +145,12 @@
       }
     },
     {
-      "id": "layer-hazard--near-osaka",
-      "label": "大阪府 ハザード",
-      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&overviewIndexUrl=/map/layers/hazard-overview/index.json&prefCode={prefCode}&layerKey={layerId}",
-      "visible": false,
-      "source": "managed/hazard",
-      "order": 905,
-      "group": "周辺地域",
-      "note": "大阪府の洪水・土砂災害ハザードを越境して重ねる",
-      "kind": "vector",
-      "className": "vectorEtcData",
-      "symbol": "災",
-      "icon": "",
-      "accent": "#AD3F31",
-      "toggleKey": "layer-hazard--near-osaka",
-      "mounts": [
-        "layer-hazard--near-osaka"
-      ],
-      "visibilityStrategy": "native",
-      "search": null,
-      "manage": null,
-      "controllerUi": {
-        "label": "種類"
-      },
-      "userToggle": true,
-      "messages": {
-        "toHost": [
-          "runtime:dataStatus",
-          "runtime:layerReady",
-          "runtime:layerStateChanged"
-        ],
-        "fromHost": [
-          "map:layerVisibilityChanged",
-          "map:setMunicipalityFilter",
-          "map:setLayerState"
-        ]
-      },
-      "alertFeed": null,
-      "health": null,
-      "dataSource": null,
-      "disabled": false,
-      "requiresController": false,
-      "experimental": false,
-      "community": null,
-      "neighborRegion": {
-        "id": "osaka",
-        "label": "大阪府",
-        "prefCode": "27",
-        "relation": "land"
-      }
-    },
-    {
       "id": "layer-offline-basemap--near-kyoto",
       "label": "京都府 背景",
       "href": "/map/layers/offline-basemap/{regionId}.svg",
       "visible": false,
       "source": "managed/offline-basemap",
-      "order": 906,
+      "order": 903,
       "group": "周辺地域",
       "note": "京都府の県境・海岸線・地名（通信なしでも見える）",
       "kind": "vector",
@@ -321,57 +168,6 @@
       "controllerUi": null,
       "userToggle": true,
       "messages": null,
-      "alertFeed": null,
-      "health": null,
-      "dataSource": null,
-      "disabled": false,
-      "requiresController": false,
-      "experimental": false,
-      "community": null,
-      "neighborRegion": {
-        "id": "kyoto",
-        "label": "京都府",
-        "prefCode": "26",
-        "relation": "land"
-      }
-    },
-    {
-      "id": "layer-hazard--near-kyoto",
-      "label": "京都府 ハザード",
-      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&overviewIndexUrl=/map/layers/hazard-overview/index.json&prefCode={prefCode}&layerKey={layerId}",
-      "visible": false,
-      "source": "managed/hazard",
-      "order": 907,
-      "group": "周辺地域",
-      "note": "京都府の洪水・土砂災害ハザードを越境して重ねる",
-      "kind": "vector",
-      "className": "vectorEtcData",
-      "symbol": "災",
-      "icon": "",
-      "accent": "#AD3F31",
-      "toggleKey": "layer-hazard--near-kyoto",
-      "mounts": [
-        "layer-hazard--near-kyoto"
-      ],
-      "visibilityStrategy": "native",
-      "search": null,
-      "manage": null,
-      "controllerUi": {
-        "label": "種類"
-      },
-      "userToggle": true,
-      "messages": {
-        "toHost": [
-          "runtime:dataStatus",
-          "runtime:layerReady",
-          "runtime:layerStateChanged"
-        ],
-        "fromHost": [
-          "map:layerVisibilityChanged",
-          "map:setMunicipalityFilter",
-          "map:setLayerState"
-        ]
-      },
       "alertFeed": null,
       "health": null,
       "dataSource": null,

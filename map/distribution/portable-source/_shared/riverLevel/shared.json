@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "kind": "portable-shared-component",
   "packageId": "riverLevel",
-  "sharedVersion": "32a1d784638b",
+  "sharedVersion": "f46b6049a888",
   "files": [
     "map/icons/app/icon-192.png",
     "map/icons/app/icon-512.png",
@@ -39,6 +39,8 @@
     "map/icons/team-planned.svg",
     "map/icons/team-standby.png",
     "map/icons/team-standby.svg",
+    "map/layers/portable/portable-network/runtime.package.json",
+    "map/layers/portable/portable-network/safeFetch.js",
     "map/layers/portable/representative-pins/DENSITY_POINTS_FORMAT.md",
     "map/layers/portable/representative-pins/densityPointFormat.js",
     "map/layers/portable/representative-pins/mapMessages.js",

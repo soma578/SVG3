@@ -48,6 +48,11 @@
              xlink:href="/map/layers/portable/team-activity/teamActivityAreaLayer.svg#data=/map/data/qtct/teamActivity/detail-index.json&amp;districtSvgUrlTemplate=/data/{recordRegionId}/districts-svg/{code}.svg&amp;layer=teamActivity"
              title="L3 チーム活動エリア" class="vectorEtcData" visibility="hidden" opacity="0.9"/>
 
+  <!-- 気象庁の固定originだけを5分間隔・同時1要求で取得するcontrolled-directレイヤー -->
+  <animation id="layer-flood-warning" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
+             xlink:href="/map/layers/portable/flood-warning/floodWarningLayer.svg"
+             title="洪水・気象警報" class="poi clickable" visibility="hidden" opacity="1"/>
+
   <animation id="layer-river-level" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
              xlink:href="/map/layers/portable/river-level/riverLevelLayer.svg#summary=/map/data/qtct/riverLevel/summary.json&amp;data=/map/data/qtct/riverLevel/aichi/detail.json&amp;layer=riverLevel&amp;detailByRegion=/map/data/qtct/riverLevel/{recordRegionId}/detail.json"
              title="河川水位" class="poi clickable" visibility="hidden" opacity="1"/>
@@ -61,28 +66,8 @@
              title="道路通行情報" class="poi clickable" visibility="hidden" opacity="1"/>
 
   <animation id="layer-hazard" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/23/aichi.svg&amp;svgUrlTemplate=/map/layers/hazard/23/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=23&amp;layerKey=layer-hazard"
+             xlink:href="/map/layers/hazard-native/hazardLayer.svg#layerKey=layer-hazard"
              title="L4 ハザード" class="vectorEtcData" visibility="visible" opacity="0.7"/>
-
-  <!-- 周辺地域mount: 岐阜県のハザード -->
-  <animation id="layer-hazard--near-gifu" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/21/gifu.svg&amp;svgUrlTemplate=/map/layers/hazard/21/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=21&amp;layerKey=layer-hazard--near-gifu"
-             title="岐阜県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
-
-  <!-- 周辺地域mount: 静岡県のハザード -->
-  <animation id="layer-hazard--near-shizuoka" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/22/shizuoka.svg&amp;svgUrlTemplate=/map/layers/hazard/22/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=22&amp;layerKey=layer-hazard--near-shizuoka"
-             title="静岡県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
-
-  <!-- 周辺地域mount: 長野県のハザード -->
-  <animation id="layer-hazard--near-nagano" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/20/nagano.svg&amp;svgUrlTemplate=/map/layers/hazard/20/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=20&amp;layerKey=layer-hazard--near-nagano"
-             title="長野県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
-
-  <!-- 周辺地域mount: 三重県のハザード -->
-  <animation id="layer-hazard--near-mie" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/24/mie.svg&amp;svgUrlTemplate=/map/layers/hazard/24/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=24&amp;layerKey=layer-hazard--near-mie"
-             title="三重県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
 
   <animation id="layer-current-location" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
              xlink:href="/map/layers/portable/current-location/currentLocationLayer.svg"

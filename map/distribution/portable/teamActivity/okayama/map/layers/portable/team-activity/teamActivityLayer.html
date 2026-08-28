@@ -46,7 +46,7 @@
   </details>
 </section>
 <script type="module">
-import { initRepresentativePinsLayer } from '../representative-pins/representativePinsCore.js';
+import { initRepresentativePinsLayer, portableLayerDataParams } from '../representative-pins/representativePinsCore.js';
 import { renderTeamActivityDetail } from './teamActivityDetail.js';
 import {
   TEAM_ACTIVITY_CSV_CHANNEL, TEAM_ACTIVITY_CSV_STORAGE_KEY, TEAM_ACTIVITY_CSV_TEMPLATE,
@@ -62,8 +62,7 @@ const start = () => {
     renderFeatureDetail: renderTeamActivityDetail,
   });
   const status = document.getElementById('csv-status');
-  const hash = String(window.svgImageProps?.hash || window.svgImageProps?.Path?.split('#')?.[1] || '');
-  const sourceCsvUrl = new URLSearchParams(hash.replace(/^#/, '')).get('sourceCsv') || '';
+  const sourceCsvUrl = portableLayerDataParams().get('sourceCsv') || '';
   const appLayersAdmin = document.getElementById('app-layers-admin');
   const adminUrl = new URL('./appLayersAdmin.html', window.location.href);
   if (sourceCsvUrl) adminUrl.searchParams.set('sourceCsv', sourceCsvUrl);

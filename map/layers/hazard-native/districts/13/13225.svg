@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="13946.4 -3565.27 6.13 4.82"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>稲城市 ハザード詳細 13225</title>
+  <animation id="hazard-source-13225"
+    title="稲城市 ハザード詳細" href="/map/layers/hazard/13/districts/13225.svg" xlink:href="/map/layers/hazard/13/districts/13225.svg"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+     visibility="visible" />
+</svg>

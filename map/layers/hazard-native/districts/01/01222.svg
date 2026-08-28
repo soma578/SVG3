@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="14179.86 -4335.87 36.3 21.57"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>三笠市 ハザード詳細 01222</title>
+  <animation id="hazard-source-01222"
+    title="三笠市 ハザード詳細" href="/map/layers/hazard/1/districts/01222.svg" xlink:href="/map/layers/hazard/1/districts/01222.svg"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+     visibility="visible" />
+</svg>

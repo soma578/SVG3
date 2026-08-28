@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" role="img" aria-label="警報（赤い三角）">
+  <path d="M18 2.5 34 31H2Z" fill="#d32f2f" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M16.4 11h3.2l-.55 11h-2.1z" fill="#fff"/>
+  <circle cx="18" cy="26.2" r="1.9" fill="#fff"/>
+</svg>

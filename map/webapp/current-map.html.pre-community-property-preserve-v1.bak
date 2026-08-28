@@ -1,0 +1,1355 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,viewport-fit=cover">
+<title>SVGMap Native 防災マップ</title>
+<style>
+  html, body {
+    height: 100%;
+    height: 100dvh;
+    margin: 0;
+    overflow: hidden;
+    background: #dbeafe;
+    font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+    overscroll-behavior: none;
+  }
+  #mapcanvas {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    touch-action: none;
+  }
+  #controller, #layerlist, #layerList, #initLayerSpecificUI,
+  #centerSight, .layerUI, .essentialUI {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  #ticker {
+    z-index: 120 !important;
+    min-width: 220px;
+    max-width: min(320px, calc(100vw - 24px));
+    max-height: none !important;
+    overflow: hidden !important;
+    box-sizing: border-box;
+    color: #172033 !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    border: 1px solid rgba(23, 32, 51, 0.16);
+    border-radius: 10px;
+    opacity: 1 !important;
+    box-shadow: 0 14px 40px rgba(15, 23, 42, 0.24);
+    font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+  }
+  #ticker table {
+    width: 100%;
+    border: 0 !important;
+    border-collapse: collapse !important;
+  }
+  #ticker tr + tr {
+    border-top: 1px solid #e7eaf0;
+  }
+  #ticker td {
+    padding: 0;
+    border: 0;
+  }
+  #ticker td > span {
+    display: block;
+    padding: 11px 14px;
+    line-height: 1.35;
+    cursor: pointer;
+  }
+  #ticker tr:first-child td > span {
+    padding-right: 42px;
+  }
+  #ticker td > span:hover,
+  #ticker td > span:focus-visible {
+    background: #f1f5f9;
+  }
+  #ticker font {
+    display: block;
+    margin-top: 3px;
+    color: #667085;
+    font-size: 12px;
+  }
+  #ticker-close {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    z-index: 1;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    color: #475467;
+    background: #eef1f5;
+    font: 20px/28px sans-serif;
+    cursor: pointer;
+  }
+  #ticker-close:hover,
+  #ticker-close:focus-visible {
+    color: #172033;
+    background: #dfe4ea;
+    outline: none;
+  }
+  #layerSpecificUI {
+    position: absolute;
+    right: calc(12px + var(--shell-right-inset, 0px));
+    left: auto;
+    top: calc(5.2rem + 12px);
+    z-index: 80;
+    width: min(399px, calc(100vw - 24px));
+    max-height: calc(100vh - 6.4rem);
+    display: none;
+    overflow: hidden;
+    font-size: 16px;
+    border: 1px solid rgba(15, 23, 42, 0.18);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 16px 48px rgba(15, 23, 42, 0.22);
+    transition: right 0.18s ease;
+  }
+  #layerSpecificUIbody {
+    max-height: calc(100vh - 6.4rem);
+  }
+  #layerSpecificUI iframe {
+    max-width: 100%;
+  }
+  @media (max-width: 820px) {
+    #ticker {
+      right: calc(8px + env(safe-area-inset-right)) !important;
+      left: calc(8px + env(safe-area-inset-left)) !important;
+      width: auto !important;
+      min-width: 0;
+      max-width: none;
+      max-height: calc(100dvh - 142px - env(safe-area-inset-top) - env(safe-area-inset-bottom)) !important;
+      overflow-x: hidden !important;
+      overflow-y: auto !important;
+      font-size: 16px !important;
+    }
+    #ticker td > span {
+      min-height: 44px;
+      box-sizing: border-box;
+      padding: 12px 14px;
+    }
+    #ticker-close {
+      width: 36px;
+      height: 36px;
+      font-size: 24px;
+      line-height: 36px;
+    }
+    #layerSpecificUI {
+      top: calc(124px + env(safe-area-inset-top));
+      right: calc(8px + env(safe-area-inset-right));
+      bottom: calc(8px + env(safe-area-inset-bottom));
+      left: calc(8px + env(safe-area-inset-left));
+      width: auto;
+      max-height: none;
+      border-radius: 8px;
+    }
+    #layerSpecificUIbody {
+      max-height: calc(100dvh - 140px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+      overflow-y: auto;
+    }
+  }
+  @media (max-width: 900px) and (max-height: 560px) and (orientation: landscape) {
+    #layerSpecificUI {
+      top: calc(66px + env(safe-area-inset-top));
+      left: auto;
+      width: min(360px, calc(100vw - 16px));
+    }
+    #layerSpecificUIbody {
+      max-height: calc(100dvh - 82px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    }
+  }
+</style>
+<script>
+  window.svgMapOptions = {
+    enableEssentialUI: false,
+    enableGIS: false,
+    enableAuthoringTool: false,
+    enableCustomLayersManager: false,
+    enableLayerUI: false
+  };
+</script>
+</head>
+<body>
+  <img id="centerSight" alt="" width="1" height="1"
+       src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+       style="position:absolute;left:0;top:0;opacity:0;pointer-events:none;">
+  <div id="mapcanvas" data-src="/map/containers/Containers_webapp_denshi_33.svg"></div>
+  <div id="controller"></div>
+  <div id="layerlist"></div>
+  <div id="layerList"></div>
+  <div id="layerSpecificUI"></div>
+  <div id="initLayerSpecificUI"></div>
+
+  <script type="module">
+    import { MAP_MESSAGES } from './shared/mapMessages.js';
+    import { isAuthorizedHostCommand } from './shared/messagePolicy.js';
+    import { catalogLayerForKey } from './shared/layerMessagePolicy.js';
+    import { neighborCatalogUrl } from './shared/layerCatalog.js';
+    import { createLayerControllerBus } from './shared/layerControllerBus.js';
+    import { fetchWithRuntimeCache } from './shared/runtimeCache.js';
+    import {
+      communityPropertyTransformForLayer,
+      registerCommunityPropertyAdapter,
+    } from './shared/communityPropertyAdapter.js';
+
+    console.log('[current-map] VERSION native-v19');
+
+    let svgMap;
+
+    window.addEventListener('error', (event) => {
+      const message = String(event.message || '');
+      const source = String(event.filename || '');
+      if (message.includes('domElement is not defined') && source.includes('ShowPoiProperty.js')) {
+        // Suppress known SVGMap popup bug noise.
+        event.preventDefault();
+      }
+    });
+
+    const query = new URLSearchParams(window.location.search);
+    const startupStartedAt = performance.now();
+    const requestedViewportValues = String(query.get('initialViewport') || '')
+      .split(',')
+      .map(Number);
+    const requestedViewport = requestedViewportValues.length === 4
+      && requestedViewportValues.every(Number.isFinite)
+      && requestedViewportValues[2] > 0
+      && requestedViewportValues[3] > 0
+      ? {
+          lat: requestedViewportValues[0],
+          lon: requestedViewportValues[1],
+          latSpan: requestedViewportValues[2],
+          lonSpan: requestedViewportValues[3],
+        }
+      : null;
+    const runtimeState = {
+      regionId: query.get('regionId') || 'okayama',
+      runtimeConfigUrl: query.get('runtimeConfigUrl') || '',
+      municipalityCode: query.get('municipalityCode') || '',
+      municipalityCodes: query.get('municipalityCodes') || query.get('municipalityCode') || '',
+      mapSession: query.get('mapSession') || '',
+      requestedViewport,
+      config: null,
+      layerCatalog: null,
+    };
+    // ズームアウトの下限。SVGMap自体は下限を持たず、実測では数段のホイール操作で
+    // 183,864度四方まで到達し、そこで内部の変換が飽和してズームイン・アウトの
+    // どちらも効かなくなる（地図が白紙のまま戻せない）。世界全体で止める。
+    const MAX_VIEW_LAT_SPAN = 180;
+    const INTERACTION_MODES = new Set([
+      'select-prefecture',
+      'select-municipality',
+      'inspect-area',
+    ]);
+    let interactionMode = 'inspect-area';
+    const SVG_NS = 'http://www.w3.org/2000/svg';
+    const XLINK_NS = 'http://www.w3.org/1999/xlink';
+    const layerVisibility = {};
+    const layerStates = {};
+    const notifyParent = (type, payload = {}) => {
+      window.parent?.postMessage?.({
+        type,
+        payload: {
+          ...payload,
+          mapSession: runtimeState.mapSession,
+        },
+      }, window.location.origin);
+    };
+    const notifyStartupMetrics = () => {
+      const rootLayers = Array.from(svgMap?.getRootLayersProps?.() || []);
+      const rootDocument = svgMap?.getSvgImages?.()?.root;
+      const publicLayerIdByIid = new Map(Array.from(
+        rootDocument?.querySelectorAll?.('animation,iframe') || [],
+      ).map((element) => [
+        element.getAttribute('iid'),
+        element.getAttribute('id') || element.getAttribute('iid'),
+      ]));
+      const publicLayerId = (layer) => publicLayerIdByIid.get(layer?.id) || layer?.id;
+      const resources = performance.getEntriesByType('resource').filter((entry) => {
+        try {
+          const url = new URL(entry.name, location.href);
+          return url.origin === location.origin && url.pathname.startsWith('/map/');
+        } catch {
+          return false;
+        }
+      });
+      notifyParent(MAP_MESSAGES.runtimeStartupMetrics, {
+        durationMs: Math.round(performance.now() - startupStartedAt),
+        resourceCount: resources.length,
+        transferBytes: resources.reduce((sum, entry) => sum + Number(entry.transferSize || 0), 0),
+        loadedLayerIds: rootLayers.filter((layer) => layer?.hasDocument).map(publicLayerId),
+        controllerLayerIds: rootLayers
+          .filter((layer) => layer?.svgImageProps?.controllerWindow)
+          .map(publicLayerId),
+      });
+    };
+    let viewportNotificationTimer = null;
+    const notifyViewportChanged = () => {
+      if (viewportNotificationTimer) window.clearTimeout(viewportNotificationTimer);
+      viewportNotificationTimer = window.setTimeout(() => {
+        viewportNotificationTimer = null;
+        const view = svgMap?.getGeoViewBox?.();
+        const west = Number(view?.x);
+        const south = Number(view?.y);
+        const lonSpan = Number(view?.width);
+        const latSpan = Number(view?.height);
+        if (![west, south, lonSpan, latSpan].every(Number.isFinite) || lonSpan <= 0 || latSpan <= 0) return;
+        notifyParent(MAP_MESSAGES.runtimeViewportChanged, {
+          lat: south + latSpan / 2,
+          lon: west + lonSpan / 2,
+          latSpan,
+          lonSpan,
+        });
+      }, 180);
+    };
+
+    const emitDataStatus = (payload) => {
+      const entry = {
+        ...payload,
+        online: navigator.onLine,
+        updatedAt: payload.updatedAt || payload.at || new Date().toISOString(),
+      };
+      console.log('[current-map] data status', entry);
+      notifyParent(MAP_MESSAGES.runtimeDataStatus, entry);
+    };
+
+    const installTickerUi = () => {
+      const ticker = document.getElementById('ticker');
+      if (!ticker || ticker.dataset.enhanced === 'true') return Boolean(ticker);
+      ticker.dataset.enhanced = 'true';
+
+      const closeButton = document.createElement('button');
+      closeButton.id = 'ticker-close';
+      closeButton.type = 'button';
+      closeButton.textContent = '×';
+      closeButton.title = '候補を閉じる';
+      closeButton.setAttribute('aria-label', '候補を閉じる');
+      ticker.prepend(closeButton);
+
+      let dismissTimer = null;
+      let fitFrame = null;
+      const clearDismiss = () => {
+        if (dismissTimer) window.clearTimeout(dismissTimer);
+        dismissTimer = null;
+      };
+      const closeTicker = () => {
+        clearDismiss();
+        ticker.style.display = 'none';
+      };
+      const scheduleDismiss = (delay = 6000) => {
+        clearDismiss();
+        dismissTimer = window.setTimeout(closeTicker, delay);
+      };
+      const fitTickerToViewport = () => {
+        if (ticker.style.display === 'none' || fitFrame) return;
+        fitFrame = window.requestAnimationFrame(() => {
+          fitFrame = null;
+          if (ticker.style.display === 'none') return;
+          const margin = 12;
+          const rect = ticker.getBoundingClientRect();
+          let left = Number.parseFloat(ticker.style.left) || rect.left;
+          let top = Number.parseFloat(ticker.style.top) || rect.top;
+          if (rect.right > window.innerWidth - margin) left -= rect.right - (window.innerWidth - margin);
+          if (rect.left < margin) left += margin - rect.left;
+          if (rect.bottom > window.innerHeight - margin) top -= rect.bottom - (window.innerHeight - margin);
+          if (rect.top < margin) top += margin - rect.top;
+          const nextLeft = `${Math.round(left)}px`;
+          const nextTop = `${Math.round(top)}px`;
+          repositioning = true;
+          if (ticker.style.left !== nextLeft) ticker.style.left = nextLeft;
+          if (ticker.style.top !== nextTop) ticker.style.top = nextTop;
+          repositioning = false;
+        });
+      };
+      // 自前の位置補正で style を書き換えると MutationObserver が再発火する。
+      // そのたびに自動消去タイマーを組み直すと、再描画が続くあいだ候補が消えない。
+      let repositioning = false;
+      const onTickerChanged = () => {
+        if (ticker.style.display === 'none' || repositioning) return;
+        fitTickerToViewport();
+        scheduleDismiss();
+      };
+
+      closeButton.addEventListener('pointerdown', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        closeTicker();
+      });
+      ticker.addEventListener('pointerenter', clearDismiss);
+      ticker.addEventListener('pointerleave', () => scheduleDismiss(3500));
+      ticker.addEventListener('focusin', clearDismiss);
+      ticker.addEventListener('focusout', () => scheduleDismiss(3500));
+      ticker.addEventListener('pointerdown', (event) => {
+        if (event.target.closest('td > span')) window.setTimeout(closeTicker, 0);
+      });
+      document.addEventListener('pointerdown', (event) => {
+        if (ticker.style.display !== 'none' && !ticker.contains(event.target)) closeTicker();
+      }, true);
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeTicker();
+      });
+      window.addEventListener('resize', fitTickerToViewport);
+      // 候補一覧はクリックした一点に紐づく。地図が動いた時点で対象がずれるので閉じる。
+      // 閉じないと、スクロールのたびに古い当たり判定で候補が出続ける。
+      document.addEventListener('zoomPanMap', closeTicker);
+      new MutationObserver(onTickerChanged).observe(ticker, {
+        attributes: true,
+        attributeFilter: ['style'],
+        childList: true,
+        subtree: true,
+      });
+      return true;
+    };
+
+    const tickerInstaller = new MutationObserver(() => {
+      if (installTickerUi()) tickerInstaller.disconnect();
+    });
+    if (!installTickerUi()) tickerInstaller.observe(document.body, { childList: true });
+
+    const defaultRuntimeConfig = () => ({
+      version: 'fallback',
+      regionId: runtimeState.regionId,
+      containerUrl: '/map/containers/Containers_webapp_denshi_33.svg',
+      iconsBaseUrl: '/map/icons',
+      initialViewport: {
+        lat: 34.66,
+        lon: 133.92,
+        latSpan: 0.42,
+        lonSpan: 0.52,
+      },
+    });
+
+    const runtimeConfigUrlFor = (regionId) =>
+      runtimeState.runtimeConfigUrl || `/map/regions/${encodeURIComponent(regionId || 'okayama')}/runtime-config.json`;
+
+    const loadLayerCatalog = async () => {
+      try {
+        const response = await fetch('/map/layers/catalog.json');
+        if (!response.ok) throw new Error(`${response.status} /map/layers/catalog.json`);
+        runtimeState.layerCatalog = await response.json();
+      } catch (error) {
+        runtimeState.layerCatalog = { version: 1, layers: [] };
+        console.warn('[current-map] layer catalog fallback', error);
+      }
+      // 周辺地域レイヤーは県ごとに違うため別ファイルにある。メッセージ配送は
+      // カタログ経由なので、ここで併合しないと隣県のcontrollerへ何も届かない。
+      const supplementUrl = neighborCatalogUrl(runtimeState.regionId);
+      if (supplementUrl) {
+        try {
+          const response = await fetch(supplementUrl);
+          const supplement = response.ok ? await response.json() : null;
+          if (Array.isArray(supplement?.layers)) {
+            runtimeState.layerCatalog = {
+              ...runtimeState.layerCatalog,
+              layers: [...(runtimeState.layerCatalog.layers || []), ...supplement.layers],
+            };
+          }
+        } catch (error) {
+          console.info('[current-map] neighbor catalog unavailable', error);
+        }
+      }
+      return runtimeState.layerCatalog;
+    };
+
+    const loadRuntimeConfig = async () => {
+      const url = runtimeConfigUrlFor(runtimeState.regionId);
+      try {
+        const { data: config, source } = await fetchWithRuntimeCache(url, 'runtimeConfig', {
+          label: '地域設定',
+          emitDataStatus,
+          logLabel: 'current-map',
+        });
+        runtimeState.config = {
+          ...defaultRuntimeConfig(),
+          ...config,
+        };
+        runtimeState.regionId = runtimeState.config.regionId || runtimeState.regionId;
+        console.log('[current-map] runtime-config loaded', {
+          regionId: runtimeState.regionId,
+          url,
+          containerUrl: runtimeState.config.containerUrl,
+          source,
+        });
+      } catch (error) {
+        runtimeState.config = defaultRuntimeConfig();
+        console.warn('[current-map] runtime-config fallback', {
+          regionId: runtimeState.regionId,
+          url,
+          error,
+        });
+      }
+      return runtimeState.config;
+    };
+
+    const RUNTIME_LAYERS_STORAGE_KEY = 'svg3.currentMapRuntimeLayers.v1';
+    const loadStoredRuntimeLayers = () => {
+      try {
+        const stored = JSON.parse(sessionStorage.getItem(RUNTIME_LAYERS_STORAGE_KEY) || '[]');
+        return Array.isArray(stored) ? stored : [];
+      } catch {
+        return [];
+      }
+    };
+
+    const runtimeLayerSignature = (layers) => JSON.stringify((layers || []).map((layer) => ({
+      id: layer?.attrs?.id,
+      href: layer?.attrs?.['xlink:href'],
+      visibility: layer?.attrs?.visibility,
+      title: layer?.attrs?.title,
+    })).sort((a, b) => String(a.id).localeCompare(String(b.id))));
+
+    const storeRuntimeLayers = (layers) => {
+      sessionStorage.setItem(RUNTIME_LAYERS_STORAGE_KEY, JSON.stringify(layers));
+    };
+
+    const rebaseAnimationHref = (value, baseUrl) => {
+      const raw = String(value || '');
+      const hashIndex = raw.indexOf('#');
+      const pathPart = hashIndex >= 0 ? raw.slice(0, hashIndex) : raw;
+      const hashPart = hashIndex >= 0 ? raw.slice(hashIndex + 1) : '';
+      const layerUrl = new URL(pathPart, baseUrl);
+      if (!hashPart) return layerUrl.href;
+      // URLSearchParamsで組み直すと、旧AppLayersの
+      // #csvPath=https://... が https%3A%2F%2F... へ変わる。旧CSVローダーは
+      // decodeせず相対パスとして扱うため、値の表記を保持したまま相対URLだけを直す。
+      const params = hashPart.split('&').map((part) => {
+        const separator = part.indexOf('=');
+        if (separator < 0) return part;
+        const key = part.slice(0, separator);
+        const rawParameter = part.slice(separator + 1);
+        let parameter = rawParameter;
+        try { parameter = decodeURIComponent(rawParameter); } catch {}
+        if (!(/^(?:https?:|blob:|\/|\.\.?\/)/i.test(parameter) || parameter.includes('/'))) {
+          return part;
+        }
+        // 絶対URLは元の綴りを保持する。相対URLだけ基準をlayerUrlへ合わせる。
+        if (/^(?:https?:|blob:)/i.test(parameter)) return `${key}=${parameter}`;
+        const rebased = new URL(parameter, layerUrl).href
+          .replaceAll('%7B', '{')
+          .replaceAll('%7D', '}');
+        return `${key}=${rebased}`;
+      });
+      return `${layerUrl.href}#${params.join('&')}`;
+    };
+
+    const appendRuntimeAnimation = (rootDoc, root, layer) => {
+      const attrs = layer?.attrs || {};
+      const id = String(attrs.id || '');
+      const href = String(attrs['xlink:href'] || '');
+      if (!id.startsWith('layer-imported-') || !/^(https?:\/\/|blob:)/i.test(href)) return false;
+      rootDoc.getElementById?.(id)?.remove?.();
+      const animation = rootDoc.createElementNS(SVG_NS, 'animation');
+      for (const [name, value] of Object.entries(attrs)) {
+        if (name === 'xlink:href') animation.setAttributeNS(XLINK_NS, 'xlink:href', rebaseAnimationHref(value, location.href));
+        else if (
+          ['id', 'x', 'y', 'width', 'height', 'title', 'class', 'visibility', 'opacity', 'preserveAspectRatio', 'data-controller'].includes(name)
+          || name.startsWith('data-')
+        ) animation.setAttribute(name, String(value));
+      }
+      root.appendChild(animation);
+      return true;
+    };
+
+    const prepareRuntimeContainer = async () => {
+      const mapcanvas = document.getElementById('mapcanvas');
+      const layers = loadStoredRuntimeLayers();
+      if (layers.length === 0) {
+        mapcanvas?.setAttribute('data-src', runtimeState.config.containerUrl);
+        return;
+      }
+      const containerUrl = new URL(runtimeState.config.containerUrl, location.href);
+      const response = await fetch(containerUrl);
+      if (!response.ok) throw new Error(`${response.status} ${containerUrl.href}`);
+      const rootDoc = new DOMParser().parseFromString(await response.text(), 'image/svg+xml');
+      if (rootDoc.querySelector('parsererror')) throw new Error('runtime Containerを解析できません');
+      const root = rootDoc.documentElement;
+      for (const animation of rootDoc.querySelectorAll('animation')) {
+        const href = animation.getAttribute('xlink:href') || animation.getAttribute('href');
+        if (href && !href.startsWith('#')) {
+          animation.setAttributeNS(XLINK_NS, 'xlink:href', rebaseAnimationHref(href, containerUrl));
+        }
+      }
+      for (const layer of layers) appendRuntimeAnimation(rootDoc, root, layer);
+      const blobUrl = URL.createObjectURL(new Blob([
+        new XMLSerializer().serializeToString(rootDoc),
+      ], { type: 'image/svg+xml' }));
+      window.addEventListener('pagehide', () => URL.revokeObjectURL(blobUrl), { once: true });
+      mapcanvas?.setAttribute('data-src', blobUrl);
+    };
+
+    let initialViewTimer = null;
+    // 初期視野の再適用中に地図が別の理由で動いたら、そこで打ち切る。
+    // 打ち切らないと、検索での他県ジャンプや利用者のパンを初期視野へ巻き戻す。
+    let applyingInitialView = false;
+    let initialViewAbandoned = false;
+    document.addEventListener('zoomPanMap', () => {
+      if (applyingInitialView) return;
+      initialViewAbandoned = true;
+      if (initialViewTimer) {
+        window.clearTimeout(initialViewTimer);
+        initialViewTimer = null;
+      }
+    });
+    const setInitialView = (attempt = 0) => {
+      if (initialViewAbandoned) return;
+      try {
+        const vp = runtimeState.requestedViewport
+          || runtimeState.config?.initialViewport
+          || defaultRuntimeConfig().initialViewport;
+        const centerLat = Number(vp.lat);
+        const centerLon = Number(vp.lon);
+        const latSpan = Number(vp.latSpan);
+        const lonSpan = Number(vp.lonSpan);
+        applyingInitialView = true;
+        svgMap.setGeoViewPort?.(
+          centerLat - latSpan / 2, centerLon - lonSpan / 2,
+          latSpan, lonSpan,
+          false,
+        );
+        // setGeoViewPort だけでは isolated controller の preRenderFunction が
+        // 呼ばれない。全国表示で作ったQTCT密度セルが市区町村表示へ残るため、
+        // 初期位置を確定した直後に全レイヤーを同じ表示範囲で再描画する。
+        window.setTimeout(() => {
+          svgMap.refreshScreen?.();
+          const applied = svgMap.getGeoViewBox?.();
+          // SVGMapは要求した矩形をキャンバスの縦横比へ合わせ、片方の軸だけ広げる。
+          // 広がった軸を要求値と直接比べると永久に不一致になり、初期視野の
+          // 再適用が走り続けて、その間のパンや検索移動を巻き戻していた。
+          // 一致判定は中心と「広げられていない側の倍率」で行う。
+          const scale = applied
+            ? Math.min(Number(applied.width) / lonSpan, Number(applied.height) / latSpan)
+            : NaN;
+          const closeEnough = applied
+            && Math.abs(Number(applied.cx) - centerLon) <= lonSpan * 0.05
+            && Math.abs(Number(applied.cy) - centerLat) <= latSpan * 0.05
+            && Number.isFinite(scale) && scale >= 0.9 && scale <= 1.1;
+          applyingInitialView = false;
+          // runtime追加レイヤーがあるとContainerのblob読込み完了前の初回設定が
+          // 黙って無視される。実際のviewBoxを確認し、初期化中だけ再試行する。
+          if (!closeEnough && !initialViewAbandoned && attempt < 6) {
+            if (initialViewTimer) window.clearTimeout(initialViewTimer);
+            initialViewTimer = window.setTimeout(() => {
+              initialViewTimer = null;
+              setInitialView(attempt + 1);
+            }, 180 * (attempt + 1));
+          }
+        }, 80);
+      } catch (error) {
+        applyingInitialView = false;
+        console.warn('[current-map] initial view failed', error);
+        if (!initialViewAbandoned && attempt < 6) {
+          if (initialViewTimer) window.clearTimeout(initialViewTimer);
+          initialViewTimer = window.setTimeout(() => {
+            initialViewTimer = null;
+            setInitialView(attempt + 1);
+          }, 180 * (attempt + 1));
+        }
+      }
+    };
+
+    const init = () => {
+      window.setTimeout(() => {
+        setInitialView();
+        notifyParent(MAP_MESSAGES.runtimeReady, {
+          engine: 'svgmap',
+          regionId: runtimeState.regionId,
+          runtimeConfigUrl: runtimeConfigUrlFor(runtimeState.regionId),
+          initialViewport: runtimeState.config?.initialViewport,
+          layers: (runtimeState.layerCatalog?.layers || []).map((layer) => layer.toggleKey || layer.id),
+        });
+        window.setTimeout(notifyStartupMetrics, 1200);
+      }, 350);
+    };
+
+    const resolveLayerVisibilityEntry = (layerKey) => {
+      const key = String(layerKey || '');
+      const layers = runtimeState.layerCatalog?.layers || [];
+      const entry = layers.find((layer) => (
+        layer.id === key || layer.toggleKey === key || (Array.isArray(layer.mounts) && layer.mounts.includes(key))
+      ));
+      if (entry) {
+        return {
+          key: entry.toggleKey || entry.id,
+          animIds: Array.isArray(entry.mounts) && entry.mounts.length > 0 ? entry.mounts : [entry.id],
+          strategy: entry.visibilityStrategy || 'native',
+        };
+      }
+      return {
+        key,
+        animIds: key.startsWith('layer-') ? [key] : [],
+        strategy: 'native',
+      };
+    };
+
+    // SVG内に <script> を持つ旧来形式のレイヤーは data-controller を持たないため、
+    // SVGMap r18 が controller URL 未定義のまま webApp iframe を作ってしまい、
+    // src=":..." という不正な参照で 404 を出し、中身の無いレイヤー固有UIを開く。
+    // vendor は上流に固定しているのでホスト側で抑止する。
+    const isBrokenControllerFrame = (frame) => {
+      const source = frame.getAttribute('src');
+      if (source === null) return false; // src 未設定なら要求は飛ばない
+      const trimmed = source.trim();
+      return trimmed === '' || trimmed.startsWith(':') || trimmed.startsWith('#');
+    };
+
+    let lastLayerSpecificUiVisible = false;
+    let layerSpecificUiGuardTimer = null;
+    const reportLayerSpecificUiVisibility = (visible) => {
+      if (visible === lastLayerSpecificUiVisible) return;
+      lastLayerSpecificUiVisible = visible;
+      notifyParent(MAP_MESSAGES.runtimeLayerUiVisibilityChanged, { visible });
+    };
+    const guardLayerSpecificUi = () => {
+      const panel = document.getElementById('layerSpecificUI');
+      if (!panel) return;
+      let removed = 0;
+      for (const frame of panel.querySelectorAll('iframe')) {
+        if (!isBrokenControllerFrame(frame)) continue;
+        frame.remove();
+        removed += 1;
+      }
+      // 使える中身が無いのにパネルだけ開くと「空のタブ」に見える。
+      // パネルには全レイヤー分の iframe が入っていて表示中のものだけが見えるので、
+      // 「表示中のフレーム」だけを数える（全部を見ると常に使える判定になる）。
+      const usable = [...panel.querySelectorAll('iframe')].some((frame) => {
+        if (isBrokenControllerFrame(frame)) return false;
+        const source = frame.getAttribute('src');
+        if (typeof source === 'string' && source.trim() === '') return false;
+        if (frame.style.display === 'none' || frame.hidden) return false;
+        if (source === null) {
+          // SLaWA controllerは通常のsrc付きiframeではなく、SVGMapが文書を
+          // 注入する仮想iframeとして作られる。この形式は表示後の内容または
+          // 寸法で確認し、単なる空iframeとは区別する。
+          const hasVirtualContent = Boolean(
+            frame.getAttribute('srcdoc')
+            || frame.contentDocument?.body?.childElementCount
+            || frame.getBoundingClientRect().height > 80
+          );
+          if (!hasVirtualContent) return false;
+        }
+        // 読込み直後はまだ高さが確定していない。ここで寸法を条件にすると、
+        // src付きの正常なcontrollerまでロード完了前に閉じてしまう。
+        return true;
+      });
+      const panelVisible = panel.style.display !== 'none' && usable;
+      reportLayerSpecificUiVisibility(panelVisible);
+      if (removed > 0) {
+        console.warn('[current-map] removed controller frame(s) without a usable URL', { removed });
+      }
+    };
+
+    const scheduleLayerSpecificUiGuard = () => {
+      if (layerSpecificUiGuardTimer) window.clearTimeout(layerSpecificUiGuardTimer);
+      layerSpecificUiGuardTimer = window.setTimeout(() => {
+        layerSpecificUiGuardTimer = null;
+        guardLayerSpecificUi();
+      }, 30);
+    };
+
+    new MutationObserver(scheduleLayerSpecificUiGuard).observe(document.documentElement, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ['src', 'style'],
+    });
+
+    // SVGMap の setLayerVisibility はレイヤーを iid か title で識別する。
+    // Container の DOM id を渡しても一致せず、例外も返り値も無いまま黙って無視される。
+    // カタログが持っているのは DOM id なので、ここで実際の識別子へ引き当てる。
+    const svgMapLayerIdentifier = (animId) => {
+      const root = svgMap?.getSvgImages?.()?.root;
+      const escaped = globalThis.CSS?.escape ? CSS.escape(animId) : String(animId).replaceAll('"', '\\"');
+      const element = root?.querySelector?.(`#${escaped}`)
+        || root?.querySelector?.(`[id="${String(animId).replaceAll('"', '\\"')}"]`);
+      if (!element) return animId;
+      return element.getAttribute('iid') || element.getAttribute('title') || animId;
+    };
+
+    const installRuntimeCommunityPropertyAdapters = () => {
+      if (!svgMap?.setShowPoiProperty) return 0;
+      const root = svgMap.getSvgImages?.()?.root;
+      if (!root) return 0;
+      let installed = 0;
+      for (const layer of loadStoredRuntimeLayers()) {
+        const id = String(layer?.attrs?.id || '');
+        if (!id.startsWith('layer-imported-')) continue;
+        const animation = root.getElementById?.(id)
+          || root.querySelector?.(`[id="${id.replaceAll('"', '\\"')}"]`);
+        const layerId = animation?.getAttribute?.('iid');
+        if (!layerId) continue;
+        if (registerCommunityPropertyAdapter({
+          svgMap,
+          layerId,
+          transform: communityPropertyTransformForLayer(layer),
+        })) installed += 1;
+      }
+      return installed;
+    };
+
+    const scheduleRuntimeCommunityPropertyAdapters = () => {
+      // Root animationのiid確定と、上流controller側の独自handler登録の後にも
+      // 実行し、追加レイヤーのプロパティ表示だけをホスト共通形式へ統一する。
+      [0, 300, 900, 2200].forEach((delay) => window.setTimeout(
+        installRuntimeCommunityPropertyAdapters,
+        delay,
+      ));
+    };
+
+    const scheduleRuntimeControllerInitWatchdog = (frame) => {
+      if (frame.dataset.svg3InitWatchdogScheduled === 'true') return;
+      frame.dataset.svg3InitWatchdogScheduled = 'true';
+      window.setTimeout(() => {
+        try {
+          const iid = String(frame.id || '').replace(/^layerSpecificUIframe_/, '');
+          const root = svgMap?.getSvgImages?.()?.root;
+          const animation = [...(root?.querySelectorAll?.('animation') || [])]
+            .find((node) => node.getAttribute('iid') === iid);
+          // 管理レイヤーのcontrollerには介入せず、利用者が追加したレイヤーだけを
+          // 対象にする。上流UI自体は書き換えず、固着を説明するホスト通知を足す。
+          if (!String(animation?.id || '').startsWith('layer-imported-')) return;
+          const document_ = frame.contentDocument;
+          const body = document_?.body;
+          if (!body || !body.textContent?.includes('初期化中')) return;
+          if (body.querySelector('[data-svg3-init-warning]')) return;
+          const warning = document_.createElement('p');
+          warning.dataset.svg3InitWarning = 'true';
+          warning.setAttribute('role', 'status');
+          warning.style.cssText = 'margin:8px 0;padding:8px;border-radius:6px;background:#fff3cd;color:#664d03;font-size:12px';
+          warning.textContent = '初期化が完了していません。配信元の応答または、このレイヤー形式との互換性を確認してください。';
+          body.prepend(warning);
+          console.warn('[current-map] imported controller remained initializing', {
+            layerId: animation.id,
+            title: animation.getAttribute('title'),
+          });
+        } catch (error) {
+          // opaque-originの分離controllerはDOMを読めない。権限を広げてまで監視しない。
+          console.info('[current-map] controller initialization could not be inspected', error);
+        }
+      }, 15_000);
+    };
+
+    const bindRuntimeCommunityControllerFrames = () => {
+      const panel = document.getElementById('layerSpecificUI');
+      for (const frame of panel?.querySelectorAll?.('iframe') || []) {
+        if (frame.dataset.svg3PropertyAdapterBound === 'true') continue;
+        frame.dataset.svg3PropertyAdapterBound = 'true';
+        frame.addEventListener('load', () => {
+          scheduleRuntimeCommunityPropertyAdapters();
+          scheduleRuntimeControllerInitWatchdog(frame);
+        });
+        if (frame.contentDocument?.readyState === 'complete') {
+          scheduleRuntimeCommunityPropertyAdapters();
+          scheduleRuntimeControllerInitWatchdog(frame);
+        }
+      }
+    };
+
+    const runtimeCommunityControllerObserver = new MutationObserver(
+      bindRuntimeCommunityControllerFrames,
+    );
+    runtimeCommunityControllerObserver.observe(document.getElementById('layerSpecificUI'), {
+      childList: true,
+      subtree: true,
+    });
+    bindRuntimeCommunityControllerFrames();
+
+    const importRuntimeLayers = (layers) => {
+      const current = loadStoredRuntimeLayers();
+      const merged = new Map(current.map((layer) => [layer?.attrs?.id, layer]));
+      for (const layer of Array.isArray(layers) ? layers : []) {
+        const attrs = layer?.attrs || {};
+        const id = String(attrs.id || '');
+        const href = String(attrs['xlink:href'] || '');
+        if (!id.startsWith('layer-imported-') || !/^(https?:\/\/|blob:)/i.test(href)) continue;
+        merged.set(id, layer);
+      }
+      const next = [...merged.values()];
+      if (runtimeLayerSignature(current) === runtimeLayerSignature(next)) return;
+      storeRuntimeLayers(next);
+      location.reload();
+    };
+
+    const removeRuntimeLayer = (layerId) => {
+      const id = String(layerId || '');
+      if (!id.startsWith('layer-imported-')) return;
+      const current = loadStoredRuntimeLayers();
+      const next = current.filter((layer) => layer?.attrs?.id !== id);
+      if (next.length === current.length) return;
+      storeRuntimeLayers(next);
+      location.reload();
+    };
+
+    let layerUiSyncTimer = null;
+    const scheduleLayerSpecificUiSync = (reason) => {
+      if (layerUiSyncTimer) window.clearTimeout(layerUiSyncTimer);
+      layerUiSyncTimer = window.setTimeout(() => {
+        layerUiSyncTimer = null;
+        const sync = () => {
+          try {
+            svgMap.updateLayerListUI?.();
+          } catch (error) {
+            console.warn('[current-map] layer specific UI sync failed', { reason, error });
+          }
+        };
+        sync();
+        window.setTimeout(sync, 350);
+      }, 120);
+    };
+
+    // === レイヤーメッセージバス =====================================
+    // Controller windowをroot animationへ結び付け、catalogで宣言されたmessageだけを
+    // 配送する。外部S-LaWAを含む全iframeへの無差別broadcastは禁止する。
+    const BUS_DEBUG = (() => {
+      try {
+        return /[?&]debugBus=1/.test(window.location.search)
+          || window.localStorage?.getItem('svgmapDebugBus') === '1';
+      } catch { return false; }
+    })();
+
+    const layerBus = createLayerControllerBus({
+      getCatalog: () => runtimeState.layerCatalog,
+      getSvgImageProps: () => svgMap?.getSvgImagesProps?.() || window.svgImagesProps || {},
+      getRootDocument: () => svgMap?.getSvgImages?.()?.root || window.svgImages?.root,
+      debug: BUS_DEBUG,
+    });
+    const sendToLayerControllers = layerBus.send;
+
+    let currentLocationRelayTimer = null;
+    const relayCurrentLocation = (location, attempt = 0) => {
+      const lat = Number(location?.lat);
+      const lon = Number(location?.lon);
+      const normalized = Number.isFinite(lat) && Number.isFinite(lon) ? { lat, lon } : null;
+      const delivered = sendToLayerControllers({
+        type: MAP_MESSAGES.mapSetCurrentLocation,
+        location: normalized,
+      }, 'currentLocation');
+      if (delivered > 0 || attempt >= 5) return;
+      if (currentLocationRelayTimer) window.clearTimeout(currentLocationRelayTimer);
+      currentLocationRelayTimer = window.setTimeout(() => {
+        currentLocationRelayTimer = null;
+        relayCurrentLocation(normalized, attempt + 1);
+      }, 200 * (attempt + 1));
+    };
+
+    const setLayerVisible = (layerKey, visible) => {
+      const { key: normalizedLayerKey, animIds, strategy } = resolveLayerVisibilityEntry(layerKey);
+      if (animIds.length === 0) return;
+      const nextVisible = Boolean(visible);
+      layerVisibility[normalizedLayerKey] = nextVisible;
+      console.log('[current-map] map:setLayerVisible received', {
+        layerKey: normalizedLayerKey,
+        visible: nextVisible,
+      });
+      // Controller-managed layers keep their document loaded and control internal SVG groups.
+      // Unloading the animation would destroy the controller, so only relay visibility state.
+      if (strategy === 'controller') {
+        const message = { type: MAP_MESSAGES.mapLayerVisibilityChanged, layerKey: normalizedLayerKey, visible: nextVisible };
+        sendToLayerControllers(message, `visibility:${normalizedLayerKey}`, [normalizedLayerKey]);
+        scheduleLayerSpecificUiSync(`visibility:${normalizedLayerKey}`);
+        return;
+      }
+      const affected = [];
+      for (const targetAnimId of animIds) {
+        try {
+          if (typeof svgMap.setLayerVisibility !== 'function') {
+            throw new Error('svgMap.setLayerVisibility is unavailable');
+          }
+          const identifier = svgMapLayerIdentifier(targetAnimId);
+          // 表示時に無条件で appearOnLayerLoad を渡すと、固有UIを持たないレイヤーでも
+          // SVGMap がレイヤー固有UIを開き、中身の無い白い箱(401x52)が出続ける。
+          // 自前のUIを宣言しているレイヤー(catalog の controllerUi)だけ開かせる。
+          const wantsUi = Boolean(catalogLayerForKey(runtimeState.layerCatalog, normalizedLayerKey)?.controllerUi);
+          svgMap.setLayerVisibility(identifier, nextVisible, {
+            exec: nextVisible && wantsUi ? 'appearOnLayerLoad' : 'hiddenOnLayerLoad',
+          });
+          // 反映されたかを実際の属性で確かめる。SVGMap は識別子が一致しないとき
+          // 例外も返り値も出さないので、成功したことにしてはいけない。
+          const root = svgMap.getSvgImages?.()?.root;
+          const escaped = globalThis.CSS?.escape ? CSS.escape(targetAnimId) : targetAnimId;
+          const applied = root?.querySelector?.(`#${escaped}`)?.getAttribute('visibility')
+            === (nextVisible ? 'visible' : 'hidden');
+          if (!applied) throw new Error(`visibility was not applied (identifier=${identifier})`);
+          affected.push({ animId: targetAnimId, identifier, applied: true });
+        } catch (error) {
+          console.warn('[current-map] setLayerVisibility failed', {
+            layerId: normalizedLayerKey,
+            animId: targetAnimId,
+            error,
+          });
+          affected.push({ animId: targetAnimId, applied: false, error: String(error?.message || error) });
+        }
+      }
+      const message = {
+        type: MAP_MESSAGES.mapLayerVisibilityChanged,
+        layerKey: normalizedLayerKey,
+        visible: nextVisible,
+      };
+      const delivered = sendToLayerControllers(message, `visibility:${normalizedLayerKey}`, [normalizedLayerKey]);
+      svgMap.refreshScreen?.();
+      scheduleRuntimeCommunityPropertyAdapters();
+      scheduleLayerSpecificUiSync(`visibility:${normalizedLayerKey}`);
+      console.log('[current-map] layer visibility changed', {
+        layerKey: normalizedLayerKey,
+        animIds,
+        visible: nextVisible,
+        affected,
+        delivered,
+      });
+    };
+
+    const broadcastInteractionMode = () => {
+      sendToLayerControllers({
+        type: MAP_MESSAGES.mapInteractionModeChanged,
+        interactionMode,
+      }, 'interactionMode');
+    };
+
+    const broadcastRuntimeContext = () => {
+      broadcastInteractionMode();
+      const municipalityCodes = runtimeState.municipalityCodes
+        .split(',').map((value) => value.trim()).filter(Boolean);
+      sendToLayerControllers({
+        type: MAP_MESSAGES.mapSetMunicipalityFilter,
+        municipalityCodes,
+      }, 'runtimeContext:municipalities');
+      for (const [layerKey, visible] of Object.entries(layerVisibility)) {
+        sendToLayerControllers({
+          type: MAP_MESSAGES.mapLayerVisibilityChanged,
+          layerKey,
+          visible,
+        }, `runtimeContext:visibility:${layerKey}`, [layerKey]);
+      }
+      for (const [layerId, state] of Object.entries(layerStates)) {
+        sendToLayerControllers({
+          type: MAP_MESSAGES.mapSetLayerState,
+          layerId,
+          state,
+        }, `runtimeContext:state:${layerId}`, [layerId]);
+      }
+    };
+
+    const setInteractionMode = (nextMode) => {
+      const normalized = INTERACTION_MODES.has(nextMode) ? nextMode : 'inspect-area';
+      if (interactionMode === normalized) {
+        broadcastInteractionMode();
+        return;
+      }
+      interactionMode = normalized;
+      console.log('[current-map] interaction mode changed', {
+        interactionMode,
+      });
+      broadcastInteractionMode();
+    };
+
+    window.addEventListener('message', (event) => {
+      if (event.origin !== window.location.origin && event.origin !== 'null') {
+        console.warn('[current-map] message rejected by origin', {
+          origin: event.origin,
+          selfOrigin: window.location.origin,
+          type: event.data?.type,
+        });
+        return;
+      }
+      const msg = event.data;
+      if (!msg || typeof msg !== 'object') return;
+      const layerMessageAllowed = layerBus.allowsFromLayer(event.source, msg);
+      if (!isAuthorizedHostCommand({
+        type: msg.type,
+        source: event.source,
+        parentWindow: window.parent,
+        origin: event.origin,
+        selfOrigin: window.location.origin,
+        layerMessageAllowed,
+      })) {
+        console.warn('[current-map] host command rejected by source', {
+          origin: event.origin,
+          type: msg.type,
+        });
+        return;
+      }
+
+      if (msg.type === MAP_MESSAGES.mapSetViewport) {
+        const vp = msg.viewport;
+        const centerLat = Number(vp?.lat);
+        const centerLon = Number(vp?.lon);
+        const latSpan = Number(vp?.latSpan);
+        const lonSpan = Number(vp?.lonSpan);
+        if (Number.isFinite(centerLat) && Number.isFinite(centerLon) && latSpan > 0 && lonSpan > 0) {
+          // 世界より広い指定は受け付けない。SVGMapの変換が飽和すると、
+          // その後はズームイン・アウトのどちらも効かなくなる。
+          const shrink = Math.min(1, MAX_VIEW_LAT_SPAN / latSpan);
+          const boundedLatSpan = latSpan * shrink;
+          const boundedLonSpan = lonSpan * shrink;
+          try {
+            svgMap.setGeoViewPort?.(
+              centerLat - boundedLatSpan / 2, centerLon - boundedLonSpan / 2,
+              boundedLatSpan, boundedLonSpan,
+              false,
+            );
+            window.setTimeout(() => svgMap.refreshScreen?.(), 50);
+          } catch (err) {
+            console.warn('[current-map] map:setViewport failed', err);
+          }
+        }
+        return;
+      }
+
+      // Zoom relative to the currently displayed viewport, not a fixed point.
+      // setGeoViewPort(lat, lng, latSpan, lngSpan) treats lat/lng as the SW corner,
+      // so we read the center from gv.cy/gv.cx and subtract half the new span.
+      if (msg.type === MAP_MESSAGES.mapZoom) {
+        const factor = Number(msg.factor);
+        if (!Number.isFinite(factor) || factor <= 0) return;
+        try {
+          const gv = svgMap?.getGeoViewBox?.();
+          if (!gv || !Number.isFinite(Number(gv.width)) || !Number.isFinite(Number(gv.height))) return;
+          const centerLat = Number.isFinite(Number(gv.cy)) ? Number(gv.cy) : Number(gv.y) + Number(gv.height) / 2;
+          const centerLon = Number.isFinite(Number(gv.cx)) ? Number(gv.cx) : Number(gv.x) + Number(gv.width) / 2;
+          const newLatSpan = Number(gv.height) * factor;
+          const newLonSpan = Number(gv.width) * factor;
+          svgMap.setGeoViewPort?.(centerLat - newLatSpan / 2, centerLon - newLonSpan / 2, newLatSpan, newLonSpan, false);
+          svgMap.refreshScreen?.();
+        } catch (err) {
+          console.warn('[current-map] map:zoom failed', err);
+        }
+        return;
+      }
+
+      if (msg.type === MAP_MESSAGES.mapSetCurrentLocation) {
+        relayCurrentLocation(msg.location || msg.payload || msg);
+        return;
+      }
+
+      // Atomically center the view on a location and drop the pin there.
+      // lat/lon here are GPS center coordinates. setGeoViewPort expects the SW corner,
+      // so subtract half the span to convert center → SW.
+      if (msg.type === MAP_MESSAGES.mapFocusLocation) {
+        const loc = msg.location || msg.payload || msg;
+        const lat = Number(loc?.lat);
+        const lon = Number(loc?.lon);
+        const latSpan = Number(loc?.latSpan);
+        const lonSpan = Number(loc?.lonSpan);
+        if (!Number.isFinite(lat) || !Number.isFinite(lon)) return;
+        try {
+          if (Number.isFinite(latSpan) && Number.isFinite(lonSpan) && latSpan > 0 && lonSpan > 0) {
+            svgMap?.setGeoViewPort?.(lat - latSpan / 2, lon - lonSpan / 2, latSpan, lonSpan, false);
+          } else {
+            const gv = svgMap?.getGeoViewBox?.();
+            if (gv && Number.isFinite(Number(gv.width)) && Number.isFinite(Number(gv.height))) {
+              const ls = Number(gv.height);
+              const ls2 = Number(gv.width);
+              svgMap?.setGeoViewPort?.(lat - ls / 2, lon - ls2 / 2, ls, ls2, false);
+            }
+          }
+          svgMap?.refreshScreen?.();
+        } catch (err) {
+          console.warn('[current-map] map:focusLocation viewport failed', err);
+        }
+        // Defer pin draw until SVGMap has finished reloading tiles after the viewport change.
+        // requestAnimationFrame (~16 ms) is too short — the SVG root is still being rebuilt.
+        // 500 ms matches the old two-step approach that was known to work reliably.
+        window.setTimeout(() => {
+          relayCurrentLocation({ lat, lon });
+        }, 500);
+        return;
+      }
+
+      if (msg.type === MAP_MESSAGES.mapSetLayerVisible || msg.type === MAP_MESSAGES.runtimeSetLayerVisibility) {
+        const layerKey = msg.layerKey || msg.layerId || msg.payload?.layerKey || msg.payload?.layerId;
+        const visible = msg.visible ?? msg.payload?.visible;
+        setLayerVisible(layerKey, visible);
+        return;
+      }
+
+      if (msg.type === MAP_MESSAGES.mapSetLayerState) {
+        const layerId = String(msg.layerId || msg.payload?.layerId || '');
+        const state = String(msg.state ?? msg.payload?.state ?? '');
+        if (!layerId || state.length > 2000) return;
+        if (state) layerStates[layerId] = state;
+        else delete layerStates[layerId];
+        sendToLayerControllers({
+          type: MAP_MESSAGES.mapSetLayerState,
+          layerId,
+          state,
+        }, `layerState:${layerId}`, [layerId]);
+        return;
+      }
+
+      if (msg.type === MAP_MESSAGES.mapOpenLayerUi) {
+        const layerId = String(msg.layerId || msg.payload?.layerId || '');
+        if (!layerId) return;
+        try {
+          // 外部追加レイヤーのDOM idはSVGMap内部のiidとは異なる。
+          // 表示切替と同じ解決を通さないと、controllerは生成済みでもUIが開かない。
+          const identifier = svgMapLayerIdentifier(layerId);
+          svgMap.getSvgMapLayerUI?.()?.showLayerSpecificUI?.(identifier);
+          // controller iframeの生成と読込みは非同期。戻り値がundefinedでも未表示の
+          // 場合があるため、実際に表示されるまで短時間だけ再試行する。
+          [150, 400, 900].forEach((delay) => window.setTimeout(() => {
+            const panel = document.getElementById('layerSpecificUI');
+            if (panel?.style.display !== 'none' && lastLayerSpecificUiVisible) return;
+            svgMap.getSvgMapLayerUI?.()?.showLayerSpecificUI?.(svgMapLayerIdentifier(layerId));
+            scheduleLayerSpecificUiGuard();
+          }, delay));
+          scheduleLayerSpecificUiGuard();
+          scheduleRuntimeCommunityPropertyAdapters();
+        } catch (error) {
+          console.warn('[current-map] layer-specific UI could not be opened', { layerId, error });
+        }
+        return;
+      }
+
+      if (msg.type === MAP_MESSAGES.mapSetUiInsets) {
+        const right = Math.max(0, Math.min(800, Number(msg.right ?? msg.payload?.right) || 0));
+        document.documentElement.style.setProperty('--shell-right-inset', `${right}px`);
+        return;
+      }
+
+      if (msg.type === MAP_MESSAGES.mapImportLayers) {
+        importRuntimeLayers(msg.layers || msg.payload?.layers);
+        return;
+      }
+
+      if (msg.type === MAP_MESSAGES.mapRemoveLayer) {
+        removeRuntimeLayer(msg.layerId || msg.payload?.layerId);
+        return;
+      }
+
+      if (msg.type === MAP_MESSAGES.mapSetInteractionMode) {
+        setInteractionMode(msg.interactionMode || msg.payload?.interactionMode);
+        return;
+      }
+
+      const schedulePoiRefresh = (reason) => {
+        console.log('[current-map] received', reason, '→ scheduling native POI refresh');
+        window.setTimeout(() => {
+          try {
+            // SVGMap refreshScreen is queued outside the active parse cycle and performs
+            // dynamicLoad -> parseSVG -> setPoiBBox without mutating the viewport.
+            svgMap.refreshScreen?.();
+            console.log('[current-map] native POI refresh requested for', reason);
+          } catch (err) {
+            console.warn('[current-map] native POI refresh failed', err);
+          }
+        }, 50);
+      };
+
+      // layer内から直接 svgMap.refreshScreen() を呼ぶと #parseSVG の途中に
+      // 再入してクラッシュするため、ここで setTimeout を挟んで安全に呼ぶ
+      if (msg.type === MAP_MESSAGES.runtimePoiLayerRendered) {
+        schedulePoiRefresh(`${msg.type}:${msg.payload?.layerId || msg.layerId || 'unknown'}`);
+        return;
+      }
+
+      if (msg.type === MAP_MESSAGES.runtimeLayerReady) {
+        broadcastRuntimeContext();
+        return;
+      }
+
+      if (msg.type === MAP_MESSAGES.runtimeLayerStateChanged) {
+        const layerId = String(msg.layerId || msg.payload?.layerId || '');
+        const state = String(msg.state ?? msg.payload?.state ?? '');
+        const knownLayer = (runtimeState.layerCatalog?.layers || []).some((layer) => (
+          layer.id === layerId
+          || layer.toggleKey === layerId
+          || layer.mounts?.includes?.(layerId)
+        ));
+        if (!knownLayer || state.length > 2000) return;
+        if (state) layerStates[layerId] = state;
+        else delete layerStates[layerId];
+        notifyParent(MAP_MESSAGES.runtimeLayerStateChanged, { layerId, state });
+        return;
+      }
+
+      if (msg.type === MAP_MESSAGES.runtimeDataStatus) {
+        const payload = msg.payload || {};
+        emitDataStatus({
+          key: payload.key || msg.key || 'runtimeData',
+          label: payload.label || msg.label,
+          source: payload.source || msg.source || 'fallback',
+          url: payload.url || msg.url,
+          online: payload.online,
+          updatedAt: payload.updatedAt || payload.at,
+          // observedAt = 情報の時点 / cachedAt = 取得時刻。別物なので両方運ぶ。
+          observedAt: payload.observedAt || null,
+          cachedAt: payload.cachedAt || null,
+          message: payload.message,
+        });
+        return;
+      }
+
+    });
+
+    (async () => {
+      await Promise.all([loadRuntimeConfig(), loadLayerCatalog()]);
+      await prepareRuntimeContainer();
+      console.log('[current-map] data-src set to', runtimeState.config.containerUrl);
+      const svgMapModule = await import('/map/vendor/svgmapjs/SVGMapLv0.1_r18module.js');
+      svgMap = svgMapModule.svgMap;
+      window.svgMap = svgMap;
+      // controllerから見えるAPIは本家と同じ getCORSURL のままにする。外部HTTPSを
+      // 中継URLへ変換し、実際に通すhost/path/method/size/MIMEはサーバ側の
+      // generated layer capabilityで判定する。未知URLはURL化されても中継されない。
+      let communityProxyAvailable = false;
+      try {
+        const response = await fetch('/api/svgmap-proxy');
+        communityProxyAvailable = response.ok;
+      } catch (error) {
+        console.info('[current-map] community proxy unavailable', error);
+      }
+      const communityProxyUrl = (target) => {
+        const resolved = new URL(target, location.href);
+        if (resolved.origin === location.origin) return resolved.href;
+        if (resolved.protocol !== 'https:') return resolved.href;
+        return `/api/svgmap-proxy?url=${encodeURIComponent(resolved.href)}`;
+      };
+      if (communityProxyAvailable) {
+        svgMap.setProxyURLFactory?.(undefined, undefined, undefined, communityProxyUrl, false);
+      }
+      let clampingZoom = false;
+      let clampTimer = null;
+      // zoomPanMap の最中に setGeoViewPort を呼ぶと SVGMap のズーム処理へ
+      // 再入し、表示範囲が壊れる（幅0になる）。イベントが片付いてから直す。
+      const clampZoomOut = () => {
+        if (clampingZoom || clampTimer) return;
+        clampTimer = window.setTimeout(() => {
+          clampTimer = null;
+          const view = svgMap?.getGeoViewBox?.();
+          const height = Number(view?.height);
+          const width = Number(view?.width);
+          if (!Number.isFinite(height) || !Number.isFinite(width)
+            || height <= MAX_VIEW_LAT_SPAN || width <= 0) return;
+          const lonSpan = width * (MAX_VIEW_LAT_SPAN / height);
+          clampingZoom = true;
+          try {
+            svgMap.setGeoViewPort?.(
+              Number(view.cy) - MAX_VIEW_LAT_SPAN / 2,
+              Number(view.cx) - lonSpan / 2,
+              MAX_VIEW_LAT_SPAN,
+              lonSpan,
+              false,
+            );
+          } finally {
+            window.setTimeout(() => { clampingZoom = false; }, 0);
+          }
+        }, 0);
+      };
+      document.addEventListener('zoomPanMap', clampZoomOut);
+      document.addEventListener('zoomPanMap', notifyViewportChanged);
+      // 中心視点のヒットテストを止める。
+      // 有効なままだと SVGMap が再描画のたびに画面中心で候補一覧を出し直すので、
+      // 一度クリックしたあとスクロールし続ける間ずっと候補タブが出続ける。
+      // 候補一覧は「利用者がクリックした一点」に対してだけ出す。
+      svgMap.setCenterHitTest?.(false);
+      svgMap.initLoad();
+      scheduleRuntimeCommunityPropertyAdapters();
+      init();
+    })();
+  </script>
+</body>
+</html>

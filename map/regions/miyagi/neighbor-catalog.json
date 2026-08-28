@@ -69,63 +69,12 @@
       }
     },
     {
-      "id": "layer-hazard--near-yamagata",
-      "label": "山形県 ハザード",
-      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&overviewIndexUrl=/map/layers/hazard-overview/index.json&prefCode={prefCode}&layerKey={layerId}",
-      "visible": false,
-      "source": "managed/hazard",
-      "order": 901,
-      "group": "周辺地域",
-      "note": "山形県の洪水・土砂災害ハザードを越境して重ねる",
-      "kind": "vector",
-      "className": "vectorEtcData",
-      "symbol": "災",
-      "icon": "",
-      "accent": "#AD3F31",
-      "toggleKey": "layer-hazard--near-yamagata",
-      "mounts": [
-        "layer-hazard--near-yamagata"
-      ],
-      "visibilityStrategy": "native",
-      "search": null,
-      "manage": null,
-      "controllerUi": {
-        "label": "種類"
-      },
-      "userToggle": true,
-      "messages": {
-        "toHost": [
-          "runtime:dataStatus",
-          "runtime:layerReady",
-          "runtime:layerStateChanged"
-        ],
-        "fromHost": [
-          "map:layerVisibilityChanged",
-          "map:setMunicipalityFilter",
-          "map:setLayerState"
-        ]
-      },
-      "alertFeed": null,
-      "health": null,
-      "dataSource": null,
-      "disabled": false,
-      "requiresController": false,
-      "experimental": false,
-      "community": null,
-      "neighborRegion": {
-        "id": "yamagata",
-        "label": "山形県",
-        "prefCode": "06",
-        "relation": "land"
-      }
-    },
-    {
       "id": "layer-offline-basemap--near-iwate",
       "label": "岩手県 背景",
       "href": "/map/layers/offline-basemap/{regionId}.svg",
       "visible": false,
       "source": "managed/offline-basemap",
-      "order": 902,
+      "order": 901,
       "group": "周辺地域",
       "note": "岩手県の県境・海岸線・地名（通信なしでも見える）",
       "kind": "vector",
@@ -158,63 +107,12 @@
       }
     },
     {
-      "id": "layer-hazard--near-iwate",
-      "label": "岩手県 ハザード",
-      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&overviewIndexUrl=/map/layers/hazard-overview/index.json&prefCode={prefCode}&layerKey={layerId}",
-      "visible": false,
-      "source": "managed/hazard",
-      "order": 903,
-      "group": "周辺地域",
-      "note": "岩手県の洪水・土砂災害ハザードを越境して重ねる",
-      "kind": "vector",
-      "className": "vectorEtcData",
-      "symbol": "災",
-      "icon": "",
-      "accent": "#AD3F31",
-      "toggleKey": "layer-hazard--near-iwate",
-      "mounts": [
-        "layer-hazard--near-iwate"
-      ],
-      "visibilityStrategy": "native",
-      "search": null,
-      "manage": null,
-      "controllerUi": {
-        "label": "種類"
-      },
-      "userToggle": true,
-      "messages": {
-        "toHost": [
-          "runtime:dataStatus",
-          "runtime:layerReady",
-          "runtime:layerStateChanged"
-        ],
-        "fromHost": [
-          "map:layerVisibilityChanged",
-          "map:setMunicipalityFilter",
-          "map:setLayerState"
-        ]
-      },
-      "alertFeed": null,
-      "health": null,
-      "dataSource": null,
-      "disabled": false,
-      "requiresController": false,
-      "experimental": false,
-      "community": null,
-      "neighborRegion": {
-        "id": "iwate",
-        "label": "岩手県",
-        "prefCode": "03",
-        "relation": "land"
-      }
-    },
-    {
       "id": "layer-offline-basemap--near-fukushima",
       "label": "福島県 背景",
       "href": "/map/layers/offline-basemap/{regionId}.svg",
       "visible": false,
       "source": "managed/offline-basemap",
-      "order": 904,
+      "order": 902,
       "group": "周辺地域",
       "note": "福島県の県境・海岸線・地名（通信なしでも見える）",
       "kind": "vector",
@@ -247,63 +145,12 @@
       }
     },
     {
-      "id": "layer-hazard--near-fukushima",
-      "label": "福島県 ハザード",
-      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&overviewIndexUrl=/map/layers/hazard-overview/index.json&prefCode={prefCode}&layerKey={layerId}",
-      "visible": false,
-      "source": "managed/hazard",
-      "order": 905,
-      "group": "周辺地域",
-      "note": "福島県の洪水・土砂災害ハザードを越境して重ねる",
-      "kind": "vector",
-      "className": "vectorEtcData",
-      "symbol": "災",
-      "icon": "",
-      "accent": "#AD3F31",
-      "toggleKey": "layer-hazard--near-fukushima",
-      "mounts": [
-        "layer-hazard--near-fukushima"
-      ],
-      "visibilityStrategy": "native",
-      "search": null,
-      "manage": null,
-      "controllerUi": {
-        "label": "種類"
-      },
-      "userToggle": true,
-      "messages": {
-        "toHost": [
-          "runtime:dataStatus",
-          "runtime:layerReady",
-          "runtime:layerStateChanged"
-        ],
-        "fromHost": [
-          "map:layerVisibilityChanged",
-          "map:setMunicipalityFilter",
-          "map:setLayerState"
-        ]
-      },
-      "alertFeed": null,
-      "health": null,
-      "dataSource": null,
-      "disabled": false,
-      "requiresController": false,
-      "experimental": false,
-      "community": null,
-      "neighborRegion": {
-        "id": "fukushima",
-        "label": "福島県",
-        "prefCode": "07",
-        "relation": "land"
-      }
-    },
-    {
       "id": "layer-offline-basemap--near-akita",
       "label": "秋田県 背景",
       "href": "/map/layers/offline-basemap/{regionId}.svg",
       "visible": false,
       "source": "managed/offline-basemap",
-      "order": 906,
+      "order": 903,
       "group": "周辺地域",
       "note": "秋田県の県境・海岸線・地名（通信なしでも見える）",
       "kind": "vector",
@@ -321,57 +168,6 @@
       "controllerUi": null,
       "userToggle": true,
       "messages": null,
-      "alertFeed": null,
-      "health": null,
-      "dataSource": null,
-      "disabled": false,
-      "requiresController": false,
-      "experimental": false,
-      "community": null,
-      "neighborRegion": {
-        "id": "akita",
-        "label": "秋田県",
-        "prefCode": "05",
-        "relation": "land"
-      }
-    },
-    {
-      "id": "layer-hazard--near-akita",
-      "label": "秋田県 ハザード",
-      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&overviewIndexUrl=/map/layers/hazard-overview/index.json&prefCode={prefCode}&layerKey={layerId}",
-      "visible": false,
-      "source": "managed/hazard",
-      "order": 907,
-      "group": "周辺地域",
-      "note": "秋田県の洪水・土砂災害ハザードを越境して重ねる",
-      "kind": "vector",
-      "className": "vectorEtcData",
-      "symbol": "災",
-      "icon": "",
-      "accent": "#AD3F31",
-      "toggleKey": "layer-hazard--near-akita",
-      "mounts": [
-        "layer-hazard--near-akita"
-      ],
-      "visibilityStrategy": "native",
-      "search": null,
-      "manage": null,
-      "controllerUi": {
-        "label": "種類"
-      },
-      "userToggle": true,
-      "messages": {
-        "toHost": [
-          "runtime:dataStatus",
-          "runtime:layerReady",
-          "runtime:layerStateChanged"
-        ],
-        "fromHost": [
-          "map:layerVisibilityChanged",
-          "map:setMunicipalityFilter",
-          "map:setLayerState"
-        ]
-      },
       "alertFeed": null,
       "health": null,
       "dataSource": null,

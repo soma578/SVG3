@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="13080.91 -3400.38 12.01 16.46"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>福岡市 40106 ハザード詳細 40106</title>
+  <animation id="hazard-source-40106"
+    title="福岡市 40106 ハザード詳細" href="/map/layers/hazard/40/districts/40106.svg" xlink:href="/map/layers/hazard/40/districts/40106.svg"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+     visibility="visible" />
+</svg>

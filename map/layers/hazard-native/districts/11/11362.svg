@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="13900.42 -3612.61 15.51 9.92"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>皆野町 ハザード詳細 11362</title>
+  <animation id="hazard-source-11362"
+    title="皆野町 ハザード詳細" href="/map/layers/hazard/11/districts/11362.svg" xlink:href="/map/layers/hazard/11/districts/11362.svg"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+     visibility="visible" />
+</svg>

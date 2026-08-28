@@ -17,7 +17,7 @@ const VALID_VISIBILITY_STRATEGY = new Set(['native', 'controller'])
 const VALID_BUILD_KIND = new Set(['csv-qtct', 'webcam-qtct'])
 const VALID_PROPERTY_TYPES = new Set(['string', 'number', 'boolean', 'json'])
 const VALID_DATA_OWNERSHIP = new Set(['self', 'external', 'sample'])
-const VALID_DATA_DELIVERY = new Set(['static-snapshot', 'scheduled-snapshot', 'user-action-direct'])
+const VALID_DATA_DELIVERY = new Set(['static-snapshot', 'scheduled-snapshot', 'controlled-direct', 'user-action-direct'])
 const VALID_LAYER_TO_HOST_MESSAGES = new Set([
   'runtime:dataStatus',
   'runtime:layerReady',
@@ -143,7 +143,7 @@ const checkDataSourceContract = (configPath, config) => {
     errors.push(`${configPath}: dataSource.ownership must be self/external/sample`)
   }
   if (!VALID_DATA_DELIVERY.has(source.delivery)) {
-    errors.push(`${configPath}: dataSource.delivery must be static-snapshot/scheduled-snapshot/user-action-direct`)
+    errors.push(`${configPath}: dataSource.delivery must be static-snapshot/scheduled-snapshot/controlled-direct/user-action-direct`)
   }
   if (!source.authority?.name) errors.push(`${configPath}: dataSource.authority.name is required`)
   if (source.ownership === 'external') {
@@ -155,8 +155,12 @@ const checkDataSourceContract = (configPath, config) => {
     }
     if (config.publish) errors.push(`${configPath}: external dataSource must not declare a local publisher`)
   }
-  if (source.delivery !== 'user-action-direct' && source.runtimeFetch !== false) {
+  const runtimeDelivery = ['controlled-direct', 'user-action-direct'].includes(source.delivery)
+  if (!runtimeDelivery && source.runtimeFetch !== false) {
     errors.push(`${configPath}: snapshot dataSource.runtimeFetch must be false`)
+  }
+  if (runtimeDelivery && source.runtimeFetch !== true) {
+    errors.push(`${configPath}: direct dataSource.runtimeFetch must be true`)
   }
   if (!source.snapshot?.timestampField) {
     errors.push(`${configPath}: dataSource.snapshot.timestampField is required`)

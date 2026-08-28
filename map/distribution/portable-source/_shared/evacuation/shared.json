@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "kind": "portable-shared-component",
   "packageId": "evacuation",
-  "sharedVersion": "e147b2789e2e",
+  "sharedVersion": "07d3a76a2d7b",
   "files": [
     "map/icons/app/icon-192.png",
     "map/icons/app/icon-512.png",
@@ -41,7 +41,8 @@
     "map/icons/team-standby.svg",
     "map/layers/portable/evacuation/evacuationDetail.js",
     "map/layers/portable/evacuation/evacuationLayer.html",
-    "map/layers/portable/evacuation/evacuationLayer.svg",
+    "map/layers/portable/portable-network/runtime.package.json",
+    "map/layers/portable/portable-network/safeFetch.js",
     "map/layers/portable/representative-pins/DENSITY_POINTS_FORMAT.md",
     "map/layers/portable/representative-pins/densityPointFormat.js",
     "map/layers/portable/representative-pins/mapMessages.js",

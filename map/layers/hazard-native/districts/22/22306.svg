@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="13875.13 -3488.32 14.17 12.08"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>西伊豆町 ハザード詳細 22306</title>
+  <animation id="hazard-source-22306"
+    title="西伊豆町 ハザード詳細" href="/map/layers/hazard/22/districts/22306.svg" xlink:href="/map/layers/hazard/22/districts/22306.svg"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+     visibility="visible" />
+</svg>

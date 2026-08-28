@@ -17,7 +17,7 @@ dt{font-weight:700}dd{margin:0 0 8px}code{padding:2px 5px;background:#eef2f2;bor
 <dl>
 <dt>パッケージ</dt><dd>riverLevel / okayama</dd>
 <dt>発行者</dt><dd>SVG3</dd>
-<dt>バージョン</dt><dd>1.0.0</dd>
+<dt>バージョン</dt><dd>1.1.0</dd>
 <dt>ライセンス</dt><dd>利用条件未設定 (NOASSERTION)</dd>
 </dl>
 <h2>内容</h2>
@@ -26,5 +26,8 @@ dt{font-weight:700}dd{margin:0 0 8px}code{padding:2px 5px;background:#eef2f2;bor
 <p>ZIPを展開し、このフォルダーをHTTPサーバーで公開して <code>viewer.html</code> を開きます。ブラウザーの制約があるため、ファイルを直接開かずHTTP経由で確認してください。</p>
 <h2>別のSVGMapへ組み込む</h2>
 <p>フォルダー構成を保ったまま配置し、<code>Container.svg</code> 内の <code>&lt;animation&gt;</code> 宣言を組み込み先Containerへ追加してください。相対パスの基準が変わる場合は <code>xlink:href</code> を配置先に合わせて調整します。</p>
+
+<h2>データ取得ポリシー</h2>
+<p>Network Contractは <code>snapshot-required</code> です。このレイヤーは同梱または明示設定されたsnapshotだけを読み込み、公式上流へ直接fallbackしません。データを更新する場合はcompanion publisherでsnapshotを生成してください。データ供給元が未設定なら表示を停止します。</p>
 </body>
 </html>

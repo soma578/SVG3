@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="14282.51 -4267.71 69.91 30.56"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>大樹町 ハザード詳細 01641</title>
+  <animation id="hazard-source-01641"
+    title="大樹町 ハザード詳細" href="/map/layers/hazard/1/districts/01641.svg" xlink:href="/map/layers/hazard/1/districts/01641.svg"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+     visibility="visible" />
+</svg>

@@ -631,12 +631,12 @@ function drawCamera(dat){
 			}
 			
 			var meta =[];
-			//http://www.road-info-prvs.mlit.go.jp/roadinfo/img/doro_gazo/pc/20230405120000/s_83C03100.jpeg
-			//http://www.road-info-prvs.mlit.go.jp/roadinfo/img/doro_gazo/pc/20230405120500/83C02856.jpeg
+			//https://www.road-info-prvs.mlit.go.jp/roadinfo/img/doro_gazo/pc/20230405120000/s_83C03100.jpeg
+			//https://www.road-info-prvs.mlit.go.jp/roadinfo/img/doro_gazo/pc/20230405120500/83C02856.jpeg
 			if ( oneDat.fileList){
 				var idx = 0;
 				for ( var imgFile of oneDat.fileList){
-					meta.push(`http://www.road-info-prvs.mlit.go.jp/roadinfo/img/doro_gazo/pc/${imgFile.file.replace("/s_","/")}`); // s_を取り除き大きい画像を出す
+					meta.push(`https://www.road-info-prvs.mlit.go.jp/roadinfo/img/doro_gazo/pc/${imgFile.file.replace("/s_","/")}`); // s_を取り除き大きい画像を出す
 					meta.push(imgFile.get_datetime)
 					++idx;
 					if ( idx ==3){

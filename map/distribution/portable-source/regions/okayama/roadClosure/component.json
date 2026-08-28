@@ -3,7 +3,7 @@
   "kind": "portable-regional-component",
   "packageId": "roadClosure",
   "regionId": "okayama",
-  "sharedVersion": "28f1f019da25",
+  "sharedVersion": "7d71eb101338",
   "files": [
     "Container.isolated.svg",
     "Container.svg",

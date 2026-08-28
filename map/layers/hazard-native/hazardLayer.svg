@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="12243.4 -4605.6 3205.3 2251"
+     data-controller="hazardLayer.html#exec=hiddenOnLayerLoad&amp;requiredHeight=270&amp;requiredWidth=340&amp;layerKey=layer-hazard"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <image id="hazard-flood"
+    href="/map/layers/hazard-overview/national/flood.webp" xlink:href="/map/layers/hazard-overview/national/flood.webp"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+    visibleMaxZoom="800" visible-max-zoom="800" pointer-events="none" />
+  <image id="hazard-tsunami-inundation"
+    href="/map/layers/hazard-overview/national/tsunami.webp" xlink:href="/map/layers/hazard-overview/national/tsunami.webp"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+    visibleMaxZoom="800" visible-max-zoom="800" pointer-events="none" />
+  <image id="hazard-landslide-warning"
+    href="/map/layers/hazard-overview/national/landslide-warning.webp" xlink:href="/map/layers/hazard-overview/national/landslide-warning.webp"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+    visibleMaxZoom="800" visible-max-zoom="800" pointer-events="none" />
+  <image id="hazard-landslide-special"
+    href="/map/layers/hazard-overview/national/landslide-special.webp" xlink:href="/map/layers/hazard-overview/national/landslide-special.webp"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+    visibleMaxZoom="800" visible-max-zoom="800" pointer-events="none" />
+  <animation id="hazard-pref-01"
+    title="北海道" href="pref/01.svg" xlink:href="pref/01.svg"
+    x="13899.45896" y="-4589.65904" width="1023.82008" height="488.40308"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-02"
+    title="青森県" href="pref/02.svg" xlink:href="pref/02.svg"
+    x="13975.20547" y="-4166.36353" width="203.89206" height="155.35906"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-03"
+    title="岩手県" href="pref/03.svg" xlink:href="pref/03.svg"
+    x="14054.90832" y="-4055.42868" width="162.73836" height="191.07136"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-04"
+    title="宮城県" href="pref/04.svg" xlink:href="pref/04.svg"
+    x="14018.00006" y="-3909.77594" width="158.99788" height="141.95088"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-05"
+    title="秋田県" href="pref/05.svg" xlink:href="pref/05.svg"
+    x="13959.11027" y="-4061.32073" width="150.64646" height="184.21846"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-06"
+    title="山形県" href="pref/06.svg" xlink:href="pref/06.svg"
+    x="13942.32184" y="-3930.57916" width="132.04832" height="166.92032"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-07"
+    title="福島県" href="pref/07.svg" xlink:href="pref/07.svg"
+    x="13905.54128" y="-3808.59872" width="209.69344" height="140.40044"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-08"
+    title="茨城県" href="pref/08.svg" xlink:href="pref/08.svg"
+    x="13959.85155" y="-3703.44745" width="134.2649" height="138.4519"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-09"
+    title="栃木県" href="pref/09.svg" xlink:href="pref/09.svg"
+    x="13924.4602" y="-3723.6948" width="112.9536" height="111.9236"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-10"
+    title="群馬県" href="pref/10.svg" xlink:href="pref/10.svg"
+    x="13830.59454" y="-3714.98046" width="145.51892" height="125.56592"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-11"
+    title="埼玉県" href="pref/11.svg" xlink:href="pref/11.svg"
+    x="13862.27524" y="-3637.20576" width="136.62552" height="70.73452"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-12"
+    title="千葉県" href="pref/12.svg" xlink:href="pref/12.svg"
+    x="13965.28413" y="-3619.32287" width="131.08274" height="138.25474"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-13"
+    title="東京都" href="pref/13.svg" xlink:href="pref/13.svg"
+    x="13843.85557" y="-3640.27343" width="1605.24386" height="1268.22986"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-14"
+    title="神奈川県" href="pref/14.svg" xlink:href="pref/14.svg"
+    x="13883.51697" y="-3575.35003" width="108.12106" height="70.53906"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-15"
+    title="新潟県" href="pref/15.svg" xlink:href="pref/15.svg"
+    x="13751.40324" y="-3867.45276" width="250.68152" height="205.89152"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-16"
+    title="富山県" href="pref/16.svg" xlink:href="pref/16.svg"
+    x="13668.56842" y="-3706.26458" width="116.05516" height="87.11316"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-17"
+    title="石川県" href="pref/17.svg" xlink:href="pref/17.svg"
+    x="13613.7217" y="-3796.1973" width="133.0076" height="200.1386"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-18"
+    title="福井県" href="pref/18.svg" xlink:href="pref/18.svg"
+    x="13535.48494" y="-3638.98106" width="157.20012" height="114.06112"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-19"
+    title="山梨県" href="pref/19.svg" xlink:href="pref/19.svg"
+    x="13809.85228" y="-3605.33272" width="111.74944" height="96.65744"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-20"
+    title="長野県" href="pref/20.svg" xlink:href="pref/20.svg"
+    x="13721.65915" y="-3713.83785" width="163.0617" height="204.7867"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-21"
+    title="岐阜県" href="pref/21.svg" xlink:href="pref/21.svg"
+    x="13618.19148" y="-3655.93752" width="156.54504" height="151.99504"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-22"
+    title="静岡県" href="pref/22.svg" xlink:href="pref/22.svg"
+    x="13737.00368" y="-3575.00332" width="191.05864" height="128.03464"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-23"
+    title="愛知県" href="pref/23.svg" xlink:href="pref/23.svg"
+    x="13658.30176" y="-3551.27824" width="134.31048" height="102.25048"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-24"
+    title="三重県" href="pref/24.svg" xlink:href="pref/24.svg"
+    x="13575.41396" y="-3535.65804" width="133.25908" height="173.27608"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-25"
+    title="滋賀県" href="pref/25.svg" xlink:href="pref/25.svg"
+    x="13568.33449" y="-3578.41351" width="85.20502" height="107.39602"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-26"
+    title="京都府" href="pref/26.svg" xlink:href="pref/26.svg"
+    x="13476.49868" y="-3586.82332" width="137.95264" height="125.15264"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-27"
+    title="大阪府" href="pref/27.svg" xlink:href="pref/27.svg"
+    x="13501.56168" y="-3512.76432" width="80.73564" height="93.22064"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-28"
+    title="兵庫県" href="pref/28.svg" xlink:href="pref/28.svg"
+    x="13415.42811" y="-3577.32789" width="141.27978" height="171.57478"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-29"
+    title="奈良県" href="pref/29.svg" xlink:href="pref/29.svg"
+    x="13545.90286" y="-3486.20114" width="85.14228" height="108.37228"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-30"
+    title="和歌山県" href="pref/30.svg" xlink:href="pref/30.svg"
+    x="13491.56204" y="-3446.79096" width="118.11792" height="111.67392"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-31"
+    title="鳥取県" href="pref/31.svg" xlink:href="pref/31.svg"
+    x="13304.17234" y="-3570.89666" width="156.79732" height="74.56632"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-32"
+    title="島根県" href="pref/32.svg" xlink:href="pref/32.svg"
+    x="13152.67547" y="-3738.41653" width="200.03306" height="322.29406"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-33"
+    title="岡山県" href="pref/33.svg" xlink:href="pref/33.svg"
+    x="13317.95431" y="-3544.02869" width="132.10038" height="122.93438"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-34"
+    title="広島県" href="pref/34.svg" xlink:href="pref/34.svg"
+    x="13194.04234" y="-3520.17066" width="162.62732" height="126.33432"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-35"
+    title="山口県" href="pref/35.svg" xlink:href="pref/35.svg"
+    x="13067.05482" y="-3490.31618" width="192.60836" height="129.47536"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-36"
+    title="徳島県" href="pref/36.svg" xlink:href="pref/36.svg"
+    x="13357.29311" y="-3433.98389" width="133.62678" height="88.78078"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-37"
+    title="香川県" href="pref/37.svg" xlink:href="pref/37.svg"
+    x="13336.37361" y="-3464.76339" width="115.97778" height="71.81378"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-38"
+    title="愛媛県" href="pref/38.svg" xlink:href="pref/38.svg"
+    x="13191.15784" y="-3440.49816" width="188.43832" height="161.04232"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-39"
+    title="高知県" href="pref/39.svg" xlink:href="pref/39.svg"
+    x="13237.18932" y="-3399.13768" width="204.95736" height="139.68736"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-40"
+    title="福岡県" href="pref/40.svg" xlink:href="pref/40.svg"
+    x="12994.25048" y="-3434.03552" width="133.85704" height="143.08304"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-41"
+    title="佐賀県" href="pref/41.svg" xlink:href="pref/41.svg"
+    x="12966.28849" y="-3369.48951" width="95.63002" height="82.14402"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-42"
+    title="長崎県" href="pref/42.svg" xlink:href="pref/42.svg"
+    x="12820.91225" y="-3484.26575" width="230.6515" height="299.0525"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-43"
+    title="熊本県" href="pref/43.svg" xlink:href="pref/43.svg"
+    x="12986.94067" y="-3328.91033" width="155.40766" height="128.81666"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-44"
+    title="大分県" href="pref/44.svg" xlink:href="pref/44.svg"
+    x="13073.39329" y="-3383.10371" width="144.22042" height="120.73842"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-45"
+    title="宮崎県" href="pref/45.svg" xlink:href="pref/45.svg"
+    x="13060.60319" y="-3293.62881" width="137.70262" height="167.29662"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-46"
+    title="鹿児島県" href="pref/46.svg" xlink:href="pref/46.svg"
+    x="12818.38602" y="-3251.82698" width="323.32196" height="571.09196"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+  <animation id="hazard-pref-47"
+    title="沖縄県" href="pref/47.svg" xlink:href="pref/47.svg"
+    x="12262.87683" y="-2819.02417" width="900.82934" height="444.95734"
+    visibleMinZoom="600" visible-min-zoom="600" visibility="visible" />
+</svg>

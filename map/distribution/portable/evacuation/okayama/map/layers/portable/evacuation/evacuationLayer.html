@@ -8,16 +8,50 @@
 <body>
 <script type="module">
 import { initRepresentativePinsLayer } from '../representative-pins/representativePinsCore.js';
+import {
+  createPortableNetworkClient,
+  validateBundledSnapshotFragment,
+} from '../portable-network/safeFetch.js';
 import { renderEvacuationDetail } from './evacuationDetail.js';
 
 let started = false;
 const start = () => {
   if (started) return;
   started = true;
-  initRepresentativePinsLayer({
-    mode: 'portable',
-    renderFeatureDetail: renderEvacuationDetail,
-  });
+  try {
+    const manifestUrl = new URL('./layer.package.json', document.baseURI).href;
+    const network = createPortableNetworkClient({
+      manifestUrl,
+      baseUrl: document.baseURI,
+    });
+    const rawHash = String(window.svgImageProps?.hash || window.svgImageProps?.Path?.split('#')?.[1] || '');
+    const root = window.svgImage?.documentElement;
+    const defaults = {
+      summary: root?.getAttribute?.('data-svg3-summary') || '',
+      data: root?.getAttribute?.('data-svg3-data') || '',
+      layer: root?.getAttribute?.('data-svg3-layer') || '',
+      districtSvgUrlTemplate: root?.getAttribute?.('data-svg3-district-svg-url-template') || '',
+      detailByRegion: root?.getAttribute?.('data-svg3-detail-by-region') || '',
+    };
+    const dataParams = validateBundledSnapshotFragment({
+      rawHash,
+      manifestUrl,
+      baseUrl: document.baseURI,
+      defaults,
+      required: ['data', 'layer'],
+      urlParams: ['summary', 'data', 'districtSvgUrlTemplate', 'detailByRegion'],
+      forbidden: ['statusOverlay'],
+    });
+    initRepresentativePinsLayer({
+      mode: 'portable',
+      renderFeatureDetail: renderEvacuationDetail,
+      networkFetch: network.fetch,
+      dataParams,
+    });
+  } catch (error) {
+    document.documentElement.dataset.networkPolicyError = error?.code || 'NETWORK_POLICY_DENIED';
+    console.error('[evacuationLayer] bundled snapshot policy rejected startup', error);
+  }
 };
 window.addEventListener('layerWebAppReady', start, { once: true });
 if (window.svgMap && window.svgImage) queueMicrotask(start);

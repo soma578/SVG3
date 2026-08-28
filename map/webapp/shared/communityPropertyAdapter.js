@@ -18,6 +18,145 @@ const safeHttpUrl = (value) => {
 
 const fallbackCsvLine = (line) => String(line || '').split(',');
 
+// Track setShowPoiProperty registrations without changing SVGMap's native API contract.
+// SVG3's community formatter is only a fallback; a layer/controller registration always wins.
+const propertyRegistrationStateBySvgMap = new WeakMap();
+
+// Property callbacks can call svgMap.showModal directly (tight controller) or
+// indirectly through the S-LaWA RPC bridge. Keep a small async-safe context
+// while the registered property callback is running so the host can style only
+// property modals, not arbitrary tool/controller modals.
+export const COMMUNITY_PROPERTY_CONTEXT_KEY = Symbol.for('svg3.communityPropertyContextStack');
+
+const propertyContextStack = () => {
+  window[COMMUNITY_PROPERTY_CONTEXT_KEY] ||= [];
+  return window[COMMUNITY_PROPERTY_CONTEXT_KEY];
+};
+
+const removePropertyContextEntry = (entry) => {
+  const stack = propertyContextStack();
+  const index = stack.lastIndexOf(entry);
+  if (index >= 0) stack.splice(index, 1);
+};
+
+const runWithPropertyContext = (layerId, func, thisArg, args) => {
+  const entry = Object.freeze({ layerId: String(layerId || '') });
+  propertyContextStack().push(entry);
+
+  let result;
+  try {
+    result = func.apply(thisArg, args);
+  } catch (error) {
+    removePropertyContextEntry(entry);
+    throw error;
+  }
+
+  if (result && typeof result.then === 'function') {
+    return Promise.resolve(result).finally(() => removePropertyContextEntry(entry));
+  }
+
+  removePropertyContextEntry(entry);
+  return result;
+};
+
+const wrappedPropertyHandlers = new WeakMap();
+
+const propertyHandlerWithContext = (func, layerId) => {
+  if (typeof func !== 'function') return func;
+
+  let byLayer = wrappedPropertyHandlers.get(func);
+  if (!byLayer) {
+    byLayer = new Map();
+    wrappedPropertyHandlers.set(func, byLayer);
+  }
+
+  const id = String(layerId || '');
+  if (byLayer.has(id)) return byLayer.get(id);
+
+  const wrapped = function svg3PropertyContextHandler(...args) {
+    return runWithPropertyContext(id, func, this, args);
+  };
+
+  byLayer.set(id, wrapped);
+  return wrapped;
+};
+
+const getPropertyRegistrationState = (svgMap) => {
+  let state = propertyRegistrationStateBySvgMap.get(svgMap);
+  if (!state) {
+    state = {
+      installed: false,
+      originalSetShowPoiProperty: null,
+      registrations: new Map(),
+      globalRegistration: null,
+      fallbackHandlers: new WeakSet(),
+    };
+    propertyRegistrationStateBySvgMap.set(svgMap, state);
+  }
+  return state;
+};
+
+const clearSvg3FallbackBridge = (layerId) => {
+  const id = String(layerId || '');
+  if (!id) return;
+  if (window.svg3CommunityPropertyAdapters?.[id]) {
+    delete window.svg3CommunityPropertyAdapters[id];
+  }
+  if (window.svg3CommunityPropertyAdapter?.layerId === id) {
+    window.svg3CommunityPropertyAdapter = null;
+  }
+};
+
+export const installCommunityPropertyRegistrationMonitor = (
+  svgMap = window.svgMap,
+) => {
+  if (!svgMap?.setShowPoiProperty) return false;
+
+  const state = getPropertyRegistrationState(svgMap);
+  if (state.installed) return true;
+
+  const original = svgMap.setShowPoiProperty;
+  state.originalSetShowPoiProperty = original;
+
+  svgMap.setShowPoiProperty = function monitoredSetShowPoiProperty(func, docId) {
+    const owner = typeof func === 'function' && state.fallbackHandlers.has(func)
+      ? 'svg3-fallback'
+      : 'native-or-layer';
+
+    const registration = {
+      owner,
+      func: typeof func === 'function' ? func : null,
+    };
+
+    if (docId === undefined || docId === null || docId === '') {
+      state.globalRegistration = registration;
+    } else {
+      const id = String(docId);
+      state.registrations.set(id, registration);
+      if (owner !== 'svg3-fallback') clearSvg3FallbackBridge(id);
+    }
+
+    const effectiveFunc = owner === 'native-or-layer' && typeof func === 'function'
+      ? propertyHandlerWithContext(func, docId)
+      : func;
+
+    return original.call(this, effectiveFunc, docId);
+  };
+
+  state.installed = true;
+  return true;
+};
+
+const hasNativePropertyRegistration = (svgMap, layerId) => {
+  const state = getPropertyRegistrationState(svgMap);
+  const local = state.registrations.get(String(layerId));
+
+  if (local && local.owner !== 'svg3-fallback') return true;
+  if (state.globalRegistration?.owner !== 'svg3-fallback') return true;
+
+  return false;
+};
+
 export const communityRecordFromTarget = (target, svgMap = window.svgMap) => {
   const schema = String(target?.ownerDocument?.documentElement?.getAttribute?.('property') || '')
     .split(',')
@@ -145,6 +284,22 @@ export const registerCommunityPropertyAdapter = ({
   transform = genericCommunityProperty,
 } = {}) => {
   if (!svgMap?.setShowPoiProperty || !layerId) return false;
+
+  installCommunityPropertyRegistrationMonitor(svgMap);
+
+  const state = getPropertyRegistrationState(svgMap);
+  const id = String(layerId);
+  const current = state.registrations.get(id);
+
+  // Preserve SVGMap/community semantics. If the layer/controller has registered
+  // its own handler (including an explicit null registration), SVG3 must not
+  // replace it with the host generic formatter.
+  if (hasNativePropertyRegistration(svgMap, id)) return false;
+
+  // Avoid repeatedly registering the same class of fallback during the
+  // 0/300/900/2200 ms readiness retries.
+  if (current?.owner === 'svg3-fallback') return false;
+
   let lastInfo = null;
   const show = (target) => {
     const record = communityRecordFromTarget(target, svgMap);
@@ -152,16 +307,19 @@ export const registerCommunityPropertyAdapter = ({
     lastInfo = showPropertyModal(view.html, { attribution: view.attribution });
     return lastInfo;
   };
-  svgMap.setShowPoiProperty(show, layerId);
+
+  state.fallbackHandlers.add(show);
+  svgMap.setShowPoiProperty(show, id);
+
   // A small host-side bridge also lets controller tools invoke the exact same
   // formatter without duplicating the conversion contract.
   const bridge = Object.freeze({
-    layerId,
+    layerId: id,
     show,
     get lastInfo() { return lastInfo; },
   });
   window.svg3CommunityPropertyAdapters ||= Object.create(null);
-  window.svg3CommunityPropertyAdapters[layerId] = bridge;
+  window.svg3CommunityPropertyAdapters[id] = bridge;
   window.svg3CommunityPropertyAdapter = bridge;
   return true;
 };

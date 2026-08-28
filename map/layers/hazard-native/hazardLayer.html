@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ハザード SVGMap LOD</title>
+  <style>
+    :root { color-scheme: light; font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif; color: #172033; }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 12px; font-size: 14px; }
+    header { display: flex; justify-content: space-between; gap: 10px; padding-bottom: 8px; border-bottom: 1px solid #e1e6eb; }
+    h1 { margin: 0; font-size: 16px; }
+    #lod-state { color: #667085; font-size: 12px; }
+    .options { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-top: 10px; }
+    label { display: flex; align-items: center; gap: 7px; min-height: 38px; padding: 7px; border: 1px solid #d8dee5; border-radius: 6px; font-weight: 700; }
+    input { width: 17px; height: 17px; margin: 0; }
+    .swatch { width: 11px; height: 11px; border-radius: 2px; }
+    footer { margin-top: 10px; padding-top: 8px; border-top: 1px solid #e1e6eb; color: #667085; font-size: 11px; line-height: 1.5; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>ハザード種類</h1>
+  <span id="lod-state">SVGMap LOD</span>
+</header>
+<div class="options">
+  <label><input type="checkbox" data-hazard-type="flood" checked><span class="swatch" style="background:#3b82f6"></span>洪水浸水</label>
+  <label><input type="checkbox" data-hazard-type="tsunami" checked><span class="swatch" style="background:#a855f7"></span>津波浸水</label>
+  <label><input type="checkbox" data-hazard-type="landslide-warning" checked><span class="swatch" style="background:#f97316"></span>土砂警戒</label>
+  <label><input type="checkbox" data-hazard-type="landslide-special" checked><span class="swatch" style="background:#ef4444"></span>土砂特別警戒</label>
+</div>
+<footer>
+  空間ロードとLOD切替はSVGMap本体が担当します。controllerは種類の状態だけをロード済み文書へ適用します。
+</footer>
+<script type="module">
+import { MAP_MESSAGES } from '../portable/representative-pins/mapMessages.js';
+
+(() => {
+  window.hiddenOnLayerLoad = () => {};
+
+  const HAZARD_GROUPS = Object.freeze({
+    flood: 'hazard-flood',
+    tsunami: 'hazard-tsunami-inundation',
+    'landslide-warning': 'hazard-landslide-warning',
+    'landslide-special': 'hazard-landslide-special',
+  });
+  const params = new URLSearchParams(location.hash.replace(/^#/, ''));
+  const state = {
+    layerKey: params.get('layerKey') || 'layer-hazard',
+    visible: true,
+    enabledTypes: new Set(Object.keys(HAZARD_GROUPS)),
+  };
+
+  const notifyHost = (type, payload = {}) => {
+    window.parent?.postMessage?.(
+      { type, payload },
+      window.location.origin === 'null' ? '*' : window.location.origin,
+    );
+  };
+
+  const rootDocumentHash = () => {
+    const documents = window.svgMap?.getSvgImages?.() || {};
+    return Object.keys(documents).find((hash) => documents[hash] === window.svgImage) || null;
+  };
+
+  const applyTypesToDocument = (svgDocument, _props, enabledTypes) => {
+    const enabled = new Set(enabledTypes);
+    for (const [type, id] of Object.entries(HAZARD_GROUPS)) {
+      const node = svgDocument?.getElementById?.(id);
+      if (!node) continue;
+      const shown = state.visible && enabled.has(type);
+      node.setAttribute('visibility', shown ? 'visible' : 'hidden');
+      node.setAttribute('display', shown ? 'inline' : 'none');
+    }
+  };
+
+  const updateLodState = (documentCount) => {
+    const scale = Number(window.svgImageProps?.scale);
+    const label = document.getElementById('lod-state');
+    if (label) label.textContent = Number.isFinite(scale)
+      ? `scale ${scale.toFixed(2)} / ${documentCount}文書`
+      : `${documentCount}文書`;
+    console.debug('[hazard-native] LOD', { scale, documentCount });
+  };
+
+  const applyHazardVisibilityToLoadedDocs = () => {
+    const rootHash = rootDocumentHash();
+    const enabledTypes = [...state.enabledTypes];
+    if (rootHash && typeof window.svgMap?.linkedDocOp === 'function') {
+      window.svgMap.linkedDocOp(applyTypesToDocument, rootHash, enabledTypes);
+    } else {
+      applyTypesToDocument(window.svgImage, window.svgImageProps, enabledTypes);
+    }
+    const props = window.svgMap?.getSvgImagesProps?.() || {};
+    const documentCount = rootHash
+      ? Object.values(props).filter((entry) => entry?.rootLayer === rootHash || entry === window.svgImageProps).length
+      : 1;
+    updateLodState(documentCount);
+  };
+
+  const refresh = () => {
+    applyHazardVisibilityToLoadedDocs();
+    window.svgMap?.refreshScreen?.();
+  };
+
+  const reapplyAfterZoomPan = () => {
+    applyHazardVisibilityToLoadedDocs();
+    // zoomPanMapは最初の描画完了後に届く。新規tileのDOMへ状態を入れたあと、
+    // 同じviewBoxでもう一度描画してcanvas側にもvisibilityを反映する。
+    window.setTimeout(() => window.svgMap?.refreshScreen?.(), 0);
+  };
+
+  const serializedState = () => {
+    const output = new URLSearchParams();
+    output.set('types', Object.keys(HAZARD_GROUPS).filter((type) => state.enabledTypes.has(type)).join(','));
+    return output.toString();
+  };
+
+  const restoreState = (serialized) => {
+    const saved = new URLSearchParams(String(serialized || ''));
+    if (!saved.has('types')) return;
+    state.enabledTypes = new Set(String(saved.get('types') || '').split(',').filter((type) => HAZARD_GROUPS[type]));
+    document.querySelectorAll('[data-hazard-type]').forEach((input) => {
+      input.checked = state.enabledTypes.has(input.dataset.hazardType);
+    });
+    refresh();
+  };
+
+  document.querySelectorAll('[data-hazard-type]').forEach((input) => {
+    input.addEventListener('change', () => {
+      if (input.checked) state.enabledTypes.add(input.dataset.hazardType);
+      else state.enabledTypes.delete(input.dataset.hazardType);
+      notifyHost(MAP_MESSAGES.runtimeLayerStateChanged, { layerId: state.layerKey, state: serializedState() });
+      refresh();
+    });
+  });
+
+  window.addEventListener('message', (event) => {
+    const message = event.data || {};
+    if (message.type === MAP_MESSAGES.mapLayerVisibilityChanged) {
+      const layerKey = message.layerKey || message.payload?.layerKey;
+      if (layerKey !== state.layerKey) return;
+      state.visible = message.visible !== false;
+      refresh();
+    }
+    if (message.type === MAP_MESSAGES.mapSetLayerState) {
+      const layerId = message.layerId || message.payload?.layerId;
+      if (layerId === state.layerKey) restoreState(message.state ?? message.payload?.state ?? '');
+    }
+  });
+
+  // zoomPanMapは新しい子documentのロード完了後にcontroller iframeへ転送される。
+  // enabledTypesを正本として毎回再適用し、後から現れたtileの初期ON戻りを防ぐ。
+  window.addEventListener('zoomPanMap', reapplyAfterZoomPan);
+
+  let started = false;
+  const start = () => {
+    if (started) return;
+    started = true;
+    applyHazardVisibilityToLoadedDocs();
+    notifyHost(MAP_MESSAGES.runtimeLayerReady, { layerKey: state.layerKey });
+  };
+  window.addEventListener('layerWebAppReady', start, { once: true });
+  if (window.svgMap && window.svgImage) queueMicrotask(start);
+})();
+</script>
+</body>
+</html>

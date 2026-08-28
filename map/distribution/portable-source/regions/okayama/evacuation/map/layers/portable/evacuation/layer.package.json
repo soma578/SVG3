@@ -1,7 +1,7 @@
 {
   "id": "evacuation",
   "title": "Evacuation Portable Layer",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "entrypoint": "evacuationLayer.svg",
   "type": "svgmap-portable-layer",
   "distribution": {
@@ -15,11 +15,11 @@
       "status": "unresolved",
       "redistributable": false
     },
-    "publishedAt": "2026-07-21T00:00:00+09:00"
+    "publishedAt": "2026-08-28T00:00:00+09:00"
   },
   "portability": {
     "level": "distribution-portable",
-    "dataInjection": "hash-params",
+    "dataInjection": "embedded-relative-defaults",
     "limitations": []
   },
   "runtime": {
@@ -38,15 +38,36 @@
   "runtimeDependencies": [
     {
       "id": "representative-pins",
-      "version": "1.2.2",
+      "version": "1.2.3",
       "manifest": "../representative-pins/runtime.package.json"
     },
     {
       "id": "svgmap-slawa-client",
       "version": "1.0.0",
       "manifest": "../svgmap-slawa-client/runtime.package.json"
+    },
+    {
+      "id": "portable-network",
+      "version": "1.0.0",
+      "manifest": "../portable-network/runtime.package.json"
     }
   ],
+  "network": {
+    "schemaVersion": 1,
+    "mode": "bundled-snapshot",
+    "runtimeExternalFetch": false,
+    "sameOriginOnly": true,
+    "externalFallback": false,
+    "allowedOrigins": [],
+    "minimumIntervalSeconds": 0,
+    "maxConcurrency": 2,
+    "cacheSeconds": 0,
+    "retry": {
+      "maxAttempts": 1,
+      "backoffMilliseconds": 0
+    },
+    "failClosed": true
+  },
   "detailMode": "svgMap.showModal",
   "shared": [
     "evacuationDetail.js"
@@ -54,18 +75,22 @@
   "data": {
     "kind": "qtct",
     "injection": {
-      "transport": "svg-fragment-query",
+      "transport": "svg-document-attributes",
       "required": [
         "data",
         "layer"
       ],
       "optional": [
         "summary",
-        "statusOverlay",
         "profile",
         "municipalityCodes",
-        "districtSvgUrlTemplate"
-      ]
+        "districtSvgUrlTemplate",
+        "detailByRegion"
+      ],
+      "forbidden": [
+        "statusOverlay"
+      ],
+      "fallbackTransport": "svg-fragment-query"
     },
     "summary": "../../../data/qtct/evacuation/okayama/summary.json",
     "detail": "../../../data/qtct/evacuation/okayama/detail.json",
@@ -78,10 +103,16 @@
   },
   "runtimeDependencyLock": [
     {
+      "id": "portable-network",
+      "version": "1.0.0",
+      "manifest": "portable-network/runtime.package.json",
+      "integrity": "sha256-92a336a420534f2706b315579d4de1ed3126a760e7690bcbec3b331d99396deb"
+    },
+    {
       "id": "representative-pins",
-      "version": "1.2.2",
+      "version": "1.2.3",
       "manifest": "representative-pins/runtime.package.json",
-      "integrity": "sha256-599c2591f8387bde92cbb68c6c242942dfd221b2f5dbcaa5723a326c9fc7aefb"
+      "integrity": "sha256-1eec2b55c8c89e801a9be5680a72a6b78d0aa2a09bb812f3a31e22b85d1c5bc7"
     },
     {
       "id": "svgmap-slawa-client",

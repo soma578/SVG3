@@ -3,7 +3,7 @@
   "kind": "portable-regional-component",
   "packageId": "evacuation",
   "regionId": "okayama",
-  "sharedVersion": "e147b2789e2e",
+  "sharedVersion": "07d3a76a2d7b",
   "files": [
     "Container.isolated.svg",
     "Container.svg",
@@ -12,6 +12,7 @@
     "layer.manifest.json",
     "map/data/qtct/evacuation/okayama/detail.json",
     "map/data/qtct/evacuation/okayama/summary.json",
+    "map/layers/portable/evacuation/evacuationLayer.svg",
     "map/layers/portable/evacuation/layer.package.json"
   ]
 }

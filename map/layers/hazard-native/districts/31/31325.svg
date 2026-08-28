@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="13435.41 -3544.32 16.13 21.41"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>若桜町 ハザード詳細 31325</title>
+  <animation id="hazard-source-31325"
+    title="若桜町 ハザード詳細" href="/map/layers/hazard/31/districts/31325.svg" xlink:href="/map/layers/hazard/31/districts/31325.svg"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+     visibility="visible" />
+</svg>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="13661.85 -3670.1 7.47 7.57"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>内灘町 ハザード詳細 17365</title>
+  <animation id="hazard-source-17365"
+    title="内灘町 ハザード詳細" href="/map/layers/hazard/17/districts/17365.svg" xlink:href="/map/layers/hazard/17/districts/17365.svg"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+     visibility="visible" />
+</svg>

@@ -2,6 +2,11 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import {
+  findDirectNetworkCalls,
+  findExternalResourceUrls,
+  validatePortableNetworkContract,
+} from './lib/portableNetworkContract.mjs'
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url))
 const projectRoot = path.resolve(scriptDir, '..', '..')
@@ -14,7 +19,7 @@ const VALID_PORTABILITY_LEVELS = new Set(['workspace-portable', 'distribution-po
 const VALID_LAWA_MODES = new Set(['tight', 'isolated'])
 const RUNTIME_PACKAGE_TYPE = 'svgmap-runtime-package'
 const VALID_DATA_PARAMS = new Set([
-  'data', 'layer', 'summary', 'statusOverlay', 'profile', 'municipalityCodes', 'districtSvgUrlTemplate',
+  'data', 'layer', 'summary', 'statusOverlay', 'profile', 'municipalityCodes', 'districtSvgUrlTemplate', 'detailByRegion',
   'prefSvgUrl', 'svgUrlTemplate', 'overviewIndexUrl', 'prefCode', 'layerKey', 'sourceCsv',
 ])
 const UNSAFE_READY_FALLBACK = /document\.readyState\s*===\s*['"]complete['"][\s\S]{0,240}(?:queueMicrotask|addEventListener\(['"]load['"])/
@@ -112,6 +117,7 @@ for (const packagePath of packages) {
   const pkg = readJson(packagePath)
   if (!pkg) continue
   const runtimeFiles = new Set()
+  const packageOwnedRuntimeFiles = new Set()
   const dependencyPackages = new Map()
   const visitDependency = (ownerDir, dependency, stack = new Set()) => {
     if (!dependency || typeof dependency !== 'object') {
@@ -225,6 +231,13 @@ for (const packagePath of packages) {
     fail(`${rel}: runtime.requiredApis must be a non-empty array`)
   }
   const dataInjection = pkg.data?.injection
+  const bundleDataDefaults = pkg.portability?.bundleDataDefaults
+  if (bundleDataDefaults !== undefined && bundleDataDefaults !== 'svg-document-attributes') {
+    fail(`${rel}: portability.bundleDataDefaults must be "svg-document-attributes" when declared`)
+  }
+  if (bundleDataDefaults === 'svg-document-attributes' && pkg.data?.kind !== 'qtct') {
+    fail(`${rel}: svg-document-attributes bundle defaults currently require data.kind="qtct"`)
+  }
   if (pkg.portability?.dataInjection === 'hash-params') {
     if (!['qtct', 'svg-template'].includes(pkg.data?.kind)) {
       fail(`${rel}: hash-param data injection requires data.kind="qtct" or "svg-template"`)
@@ -234,6 +247,7 @@ for (const packagePath of packages) {
     }
     const required = dataInjection?.required
     const optional = dataInjection?.optional
+    const forbidden = dataInjection?.forbidden
     if (!Array.isArray(required) || required.length === 0) {
       fail(`${rel}: data.injection.required must be a non-empty array`)
     }
@@ -241,9 +255,17 @@ for (const packagePath of packages) {
       fail(`${rel}: QTCT data.injection.required must include "data" and "layer"`)
     }
     if (!Array.isArray(optional)) fail(`${rel}: data.injection.optional must be an array`)
+    if (forbidden !== undefined && !Array.isArray(forbidden)) {
+      fail(`${rel}: data.injection.forbidden must be an array when declared`)
+    }
     const params = [...(Array.isArray(required) ? required : []), ...(Array.isArray(optional) ? optional : [])]
+    const forbiddenParams = Array.isArray(forbidden) ? forbidden : []
     for (const param of params) {
       if (!VALID_DATA_PARAMS.has(param)) fail(`${rel}: unsupported data injection parameter "${param}"`)
+    }
+    for (const param of forbiddenParams) {
+      if (!VALID_DATA_PARAMS.has(param)) fail(`${rel}: unsupported forbidden data injection parameter "${param}"`)
+      if (params.includes(param)) fail(`${rel}: forbidden data injection parameter is also allowed: "${param}"`)
     }
     if (new Set(params).size !== params.length) fail(`${rel}: duplicate data injection parameter`)
   }
@@ -251,6 +273,7 @@ for (const packagePath of packages) {
   const absoluteDataUrls = []
   const entrypoint = path.resolve(dir, pkg.entrypoint || '')
   if (exists(entrypoint, `${rel} entrypoint`)) {
+    packageOwnedRuntimeFiles.add(entrypoint)
     const controller = controllerFromSvg(entrypoint)
     if (!controller) {
       fail(`${rel}: entrypoint has no data-controller`)
@@ -258,6 +281,7 @@ for (const packagePath of packages) {
       const controllerPath = path.resolve(path.dirname(entrypoint), controller)
       if (exists(controllerPath, `${rel} controller`)) {
         validateRelativeImports(controllerPath, runtimeFiles)
+        packageOwnedRuntimeFiles.add(controllerPath)
         const controllerSource = fs.readFileSync(controllerPath, 'utf8')
         if (UNSAFE_READY_FALLBACK.test(controllerSource)) {
           fail(`${rel}: controller must not start from document load before layerWebAppReady`)
@@ -322,7 +346,46 @@ for (const packagePath of packages) {
     if (relativeToPackage.startsWith('..') || path.isAbsolute(relativeToPackage)) {
       packageExternalDependencies.push(shared)
     }
-    if (exists(sharedPath, `${rel} shared "${shared}"`)) validateRelativeImports(sharedPath, runtimeFiles)
+    if (exists(sharedPath, `${rel} shared "${shared}"`)) {
+      validateRelativeImports(sharedPath, runtimeFiles)
+      packageOwnedRuntimeFiles.add(sharedPath)
+    }
+  }
+
+  for (const runtimeFile of runtimeFiles) {
+    const relativeToPackage = path.relative(dir, runtimeFile)
+    if (!relativeToPackage.startsWith('..') && !path.isAbsolute(relativeToPackage)) {
+      packageOwnedRuntimeFiles.add(runtimeFile)
+    }
+  }
+
+  if (pkg.network !== undefined) {
+    for (const error of validatePortableNetworkContract(pkg.network)) fail(`${rel}: ${error}`)
+    if (!pkg.runtimeDependencies?.some((dependency) => dependency.id === 'portable-network')) {
+      fail(`${rel}: network contract requires portable-network runtime dependency`)
+    }
+    if (pkg.network.mode === 'bundled-snapshot') {
+      if (!dataInjection?.forbidden?.includes('statusOverlay')) {
+        fail(`${rel}: bundled-snapshot must forbid the live statusOverlay parameter`)
+      }
+      const controllerPath = path.resolve(path.dirname(entrypoint), controllerFromSvg(entrypoint))
+      const source = fs.existsSync(controllerPath) ? fs.readFileSync(controllerPath, 'utf8') : ''
+      if (!source.includes('validateBundledSnapshotFragment(')) {
+        fail(`${rel}: bundled-snapshot controller must validate injected URLs before startup`)
+      }
+    }
+    for (const filePath of packageOwnedRuntimeFiles) {
+      if (!/\.(?:m?js|html)$/i.test(filePath)) continue
+      for (const finding of findDirectNetworkCalls(fs.readFileSync(filePath, 'utf8'))) {
+        fail(`${rel}: direct ${finding.kind} is forbidden in package code; use portable-network safeFetch (${path.relative(dir, filePath)})`)
+      }
+      for (const url of findExternalResourceUrls(fs.readFileSync(filePath, 'utf8'))) {
+        const origin = new URL(url).origin
+        if (pkg.network.runtimeExternalFetch !== true || !pkg.network.allowedOrigins.includes(origin)) {
+          fail(`${rel}: external resource is not permitted by network contract: ${url} (${path.relative(dir, filePath)})`)
+        }
+      }
+    }
   }
 
   for (const runtimeFile of runtimeFiles) {
@@ -365,6 +428,7 @@ for (const packagePath of packages) {
     absoluteDataUrls,
     dataContract: dataInjection?.transport || '',
     runtimeDependencies: [...dependencyPackages.values()].map(({ id, version }) => `${id}@${version}`).sort(),
+    networkMode: pkg.network?.mode || 'undeclared',
   })
 
   const summaryPath = resolveMapUrl(pkg.data?.summary)
@@ -399,6 +463,6 @@ for (const report of reports) {
       ? `${report.runtimeDependencies.length} declared runtime package(s)`
       : '',
   ].filter(Boolean).join(', ') || 'no external runtime dependency'
-  console.log(`[check-portable-layers] ${report.id}: ${report.level}, LaWA=${report.lawaModes.join('+')}, data=${report.dataContract || 'undeclared'}, runtime=${report.runtimeDependencies.join('+') || 'none'}, ${limits}`)
+  console.log(`[check-portable-layers] ${report.id}: ${report.level}, LaWA=${report.lawaModes.join('+')}, data=${report.dataContract || 'undeclared'}, network=${report.networkMode}, runtime=${report.runtimeDependencies.join('+') || 'none'}, ${limits}`)
 }
 console.log(`[check-portable-layers] OK: ${packages.length} portable layer package(s)`)

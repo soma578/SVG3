@@ -166,7 +166,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./basemaps/dynamicDenshiKokudo2016.svg#map=pale",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/basemaps-dynamicdenshikokudo2016-3.svg#map=pale",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/basemaps/dynamicdenshikokudo2016-3.svg#map=pale",
       "adapterKind": "document-identity"
     },
     {
@@ -204,7 +204,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./basemaps/dynamicDenshiKokudo2016.svg#map=relief",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/basemaps-dynamicdenshikokudo2016-4.svg#map=relief",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/basemaps/dynamicdenshikokudo2016-4.svg#map=relief",
       "adapterKind": "document-identity"
     },
     {
@@ -242,7 +242,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./basemaps/dynamicDenshiKokudo2016.svg",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/basemaps-dynamicdenshikokudo2016-5.svg",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/basemaps/dynamicdenshikokudo2016-5.svg",
       "adapterKind": "document-identity"
     },
     {
@@ -1220,7 +1220,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./authoringLayers/local/csvLayer/csvXhr_r20.svg",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/authoringlayers-local-csvlayer-csvxhr-r20-31.svg",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/authoringLayers/local/csvLayer/csvxhr_r20-31.svg",
       "adapterKind": "document-identity"
     },
     {
@@ -1473,7 +1473,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./basemaps/dynamicDenshiKokudo2016.svg#map=ccm2",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/basemaps-dynamicdenshikokudo2016-38.svg#map=ccm2",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/basemaps/dynamicdenshikokudo2016-38.svg#map=ccm2",
       "adapterKind": "document-identity"
     },
     {
@@ -1511,7 +1511,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./basemaps/dynamicDenshiKokudo2016.svg#map=ccm1",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/basemaps-dynamicdenshikokudo2016-39.svg#map=ccm1",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/basemaps/dynamicdenshikokudo2016-39.svg#map=ccm1",
       "adapterKind": "document-identity"
     },
     {
@@ -1627,7 +1627,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/msil/msilLayer.svg#layerName0=Infrastructure&layerName1=show:3",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-msil-msillayer-42.svg#layerName0=Infrastructure&layerName1=show:3",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/msil/msillayer-42.svg#layerName0=Infrastructure&layerName1=show:3",
       "adapterKind": "document-identity"
     },
     {
@@ -1669,7 +1669,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/msil/msilLayer.svg#layerName0=Maritime&layerName1=show:32",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-msil-msillayer-43.svg#layerName0=Maritime&layerName1=show:32",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/msil/msillayer-43.svg#layerName0=Maritime&layerName1=show:32",
       "adapterKind": "document-identity"
     },
     {
@@ -1711,7 +1711,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/msil/msilLayer.svg#layerName0=TopographyAndGeology&layerName1=show:1",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-msil-msillayer-44.svg#layerName0=TopographyAndGeology&layerName1=show:1",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/msil/msillayer-44.svg#layerName0=TopographyAndGeology&layerName1=show:1",
       "adapterKind": "document-identity"
     },
     {
@@ -1752,7 +1752,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/msil/msilImageLayer.svg#layerName=WeatherImg10&time=false",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-msil-msilimagelayer-45.svg#layerName=WeatherImg10&time=false",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/msil/msilimagelayer-45.svg#layerName=WeatherImg10&time=false",
       "adapterKind": "document-identity"
     },
     {
@@ -1793,7 +1793,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/msil/msilImageLayer.svg#layerName=WeatherImg9&time=false",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-msil-msilimagelayer-46.svg#layerName=WeatherImg9&time=false",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/msil/msilimagelayer-46.svg#layerName=WeatherImg9&time=false",
       "adapterKind": "document-identity"
     },
     {
@@ -1834,7 +1834,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/msil/msilImageLayer.svg",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-msil-msilimagelayer-47.svg",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/msil/msilimagelayer-47.svg",
       "adapterKind": "document-identity"
     },
     {
@@ -2318,7 +2318,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitRoad/jpAll2023.svg#layer=imusho",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlitroad-jpall2023-60.svg#layer=imusho",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/mlitRoad/jpall2023-60.svg#layer=imusho",
       "adapterKind": "document-identity"
     },
     {
@@ -2359,7 +2359,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitRoad/jpAll2023.svg#layer=station",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlitroad-jpall2023-61.svg#layer=station",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/mlitRoad/jpall2023-61.svg#layer=station",
       "adapterKind": "document-identity"
     },
     {
@@ -2400,7 +2400,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitRoad/jpAll2023.svg#layer=kojiyotei",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlitroad-jpall2023-62.svg#layer=kojiyotei",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/mlitRoad/jpall2023-62.svg#layer=kojiyotei",
       "adapterKind": "document-identity"
     },
     {
@@ -2441,7 +2441,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitRoad/jpAll2023.svg#layer=expressway",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlitroad-jpall2023-63.svg#layer=expressway",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/mlitRoad/jpall2023-63.svg#layer=expressway",
       "adapterKind": "document-identity"
     },
     {
@@ -2482,7 +2482,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitRoad/jpAll2023.svg#layer=jizenkisei",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlitroad-jpall2023-64.svg#layer=jizenkisei",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/mlitRoad/jpall2023-64.svg#layer=jizenkisei",
       "adapterKind": "document-identity"
     },
     {
@@ -2523,7 +2523,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitRoad/jpAll2023.svg#layer=weather",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlitroad-jpall2023-65.svg#layer=weather",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/mlitRoad/jpall2023-65.svg#layer=weather",
       "adapterKind": "document-identity"
     },
     {
@@ -2564,7 +2564,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitRoad/jpAll2023.svg#layer=camera",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlitroad-jpall2023-66.svg#layer=camera",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/mlitRoad/jpall2023-66.svg#layer=camera",
       "adapterKind": "document-identity"
     },
     {
@@ -2605,7 +2605,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitRoad/jpAll2023.svg",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlitroad-jpall2023-67.svg",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/mlitRoad/jpall2023-67.svg",
       "adapterKind": "document-identity"
     },
     {
@@ -2756,7 +2756,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportal.gsi.go.jp/data/raster/03_hightide_l2_shinsuishin&zmax=17",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-71.svg#globe&baseURL=https://disaportal.gsi.go.jp/data/raster/03_hightide_l2_shinsuishin&zmax=17",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/mlitHazard/dynamicwebtile-71.svg#globe&baseURL=https://disaportal.gsi.go.jp/data/raster/03_hightide_l2_shinsuishin&zmax=17",
       "adapterKind": "document-identity"
     },
     {
@@ -2799,7 +2799,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin&zmax=17",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-72.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin&zmax=17",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/mlitHazard/dynamicwebtile-72.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin&zmax=17",
       "adapterKind": "document-identity"
     },
     {
@@ -2842,7 +2842,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend&zmax=17",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-73.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend&zmax=17",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/mlitHazard/dynamicwebtile-73.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend&zmax=17",
       "adapterKind": "document-identity"
     },
     {
@@ -2885,7 +2885,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/04_tsunami_oldlegend&zmax=14",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-74.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/04_tsunami_oldlegend&zmax=14",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/mlitHazard/dynamicwebtile-74.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/04_tsunami_oldlegend&zmax=14",
       "adapterKind": "document-identity"
     },
     {
@@ -2928,7 +2928,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/08_03_ekijoka_zenkoku&zmax=14",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-75.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/08_03_ekijoka_zenkoku&zmax=14",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/mlitHazard/dynamicwebtile-75.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/08_03_ekijoka_zenkoku&zmax=14",
       "adapterKind": "document-identity"
     },
     {
@@ -2971,7 +2971,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend&zmax=14",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-76.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend&zmax=14",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/mlitHazard/dynamicwebtile-76.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend&zmax=14",
       "adapterKind": "document-identity"
     },
     {
@@ -3014,7 +3014,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki&zmax=16",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-77.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki&zmax=16",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/mlitHazard/dynamicwebtile-77.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki&zmax=16",
       "adapterKind": "document-identity"
     },
     {
@@ -3057,7 +3057,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki&zmax=16",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-78.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki&zmax=16",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/mlitHazard/dynamicwebtile-78.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki&zmax=16",
       "adapterKind": "document-identity"
     },
     {
@@ -3100,7 +3100,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki&zmax=16",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-79.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki&zmax=16",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/mlitHazard/dynamicwebtile-79.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki&zmax=16",
       "adapterKind": "document-identity"
     },
     {
@@ -3143,7 +3143,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_dosekiryukikenkeiryu&zmax=16",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-80.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_dosekiryukikenkeiryu&zmax=16",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/mlitHazard/dynamicwebtile-80.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_dosekiryukikenkeiryu&zmax=16",
       "adapterKind": "document-identity"
     },
     {
@@ -3186,7 +3186,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_kyukeisyachihoukai&zmax=16",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-81.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_kyukeisyachihoukai&zmax=16",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/mlitHazard/dynamicwebtile-81.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_kyukeisyachihoukai&zmax=16",
       "adapterKind": "document-identity"
     },
     {
@@ -3229,7 +3229,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_jisuberikikenkasyo&zmax=16",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-82.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_jisuberikikenkasyo&zmax=16",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/mlitHazard/dynamicwebtile-82.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_jisuberikikenkasyo&zmax=16",
       "adapterKind": "document-identity"
     },
     {
@@ -3272,7 +3272,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo&zmax=16",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-83.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo&zmax=16",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/mlitHazard/dynamicwebtile-83.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo&zmax=16",
       "adapterKind": "document-identity"
     },
     {
@@ -3315,7 +3315,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_kansui&zmax=14",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-84.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_kansui&zmax=14",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/mlitHazard/dynamicwebtile-84.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_kansui&zmax=14",
       "adapterKind": "document-identity"
     },
     {
@@ -3358,7 +3358,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_jizentuukoukiseikukan&zmax=12",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-85.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_jizentuukoukiseikukan&zmax=12",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/mlitHazard/dynamicwebtile-85.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_jizentuukoukiseikukan&zmax=12",
       "adapterKind": "document-identity"
     },
     {
@@ -3401,7 +3401,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/mlitHazard/dynamicWebTile.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_kinkyuuyusou&zmax=14",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-mlithazard-dynamicwebtile-86.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_kinkyuuyusou&zmax=14",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/mlitHazard/dynamicwebtile-86.svg#globe&baseURL=https://disaportaldata.gsi.go.jp/raster/10_kinkyuuyusou&zmax=14",
       "adapterKind": "document-identity"
     },
     {
@@ -3438,7 +3438,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./authoringLayers/local/csvLayer/csvXhr_r20.svg#csvPath=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_month.csv&latCol=1&lngCol=2&titleCol=0&variableIcon=4,3,4,5,6",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/authoringlayers-local-csvlayer-csvxhr-r20-87.svg#csvPath=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_month.csv&latCol=1&lngCol=2&titleCol=0&variableIcon=4,3,4,5,6",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/authoringLayers/local/csvLayer/csvxhr_r20-87.svg#csvPath=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_month.csv&latCol=1&lngCol=2&titleCol=0&variableIcon=4,3,4,5,6",
       "adapterKind": "document-identity"
     },
     {
@@ -3478,7 +3478,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./authoringLayers/local/csvLayer/csvXhr_r20.svg#csvPath=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.csv&latCol=1&lngCol=2&titleCol=0&variableIcon=4,3,4,5,6",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/authoringlayers-local-csvlayer-csvxhr-r20-88.svg#csvPath=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.csv&latCol=1&lngCol=2&titleCol=0&variableIcon=4,3,4,5,6",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/authoringLayers/local/csvLayer/csvxhr_r20-88.svg#csvPath=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.csv&latCol=1&lngCol=2&titleCol=0&variableIcon=4,3,4,5,6",
       "adapterKind": "host-compatibility"
     },
     {
@@ -3699,7 +3699,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/noaa_nowCOAST/wmsMercator.svg#global_sea_surface_temperature",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-noaa-nowcoast-wmsmercator-94.svg#global_sea_surface_temperature",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/noaa_nowCOAST/wmsmercator-94.svg#global_sea_surface_temperature",
       "adapterKind": "document-identity"
     },
     {
@@ -3740,7 +3740,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/noaa_nowCOAST/wmsMercator.svg#ldn_lightning_strike_density",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-noaa-nowcoast-wmsmercator-95.svg#ldn_lightning_strike_density",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/noaa_nowCOAST/wmsmercator-95.svg#ldn_lightning_strike_density",
       "adapterKind": "document-identity"
     },
     {
@@ -3781,7 +3781,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/noaa_nowCOAST/wmsMercator.svg#global_water_vapor_imagery_mosaic",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-noaa-nowcoast-wmsmercator-96.svg#global_water_vapor_imagery_mosaic",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/noaa_nowCOAST/wmsmercator-96.svg#global_water_vapor_imagery_mosaic",
       "adapterKind": "document-identity"
     },
     {
@@ -3822,7 +3822,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/noaa_nowCOAST/wmsMercator.svg#global_longwave_imagery_mosaic",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-noaa-nowcoast-wmsmercator-97.svg#global_longwave_imagery_mosaic",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/noaa_nowCOAST/wmsmercator-97.svg#global_longwave_imagery_mosaic",
       "adapterKind": "document-identity"
     },
     {
@@ -3863,7 +3863,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/noaa_nowCOAST/wmsMercator.svg#global_visible_imagery_mosaic",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-noaa-nowcoast-wmsmercator-98.svg#global_visible_imagery_mosaic",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/noaa_nowCOAST/wmsmercator-98.svg#global_visible_imagery_mosaic",
       "adapterKind": "document-identity"
     },
     {
@@ -4211,7 +4211,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jaxaGSMaP/dynamicWebTile.svg#globe&baseURL=none&zmax=11",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jaxagsmap-dynamicwebtile-107.svg#globe&baseURL=none&zmax=11",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/jaxaGSMaP/dynamicwebtile-107.svg#globe&baseURL=none&zmax=11",
       "adapterKind": "document-identity"
     },
     {
@@ -4255,7 +4255,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jaxaGSMaP/dynamicWebTile.svg#globe&baseURL=none&zmax=11",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jaxagsmap-dynamicwebtile-108.svg#globe&baseURL=none&zmax=11",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/jaxaGSMaP/dynamicwebtile-108.svg#globe&baseURL=none&zmax=11",
       "adapterKind": "document-identity"
     },
     {
@@ -4295,7 +4295,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jma/jma_bm_tiny.svg#forecast=true",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-tiny-109.svg#forecast=true",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/jma/jma_bm_tiny-109.svg#forecast=true",
       "adapterKind": "document-identity"
     },
     {
@@ -4372,7 +4372,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=16&autoupdate",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-111.svg#type=1&cat=16&autoupdate",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/jma/jma_bm_r2-111.svg#type=1&cat=16&autoupdate",
       "adapterKind": "document-identity"
     },
     {
@@ -4521,7 +4521,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=6&autoupdate",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-115.svg#type=1&cat=6&autoupdate",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/jma/jma_bm_r2-115.svg#type=1&cat=6&autoupdate",
       "adapterKind": "document-identity"
     },
     {
@@ -4597,7 +4597,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=4&autoupdate",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-117.svg#type=1&cat=4&autoupdate",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/jma/jma_bm_r2-117.svg#type=1&cat=4&autoupdate",
       "adapterKind": "document-identity"
     },
     {
@@ -4638,7 +4638,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=3&autoupdate",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-118.svg#type=1&cat=3&autoupdate",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/jma/jma_bm_r2-118.svg#type=1&cat=3&autoupdate",
       "adapterKind": "document-identity"
     },
     {
@@ -4679,7 +4679,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jma/jma_vm.svg#cat=2&autoupdate",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-vm-119.svg#cat=2&autoupdate",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/jma/jma_vm-119.svg#cat=2&autoupdate",
       "adapterKind": "document-identity"
     },
     {
@@ -4790,7 +4790,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=0&autoupdate",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-122.svg#type=1&cat=0&autoupdate",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/jma/jma_bm_r2-122.svg#type=1&cat=0&autoupdate",
       "adapterKind": "document-identity"
     },
     {
@@ -4831,7 +4831,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=10&autoupdate",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-123.svg#type=1&cat=10&autoupdate",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/jma/jma_bm_r2-123.svg#type=1&cat=10&autoupdate",
       "adapterKind": "document-identity"
     },
     {
@@ -4872,7 +4872,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=1&autoupdate",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-124.svg#type=1&cat=1&autoupdate",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/jma/jma_bm_r2-124.svg#type=1&cat=1&autoupdate",
       "adapterKind": "document-identity"
     },
     {
@@ -4913,7 +4913,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=2&autoupdate",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-125.svg#type=1&cat=2&autoupdate",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/jma/jma_bm_r2-125.svg#type=1&cat=2&autoupdate",
       "adapterKind": "document-identity"
     },
     {
@@ -4990,7 +4990,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jma/jma_vm.svg",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-vm-127.svg",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/jma/jma_vm-127.svg",
       "adapterKind": "document-identity"
     },
     {
@@ -5101,7 +5101,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jma/jma_bm_r2.svg#type=2&cat=0&autoupdate&zmax=11",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-130.svg#type=2&cat=0&autoupdate&zmax=11",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/jma/jma_bm_r2-130.svg#type=2&cat=0&autoupdate&zmax=11",
       "adapterKind": "document-identity"
     },
     {
@@ -5142,7 +5142,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jma/jma_bm_r2.svg#type=1&cat=0&autoupdate",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jma-jma-bm-r2-131.svg#type=1&cat=0&autoupdate",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/jma/jma_bm_r2-131.svg#type=1&cat=0&autoupdate",
       "adapterKind": "document-identity"
     },
     {
@@ -5432,7 +5432,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jice/CCTVcontainerB.svg#cat=road",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jice-cctvcontainerb-139.svg#cat=road",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/jice/cctvcontainerb-139.svg#cat=road",
       "adapterKind": "document-identity"
     },
     {
@@ -5472,7 +5472,7 @@
       },
       "sharedBaseSvg": true,
       "sharedBaseSource": "./appLayers/jice/CCTVcontainerB.svg#cat=river",
-      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/applayers-jice-cctvcontainerb-140.svg#cat=river",
+      "adapterHref": "/map/layers/external/svgmap-app-layers/adapters/shared/appLayers/jice/cctvcontainerb-140.svg#cat=river",
       "adapterKind": "document-identity"
     },
     {

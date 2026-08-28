@@ -41,6 +41,7 @@ const COMMUNITY_ASSET_PREFIX = '/map/svgMapAppLayers/';
 const REGION_PREFIXES = [
   '/map/containers/',
   '/map/layers/hazard/',
+  '/map/layers/hazard-native/',
   '/map/layers/hazard-overview/',
   '/map/layers/offline-basemap/',
   '/data/',

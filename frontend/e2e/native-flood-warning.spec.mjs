@@ -1,15 +1,15 @@
 import { expect, test } from '@playwright/test'
 
 const MAP_URL = '/map/webapp/native-map.html?regionId=okayama'
-const JMA_PATTERN = '**://www.jma.go.jp/bosai/warning/data/warning/map.json'
+const JMA_PATTERN = '**://www.jma.go.jp/bosai/warning/data/r8/map.json'
 const WARNING_RESPONSE = [{
-  reportDatetime: '2026-08-04T10:00:00+09:00',
-  areaTypes: [{
-    areas: [
-      { code: '3320200', warnings: [{ code: '04', status: '発表' }] }, // 倉敷市
-      { code: '3420700', warnings: [{ code: '10', status: '発表' }] }, // 福山市（県境の外側）
+  reportDatetime: new Date(Date.now() - 60 * 60_000).toISOString(),
+  warning: {
+    class20Items: [
+      { areaCode: '3320200', kinds: [{ code: '04', status: '発表' }] }, // 倉敷市
+      { areaCode: '3420700', kinds: [{ code: '10', status: '発表' }] }, // 福山市（県境の外側）
     ],
-  }],
+  },
 }]
 
 const mapFrame = async (page) => {
@@ -44,6 +44,29 @@ const layerFeatures = (frame) => frame.evaluate(() => {
     .map((node) => JSON.parse(node.getAttribute('data-feature') || '{}'))
 })
 
+const warningProperty = (frame, title) => frame.evaluate((targetTitle) => {
+  const images = window.svgMap.getSvgImages()
+  const element = images.root.querySelector('[id="layer-flood-warning"]')
+  const document_ = images[element?.getAttribute('iid')]
+  const target = [...(document_?.querySelectorAll('#flood-warning-points use') || [])]
+    .find((node) => JSON.parse(node.getAttribute('data-feature') || '{}').title === targetTitle)
+  if (!target) throw new Error(`warning POI not found: ${targetTitle}`)
+  target.setAttribute('iid', element.getAttribute('iid'))
+  const iconHref = document_.querySelector('#flood-warning-warning image')?.getAttribute('href') || ''
+  const originalShowModal = window.svgMap.showModal
+  let html = ''
+  window.svgMap.showModal = (content, ...args) => {
+    html = content instanceof Node ? String(content.innerHTML || '') : String(content || '')
+    return originalShowModal.call(window.svgMap, content, ...args)
+  }
+  try {
+    window.svgMap.showUseProperty(target)
+  } finally {
+    window.svgMap.showModal = originalShowModal
+  }
+  return { html, iconHref }
+}, title)
+
 test('表示操作後だけ気象庁から取得し、県境をまたぐ警報を描画する', async ({ page }) => {
   let requestCount = 0
   await page.route(JMA_PATTERN, (route) => {
@@ -70,6 +93,18 @@ test('表示操作後だけ気象庁から取得し、県境をまたぐ警報�
     expect.objectContaining({ title: '倉敷市', regionId: 'okayama', status: 'warning' }),
     expect.objectContaining({ title: '福山市', regionId: 'hiroshima', status: 'advisory' }),
   ]))
+  const controllerHandle = await frame.waitForSelector('#layerSpecificUI iframe:visible')
+  const controller = await controllerHandle.contentFrame()
+  await expect(controller.locator('#display-period')).toHaveValue('24')
+  await expect(controller.locator('#status')).toContainText('期間内 2件 / 発表中 2件')
+  await controller.locator('#display-period').selectOption('0')
+  await expect(controller.locator('#display-period')).toHaveValue('0')
+  const property = await warningProperty(frame, '倉敷市')
+  expect(property.iconHref).toContain('warning-warning.svg')
+  expect(property.html).toContain('svg3-property-warning')
+  expect(property.html).toContain('洪水警報')
+  expect(property.html).toContain('33202')
+  expect(property.html).toContain('気象庁「気象警報・注意報」')
 })
 
 test('気象庁の再取得失敗時は保存済みデータへ縮退する', async ({ page }) => {

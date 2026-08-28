@@ -315,7 +315,9 @@ assert.ok(
 )
 // capability 宣言が無いと current-map の policy gate が握り潰す。
 const catalog = JSON.parse(fs.readFileSync(path.join(projectRoot, 'map/layers/catalog.json'), 'utf8'))
-const dataStatusEmitters = ['layer-evacuation', 'layer-team-activity-pins', 'layer-japan-river-webcams', 'layer-hazard']
+// 本番ハザードはビルド済み静的LODへ移行したため、取得結果を報告するruntime emitterではない。
+// 旧portable controllerは単体配布の縮退表示用としてruntime:dataStatusを保つ。
+const dataStatusEmitters = ['layer-evacuation', 'layer-team-activity-pins', 'layer-japan-river-webcams']
 for (const layerId of dataStatusEmitters) {
   const layer = (catalog.layers || []).find((entry) => entry.id === layerId)
   assert.ok(layer, `catalog is missing ${layerId}`)

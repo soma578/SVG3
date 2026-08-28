@@ -87,63 +87,12 @@
       }
     },
     {
-      "id": "layer-hazard--near-nagano",
-      "label": "長野県 ハザード",
-      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&overviewIndexUrl=/map/layers/hazard-overview/index.json&prefCode={prefCode}&layerKey={layerId}",
-      "visible": false,
-      "source": "managed/hazard",
-      "order": 901,
-      "group": "周辺地域",
-      "note": "長野県の洪水・土砂災害ハザードを越境して重ねる",
-      "kind": "vector",
-      "className": "vectorEtcData",
-      "symbol": "災",
-      "icon": "",
-      "accent": "#AD3F31",
-      "toggleKey": "layer-hazard--near-nagano",
-      "mounts": [
-        "layer-hazard--near-nagano"
-      ],
-      "visibilityStrategy": "native",
-      "search": null,
-      "manage": null,
-      "controllerUi": {
-        "label": "種類"
-      },
-      "userToggle": true,
-      "messages": {
-        "toHost": [
-          "runtime:dataStatus",
-          "runtime:layerReady",
-          "runtime:layerStateChanged"
-        ],
-        "fromHost": [
-          "map:layerVisibilityChanged",
-          "map:setMunicipalityFilter",
-          "map:setLayerState"
-        ]
-      },
-      "alertFeed": null,
-      "health": null,
-      "dataSource": null,
-      "disabled": false,
-      "requiresController": false,
-      "experimental": false,
-      "community": null,
-      "neighborRegion": {
-        "id": "nagano",
-        "label": "長野県",
-        "prefCode": "20",
-        "relation": "land"
-      }
-    },
-    {
       "id": "layer-offline-basemap--near-aichi",
       "label": "愛知県 背景",
       "href": "/map/layers/offline-basemap/{regionId}.svg",
       "visible": false,
       "source": "managed/offline-basemap",
-      "order": 902,
+      "order": 901,
       "group": "周辺地域",
       "note": "愛知県の県境・海岸線・地名（通信なしでも見える）",
       "kind": "vector",
@@ -176,63 +125,12 @@
       }
     },
     {
-      "id": "layer-hazard--near-aichi",
-      "label": "愛知県 ハザード",
-      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&overviewIndexUrl=/map/layers/hazard-overview/index.json&prefCode={prefCode}&layerKey={layerId}",
-      "visible": false,
-      "source": "managed/hazard",
-      "order": 903,
-      "group": "周辺地域",
-      "note": "愛知県の洪水・土砂災害ハザードを越境して重ねる",
-      "kind": "vector",
-      "className": "vectorEtcData",
-      "symbol": "災",
-      "icon": "",
-      "accent": "#AD3F31",
-      "toggleKey": "layer-hazard--near-aichi",
-      "mounts": [
-        "layer-hazard--near-aichi"
-      ],
-      "visibilityStrategy": "native",
-      "search": null,
-      "manage": null,
-      "controllerUi": {
-        "label": "種類"
-      },
-      "userToggle": true,
-      "messages": {
-        "toHost": [
-          "runtime:dataStatus",
-          "runtime:layerReady",
-          "runtime:layerStateChanged"
-        ],
-        "fromHost": [
-          "map:layerVisibilityChanged",
-          "map:setMunicipalityFilter",
-          "map:setLayerState"
-        ]
-      },
-      "alertFeed": null,
-      "health": null,
-      "dataSource": null,
-      "disabled": false,
-      "requiresController": false,
-      "experimental": false,
-      "community": null,
-      "neighborRegion": {
-        "id": "aichi",
-        "label": "愛知県",
-        "prefCode": "23",
-        "relation": "land"
-      }
-    },
-    {
       "id": "layer-offline-basemap--near-toyama",
       "label": "富山県 背景",
       "href": "/map/layers/offline-basemap/{regionId}.svg",
       "visible": false,
       "source": "managed/offline-basemap",
-      "order": 904,
+      "order": 902,
       "group": "周辺地域",
       "note": "富山県の県境・海岸線・地名（通信なしでも見える）",
       "kind": "vector",
@@ -265,63 +163,12 @@
       }
     },
     {
-      "id": "layer-hazard--near-toyama",
-      "label": "富山県 ハザード",
-      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&overviewIndexUrl=/map/layers/hazard-overview/index.json&prefCode={prefCode}&layerKey={layerId}",
-      "visible": false,
-      "source": "managed/hazard",
-      "order": 905,
-      "group": "周辺地域",
-      "note": "富山県の洪水・土砂災害ハザードを越境して重ねる",
-      "kind": "vector",
-      "className": "vectorEtcData",
-      "symbol": "災",
-      "icon": "",
-      "accent": "#AD3F31",
-      "toggleKey": "layer-hazard--near-toyama",
-      "mounts": [
-        "layer-hazard--near-toyama"
-      ],
-      "visibilityStrategy": "native",
-      "search": null,
-      "manage": null,
-      "controllerUi": {
-        "label": "種類"
-      },
-      "userToggle": true,
-      "messages": {
-        "toHost": [
-          "runtime:dataStatus",
-          "runtime:layerReady",
-          "runtime:layerStateChanged"
-        ],
-        "fromHost": [
-          "map:layerVisibilityChanged",
-          "map:setMunicipalityFilter",
-          "map:setLayerState"
-        ]
-      },
-      "alertFeed": null,
-      "health": null,
-      "dataSource": null,
-      "disabled": false,
-      "requiresController": false,
-      "experimental": false,
-      "community": null,
-      "neighborRegion": {
-        "id": "toyama",
-        "label": "富山県",
-        "prefCode": "16",
-        "relation": "land"
-      }
-    },
-    {
       "id": "layer-offline-basemap--near-fukui",
       "label": "福井県 背景",
       "href": "/map/layers/offline-basemap/{regionId}.svg",
       "visible": false,
       "source": "managed/offline-basemap",
-      "order": 906,
+      "order": 903,
       "group": "周辺地域",
       "note": "福井県の県境・海岸線・地名（通信なしでも見える）",
       "kind": "vector",
@@ -354,63 +201,12 @@
       }
     },
     {
-      "id": "layer-hazard--near-fukui",
-      "label": "福井県 ハザード",
-      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&overviewIndexUrl=/map/layers/hazard-overview/index.json&prefCode={prefCode}&layerKey={layerId}",
-      "visible": false,
-      "source": "managed/hazard",
-      "order": 907,
-      "group": "周辺地域",
-      "note": "福井県の洪水・土砂災害ハザードを越境して重ねる",
-      "kind": "vector",
-      "className": "vectorEtcData",
-      "symbol": "災",
-      "icon": "",
-      "accent": "#AD3F31",
-      "toggleKey": "layer-hazard--near-fukui",
-      "mounts": [
-        "layer-hazard--near-fukui"
-      ],
-      "visibilityStrategy": "native",
-      "search": null,
-      "manage": null,
-      "controllerUi": {
-        "label": "種類"
-      },
-      "userToggle": true,
-      "messages": {
-        "toHost": [
-          "runtime:dataStatus",
-          "runtime:layerReady",
-          "runtime:layerStateChanged"
-        ],
-        "fromHost": [
-          "map:layerVisibilityChanged",
-          "map:setMunicipalityFilter",
-          "map:setLayerState"
-        ]
-      },
-      "alertFeed": null,
-      "health": null,
-      "dataSource": null,
-      "disabled": false,
-      "requiresController": false,
-      "experimental": false,
-      "community": null,
-      "neighborRegion": {
-        "id": "fukui",
-        "label": "福井県",
-        "prefCode": "18",
-        "relation": "land"
-      }
-    },
-    {
       "id": "layer-offline-basemap--near-shiga",
       "label": "滋賀県 背景",
       "href": "/map/layers/offline-basemap/{regionId}.svg",
       "visible": false,
       "source": "managed/offline-basemap",
-      "order": 908,
+      "order": 904,
       "group": "周辺地域",
       "note": "滋賀県の県境・海岸線・地名（通信なしでも見える）",
       "kind": "vector",
@@ -443,63 +239,12 @@
       }
     },
     {
-      "id": "layer-hazard--near-shiga",
-      "label": "滋賀県 ハザード",
-      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&overviewIndexUrl=/map/layers/hazard-overview/index.json&prefCode={prefCode}&layerKey={layerId}",
-      "visible": false,
-      "source": "managed/hazard",
-      "order": 909,
-      "group": "周辺地域",
-      "note": "滋賀県の洪水・土砂災害ハザードを越境して重ねる",
-      "kind": "vector",
-      "className": "vectorEtcData",
-      "symbol": "災",
-      "icon": "",
-      "accent": "#AD3F31",
-      "toggleKey": "layer-hazard--near-shiga",
-      "mounts": [
-        "layer-hazard--near-shiga"
-      ],
-      "visibilityStrategy": "native",
-      "search": null,
-      "manage": null,
-      "controllerUi": {
-        "label": "種類"
-      },
-      "userToggle": true,
-      "messages": {
-        "toHost": [
-          "runtime:dataStatus",
-          "runtime:layerReady",
-          "runtime:layerStateChanged"
-        ],
-        "fromHost": [
-          "map:layerVisibilityChanged",
-          "map:setMunicipalityFilter",
-          "map:setLayerState"
-        ]
-      },
-      "alertFeed": null,
-      "health": null,
-      "dataSource": null,
-      "disabled": false,
-      "requiresController": false,
-      "experimental": false,
-      "community": null,
-      "neighborRegion": {
-        "id": "shiga",
-        "label": "滋賀県",
-        "prefCode": "25",
-        "relation": "land"
-      }
-    },
-    {
       "id": "layer-offline-basemap--near-mie",
       "label": "三重県 背景",
       "href": "/map/layers/offline-basemap/{regionId}.svg",
       "visible": false,
       "source": "managed/offline-basemap",
-      "order": 910,
+      "order": 905,
       "group": "周辺地域",
       "note": "三重県の県境・海岸線・地名（通信なしでも見える）",
       "kind": "vector",
@@ -532,63 +277,12 @@
       }
     },
     {
-      "id": "layer-hazard--near-mie",
-      "label": "三重県 ハザード",
-      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&overviewIndexUrl=/map/layers/hazard-overview/index.json&prefCode={prefCode}&layerKey={layerId}",
-      "visible": false,
-      "source": "managed/hazard",
-      "order": 911,
-      "group": "周辺地域",
-      "note": "三重県の洪水・土砂災害ハザードを越境して重ねる",
-      "kind": "vector",
-      "className": "vectorEtcData",
-      "symbol": "災",
-      "icon": "",
-      "accent": "#AD3F31",
-      "toggleKey": "layer-hazard--near-mie",
-      "mounts": [
-        "layer-hazard--near-mie"
-      ],
-      "visibilityStrategy": "native",
-      "search": null,
-      "manage": null,
-      "controllerUi": {
-        "label": "種類"
-      },
-      "userToggle": true,
-      "messages": {
-        "toHost": [
-          "runtime:dataStatus",
-          "runtime:layerReady",
-          "runtime:layerStateChanged"
-        ],
-        "fromHost": [
-          "map:layerVisibilityChanged",
-          "map:setMunicipalityFilter",
-          "map:setLayerState"
-        ]
-      },
-      "alertFeed": null,
-      "health": null,
-      "dataSource": null,
-      "disabled": false,
-      "requiresController": false,
-      "experimental": false,
-      "community": null,
-      "neighborRegion": {
-        "id": "mie",
-        "label": "三重県",
-        "prefCode": "24",
-        "relation": "land"
-      }
-    },
-    {
       "id": "layer-offline-basemap--near-ishikawa",
       "label": "石川県 背景",
       "href": "/map/layers/offline-basemap/{regionId}.svg",
       "visible": false,
       "source": "managed/offline-basemap",
-      "order": 912,
+      "order": 906,
       "group": "周辺地域",
       "note": "石川県の県境・海岸線・地名（通信なしでも見える）",
       "kind": "vector",
@@ -606,57 +300,6 @@
       "controllerUi": null,
       "userToggle": true,
       "messages": null,
-      "alertFeed": null,
-      "health": null,
-      "dataSource": null,
-      "disabled": false,
-      "requiresController": false,
-      "experimental": false,
-      "community": null,
-      "neighborRegion": {
-        "id": "ishikawa",
-        "label": "石川県",
-        "prefCode": "17",
-        "relation": "land"
-      }
-    },
-    {
-      "id": "layer-hazard--near-ishikawa",
-      "label": "石川県 ハザード",
-      "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&overviewIndexUrl=/map/layers/hazard-overview/index.json&prefCode={prefCode}&layerKey={layerId}",
-      "visible": false,
-      "source": "managed/hazard",
-      "order": 913,
-      "group": "周辺地域",
-      "note": "石川県の洪水・土砂災害ハザードを越境して重ねる",
-      "kind": "vector",
-      "className": "vectorEtcData",
-      "symbol": "災",
-      "icon": "",
-      "accent": "#AD3F31",
-      "toggleKey": "layer-hazard--near-ishikawa",
-      "mounts": [
-        "layer-hazard--near-ishikawa"
-      ],
-      "visibilityStrategy": "native",
-      "search": null,
-      "manage": null,
-      "controllerUi": {
-        "label": "種類"
-      },
-      "userToggle": true,
-      "messages": {
-        "toHost": [
-          "runtime:dataStatus",
-          "runtime:layerReady",
-          "runtime:layerStateChanged"
-        ],
-        "fromHost": [
-          "map:layerVisibilityChanged",
-          "map:setMunicipalityFilter",
-          "map:setLayerState"
-        ]
-      },
       "alertFeed": null,
       "health": null,
       "dataSource": null,

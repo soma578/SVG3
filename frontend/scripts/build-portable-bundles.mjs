@@ -311,6 +311,8 @@ const bundleReadmeHtml = ({
   regionId,
   distribution,
   isolated,
+  network,
+  embeddedDefaults,
 }) => `<!doctype html>
 <html lang="ja">
 <head>
@@ -339,6 +341,13 @@ dt{font-weight:700}dd{margin:0 0 8px}code{padding:2px 5px;background:#eef2f2;bor
 <p>ZIPを展開し、このフォルダーをHTTPサーバーで公開して <code>viewer.html</code> を開きます。ブラウザーの制約があるため、ファイルを直接開かずHTTP経由で確認してください。</p>
 <h2>別のSVGMapへ組み込む</h2>
 <p>フォルダー構成を保ったまま配置し、<code>Container.svg</code> 内の <code>&lt;animation&gt;</code> 宣言を組み込み先Containerへ追加してください。相対パスの基準が変わる場合は <code>xlink:href</code> を配置先に合わせて調整します。</p>
+${embeddedDefaults ? '<p>配布版のレイヤーSVG自身に同梱データへの相対参照が入っているため、<code>xlink:href</code> へデータ用hash parameterを追加する必要はありません。データを差し替える高度な用途では、従来のhash parameterで既定値を上書きできます。</p>' : ''}
+${network ? `<h2>データ取得ポリシー</h2>
+<p>Network Contractは <code>${escapeHtml(network.mode)}</code> です。${network.mode === 'snapshot-required'
+    ? 'このレイヤーは同梱または明示設定されたsnapshotだけを読み込み、公式上流へ直接fallbackしません。データを更新する場合はcompanion publisherでsnapshotを生成してください。データ供給元が未設定なら表示を停止します。'
+    : network.mode === 'bundled-snapshot'
+      ? 'このレイヤーはZIP内の同一origin map資産だけを読み込みます。外部URL、ホストのAPI、live overlayへのfallbackは行いません。データを更新する場合はbundleを再生成してください。'
+    : '許可origin・取得間隔・同時実行数はlayer packageのNetwork Contractに従います。'}</p>` : ''}
 </body>
 </html>
 `
@@ -397,6 +406,18 @@ const bundleAnimationDefinitions = (pkg, config) => {
 const animationXml = (animations, { isolated = false } = {}) => animations
   .map((animation) => `  <animation id="${escapeXml(animation.id)}" xlink:href="${escapeXml(animation.href)}" title="${escapeXml(animation.title)}${isolated ? ' isolated' : ''}" class="${escapeXml(animation.className)}" visibility="visible" opacity="${escapeXml(animation.opacity)}"${isolated ? ' data-lawa-mode="isolated"' : ''} x="12243.4" y="-4605.6" width="3205.3" height="2251.0" />`)
   .join('\n')
+
+const dataAttributeName = (name) => `data-svg3-${String(name).replace(/[A-Z]/g, (char) => `-${char.toLowerCase()}`)}`
+
+const embedSvgDataDefaults = (svgSource, values) => {
+  const attributes = Object.entries(values)
+    .filter(([, value]) => value !== undefined && value !== null && String(value) !== '')
+    .map(([name, value]) => `${dataAttributeName(name)}="${escapeXml(String(value))}"`)
+    .join(' ')
+  if (!attributes) return svgSource
+  if (!/<svg\b/.test(svgSource)) throw new Error('portable entrypoint is not an SVG document')
+  return svgSource.replace(/<svg\b/, `<svg ${attributes}`)
+}
 
 const viewerHtml = (title, layerId, container = 'Container.svg') => `<!doctype html>
 <html lang="ja">
@@ -539,6 +560,7 @@ const buildBundle = (mount) => {
   }
 
   const packageRelative = path.relative(portableRoot, packageDir)
+  const embedsBundleDataDefaults = pkg.portability?.bundleDataDefaults === 'svg-document-attributes'
   const bundledPackagePath = path.join(bundleRoot, 'map', 'layers', 'portable', packageRelative, 'layer.package.json')
   const dataFromLayer = `../../../data/qtct/${qtctLayer}/${options.region}/detail.json`
   const summaryFromLayer = `../../../data/qtct/${qtctLayer}/${options.region}/summary.json`
@@ -546,7 +568,9 @@ const buildBundle = (mount) => {
     ...pkg,
     portability: {
       level: 'distribution-portable',
-      dataInjection: 'hash-params',
+      dataInjection: embedsBundleDataDefaults
+        ? 'embedded-relative-defaults'
+        : 'hash-params',
       limitations: pkg.portability?.limitations || [],
     },
     runtime: { ...pkg.runtime, lawaModes: ['tight', 'isolated'] },
@@ -554,6 +578,11 @@ const buildBundle = (mount) => {
     data: {
       ...pkg.data,
       kind: 'qtct',
+      injection: embedsBundleDataDefaults ? {
+        ...pkg.data?.injection,
+        transport: 'svg-document-attributes',
+        fallbackTransport: 'svg-fragment-query',
+      } : pkg.data?.injection,
       summary: summaryFromLayer,
       detail: dataFromLayer,
       regionId: options.region,
@@ -570,6 +599,23 @@ const buildBundle = (mount) => {
     districtSvgUrlTemplate,
     sourceCsv: sourceCsvFromLayer,
   }
+  if (embedsBundleDataDefaults) {
+    for (const definition of animationDefinitions) {
+      const entrypointPath = path.join(
+        bundleRoot,
+        'map',
+        'layers',
+        'portable',
+        packageRelative,
+        definition.entrypoint,
+      )
+      const defaults = Object.fromEntries(definition.dataParams.map((param) => {
+        if (!dataParamValues[param]) throw new Error(`${pkg.id}: no bundle value for data parameter "${param}"`)
+        return [param, dataParamValues[param]]
+      }))
+      writeText(entrypointPath, embedSvgDataDefaults(fs.readFileSync(entrypointPath, 'utf8'), defaults))
+    }
+  }
   const animations = animationDefinitions.map((definition) => {
     const layerRelative = toPosix(path.join('map', 'layers', 'portable', packageRelative, definition.entrypoint))
     const hash = new URLSearchParams(Object.fromEntries(
@@ -580,7 +626,7 @@ const buildBundle = (mount) => {
     )).toString()
     return {
       ...definition,
-      href: `${layerRelative}#${hash}`,
+      href: embedsBundleDataDefaults ? layerRelative : `${layerRelative}#${hash}`,
     }
   })
   const primaryAnimation = animations.find((animation) => animation.primary) || animations[0]
@@ -605,6 +651,8 @@ ${animationXml(animations, { isolated: true })}
     regionId: options.region,
     distribution,
     isolated: true,
+    network: pkg.network,
+    embeddedDefaults: embedsBundleDataDefaults,
   }))
 
   const files = []
@@ -696,17 +744,38 @@ const buildStandaloneBundle = ({ packageDir, pkg }) => {
 
   const packageRelative = path.relative(portableRoot, packageDir)
   const bundledPackagePath = path.join(bundleRoot, 'map', 'layers', 'portable', packageRelative, 'layer.package.json')
-  writeText(bundledPackagePath, `${JSON.stringify({
+  const embedsBundleDataDefaults = pkg.portability?.bundleDataDefaults === 'svg-document-attributes'
+  const bundledPackage = {
     ...pkg,
-    portability: { ...pkg.portability, level: 'distribution-portable' },
+    portability: {
+      ...pkg.portability,
+      level: 'distribution-portable',
+      dataInjection: embedsBundleDataDefaults ? 'embedded-relative-defaults' : pkg.portability?.dataInjection,
+    },
+    data: embedsBundleDataDefaults ? {
+      ...pkg.data,
+      injection: {
+        ...pkg.data?.injection,
+        transport: 'svg-document-attributes',
+        fallbackTransport: 'svg-fragment-query',
+      },
+    } : pkg.data,
     runtimeDependencyLock: bundledDependencyLock,
-  }, null, 2)}\n`)
+  }
+  writeText(bundledPackagePath, `${JSON.stringify(bundledPackage, null, 2)}\n`)
 
   const layerRelative = toPosix(path.join('map', 'layers', 'portable', packageRelative, pkg.entrypoint))
   const releaseHash = new URLSearchParams(pkg.release.params || {}).toString()
+  if (embedsBundleDataDefaults) {
+    const entrypointPath = path.join(bundleRoot, layerRelative)
+    writeText(entrypointPath, embedSvgDataDefaults(
+      fs.readFileSync(entrypointPath, 'utf8'),
+      pkg.release.params || {},
+    ))
+  }
   const animation = {
     id: pkg.release.layerId,
-    href: `${layerRelative}${releaseHash ? `#${releaseHash}` : ''}`,
+    href: `${layerRelative}${!embedsBundleDataDefaults && releaseHash ? `#${releaseHash}` : ''}`,
     title: pkg.release.title || pkg.title,
     className: pkg.containerAnimation?.class || 'vectorEtcData',
     visibility: 'visible',
@@ -737,6 +806,8 @@ const buildStandaloneBundle = ({ packageDir, pkg }) => {
     regionId: options.region,
     distribution,
     isolated: nativeIsolated,
+    network: pkg.network,
+    embeddedDefaults: embedsBundleDataDefaults,
   }))
 
   const files = []
@@ -871,13 +942,14 @@ fs.mkdirSync(outputRoot, { recursive: true })
 // 県ごとに中身が変わるもの。それ以外は47県で同一なので共通部へ寄せる。
 // Container / README は県名やデータ参照を埋め込むため県別。
 // viewer.html は Container を参照するだけなので共通で足りる。
-const isRegionalPath = (relative) => (
+const isRegionalPath = (relative, source = '') => (
   relative.startsWith('map/data/')
   || relative === 'bundle.manifest.json'
   || relative === 'layer.manifest.json'
   || relative === 'Container.svg'
   || relative === 'Container.isolated.svg'
   || relative === 'README.html'
+  || (/\.svg$/.test(relative) && /\bdata-svg3-[\w-]+\s*=/.test(source))
   || /^map\/layers\/portable\/[^/]+\/layer\.package\.json$/.test(relative)
 )
 
@@ -928,7 +1000,8 @@ const splitIntoComponents = (packageId, regionId) => {
     // zip は配布時に組み立てる成果物。正本には持たない。
     if (relative.endsWith('.zip')) continue
     const source = path.join(built, relative)
-    if (isRegionalPath(relative)) {
+    const sourceText = /\.svg$/.test(relative) ? fs.readFileSync(source, 'utf8') : ''
+    if (isRegionalPath(relative, sourceText)) {
       copyFile(source, path.join(regionTarget, relative))
       continue
     }

@@ -5,6 +5,7 @@ import {
   COMMUNITY_PROXY_MAX_BYTES,
   communityProxyCapabilities,
   communityProxyTargets,
+  communityProxyTrustedHosts,
   fetchCommunityProxy,
   matchCommunityProxyCapability,
   validateCommunityProxyUrl,
@@ -12,92 +13,72 @@ import {
 
 const publicDns = async () => [{ address: '93.184.216.34', family: 4 }]
 
-// TARGETS はもう通信の可否を決めない。同梱レイヤーがどこへ通信するかを
-// 利用者へ開示するための一覧として残す。
-test('community proxy publishes the endpoints the bundled layers declare', () => {
+test('community proxy publishes discovered endpoints as audit metadata', () => {
   const targets = communityProxyTargets()
   assert.ok(targets.length > 100)
-  assert.ok(targets.some((target) => (
-    target.hostname === 'www.e-stat.go.jp'
-    && target.pathnamePrefixes.includes('/gis/statmap-search/data')
-  )))
-  assert.ok(targets.some((target) => (
-    target.hostname === 'amx-project.github.io'
-    && target.pathnamePrefixes.includes('/kuwanauchi')
-  )))
-  assert.ok(targets.some((target) => (
-    target.hostname === 'earthquake.usgs.gov'
-    && target.pathnamePrefixes.includes('/earthquakes/feed/v1.0/summary/2.5_day.geojson')
-  )))
+  assert.ok(targets.some((target) => target.hostname === 'www.e-stat.go.jp'))
+  assert.ok(targets.some((target) => target.hostname === 'earthquake.usgs.gov'))
   assert.equal(COMMUNITY_PROXY_MAX_BYTES, 4 * 1024 * 1024)
 })
 
-test('community proxy publishes its declared endpoints to the client', async () => {
+test('community proxy publishes host-inherited authorization metadata', async () => {
   const response = await fetchCommunityProxy('https://map.example/api/svgmap-proxy')
   assert.equal(response.status, 200)
   const config = await response.json()
   assert.equal(config.schemaVersion, 2)
+  assert.equal(config.authorizationModel, 'community-host-inherited')
   assert.deepEqual(config.targets, communityProxyTargets())
+  assert.deepEqual(config.trustedHosts, communityProxyTrustedHosts())
   assert.deepEqual(config.capabilities, communityProxyCapabilities())
   assert.equal(response.headers.get('access-control-allow-origin'), '*')
 })
 
-test('community proxy validates URL shape separately from layer capability', () => {
-  assert.equal(
-    validateCommunityProxyUrl('https://dronebird.org/data/index.json').hostname,
-    'dronebird.org',
-  )
-  assert.equal(
-    validateCommunityProxyUrl('https://service.svgmap.org/anything.svg').hostname,
-    'service.svgmap.org',
-  )
-  assert.equal(
-    validateCommunityProxyUrl('https://www.google.com/search?q=maps').pathname,
-    '/search',
-  )
+test('community proxy validates URL shape separately from community host trust', () => {
+  assert.equal(validateCommunityProxyUrl('https://dronebird.org/data/index.json').hostname, 'dronebird.org')
+  assert.equal(validateCommunityProxyUrl('https://service.svgmap.org/anything.svg').hostname, 'service.svgmap.org')
+  assert.equal(validateCommunityProxyUrl('https://www.google.com/search?q=maps').pathname, '/search')
 })
 
-test('community proxy only matches endpoints declared by bundled layer capabilities', () => {
-  assert.equal(
-    matchCommunityProxyCapability('https://www.e-stat.go.jp/gis/statmap-search/data?code=33101')
-      ?.request.pathnamePrefix,
-    '/gis/statmap-search/data',
+test('community proxy accepts any runtime path on a bundled community dependency host', () => {
+  const matched = matchCommunityProxyCapability(
+    'https://www.road-info-prvs.mlit.go.jp/roadinfo/backup/20260828133000/jfjgY2YiLpFniBF9/ImageList/81.json',
   )
+  assert.ok(matched)
+  assert.equal(matched.authorization, 'community-host-inherited')
+  assert.equal(matched.request.hostname, 'www.road-info-prvs.mlit.go.jp')
+  assert.equal(matched.request.pathnamePrefix, '/')
+})
+
+test('community proxy does not become a proxy for unknown hosts', () => {
   assert.equal(matchCommunityProxyCapability('https://example.com/arbitrary.json'), null)
-  assert.equal(matchCommunityProxyCapability('https://www.mlit.go.jp/unrelated/private.json'), null)
 })
 
-test('community proxy accepts the endpoints its own layers declare', () => {
-  assert.equal(
-    validateCommunityProxyUrl('https://starlinkinsider.com/starlink-gateway-locations/').hostname,
-    'starlinkinsider.com',
+test('community proxy actually proxies a runtime-generated MLIT backup path', async () => {
+  const body = new TextEncoder().encode('{"ok":true}')
+  const target = encodeURIComponent(
+    'https://www.road-info-prvs.mlit.go.jp/roadinfo/backup/20260828133000/jfjgY2YiLpFniBF9/ImageList/81.json',
   )
-  assert.equal(
-    validateCommunityProxyUrl('https://www.google.com/maps/d/viewer?mid=example').pathname,
-    '/maps/d/viewer',
+  const response = await fetchCommunityProxy(
+    `https://host/api/svgmap-proxy?url=${target}`,
+    'GET',
+    async () => new Response(body, {
+      status: 200,
+      headers: { 'content-type': 'application/json', 'content-length': String(body.byteLength) },
+    }),
+    publicDns,
   )
-  assert.equal(
-    validateCommunityProxyUrl('https://www.e-stat.go.jp/gis/statmap-search/data?code=33101').pathname,
-    '/gis/statmap-search/data',
-  )
-  assert.equal(
-    validateCommunityProxyUrl('https://amx-project.github.io/kuwanauchi/kuwanauchi_datalist.csv').hostname,
-    'amx-project.github.io',
-  )
+  assert.equal(response.status, 200)
+  assert.deepEqual(await response.json(), { ok: true })
+  assert.equal(response.headers.get('x-svgmap-community-authorization'), 'community-host-inherited')
 })
 
-test('community proxy permits POST only for the fixed MSIL token endpoint', async () => {
-  assert.equal(
-    matchCommunityProxyCapability(
-      'https://www.msil.go.jp/msilwebtoken/api/token/new',
-      'POST',
-    )?.request.pathnamePrefix,
-    '/msilwebtoken/api/token/new',
+test('community proxy keeps explicit POST capability for exceptional endpoints', async () => {
+  const matched = matchCommunityProxyCapability(
+    'https://www.msil.go.jp/msilwebtoken/api/token/new',
+    'POST',
   )
-  assert.equal(
-    matchCommunityProxyCapability('https://www.msil.go.jp/msilwebtoken/api/other', 'POST'),
-    null,
-  )
+  assert.ok(matched)
+  assert.equal(matched.authorization, 'explicit-request')
   let observedMethod = ''
   const response = await fetchCommunityProxy(
     'https://host/api/svgmap-proxy?url=https%3A%2F%2Fwww.msil.go.jp%2Fmsilwebtoken%2Fapi%2Ftoken%2Fnew',
@@ -112,20 +93,23 @@ test('community proxy permits POST only for the fixed MSIL token endpoint', asyn
   assert.equal(observedMethod, 'POST')
 })
 
+test('community proxy does not grant generic POST only because a host is trusted', () => {
+  assert.equal(
+    matchCommunityProxyCapability('https://www.road-info-prvs.mlit.go.jp/roadinfo/anything', 'POST'),
+    null,
+  )
+})
+
 test('community proxy rejects open-proxy and SSRF-shaped targets', () => {
   for (const value of [
     'http://starlinkinsider.com/starlink-gateway-locations/',
     'https://127.0.0.1/maps/',
     'https://user:pass@www.google.com/maps/',
     'https://www.google.com:444/maps/',
-  ]) {
-    assert.throws(() => validateCommunityProxyUrl(value))
-  }
+  ]) assert.throws(() => validateCommunityProxyUrl(value))
 })
 
 test('community proxy retries a transient upstream 5xx once', async () => {
-  // 配信元が瞬間的に502を返すことがある（NOAA nowCOASTで実測）。タイル1枚の
-  // 失敗で地図に穴が空くので、短い間隔で一度だけ引き直す。
   const calls = []
   const fetchImpl = async (target) => {
     calls.push(String(target))
@@ -135,9 +119,7 @@ test('community proxy retries a transient upstream 5xx once', async () => {
   }
   const response = await fetchCommunityProxy(
     'https://host/api/svgmap-proxy?url=https%3A%2F%2Fnowcoast.noaa.gov%2Fgeoserver%2Ftile.png',
-    'GET',
-    fetchImpl,
-    publicDns,
+    'GET', fetchImpl, publicDns,
   )
   assert.equal(response.status, 200)
   assert.equal(calls.length, 2)
@@ -148,15 +130,13 @@ test('community proxy does not retry forever on a failing upstream', async () =>
   const fetchImpl = async () => { calls += 1; return new Response('bad gateway', { status: 502 }) }
   const response = await fetchCommunityProxy(
     'https://host/api/svgmap-proxy?url=https%3A%2F%2Fnowcoast.noaa.gov%2Fgeoserver%2Ftile.png',
-    'GET',
-    fetchImpl,
-    publicDns,
+    'GET', fetchImpl, publicDns,
   )
   assert.equal(response.status, 502)
   assert.equal(calls, 2)
 })
 
-test('community proxy accepts the MLIT binary GeoJSON MIME type', async () => {
+test('community proxy preserves explicit larger response limit for Noto GeoJSON', async () => {
   const body = new TextEncoder().encode('{"type":"FeatureCollection","features":[]}')
   const response = await fetchCommunityProxy(
     'https://host/api/svgmap-proxy?url=https%3A%2F%2Fwww.mlit.go.jp%2Froad%2Fr6noto%2Fmap%2Fjson%2Frecovery_point.geojson',
@@ -171,22 +151,18 @@ test('community proxy accepts the MLIT binary GeoJSON MIME type', async () => {
   assert.deepEqual(await response.json(), { type: 'FeatureCollection', features: [] })
 })
 
-test('community proxy only raises the size limit for the fixed Noto GeoJSON path', async () => {
+test('community host trust does not remove global response-size guardrail', async () => {
   const declaredLargeBody = async () => new Response('not read', {
     status: 200,
     headers: { 'content-type': 'application/octet-stream', 'content-length': String(12 * 1024 * 1024) },
   })
   const noto = await fetchCommunityProxy(
     'https://host/api/svgmap-proxy?url=https%3A%2F%2Fwww.mlit.go.jp%2Froad%2Fr6noto%2Fmap%2Fjson%2FETC2.0_speed_data.geojson',
-    'GET',
-    declaredLargeBody,
-    publicDns,
+    'GET', declaredLargeBody, publicDns,
   )
   const unrelated = await fetchCommunityProxy(
-    'https://host/api/svgmap-proxy?url=https%3A%2F%2Fwww.mlit.go.jp%2Froad%2Froadinfo%2Flarge.bin',
-    'GET',
-    declaredLargeBody,
-    publicDns,
+    'https://host/api/svgmap-proxy?url=https%3A%2F%2Fwww.mlit.go.jp%2Funrelated%2Flarge.bin',
+    'GET', declaredLargeBody, publicDns,
   )
   assert.equal(noto.status, 200)
   assert.equal(unrelated.status, 413)

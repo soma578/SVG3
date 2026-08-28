@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="13820.4 -3833.68 37.06 53.44"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>佐渡市 ハザード詳細 15224</title>
+  <animation id="hazard-source-15224"
+    title="佐渡市 ハザード詳細" href="/map/layers/hazard/15/districts/15224.svg" xlink:href="/map/layers/hazard/15/districts/15224.svg"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+     visibility="visible" />
+</svg>

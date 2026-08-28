@@ -11,11 +11,42 @@ import {
   targetDepthForZoom,
 } from './qtctFeatureEngine.js';
 
+const EMBEDDED_DATA_PARAMS = [
+  'summary',
+  'data',
+  'layer',
+  'districtSvgUrlTemplate',
+  'detailByRegion',
+  'sourceCsv',
+  'profile',
+  'municipalityCodes',
+  'statusOverlay',
+];
+
+const dataAttributeName = (name) => `data-svg3-${String(name).replace(/[A-Z]/g, (char) => `-${char.toLowerCase()}`)}`;
+
+export const portableLayerDataParams = ({
+  root = globalThis.svgImage?.documentElement || null,
+  rawHash = String(globalThis.svgImageProps?.hash || globalThis.svgImageProps?.Path?.split('#')?.[1] || ''),
+} = {}) => {
+  const params = new URLSearchParams();
+  for (const name of EMBEDDED_DATA_PARAMS) {
+    const value = root?.getAttribute?.(dataAttributeName(name));
+    if (value) params.set(name, value);
+  }
+  for (const [name, value] of new URLSearchParams(rawHash.replace(/^#/, ''))) {
+    params.set(name, value);
+  }
+  return params;
+};
+
 export const initRepresentativePinsLayer = ({
   mode = 'portable',
   renderFeatureDetail = null,
   bridge = null,
   refreshIntervalMs = 0,
+  networkFetch = globalThis.fetch?.bind(globalThis),
+  dataParams = null,
 } = {}) => {
   window.hiddenOnLayerLoad = () => {};
 
@@ -134,8 +165,9 @@ export const initRepresentativePinsLayer = ({
   };
 
   const parseHashParams = () => {
-    const raw = String(window.svgImageProps?.hash || window.svgImageProps?.Path?.split('#')?.[1] || '');
-    const params = new URLSearchParams(raw.replace(/^#/, ''));
+    const params = dataParams instanceof URLSearchParams
+      ? new URLSearchParams(dataParams)
+      : portableLayerDataParams();
     state.dataUrl = params.get('data') || state.dataUrl;
     state.summaryDataUrl = params.get('summary') || state.summaryDataUrl || state.dataUrl;
     state.districtSvgUrlTemplate = params.get('districtSvgUrlTemplate') || state.districtSvgUrlTemplate;
@@ -289,7 +321,7 @@ export const initRepresentativePinsLayer = ({
       && Date.now() - state.statusOverlayLoadedAt < LIVE_REVALIDATE_MS) return;
     state.statusOverlayLoading = true;
     try {
-      const res = await fetch(state.statusOverlayUrl, { cache: 'no-store' });
+      const res = await networkFetch(state.statusOverlayUrl, { cache: 'no-store' });
       const json = res.ok ? await res.json() : {};
       state.statusOverlay = (json && typeof json === 'object' && !Array.isArray(json)) ? json : {};
     } catch {
@@ -330,6 +362,7 @@ export const initRepresentativePinsLayer = ({
         label: '地区境界',
         emitDataStatus,
         logLabel: 'representativePinsLayer',
+        fetchImpl: networkFetch,
       });
       const parser = new DOMParser();
       const doc = parser.parseFromString(text, 'image/svg+xml');
@@ -441,6 +474,7 @@ export const initRepresentativePinsLayer = ({
         emitDataStatus,
         logLabel: 'representativePinsLayer',
         requestCache: Date.now() < state.forceNetworkUntil ? 'no-cache' : 'default',
+        fetchImpl: networkFetch,
       },
     );
     return decodeDensityPoints(densityDocument, densityDocument?.bounds || metadata.bounds);
@@ -467,6 +501,7 @@ export const initRepresentativePinsLayer = ({
             emitDataStatus,
             logLabel: 'representativePinsLayer',
             requestCache: Date.now() < state.forceNetworkUntil ? 'no-cache' : 'default',
+            fetchImpl: networkFetch,
           },
         );
         if (data?.tree) {
@@ -1035,6 +1070,7 @@ export const initRepresentativePinsLayer = ({
           emitDataStatus,
           logLabel: 'representativePinsLayer',
           requestCache: Date.now() < state.forceNetworkUntil ? 'no-cache' : 'default',
+          fetchImpl: networkFetch,
         });
         if (seq !== loadSeqByTarget[target]) return null;
         // summary/detail どちらもシャードインデックスを受け付ける。
@@ -1195,6 +1231,7 @@ export const initRepresentativePinsLayer = ({
             label: profile().label,
             emitDataStatus,
             logLabel: 'representativePinsLayer',
+            fetchImpl: networkFetch,
           });
           const index = new Map();
           const pending = [data?.tree];
@@ -1331,6 +1368,14 @@ export const initRepresentativePinsLayer = ({
       summaryDataUrl: state.summaryDataUrl,
       dataUrl: state.dataUrl,
     });
+    if (!state.dataUrl) {
+      emitDataStatus({
+        key: `representative:${state.layerId}:configuration`,
+        label: profile().label,
+        source: 'fallback',
+        message: 'データ供給元が設定されていません',
+      });
+    }
     let tries = 0;
     const timer = setInterval(() => {
       ensureIconDefs();

@@ -6,7 +6,7 @@
   "description": "配布レイヤーサンプルを表示するSVGMapレイヤー",
   "regionId": "okayama",
   "listed": true,
-  "entrypoint": "map/layers/portable/artifact-sample/artifactSampleLayer.svg#summary=data%2Fsummary.json&data=data%2Fdetail.json&layer=artifactSample",
+  "entrypoint": "map/layers/portable/artifact-sample/artifactSampleLayer.svg",
   "fixture": "viewer.html",
   "isolatedProtocolFixture": "viewer-isolated.html",
   "distribution": {
@@ -23,7 +23,7 @@
     },
     "publishedAt": "2026-07-21T00:00:00+09:00"
   },
-  "contentDigest": "sha256-f458c549b822b7f93425578ea0f285e5d3f9c98cbbaf0116cb7e90608dbc0509",
+  "contentDigest": "sha256-4cfe0984080ecca3637f29310f807f44c3f8fecea86fa50a764597bda20cd717",
   "portability": {
     "pathIndependent": true,
     "crossOrigin": false,
@@ -37,9 +37,9 @@
     "runtimeDependencies": [
       {
         "id": "representative-pins",
-        "version": "1.2.2",
+        "version": "1.2.3",
         "manifest": "representative-pins/runtime.package.json",
-        "integrity": "sha256-599c2591f8387bde92cbb68c6c242942dfd221b2f5dbcaa5723a326c9fc7aefb"
+        "integrity": "sha256-1eec2b55c8c89e801a9be5680a72a6b78d0aa2a09bb812f3a31e22b85d1c5bc7"
       },
       {
         "id": "svgmap-slawa-client",
@@ -53,18 +53,18 @@
   "files": [
     {
       "path": "Container.isolated.svg",
-      "bytes": 650,
-      "sha256": "1ed33f6474d606fd0886b077f4a56a995167ddbb3fabd1f052b8c457ab957dba"
+      "bytes": 569,
+      "sha256": "654b8678ab17baadd26effbab02d157c2f829da10a8938226cfc70a9801888fd"
     },
     {
       "path": "Container.svg",
-      "bytes": 624,
-      "sha256": "5fed9ee55dd5bb8d1968ab38ed46a7767fd353f634ac21891c785100496f879b"
+      "bytes": 543,
+      "sha256": "23b7ff5c1f6a0f491c8715e9ee50d88a1e0c02156b580e10a5dd2ec8ccc5876c"
     },
     {
       "path": "layer.manifest.json",
       "bytes": 11460,
-      "sha256": "1af4bcb3733a505d2ccf13f46265999ffc88d842c19b5d62405c92435fdfef40"
+      "sha256": "e00b7115792edf2a7732ebf1335253b0e4baf80e5f7710a6b72e88fb56492d72"
     },
     {
       "path": "map/icons/app/icon-192.png",
@@ -248,8 +248,8 @@
     },
     {
       "path": "map/layers/portable/artifact-sample/artifactSampleLayer.svg",
-      "bytes": 410,
-      "sha256": "dbbd2529f00e74feef724675f1511cc0073d8e63690ea9b44f48c812d4e60cb5"
+      "bytes": 515,
+      "sha256": "a6bb41550e8cb13ebd5acd99f84e9252d64c20f96287d7eedfc20f6a1320579a"
     },
     {
       "path": "map/layers/portable/artifact-sample/data/detail.json",
@@ -263,8 +263,8 @@
     },
     {
       "path": "map/layers/portable/artifact-sample/layer.package.json",
-      "bytes": 2428,
-      "sha256": "1e94804faf540d1aebb7931b552266282c164b9f562ca0be1f4ee6b80e4bbd99"
+      "bytes": 2550,
+      "sha256": "8b6ab537fb2f27fd542f9186e1476c7a5abef079f1edbf543001214f75d9580a"
     },
     {
       "path": "map/layers/portable/representative-pins/DENSITY_POINTS_FORMAT.md",
@@ -293,8 +293,8 @@
     },
     {
       "path": "map/layers/portable/representative-pins/propertyModal.js",
-      "bytes": 11038,
-      "sha256": "7fb62244cf6e30aedeadecdded09c674a02208bb2a038bbf8d94ae5c461fbdb2"
+      "bytes": 11997,
+      "sha256": "661b55db17593065c1fa69a221536c53797c3d3783d99f7790f4cd5928276392"
     },
     {
       "path": "map/layers/portable/representative-pins/qtctBuilder.mjs",
@@ -308,8 +308,8 @@
     },
     {
       "path": "map/layers/portable/representative-pins/representativePinsCore.js",
-      "bytes": 58912,
-      "sha256": "a74d8b584e7884419cdfe961a83758d15f8cb6e7064fd075dcc3fc6f8da0d3eb"
+      "bytes": 60242,
+      "sha256": "60f44109dd65e0fe3a69ed5a8b9045f197a00cda9b28f43007c4c67553d13337"
     },
     {
       "path": "map/layers/portable/representative-pins/representativePinsPortable.html",
@@ -324,12 +324,12 @@
     {
       "path": "map/layers/portable/representative-pins/runtime.package.json",
       "bytes": 482,
-      "sha256": "e3d4b0af9acbbbaaf9453d6d7bffc67a2c73fb126463e10ebca8b2931e7114c9"
+      "sha256": "e667e1838e0b6275c5e9a13b0ad9db7d7c00c34fbba0c0b7ad1e9471d6e79921"
     },
     {
       "path": "map/layers/portable/representative-pins/runtimeCache.js",
-      "bytes": 5793,
-      "sha256": "549e8792829bd1cce2f6ab66a8cc0be0bf2836a8475c31703c4fcf4c899edb50"
+      "bytes": 5954,
+      "sha256": "4996b3c204376dbcd06491482865e2cce13603e4f9c81470312cc7956013e1be"
     },
     {
       "path": "map/layers/portable/svgmap-slawa-client/InterWindowMessaging.js",
@@ -878,8 +878,8 @@
     },
     {
       "path": "README.html",
-      "bytes": 1773,
-      "sha256": "0077f3af18fc765f6c99a07b5bafed0acf04308917e8075f22bd5a5078325f51"
+      "bytes": 2086,
+      "sha256": "1fa246f92252c7dbc44e48f6451612cbba60a9e271fa2b516f7e75d6adb4008d"
     },
     {
       "path": "viewer-isolated.html",

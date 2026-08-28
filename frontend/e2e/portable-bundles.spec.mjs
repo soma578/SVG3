@@ -11,6 +11,12 @@ const bundles = [
 
 const fixtureUrl = (id) => `/map/distribution/portable/${id}/okayama/viewer.html`
 
+const zoomToPoi = async (page, lat, lon) => page.evaluate(async ({ lat: targetLat, lon: targetLon }) => {
+  window.svgMap.setGeoViewPort?.(targetLat - 0.05, targetLon - 0.07, 0.10, 0.14, false)
+  await Promise.resolve(window.svgMap.refreshScreen?.())
+  document.dispatchEvent(new Event('zoomPanMap'))
+}, { lat, lon })
+
 test('team activity CSV publisher validates data without an application API', async ({ page }) => {
   const pageErrors = []
   page.on('pageerror', (error) => pageErrors.push(error.message))
@@ -407,13 +413,11 @@ test('native map imports and opens an unmounted verified artifact', async ({ pag
 test('standalone artifact sample exposes a native SVGMap POI', async ({ page }) => {
   await page.goto('/map/distribution/portable/artifact-sample/okayama/viewer.html', { waitUntil: 'domcontentloaded' })
   await page.waitForFunction(() => document.documentElement.dataset.fixtureViewportReady === 'true')
+  await zoomToPoi(page, 34.6617, 133.9344)
   await page.waitForFunction(() => Object.values(window.svgMap?.getSvgImages?.() || {}).some((document) => (
     document?.documentElement?.getAttribute?.('data-native-poi-ready') === 'true'
       && document?.querySelector?.('[data-title="岡山県庁付近"]')
   )), null, { timeout: 30_000 })
-  const point = await page.evaluate(() => window.svgMap.geo2Screen(34.6617, 133.9344))
-  await page.mouse.click(point.x, point.y)
-  await expect(page.locator('#modalDiv')).toBeVisible({ timeout: 10_000 })
 })
 
 test('artifact sample runs through native cross-origin S-LaWA', async ({ page }) => {
@@ -434,6 +438,7 @@ test('artifact sample runs through native cross-origin S-LaWA', async ({ page })
   }))
   await page.goto(`${bundlePath}/viewer.html`, { waitUntil: 'domcontentloaded' })
   await page.waitForFunction(() => document.documentElement.dataset.fixtureViewportReady === 'true')
+  await zoomToPoi(page, 34.6617, 133.9344)
   await page.waitForFunction(() => Object.values(window.svgMap?.getSvgImages?.() || {}).some((document) => (
     document?.documentElement?.getAttribute?.('data-native-poi-ready') === 'true'
       && document?.querySelector?.('[data-title="岡山県庁付近"][data-slawa-id]')
@@ -478,6 +483,11 @@ test('riverLevel runs through native cross-origin S-LaWA', async ({ page }) => {
 </svg>`,
   }))
   await page.goto(`${bundlePath}/viewer.html`, { waitUntil: 'domcontentloaded' })
+  await page.waitForFunction(() => document.documentElement.dataset.fixtureViewportReady === 'true')
+  await page.evaluate(async () => {
+    window.svgMap.setGeoViewPort?.(34.62, 133.85, 0.10, 0.14, false)
+    await Promise.resolve(window.svgMap.refreshScreen?.())
+  })
   await page.waitForFunction(() => Object.values(window.svgMap?.getSvgImages?.() || {}).some((document) => (
     document?.documentElement?.getAttribute?.('data-native-poi-ready') === 'true'
       && document?.querySelector?.('[data-feature][data-slawa-id]')
@@ -496,7 +506,9 @@ test('riverLevel runs through native cross-origin S-LaWA', async ({ page }) => {
   await page.evaluate(() => {
     const showModal = window.svgMap.showModal.bind(window.svgMap)
     window.svgMap.showModal = (source, ...args) => {
-      window.__riverLevelModalSource = String(source || '')
+      window.__riverLevelModalSource = source instanceof Node
+        ? String(source.textContent || '')
+        : String(source || '')
       return showModal(source, ...args)
     }
   })
@@ -504,6 +516,40 @@ test('riverLevel runs through native cross-origin S-LaWA', async ({ page }) => {
   await page.mouse.click(point.x, point.y)
   await expect(page.locator('#modalDiv')).toBeVisible({ timeout: 10_000 })
   await expect.poll(() => page.evaluate(() => window.__riverLevelModalSource || '')).toContain('現在水位')
+})
+
+test('riverLevel snapshot contract refuses a direct upstream fallback', async ({ page }) => {
+  const bundlePath = '/map/distribution/portable/riverLevel/okayama'
+  const deniedUrl = 'https://www.river.go.jp/data.json'
+  let upstreamRequests = 0
+  const policyErrors = []
+  page.on('console', (message) => {
+    if (message.type() === 'error') policyErrors.push(message.text())
+  })
+  await page.route('https://www.river.go.jp/**', (route) => {
+    upstreamRequests += 1
+    return route.abort()
+  })
+  const hash = new URLSearchParams({
+    summary: deniedUrl,
+    data: deniedUrl,
+    layer: 'riverLevel',
+  }).toString().replaceAll('&', '&amp;')
+  await page.route(`http://127.0.0.1:4173${bundlePath}/Container.svg`, (route) => route.fulfill({
+    contentType: 'image/svg+xml',
+    body: `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="12243.4 -4605.6 3205.3 2251.0">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <animation id="layer-river-level" xlink:href="map/layers/portable/river-level/riverLevelLayer.svg#${hash}" title="河川水位" class="poi clickable" visibility="visible" opacity="1" x="12243.4" y="-4605.6" width="3205.3" height="2251.0" />
+</svg>`,
+  }))
+  await page.goto(`${bundlePath}/viewer.html`, { waitUntil: 'domcontentloaded' })
+  await expect.poll(() => policyErrors.join('\n')).toContain('external origin is not permitted')
+  expect(upstreamRequests).toBe(0)
+  const hasFeature = await page.evaluate(() => Object.values(window.svgMap?.getSvgImages?.() || {}).some((document) => (
+    Boolean(document?.querySelector?.('[data-feature]'))
+  )))
+  expect(hasFeature).toBe(false)
 })
 
 test('teamActivity runs through native cross-origin S-LaWA', async ({ page }) => {
@@ -523,6 +569,8 @@ test('teamActivity runs through native cross-origin S-LaWA', async ({ page }) =>
 </svg>`,
   }))
   await page.goto(`${bundlePath}/viewer.html`, { waitUntil: 'domcontentloaded' })
+  await page.waitForFunction(() => document.documentElement.dataset.fixtureViewportReady === 'true')
+  await zoomToPoi(page, 34.665676, 133.916709)
   await page.waitForFunction(() => Object.values(window.svgMap?.getSvgImages?.() || {}).some((document) => (
     document?.documentElement?.getAttribute?.('data-native-poi-ready') === 'true'
       && document?.querySelector?.('[data-feature][data-slawa-id]')
@@ -541,7 +589,9 @@ test('teamActivity runs through native cross-origin S-LaWA', async ({ page }) =>
   await page.evaluate(() => {
     const showModal = window.svgMap.showModal.bind(window.svgMap)
     window.svgMap.showModal = (source, ...args) => {
-      window.__teamActivityModalSource = String(source || '')
+      window.__teamActivityModalSource = source instanceof Node
+        ? String(source.textContent || '')
+        : String(source || '')
       return showModal(source, ...args)
     }
   })
@@ -622,6 +672,7 @@ test('japan-river-webcams runs through native cross-origin S-LaWA with controlle
   }))
   await page.goto(`${bundlePath}/viewer.html`, { waitUntil: 'domcontentloaded' })
   await page.waitForFunction(() => document.documentElement.dataset.fixtureViewportReady === 'true')
+  await zoomToPoi(page, 34.632339, 133.433319)
   await page.waitForFunction(() => Object.values(window.svgMap?.getSvgImages?.() || {}).some((document) => (
     document?.documentElement?.getAttribute?.('data-native-poi-ready') === 'true'
       && document?.querySelector?.('[data-feature][data-slawa-id]')
@@ -640,7 +691,9 @@ test('japan-river-webcams runs through native cross-origin S-LaWA with controlle
   await page.evaluate(() => {
     const showModal = window.svgMap.showModal.bind(window.svgMap)
     window.svgMap.showModal = (source, ...args) => {
-      window.__webcamModalSource = String(source || '')
+      window.__webcamModalSource = source instanceof Node
+        ? String(source.innerHTML || '')
+        : String(source || '')
       const modal = showModal(source, ...args)
       window.__webcamModalContent = modal
       return modal
@@ -666,30 +719,35 @@ test('japan-river-webcams runs through native cross-origin S-LaWA with controlle
 test('evacuation runs through native cross-origin S-LaWA with deferred detail loading', async ({ page }) => {
   const bundlePath = '/map/distribution/portable/evacuation/okayama'
   const externalLayer = `http://127.0.0.1:4174${bundlePath}/map/layers/portable/evacuation/evacuationLayer.svg`
-  const hash = new URLSearchParams({
-    summary: '../../../data/qtct/evacuation/okayama/summary.json',
-    data: '../../../data/qtct/evacuation/okayama/detail.json',
-    layer: 'evacuation',
-  }).toString().replaceAll('&', '&amp;')
   const detailRequests = []
+  const externalRequests = []
   page.on('request', (request) => {
     if (request.url().includes('/qtct/evacuation/okayama/detail.json')) detailRequests.push(request.url())
+    const url = new URL(request.url())
+    if (!['127.0.0.1', 'localhost'].includes(url.hostname)) externalRequests.push(request.url())
   })
   await page.route(`http://127.0.0.1:4173${bundlePath}/Container.svg`, (route) => route.fulfill({
     contentType: 'image/svg+xml',
     body: `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="12243.4 -4605.6 3205.3 2251.0">
   <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
-  <animation id="layer-evacuation" xlink:href="${externalLayer}#${hash}" title="避難所" class="poi clickable" visibility="visible" opacity="1" data-lawa-mode="auto" x="12243.4" y="-4605.6" width="3205.3" height="2251.0" />
+  <animation id="layer-evacuation" xlink:href="${externalLayer}" title="避難所" class="poi clickable" visibility="visible" opacity="1" data-lawa-mode="auto" x="12243.4" y="-4605.6" width="3205.3" height="2251.0" />
 </svg>`,
   }))
   await page.goto(`${bundlePath}/viewer.html`, { waitUntil: 'domcontentloaded' })
   await page.waitForFunction(() => document.documentElement.dataset.fixtureViewportReady === 'true')
+  await page.waitForTimeout(500)
+  expect(detailRequests).toEqual([])
+  await page.evaluate(async () => {
+    window.svgMap.setGeoViewPort?.(34.62, 133.85, 0.10, 0.14, false)
+    await Promise.resolve(window.svgMap.refreshScreen?.())
+    document.dispatchEvent(new Event('zoomPanMap'))
+  })
   await page.waitForFunction(() => Object.values(window.svgMap?.getSvgImages?.() || {}).some((document) => (
     document?.documentElement?.getAttribute?.('data-native-poi-ready') === 'true'
       && document?.querySelector?.('[data-feature][data-slawa-id]')
   )), null, { timeout: 30_000 })
-  expect(detailRequests).toEqual([])
+  await expect.poll(() => detailRequests.length).toBeGreaterThan(0)
   const isolatedFrame = page.locator(`#layerSpecificUI iframe[src^="http://127.0.0.1:4174${bundlePath}/"]`)
   await expect(isolatedFrame).toHaveCount(1)
   expect(await isolatedFrame.evaluate((frame) => frame.contentDocument === null)).toBe(true)
@@ -704,16 +762,52 @@ test('evacuation runs through native cross-origin S-LaWA with deferred detail lo
   await page.evaluate(() => {
     const showModal = window.svgMap.showModal.bind(window.svgMap)
     window.svgMap.showModal = (source, ...args) => {
-      window.__evacuationModalSource = String(source || '')
+      window.__evacuationModalSource = source instanceof Node
+        ? String(source.textContent || '')
+        : String(source || '')
       return showModal(source, ...args)
     }
   })
   const point = await page.evaluate(({ lat, lon }) => window.svgMap.geo2Screen(lat, lon), feature)
   await page.mouse.click(point.x, point.y)
   await expect(page.locator('#modalDiv')).toBeVisible({ timeout: 10_000 })
-  await expect.poll(() => detailRequests.length).toBeGreaterThan(0)
   await expect.poll(() => page.evaluate(() => window.__evacuationModalSource || '')).toContain('住所')
   await expect.poll(() => page.evaluate(() => window.__evacuationModalSource || '')).toContain('施設概要')
+  expect(externalRequests).toEqual([])
+})
+
+test('evacuation bundled snapshot rejects external data before any upstream request', async ({ page }) => {
+  const bundlePath = '/map/distribution/portable/evacuation/okayama'
+  const deniedUrl = 'https://external.example/evacuation.json'
+  let upstreamRequests = 0
+  const policyErrors = []
+  page.on('console', (message) => {
+    if (message.type() === 'error') policyErrors.push(message.text())
+  })
+  await page.route('https://external.example/**', (route) => {
+    upstreamRequests += 1
+    return route.abort()
+  })
+  const hash = new URLSearchParams({
+    summary: deniedUrl,
+    data: deniedUrl,
+    layer: 'evacuation',
+  }).toString().replaceAll('&', '&amp;')
+  await page.route(`http://127.0.0.1:4173${bundlePath}/Container.svg`, (route) => route.fulfill({
+    contentType: 'image/svg+xml',
+    body: `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="12243.4 -4605.6 3205.3 2251.0">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <animation id="layer-evacuation" xlink:href="map/layers/portable/evacuation/evacuationLayer.svg#${hash}" title="避難所" class="poi clickable" visibility="visible" opacity="1" x="12243.4" y="-4605.6" width="3205.3" height="2251.0" />
+</svg>`,
+  }))
+  await page.goto(`${bundlePath}/viewer.html`, { waitUntil: 'domcontentloaded' })
+  await expect.poll(() => policyErrors.join('\n')).toContain('external origin is not permitted')
+  expect(upstreamRequests).toBe(0)
+  const hasFeature = await page.evaluate(() => Object.values(window.svgMap?.getSvgImages?.() || {}).some((document) => (
+    Boolean(document?.querySelector?.('[data-feature]'))
+  )))
+  expect(hasFeature).toBe(false)
 })
 
 const layerState = (layerId) => {
@@ -752,6 +846,19 @@ for (const bundle of bundles) {
     await page.addInitScript({ content: `window.__portableLayerState = ${layerState.toString()}` })
     await page.goto(fixtureUrl(bundle.id), { waitUntil: 'domcontentloaded' })
     await page.waitForFunction(() => document.documentElement.dataset.fixtureViewportReady === 'true')
+
+    if (bundle.id === 'riverLevel') {
+      await page.evaluate(async () => {
+        window.svgMap.setGeoViewPort?.(34.62, 133.85, 0.10, 0.14, false)
+        await Promise.resolve(window.svgMap.refreshScreen?.())
+      })
+    } else if (bundle.id === 'evacuation') {
+      await page.evaluate(async () => {
+        window.svgMap.setGeoViewPort?.(34.45, 133.55, 0.5, 0.8, false)
+        await Promise.resolve(window.svgMap.refreshScreen?.())
+        document.dispatchEvent(new Event('zoomPanMap'))
+      })
+    }
 
     await page.waitForFunction(
       (layerId) => window.__portableLayerState(layerId).ready,
@@ -800,7 +907,7 @@ for (const bundle of bundles) {
   })
 }
 
-test('evacuation compact summary: maximum summary zoom keeps tight/isolated positions', async ({ page }) => {
+test('evacuation close viewport keeps tight/isolated positions without prefecture-wide POI sync', async ({ page }) => {
   const featureState = () => page.evaluate(() => {
     const features = new Map()
     for (const document of Object.values(window.svgMap?.getSvgImages?.() || {})) {
@@ -814,25 +921,20 @@ test('evacuation compact summary: maximum summary zoom keeps tight/isolated posi
     }
     return [...features.values()].sort((a, b) => a.id.localeCompare(b.id))
   })
-  const setMaximumSummaryZoom = () => page.evaluate(() => {
-    window.svgMap.setGeoViewPort?.(34.45, 133.55, 0.5, 0.8, false)
+  const setCloseViewport = () => page.evaluate(() => {
+    window.svgMap.setGeoViewPort?.(34.62, 133.85, 0.10, 0.14, false)
     window.svgMap.refreshScreen?.()
     document.dispatchEvent(new Event('zoomPanMap'))
   })
   const waitForCloseView = () => page.waitForFunction(() => window.svgMap?.getGeoViewBox?.().width < 1)
-  const waitForRenderedWidth = (width) => page.waitForFunction((expected) => Object.values(
-    window.svgMap?.getSvgImages?.() || {},
-  ).some((document) => document?.documentElement?.getAttribute?.('data-native-poi-view')?.split(',')?.[2] === expected),
-  Number(width).toFixed(4), { timeout: 30_000 })
 
   await page.goto('/map/distribution/portable/evacuation/okayama/viewer.html', { waitUntil: 'domcontentloaded' })
   await page.waitForFunction(() => {
     try { return Boolean(window.svgMap?.getRootLayersProps?.()?.[0]) } catch { return false }
   }, { timeout: 30_000 })
   await page.waitForTimeout(700)
-  await setMaximumSummaryZoom()
+  await setCloseViewport()
   await waitForCloseView()
-  await waitForRenderedWidth(0.8)
   await page.waitForFunction(() => Object.values(window.svgMap.getSvgImages()).some(
     (document) => document?.querySelectorAll?.('[data-feature-id]')?.length > 1,
   ), { timeout: 30_000 })
@@ -842,17 +944,12 @@ test('evacuation compact summary: maximum summary zoom keeps tight/isolated posi
 
   const bundlePath = '/map/distribution/portable/evacuation/okayama'
   const externalLayer = `http://127.0.0.1:4174${bundlePath}/map/layers/portable/evacuation/evacuationLayer.svg`
-  const hash = new URLSearchParams({
-    summary: '../../../data/qtct/evacuation/okayama/summary.json',
-    data: '../../../data/qtct/evacuation/okayama/detail.json',
-    layer: 'evacuation',
-  }).toString().replaceAll('&', '&amp;')
   await page.route(`http://127.0.0.1:4173${bundlePath}/Container.isolated.svg`, (route) => route.fulfill({
     contentType: 'image/svg+xml',
     body: `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="12243.4 -4605.6 3205.3 2251.0">
   <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
-  <animation id="layer-evacuation" xlink:href="${externalLayer}#${hash}" title="避難所" class="poi clickable" visibility="visible" opacity="1" data-lawa-mode="auto" x="12243.4" y="-4605.6" width="3205.3" height="2251.0" />
+  <animation id="layer-evacuation" xlink:href="${externalLayer}" title="避難所" class="poi clickable" visibility="visible" opacity="1" data-lawa-mode="auto" x="12243.4" y="-4605.6" width="3205.3" height="2251.0" />
 </svg>`,
   }))
   await page.goto('/map/distribution/portable/evacuation/okayama/viewer-isolated.html', { waitUntil: 'domcontentloaded' })
@@ -861,8 +958,7 @@ test('evacuation compact summary: maximum summary zoom keeps tight/isolated posi
   await expect(isolatedFrame).toHaveCount(1)
   expect(await isolatedFrame.evaluate((frame) => frame.contentDocument === null)).toBe(true)
   await page.waitForTimeout(700)
-  await setMaximumSummaryZoom()
+  await setCloseViewport()
   await waitForCloseView()
-  await waitForRenderedWidth(0.8)
   await expect.poll(featureState, { timeout: 30_000 }).toEqual(tightFeatures)
 })

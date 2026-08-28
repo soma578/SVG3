@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="13578.66 -3501.67 7.69 6.65"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>山科区 ハザード詳細 26110</title>
+  <animation id="hazard-source-26110"
+    title="山科区 ハザード詳細" href="/map/layers/hazard/26/districts/26110.svg" xlink:href="/map/layers/hazard/26/districts/26110.svg"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+     visibility="visible" />
+</svg>

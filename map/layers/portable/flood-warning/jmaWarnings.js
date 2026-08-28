@@ -4,7 +4,7 @@
  * fetch も DOM も出てこない。判断だけを置き、node:test で検証する。
  *
  * 取得元:
- *   https://www.jma.go.jp/bosai/warning/data/warning/map.json   全国58官署ぶん 約147KB
+ *   https://www.jma.go.jp/bosai/warning/data/r8/map.json        現行の全国警報・注意報
  *   https://www.jma.go.jp/bosai/common/const/area.json          区域の名前と階層
  * どちらも Access-Control-Allow-Origin: * が付いており、ブラウザから直接取得できる。
  *
@@ -27,6 +27,11 @@ export const WARNING_KINDS = Object.freeze({
   36: { name: '大雪特別警報', level: 'emergency' },
   37: { name: '波浪特別警報', level: 'emergency' },
   38: { name: '高潮特別警報', level: 'emergency' },
+  39: { name: '土砂災害特別警報', level: 'emergency' },
+  // 危険警報（警戒レベル4相当）
+  43: { name: '大雨危険警報', level: 'emergency' },
+  48: { name: '高潮危険警報', level: 'emergency' },
+  49: { name: '土砂災害危険警報', level: 'emergency' },
   // 警報
   '02': { name: '暴風雪警報', level: 'warning' },
   '03': { name: '大雨警報', level: 'warning' },
@@ -35,6 +40,7 @@ export const WARNING_KINDS = Object.freeze({
   '06': { name: '大雪警報', level: 'warning' },
   '07': { name: '波浪警報', level: 'warning' },
   '08': { name: '高潮警報', level: 'warning' },
+  '09': { name: '土砂災害警報', level: 'warning' },
   // 注意報
   10: { name: '大雨注意報', level: 'advisory' },
   12: { name: '大雪注意報', level: 'advisory' },
@@ -53,6 +59,7 @@ export const WARNING_KINDS = Object.freeze({
   25: { name: '着氷注意報', level: 'advisory' },
   26: { name: '着雪注意報', level: 'advisory' },
   27: { name: 'その他の注意報', level: 'advisory' },
+  29: { name: '土砂災害注意報', level: 'advisory' },
 });
 
 /** 危険な順。表示の代表色と並び順に使う。 */
@@ -90,13 +97,24 @@ export const municipalityCodesFor = (areaCode, knownCodes) => {
   return wards.sort();
 };
 
+/** 現行r8と旧warning/map.jsonを同じ市区町村区域形式へ揃える。 */
+export const class20Areas = (report) => {
+  if (Array.isArray(report?.warning?.class20Items)) {
+    return report.warning.class20Items.map((area) => ({
+      code: area?.areaCode,
+      warnings: area?.kinds,
+    }));
+  }
+  return (report?.areaTypes || []).flatMap((areaType) => areaType?.areas || []);
+};
+
 /**
  * 官署ごとの発表を、市区町村ごとの1件へまとめる。
  *
  * 同じ市区町村に複数の警報が出ることは普通にある（大雨警報＋洪水警報など）。
  * ピンは1つにして、中身に全部並べる。代表の危険度は最も重いものを採る。
  *
- * @param {Array} reports warning/map.json の中身
+ * @param {Array} reports warning/data/r8/map.json（旧warning/map.jsonも受理）
  * @param {Map} municipalities JISコード -> { label, regionId, lat, lon }
  * @returns {Array} 描画用レコード
  */
@@ -106,14 +124,13 @@ export const warningRecords = (reports, municipalities) => {
 
   for (const report of Array.isArray(reports) ? reports : []) {
     const observedAt = typeof report?.reportDatetime === 'string' ? report.reportDatetime : null;
-    for (const areaType of report?.areaTypes || []) {
-      for (const area of areaType?.areas || []) {
-        // class10 (6桁) は複数市区町村の粗い区分。先頭5桁をJISコードと
-        // 誤認させず、class20 (7桁) の市区町村区域だけを使う。
-        if (String(area?.code || '').length !== 7) continue;
-        const active = (area?.warnings || []).filter(isActiveWarning);
-        if (active.length === 0) continue;
-        for (const jis of municipalityCodesFor(area.code, knownCodes)) {
+    for (const area of class20Areas(report)) {
+      // class10 (6桁) は複数市区町村の粗い区分。先頭5桁をJISコードと
+      // 誤認させず、class20 (7桁) の市区町村区域だけを使う。
+      if (String(area?.code || '').length !== 7) continue;
+      const active = (area?.warnings || []).filter(isActiveWarning);
+      if (active.length === 0) continue;
+      for (const jis of municipalityCodesFor(area.code, knownCodes)) {
           const place = municipalities.get(jis);
           if (!place) continue;
           if (!byCode.has(jis)) {
@@ -139,7 +156,6 @@ export const warningRecords = (reports, municipalities) => {
             const kind = warningKind(warning.code);
             record.kinds.set(kind.code, kind);
           }
-        }
       }
     }
   }
@@ -171,25 +187,40 @@ export const oldestReportDatetime = (reports) => {
   return values[0] || null;
 };
 
+/** 全国データ自体の更新確認には、最も新しい発表時刻を使う。 */
+export const latestReportDatetime = (reports) => {
+  const values = (Array.isArray(reports) ? reports : [])
+    .map((report) => report?.reportDatetime)
+    .filter((value) => typeof value === 'string' && Number.isFinite(Date.parse(value)))
+    .sort();
+  return values.at(-1) || null;
+};
+
+export const warningRecordsWithinHours = (records, hours, now = Date.now()) => {
+  const windowHours = Number(hours);
+  if (!Number.isFinite(windowHours) || windowHours <= 0) return [...(records || [])];
+  const cutoff = Number(now) - windowHours * 60 * 60 * 1000;
+  return (records || []).filter((record) => {
+    const observed = Date.parse(record?.observedAt || '');
+    return Number.isFinite(observed) && observed >= cutoff && observed <= Number(now) + 5 * 60 * 1000;
+  });
+};
+
 /**
  * 対応づけできなかった市区町村区域。黙って消さず、数と例を出せるようにする。
  *
- * warning/map.json は同じ内容を粗い区分(class10, 6桁)と市区町村(class20, 7桁)の
- * 両方で持つ。6桁の方は7桁の親なので、対応づけできなくても情報は失われない。
- * ここで数えるのは7桁だけ。
+ * 現行r8のclass20Items、または旧形式の7桁class20だけを数える。
  */
 export const unmappedAreas = (reports, municipalities) => {
   const knownCodes = new Set(municipalities.keys());
   const unmapped = new Map();
   for (const report of Array.isArray(reports) ? reports : []) {
-    for (const areaType of report?.areaTypes || []) {
-      for (const area of areaType?.areas || []) {
-        const code = String(area?.code || '');
-        if (code.length !== 7) continue;
-        if ((area?.warnings || []).filter(isActiveWarning).length === 0) continue;
-        if (municipalityCodesFor(code, knownCodes).length > 0) continue;
-        unmapped.set(code, true);
-      }
+    for (const area of class20Areas(report)) {
+      const code = String(area?.code || '');
+      if (code.length !== 7) continue;
+      if ((area?.warnings || []).filter(isActiveWarning).length === 0) continue;
+      if (municipalityCodesFor(code, knownCodes).length > 0) continue;
+      unmapped.set(code, true);
     }
   }
   return [...unmapped.keys()].sort();

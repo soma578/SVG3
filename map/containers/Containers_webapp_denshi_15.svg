@@ -53,6 +53,11 @@
              xlink:href="/map/layers/portable/team-activity/teamActivityAreaLayer.svg#data=/map/data/qtct/teamActivity/detail-index.json&amp;districtSvgUrlTemplate=/data/{recordRegionId}/districts-svg/{code}.svg&amp;layer=teamActivity"
              title="L3 チーム活動エリア" class="vectorEtcData" visibility="hidden" opacity="0.9"/>
 
+  <!-- 気象庁の固定originだけを5分間隔・同時1要求で取得するcontrolled-directレイヤー -->
+  <animation id="layer-flood-warning" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
+             xlink:href="/map/layers/portable/flood-warning/floodWarningLayer.svg"
+             title="洪水・気象警報" class="poi clickable" visibility="hidden" opacity="1"/>
+
   <animation id="layer-river-level" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
              xlink:href="/map/layers/portable/river-level/riverLevelLayer.svg#summary=/map/data/qtct/riverLevel/summary.json&amp;data=/map/data/qtct/riverLevel/niigata/detail.json&amp;layer=riverLevel&amp;detailByRegion=/map/data/qtct/riverLevel/{recordRegionId}/detail.json"
              title="河川水位" class="poi clickable" visibility="hidden" opacity="1"/>
@@ -66,33 +71,8 @@
              title="道路通行情報" class="poi clickable" visibility="hidden" opacity="1"/>
 
   <animation id="layer-hazard" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/15/niigata.svg&amp;svgUrlTemplate=/map/layers/hazard/15/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=15&amp;layerKey=layer-hazard"
+             xlink:href="/map/layers/hazard-native/hazardLayer.svg#layerKey=layer-hazard"
              title="L4 ハザード" class="vectorEtcData" visibility="visible" opacity="0.7"/>
-
-  <!-- 周辺地域mount: 長野県のハザード -->
-  <animation id="layer-hazard--near-nagano" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/20/nagano.svg&amp;svgUrlTemplate=/map/layers/hazard/20/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=20&amp;layerKey=layer-hazard--near-nagano"
-             title="長野県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
-
-  <!-- 周辺地域mount: 福島県のハザード -->
-  <animation id="layer-hazard--near-fukushima" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/7/fukushima.svg&amp;svgUrlTemplate=/map/layers/hazard/7/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=07&amp;layerKey=layer-hazard--near-fukushima"
-             title="福島県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
-
-  <!-- 周辺地域mount: 山形県のハザード -->
-  <animation id="layer-hazard--near-yamagata" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/6/yamagata.svg&amp;svgUrlTemplate=/map/layers/hazard/6/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=06&amp;layerKey=layer-hazard--near-yamagata"
-             title="山形県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
-
-  <!-- 周辺地域mount: 群馬県のハザード -->
-  <animation id="layer-hazard--near-gunma" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/10/gunma.svg&amp;svgUrlTemplate=/map/layers/hazard/10/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=10&amp;layerKey=layer-hazard--near-gunma"
-             title="群馬県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
-
-  <!-- 周辺地域mount: 富山県のハザード -->
-  <animation id="layer-hazard--near-toyama" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/16/toyama.svg&amp;svgUrlTemplate=/map/layers/hazard/16/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=16&amp;layerKey=layer-hazard--near-toyama"
-             title="富山県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
 
   <animation id="layer-current-location" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
              xlink:href="/map/layers/portable/current-location/currentLocationLayer.svg"

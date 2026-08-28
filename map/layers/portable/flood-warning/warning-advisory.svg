@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" role="img" aria-label="注意報（黄色いひし形）">
+  <path d="M18 2 34 18 18 34 2 18Z" fill="#f6c400" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M16.4 9.5h3.2l-.55 12h-2.1z" fill="#332b00"/>
+  <circle cx="18" cy="26" r="1.9" fill="#332b00"/>
+</svg>

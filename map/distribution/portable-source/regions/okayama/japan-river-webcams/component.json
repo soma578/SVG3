@@ -3,7 +3,7 @@
   "kind": "portable-regional-component",
   "packageId": "japan-river-webcams",
   "regionId": "okayama",
-  "sharedVersion": "b38527bef7ec",
+  "sharedVersion": "0c27866360a2",
   "files": [
     "Container.isolated.svg",
     "Container.svg",
@@ -12,6 +12,7 @@
     "layer.manifest.json",
     "map/data/qtct/japanRiverWebcam/okayama/detail.json",
     "map/data/qtct/japanRiverWebcam/okayama/summary.json",
-    "map/layers/portable/japan-river-webcams/layer.package.json"
+    "map/layers/portable/japan-river-webcams/layer.package.json",
+    "map/layers/portable/japan-river-webcams/webcamLayer.svg"
   ]
 }

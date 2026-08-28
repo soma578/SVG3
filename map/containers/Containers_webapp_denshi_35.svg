@@ -38,6 +38,11 @@
              xlink:href="/map/layers/portable/team-activity/teamActivityAreaLayer.svg#data=/map/data/qtct/teamActivity/detail-index.json&amp;districtSvgUrlTemplate=/data/{recordRegionId}/districts-svg/{code}.svg&amp;layer=teamActivity"
              title="L3 チーム活動エリア" class="vectorEtcData" visibility="hidden" opacity="0.9"/>
 
+  <!-- 気象庁の固定originだけを5分間隔・同時1要求で取得するcontrolled-directレイヤー -->
+  <animation id="layer-flood-warning" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
+             xlink:href="/map/layers/portable/flood-warning/floodWarningLayer.svg"
+             title="洪水・気象警報" class="poi clickable" visibility="hidden" opacity="1"/>
+
   <animation id="layer-river-level" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
              xlink:href="/map/layers/portable/river-level/riverLevelLayer.svg#summary=/map/data/qtct/riverLevel/summary.json&amp;data=/map/data/qtct/riverLevel/yamaguchi/detail.json&amp;layer=riverLevel&amp;detailByRegion=/map/data/qtct/riverLevel/{recordRegionId}/detail.json"
              title="河川水位" class="poi clickable" visibility="hidden" opacity="1"/>
@@ -51,18 +56,8 @@
              title="道路通行情報" class="poi clickable" visibility="hidden" opacity="1"/>
 
   <animation id="layer-hazard" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/35/yamaguchi.svg&amp;svgUrlTemplate=/map/layers/hazard/35/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=35&amp;layerKey=layer-hazard"
+             xlink:href="/map/layers/hazard-native/hazardLayer.svg#layerKey=layer-hazard"
              title="L4 ハザード" class="vectorEtcData" visibility="visible" opacity="0.7"/>
-
-  <!-- 周辺地域mount: 島根県のハザード -->
-  <animation id="layer-hazard--near-shimane" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/32/shimane.svg&amp;svgUrlTemplate=/map/layers/hazard/32/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=32&amp;layerKey=layer-hazard--near-shimane"
-             title="島根県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
-
-  <!-- 周辺地域mount: 広島県のハザード -->
-  <animation id="layer-hazard--near-hiroshima" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/34/hiroshima.svg&amp;svgUrlTemplate=/map/layers/hazard/34/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=34&amp;layerKey=layer-hazard--near-hiroshima"
-             title="広島県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
 
   <animation id="layer-current-location" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
              xlink:href="/map/layers/portable/current-location/currentLocationLayer.svg"

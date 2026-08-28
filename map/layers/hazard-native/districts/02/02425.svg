@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="14093.42 -4152.95 18.16 10.88"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>風間浦村 ハザード詳細 02425</title>
+  <animation id="hazard-source-02425"
+    title="風間浦村 ハザード詳細" href="/map/layers/hazard/2/districts/02425.svg" xlink:href="/map/layers/hazard/2/districts/02425.svg"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+     visibility="visible" />
+</svg>

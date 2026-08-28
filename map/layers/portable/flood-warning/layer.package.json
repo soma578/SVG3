@@ -1,18 +1,18 @@
 {
   "id": "floodWarning",
   "title": "Flood and Weather Warning Portable Layer",
-  "version": "1.0.0",
+  "version": "1.3.0",
   "type": "svgmap-portable-layer",
   "distribution": {
     "publisher": { "id": "svg3", "name": "SVG3" },
     "license": { "spdx": "NOASSERTION", "name": "気象庁ホームページ利用規約", "status": "declared", "redistributable": true },
-    "publishedAt": "2026-08-04T00:00:00+09:00"
+    "publishedAt": "2026-08-28T00:00:00+09:00"
   },
   "entrypoint": "floodWarningLayer.svg",
   "portability": {
     "level": "distribution-portable",
     "dataInjection": "fixed-authority-url",
-    "limitations": ["気象庁のJSON配信にネットワーク接続が必要。取得失敗時は端末キャッシュを使用する。"]
+    "limitations": ["気象庁のJSON配信にネットワーク接続が必要。取得失敗時は端末キャッシュを使用する。5分未満の再取得は行わない。既定表示は発表時刻が直近24時間の情報。controllerで3時間から発表中全件まで変更できる。"]
   },
   "runtime": {
     "lawaModes": ["tight", "isolated"],
@@ -20,9 +20,32 @@
     "requiredApis": ["svgMap.getGeoViewBox", "svgMap.setShowPoiProperty", "svgMap.showModal", "svgImage"]
   },
   "runtimeDependencies": [
-    { "id": "representative-pins", "version": "1.2.2", "manifest": "../representative-pins/runtime.package.json" },
-    { "id": "svgmap-slawa-client", "version": "1.0.0", "manifest": "../svgmap-slawa-client/runtime.package.json" }
+    { "id": "representative-pins", "version": "1.2.3", "manifest": "../representative-pins/runtime.package.json" },
+    { "id": "svgmap-slawa-client", "version": "1.0.0", "manifest": "../svgmap-slawa-client/runtime.package.json" },
+    { "id": "portable-network", "version": "1.0.0", "manifest": "../portable-network/runtime.package.json" }
   ],
-  "shared": ["floodWarningLayer.js", "floodWarningDetail.js", "jmaWarnings.js"],
+  "network": {
+    "schemaVersion": 1,
+    "mode": "controlled-direct",
+    "runtimeExternalFetch": true,
+    "allowedOrigins": ["https://www.jma.go.jp"],
+    "minimumIntervalSeconds": 300,
+    "maxConcurrency": 1,
+    "cacheSeconds": 300,
+    "retry": {
+      "maxAttempts": 2,
+      "backoffMilliseconds": 500
+    },
+    "failClosed": true
+  },
+  "shared": [
+    "floodWarningLayer.js",
+    "floodWarningDetail.js",
+    "jmaWarnings.js",
+    "warning-emergency.svg",
+    "warning-warning.svg",
+    "warning-advisory.svg",
+    "warning-unknown.svg"
+  ],
   "data": { "kind": "runtime-json", "injection": { "transport": "fixed-authority-url", "required": [], "optional": [] } }
 }

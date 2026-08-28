@@ -29,6 +29,7 @@ const hazardOverviewIndexPath = path.join(mapRoot, 'layers', 'hazard-overview', 
 const hazardOverviewIndex = fs.existsSync(hazardOverviewIndexPath)
   ? JSON.parse(fs.readFileSync(hazardOverviewIndexPath, 'utf8'))
   : null
+const hazardNativeRoot = path.join(mapRoot, 'layers', 'hazard-native')
 
 // 起動に要る、地域に依らない資産。ディレクトリは実ファイルから列挙する
 // （「全 fetch を無差別に保存しない」ため、一覧は必ず明示的に決める）。
@@ -210,6 +211,38 @@ const regionAssetsFor = (regionId, runtimeConfig) => {
   const neighborCatalog = path.join(mapRoot, 'regions', regionId, 'neighbor-catalog.json')
   if (fs.existsSync(neighborCatalog)) assets.add(`/map/regions/${regionId}/neighbor-catalog.json`)
 
+  const addNativeHazardAssets = () => {
+    const prefCode = String(runtimeConfig.prefCode || '').padStart(2, '0')
+    if (!/^\d{2}$/.test(prefCode) || !fs.existsSync(hazardNativeRoot)) return
+    for (const relative of ['hazardLayer.svg', 'hazardLayer.html', 'index.json', `pref/${prefCode}.svg`]) {
+      if (fs.existsSync(path.join(hazardNativeRoot, relative))) {
+        assets.add(`/map/layers/hazard-native/${relative}`)
+      }
+    }
+    if (fs.existsSync(municipalities)) {
+      const catalog = JSON.parse(fs.readFileSync(municipalities, 'utf8'))
+      const codes = new Set(
+        (catalog.municipalities || []).flatMap((municipality) => municipality.municipalityCodes || []).map(String),
+      )
+      for (const code of codes) {
+        const wrapper = `districts/${prefCode}/${code}.svg`
+        if (fs.existsSync(path.join(hazardNativeRoot, wrapper))) {
+          assets.add(`/map/layers/hazard-native/${wrapper}`)
+        }
+        const detail = `/map/layers/hazard/${Number(prefCode)}/districts/${code}.svg`
+        if (fs.existsSync(path.join(projectRoot, detail.replace(/^\//, '')))) assets.add(detail)
+      }
+    }
+    if (!hazardOverviewIndex) return
+    assets.add('/map/layers/hazard-overview/index.json')
+    for (const type of Object.values(hazardOverviewIndex.national?.types || {})) {
+      if (type.url?.startsWith('/map/layers/hazard-overview/')) assets.add(type.url)
+    }
+    for (const type of Object.values(hazardOverviewIndex.regions?.[prefCode]?.types || {})) {
+      if (type.url?.startsWith('/map/layers/hazard-overview/')) assets.add(type.url)
+    }
+  }
+
   const containerFile = path.join(projectRoot, containerUrl.replace(/^\//, ''))
   if (fs.existsSync(containerFile)) {
     const xml = fs.readFileSync(containerFile, 'utf8')
@@ -225,6 +258,7 @@ const regionAssetsFor = (regionId, runtimeConfig) => {
         if (!href.startsWith('/')) continue
         // 地域固有の静的資産のみ。レイヤーコードは shell 側で持つ。
         if (!neighborMount && href.startsWith('/map/layers/hazard/')) assets.add(href)
+        if (!neighborMount && href === '/map/layers/hazard-native/hazardLayer.svg') addNativeHazardAssets()
         // オフライン時に白地にしないための軽量背景。
         if (href.startsWith('/map/layers/offline-basemap/')) assets.add(href)
       }

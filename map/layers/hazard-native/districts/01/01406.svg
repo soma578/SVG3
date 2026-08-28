@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="14052.5 -4329.49 17.52 21.69"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>古平町 ハザード詳細 01406</title>
+  <animation id="hazard-source-01406"
+    title="古平町 ハザード詳細" href="/map/layers/hazard/1/districts/01406.svg" xlink:href="/map/layers/hazard/1/districts/01406.svg"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+     visibility="visible" />
+</svg>

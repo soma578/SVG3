@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="13260.22 -3365.51 32.41 16.44"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>内子町 ハザード詳細 38422</title>
+  <animation id="hazard-source-38422"
+    title="内子町 ハザード詳細" href="/map/layers/hazard/38/districts/38422.svg" xlink:href="/map/layers/hazard/38/districts/38422.svg"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+     visibility="visible" />
+</svg>

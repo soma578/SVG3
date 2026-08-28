@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "kind": "portable-shared-component",
   "packageId": "artifact-sample",
-  "sharedVersion": "fed8b343b5f2",
+  "sharedVersion": "07270935bf30",
   "files": [
     "map/icons/app/icon-192.png",
     "map/icons/app/icon-512.png",
@@ -40,7 +40,6 @@
     "map/icons/team-standby.png",
     "map/icons/team-standby.svg",
     "map/layers/portable/artifact-sample/artifactSampleLayer.html",
-    "map/layers/portable/artifact-sample/artifactSampleLayer.svg",
     "map/layers/portable/artifact-sample/data/detail.json",
     "map/layers/portable/artifact-sample/data/summary.json",
     "map/layers/portable/representative-pins/DENSITY_POINTS_FORMAT.md",

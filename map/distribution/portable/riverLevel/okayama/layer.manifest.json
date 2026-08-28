@@ -4,7 +4,7 @@
   "packageId": "riverLevel",
   "regionId": "okayama",
   "distribution": {
-    "packageVersion": "1.0.0",
+    "packageVersion": "1.1.0",
     "publisher": {
       "id": "svg3",
       "name": "SVG3"
@@ -15,9 +15,9 @@
       "status": "unresolved",
       "redistributable": false
     },
-    "publishedAt": "2026-07-21T00:00:00+09:00"
+    "publishedAt": "2026-08-28T00:00:00+09:00"
   },
-  "contentDigest": "sha256-714bc57e026b19d01a50a3bafef358737dcf4ed4d22437501a3cd7970b826454",
+  "contentDigest": "sha256-4ee744ab72564eaa86fc192e665d10d7df03c6f4526b4c460854a2db42d754b3",
   "files": [
     {
       "path": "Container.isolated.svg",
@@ -215,6 +215,16 @@
       "sha256": "655ab7514976a209cc44dce7d8613951990080c8b19fd639b445ac8c429f72f4"
     },
     {
+      "path": "map/layers/portable/portable-network/runtime.package.json",
+      "bytes": 150,
+      "sha256": "7b46391e6134a9dfedfcffb9131f15cd155ccc5778fa6d9c481f6ba9d5b26982"
+    },
+    {
+      "path": "map/layers/portable/portable-network/safeFetch.js",
+      "bytes": 10935,
+      "sha256": "c86c566429a5015771384a18016b7287a1268413499d1b54f0a435fbae3150b2"
+    },
+    {
       "path": "map/layers/portable/representative-pins/DENSITY_POINTS_FORMAT.md",
       "bytes": 1563,
       "sha256": "a017fcaf29c7cfd4f17aab9942dad0ba7e00ec741b80bb49c057cebf3143315a"
@@ -241,8 +251,8 @@
     },
     {
       "path": "map/layers/portable/representative-pins/propertyModal.js",
-      "bytes": 11038,
-      "sha256": "7fb62244cf6e30aedeadecdded09c674a02208bb2a038bbf8d94ae5c461fbdb2"
+      "bytes": 11997,
+      "sha256": "661b55db17593065c1fa69a221536c53797c3d3783d99f7790f4cd5928276392"
     },
     {
       "path": "map/layers/portable/representative-pins/qtctBuilder.mjs",
@@ -256,8 +266,8 @@
     },
     {
       "path": "map/layers/portable/representative-pins/representativePinsCore.js",
-      "bytes": 58912,
-      "sha256": "a74d8b584e7884419cdfe961a83758d15f8cb6e7064fd075dcc3fc6f8da0d3eb"
+      "bytes": 60242,
+      "sha256": "60f44109dd65e0fe3a69ed5a8b9045f197a00cda9b28f43007c4c67553d13337"
     },
     {
       "path": "map/layers/portable/representative-pins/representativePinsPortable.html",
@@ -272,17 +282,17 @@
     {
       "path": "map/layers/portable/representative-pins/runtime.package.json",
       "bytes": 482,
-      "sha256": "e3d4b0af9acbbbaaf9453d6d7bffc67a2c73fb126463e10ebca8b2931e7114c9"
+      "sha256": "e667e1838e0b6275c5e9a13b0ad9db7d7c00c34fbba0c0b7ad1e9471d6e79921"
     },
     {
       "path": "map/layers/portable/representative-pins/runtimeCache.js",
-      "bytes": 5793,
-      "sha256": "549e8792829bd1cce2f6ab66a8cc0be0bf2836a8475c31703c4fcf4c899edb50"
+      "bytes": 5954,
+      "sha256": "4996b3c204376dbcd06491482865e2cce13603e4f9c81470312cc7956013e1be"
     },
     {
       "path": "map/layers/portable/river-level/layer.package.json",
-      "bytes": 2263,
-      "sha256": "e60ed8e85be88e237fbfdc888202fcea29c24c49ae3b839b12e2caca4a38c115"
+      "bytes": 3064,
+      "sha256": "8bf541d22ea9c9698775758090c493c6d4120609be3134919e72b7a75b4a0442"
     },
     {
       "path": "map/layers/portable/river-level/riverLevelDetail.js",
@@ -291,8 +301,8 @@
     },
     {
       "path": "map/layers/portable/river-level/riverLevelLayer.html",
-      "bytes": 744,
-      "sha256": "61c5600b65bed1a120dcf392832a68ff1977e04032057100d1eeb1d3796b035b"
+      "bytes": 1113,
+      "sha256": "40d35660587cd5ddd67bc563fbaf12a45191aa14464ca9c58fe5acc87d42523a"
     },
     {
       "path": "map/layers/portable/river-level/riverLevelLayer.svg",

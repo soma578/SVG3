@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="13763.47 -3714.81 47.79 38.14"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>糸魚川市 ハザード詳細 15216</title>
+  <animation id="hazard-source-15216"
+    title="糸魚川市 ハザード詳細" href="/map/layers/hazard/15/districts/15216.svg" xlink:href="/map/layers/hazard/15/districts/15216.svg"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+     visibility="visible" />
+</svg>

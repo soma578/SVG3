@@ -1,17 +1,27 @@
 import assert from 'node:assert/strict'
+import { existsSync, readFileSync } from 'node:fs'
+import { fileURLToPath } from 'node:url'
 import test from 'node:test'
 
 import {
   WARNING_KINDS,
+  class20Areas,
   isActiveWarning,
+  latestReportDatetime,
   municipalityCodesFor,
   municipalityMap,
   oldestReportDatetime,
   unmappedAreas,
   warningKind,
   warningRecords,
+  warningRecordsWithinHours,
 } from '../../map/layers/portable/flood-warning/jmaWarnings.js'
-import { JMA_WARNING_ATTRIBUTION } from '../../map/layers/portable/flood-warning/floodWarningLayer.js'
+import {
+  JMA_WARNING_ATTRIBUTION,
+  WARNING_PIN_SIZE,
+  WARNING_ICON_PATHS,
+} from '../../map/layers/portable/flood-warning/floodWarningLayer.js'
+import { renderFloodWarningDetail } from '../../map/layers/portable/flood-warning/floodWarningDetail.js'
 
 const places = municipalityMap({
   municipalities: [
@@ -30,9 +40,97 @@ test('気象警報のプロパティは公式出典を持つ', () => {
   })
 })
 
+test('警報レベル別アイコンをpackage内に同梱する', () => {
+  assert.deepEqual(Object.keys(WARNING_ICON_PATHS), ['emergency', 'warning', 'advisory', 'unknown'])
+  for (const iconUrl of Object.values(WARNING_ICON_PATHS)) {
+    assert.equal(existsSync(fileURLToPath(iconUrl)), true, iconUrl)
+  }
+})
+
+test('警報と注意報は漢字に依存せず、色と形が違う26pxピンを使う', () => {
+  assert.equal(WARNING_PIN_SIZE, 26)
+  const warning = readFileSync(fileURLToPath(WARNING_ICON_PATHS.warning), 'utf8')
+  const advisory = readFileSync(fileURLToPath(WARNING_ICON_PATHS.advisory), 'utf8')
+  assert.doesNotMatch(warning, /<text\b/)
+  assert.doesNotMatch(advisory, /<text\b/)
+  assert.match(warning, /#d32f2f/i)
+  assert.match(warning, /M18 2\.5 34 31H2Z/)
+  assert.match(advisory, /#f6c400/i)
+  assert.match(advisory, /M18 2 34 18 18 34 2 18Z/)
+})
+
+test('表示期間は発表時刻で絞り、全件指定では継続中を隠さない', () => {
+  const records = [
+    { id: 'recent', observedAt: '2026-08-28T10:00:00+09:00' },
+    { id: 'old', observedAt: '2026-08-25T10:00:00+09:00' },
+    { id: 'unknown', observedAt: null },
+  ]
+  const now = Date.parse('2026-08-28T12:00:00+09:00')
+  assert.deepEqual(warningRecordsWithinHours(records, 24, now).map((record) => record.id), ['recent'])
+  assert.deepEqual(warningRecordsWithinHours(records, 0, now).map((record) => record.id), ['recent', 'old', 'unknown'])
+})
+
+test('controllerは表示期間、更新、データ最終時刻を利用者へ示す', () => {
+  const controller = readFileSync(fileURLToPath(new URL(
+    '../../map/layers/portable/flood-warning/floodWarningLayer.html', import.meta.url,
+  )), 'utf8')
+  assert.match(controller, /id="display-period"/)
+  assert.match(controller, /value="24" selected/)
+  assert.match(controller, /id="refresh"/)
+  assert.match(controller, /配信データ最終/)
+})
+
+test('気象警報プロパティは避難所と同じ構造で出典・区域・発表内容を示す', () => {
+  const html = renderFloodWarningDetail({
+    title: '倉敷市',
+    status: 'warning',
+    municipalityCode: '33202',
+    observedAt: '2026-08-04T10:00:00+09:00',
+    kinds: [
+      { name: '洪水警報', level: 'warning' },
+      { name: '大雨注意報', level: 'advisory' },
+    ],
+  })
+  assert.match(html, /svg3-property-warning/)
+  assert.match(html, /倉敷市/)
+  assert.match(html, /洪水警報/)
+  assert.match(html, /大雨注意報/)
+  assert.match(html, /33202/)
+  assert.match(html, /情報提供[\s\S]*気象庁/)
+  assert.match(html, /気象庁で確認/)
+})
+
 const report = (areas, reportDatetime = '2026-08-04T10:00:00+09:00') => ({
   reportDatetime,
   areaTypes: [{ areas }],
+})
+
+const r8Report = (items, reportDatetime = '2026-08-28T09:29:00+09:00') => ({
+  reportDatetime,
+  warning: { class20Items: items },
+})
+
+test('現行r8のclass20Itemsを旧形式と同じ区域へ正規化する', () => {
+  assert.deepEqual(class20Areas(r8Report([{
+    areaCode: '3320200',
+    kinds: [{ code: '04', status: '発表' }],
+  }])), [{
+    code: '3320200',
+    warnings: [{ code: '04', status: '発表' }],
+  }])
+})
+
+test('現行r8の警報・注意報を市区町村ピンへ変換する', () => {
+  const records = warningRecords([r8Report([
+    { areaCode: '3320200', kinds: [{ code: '43', status: '発表' }, { code: '10', status: '継続' }] },
+    { areaCode: '3310000', kinds: [{ code: '29', status: '発表' }] },
+    { areaCode: '3410100', kinds: [{ code: '03', status: '解除' }] },
+  ])], places)
+  assert.equal(records.length, 3)
+  assert.deepEqual(records.map(({ municipalityCode }) => municipalityCode), ['33101', '33102', '33202'])
+  assert.equal(records.find(({ municipalityCode }) => municipalityCode === '33202').status, 'emergency')
+  assert.equal(records.find(({ municipalityCode }) => municipalityCode === '33202').summary, '大雨危険警報・大雨注意報')
+  assert.equal(records.find(({ municipalityCode }) => municipalityCode === '33101').summary, '土砂災害注意報')
 })
 
 test('市区町村索引は displayCode を優先し、座標が無いものは落とす', () => {
@@ -120,6 +218,11 @@ test('発表中が0件でもJSONの発表時刻を鮮度判定に使える', () 
     report([], '2026-08-04T06:00:00+09:00'),
   ]), '2026-08-04T06:00:00+09:00')
   assert.equal(oldestReportDatetime(null), null)
+  assert.equal(latestReportDatetime([
+    report([], '2026-08-04T10:00:00+09:00'),
+    report([], '2026-08-04T06:00:00+09:00'),
+  ]), '2026-08-04T10:00:00+09:00')
+  assert.equal(latestReportDatetime(null), null)
 })
 
 test('対応づけできない市区町村区域は数えられる', () => {

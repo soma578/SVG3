@@ -1,0 +1,9 @@
+{
+  "id": "portable-network",
+  "version": "1.0.0",
+  "type": "svgmap-runtime-package",
+  "exports": [
+    "safeFetch.js"
+  ],
+  "dependencies": []
+}

@@ -38,7 +38,7 @@
   "runtimeDependencies": [
     {
       "id": "representative-pins",
-      "version": "1.2.2",
+      "version": "1.2.3",
       "manifest": "../representative-pins/runtime.package.json"
     },
     {
@@ -79,9 +79,9 @@
   "runtimeDependencyLock": [
     {
       "id": "representative-pins",
-      "version": "1.2.2",
+      "version": "1.2.3",
       "manifest": "representative-pins/runtime.package.json",
-      "integrity": "sha256-599c2591f8387bde92cbb68c6c242942dfd221b2f5dbcaa5723a326c9fc7aefb"
+      "integrity": "sha256-1eec2b55c8c89e801a9be5680a72a6b78d0aa2a09bb812f3a31e22b85d1c5bc7"
     },
     {
       "id": "svgmap-slawa-client",

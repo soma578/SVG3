@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="13965.41 -3556.21 5.04 3.59"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>川崎市 14132 ハザード詳細 14132</title>
+  <animation id="hazard-source-14132"
+    title="川崎市 14132 ハザード詳細" href="/map/layers/hazard/14/districts/14132.svg" xlink:href="/map/layers/hazard/14/districts/14132.svg"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+     visibility="visible" />
+</svg>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="13593.64 -3448 15.98 13.63"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>東吉野村 ハザード詳細 29453</title>
+  <animation id="hazard-source-29453"
+    title="東吉野村 ハザード詳細" href="/map/layers/hazard/29/districts/29453.svg" xlink:href="/map/layers/hazard/29/districts/29453.svg"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+     visibility="visible" />
+</svg>

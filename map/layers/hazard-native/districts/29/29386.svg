@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="13608.04 -3452.93 14.96 9.4"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>御杖村 ハザード詳細 29386</title>
+  <animation id="hazard-source-29386"
+    title="御杖村 ハザード詳細" href="/map/layers/hazard/29/districts/29386.svg" xlink:href="/map/layers/hazard/29/districts/29386.svg"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+     visibility="visible" />
+</svg>

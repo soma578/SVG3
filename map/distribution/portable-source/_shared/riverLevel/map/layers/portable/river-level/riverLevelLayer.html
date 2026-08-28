@@ -8,16 +8,23 @@
 <body>
 <script type="module">
 import { initRepresentativePinsLayer } from '../representative-pins/representativePinsCore.js';
+import { createPortableNetworkClient } from '../portable-network/safeFetch.js';
 import { renderRiverLevelDetail } from './riverLevelDetail.js';
 
 let started = false;
 const start = () => {
   if (started) return;
   started = true;
+  const network = createPortableNetworkClient({
+    // tight iframeとS-LaWA iframeはいずれもcontroller URLを<base>として保持する。
+    manifestUrl: new URL('./layer.package.json', document.baseURI).href,
+    baseUrl: document.baseURI,
+  });
   initRepresentativePinsLayer({
     mode: 'portable',
     renderFeatureDetail: renderRiverLevelDetail,
     refreshIntervalMs: 120_000,
+    networkFetch: network.fetch,
   });
 };
 window.addEventListener('layerWebAppReady', start, { once: true });

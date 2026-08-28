@@ -193,8 +193,10 @@
     import { neighborCatalogUrl } from './shared/layerCatalog.js';
     import { createLayerControllerBus } from './shared/layerControllerBus.js';
     import { fetchWithRuntimeCache } from './shared/runtimeCache.js';
+    import { installCommunityModalPresentation } from './shared/communityModalPresentation.js';
     import {
       communityPropertyTransformForLayer,
+      installCommunityPropertyRegistrationMonitor,
       registerCommunityPropertyAdapter,
     } from './shared/communityPropertyAdapter.js';
 
@@ -792,8 +794,9 @@
     };
 
     const scheduleRuntimeCommunityPropertyAdapters = () => {
-      // Root animationのiid確定と、上流controller側の独自handler登録の後にも
-      // 実行し、追加レイヤーのプロパティ表示だけをホスト共通形式へ統一する。
+      // Root animationのiid確定タイミングに合わせてfallback登録を再試行する。
+      // Community controller自身がsetShowPoiProperty()を登録した場合は
+      // registration monitorが検知し、SVG3 generic adapterでは上書きしない。
       [0, 300, 900, 2200].forEach((delay) => window.setTimeout(
         installRuntimeCommunityPropertyAdapters,
         delay,
@@ -1292,7 +1295,16 @@
       const svgMapModule = await import('/map/vendor/svgmapjs/SVGMapLv0.1_r18module.js');
       svgMap = svgMapModule.svgMap;
       window.svgMap = svgMap;
-      // controllerから見えるAPIは本家と同じ getCORSURL のままにする。外部HTTPSを
+
+      // Observe property-handler registrations before any community controller
+      // can register its own setShowPoiProperty callback. SVG3 generic UI is a
+      // fallback only and must never overwrite a controller/native handler.
+      installCommunityPropertyRegistrationMonitor(svgMap);
+      // Preserve each layer's property semantics while presenting property
+      // modals in the SVG3 shell. Tool/controller modals outside property
+      // callbacks are intentionally left untouched.
+      installCommunityModalPresentation({ svgMap });
+// controllerから見えるAPIは本家と同じ getCORSURL のままにする。外部HTTPSを
       // 中継URLへ変換し、実際に通すhost/path/method/size/MIMEはサーバ側の
       // generated layer capabilityで判定する。未知URLはURL化されても中継されない。
       let communityProxyAvailable = false;

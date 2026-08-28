@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="13937.44 -3731.22 49.17 34.43"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>南会津町 ハザード詳細 07368</title>
+  <animation id="hazard-source-07368"
+    title="南会津町 ハザード詳細" href="/map/layers/hazard/7/districts/07368.svg" xlink:href="/map/layers/hazard/7/districts/07368.svg"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+     visibility="visible" />
+</svg>

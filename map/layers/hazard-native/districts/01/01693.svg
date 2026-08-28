@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="14472.02 -4390.23 52.54 33.88"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>標津町 ハザード詳細 01693</title>
+  <animation id="hazard-source-01693"
+    title="標津町 ハザード詳細" href="/map/layers/hazard/1/districts/01693.svg" xlink:href="/map/layers/hazard/1/districts/01693.svg"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+     visibility="visible" />
+</svg>

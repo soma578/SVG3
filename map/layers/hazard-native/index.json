@@ -1,0 +1,523 @@
+{
+  "schemaVersion": 1,
+  "kind": "svg3-hazard-native-lod",
+  "regions": {
+    "10": {
+      "id": "gunma",
+      "label": "群馬県",
+      "bounds": {
+        "x": 13830.594539999998,
+        "y": -3714.98046,
+        "width": 145.51892,
+        "height": 125.56591999999999
+      },
+      "municipalityCount": 35
+    },
+    "11": {
+      "id": "saitama",
+      "label": "埼玉県",
+      "bounds": {
+        "x": 13862.275239999999,
+        "y": -3637.20576,
+        "width": 136.62552000000002,
+        "height": 70.73452
+      },
+      "municipalityCount": 72
+    },
+    "12": {
+      "id": "chiba",
+      "label": "千葉県",
+      "bounds": {
+        "x": 13965.28413,
+        "y": -3619.32287,
+        "width": 131.08274,
+        "height": 138.25474
+      },
+      "municipalityCount": 59
+    },
+    "13": {
+      "id": "tokyo",
+      "label": "東京都",
+      "bounds": {
+        "x": 13843.85557,
+        "y": -3640.2734299999997,
+        "width": 1605.2438599999998,
+        "height": 1268.22986
+      },
+      "municipalityCount": 62
+    },
+    "14": {
+      "id": "kanagawa",
+      "label": "神奈川県",
+      "bounds": {
+        "x": 13883.516969999999,
+        "y": -3575.3500300000005,
+        "width": 108.12106000000001,
+        "height": 70.53906
+      },
+      "municipalityCount": 58
+    },
+    "15": {
+      "id": "niigata",
+      "label": "新潟県",
+      "bounds": {
+        "x": 13751.40324,
+        "y": -3867.4527599999997,
+        "width": 250.68152,
+        "height": 205.89151999999999
+      },
+      "municipalityCount": 37
+    },
+    "16": {
+      "id": "toyama",
+      "label": "富山県",
+      "bounds": {
+        "x": 13668.56842,
+        "y": -3706.264579999999,
+        "width": 116.05516,
+        "height": 87.11316
+      },
+      "municipalityCount": 15
+    },
+    "17": {
+      "id": "ishikawa",
+      "label": "石川県",
+      "bounds": {
+        "x": 13613.7217,
+        "y": -3796.1973,
+        "width": 133.0076,
+        "height": 200.13859999999997
+      },
+      "municipalityCount": 19
+    },
+    "18": {
+      "id": "fukui",
+      "label": "福井県",
+      "bounds": {
+        "x": 13535.48494,
+        "y": -3638.9810600000005,
+        "width": 157.20012,
+        "height": 114.06112000000002
+      },
+      "municipalityCount": 17
+    },
+    "19": {
+      "id": "yamanashi",
+      "label": "山梨県",
+      "bounds": {
+        "x": 13809.85228,
+        "y": -3605.3327200000003,
+        "width": 111.74943999999999,
+        "height": 96.65744000000001
+      },
+      "municipalityCount": 27
+    },
+    "20": {
+      "id": "nagano",
+      "label": "長野県",
+      "bounds": {
+        "x": 13721.65915,
+        "y": -3713.8378500000003,
+        "width": 163.0617,
+        "height": 204.7867
+      },
+      "municipalityCount": 77
+    },
+    "21": {
+      "id": "gifu",
+      "label": "岐阜県",
+      "bounds": {
+        "x": 13618.191480000001,
+        "y": -3655.93752,
+        "width": 156.54504,
+        "height": 151.99504000000002
+      },
+      "municipalityCount": 42
+    },
+    "22": {
+      "id": "shizuoka",
+      "label": "静岡県",
+      "bounds": {
+        "x": 13737.003680000002,
+        "y": -3575.00332,
+        "width": 191.05864000000003,
+        "height": 128.03464
+      },
+      "municipalityCount": 43
+    },
+    "23": {
+      "id": "aichi",
+      "label": "愛知県",
+      "bounds": {
+        "x": 13658.301759999998,
+        "y": -3551.27824,
+        "width": 134.31047999999998,
+        "height": 102.25047999999998
+      },
+      "municipalityCount": 69
+    },
+    "24": {
+      "id": "mie",
+      "label": "三重県",
+      "bounds": {
+        "x": 13575.41396,
+        "y": -3535.6580400000007,
+        "width": 133.25907999999998,
+        "height": 173.27607999999998
+      },
+      "municipalityCount": 29
+    },
+    "25": {
+      "id": "shiga",
+      "label": "滋賀県",
+      "bounds": {
+        "x": 13568.334490000001,
+        "y": -3578.41351,
+        "width": 85.20502,
+        "height": 107.39602
+      },
+      "municipalityCount": 19
+    },
+    "26": {
+      "id": "kyoto",
+      "label": "京都府",
+      "bounds": {
+        "x": 13476.49868,
+        "y": -3586.82332,
+        "width": 137.95263999999997,
+        "height": 125.15263999999999
+      },
+      "municipalityCount": 36
+    },
+    "27": {
+      "id": "osaka",
+      "label": "大阪府",
+      "bounds": {
+        "x": 13501.56168,
+        "y": -3512.76432,
+        "width": 80.73564,
+        "height": 93.22064
+      },
+      "municipalityCount": 72
+    },
+    "28": {
+      "id": "hyogo",
+      "label": "兵庫県",
+      "bounds": {
+        "x": 13415.428110000003,
+        "y": -3577.327890000001,
+        "width": 141.27978,
+        "height": 171.57478
+      },
+      "municipalityCount": 49
+    },
+    "29": {
+      "id": "nara",
+      "label": "奈良県",
+      "bounds": {
+        "x": 13545.902860000002,
+        "y": -3486.20114,
+        "width": 85.14228,
+        "height": 108.37228
+      },
+      "municipalityCount": 39
+    },
+    "30": {
+      "id": "wakayama",
+      "label": "和歌山県",
+      "bounds": {
+        "x": 13491.562039999999,
+        "y": -3446.79096,
+        "width": 118.11791999999998,
+        "height": 111.67391999999998
+      },
+      "municipalityCount": 30
+    },
+    "31": {
+      "id": "tottori",
+      "label": "鳥取県",
+      "bounds": {
+        "x": 13304.17234,
+        "y": -3570.8966600000003,
+        "width": 156.79731999999998,
+        "height": 74.56631999999999
+      },
+      "municipalityCount": 19
+    },
+    "32": {
+      "id": "shimane",
+      "label": "島根県",
+      "bounds": {
+        "x": 13152.675470000002,
+        "y": -3738.41653,
+        "width": 200.03305999999998,
+        "height": 322.29406
+      },
+      "municipalityCount": 19
+    },
+    "33": {
+      "id": "okayama",
+      "label": "岡山県",
+      "bounds": {
+        "x": 13317.95431,
+        "y": -3544.0286900000006,
+        "width": 132.10038,
+        "height": 122.93438
+      },
+      "municipalityCount": 30
+    },
+    "34": {
+      "id": "hiroshima",
+      "label": "広島県",
+      "bounds": {
+        "x": 13194.042339999998,
+        "y": -3520.1706599999993,
+        "width": 162.62732,
+        "height": 126.33432
+      },
+      "municipalityCount": 30
+    },
+    "35": {
+      "id": "yamaguchi",
+      "label": "山口県",
+      "bounds": {
+        "x": 13067.054820000001,
+        "y": -3490.31618,
+        "width": 192.60835999999998,
+        "height": 129.47536
+      },
+      "municipalityCount": 19
+    },
+    "36": {
+      "id": "tokushima",
+      "label": "徳島県",
+      "bounds": {
+        "x": 13357.29311,
+        "y": -3433.9838899999995,
+        "width": 133.62678,
+        "height": 88.78078
+      },
+      "municipalityCount": 24
+    },
+    "37": {
+      "id": "kagawa",
+      "label": "香川県",
+      "bounds": {
+        "x": 13336.373609999999,
+        "y": -3464.7633899999996,
+        "width": 115.97778000000001,
+        "height": 71.81378000000001
+      },
+      "municipalityCount": 17
+    },
+    "38": {
+      "id": "ehime",
+      "label": "愛媛県",
+      "bounds": {
+        "x": 13191.15784,
+        "y": -3440.49816,
+        "width": 188.43832,
+        "height": 161.04232000000002
+      },
+      "municipalityCount": 20
+    },
+    "39": {
+      "id": "kochi",
+      "label": "高知県",
+      "bounds": {
+        "x": 13237.189320000001,
+        "y": -3399.13768,
+        "width": 204.95736,
+        "height": 139.68736
+      },
+      "municipalityCount": 34
+    },
+    "40": {
+      "id": "fukuoka",
+      "label": "福岡県",
+      "bounds": {
+        "x": 12994.250479999999,
+        "y": -3434.0355200000004,
+        "width": 133.85703999999998,
+        "height": 143.08303999999998
+      },
+      "municipalityCount": 72
+    },
+    "41": {
+      "id": "saga",
+      "label": "佐賀県",
+      "bounds": {
+        "x": 12966.288490000003,
+        "y": -3369.4895100000003,
+        "width": 95.63002,
+        "height": 82.14402000000001
+      },
+      "municipalityCount": 20
+    },
+    "42": {
+      "id": "nagasaki",
+      "label": "長崎県",
+      "bounds": {
+        "x": 12820.912249999998,
+        "y": -3484.26575,
+        "width": 230.65149999999997,
+        "height": 299.0525
+      },
+      "municipalityCount": 21
+    },
+    "43": {
+      "id": "kumamoto",
+      "label": "熊本県",
+      "bounds": {
+        "x": 12986.940669999998,
+        "y": -3328.91033,
+        "width": 155.40766,
+        "height": 128.81665999999998
+      },
+      "municipalityCount": 49
+    },
+    "44": {
+      "id": "oita",
+      "label": "大分県",
+      "bounds": {
+        "x": 13073.393290000002,
+        "y": -3383.1037100000003,
+        "width": 144.22042000000002,
+        "height": 120.73842000000002
+      },
+      "municipalityCount": 18
+    },
+    "45": {
+      "id": "miyazaki",
+      "label": "宮崎県",
+      "bounds": {
+        "x": 13060.60319,
+        "y": -3293.6288099999997,
+        "width": 137.70262,
+        "height": 167.29662000000002
+      },
+      "municipalityCount": 26
+    },
+    "46": {
+      "id": "kagoshima",
+      "label": "鹿児島県",
+      "bounds": {
+        "x": 12818.386020000002,
+        "y": -3251.82698,
+        "width": 323.32196,
+        "height": 571.0919600000001
+      },
+      "municipalityCount": 43
+    },
+    "47": {
+      "id": "okinawa",
+      "label": "沖縄県",
+      "bounds": {
+        "x": 12262.87683,
+        "y": -2819.0241699999997,
+        "width": 900.8293400000001,
+        "height": 444.95734000000004
+      },
+      "municipalityCount": 41
+    },
+    "01": {
+      "id": "hokkaido",
+      "label": "北海道",
+      "bounds": {
+        "x": 13899.458959999998,
+        "y": -4589.6590400000005,
+        "width": 1023.82008,
+        "height": 488.40308
+      },
+      "municipalityCount": 188
+    },
+    "02": {
+      "id": "aomori",
+      "label": "青森県",
+      "bounds": {
+        "x": 13975.20547,
+        "y": -4166.3635300000005,
+        "width": 203.89206,
+        "height": 155.35906
+      },
+      "municipalityCount": 40
+    },
+    "03": {
+      "id": "iwate",
+      "label": "岩手県",
+      "bounds": {
+        "x": 14054.90832,
+        "y": -4055.42868,
+        "width": 162.73836000000003,
+        "height": 191.07136
+      },
+      "municipalityCount": 33
+    },
+    "04": {
+      "id": "miyagi",
+      "label": "宮城県",
+      "bounds": {
+        "x": 14018.00006,
+        "y": -3909.77594,
+        "width": 158.99788,
+        "height": 141.95088
+      },
+      "municipalityCount": 39
+    },
+    "05": {
+      "id": "akita",
+      "label": "秋田県",
+      "bounds": {
+        "x": 13959.11027,
+        "y": -4061.32073,
+        "width": 150.64646000000002,
+        "height": 184.21846
+      },
+      "municipalityCount": 25
+    },
+    "06": {
+      "id": "yamagata",
+      "label": "山形県",
+      "bounds": {
+        "x": 13942.32184,
+        "y": -3930.57916,
+        "width": 132.04832,
+        "height": 166.92031999999998
+      },
+      "municipalityCount": 35
+    },
+    "07": {
+      "id": "fukushima",
+      "label": "福島県",
+      "bounds": {
+        "x": 13905.54128,
+        "y": -3808.59872,
+        "width": 209.69343999999998,
+        "height": 140.40044
+      },
+      "municipalityCount": 59
+    },
+    "08": {
+      "id": "ibaraki",
+      "label": "茨城県",
+      "bounds": {
+        "x": 13959.85155,
+        "y": -3703.44745,
+        "width": 134.2649,
+        "height": 138.4519
+      },
+      "municipalityCount": 44
+    },
+    "09": {
+      "id": "tochigi",
+      "label": "栃木県",
+      "bounds": {
+        "x": 13924.460199999998,
+        "y": -3723.6947999999998,
+        "width": 112.95360000000001,
+        "height": 111.9236
+      },
+      "municipalityCount": 25
+    }
+  }
+}

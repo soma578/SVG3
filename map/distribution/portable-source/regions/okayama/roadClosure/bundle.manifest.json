@@ -29,7 +29,7 @@
     },
     "publishedAt": "2026-07-21T00:00:00+09:00"
   },
-  "contentDigest": "sha256-92671986d796e691dfb83ef95a0a64c1fc8875e3bb9eb95f87b1ab132241c151",
+  "contentDigest": "sha256-9509fdb1db6a1d1708287af583ae26a0e519221ae6751534ccbe3609e20ed7bd",
   "portability": {
     "pathIndependent": true,
     "crossOrigin": false,
@@ -43,9 +43,9 @@
     "runtimeDependencies": [
       {
         "id": "representative-pins",
-        "version": "1.2.2",
+        "version": "1.2.3",
         "manifest": "representative-pins/runtime.package.json",
-        "integrity": "sha256-599c2591f8387bde92cbb68c6c242942dfd221b2f5dbcaa5723a326c9fc7aefb"
+        "integrity": "sha256-1eec2b55c8c89e801a9be5680a72a6b78d0aa2a09bb812f3a31e22b85d1c5bc7"
       },
       {
         "id": "svgmap-slawa-client",
@@ -70,7 +70,7 @@
     {
       "path": "layer.manifest.json",
       "bytes": 11617,
-      "sha256": "cb249bcdf707664583f7fc5696eea11f09edf99301029a6ae68e0498f107816b"
+      "sha256": "4d49344a9d2e503d24d0d8ace9ecfdba07a659d1b6311814c42cad05b4a5028e"
     },
     {
       "path": "map/data/qtct/roadClosure/okayama/detail.json",
@@ -284,8 +284,8 @@
     },
     {
       "path": "map/layers/portable/representative-pins/propertyModal.js",
-      "bytes": 11038,
-      "sha256": "7fb62244cf6e30aedeadecdded09c674a02208bb2a038bbf8d94ae5c461fbdb2"
+      "bytes": 11997,
+      "sha256": "661b55db17593065c1fa69a221536c53797c3d3783d99f7790f4cd5928276392"
     },
     {
       "path": "map/layers/portable/representative-pins/qtctBuilder.mjs",
@@ -299,8 +299,8 @@
     },
     {
       "path": "map/layers/portable/representative-pins/representativePinsCore.js",
-      "bytes": 58912,
-      "sha256": "a74d8b584e7884419cdfe961a83758d15f8cb6e7064fd075dcc3fc6f8da0d3eb"
+      "bytes": 60242,
+      "sha256": "60f44109dd65e0fe3a69ed5a8b9045f197a00cda9b28f43007c4c67553d13337"
     },
     {
       "path": "map/layers/portable/representative-pins/representativePinsPortable.html",
@@ -315,17 +315,17 @@
     {
       "path": "map/layers/portable/representative-pins/runtime.package.json",
       "bytes": 482,
-      "sha256": "e3d4b0af9acbbbaaf9453d6d7bffc67a2c73fb126463e10ebca8b2931e7114c9"
+      "sha256": "e667e1838e0b6275c5e9a13b0ad9db7d7c00c34fbba0c0b7ad1e9471d6e79921"
     },
     {
       "path": "map/layers/portable/representative-pins/runtimeCache.js",
-      "bytes": 5793,
-      "sha256": "549e8792829bd1cce2f6ab66a8cc0be0bf2836a8475c31703c4fcf4c899edb50"
+      "bytes": 5954,
+      "sha256": "4996b3c204376dbcd06491482865e2cce13603e4f9c81470312cc7956013e1be"
     },
     {
       "path": "map/layers/portable/road-closure/layer.package.json",
       "bytes": 2269,
-      "sha256": "0445a08cbc8bdd59ca7efc9a5f6da79da4b9c2b1b664855de502b6669b5a94cb"
+      "sha256": "84e7ac182bbe11db62edad70380fd5825277093efd332d75c6bc4a8c35f2beca"
     },
     {
       "path": "map/layers/portable/road-closure/roadClosureDetail.js",
@@ -889,8 +889,8 @@
     },
     {
       "path": "README.html",
-      "bytes": 1763,
-      "sha256": "529f33e1cc0455c00b7efebabdf629a78a5399d99c3ef23c0343c84776823787"
+      "bytes": 1765,
+      "sha256": "b5618a884e3997990c885c84f748440e99c08a6b009e74a1fe3a4ab49719835d"
     },
     {
       "path": "viewer-isolated.html",

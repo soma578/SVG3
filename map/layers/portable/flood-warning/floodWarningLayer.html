@@ -4,8 +4,35 @@
   <meta charset="UTF-8">
   <title>洪水・気象警報</title>
   <script src="../svgmap-slawa-client/svgMapLayerLib.js"></script>
+  <style>
+    body{margin:0;padding:10px;color:#172033;background:#fff;font:13px/1.45 system-ui,sans-serif}
+    .panel{display:grid;gap:9px;min-width:250px}
+    .legend{display:flex;gap:12px;align-items:center}.legend span{display:inline-flex;gap:5px;align-items:center;font-weight:700}
+    .legend img{width:26px;height:26px}.controls{display:grid;grid-template-columns:1fr auto;gap:7px}
+    label{display:grid;gap:3px;font-weight:700}select,button{min-height:36px;border:1px solid #aeb9c5;border-radius:6px;background:#fff;font:inherit}
+    button{align-self:end;padding:0 11px;font-weight:700;cursor:pointer}.status{padding:8px;border-radius:6px;background:#f2f5f7;color:#394454}
+    .status[data-error=true]{background:#fff0ef;color:#a52020}.note{margin:0;color:#5d6875;font-size:12px}
+  </style>
 </head>
 <body>
+<section class="panel" aria-label="気象警報・注意報の表示設定">
+  <div class="legend">
+    <span><img src="warning-warning.svg" alt="赤い三角">警報</span>
+    <span><img src="warning-advisory.svg" alt="黄色いひし形">注意報</span>
+  </div>
+  <div class="controls">
+    <label>発表時刻で絞り込み
+      <select id="display-period">
+        <option value="3">直近3時間</option><option value="6">直近6時間</option>
+        <option value="12">直近12時間</option><option value="24" selected>直近24時間</option>
+        <option value="72">直近3日</option><option value="0">発表中すべて</option>
+      </select>
+    </label>
+    <button id="refresh" type="button">更新</button>
+  </div>
+  <output id="status" class="status">取得中…</output>
+  <p class="note">気象庁が「発表・継続」として配信中の情報を、発表時刻で絞ります。長期間継続中の情報を確認する場合は「発表中すべて」を選んでください。</p>
+</section>
 <script type="module">
 import { initFloodWarningLayer } from './floodWarningLayer.js';
 
@@ -13,7 +40,18 @@ let started = false;
 const start = () => {
   if (started) return;
   started = true;
-  initFloodWarningLayer();
+  const status = document.getElementById('status');
+  const formatTime = (value) => value ? new Intl.DateTimeFormat('ja-JP', { dateStyle: 'short', timeStyle: 'short' }).format(new Date(value)) : '不明';
+  const runtime = initFloodWarningLayer({
+    onStateChange(state) {
+      status.dataset.error = state.error ? 'true' : 'false';
+      if (state.loading && !state.loaded) status.textContent = '気象庁から取得中…';
+      else if (state.error) status.textContent = `更新失敗: ${state.error}（前回表示を維持）`;
+      else status.textContent = `期間内 ${state.visibleCount}件 / 発表中 ${state.totalCount}件｜配信データ最終 ${formatTime(state.latestObservedAt)}`;
+    },
+  });
+  document.getElementById('display-period').addEventListener('change', (event) => runtime.setDisplayWindowHours(event.target.value));
+  document.getElementById('refresh').addEventListener('click', () => runtime.refresh());
 };
 window.addEventListener('layerWebAppReady', start, { once: true });
 if (window.svgMap && window.svgImage) queueMicrotask(start);

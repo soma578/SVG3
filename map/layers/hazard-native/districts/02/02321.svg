@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="14006.81 -4080.05 26.84 36.55"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>鰺ヶ沢町 ハザード詳細 02321</title>
+  <animation id="hazard-source-02321"
+    title="鰺ヶ沢町 ハザード詳細" href="/map/layers/hazard/2/districts/02321.svg" xlink:href="/map/layers/hazard/2/districts/02321.svg"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+     visibility="visible" />
+</svg>

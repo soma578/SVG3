@@ -16,6 +16,21 @@ const PROPERTY_STYLES = `
       --property-accent: #245db5;
       --property-accent-soft: #edf3ff;
     }
+    .svg3-property-warning {
+      --property-accent: #c62828;
+      --property-accent-soft: #fff1f0;
+    }
+    .svg3-property-heading {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .svg3-property-heading-icon {
+      display: block;
+      flex: 0 0 auto;
+      width: 34px;
+      height: 34px;
+    }
     .svg3-property-header {
       padding: 14px 46px 13px 17px;
       background: var(--property-accent);
@@ -138,6 +153,29 @@ const PROPERTY_STYLES = `
     }
     .svg3-property-actions > :only-child {
       grid-column: 1 / -1;
+    }
+    .svg3-property-actions-padded {
+      margin: 0;
+      padding: 0 17px 14px;
+      background: #ffffff;
+    }
+    .svg3-property-warning-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin: 4px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .svg3-property-warning-list li {
+      padding: 3px 7px;
+      border: 1px solid color-mix(in srgb, var(--warning-color) 38%, white);
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--warning-color) 9%, white);
+      color: var(--warning-color);
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.35;
     }
     .svg3-property-webcam-compact .svg3-property-header {
       padding: 12px 48px 11px 16px;

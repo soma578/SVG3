@@ -58,6 +58,11 @@
              xlink:href="/map/layers/portable/team-activity/teamActivityAreaLayer.svg#data=/map/data/qtct/teamActivity/detail-index.json&amp;districtSvgUrlTemplate=/data/{recordRegionId}/districts-svg/{code}.svg&amp;layer=teamActivity"
              title="L3 チーム活動エリア" class="vectorEtcData" visibility="hidden" opacity="0.9"/>
 
+  <!-- 気象庁の固定originだけを5分間隔・同時1要求で取得するcontrolled-directレイヤー -->
+  <animation id="layer-flood-warning" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
+             xlink:href="/map/layers/portable/flood-warning/floodWarningLayer.svg"
+             title="洪水・気象警報" class="poi clickable" visibility="hidden" opacity="1"/>
+
   <animation id="layer-river-level" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
              xlink:href="/map/layers/portable/river-level/riverLevelLayer.svg#summary=/map/data/qtct/riverLevel/summary.json&amp;data=/map/data/qtct/riverLevel/fukushima/detail.json&amp;layer=riverLevel&amp;detailByRegion=/map/data/qtct/riverLevel/{recordRegionId}/detail.json"
              title="河川水位" class="poi clickable" visibility="hidden" opacity="1"/>
@@ -71,38 +76,8 @@
              title="道路通行情報" class="poi clickable" visibility="hidden" opacity="1"/>
 
   <animation id="layer-hazard" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/7/fukushima.svg&amp;svgUrlTemplate=/map/layers/hazard/7/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=07&amp;layerKey=layer-hazard"
+             xlink:href="/map/layers/hazard-native/hazardLayer.svg#layerKey=layer-hazard"
              title="L4 ハザード" class="vectorEtcData" visibility="visible" opacity="0.7"/>
-
-  <!-- 周辺地域mount: 新潟県のハザード -->
-  <animation id="layer-hazard--near-niigata" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/15/niigata.svg&amp;svgUrlTemplate=/map/layers/hazard/15/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=15&amp;layerKey=layer-hazard--near-niigata"
-             title="新潟県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
-
-  <!-- 周辺地域mount: 栃木県のハザード -->
-  <animation id="layer-hazard--near-tochigi" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/9/tochigi.svg&amp;svgUrlTemplate=/map/layers/hazard/9/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=09&amp;layerKey=layer-hazard--near-tochigi"
-             title="栃木県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
-
-  <!-- 周辺地域mount: 宮城県のハザード -->
-  <animation id="layer-hazard--near-miyagi" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/4/miyagi.svg&amp;svgUrlTemplate=/map/layers/hazard/4/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=04&amp;layerKey=layer-hazard--near-miyagi"
-             title="宮城県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
-
-  <!-- 周辺地域mount: 山形県のハザード -->
-  <animation id="layer-hazard--near-yamagata" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/6/yamagata.svg&amp;svgUrlTemplate=/map/layers/hazard/6/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=06&amp;layerKey=layer-hazard--near-yamagata"
-             title="山形県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
-
-  <!-- 周辺地域mount: 茨城県のハザード -->
-  <animation id="layer-hazard--near-ibaraki" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/8/ibaraki.svg&amp;svgUrlTemplate=/map/layers/hazard/8/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=08&amp;layerKey=layer-hazard--near-ibaraki"
-             title="茨城県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
-
-  <!-- 周辺地域mount: 群馬県のハザード -->
-  <animation id="layer-hazard--near-gunma" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
-             xlink:href="/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/10/gunma.svg&amp;svgUrlTemplate=/map/layers/hazard/10/districts/{code}.svg&amp;overviewIndexUrl=/map/layers/hazard-overview/index.json&amp;prefCode=10&amp;layerKey=layer-hazard--near-gunma"
-             title="群馬県 ハザード" class="vectorEtcData" visibility="hidden" opacity="0.7"/>
 
   <animation id="layer-current-location" x="12243.4" y="-4605.6" width="3205.3" height="2251.0"
              xlink:href="/map/layers/portable/current-location/currentLocationLayer.svg"

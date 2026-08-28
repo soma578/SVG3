@@ -37,6 +37,7 @@ export const healthDescription = (health, display) => {
 export const healthDeliveryLabel = (delivery) => ({
   'scheduled-snapshot': '定期スナップショット',
   'static-snapshot': '静的スナップショット',
+  'controlled-direct': '取得間隔を制御して直接取得',
   'user-action-direct': '操作時のみ直接取得',
 })[delivery] || delivery || '未指定';
 

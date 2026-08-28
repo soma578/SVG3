@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="14136.65 -4310.01 10.71 7.8"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>札幌市 01104 ハザード詳細 01104</title>
+  <animation id="hazard-source-01104"
+    title="札幌市 01104 ハザード詳細" href="/map/layers/hazard/1/districts/01104.svg" xlink:href="/map/layers/hazard/1/districts/01104.svg"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+     visibility="visible" />
+</svg>

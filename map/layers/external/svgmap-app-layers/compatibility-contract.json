@@ -4,7 +4,7 @@
     "publicRoot": "/map/svgMapAppLayers/",
     "sourceRoot": "svgMapAppLayers/",
     "preserveRelativePaths": true,
-    "snapshotSha256": "fb98d1ed8932c61ad956672ea12e2b2eecd6df95f9d59ca53ea34501b5bcd061",
+    "snapshotSha256": "ba2ba5b64fc5220b2551e71e09fe7f9deb29c360f7863c885c9241a913552f82",
     "fileCount": 868
   },
   "runtimeContract": {

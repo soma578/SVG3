@@ -161,5 +161,5 @@ frontend/.next/
 # portable配布物は正本(portable-source)から compose して作る派生物。
 # 同じviewerを県の数だけGitへ入れない。参照用に岡山だけ追跡する。
 /map/distribution/.stage/
-/map/distribution/portable/*/
+/map/distribution/portable/*/*/
 !/map/distribution/portable/*/okayama/

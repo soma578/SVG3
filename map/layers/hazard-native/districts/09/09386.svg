@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="13995.47 -3667.77 13.06 10.15"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>高根沢町 ハザード詳細 09386</title>
+  <animation id="hazard-source-09386"
+    title="高根沢町 ハザード詳細" href="/map/layers/hazard/9/districts/09386.svg" xlink:href="/map/layers/hazard/9/districts/09386.svg"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+     visibility="visible" />
+</svg>

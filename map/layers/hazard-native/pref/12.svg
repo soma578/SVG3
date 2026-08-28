@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="13965.28413 -3619.32287 131.08274 138.25474"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>千葉県 ハザードLOD</title>
+  <image id="hazard-flood"
+    href="/map/layers/hazard-overview/12/flood.webp" xlink:href="/map/layers/hazard-overview/12/flood.webp"
+    x="13965.28413" y="-3619.32287" width="131.08274" height="138.25474"
+    visibleMaxZoom="2900" visible-max-zoom="2900" pointer-events="none" />
+  <image id="hazard-tsunami-inundation"
+    href="/map/layers/hazard-overview/12/tsunami.webp" xlink:href="/map/layers/hazard-overview/12/tsunami.webp"
+    x="13965.28413" y="-3619.32287" width="131.08274" height="138.25474"
+    visibleMaxZoom="2900" visible-max-zoom="2900" pointer-events="none" />
+  <image id="hazard-landslide-warning"
+    href="/map/layers/hazard-overview/12/landslide-warning.webp" xlink:href="/map/layers/hazard-overview/12/landslide-warning.webp"
+    x="13965.28413" y="-3619.32287" width="131.08274" height="138.25474"
+    visibleMaxZoom="2900" visible-max-zoom="2900" pointer-events="none" />
+  <image id="hazard-landslide-special"
+    href="/map/layers/hazard-overview/12/landslide-special.webp" xlink:href="/map/layers/hazard-overview/12/landslide-special.webp"
+    x="13965.28413" y="-3619.32287" width="131.08274" height="138.25474"
+    visibleMaxZoom="2900" visible-max-zoom="2900" pointer-events="none" />
+  <animation id="hazard-municipality-12101"
+    title="千葉市 12101" href="../districts/12/12101.svg" xlink:href="../districts/12/12101.svg"
+    x="13992.31" y="-3564.63" width="25.21" height="20.39"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12102"
+    title="千葉市 12102" href="../districts/12/12102.svg" xlink:href="../districts/12/12102.svg"
+    x="14003.48" y="-3571.42" width="11.94" height="7.29"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12103"
+    title="千葉市 12103" href="../districts/12/12103.svg" xlink:href="../districts/12/12103.svg"
+    x="14007.38" y="-3567.93" width="8.3" height="5.92"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12104"
+    title="千葉市 12104" href="../districts/12/12104.svg" xlink:href="../districts/12/12104.svg"
+    x="14012.38" y="-3565.75" width="16.5" height="10.02"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12105"
+    title="千葉市 12105" href="../districts/12/12105.svg" xlink:href="../districts/12/12105.svg"
+    x="14014.21" y="-3558.66" width="16.11" height="9.3"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12106"
+    title="千葉市 12106" href="../districts/12/12106.svg" xlink:href="../districts/12/12106.svg"
+    x="14001.83" y="-3566.94" width="8.7" height="7.34"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12202"
+    title="銚子市" href="../districts/12/12202.svg" xlink:href="../districts/12/12202.svg"
+    x="14069" y="-3581.24" width="18.3" height="12.01"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12203"
+    title="市川市" href="../districts/12/12203.svg" xlink:href="../districts/12/12203.svg"
+    x="13988.53" y="-3577.58" width="9.13" height="12.03"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12204"
+    title="船橋市" href="../districts/12/12204.svg" xlink:href="../districts/12/12204.svg"
+    x="13992.31" y="-3579.96" width="16.67" height="29.06"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12205"
+    title="館山市" href="../districts/12/12205.svg" xlink:href="../districts/12/12205.svg"
+    x="13975.31" y="-3505.64" width="18.96" height="14.58"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12206"
+    title="木更津市" href="../districts/12/12206.svg" xlink:href="../districts/12/12206.svg"
+    x="13976.88" y="-3546.61" width="36.06" height="15.35"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12207"
+    title="松戸市" href="../districts/12/12207.svg" xlink:href="../districts/12/12207.svg"
+    x="13987.97" y="-3584.98" width="12.18" height="10.34"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12208"
+    title="野田市" href="../districts/12/12208.svg" xlink:href="../districts/12/12208.svg"
+    x="13977.6" y="-3610.41" width="17.53" height="19.11"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12210"
+    title="茂原市" href="../districts/12/12210.svg" xlink:href="../districts/12/12210.svg"
+    x="14024.42" y="-3550.29" width="13.71" height="12.35"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12211"
+    title="成田市" href="../districts/12/12211.svg" xlink:href="../districts/12/12211.svg"
+    x="14024.97" y="-3590.29" width="22.29" height="17.97"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12212"
+    title="佐倉市" href="../districts/12/12212.svg" xlink:href="../districts/12/12212.svg"
+    x="14012.61" y="-3576.65" width="17.49" height="14.21"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12213"
+    title="東金市" href="../districts/12/12213.svg" xlink:href="../districts/12/12213.svg"
+    x="14028.69" y="-3563.15" width="14.89" height="13.15"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12215"
+    title="旭市" href="../districts/12/12215.svg" xlink:href="../districts/12/12215.svg"
+    x="14056.48" y="-3579.47" width="19.63" height="12.22"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12216"
+    title="習志野市" href="../districts/12/12216.svg" xlink:href="../districts/12/12216.svg"
+    x="13998.65" y="-3570.83" width="9.87" height="5.56"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12217"
+    title="柏市" href="../districts/12/12217.svg" xlink:href="../districts/12/12217.svg"
+    x="13991.32" y="-3593.63" width="19.87" height="15.53"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12218"
+    title="勝浦市" href="../districts/12/12218.svg" xlink:href="../districts/12/12218.svg"
+    x="14018.82" y="-3524.46" width="15.7" height="13.03"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12219"
+    title="市原市" href="../districts/12/12219.svg" xlink:href="../districts/12/12219.svg"
+    x="14001.06" y="-3555.51" width="24.62" height="32.41"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12220"
+    title="流山市" href="../districts/12/12220.svg" xlink:href="../districts/12/12220.svg"
+    x="13987.45" y="-3591.99" width="8.33" height="9.24"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12221"
+    title="八千代市" href="../districts/12/12221.svg" xlink:href="../districts/12/12221.svg"
+    x="14006.27" y="-3578.38" width="8.96" height="9.18"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12222"
+    title="我孫子市" href="../districts/12/12222.svg" xlink:href="../districts/12/12222.svg"
+    x="13998.86" y="-3590.06" width="15.69" height="6"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12223"
+    title="鴨川市" href="../districts/12/12223.svg" xlink:href="../districts/12/12223.svg"
+    x="13993.04" y="-3519.11" width="28.59" height="13.91"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12224"
+    title="鎌ケ谷市" href="../districts/12/12224.svg" xlink:href="../districts/12/12224.svg"
+    x="13996.83" y="-3580.41" width="6.04" height="6.6"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12225"
+    title="君津市" href="../districts/12/12225.svg" xlink:href="../districts/12/12225.svg"
+    x="13983.93" y="-3537.54" width="32.25" height="22.17"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12226"
+    title="富津市" href="../districts/12/12226.svg" xlink:href="../districts/12/12226.svg"
+    x="13976.73" y="-3535.9" width="23.38" height="21.98"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12227"
+    title="浦安市" href="../districts/12/12227.svg" xlink:href="../districts/12/12227.svg"
+    x="13987.24" y="-3567.28" width="6.71" height="5.61"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12228"
+    title="四街道市" href="../districts/12/12228.svg" xlink:href="../districts/12/12228.svg"
+    x="14013.62" y="-3570.72" width="7.88" height="8.18"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12229"
+    title="袖ケ浦市" href="../districts/12/12229.svg" xlink:href="../districts/12/12229.svg"
+    x="13993.85" y="-3548.25" width="15.51" height="14.04"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12230"
+    title="八街市" href="../districts/12/12230.svg" xlink:href="../districts/12/12230.svg"
+    x="14024.83" y="-3571.63" width="10.6" height="14.37"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12231"
+    title="印西市" href="../districts/12/12231.svg" xlink:href="../districts/12/12231.svg"
+    x="14008.75" y="-3585" width="17.81" height="11.05"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12232"
+    title="白井市" href="../districts/12/12232.svg" xlink:href="../districts/12/12232.svg"
+    x="14001.52" y="-3583.54" width="9.59" height="6.99"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12233"
+    title="富里市" href="../districts/12/12233.svg" xlink:href="../districts/12/12233.svg"
+    x="14028.82" y="-3577.78" width="11.76" height="10.22"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12234"
+    title="南房総市" href="../districts/12/12234.svg" xlink:href="../districts/12/12234.svg"
+    x="13981.02" y="-3512.87" width="22.78" height="22.96"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12235"
+    title="匝瑳市" href="../districts/12/12235.svg" xlink:href="../districts/12/12235.svg"
+    x="14048.63" y="-3576.2" width="13.91" height="13.4"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12236"
+    title="香取市" href="../districts/12/12236.svg" xlink:href="../districts/12/12236.svg"
+    x="14042.49" y="-3595.81" width="22.68" height="20.47"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12237"
+    title="山武市" href="../districts/12/12237.svg" xlink:href="../districts/12/12237.svg"
+    x="14031.98" y="-3568.88" width="20.55" height="14.11"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12238"
+    title="いすみ市" href="../districts/12/12238.svg" xlink:href="../districts/12/12238.svg"
+    x="14025.4" y="-3534.61" width="16.1" height="15.34"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12239"
+    title="大網白里市" href="../districts/12/12239.svg" xlink:href="../districts/12/12239.svg"
+    x="14027.06" y="-3556.03" width="15.99" height="8.86"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12322"
+    title="酒々井町" href="../districts/12/12322.svg" xlink:href="../districts/12/12322.svg"
+    x="14024.48" y="-3575.77" width="6.55" height="5.8"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12329"
+    title="栄町" href="../districts/12/12329.svg" xlink:href="../districts/12/12329.svg"
+    x="14016.84" y="-3587.43" width="12.17" height="7.41"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12342"
+    title="神崎町" href="../districts/12/12342.svg" xlink:href="../districts/12/12342.svg"
+    x="14037.51" y="-3591.17" width="6.52" height="5.89"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12347"
+    title="多古町" href="../districts/12/12347.svg" xlink:href="../districts/12/12347.svg"
+    x="14040.18" y="-3580.7" width="14.88" height="11.6"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12349"
+    title="東庄町" href="../districts/12/12349.svg" xlink:href="../districts/12/12349.svg"
+    x="14062.29" y="-3585.47" width="10.05" height="8.97"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12403"
+    title="九十九里町" href="../districts/12/12403.svg" xlink:href="../districts/12/12403.svg"
+    x="14038.34" y="-3557.02" width="8.62" height="7.21"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12409"
+    title="芝山町" href="../districts/12/12409.svg" xlink:href="../districts/12/12409.svg"
+    x="14036.6" y="-3577.55" width="8.89" height="10.09"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12410"
+    title="横芝光町" href="../districts/12/12410.svg" xlink:href="../districts/12/12410.svg"
+    x="14041.63" y="-3572.22" width="14.33" height="11.97"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12421"
+    title="一宮町" href="../districts/12/12421.svg" xlink:href="../districts/12/12421.svg"
+    x="14034.01" y="-3539.15" width="5.78" height="6.29"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12422"
+    title="睦沢町" href="../districts/12/12422.svg" xlink:href="../districts/12/12422.svg"
+    x="14025.09" y="-3540.79" width="10" height="9.52"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12423"
+    title="長生村" href="../districts/12/12423.svg" xlink:href="../districts/12/12423.svg"
+    x="14031.21" y="-3543.47" width="8.5" height="5.39"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12424"
+    title="白子町" href="../districts/12/12424.svg" xlink:href="../districts/12/12424.svg"
+    x="14033.98" y="-3547.69" width="7.6" height="5.81"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12426"
+    title="長柄町" href="../districts/12/12426.svg" xlink:href="../districts/12/12426.svg"
+    x="14017.07" y="-3548.65" width="9.02" height="9.56"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12427"
+    title="長南町" href="../districts/12/12427.svg" xlink:href="../districts/12/12427.svg"
+    x="14019.71" y="-3542.76" width="11.34" height="11.1"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12441"
+    title="大多喜町" href="../districts/12/12441.svg" xlink:href="../districts/12/12441.svg"
+    x="14013.9" y="-3532.73" width="14.72" height="16.18"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12443"
+    title="御宿町" href="../districts/12/12443.svg" xlink:href="../districts/12/12443.svg"
+    x="14030.34" y="-3522.41" width="8.17" height="5.08"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+  <animation id="hazard-municipality-12463"
+    title="鋸南町" href="../districts/12/12463.svg" xlink:href="../districts/12/12463.svg"
+    x="13981.33" y="-3516.43" width="11.93" height="6.44"
+    visibleMinZoom="2500" visible-min-zoom="2500" visibility="visible" />
+</svg>

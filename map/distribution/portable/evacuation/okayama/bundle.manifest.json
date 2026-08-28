@@ -9,14 +9,14 @@
   "description": "避難所・緊急避難場所",
   "regionId": "okayama",
   "listed": true,
-  "entrypoint": "map/layers/portable/evacuation/evacuationLayer.svg#summary=..%2F..%2F..%2Fdata%2Fqtct%2Fevacuation%2Fokayama%2Fsummary.json&data=..%2F..%2F..%2Fdata%2Fqtct%2Fevacuation%2Fokayama%2Fdetail.json&layer=evacuation",
+  "entrypoint": "map/layers/portable/evacuation/evacuationLayer.svg",
   "entrypoints": {
-    "layer-evacuation": "map/layers/portable/evacuation/evacuationLayer.svg#summary=..%2F..%2F..%2Fdata%2Fqtct%2Fevacuation%2Fokayama%2Fsummary.json&data=..%2F..%2F..%2Fdata%2Fqtct%2Fevacuation%2Fokayama%2Fdetail.json&layer=evacuation"
+    "layer-evacuation": "map/layers/portable/evacuation/evacuationLayer.svg"
   },
   "fixture": "viewer.html",
   "isolatedProtocolFixture": "viewer-isolated.html",
   "distribution": {
-    "packageVersion": "1.0.0",
+    "packageVersion": "1.2.0",
     "publisher": {
       "id": "svg3",
       "name": "SVG3"
@@ -27,9 +27,9 @@
       "status": "unresolved",
       "redistributable": false
     },
-    "publishedAt": "2026-07-21T00:00:00+09:00"
+    "publishedAt": "2026-08-28T00:00:00+09:00"
   },
-  "contentDigest": "sha256-c3717e0b8efff36a89720900b3fefbbbc8a0ac5d19eba4a0b1c24dd9a56b84f9",
+  "contentDigest": "sha256-29fefba4efa552f098137c4ca8df4a1978ad8dc723b32af58276043510580ee4",
   "portability": {
     "pathIndependent": true,
     "crossOrigin": false,
@@ -42,10 +42,16 @@
     },
     "runtimeDependencies": [
       {
+        "id": "portable-network",
+        "version": "1.0.0",
+        "manifest": "portable-network/runtime.package.json",
+        "integrity": "sha256-92a336a420534f2706b315579d4de1ed3126a760e7690bcbec3b331d99396deb"
+      },
+      {
         "id": "representative-pins",
-        "version": "1.2.2",
+        "version": "1.2.3",
         "manifest": "representative-pins/runtime.package.json",
-        "integrity": "sha256-599c2591f8387bde92cbb68c6c242942dfd221b2f5dbcaa5723a326c9fc7aefb"
+        "integrity": "sha256-1eec2b55c8c89e801a9be5680a72a6b78d0aa2a09bb812f3a31e22b85d1c5bc7"
       },
       {
         "id": "svgmap-slawa-client",
@@ -59,18 +65,18 @@
   "files": [
     {
       "path": "Container.isolated.svg",
-      "bytes": 704,
-      "sha256": "ec2dd8af5e48ca40942c9e4bb1664c9f57170fb34e2ab69f0b51ed8dcd752761"
+      "bytes": 537,
+      "sha256": "23f730af40b76f95c355cb22313c8303d45205dd73a265e796b62b5a51b27adc"
     },
     {
       "path": "Container.svg",
-      "bytes": 669,
-      "sha256": "6aadb9cfe370605848e3f96195b761312d58d671367e5f19a166aee1bc2a042d"
+      "bytes": 502,
+      "sha256": "d74a6f60f57a8ec14fa46e7ac57e24b8a5b2f73ff30cf9cda8ba068c5fc6fe1a"
     },
     {
       "path": "layer.manifest.json",
-      "bytes": 11607,
-      "sha256": "bdc7a1cabe6a62cfb332509ba518c8345344572f302b0ba7d6325bf61b64f041"
+      "bytes": 11984,
+      "sha256": "dae6fcdc39b22d1b61c4eed029d7e2b5d20ec41eeb5e18d5dc2156940f445957"
     },
     {
       "path": "map/data/qtct/evacuation/okayama/detail.json",
@@ -264,18 +270,28 @@
     },
     {
       "path": "map/layers/portable/evacuation/evacuationLayer.html",
-      "bytes": 715,
-      "sha256": "bb5e529be7d4633a86ec669e4dfcea764844b1b3eda4a99effdc9da54ae4a264"
+      "bytes": 2152,
+      "sha256": "16bf2046703d85d4c64cee3970606bf02c6c1b99b4a45b87b18f5da603ab807c"
     },
     {
       "path": "map/layers/portable/evacuation/evacuationLayer.svg",
-      "bytes": 400,
-      "sha256": "0ce2eb8b5abd92e19bc85e21c6ff9ba63b3673eb3f3a4800e641054e3c70ab2f"
+      "bytes": 567,
+      "sha256": "b9631855b6fadcf69037138e6ffdf02bda005303e2d58a1eb6b5d2f0f33961f8"
     },
     {
       "path": "map/layers/portable/evacuation/layer.package.json",
-      "bytes": 2292,
-      "sha256": "756294666bdbbbf6ecac8bfc92e937f069ab1515381a509149e0d8913842716c"
+      "bytes": 3148,
+      "sha256": "578b725fb977cda32bd99e42e1301bd3265cc418ac3d360759410d872966e689"
+    },
+    {
+      "path": "map/layers/portable/portable-network/runtime.package.json",
+      "bytes": 150,
+      "sha256": "7b46391e6134a9dfedfcffb9131f15cd155ccc5778fa6d9c481f6ba9d5b26982"
+    },
+    {
+      "path": "map/layers/portable/portable-network/safeFetch.js",
+      "bytes": 10935,
+      "sha256": "c86c566429a5015771384a18016b7287a1268413499d1b54f0a435fbae3150b2"
     },
     {
       "path": "map/layers/portable/representative-pins/DENSITY_POINTS_FORMAT.md",
@@ -304,8 +320,8 @@
     },
     {
       "path": "map/layers/portable/representative-pins/propertyModal.js",
-      "bytes": 11038,
-      "sha256": "7fb62244cf6e30aedeadecdded09c674a02208bb2a038bbf8d94ae5c461fbdb2"
+      "bytes": 11997,
+      "sha256": "661b55db17593065c1fa69a221536c53797c3d3783d99f7790f4cd5928276392"
     },
     {
       "path": "map/layers/portable/representative-pins/qtctBuilder.mjs",
@@ -319,8 +335,8 @@
     },
     {
       "path": "map/layers/portable/representative-pins/representativePinsCore.js",
-      "bytes": 58912,
-      "sha256": "a74d8b584e7884419cdfe961a83758d15f8cb6e7064fd075dcc3fc6f8da0d3eb"
+      "bytes": 60242,
+      "sha256": "60f44109dd65e0fe3a69ed5a8b9045f197a00cda9b28f43007c4c67553d13337"
     },
     {
       "path": "map/layers/portable/representative-pins/representativePinsPortable.html",
@@ -335,12 +351,12 @@
     {
       "path": "map/layers/portable/representative-pins/runtime.package.json",
       "bytes": 482,
-      "sha256": "e3d4b0af9acbbbaaf9453d6d7bffc67a2c73fb126463e10ebca8b2931e7114c9"
+      "sha256": "e667e1838e0b6275c5e9a13b0ad9db7d7c00c34fbba0c0b7ad1e9471d6e79921"
     },
     {
       "path": "map/layers/portable/representative-pins/runtimeCache.js",
-      "bytes": 5793,
-      "sha256": "549e8792829bd1cce2f6ab66a8cc0be0bf2836a8475c31703c4fcf4c899edb50"
+      "bytes": 5954,
+      "sha256": "4996b3c204376dbcd06491482865e2cce13603e4f9c81470312cc7956013e1be"
     },
     {
       "path": "map/layers/portable/svgmap-slawa-client/InterWindowMessaging.js",
@@ -889,8 +905,8 @@
     },
     {
       "path": "README.html",
-      "bytes": 1699,
-      "sha256": "2189f9e8adb6b7db278f29178fa29b8f47cb7abca5ea793af92eea6f6461292e"
+      "bytes": 2346,
+      "sha256": "e9eaa5feaf190b0083f270250e18b63add86a8b76d9fe5f209f6981677a2d5b6"
     },
     {
       "path": "viewer-isolated.html",

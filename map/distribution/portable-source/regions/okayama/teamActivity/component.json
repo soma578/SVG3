@@ -3,7 +3,7 @@
   "kind": "portable-regional-component",
   "packageId": "teamActivity",
   "regionId": "okayama",
-  "sharedVersion": "12b39385f614",
+  "sharedVersion": "e1439c0113b6",
   "files": [
     "Container.isolated.svg",
     "Container.svg",
@@ -14,6 +14,8 @@
     "map/data/districts/33102.svg",
     "map/data/qtct/teamActivity/okayama/detail.json",
     "map/data/qtct/teamActivity/okayama/summary.json",
-    "map/layers/portable/team-activity/layer.package.json"
+    "map/layers/portable/team-activity/layer.package.json",
+    "map/layers/portable/team-activity/teamActivityAreaLayer.svg",
+    "map/layers/portable/team-activity/teamActivityLayer.svg"
   ]
 }

@@ -1,10 +1,17 @@
 import { fetchWithRuntimeCache } from '../representative-pins/runtimeCache.js';
 import { MAP_MESSAGES } from '../representative-pins/mapMessages.js';
 import { showPropertyModal } from '../representative-pins/propertyModal.js';
-import { municipalityMap, oldestReportDatetime, unmappedAreas, warningRecords } from './jmaWarnings.js';
+import {
+  municipalityMap,
+  latestReportDatetime,
+  unmappedAreas,
+  warningRecords,
+  warningRecordsWithinHours,
+} from './jmaWarnings.js';
 import { renderFloodWarningDetail } from './floodWarningDetail.js';
+import { createPortableNetworkClient } from '../portable-network/safeFetch.js';
 
-export const JMA_WARNING_URL = 'https://www.jma.go.jp/bosai/warning/data/warning/map.json';
+export const JMA_WARNING_URL = 'https://www.jma.go.jp/bosai/warning/data/r8/map.json';
 export const MUNICIPALITY_INDEX_URL = '/map/regions/municipalities-index.json';
 export const JMA_WARNING_ATTRIBUTION = {
   label: '気象庁「気象警報・注意報」',
@@ -13,11 +20,19 @@ export const JMA_WARNING_ATTRIBUTION = {
 
 const XLINK_NS = 'http://www.w3.org/1999/xlink';
 const DRAW_GROUP_ID = 'flood-warning-points';
+export const WARNING_PIN_SIZE = 26;
+export const WARNING_ICON_PATHS = Object.freeze({
+  emergency: new URL('./warning-emergency.svg', import.meta.url).href,
+  warning: new URL('./warning-warning.svg', import.meta.url).href,
+  advisory: new URL('./warning-advisory.svg', import.meta.url).href,
+  unknown: new URL('./warning-unknown.svg', import.meta.url).href,
+});
+
 const LEVEL_STYLE = {
-  emergency: { color: '#5b2386', label: '特' },
-  warning: { color: '#c62828', label: '警' },
-  advisory: { color: '#d68b00', label: '注' },
-  unknown: { color: '#59636e', label: '?' },
+  emergency: { icon: WARNING_ICON_PATHS.emergency },
+  warning: { icon: WARNING_ICON_PATHS.warning },
+  advisory: { icon: WARNING_ICON_PATHS.advisory },
+  unknown: { icon: WARNING_ICON_PATHS.unknown },
 };
 
 const postDataStatus = (payload) => {
@@ -52,24 +67,16 @@ const ensureDefs = () => {
     if (svg.getElementById?.(id)) continue;
     const group = svg.createElement('g');
     group.setAttribute('id', id);
-    const circle = svg.createElement('circle');
-    circle.setAttribute('cx', '0');
-    circle.setAttribute('cy', '0');
-    circle.setAttribute('r', '13');
-    circle.setAttribute('fill', style.color);
-    circle.setAttribute('stroke', '#ffffff');
-    circle.setAttribute('stroke-width', '3');
-    const text = svg.createElement('text');
-    text.setAttribute('x', '0');
-    text.setAttribute('y', '5');
-    text.setAttribute('text-anchor', 'middle');
-    text.setAttribute('font-size', '12');
-    text.setAttribute('font-weight', '800');
-    text.setAttribute('font-family', 'sans-serif');
-    text.setAttribute('fill', '#ffffff');
-    text.setAttribute('pointer-events', 'none');
-    text.textContent = style.label;
-    group.append(circle, text);
+    const image = svg.createElement('image');
+    const half = WARNING_PIN_SIZE / 2;
+    image.setAttribute('x', String(-half));
+    image.setAttribute('y', String(-half));
+    image.setAttribute('width', String(WARNING_PIN_SIZE));
+    image.setAttribute('height', String(WARNING_PIN_SIZE));
+    image.setAttribute('href', style.icon);
+    image.setAttributeNS(XLINK_NS, 'xlink:href', style.icon);
+    image.setAttribute('pointer-events', 'none');
+    group.append(image);
     defs.appendChild(group);
   }
 };
@@ -84,9 +91,28 @@ const inView = (record, view) => {
   return record.lon >= left && record.lon <= right && record.lat >= bottom && record.lat <= top;
 };
 
-export const initFloodWarningLayer = () => {
+export const initFloodWarningLayer = ({ onStateChange = null } = {}) => {
   window.hiddenOnLayerLoad = () => {};
-  const state = { records: [], loaded: false, loading: false, signature: '' };
+  const layerBaseUrl = new URL('./', import.meta.url).href;
+  const network = createPortableNetworkClient({
+    manifestUrl: new URL('layer.package.json', layerBaseUrl).href,
+    baseUrl: layerBaseUrl,
+  });
+  const state = {
+    records: [], loaded: false, loading: false, signature: '', displayWindowHours: 24,
+    fetchedAt: null, latestObservedAt: null, source: null, error: '', visibleCount: 0,
+  };
+  const publishState = () => onStateChange?.({
+    loading: state.loading,
+    loaded: state.loaded,
+    displayWindowHours: state.displayWindowHours,
+    totalCount: state.records.length,
+    visibleCount: state.visibleCount,
+    fetchedAt: state.fetchedAt,
+    latestObservedAt: state.latestObservedAt,
+    source: state.source,
+    error: state.error,
+  });
   let refreshTimer = null;
   let poiRefreshTimer = null;
 
@@ -102,11 +128,14 @@ export const initFloodWarningLayer = () => {
     if (!state.loaded || !window.svgImage?.createElement) return;
     ensureDefs();
     const view = window.svgMap?.getGeoViewBox?.();
-    const visible = state.records.filter((record) => inView(record, view));
+    const periodRecords = warningRecordsWithinHours(state.records, state.displayWindowHours);
+    const visible = periodRecords.filter((record) => inView(record, view));
+    state.visibleCount = periodRecords.length;
     const signature = [
       visible.map((record) => record.id + ':' + record.status).join(','),
       Number(view?.x).toFixed(3), Number(view?.y).toFixed(3),
       Number(view?.width).toFixed(3), Number(view?.height).toFixed(3),
+      state.displayWindowHours,
     ].join('|');
     if (signature === state.signature) return;
     state.signature = signature;
@@ -134,25 +163,37 @@ export const initFloodWarningLayer = () => {
     window.svgImage.documentElement.appendChild(group);
     window.svgImage.documentElement.setAttribute('data-native-poi-count', String(visible.length));
     schedulePoiRefresh();
+    publishState();
   };
 
   const load = async () => {
     if (state.loading) return;
     state.loading = true;
+    state.error = '';
+    publishState();
     try {
       const [municipalitiesResult, warningResult] = await Promise.all([
         fetchWithRuntimeCache(MUNICIPALITY_INDEX_URL, 'floodWarning:municipalities', {
           label: '市区町村索引', emitDataStatus: postDataStatus, logLabel: 'floodWarningLayer',
+          fetchImpl: network.fetch,
         }),
         fetchWithRuntimeCache(JMA_WARNING_URL, 'floodWarning:jma', {
           label: '洪水・気象警報', emitDataStatus: postDataStatus, logLabel: 'floodWarningLayer',
           requestCache: 'no-cache',
+          fetchImpl: network.fetch,
         }),
       ]);
       const municipalities = municipalityMap(municipalitiesResult.data);
       state.records = warningRecords(warningResult.data, municipalities);
+      state.fetchedAt = new Date().toISOString();
+      state.source = warningResult.source;
+      state.latestObservedAt = state.records
+        .map((record) => record.observedAt)
+        .filter((value) => Number.isFinite(Date.parse(value || '')))
+        .sort()
+        .at(-1) || null;
       const missing = unmappedAreas(warningResult.data, municipalities);
-      const observedAt = oldestReportDatetime(warningResult.data);
+      const observedAt = latestReportDatetime(warningResult.data);
       // runtimeCache cannot infer observedAt from the JMA top-level array, so report it explicitly.
       postDataStatus({
         key: 'floodWarning:jma', label: '洪水・気象警報', source: warningResult.source,
@@ -164,14 +205,23 @@ export const initFloodWarningLayer = () => {
       state.signature = '';
       draw();
     } catch (error) {
-      state.records = [];
+      if (!state.loaded) state.records = [];
+      state.error = error?.message || '取得できませんでした';
       state.loaded = true;
       state.signature = '';
       draw();
       console.error('[floodWarningLayer] load failed', error);
     } finally {
       state.loading = false;
+      publishState();
     }
+  };
+
+  const setDisplayWindowHours = (hours) => {
+    const next = Number(hours);
+    state.displayWindowHours = Number.isFinite(next) && next >= 0 ? next : 24;
+    state.signature = '';
+    draw();
   };
 
   const showPoiProperty = (target) => {
@@ -204,6 +254,11 @@ export const initFloodWarningLayer = () => {
     if (poiRefreshTimer) window.clearTimeout(poiRefreshTimer);
     window.clearInterval(handlerTimer);
   }, { once: true });
+  return {
+    refresh: load,
+    setDisplayWindowHours,
+    getState: () => ({ ...state, records: [...state.records] }),
+  };
 };
 
 export default initFloodWarningLayer;

@@ -9,9 +9,9 @@
   "description": "国土交通省 川の防災情報（2026年4月28日取得の固定台帳・暫定表示）",
   "regionId": "okayama",
   "listed": false,
-  "entrypoint": "map/layers/portable/japan-river-webcams/webcamLayer.svg#summary=..%2F..%2F..%2Fdata%2Fqtct%2FjapanRiverWebcam%2Fokayama%2Fsummary.json&data=..%2F..%2F..%2Fdata%2Fqtct%2FjapanRiverWebcam%2Fokayama%2Fdetail.json&layer=japanRiverWebcam",
+  "entrypoint": "map/layers/portable/japan-river-webcams/webcamLayer.svg",
   "entrypoints": {
-    "layer-japan-river-webcams": "map/layers/portable/japan-river-webcams/webcamLayer.svg#summary=..%2F..%2F..%2Fdata%2Fqtct%2FjapanRiverWebcam%2Fokayama%2Fsummary.json&data=..%2F..%2F..%2Fdata%2Fqtct%2FjapanRiverWebcam%2Fokayama%2Fdetail.json&layer=japanRiverWebcam"
+    "layer-japan-river-webcams": "map/layers/portable/japan-river-webcams/webcamLayer.svg"
   },
   "fixture": "viewer.html",
   "isolatedProtocolFixture": "viewer-isolated.html",
@@ -29,7 +29,7 @@
     },
     "publishedAt": "2026-07-21T00:00:00+09:00"
   },
-  "contentDigest": "sha256-2ac1c2632ac1d2a11178e233242f049f1e2aedd109f48ff9fe912016942d4551",
+  "contentDigest": "sha256-da4a127c9ccfe066be35006d005943a6f1c45808690ee0063a09206a7142c09a",
   "portability": {
     "pathIndependent": true,
     "crossOrigin": false,
@@ -43,9 +43,9 @@
     "runtimeDependencies": [
       {
         "id": "representative-pins",
-        "version": "1.2.2",
+        "version": "1.2.3",
         "manifest": "representative-pins/runtime.package.json",
-        "integrity": "sha256-599c2591f8387bde92cbb68c6c242942dfd221b2f5dbcaa5723a326c9fc7aefb"
+        "integrity": "sha256-1eec2b55c8c89e801a9be5680a72a6b78d0aa2a09bb812f3a31e22b85d1c5bc7"
       },
       {
         "id": "svgmap-slawa-client",
@@ -59,18 +59,18 @@
   "files": [
     {
       "path": "Container.isolated.svg",
-      "bytes": 751,
-      "sha256": "c14cce3854a2c4253949dbdc39e0818c0f23641750928d4e36d1957488476693"
+      "bytes": 566,
+      "sha256": "63b6b5ac80dcaabcdf373f160efd032620f6ebaf06b834977ad9a0835f8641a1"
     },
     {
       "path": "Container.svg",
-      "bytes": 716,
-      "sha256": "00004aab2a739d71c83b722370e5ca0bd1100f917cfa189007f5d2445f280e90"
+      "bytes": 531,
+      "sha256": "ff8cd0d73218ab219b21b7e4eebc164adf652b4a61a1772ff779213171f562b5"
     },
     {
       "path": "layer.manifest.json",
       "bytes": 11851,
-      "sha256": "63bdac615e603f0d4f368310f505bedb0f2fecf8de96d31dd881c1e8a09ce17a"
+      "sha256": "ba777ab0e411ddaa2871f06db437cfca7dad09b1935fb9cc0dc226891447e41c"
     },
     {
       "path": "map/data/qtct/japanRiverWebcam/okayama/detail.json",
@@ -259,8 +259,8 @@
     },
     {
       "path": "map/layers/portable/japan-river-webcams/layer.package.json",
-      "bytes": 2197,
-      "sha256": "bde66b39ef0ee672960cd6c3b8615d37e52a819417be7a75ce1c9e991cc04554"
+      "bytes": 2266,
+      "sha256": "410b8148be0af445b66a5e28d5a2334f9257d4cba1cd38f297a9a3d8d7c24a1e"
     },
     {
       "path": "map/layers/portable/japan-river-webcams/webcam-runtime-policy.json",
@@ -279,8 +279,8 @@
     },
     {
       "path": "map/layers/portable/japan-river-webcams/webcamLayer.svg",
-      "bytes": 433,
-      "sha256": "ebc7f8559498e43db1c37e87ad89c2b95448d25dccbe5aeb6d5786259ac7090e"
+      "bytes": 618,
+      "sha256": "d31adfe1484d514bb170d1196aa32b340bcebc1f39a91f7cfa7286dd8e562ed2"
     },
     {
       "path": "map/layers/portable/representative-pins/DENSITY_POINTS_FORMAT.md",
@@ -309,8 +309,8 @@
     },
     {
       "path": "map/layers/portable/representative-pins/propertyModal.js",
-      "bytes": 11038,
-      "sha256": "7fb62244cf6e30aedeadecdded09c674a02208bb2a038bbf8d94ae5c461fbdb2"
+      "bytes": 11997,
+      "sha256": "661b55db17593065c1fa69a221536c53797c3d3783d99f7790f4cd5928276392"
     },
     {
       "path": "map/layers/portable/representative-pins/qtctBuilder.mjs",
@@ -324,8 +324,8 @@
     },
     {
       "path": "map/layers/portable/representative-pins/representativePinsCore.js",
-      "bytes": 58912,
-      "sha256": "a74d8b584e7884419cdfe961a83758d15f8cb6e7064fd075dcc3fc6f8da0d3eb"
+      "bytes": 60242,
+      "sha256": "60f44109dd65e0fe3a69ed5a8b9045f197a00cda9b28f43007c4c67553d13337"
     },
     {
       "path": "map/layers/portable/representative-pins/representativePinsPortable.html",
@@ -340,12 +340,12 @@
     {
       "path": "map/layers/portable/representative-pins/runtime.package.json",
       "bytes": 482,
-      "sha256": "e3d4b0af9acbbbaaf9453d6d7bffc67a2c73fb126463e10ebca8b2931e7114c9"
+      "sha256": "e667e1838e0b6275c5e9a13b0ad9db7d7c00c34fbba0c0b7ad1e9471d6e79921"
     },
     {
       "path": "map/layers/portable/representative-pins/runtimeCache.js",
-      "bytes": 5793,
-      "sha256": "549e8792829bd1cce2f6ab66a8cc0be0bf2836a8475c31703c4fcf4c899edb50"
+      "bytes": 5954,
+      "sha256": "4996b3c204376dbcd06491482865e2cce13603e4f9c81470312cc7956013e1be"
     },
     {
       "path": "map/layers/portable/svgmap-slawa-client/InterWindowMessaging.js",
@@ -894,8 +894,8 @@
     },
     {
       "path": "README.html",
-      "bytes": 1800,
-      "sha256": "b802738409b55bff60a3937cded686c450a3eb5be3f3929dc6034dc24701cdb3"
+      "bytes": 2113,
+      "sha256": "4dff931f97f071784e147f8ae1dc07950a4260e483e1f31aee8a10db7375a8e4"
     },
     {
       "path": "viewer-isolated.html",

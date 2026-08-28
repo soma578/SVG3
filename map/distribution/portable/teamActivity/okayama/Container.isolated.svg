@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="12243.4 -4605.6 3205.3 2251.0">
   <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
-  <animation id="layer-team-activity-pins" xlink:href="map/layers/portable/team-activity/teamActivityLayer.svg#summary=..%2F..%2F..%2Fdata%2Fqtct%2FteamActivity%2Fokayama%2Fsummary.json&amp;data=..%2F..%2F..%2Fdata%2Fqtct%2FteamActivity%2Fokayama%2Fdetail.json&amp;sourceCsv=current.csv&amp;layer=teamActivity" title="チーム活動ピン isolated" class="poi clickable" visibility="visible" opacity="1" data-lawa-mode="isolated" x="12243.4" y="-4605.6" width="3205.3" height="2251.0" />
-  <animation id="layer-team-activity" xlink:href="map/layers/portable/team-activity/teamActivityAreaLayer.svg#data=..%2F..%2F..%2Fdata%2Fqtct%2FteamActivity%2Fokayama%2Fdetail.json&amp;districtSvgUrlTemplate=..%2F..%2F..%2Fdata%2Fdistricts%2F%7Bcode%7D.svg&amp;layer=teamActivity" title="チーム活動エリア isolated" class="vectorEtcData" visibility="visible" opacity="0.9" data-lawa-mode="isolated" x="12243.4" y="-4605.6" width="3205.3" height="2251.0" />
+  <animation id="layer-team-activity-pins" xlink:href="map/layers/portable/team-activity/teamActivityLayer.svg" title="チーム活動ピン isolated" class="poi clickable" visibility="visible" opacity="1" data-lawa-mode="isolated" x="12243.4" y="-4605.6" width="3205.3" height="2251.0" />
+  <animation id="layer-team-activity" xlink:href="map/layers/portable/team-activity/teamActivityAreaLayer.svg" title="チーム活動エリア isolated" class="vectorEtcData" visibility="visible" opacity="0.9" data-lawa-mode="isolated" x="12243.4" y="-4605.6" width="3205.3" height="2251.0" />
 </svg>

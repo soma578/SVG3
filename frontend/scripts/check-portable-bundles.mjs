@@ -66,6 +66,13 @@ const assertBundleReference = (bundleRoot, fromFile, reference, label) => {
   }
 }
 
+const assertBundlePath = (bundleRoot, fromFile, reference, label) => {
+  const target = path.resolve(path.dirname(fromFile), reference.split('#')[0].split('?')[0])
+  if (target !== bundleRoot && !target.startsWith(`${bundleRoot}${path.sep}`)) {
+    fail(`${label}: reference escapes bundle: ${reference}`)
+  }
+}
+
 const manifests = []
 const walk = (directory) => {
   if (!fs.existsSync(directory)) return
@@ -171,8 +178,15 @@ for (const manifestPath of manifests.sort()) {
         if (pkg.id === manifest.packageId) {
           bundledLayerPackage = pkg
           if (pkg.adminEntrypoint) fail(`${label}: bundled package contains adminEntrypoint`)
-          if (pkg.portability?.dataInjection === 'hash-params') {
-            if (pkg.data?.injection?.transport !== 'svg-fragment-query') fail(`${label}: bundled package data injection contract is missing`)
+          if (['hash-params', 'embedded-relative-defaults'].includes(pkg.portability?.dataInjection)) {
+            const expectedTransport = pkg.portability.dataInjection === 'embedded-relative-defaults'
+              ? 'svg-document-attributes'
+              : 'svg-fragment-query'
+            if (pkg.data?.injection?.transport !== expectedTransport) fail(`${label}: bundled package data injection contract is missing`)
+            if (pkg.portability.dataInjection === 'embedded-relative-defaults'
+                && pkg.data?.injection?.fallbackTransport !== 'svg-fragment-query') {
+              fail(`${label}: embedded defaults must retain fragment-query compatibility`)
+            }
             if (!pkg.data?.injection?.required?.includes('data') || !pkg.data?.injection?.required?.includes('layer')) {
               fail(`${label}: bundled package required data parameters are invalid`)
             }
@@ -189,7 +203,8 @@ for (const manifestPath of manifests.sort()) {
     }
   }
   const summaryFiles = (manifest.files || []).filter((file) => /\/summary\.json$/.test(file.path))
-  if (bundledLayerPackage?.portability?.dataInjection === 'hash-params' && summaryFiles.length !== 1) {
+  if (['hash-params', 'embedded-relative-defaults'].includes(bundledLayerPackage?.portability?.dataInjection)
+      && summaryFiles.length !== 1) {
     fail(`${label}: bundle must contain exactly one regional summary.json`)
   } else if (summaryFiles.length === 1) {
     const summary = JSON.parse(fs.readFileSync(path.join(bundleRoot, summaryFiles[0].path), 'utf8'))
@@ -222,6 +237,45 @@ for (const manifestPath of manifests.sort()) {
     const entrypoint = String(animation['xlink:href'] || '').split('#')[0]
     if (!entrypoint || !fs.existsSync(path.join(bundleRoot, entrypoint))) {
       fail(`${label}: Container entrypoint missing: ${entrypoint}`)
+    }
+    const href = String(animation['xlink:href'] || '')
+    const hash = href.includes('#') ? href.slice(href.indexOf('#') + 1) : ''
+    const embedded = bundledLayerPackage?.portability?.dataInjection === 'embedded-relative-defaults'
+    if (embedded || bundledLayerPackage?.network?.mode === 'bundled-snapshot') {
+      if (embedded && hash) fail(`${label}: embedded-default Container must mount without a hash`)
+      const params = new URLSearchParams(hash)
+      const entrypointPath = path.join(bundleRoot, entrypoint)
+      if (embedded) {
+        const source = fs.readFileSync(entrypointPath, 'utf8')
+        for (const [key, attribute] of Object.entries({
+          summary: 'data-svg3-summary',
+          data: 'data-svg3-data',
+          layer: 'data-svg3-layer',
+          districtSvgUrlTemplate: 'data-svg3-district-svg-url-template',
+          detailByRegion: 'data-svg3-detail-by-region',
+          sourceCsv: 'data-svg3-source-csv',
+          profile: 'data-svg3-profile',
+          municipalityCodes: 'data-svg3-municipality-codes',
+          statusOverlay: 'data-svg3-status-overlay',
+        })) {
+          const value = source.match(new RegExp(`\\b${attribute}="([^"]*)"`))?.[1]
+          if (value) params.set(key, value.replaceAll('&amp;', '&'))
+        }
+      }
+      for (const required of bundledLayerPackage.data?.injection?.required || []) {
+        if (!params.get(required)) fail(`${label}: portable Container is missing ${required}`)
+      }
+      for (const forbidden of bundledLayerPackage.data?.injection?.forbidden || []) {
+        if (params.has(forbidden)) fail(`${label}: portable Container contains forbidden ${forbidden}`)
+      }
+      for (const key of ['summary', 'data', 'districtSvgUrlTemplate', 'detailByRegion', 'sourceCsv']) {
+        const reference = params.get(key)
+        if (!reference) continue
+        assertBundlePath(bundleRoot, entrypointPath, reference, `${label}: Container ${key}`)
+        if (!reference.includes('{')) {
+          assertBundleReference(bundleRoot, entrypointPath, reference, `${label}: Container ${key}`)
+        }
+      }
     }
   }
   if (isolatedStatus === 'native-supported') {

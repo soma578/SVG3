@@ -330,6 +330,7 @@ for (const regionId of regionIds) {
 
 // --- ハザードの縮退 ---------------------------------------------------------
 const hazardLayer = read('layers/portable/hazard/hazardLayer.html')
+const nativeHazardLayer = read('layers/hazard-native/hazardLayer.html')
 const hazardFallback = read('layers/portable/hazard/hazardFallback.js')
 assert.ok(
   hazardFallback.includes('export const hazardDisplayPlan'),
@@ -347,5 +348,14 @@ assert.ok(
   hazardLayer.includes('id="hazard-degraded"'),
   'the hazard layer must surface the degraded state to the user',
 )
+assert.ok(
+  nativeHazardLayer.includes("window.addEventListener('zoomPanMap', reapplyAfterZoomPan)"),
+  'native hazard LOD must reapply category visibility to newly loaded documents',
+)
+for (const regionId of regionIds) {
+  const manifest = JSON.parse(fs.readFileSync(path.join(regionsRoot, regionId, 'asset-manifest.json'), 'utf8'))
+  assert.ok(manifest.assets.includes('/map/layers/hazard-native/hazardLayer.svg'), `${regionId}: native hazard root missing`)
+  assert.ok(manifest.assets.some((asset) => asset.startsWith('/map/layers/hazard-native/pref/')), `${regionId}: native hazard prefecture missing`)
+}
 
 console.log(`[check-service-worker] OK: shell ${shellVersion} (${shellAssets.length} assets), region ${regionVersion} (${manifestCount} manifests), ${basemaps.length} offline basemaps (${(basemapBytes / 1024 / 1024).toFixed(1)} MiB)`)

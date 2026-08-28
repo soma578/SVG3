@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="13595.29 -3470.36 13.38 8.39"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>山添村 ハザード詳細 29322</title>
+  <animation id="hazard-source-29322"
+    title="山添村 ハザード詳細" href="/map/layers/hazard/29/districts/29322.svg" xlink:href="/map/layers/hazard/29/districts/29322.svg"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+     visibility="visible" />
+</svg>

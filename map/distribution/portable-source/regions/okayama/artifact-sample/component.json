@@ -3,13 +3,14 @@
   "kind": "portable-regional-component",
   "packageId": "artifact-sample",
   "regionId": "okayama",
-  "sharedVersion": "fed8b343b5f2",
+  "sharedVersion": "07270935bf30",
   "files": [
     "Container.isolated.svg",
     "Container.svg",
     "README.html",
     "bundle.manifest.json",
     "layer.manifest.json",
+    "map/layers/portable/artifact-sample/artifactSampleLayer.svg",
     "map/layers/portable/artifact-sample/layer.package.json"
   ]
 }

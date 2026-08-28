@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="14104.39 -3965.1 15.37 8.03"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>矢巾町 ハザード詳細 03322</title>
+  <animation id="hazard-source-03322"
+    title="矢巾町 ハザード詳細" href="/map/layers/hazard/3/districts/03322.svg" xlink:href="/map/layers/hazard/3/districts/03322.svg"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+     visibility="visible" />
+</svg>

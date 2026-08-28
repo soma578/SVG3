@@ -2,6 +2,10 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import {
+  mirrorSharedAdapterRuntimeAssets,
+  sharedAdapterRelativePath,
+} from './lib/communitySharedAdapterAssets.mjs'
 
 const frontendRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const projectRoot = path.resolve(frontendRoot, '..')
@@ -396,7 +400,10 @@ fs.mkdirSync(adapterRoot, { recursive: true })
 // 単位で持たれるため、レイヤーごとに固有パスの複製を用意する。
 // 複製は別ディレクトリに置くので、相対参照は上流の絶対URLへ貼り直す。
 const SHARED_ADAPTER_DIR = 'shared'
-fs.mkdirSync(adapterPath(SHARED_ADAPTER_DIR), { recursive: true })
+const sharedAdapterRoot = adapterPath(SHARED_ADAPTER_DIR)
+// shared/ is generated output. Remove stale flat adapters before regeneration.
+fs.rmSync(sharedAdapterRoot, { recursive: true, force: true })
+fs.mkdirSync(sharedAdapterRoot, { recursive: true })
 
 const RELATIVE_REF = /(\s(?:data-controller|xlink:href|href|src)\s*=\s*")([^"]+)(")/g
 const isRelative = (value) => Boolean(value)
@@ -419,24 +426,46 @@ const rebaseRelativeRefs = (svg, upstreamDir) => {
 const sharedAdapters = new Map()
 for (const entry of entries) {
   if (!entry.sharedBaseSvg) continue
+
   const sourcePath = localPathFor(entry.sharedBaseSource)
   if (!sourcePath || !fs.existsSync(sourcePath)) continue
+
   const relative = path.relative(upstreamRoot, sourcePath).split(path.sep)
   const upstreamDir = relative.slice(0, -1).join('/')
-  const { rebased, remaining } = rebaseRelativeRefs(fs.readFileSync(sourcePath, 'utf8'), upstreamDir)
+  const sourceText = fs.readFileSync(sourcePath, 'utf8')
+  const { rebased, remaining } = rebaseRelativeRefs(sourceText, upstreamDir)
   if (remaining > 0) continue
+
   const adapterSvg = Number(entry.sourceIndex) === 88
     ? rebased.replace(
       '/map/svgMapAppLayers/authoringLayers/local/csvLayer/csvUI_r20.html#requiredWidth=420',
       '/map/layers/external/svgmap-app-layers/adapters/usgs-earthquakes-all-week.html#requiredWidth=420&amp;requiredHeight=420',
     )
     : rebased
-  const slug = `${relative.join('-').replace(/\.svg$/, '').toLowerCase()
-    .replace(/[^a-z0-9-]+/g, '-')}-${entry.sourceIndex}.svg`
-  fs.writeFileSync(adapterPath(`${SHARED_ADAPTER_DIR}/${slug}`), adapterSvg)
-  const hash = entry.href.includes('#') ? `#${entry.href.split('#').slice(1).join('#')}` : ''
+
+  const adapterRelative = sharedAdapterRelativePath({
+    upstreamRoot,
+    sourcePath,
+    sourceIndex: entry.sourceIndex,
+  })
+  const adapterFile = adapterPath(adapterRelative)
+  fs.mkdirSync(path.dirname(adapterFile), { recursive: true })
+  fs.writeFileSync(adapterFile, adapterSvg)
+
+  mirrorSharedAdapterRuntimeAssets({
+    upstreamRoot,
+    sharedAdapterRoot,
+    sourcePath,
+    sourceText,
+    controllerRef: entry.animation?.['data-controller'] || '',
+  })
+
+  const hash = entry.href.includes('#')
+    ? `#${entry.href.split('#').slice(1).join('#')}`
+    : ''
+
   sharedAdapters.set(entry.sourceIndex, {
-    href: `/map/layers/external/svgmap-app-layers/adapters/${SHARED_ADAPTER_DIR}/${slug}${hash}`,
+    href: `/map/layers/external/svgmap-app-layers/adapters/${adapterRelative}${hash}`,
   })
 }
 for (const entry of entries) {

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="12973.68 -3361.89 43.38 34.15"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>唐津市 ハザード詳細 41202</title>
+  <animation id="hazard-source-41202"
+    title="唐津市 ハザード詳細" href="/map/layers/hazard/41/districts/41202.svg" xlink:href="/map/layers/hazard/41/districts/41202.svg"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+     visibility="visible" />
+</svg>

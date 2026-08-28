@@ -1,35 +1,28 @@
 {
   "id": "layer-hazard",
   "title": "L4 ハザード",
-  "href": "/map/layers/portable/hazard/hazardLayer.svg#prefSvgUrl=/map/layers/hazard/{prefCodeNum}/{regionId}.svg&svgUrlTemplate=/map/layers/hazard/{prefCodeNum}/districts/{code}.svg&overviewIndexUrl=/map/layers/hazard-overview/index.json&prefCode={prefCode}&layerKey={layerId}",
+  "href": "/map/layers/hazard-native/hazardLayer.svg#layerKey={layerId}",
   "class": "vectorEtcData",
   "visibility": "visible",
   "opacity": "0.7",
   "order": 80,
-  "layerPackage": "/map/layers/portable/hazard/layer.package.json",
-  "crossRegion": {
-    "label": "ハザード",
-    "note": "{label}の洪水・土砂災害ハザードを越境して重ねる"
-  },
   "ui": {
     "catalog": true,
     "group": "防災情報",
     "symbol": "災",
     "accent": "#AD3F31",
     "kind": "vector",
-    "note": "洪水・土砂災害などのハザード表示",
+    "note": "SVGMapネイティブLODによる全国の洪水・土砂災害などのハザード表示",
     "controllerUi": {
       "label": "種類"
     },
     "messages": {
       "toHost": [
-        "runtime:dataStatus",
         "runtime:layerReady",
         "runtime:layerStateChanged"
       ],
       "fromHost": [
         "map:layerVisibilityChanged",
-        "map:setMunicipalityFilter",
         "map:setLayerState"
       ]
     },

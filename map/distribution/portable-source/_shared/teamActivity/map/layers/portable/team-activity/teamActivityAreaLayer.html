@@ -10,6 +10,7 @@
 <body>
 <script type="module">
 import { fetchWithRuntimeCache } from '../representative-pins/runtimeCache.js';
+import { portableLayerDataParams } from '../representative-pins/representativePinsCore.js';
 import {
   TEAM_ACTIVITY_CSV_CHANNEL,
   TEAM_ACTIVITY_CSV_STORAGE_KEY,
@@ -41,8 +42,7 @@ const state = {
 };
 
 const parseHashParams = () => {
-  const raw = String(window.svgImageProps?.hash || window.svgImageProps?.Path?.split('#')?.[1] || '');
-  const params = new URLSearchParams(raw.replace(/^#/, ''));
+  const params = portableLayerDataParams();
   state.dataUrl = params.get('data') || state.dataUrl;
   state.districtSvgUrlTemplate = params.get('districtSvgUrlTemplate') || state.districtSvgUrlTemplate;
 };

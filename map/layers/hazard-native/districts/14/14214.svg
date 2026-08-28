@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="13923.05 -3544.7 12.7 7.76"
+     data-hazard-loading="svgmap-native-lod">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100,0,0,-100,0,0)" />
+  <title>伊勢原市 ハザード詳細 14214</title>
+  <animation id="hazard-source-14214"
+    title="伊勢原市 ハザード詳細" href="/map/layers/hazard/14/districts/14214.svg" xlink:href="/map/layers/hazard/14/districts/14214.svg"
+    x="12243.4" y="-4605.6" width="3205.3" height="2251"
+     visibility="visible" />
+</svg>
