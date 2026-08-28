@@ -12,7 +12,8 @@ const nextConfig = {
         headers: [
           { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
           { key: 'X-Content-Type-Options', value: 'nosniff' },
-          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          // X-Frame-Options は vercel.json でパス別に設定する。
+          // （next.config.js headers() は public/ 静的ファイルには効かない）
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
           { key: 'Permissions-Policy', value: 'geolocation=(self), camera=(), microphone=(), interest-cohort=()' },
         ],
