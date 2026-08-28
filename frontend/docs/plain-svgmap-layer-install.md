@@ -51,8 +51,14 @@ svgMap.initLoad();
   title="洪水・気象警報"
   class="poi clickable"
   visibility="visible"
-  x="12243.4" y="-4605.6" width="3205.3" height="2251.0" />
+  x="-30000" y="-30000" width="60000" height="60000" />
 ```
+
+`animation` のbboxは子レイヤーではなく、追加先Containerの座標系で解釈される。
+上流 `svgMapDemo/ContainerDemo0.svg` は経緯度等倍、SVG3の地域Containerは100倍座標
+なので、同じ地域bboxを両方へコピーしてはいけない。通常のコミュニティContainerへ
+持ち込む宣言では、上流レイヤー群と同じ全域bboxを使い、子SVG内部のタイリングとLODへ
+空間ロードを任せる。
 
 ## 配置時に必要なもの
 
@@ -93,3 +99,22 @@ controllerを持つ10件はcontroller起動を確認した。行政界・背景�
 
 これは「既存ファイルがある」という静的検査ではなく、Chromium上でSVGMap.jsへ
 順番に追加した実行結果である。
+
+## 公式cloneでの確認
+
+最小ホストとは別に、次の上流リポジトリを実際にcloneして確認した。
+
+- `svgmap/svgMapDemo` commit `c98c09e22db74ffa3f4eb133c637db3ca192a17a`
+- `svgmap/svgmapAppLayers` commit `e1735dbc9c898a3f3eee4a554f95799d1c49bbc3`
+
+`svgMapDemo/index.html`、公式レイヤー一覧UI、上流レイヤー資産は変更していない。
+通常の導入操作として `ContainerDemo0.svg` に公開対象のSVG3レイヤー6件の
+`animation` 宣言だけを追加した。対象は避難所、チーム活動ピン、チーム活動エリア、
+洪水・気象警報、全国河川監視カメラ、ハザードである。行政界、オフライン背景、
+河川水位、道路通行情報、現在地、配布レイヤーサンプルは追加対象に含めない。
+公式の既存レイヤー176件とSVG3レイヤー6件、計182件が同じレイヤー一覧へ登録された。
+
+公開対象を絞る前のChromium監査では、自作13件すべてのSVG document登録、
+controller対象10件すべての起動、SVG要素生成を確認した。気象警報は現行JMA r8
+実配信から9地点を描画し、監査中のpage errorは0件だった。公式画面へ常設する対象は
+上記6件に限定する。
